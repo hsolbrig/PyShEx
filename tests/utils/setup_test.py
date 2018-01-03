@@ -33,6 +33,8 @@ from pyjsg.jsglib import jsg
 from rdflib import Graph, RDF, RDFS, XSD, Namespace
 from rdflib.namespace import FOAF
 
+from pyshex.shape_expressions_language.p5_context import Context
+
 EX = Namespace("http://schema.example/")
 INST = Namespace("http://inst.example/#")
 
@@ -45,6 +47,14 @@ prefix xsd: <{XSD}>
 prefix inst: <{INST}>
 prefix foaf: <{FOAF}>
 """
+
+
+def setup_context(shex_str: str, rdf_str: Optional[str]):
+    schema, g = setup_test(shex_str, rdf_str)
+    if g is None:
+        g = Graph()
+        g.parse(rdf_header)
+    return Context(g, schema)
 
 
 def setup_test(shex_str: Optional[str], rdf_str: Optional[str]) -> Tuple[Optional[ShExJ.Schema], Optional[Graph]]:

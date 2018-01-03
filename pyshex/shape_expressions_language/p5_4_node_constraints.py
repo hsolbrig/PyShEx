@@ -38,19 +38,23 @@ from pyshex.sparql11_query.p17_1_operand_data_types import is_sparql_operand_dat
 from pyshex.utils.datatype_utils import can_cast_to, total_digits, fraction_digits, pattern_match, map_object_literal
 from pyshex.utils.value_set_utils import objectValueMatches, uriref_startswith_iriref
 
+""" Implementation of `5.4 <http://shex.io/shex-semantics/#node-constraints>`_"""
+
 
 def satisfies2(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
-    """
+    """ `5.4.1 Semantics <http://shex.io/shex-semantics/#node-constraint-semantics>`_
+
     For a node n and constraint nc, satisfies2(n, nc) if and only if for every nodeKind, datatype, xsFacet and
     values constraint value v present in nc nodeSatisfies(n, v). The following sections define nodeSatisfies for
-    each of these types of constraints: """
+    each of these types of constraints:
+    """
     return nodeSatisfiesNodeKind(n, nc) and nodeSatisfiesDataType(n, nc) and \
         nodeSatisfiesStringFacet(n, nc) and nodeSatisfiesNumericFacet(n, nc) and \
         nodeSatisfiesValues(n, nc)
 
 
 def nodeSatisfiesNodeKind(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
-    """ 5.4.2 Node Kind Constraints
+    """ `5.4.2 Node Kind Constraints <http://shex.io/shex-semantics/#nodeKind>`_
 
     For a node n and constraint value v, nodeSatisfies(n, v) if:
 
@@ -58,10 +62,6 @@ def nodeSatisfiesNodeKind(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
         * v = "bnode" and n is a blank node.
         * v = "literal" and n is a Literal.
         * v = "nonliteral" and n is an IRI or blank node.
-
-    :param n:
-    :param nc:
-    :return:
     """
     return nc.nodeKind is None or \
         (nc.nodeKind == 'iri' and isinstance(n, URIRef)) or \
@@ -77,9 +77,6 @@ def nodeSatisfiesDataType(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
     the set of SPARQL operand data types[sparql11-query], an XML schema string with a value of the lexical form of
     n can be cast to the target type v per XPath Functions 3.1 section 19 Casting[xpath-functions]. Only datatypes
     supported by SPARQL MUST be tested but ShEx extensions MAY add support for other datatypes.
-    :param n:
-    :param nc:
-    :return:
     """
     # TODO: reconcile this with rdflib and the spec
     # TODO: for all of these situations, create a special error when nodeSelector is None
@@ -90,13 +87,10 @@ def nodeSatisfiesDataType(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
 
 
 def nodeSatisfiesStringFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
-    """ 5.4.4 XML Schema String Facet Constraints
+    """ `5.4.5 XML Schema String Facet Constraints <ttp://shex.io/shex-semantics/#xs-string>`_
 
      String facet constraints apply to the lexical form of the RDF Literals and IRIs and blank node
      identifiers (see note below regarding access to blank node identifiers).
-    :param n:
-    :param nc:
-    :return:
     """
 
     # Let lex =
@@ -128,7 +122,7 @@ def nodeSatisfiesStringFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
 
 
 def nodeSatisfiesNumericFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
-    """ 5.4.5 XML Schema Numeric Facet Constraints
+    """ `5.4.5 XML Schema Numeric Facet Constraints <http://shex.io/shex-semantics/#xs-numeric>`_
 
     Numeric facet constraints apply to the numeric value of RDF Literals with datatypes listed in SPARQL 1.1
     Operand Data Types[sparql11-query]. Numeric constraints on non-numeric values fail. totaldigits and
@@ -146,16 +140,15 @@ def nodeSatisfiesNumericFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool
 
 
 def nodeSatisfiesValues(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
-    """ 5.4.6 Values Constraint
+    """ `5.4.5 Values Constraint <http://shex.io/shex-semantics/#values>`_
 
      For a node n and constraint value v, nodeSatisfies(n, v) if n matches some valueSetValue vsv in v.
     """
-    return any(nodeSatisfiesValue(n, vsv) for vsv in nc.values) if nc.values is not None else True
+    return any(_nodeSatisfiesValue(n, vsv) for vsv in nc.values) if nc.values is not None else True
 
 
-def nodeSatisfiesValue(n: nodeSelector, vsv: ShExJ.valueSetValue) -> bool:
-    """ http://shex.io/shex-semantics/#values
-
+def _nodeSatisfiesValue(n: nodeSelector, vsv: ShExJ.valueSetValue) -> bool:
+    """
     A term matches a valueSetValue if:
         * vsv is an objectValue and n = vsv.
         * vsv is a Language with langTag lt and n is a language-tagged string with a language tag l and l = lt.
@@ -209,8 +202,7 @@ def nodeSatisfiesValue(n: nodeSelector, vsv: ShExJ.valueSetValue) -> bool:
 
 
 def nodeInIriStem(n: Node, s: Union[ShExJ.IRIREF, ShExJ.Wildcard]) -> bool:
-    """ http://shex.io/shex-semantics/#values
-
+    """
        **nodeIn**: asserts that an RDF node n is equal to an RDF term s or is in a set defined by a
        :py:class:`ShExJ.IriStem`, :py:class:`LiteralStem` or :py:class:`LanguageStem`.
 

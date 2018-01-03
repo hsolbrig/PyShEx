@@ -1,0 +1,11 @@
+.TYPE @type
+
+ManifestDocument {
+    "@context": []
+    "@graph": [Manifest]
+}
+
+Manifest {
+    "@id": @str,
+
+}

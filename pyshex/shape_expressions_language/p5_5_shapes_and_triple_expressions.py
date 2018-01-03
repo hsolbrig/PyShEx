@@ -29,14 +29,17 @@ from typing import Set, List
 
 from ShExJSG import ShExJ
 
-from pyshex.shape_expressions_language.p3_terminology import neigh
+from pyshex.shape_expressions_language.p3_terminology import neigh, arcsOut
 from pyshex.shape_expressions_language.p5_3_shape_expressions import satisfies
 from pyshex.shape_expressions_language.p5_7_semantic_actions import semActsSatisfied
 from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import RDFTriple
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
 from pyshex.utils.partitions import partition_t
+from pyshex.utils.schema_utils import predicates_in_expression
 from pyshex.utils.value_set_utils import uriref_matches_iriref
+
+""" Implementation of `5.5 Shapes and Triple Expressions <http://shex.io/shex-semantics/#shapes-and-TEs>`_"""
 
 
 def satisfiesShape(n: nodeSelector, S: ShExJ.Shape, cntxt: Context) -> bool:
@@ -59,8 +62,59 @@ def satisfiesShape(n: nodeSelector, S: ShExJ.Shape, cntxt: Context) -> bool:
     * There is no triple in matchables whose predicate does not appear in extra.
     * closed is false or unmatchables is empty.
     """
-    matched, remainder = partition(neigh(cntxt.graph, n), S.expression)
-    return False
+    # This is an extremely inefficient way to do this, as we could actually be quite clever about how to approach this,
+    # but we are first implementing this literally
+    neighborhood = list(neigh(cntxt.graph, n))
+
+    if S.expression:
+        for matched, remainder in partition_t(neighborhood, 2):
+            if matches(matched, S.expression, cntxt) and valid_remainder(n, remainder, S, cntxt):
+                return True
+        return False
+    else:
+        return valid_remainder(n, neighborhood, S, cntxt)
+
+
+def valid_remainder(n: nodeSelector, remainder: List[RDFTriple], S: ShExJ.Shape, cntxt: Context) -> bool:
+    """
+    Let **outs** be the arcsOut in remainder: `outs = remainder ∩ arcsOut(G, n)`.
+
+    Let **matchables** be the triples in outs whose predicate appears in a TripleConstraint in `expression`. If
+    `expression` is absent, matchables = Ø (the empty set).
+
+    * There is no triple in **matchables** which matches a TripleConstraint in expression
+
+    * There is no triple in **matchables** whose predicate does not appear in extra.
+
+    * closed is false or unmatchables is empty
+
+    :param n:
+    :param remainder:
+    :param S:
+    :param cntxt:
+    :return:
+    """
+    # Let **outs** be the arcsOut in remainder: `outs = remainder ∩ arcsOut(G, n)`.
+    outs = arcsOut(cntxt.graph, n).intersection(remainder)
+
+    # predicates that in a TripleConstraint in `expression`
+    predicates = predicates_in_expression(S.expression, cntxt) if S.expression is not None else []
+
+    # Let **matchables** be the triples in outs whose predicate appears in predicates. If
+    # `expression` is absent, matchables = Ø (the empty set).
+    matchables = {t for t in outs if str(t.predicate) in predicates}
+
+    # There is no triple in **matchables** which matches a TripleConstraint in expression
+    if matchables and S.expression is not None and matches(matchables, S.expression, cntxt):
+        return False
+
+    # There is no triple in **matchables** whose predicate does not appear in extra.
+    extras = S.extra if S.extra is not None else {}
+    if any(t.predicate not in extras for t in matchables):
+        return False
+
+    # closed is false or unmatchables is empty.
+    return not S.closed or outs - matchables
 
 
 def matches(T: Set[RDFTriple], expr: ShExJ.tripleExpr, cntxt: Context) -> bool:
@@ -84,18 +138,9 @@ def matches(T: Set[RDFTriple], expr: ShExJ.tripleExpr, cntxt: Context) -> bool:
         * either
             * expr has no valueExpr
             * or `satisfies(value, valueExpr, G, m).
-
-    :param T:
-    :param expr:
-    :param cntxt:
-    :return:
     """
-    # if isinstance(expr, ShExJ.OneOf):
-    #     return any(matches(T, shapeExpr, m) for shapeExpr in expr.expressions)
-    # elif isinstance(expr, ShExJ.EachOf):
-    #     for Ts in partitions(T, len(expr.expressions)):
-    #         for
-    return matchesCardinality(T, expr, cntxt) and (semActsSatisfied(expr.semActs) if expr.semActs is not None else True)
+    return matchesCardinality(T, expr, cntxt) and \
+        expr.semActs is None or semActsSatisfied(expr.semActs, cntxt)
 
 
 def matchesCardinality(T: Set[RDFTriple], expr: ShExJ.tripleExpr, cntxt: Context) -> bool:
@@ -171,11 +216,12 @@ def matchesTripleConstraint(T: Set[RDFTriple], expr: ShExJ.TripleConstraint, cnt
                 if expr.valueExpr is None:
                     return True
                 else:
-                    satisfies(value, expr.valueExpr, cntxt)
+                    satisfies(cntxt, value, expr.valueExpr)
 
 
-def matchesTripleExprRef(T: Set[RDFTriple], expr: ShExJ.TripleConstraint, cntxt: Context) -> bool:
+def matchesTripleExprRef(T: Set[RDFTriple], expr: ShExJ.tripleExprLabel, cntxt: Context) -> bool:
     """
     expr is an tripleExprRef and satisfies(value, tripleExprWithId(tripleExprRef), G, m).
     The tripleExprWithId function is defined in Triple Expression Reference Requirement below.
     """
+    return matchesTripleConstraint(T, cntxt.tripleExprFor(expr), cntxt)

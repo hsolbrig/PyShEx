@@ -27,15 +27,14 @@
 # OF THE POSSIBILITY OF SUCH DAMAGE.
 
 from ShExJSG import ShExJ
-from rdflib import Graph
 
 from pyshex.shape_expressions_language.p5_4_node_constraints import satisfies2
 from pyshex.shape_expressions_language.p5_5_shapes_and_triple_expressions import satisfiesShape
 from pyshex.shape_expressions_language.p5_context import Context
-from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector, ShapeMap
+from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
 
 
-def satisfies(n: nodeSelector, se: ShExJ.shapeExpr, cntxt: Context) -> bool:
+def satisfies(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExpr) -> bool:
     """ `5.3 Shape Expressions <http://shex.io/shex-semantics/#node-constraint-semantics>`_
 
           satisfies: The expression satisfies(n, se, G, m) indicates that a node n and graph G satisfy a shape
@@ -55,52 +54,47 @@ def satisfies(n: nodeSelector, se: ShExJ.shapeExpr, cntxt: Context) -> bool:
             * Se is a shapeExprRef and there exists in the schema a shape expression se2 with that id and
                       satisfies(n, se2, G, m).
 
-          :param n: node to test for satisfaction
-          :param se: shape expression to be tested against
-          :param G:
-          :param m:
-          :return:
           """
     return (isinstance(se, ShExJ.NodeConstraint) and satisfies2(n, se)) or \
            (isinstance(se, ShExJ.Shape) and satisfiesShape(n, se, cntxt)) or \
-           (isinstance(se, ShExJ.ShapeOr) and satisifesShapeOr(n, se, cntxt)) or \
-           (isinstance(se, ShExJ.ShapeAnd) and satisfiesShapeAnd(n, se, cntxt)) or \
-           (isinstance(se, ShExJ.ShapeNot) and satisfiesShapeNot(n, se,  cntxt)) or \
-           (isinstance(se, ShExJ.ShapeExternal) and satisfiesExternal(n, se,  cntxt)) or \
-           (isinstance(se, ShExJ.shapeExprLabel) and satisfiesShapeExprRef(n, se, cntxt))
+           (isinstance(se, ShExJ.ShapeOr) and satisifesShapeOr(cntxt, n, se)) or \
+           (isinstance(se, ShExJ.ShapeAnd) and satisfiesShapeAnd(cntxt, n, se)) or \
+           (isinstance(se, ShExJ.ShapeNot) and satisfiesShapeNot(cntxt, n, se)) or \
+           (isinstance(se, ShExJ.ShapeExternal) and satisfiesExternal(cntxt, n, se)) or \
+           (isinstance(se, ShExJ.shapeExprLabel) and satisfiesShapeExprRef(cntxt, n, se))
 
 
-def notSatisfies(n: nodeSelector, se: ShExJ.shapeExpr, cntxt: Context) -> bool:
-    return not satisfies(n, se, cntxt)
+def notSatisfies(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExpr) -> bool:
+    return not satisfies(cntxt, n, se)
 
 
-def satisifesShapeOr(n: nodeSelector, se: ShExJ.ShapeOr, cntxt: Context) -> bool:
+def satisifesShapeOr(cntxt: Context, n: nodeSelector, se: ShExJ.ShapeOr) -> bool:
     """ Se is a ShapeOr and there is some shape expression se2 in shapeExprs such that satisfies(n, se2, G, m). """
-    return any(satisfies(n, se2, cntxt) for se2 in se.shapeExprs)
+    return any(satisfies(cntxt, n, se2) for se2 in se.shapeExprs)
 
 
-def satisfiesShapeAnd(n: nodeSelector, se: ShExJ.ShapeAnd, G: Graph, cntxt: Context) -> bool:
+def satisfiesShapeAnd(cntxt: Context, n: nodeSelector, se: ShExJ.ShapeAnd) -> bool:
     """ Se is a ShapeAnd and for every shape expression se2 in shapeExprs, satisfies(n, se2, G, m) """
-    return all(satisfies(n, se2, cntxt) for se2 in se.shapeExprs)
+    return all(satisfies(cntxt, n, se2) for se2 in se.shapeExprs)
 
 
-def satisfiesShapeNot(n: nodeSelector, se: ShExJ.ShapeNot, G: Graph, cntxt: Context) -> bool:
+def satisfiesShapeNot(cntxt: Context, n: nodeSelector, se: ShExJ.ShapeNot) -> bool:
     """ Se is a ShapeNot and for the shape expression se2 at shapeExpr, notSatisfies(n, se2, G, m) """
-    return not satisfies(n, se.shapeExpr, cntxt)
+    return not satisfies(cntxt, n, se.shapeExpr)
 
 
-def satisfiesExternal(n: nodeSelector, se: ShExJ.ShapeExternal, cntxt: Context) -> bool:
+def satisfiesExternal(cntxt: Context, n: nodeSelector, se: ShExJ.ShapeExternal) -> bool:
     """ Se is a ShapeExternal and implementation-specific mechansims not defined in this specification indicate
      success.
      """
     return False
 
 
-def satisfiesShapeExprRef(n: nodeSelector, se: ShExJ.shapeExprLabel, cntxt: Context) -> bool:
+def satisfiesShapeExprRef(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExprLabel) -> bool:
     """ Se is a shapeExprRef and there exists in the schema a shape expression se2 with that id
      and satisfies(n, se2, G, m).
      """
     for shape in cntxt.schema.shapes:
         if shape.id == se:
-            return satisfies(n, shape, cntxt)
+            return satisfies(cntxt, n, shape)
     return False

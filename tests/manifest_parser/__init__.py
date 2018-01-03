@@ -25,28 +25,3 @@
 # LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
 # OF THE POSSIBILITY OF SUCH DAMAGE.
-from turtledemo.planet_and_moon import G
-from typing import List, Tuple
-
-from ShExJSG import ShExJ
-from rdflib import Graph
-
-from pyshex.shape_expressions_language.p5_3_shape_expressions import satisfies
-from pyshex.shape_expressions_language.p5_context import Context
-from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector, shapeLabel, QueryShapeMap
-
-""" Implementation of `5.2 Validation Definition <http://shex.io/shex-semantics/#validation>`_
-"""
-
-
-def isValid(cntxt: Context, m: QueryShapeMap) -> bool:
-    """`5.2 Validation Definition <http://shex.io/shex-semantics/#validation>`_
-
-    The expression isValid(G, m) indicates that for every nodeSelector/shapeLabel pair (n, s) in m, s has a
-        corresponding shape expression se and satisfies(n, se, G, m). satisfies is defined below for each form
-        of shape expression
-    :param cntxt: evaluation context - includes graph and schema
-    :param m: list of NodeShape pairs to test
-    :return:
-    """
-    return all(s in cntxt.schema.shapes and satisfies(cntxt, n, cntxt.schema.shapes[s]) for n, s in m)

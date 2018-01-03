@@ -42,7 +42,7 @@ from pyshex.shapemap_structure_and_language.p3_shapemap_structure import ShapeMa
 from pyshex.utils.schema_utils import reference_of
 
 
-def conforms(S: ShExJ.Schema, m: ShapeMapType, cntxt: Context) -> bool:
+def conforms(m: ShapeMapType, cntxt: Context) -> bool:
     """ `5.6.1 Schema Validation Requirement <http://shex.io/shex-semantics/#validation-requirement>`_
     
     A graph G is said to conform with a schema S with a ShapeMap m when:
@@ -57,9 +57,9 @@ def conforms(S: ShExJ.Schema, m: ShapeMapType, cntxt: Context) -> bool:
     :param cntxt: context carrying the Graph and other useful things
     :return:
     """
-    return semActsSatisfied(S.startActs, cntxt) and \
-        all(reference_of(S, sa.shapeLabel) is not None and
-            satisfies(sa.nodeSelector, reference_of(S, sa.shapeLabel), cntxt) for sa in m)
+    return semActsSatisfied(cntxt.schema.startActs, cntxt) and \
+        all(reference_of(cntxt.schema, sa.shapeLabel) is not None and
+            satisfies(cntxt, sa.nodeSelector, reference_of(S, sa.shapeLabel)) for sa in m)
 
 
 def valid_shape_references(S: ShExJ.Schema, cntxt: Context) -> bool:
