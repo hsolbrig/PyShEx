@@ -1,35 +1,3 @@
-# Copyright (c) 2017, Mayo Clinic
-# All rights reserved.
-#
-# Redistribution and use in source and binary forms, with or without modification,
-# are permitted provided that the following conditions are met:
-#
-# Redistributions of source code must retain the above copyright notice, this
-#     list of conditions and the following disclaimer.
-#
-#     Redistributions in binary form must reproduce the above copyright notice,
-#     this list of conditions and the following disclaimer in the documentation
-#     and/or other materials provided with the distribution.
-#
-#     Neither the name of the Mayo Clinic nor the names of its contributors
-#     may be used to endorse or promote products derived from this software
-#     without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-# WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-# IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
-# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, 
-# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
-# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
-# OF THE POSSIBILITY OF SUCH DAMAGE.
-from typing import Dict, Any, Callable, Optional
-
-from ShExJSG import ShExJ
-from ShExJSG.ShExJ import Schema
-from rdflib import Graph
 
 """
 Context for evaluation engine -- carries all of the global variables (schema, graph, etc.)
@@ -37,9 +5,15 @@ Context for evaluation engine -- carries all of the global variables (schema, gr
 We might fold the various routines inside context and replace "cntxt: Context" with "self", but we will have to see.
 
 """
+from typing import Dict, Any, Callable, Optional
+
+from ShExJSG import ShExJ
+from ShExJSG.ShExJ import Schema
+from rdflib import Graph
 
 
 class _VisitorCenter:
+    """ A visitor context -- couldn't resist calling it Visitor Center, however... it is python, you know """
     def __init__(self, f: Callable[[Any, ShExJ.shapeExpr, "Context"], None], arg_cntxt: Any) \
             -> None:
         self.f = f
@@ -103,7 +77,10 @@ class Context:
         :param expr: root shape expression
         """
         if 'id' in expr and expr.id is not None:
-            self.schema_id_map[expr.id] = expr
+            if expr.id in self.schema_id_map:
+                return
+            else:
+                self.schema_id_map[expr.id] = expr
         if isinstance(expr, (ShExJ.ShapeOr, ShExJ.ShapeAnd)):
             for expr2 in expr.shapeExprs:
                 self._gen_schema_xref(expr2)
@@ -121,7 +98,10 @@ class Context:
 
         """
         if 'id' in expr and expr.id is not None:
-            self.te_id_map[expr.id] = expr
+            if expr.id in self.te_id_map:
+                return
+            else:
+                self.te_id_map[expr.id] = expr
         if isinstance(expr, (ShExJ.OneOf, ShExJ.EachOf)):
             for expr2 in expr.expressions:
                 self._gen_te_xref(expr2)
@@ -150,7 +130,7 @@ class Context:
         if visit_center is None:
             visit_center = _VisitorCenter(f, arg_cntxt)
         has_id = 'id' in expr and expr.id is not None
-        if not has_id or not visit_center.already_seen_shape(expr.id):
+        if not has_id or not (visit_center.already_seen_shape(expr.id) or visit_center.actively_visiting_shape(expr.id)):
 
             # Visit the root expression
             if has_id:
@@ -162,14 +142,14 @@ class Context:
                 for expr2 in expr.shapeExprs:
                     self.visit_shapes(expr2, f, arg_cntxt, visit_center)
             elif isinstance(expr, ShExJ.ShapeNot):
-                self.visit_shapes(expr, f, arg_cntxt, visit_center)
+                self.visit_shapes(expr.shapeExpr, f, arg_cntxt, visit_center)
             elif isinstance(expr, ShExJ.Shape):
                 if expr.expression is not None:
                     self.visit_triple_expressions(expr.expression,
-                                                  lambda ac, te: self._visit_shape_te(te, visit_center),
+                                                  lambda ac, te, cntxt: self._visit_shape_te(te, visit_center),
                                                   arg_cntxt,
                                                   visit_center)
-            elif isinstance(expr, ShExJ.shapeExprLabel):
+            elif ShExJ.isinstance_(expr, ShExJ.shapeExprLabel):
                 if not visit_center.actively_visiting_shape(str(expr)):
                     visit_center.start_visiting_shape(str(expr))
                     self.visit_shapes(self.shapeExprFor(expr), f, arg_cntxt, visit_center)
@@ -180,7 +160,7 @@ class Context:
     def visit_triple_expressions(self, expr: ShExJ.tripleExpr, f: Callable[[Any, ShExJ.tripleExpr, "Context"], None],
                                  arg_cntxt: Any, visit_center: _VisitorCenter=None) -> None:
         if visit_center is None:
-            visit_center = _VisitorCenter
+            visit_center = _VisitorCenter(f, arg_cntxt)
         has_id = 'id' in expr and expr.id is not None
         if not has_id or visit_center.already_seen_te(expr.id):
 
@@ -196,13 +176,13 @@ class Context:
             elif isinstance(expr, ShExJ.TripleConstraint):
                 if expr.valueExpr is not None:
                     self.visit_triple_expressions(expr.valueExpr,
-                                                  lambda ac, te: self._visit_te_shape(te, visit_center),
+                                                  lambda ac, te, cntxt: self._visit_te_shape(te, visit_center),
                                                   arg_cntxt,
                                                   visit_center)
-            elif isinstance(expr, ShExJ.tripleExprLabel):
+            elif ShExJ.isinstance_(expr, ShExJ.tripleExprLabel):
                 if not visit_center.actively_visiting_shape(str(expr)):
                     visit_center.start_visiting_shape(str(expr))
-                    self.visit_shapes(self.shapeExprFor(expr), f, arg_cntxt, visit_center)
+                    self.visit_shapes(self.tripleExprFor(expr), f, arg_cntxt, visit_center)
                     visit_center.done_visiting_shape(str(expr))
             if has_id:
                 visit_center.done_visiting_te(expr.id)
@@ -214,7 +194,8 @@ class Context:
         :param te: Triple expression reached through a Shape.expression
         :param visit_center: context used in shape visitor
         """
-        self.visit_triple_expressions(te, visit_center.f, visit_center.arg_cntxt, visit_center)
+        if isinstance(te, ShExJ.TripleConstraint) and te.valueExpr is not None:
+            visit_center.f(visit_center.arg_cntxt, te.valueExpr, self)
 
     def _visit_te_shape(self, shape: ShExJ.shapeExpr, visit_center: _VisitorCenter) -> None:
         """
@@ -224,4 +205,5 @@ class Context:
         :param shape: Shape reached through triple expression traverse
         :param visit_center: context used in shape visitor
         """
-        self.visit_shapes(shape, visit_center.f, visit_center.arg_cntxt, visit_center)
+        if isinstance(shape, ShExJ.Shape) and shape.expression is not None:
+            visit_center.f(visit_center.arg_cntxt, shape.expression, self)

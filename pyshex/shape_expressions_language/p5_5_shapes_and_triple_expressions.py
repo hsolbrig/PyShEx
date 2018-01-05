@@ -1,36 +1,10 @@
-# Copyright (c) 2017, Mayo Clinic
-# All rights reserved.
-#
-# Redistribution and use in source and binary forms, with or without modification,
-# are permitted provided that the following conditions are met:
-#
-# Redistributions of source code must retain the above copyright notice, this
-#     list of conditions and the following disclaimer.
-#
-#     Redistributions in binary form must reproduce the above copyright notice,
-#     this list of conditions and the following disclaimer in the documentation
-#     and/or other materials provided with the distribution.
-#
-#     Neither the name of the Mayo Clinic nor the names of its contributors
-#     may be used to endorse or promote products derived from this software
-#     without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-# WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-# IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
-# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, 
-# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
-# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
-# OF THE POSSIBILITY OF SUCH DAMAGE.
+""" Implementation of `5.5 Shapes and Triple Expressions <http://shex.io/shex-semantics/#shapes-and-TEs>`_"""
+
 from typing import Set, List
 
 from ShExJSG import ShExJ
 
 from pyshex.shape_expressions_language.p3_terminology import neigh, arcsOut
-from pyshex.shape_expressions_language.p5_3_shape_expressions import satisfies
 from pyshex.shape_expressions_language.p5_7_semantic_actions import semActsSatisfied
 from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import RDFTriple
@@ -38,8 +12,6 @@ from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSel
 from pyshex.utils.partitions import partition_t
 from pyshex.utils.schema_utils import predicates_in_expression
 from pyshex.utils.value_set_utils import uriref_matches_iriref
-
-""" Implementation of `5.5 Shapes and Triple Expressions <http://shex.io/shex-semantics/#shapes-and-TEs>`_"""
 
 
 def satisfiesShape(n: nodeSelector, S: ShExJ.Shape, cntxt: Context) -> bool:
@@ -50,17 +22,10 @@ def satisfiesShape(n: nodeSelector, S: ShExJ.Shape, cntxt: Context) -> bool:
     * `neigh(G, n)` can be partitioned into two sets matched and remainder such that
       `matches(matched, expression, m)`. If expression is absent, remainder = `neigh(G, n)`.
 
-       Let **outs** be the arcsOut in remainder: outs = remainder ∩ arcsOut(G, n).
-
-       Let **matchables** be the triples in outs whose predicate appears in a TripleConstraint in expression. If
-       expression is absent, matchables = Ø (the empty set).
-
-       The complexity of partitioning is described briefly in the ShEx2 Primer.
-    * There is no triple in **matchables** which matches a TripleConstraint in expression. ::
-
-      Let **unmatchables** be the triples in outs which are not in matchables. matchables ∪ unmatchables = outs.
-    * There is no triple in matchables whose predicate does not appear in extra.
-    * closed is false or unmatchables is empty.
+    :param n: focus node
+    :param S: Shape to be satisfied
+    :param cntxt: Evaluation context
+    :return: true iff `satisfies(n, S, cntxt)`
     """
     # This is an extremely inefficient way to do this, as we could actually be quite clever about how to approach this,
     # but we are first implementing this literally
@@ -88,11 +53,11 @@ def valid_remainder(n: nodeSelector, remainder: List[RDFTriple], S: ShExJ.Shape,
 
     * closed is false or unmatchables is empty
 
-    :param n:
-    :param remainder:
-    :param S:
-    :param cntxt:
-    :return:
+    :param n: focus node
+    :param remainder: non-matched triples
+    :param S: Shape being evaluated
+    :param cntxt: evaluation context
+    :return: True if remainder is valid
     """
     # Let **outs** be the arcsOut in remainder: `outs = remainder ∩ arcsOut(G, n)`.
     outs = arcsOut(cntxt.graph, n).intersection(remainder)
@@ -114,7 +79,7 @@ def valid_remainder(n: nodeSelector, remainder: List[RDFTriple], S: ShExJ.Shape,
         return False
 
     # closed is false or unmatchables is empty.
-    return not S.closed or outs - matchables
+    return not S.closed.val or outs - matchables
 
 
 def matches(T: Set[RDFTriple], expr: ShExJ.tripleExpr, cntxt: Context) -> bool:
@@ -134,7 +99,7 @@ def matches(T: Set[RDFTriple], expr: ShExJ.tripleExpr, cntxt: Context) -> bool:
     * expr is a TripleConstraint and:
         * T is a set of one triple. Let t be the soul triple in T.
         * t's predicate equals expr's predicate. Let value be t's subject if inverse is true, else t's object.
-        * if inverse is true, t is in arcsIn, else t is in arcsOut.
+        * if inverse is true, t is in arcsIn, else t is in `arcsOut`.
         * either
             * expr has no valueExpr
             * or `satisfies(value, valueExpr, G, m).
@@ -209,6 +174,7 @@ def matchesTripleConstraint(T: Set[RDFTriple], expr: ShExJ.TripleConstraint, cnt
     * if inverse is true, t is in arcsIn, else t is in arcsOut.
 
     """
+    from pyshex.shape_expressions_language.p5_3_shape_expressions import satisfies
     if len(T) == 1:
         for t in T:
             if uriref_matches_iriref(t.predicate, expr.predicate):

@@ -1,44 +1,18 @@
-# Copyright (c) 2017, Mayo Clinic
-# All rights reserved.
-#
-# Redistribution and use in source and binary forms, with or without modification,
-# are permitted provided that the following conditions are met:
-#
-# Redistributions of source code must retain the above copyright notice, this
-#     list of conditions and the following disclaimer.
-#
-#     Redistributions in binary form must reproduce the above copyright notice,
-#     this list of conditions and the following disclaimer in the documentation
-#     and/or other materials provided with the distribution.
-#
-#     Neither the name of the Mayo Clinic nor the names of its contributors
-#     may be used to endorse or promote products derived from this software
-#     without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-# WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-# IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
-# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, 
-# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
-# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
-# OF THE POSSIBILITY OF SUCH DAMAGE.
+""" Implementation of `5.4 <http://shex.io/shex-semantics/#node-constraints>`_"""
+
 import numbers
 from typing import Union
 
 from ShExJSG import ShExJ
 from ShExJSG.ShExJ import ObjectLiteral, IRIREF
 from rdflib import URIRef, BNode, Literal, XSD, RDF
+from rdflib.plugins.sparql.parser import RDFLiteral
 
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
 from pyshex.sparql11_query.p17_1_operand_data_types import is_sparql_operand_datatype, is_decimal
 from pyshex.utils.datatype_utils import can_cast_to, total_digits, fraction_digits, pattern_match, map_object_literal
 from pyshex.utils.value_set_utils import objectValueMatches, uriref_startswith_iriref
-
-""" Implementation of `5.4 <http://shex.io/shex-semantics/#node-constraints>`_"""
 
 
 def satisfies2(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
@@ -98,7 +72,7 @@ def nodeSatisfiesStringFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
     #  * if the value n is an RDF Literal, the lexical form of the literal (see[rdf11-concepts] section 3.3 Literals).
     #  * if the value n is an IRI, the IRI string (see[rdf11-concepts] section 3.2 IRIs).
     #  * if the value n is a blank node, the blank node identifier (see[rdf11-concepts] section 3.4 Blank Nodes).
-    if isinstance(n, (URIRef, BNode, Literal)):
+    if isinstance(n, RDFLiteral):
         lex = str(n)
         #  Let len = the number of unicode codepoints in lex
         # For a node n and constraint value v, nodeSatisfies(n, v):
@@ -168,7 +142,7 @@ def _nodeSatisfiesValue(n: nodeSelector, vsv: ShExJ.valueSetValue) -> bool:
 
     """
     vsv = map_object_literal(vsv)
-    if isinstance(vsv, (IRIREF, ObjectLiteral)):
+    if isinstance(vsv, objectValue):
         return objectValueMatches(n, vsv)
 
     if isinstance(vsv, ShExJ.Language):

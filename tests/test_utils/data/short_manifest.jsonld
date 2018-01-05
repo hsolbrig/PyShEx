@@ -1,0 +1,495 @@
+{"@context": [
+    {
+      "@base": "https://raw.githubusercontent.com/shexSpec/shexTest/master/validation/manifest"
+    },
+    "context.jsonld"
+  ],
+  "@graph": [
+    {
+      "@id": "",
+      "@type": "mf:Manifest",
+      "rdfs:comment": "ShEx validation tests",
+      "entries": [
+        {
+          "@id": "#0_empty",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/0.shex",
+            "shape": "http://a.example/S1",
+            "data": "empty.ttl",
+            "focus": "http://a.example/dummy"
+          },
+          "extensionResults": [],
+          "name": "0_empty",
+          "trait": [
+            "Empty"
+          ],
+          "comment": "<S1> {  } on {  }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#0_other",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/0.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip1_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "0_other",
+          "trait": [
+            "Empty"
+          ],
+          "comment": "<S1> {  } on { <s1> <p1> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#0_otherbnode",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/0.shex",
+            "shape": "http://a.example/S1",
+            "data": "Babcd_Ip1_Io1.ttl",
+            "focus": "_:abcd"
+          },
+          "extensionResults": [],
+          "name": "0_otherbnode",
+          "trait": [
+            "ToldBNode",
+            "Empty"
+          ],
+          "comment": "<S1> {  } on { _:abcd <p1> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dot_fail-empty",
+          "@type": "sht:ValidationFailure",
+          "action": {
+            "schema": "../schemas/1dot.shex",
+            "shape": "http://a.example/S1",
+            "data": "empty.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dot_fail-empty",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "<S1> { <p1> . } on {  }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dot-base_fail-empty",
+          "@type": "sht:ValidationFailure",
+          "action": {
+            "schema": "../schemas/1dot-base.shex",
+            "shape": "http://a.example/S1",
+            "data": "empty.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dot-base_fail-empty",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "BASE <…> <S1> { <p1> . } on {  }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dot_fail-missing",
+          "@type": "sht:ValidationFailure",
+          "action": {
+            "schema": "../schemas/1dot.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip2_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dot_fail-missing",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "<S1> { <p1> . } on { <s1> <p2> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dot-base_fail-missing",
+          "@type": "sht:ValidationFailure",
+          "action": {
+            "schema": "../schemas/1dot-base.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip2_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dot-base_fail-missing",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "BASE <…> <S1> { <p1> . } on { <s1> <p2> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dot_pass-noOthers",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1dot.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip1_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dot_pass-noOthers",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "<S1> { <p1> . } on { <s1> <p1> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dot-base_pass-noOthers",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1dot-base.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip1_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dot-base_pass-noOthers",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "BASE <…> <S1> { <p1> . } on { <s1> <p1> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dotSemi_pass-noOthers",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1dotSemi.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip1_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dotSemi_pass-noOthers",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "PREFIX : <http://a.example/> <S1> { :p1 ., } on { <s1> <p1> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dotLNex_pass-noOthers",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1dotLNex.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip1_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dotLNex_pass-noOthers",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "PREFIX ex: <http://a.example/> ex:S1 { ex:p1 . } on { <s1> <p1> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dotNS2_pass-noOthers",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1dotNS2.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip1_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dotNS2_pass-noOthers",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "PREFIX S1: <http://a.example/S1> PREFIX p1: <http://a.example/p1> S1: { p1: . } on { <s1> <p1> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dotNS2Comment_pass-noOthers",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1dotNS2Comment.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip1_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dotNS2Comment_pass-noOthers",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "PREFIX S1: <http://a.example/S1> PREFIX p1: <http://a.example/p1> S1: { p1:/*comment*/ . } on { <s1> <p1> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dotLNexComment_pass-noOthers",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1dotLNexComment.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip1_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dotLNexComment_pass-noOthers",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "PREFIX ex: <http://a.example/> ex:S1 { ex:p1/*comment*/ . } on { <s1> <p1> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dotLNdefault_pass-noOthers",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1dotLNdefault.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip1_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dotLNdefault_pass-noOthers",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "PREFIX : <http://a.example/> :S1 { :p1 . } on { <s1> <p1> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dotNSdefault_pass-noOthers",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1dotNSdefault.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip1_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dotNSdefault_pass-noOthers",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "PREFIX : <http://a.example/p1> <S1> { : . } on { <s1> :p1 <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dotLNex-HYPHEN_MINUS_pass-noOthers",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1dotLNex-HYPHEN_MINUS.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip1HYPHEN_MINUS_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dotLNex-HYPHEN_MINUS_pass-noOthers",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "PREFIX ex: <http://a.example/> ex:S1 { ex:p1- . } on { <s1> <p1-> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dot_pass-others_lexicallyEarlier",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1dot.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip0_Io0;Ip1_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dot_pass-others_lexicallyEarlier",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "<S> { <p1> . } on { <s1> <p0> <o0>; <p1> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1dot_pass-others_lexicallyLater",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1dot.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip1_Io1;Ip2_Io2.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1dot_pass-others_lexicallyLater",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "<S> { <p1> . } on { <s1> <p1> <o1>; <p2> <o2> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#bnode1dot_fail-missing",
+          "@type": "sht:ValidationFailure",
+          "action": {
+            "schema": "../schemas/bnode1dot.shex",
+            "shape": "_:S1",
+            "data": "Is1_Ip2_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "bnode1dot_fail-missing",
+          "trait": [
+            "TriplePattern",
+            "ToldBNode"
+          ],
+          "comment": "_:S { <p1> . } on { <s1> <p2> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#bnode1dot_pass-others_lexicallyEarlier",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/bnode1dot.shex",
+            "shape": "_:S1",
+            "data": "Is1_Ip0_Io0;Ip1_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "bnode1dot_pass-others_lexicallyEarlier",
+          "trait": [
+            "TriplePattern",
+            "ToldBNode"
+          ],
+          "comment": "_:S1 { <p1> . } on { <s1> <p0> <o0>; <p1> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1inversedot_fail-empty",
+          "@type": "sht:ValidationFailure",
+          "action": {
+            "schema": "../schemas/1inversedot.shex",
+            "shape": "http://a.example/S1",
+            "data": "empty.ttl",
+            "focus": "http://a.example/o1"
+          },
+          "extensionResults": [],
+          "name": "1inversedot_fail-empty",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "<S> { ^<p1> . } on {  }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1inversedot_fail-missing",
+          "@type": "sht:ValidationFailure",
+          "action": {
+            "schema": "../schemas/1inversedot.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip2_Io1.ttl",
+            "focus": "http://a.example/o1"
+          },
+          "extensionResults": [],
+          "name": "1inversedot_fail-missing",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "<S> { ^<p1> . } on { <s1> <p2> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1inversedot_pass-noOthers",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1inversedot.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip1_Io1.ttl",
+            "focus": "http://a.example/o1"
+          },
+          "extensionResults": [],
+          "name": "1inversedot_pass-noOthers",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "<S> { ^<p1> . } on { <sr> <p1> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1inversedot_pass-over_lexicallyEarlier",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1inversedot.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip0_Io0;Ip1_Io1.ttl",
+            "focus": "http://a.example/o1"
+          },
+          "extensionResults": [],
+          "name": "1inversedot_pass-over_lexicallyEarlier",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "<S> { ^<p1> . } on { <s1> <p0> <o0>; <p1> <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1inversedot_pass-over_lexicallyLater",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1inversedot.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_Ip1_Io1;Ip2_Io2.ttl",
+            "focus": "http://a.example/o1"
+          },
+          "extensionResults": [],
+          "name": "1inversedot_pass-over_lexicallyLater",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "<S> { ^<p1> . } on { <s1> <p1> <o1>; <p2> <o2> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#1Adot_pass",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../schemas/1Adot.shex",
+            "shape": "http://a.example/S1",
+            "data": "Is1_a_Io1.ttl",
+            "focus": "http://a.example/s1"
+          },
+          "extensionResults": [],
+          "name": "1Adot_pass",
+          "trait": [
+            "TriplePattern"
+          ],
+          "comment": "<S> { a . } on { <s1> a <o1> }",
+          "status": "mf:proposed"
+        },
+        {
+          "@id": "#PstarT",
+          "@type": "sht:ValidationTest",
+          "action": {
+            "schema": "../validation/Pstar.shex",
+            "shape": "http://a.example/base/S1",
+            "data": "Pstar.ttl",
+            "focus": "http://a.example/base/n"
+          },
+          "extensionResults": [],
+          "name": "PstarT",
+          "trait": [
+            "EachOf"
+          ],
+          "comment": "<S1> {:a @<P>*, :a @<T>} / { <n> :a <pt1>,  <pt2>,  <p>,  <t> }",
+          "status": "mf:proposed"
+        }
+      ]
+    }
+  ]
+}
