@@ -11,7 +11,7 @@ from pyshex.shapemap_structure_and_language.p3_shapemap_structure import ShapeAs
 from tests.utils.manifest import ShExManifest
 from tests.utils.uri_redirector import URIRedirector
 
-ENTRY_NAME = '1dotOne2dot_pass_p1'
+ENTRY_NAME = '1literalFractiondigits_pass-decimal-short'
 CONTINUE_ON_FAIL = False
 
 BNODE_ISSUE = "Blank Nodes are not preserved in RDF"
@@ -28,7 +28,7 @@ expected_failures = {
      "1val1STRING_LITERAL1_with_all_punctuation_fail": RDFLIB_QUOTE,
      "1val1DOUBLE_pass": "0E0 is not a valid RDF double value",
      "1val1DOUBLElowercase_pass": "0e0 is not a valid RDF double value",
-     "1literalFractiondigits_pass-decimal-short": "ShEx asks for 5 digits, spec gives 4",
+
      "1literalFractiondigits_pass-integer-short": "5 digits is not 5 fraction digits",
      "1literalFractiondigits_pass-xsd_integer-short": "5 digits is not 5 fraction digits",
      "1literalTotaldigits_pass-decimal-short": "1.234 doesn't have 5 digits(?)",
