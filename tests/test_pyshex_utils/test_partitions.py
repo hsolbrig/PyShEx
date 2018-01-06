@@ -2,7 +2,7 @@ import unittest
 
 from rdflib import Graph, RDF
 
-from pyshex.utils.partitions import algorithm_u, partition_t
+from pyshex.utils.partitions import algorithm_u, partition_t, partition_2
 from tests.utils.setup_test import gen_rdf, rdf_header, EX
 
 
@@ -41,6 +41,30 @@ class PartitionsTestCase(unittest.TestCase):
             l2 = partition_t(glist, 2)
             for e1, e2 in zip(l1, l2):
                 self.assertEqual(e1, e2)
+
+    def test_partition_2(self):
+        g = Graph()
+        self.assertEqual(1, len(list(partition_2(list(g)))))
+
+        triples = gen_rdf("""<Alice> ex:shoeSize "30"^^xsd:integer .""")
+        g = Graph()
+        g.parse(data=triples, format="turtle")
+        self.assertEqual(2, len(list(partition_2(list(g)))))
+
+        triples = gen_rdf("""<Alice> ex:shoeSize "30"^^xsd:integer .
+                <Alice> a ex:Teacher .""")
+        g = Graph()
+        g.parse(data=triples, format="turtle")
+        self.assertEqual(3, len(list(partition_2(list(g)))))
+
+        triples = gen_rdf("""<Alice> ex:shoeSize "30"^^xsd:integer .
+                        <Alice> a ex:Teacher .
+                        <Alice> a ex:Person .""")
+        g = Graph()
+        g.parse(data=triples, format="turtle")
+        x = list(partition_2(list(g)))
+        self.assertEqual(5, len(list(partition_2(list(g)))))
+
 
     def test_caching(self):
         triples = gen_rdf("""<Alice> ex:shoeSize "30"^^xsd:integer .

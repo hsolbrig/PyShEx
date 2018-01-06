@@ -97,6 +97,7 @@ def algorithm_u(ns, m):
 @functools.lru_cache()
 def integer_partition(size: int, nparts: int) -> List[List[List[int]]]:
     # Note: can't cache a generator (!)
+    # If we've got fewer elements that the minimum number of parts, all bets are off
     return list(algorithm_u(range(size), nparts))
 
 
@@ -111,7 +112,22 @@ def partition_t(T: List[RDFTriple], nparts: int, cached=True) -> List[List[List[
     We don't actually partition the triples directly -- instead, we partition a set of integers that
     reference elements in the (ordered) set and return those
     """
-    # TODO: the result of applying
-    partitions = integer_partition(len(T), nparts) if cached else algorithm_u(range(len(T)), nparts)
+    partitions = integer_partition(len(T), nparts) if cached else list(algorithm_u(range(len(T)), nparts))
     for partition in partitions:
         yield [[T[e] for e in element] for element in partition]
+
+
+def partition_2(T: List[RDFTriple]) -> List[List[RDFTriple]]:
+    """
+    Partition T into all possible combinations of two subsets
+    :param T:
+    :return:
+    """
+    if len(T) == 0:
+        yield [[],[]]
+    elif len(T) == 1:
+        yield [T, []]
+    else:
+        yield [T, []]
+        for e in partition_t(T, 2):
+            yield e

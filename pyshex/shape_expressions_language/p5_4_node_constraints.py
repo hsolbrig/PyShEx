@@ -1,10 +1,11 @@
 """ Implementation of `5.4 <http://shex.io/shex-semantics/#node-constraints>`_"""
 
 import numbers
-from typing import Union
+from typing import Union, Optional
 
 from ShExJSG import ShExJ
 from ShExJSG.ShExJ import ObjectLiteral, IRIREF
+from pyjsg.jsglib.jsg import isinstance_
 from rdflib import URIRef, BNode, Literal, XSD, RDF
 from rdflib.plugins.sparql.parser import RDFLiteral
 
@@ -22,6 +23,12 @@ def satisfies2(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
     values constraint value v present in nc nodeSatisfies(n, v). The following sections define nodeSatisfies for
     each of these types of constraints:
     """
+    print("---> satisfies2")
+    # print(f"\t nodeSatisfiesNodeKind(n, nc) -> {nodeSatisfiesNodeKind(n, nc)}")
+    # print(f"\t nodeSatisfiesDataType(n, nc) -> {nodeSatisfiesDataType(n, nc)}")
+    # print(f"\t nodeSatisfiesStringFacet(n, nc) -> {nodeSatisfiesStringFacet(n, nc)}")
+    # print(f"\t nodeSatisfiesNumericFacet(n, nc) -> {nodeSatisfiesNumericFacet(n, nc)}")
+    # print(f"\t nodeSatisfiesValues(n, nc) -> {nodeSatisfiesValues(n, nc)}")
     return nodeSatisfiesNodeKind(n, nc) and nodeSatisfiesDataType(n, nc) and \
         nodeSatisfiesStringFacet(n, nc) and nodeSatisfiesNumericFacet(n, nc) and \
         nodeSatisfiesValues(n, nc)
@@ -37,6 +44,7 @@ def nodeSatisfiesNodeKind(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
         * v = "literal" and n is a Literal.
         * v = "nonliteral" and n is an IRI or blank node.
     """
+    print(f"\t\t{nc.nodeKind} : {type(n)}")
     return nc.nodeKind is None or \
         (nc.nodeKind == 'iri' and isinstance(n, URIRef)) or \
         (nc.nodeKind == 'bnode' and isinstance(n, BNode)) or \
@@ -54,10 +62,15 @@ def nodeSatisfiesDataType(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
     """
     # TODO: reconcile this with rdflib and the spec
     # TODO: for all of these situations, create a special error when nodeSelector is None
-    datatype = RDF.langString if (n.datatype is None or n.datatype == XSD.string) and n.language else n.datatype
     return nc.datatype is None or \
-        (isinstance(n, Literal) and str(datatype) == nc.datatype and n.value is not None and
+        (str(_datatype(n)) == nc.datatype and n.value is not None and
          (not is_sparql_operand_datatype(nc.datatype) or can_cast_to(n, nc.datatype)))
+
+
+def _datatype(n: nodeSelector) -> Optional[str]:
+    return None if not isinstance(n, Literal) \
+        else str(RDF.langString) if (n.datatype is None or n.datatype == XSD.string) and n.language else \
+        str(n.datatype)
 
 
 def nodeSatisfiesStringFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
@@ -72,7 +85,7 @@ def nodeSatisfiesStringFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
     #  * if the value n is an RDF Literal, the lexical form of the literal (see[rdf11-concepts] section 3.3 Literals).
     #  * if the value n is an IRI, the IRI string (see[rdf11-concepts] section 3.2 IRIs).
     #  * if the value n is a blank node, the blank node identifier (see[rdf11-concepts] section 3.4 Blank Nodes).
-    if isinstance(n, RDFLiteral):
+    if isinstance_(n, Literal):
         lex = str(n)
         #  Let len = the number of unicode codepoints in lex
         # For a node n and constraint value v, nodeSatisfies(n, v):
@@ -93,6 +106,7 @@ def nodeSatisfiesStringFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
                (nc.minlength.val is None or len(lex) >= nc.minlength.val) and \
                (nc.maxlength.val is None or len(lex) <= nc.maxlength.val) and \
                (nc.pattern.val is None or pattern_match(nc.pattern.val, nc.flags.val, lex))
+    return True
 
 
 def nodeSatisfiesNumericFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
@@ -111,6 +125,9 @@ def nodeSatisfiesNumericFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool
                    (nc.maxexclusive.val is None or v < nc.maxexclusive.val) and \
                    (nc.totaldigits.val is None or total_digits(n) == nc.totaldigits.val) and \
                    (nc.fractiondigits.val is None or fraction_digits(n) == nc.fractiondigits.val)
+        else:
+            return False
+    return True
 
 
 def nodeSatisfiesValues(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
@@ -142,7 +159,7 @@ def _nodeSatisfiesValue(n: nodeSelector, vsv: ShExJ.valueSetValue) -> bool:
 
     """
     vsv = map_object_literal(vsv)
-    if isinstance(vsv, objectValue):
+    if isinstance_(vsv, ShExJ.objectValue):
         return objectValueMatches(n, vsv)
 
     if isinstance(vsv, ShExJ.Language):

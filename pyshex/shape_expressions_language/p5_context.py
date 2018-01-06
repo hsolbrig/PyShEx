@@ -115,7 +115,7 @@ class Context:
 
     def shapeExprFor(self, id_: ShExJ.shapeExprLabel) -> ShExJ.shapeExpr:
         """ Return the shape expression that corresponds to id """
-        return self.schema_id_map[id_]
+        return self.schema_id_map.get(id_)
 
     def visit_shapes(self, expr: ShExJ.shapeExpr, f: Callable[[Any, ShExJ.shapeExpr, "Context"], None], arg_cntxt: Any,
                      visit_center: _VisitorCenter = None) -> None:

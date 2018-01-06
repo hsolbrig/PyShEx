@@ -1,6 +1,7 @@
 """ Implementation of `5.3 Shape Expressions <http://shex.io/shex-semantics/#node-constraint-semantics>`_ """
 
 from ShExJSG import ShExJ
+from pyjsg.jsglib.jsg import isinstance_
 
 from pyshex.shape_expressions_language.p5_4_node_constraints import satisfies2
 from pyshex.shape_expressions_language.p5_5_shapes_and_triple_expressions import satisfiesShape
@@ -29,14 +30,23 @@ def satisfies(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExpr) -> bool:
                       satisfies(n, se2, G, m).
 
           """
-    print("H")
-    return (isinstance(se, ShExJ.NodeConstraint) and satisfies2(n, se)) or \
-           (isinstance(se, ShExJ.Shape) and satisfiesShape(n, se, cntxt)) or \
-           (isinstance(se, ShExJ.ShapeOr) and satisifesShapeOr(cntxt, n, se)) or \
-           (isinstance(se, ShExJ.ShapeAnd) and satisfiesShapeAnd(cntxt, n, se)) or \
-           (isinstance(se, ShExJ.ShapeNot) and satisfiesShapeNot(cntxt, n, se)) or \
-           (isinstance(se, ShExJ.ShapeExternal) and satisfiesExternal(cntxt, n, se)) or \
-           (isinstance(se, ShExJ.shapeExprLabelType_) and satisfiesShapeExprRef(cntxt, n, se))
+
+    if isinstance(se, ShExJ.NodeConstraint):
+        return satisfies2(n, se)
+    elif isinstance(se, ShExJ.Shape):
+        return satisfiesShape(n, se, cntxt)
+    elif isinstance(se, ShExJ.ShapeOr):
+        return satisifesShapeOr(cntxt, n, se)
+    elif isinstance(se, ShExJ.ShapeAnd):
+        return satisfiesShapeAnd(cntxt, n, se)
+    elif isinstance(se, ShExJ.ShapeNot):
+        return satisfiesShapeNot(cntxt, n, se)
+    elif isinstance(se, ShExJ.ShapeExternal):
+        return satisfiesExternal(cntxt, n, se)
+    elif isinstance_(se, ShExJ.shapeExprLabel):
+        return satisfiesShapeExprRef(cntxt, n, se)
+    else:
+        raise NotImplementedError(f"Unrecognized shapeExpr: {type(se)}")
 
 
 def notSatisfies(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExpr) -> bool:

@@ -7,12 +7,14 @@ from urllib.request import urlopen
 
 from rdflib.collection import Collection
 
+from tests.utils.uri_redirector import URIRedirector
+
 SHT = Namespace("http://www.w3.org/ns/shacl/test-suite#")
 MF = Namespace("http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#")
 
 
 class ShExManifestEntry:
-    def __init__(self, entryuri: URIRef, g: Graph) -> None:
+    def __init__(self, entryuri: URIRef, g: Graph, owner: "ShExManifest") -> None:
         """ An individual manifest entry
 
         :param entryuri: URI of the entry
@@ -20,6 +22,7 @@ class ShExManifestEntry:
         """
         self.g = g
         self.entryuri = entryuri
+        self.owner = owner
         action = self.g.value(self.entryuri, MF.action, any=False)
         assert action, "Invalid action list in entry"
         self.action_ = {p: o for p, o in g.predicate_objects(action)}
@@ -68,9 +71,16 @@ class ShExManifestEntry:
         return self._action_obj(SHT.schema)
 
     def schema(self) -> Optional[str]:
-        # TODO: remove this when ShExC and ttl parsers are available
-        schema_uri = str(self.schema_uri).replace(".shex", ".json")
-        return urlopen(schema_uri).read().decode() if self.schema_uri else None
+        if self.schema_uri:
+            # TODO: remove this when ShExC and ttl parsers are available
+            schema_uri = self.owner.schema_uri(self.schema_uri)
+            schema_uri_str = str(self.owner.schema_uri(self.schema_uri)).replace(".shex", ".json")
+            if isinstance(schema_uri, URIRef):
+                return urlopen(schema_uri_str).read().decode()
+            else:
+                with open(schema_uri_str) as schema_file:
+                    return schema_file.read()
+        return None
 
     def shex_schema(self) -> Optional[ShExJ.Schema]:
         schema = self.schema()
@@ -85,7 +95,14 @@ class ShExManifestEntry:
         return self._action_obj(SHT.data)
 
     def data(self) -> Optional[str]:
-        return urlopen(self.data_uri).read().decode() if self.data_uri else None
+        if self.data_uri:
+            uri = self.owner.data_uri(self.data_uri)
+            if isinstance(uri, URIRef):
+                return urlopen(str(uri)).read().decode()
+            else:
+                with open(uri) as data_file:
+                    return data_file.read()
+        return None
 
     @property
     def focus(self) -> Optional[URIRef]:
@@ -93,7 +110,7 @@ class ShExManifestEntry:
 
     def data_graph(self, fmt="turtle") -> Optional[Graph]:
         g = Graph()
-        g.parse(self.data_uri, format=fmt)
+        g.parse(data=self.data(), format=fmt)
         return g
 
     def __str__(self):
@@ -106,7 +123,16 @@ class ShExManifest:
         self.g.parse(file_loc, format=fmt)
         self.entries: Dict[str, List[ShExManifestEntry]] = {}
 
+        self.schema_redirector: Optional[URIRedirector] = None
+        self.data_redirector: Optional[URIRedirector] = None
+
         manifest = self.g.value(None, RDF.type, MF.Manifest, any=False)
         for e in Collection(self.g, self.g.value(manifest, MF.entries, any=False)):
-            entry = ShExManifestEntry(e, self.g)
+            entry = ShExManifestEntry(e, self.g, self)
             self.entries.setdefault(str(entry), []).append(entry)
+
+    def data_uri(self, uri: URIRef) -> Union[URIRef, str]:
+        return self.data_redirector.uri_for(uri) if self.data_redirector else uri
+
+    def schema_uri(self, uri: URIRef) -> Union[URIRef, str]:
+        return self.schema_redirector.uri_for(uri) if self.schema_redirector else uri

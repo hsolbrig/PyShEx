@@ -11,9 +11,16 @@ def isValid(cntxt: Context, m: FixedShapeMap) -> bool:
     The expression isValid(G, m) indicates that for every nodeSelector/shapeLabel pair (n, s) in m, s has a
         corresponding shape expression se and satisfies(n, se, G, m). satisfies is defined below for each form
         of shape expression
+
     :param cntxt: evaluation context - includes graph and schema
     :param m: list of NodeShape pairs to test
     :return:
     """
+    # print("--->isValid")
+    # for n, s in [(e.nodeSelector, e.shapeLabel) for e in m]:
+    #     print(f"*** {n} - {s}: {s in cntxt.schema.shapes and satisfies(cntxt, n, cntxt.shapeExprFor(s))}")
+    # rval = all(s in cntxt.schema.shapes and satisfies(cntxt, n, cntxt.shapeExprFor(s))
+    #            for n, s in [(e.nodeSelector, e.shapeLabel) for e in m])
+    # print(f"={rval}")
     return all(s in cntxt.schema.shapes and satisfies(cntxt, n, cntxt.shapeExprFor(s))
                for n, s in [(e.nodeSelector, e.shapeLabel) for e in m])

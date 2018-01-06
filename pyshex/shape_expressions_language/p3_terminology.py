@@ -5,9 +5,10 @@
     * Node: one of IRI, blank node, Literal
     * Graph: a set of Triples of (subject, predicate, object)
 """
-from typing import Set
+from typing import Set, Iterator, Tuple
 
-from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node, RDFTriple, TriplePredicate
+from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node, RDFTriple, TriplePredicate, \
+    TripleSubject, TripleObject
 from rdflib import Graph
 
 # This specification makes use of the following namespaces:
@@ -19,7 +20,7 @@ SHEX = Namespace("http://www.w3.org/ns/shex#")
 
 def arcsOut(G: Graph, n: Node) -> Set[RDFTriple]:
     """ arcsOut(G, n) is the set of triples in a graph G with subject n. """
-    return set(G.triples((n, None, None)))
+    return {RDFTriple(e) for e in G.triples((n, None, None))}
 
 
 def predicatesOut(G: Graph, n: Node) -> Set[TriplePredicate]:
@@ -29,7 +30,7 @@ def predicatesOut(G: Graph, n: Node) -> Set[TriplePredicate]:
 
 def arcsIn(G: Graph, n: Node) -> Set[RDFTriple]:
     """ arcsIn(G, n) is the set of triples in a graph G with object n. """
-    return set(G.triples((None, None, n)))
+    return {RDFTriple(e) for e in G.triples((None, None, n))}
 
 
 def predicatesIn(G: Graph, n: Node) -> Set[TriplePredicate]:

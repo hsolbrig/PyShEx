@@ -1,6 +1,6 @@
 """ Implementation of `5.5 Shapes and Triple Expressions <http://shex.io/shex-semantics/#shapes-and-TEs>`_"""
 
-from typing import Set, List
+from typing import Set, List, Optional
 
 from ShExJSG import ShExJ
 
@@ -9,7 +9,7 @@ from pyshex.shape_expressions_language.p5_7_semantic_actions import semActsSatis
 from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import RDFTriple
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
-from pyshex.utils.partitions import partition_t
+from pyshex.utils.partitions import partition_t, partition_2
 from pyshex.utils.schema_utils import predicates_in_expression
 from pyshex.utils.value_set_utils import uriref_matches_iriref
 
@@ -32,8 +32,10 @@ def satisfiesShape(n: nodeSelector, S: ShExJ.Shape, cntxt: Context) -> bool:
     neighborhood = list(neigh(cntxt.graph, n))
 
     if S.expression:
-        for matched, remainder in partition_t(neighborhood, 2):
-            if matches(matched, S.expression, cntxt) and valid_remainder(n, remainder, S, cntxt):
+        for matched, remainder in partition_2(neighborhood):
+            print(f"--> ({len(matched)}, {len(remainder)})")
+            if matches(matched, S.expression, cntxt) and valid_remainder(n, remainder, S, cntxt) or \
+                    matches(remainder, S.expression, cntxt) and valid_remainder(n, matched, S, cntxt):
                 return True
         return False
     else:
@@ -105,7 +107,7 @@ def matches(T: Set[RDFTriple], expr: ShExJ.tripleExpr, cntxt: Context) -> bool:
             * or `satisfies(value, valueExpr, G, m).
     """
     return matchesCardinality(T, expr, cntxt) and \
-        expr.semActs is None or semActsSatisfied(expr.semActs, cntxt)
+        (expr.semActs is None or semActsSatisfied(expr.semActs, cntxt))
 
 
 def matchesCardinality(T: Set[RDFTriple], expr: ShExJ.tripleExpr, cntxt: Context) -> bool:
@@ -114,16 +116,25 @@ def matchesCardinality(T: Set[RDFTriple], expr: ShExJ.tripleExpr, cntxt: Context
     T can be partitioned into k subsets T1, T2,…Tk such that min ≤ k ≤ max and for each Tn,
     matches(Tn, expr, m) by the remaining rules in this list.
     """
-    return any(all(matchesExpr(t, expr, cntxt) for t in partition) for partition in _partitions(T, expr.min, expr.max))
+    if len(T) < (expr.min.val if expr.min.val is not None else 1):
+        return False
+    for partition in _partitions(T, expr.min.val, expr.max.val):
+        if all(matchesExpr(entry, expr, cntxt) for entry in partition):
+            return True
+    return expr.min.val == 0
 
 
-def _partitions(T: Set[RDFTriple], min_: int, max_: int) -> List[List[Set[RDFTriple]]]:
-    ts = sorted(List(T))
+def _partitions(T: Set[RDFTriple], min_: Optional[int], max_: Optional[int]) -> List[List[Set[RDFTriple]]]:
+    if min_ is None:
+        min_ = 1
+    if max_ is None:
+        max_ = 1
     if max_ == 1:
-        return [[T]]
-    for k in range(min_, min(max_, len(T))):
+        yield [T]
+    ts = sorted(list(T))
+    for k in range(min_, (len(T) if max_ == -1 else min(max_, len(T))) + 1):
         for partition in partition_t(ts, k):
-            yield next(partition)
+            yield partition
 
 
 def matchesExpr(T: Set[RDFTriple], expr: ShExJ.tripleExpr, cntxt: Context) -> bool:
@@ -178,11 +189,11 @@ def matchesTripleConstraint(T: Set[RDFTriple], expr: ShExJ.TripleConstraint, cnt
     if len(T) == 1:
         for t in T:
             if uriref_matches_iriref(t.predicate, expr.predicate):
-                value = t.subject if expr.inverse else t.object
-                if expr.valueExpr is None:
+                value = t.subject if expr.inverse.val else t.object
+                if expr.valueExpr is None or satisfies(cntxt, value, expr.valueExpr):
                     return True
-                else:
-                    satisfies(cntxt, value, expr.valueExpr)
+    return False
+
 
 
 def matchesTripleExprRef(T: Set[RDFTriple], expr: ShExJ.tripleExprLabel, cntxt: Context) -> bool:
