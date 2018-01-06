@@ -16,7 +16,12 @@ Se is a ShapeAnd and for every shape expression se2 in shapeExprs, satisfies(n, 
 ``` 
 is implemented in Python as:
 ```python
-all(satisfies(cntxt, n, se2) for se2 in se.shapeExprs)
+        ...
+if isinstance(se, ShExJ.ShapeAnd):
+    return satisfiesShapeAnd(cntxt, n, se)
+        ...
+def satisfiesShapeAnd(cntxt: Context, n: nodeSelector, se: ShExJ.ShapeAnd) -> bool:
+    return all(satisfies(cntxt, n, se2) for se2 in se.shapeExprs)
 ```
 
 ## Current status
