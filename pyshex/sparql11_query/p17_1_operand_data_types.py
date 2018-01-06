@@ -45,7 +45,11 @@ def is_integer(n: Node) -> bool:
 
 
 def is_decimal(n: Node) -> bool:
-    return is_integer(n) or is_typed_literal(n) and cast(Literal, n).datatype in [XSD.decimal]
+    return is_integer(n) or (is_typed_literal(n) and cast(Literal, n).datatype in [XSD.decimal])
+
+
+def is_numeric(n: Node) -> bool:
+    return is_decimal(n) or (is_typed_literal(n) and cast(Literal, n).datatype in [XSD.float, XSD.double])
 
 
 def is_sparql_operand_datatype(n: Union[Node, str]) -> bool:

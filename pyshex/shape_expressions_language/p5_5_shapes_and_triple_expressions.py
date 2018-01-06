@@ -33,7 +33,8 @@ def satisfiesShape(n: nodeSelector, S: ShExJ.Shape, cntxt: Context) -> bool:
 
     if S.expression:
         for matched, remainder in partition_2(neighborhood):
-            print(f"--> ({len(matched)}, {len(remainder)})")
+            # TODO: Debugging
+            # print(f"--> ({len(matched)}, {len(remainder)})")
             if matches(matched, S.expression, cntxt) and valid_remainder(n, remainder, S, cntxt) or \
                     matches(remainder, S.expression, cntxt) and valid_remainder(n, matched, S, cntxt):
                 return True
@@ -193,7 +194,6 @@ def matchesTripleConstraint(T: Set[RDFTriple], expr: ShExJ.TripleConstraint, cnt
                 if expr.valueExpr is None or satisfies(cntxt, value, expr.valueExpr):
                     return True
     return False
-
 
 
 def matchesTripleExprRef(T: Set[RDFTriple], expr: ShExJ.tripleExprLabel, cntxt: Context) -> bool:

@@ -33,14 +33,26 @@ def fraction_digits(n: Literal) -> Optional[int]:
     for "fractiondigits" constraints, v is less than or equals the number of digits to the right of the decimal place
     in the XML Schema canonical form[xmlschema-2] of the value of n, ignoring trailing zeros.
     """
+    # Note - the last expression below isolates the fractional portion, reverses it (e.g. 017320 --> 023710) and
+    #        converts it to an integer and back to a string
     return None if not is_decimal(n) or n.value is None \
         else 0 if is_integer(n) or str(n.value).split('.')[1] == '0' \
-        else len(str(n.value).split('.')[1])
+        else len(str(int(str(n.value).split('.')[1][::-1])))
 
 
 def pattern_match(pattern: str, flags: str, val: str) -> bool:
-    re_flags, pattern = _map_xpath_flags_to_re(pattern, flags)
+    re_flags, pattern = _map_xpath_flags_to_re(reencode_escapes(pattern), flags)
     return re.search(pattern, val, flags=re_flags) is not None
+
+
+def reencode_escapes(pattern: str) -> str:
+    return re.sub(r'\\.', _subf, pattern)
+
+
+def _subf(matchobj) -> str:
+    o = matchobj.group(0)
+    return o if o[1] in ['\\', '^', '$'] else '\t' if o[1] == 't' else '\n' if o[1] == 'n' else '\r' if o[1] == 'r' \
+        else o[1]
 
 
 def _map_xpath_flags_to_re(expr: str, xpath_flags: str) -> Tuple[int, str]:
@@ -77,7 +89,7 @@ def _char_class_escape(m) -> str:
     return match_str if match_str[0] == '[' and match_str[-1] == ']' else ''
 
 
-def map_object_literal(v: Union[str, jsonasobj.JsonObj]) -> Union[JSGString, JSGObject]:
+def map_object_literal(v: Union[str, jsonasobj.JsonObj]) -> ShExJ.ObjectLiteral:
     """ `PyShEx.jsg <https://github.com/hsolbrig/ShExJSG/ShExJSG/ShExJ.jsg>`_ does not add identifying
     types to ObjectLiterals.  This routine re-identifies the types
     """

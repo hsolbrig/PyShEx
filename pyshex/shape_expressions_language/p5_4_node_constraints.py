@@ -4,16 +4,14 @@ import numbers
 from typing import Union, Optional
 
 from ShExJSG import ShExJ
-from ShExJSG.ShExJ import ObjectLiteral, IRIREF
 from pyjsg.jsglib.jsg import isinstance_
 from rdflib import URIRef, BNode, Literal, XSD, RDF
-from rdflib.plugins.sparql.parser import RDFLiteral
 
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
-from pyshex.sparql11_query.p17_1_operand_data_types import is_sparql_operand_datatype, is_decimal
+from pyshex.sparql11_query.p17_1_operand_data_types import is_sparql_operand_datatype, is_numeric
 from pyshex.utils.datatype_utils import can_cast_to, total_digits, fraction_digits, pattern_match, map_object_literal
-from pyshex.utils.value_set_utils import objectValueMatches, uriref_startswith_iriref
+from pyshex.utils.value_set_utils import objectValueMatches, uriref_startswith_iriref, uriref_matches_iriref
 
 
 def satisfies2(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
@@ -23,7 +21,7 @@ def satisfies2(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
     values constraint value v present in nc nodeSatisfies(n, v). The following sections define nodeSatisfies for
     each of these types of constraints:
     """
-    print("---> satisfies2")
+    # print("---> satisfies2")
     # print(f"\t nodeSatisfiesNodeKind(n, nc) -> {nodeSatisfiesNodeKind(n, nc)}")
     # print(f"\t nodeSatisfiesDataType(n, nc) -> {nodeSatisfiesDataType(n, nc)}")
     # print(f"\t nodeSatisfiesStringFacet(n, nc) -> {nodeSatisfiesStringFacet(n, nc)}")
@@ -44,7 +42,6 @@ def nodeSatisfiesNodeKind(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
         * v = "literal" and n is a Literal.
         * v = "nonliteral" and n is an IRI or blank node.
     """
-    print(f"\t\t{nc.nodeKind} : {type(n)}")
     return nc.nodeKind is None or \
         (nc.nodeKind == 'iri' and isinstance(n, URIRef)) or \
         (nc.nodeKind == 'bnode' and isinstance(n, BNode)) or \
@@ -85,7 +82,8 @@ def nodeSatisfiesStringFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
     #  * if the value n is an RDF Literal, the lexical form of the literal (see[rdf11-concepts] section 3.3 Literals).
     #  * if the value n is an IRI, the IRI string (see[rdf11-concepts] section 3.2 IRIs).
     #  * if the value n is a blank node, the blank node identifier (see[rdf11-concepts] section 3.4 Blank Nodes).
-    if isinstance_(n, Literal):
+    if nc.length.val is not None or nc.minlength.val is not None or nc.maxlength.val is not None \
+            or nc.pattern.val is not None:
         lex = str(n)
         #  Let len = the number of unicode codepoints in lex
         # For a node n and constraint value v, nodeSatisfies(n, v):
@@ -106,7 +104,9 @@ def nodeSatisfiesStringFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
                (nc.minlength.val is None or len(lex) >= nc.minlength.val) and \
                (nc.maxlength.val is None or len(lex) <= nc.maxlength.val) and \
                (nc.pattern.val is None or pattern_match(nc.pattern.val, nc.flags.val, lex))
-    return True
+
+    else:
+        return True
 
 
 def nodeSatisfiesNumericFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
@@ -116,15 +116,19 @@ def nodeSatisfiesNumericFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool
     Operand Data Types[sparql11-query]. Numeric constraints on non-numeric values fail. totaldigits and
     fractiondigits constraints on values not derived from xsd:decimal fail.
     """
-    if is_decimal(n):
-        v = n.value
-        if isinstance(v, numbers.Number):
-            return (nc.mininclusive.val is None or v >= nc.mininclusive.val) and \
-                   (nc.minexclusive.val is None or v > nc.minexclusive.val) and \
-                   (nc.maxinclusive.val is None or v <= nc.maxexclusive.val) and \
-                   (nc.maxexclusive.val is None or v < nc.maxexclusive.val) and \
-                   (nc.totaldigits.val is None or total_digits(n) == nc.totaldigits.val) and \
-                   (nc.fractiondigits.val is None or fraction_digits(n) == nc.fractiondigits.val)
+    if nc.minexclusive.val is not None or nc.minexclusive.val is not None or nc.maxinclusive.val is not None \
+            or nc.maxexclusive.val is not None or nc.totaldigits.val is not None or nc.fractiondigits.val is not None:
+        if is_numeric(n):
+            v = n.value
+            if isinstance(v, numbers.Number):
+                return (nc.mininclusive.val is None or v >= nc.mininclusive.val) and \
+                       (nc.minexclusive.val is None or v > nc.minexclusive.val) and \
+                       (nc.maxinclusive.val is None or v <= nc.maxinclusive.val) and \
+                       (nc.maxexclusive.val is None or v < nc.maxexclusive.val) and \
+                       (nc.totaldigits.val is None or total_digits(n) == nc.totaldigits.val) and \
+                       (nc.fractiondigits.val is None or fraction_digits(n) == nc.fractiondigits.val)
+            else:
+                return False
         else:
             return False
     return True
@@ -173,26 +177,26 @@ def _nodeSatisfiesValue(n: nodeSelector, vsv: ShExJ.valueSetValue) -> bool:
 
     if isinstance(vsv, ShExJ.IriStemRange):
         exclusions = vsv.exclusions if vsv.exclusions is not None else []
-        return nodeInIriStem(n, vsv.stem) and not any(nodeInIriStem(n, excl.stem) for excl in exclusions)
+        return nodeInIriStem(n, vsv.stem) and not any(uriref_matches_iriref(n, excl) for excl in exclusions)
 
     if isinstance(vsv, ShExJ.LiteralStem):
         return nodeInLiteralStem(n, vsv.stem)
 
     if isinstance(vsv, ShExJ.LiteralStemRange):
         exclusions = vsv.exclusions if vsv.exclusions is not None else []
-        return nodeInLiteralStem(n, vsv.stem) and not any(nodeInLiteralStem(n, excl.stem) for excl in exclusions)
+        return nodeInLiteralStem(n, vsv.stem) and not any(str(n) == excl for excl in exclusions)
 
     if isinstance(vsv, ShExJ.LanguageStem):
         return nodeInLanguageStem(n, vsv.stem)
 
-    if isinstance(vsv, ShExJ.LiteralStemRange):
+    if isinstance(vsv, ShExJ.LanguageStemRange):
         exclusions = vsv.exclusions if vsv.exclusions is not None else []
-        return nodeInLanguageStem(n, vsv.stem) and not any(nodeInLanguageStem(n, excl.stem) for excl in exclusions)
+        return nodeInLanguageStem(n, vsv.stem) and not any(str(n) == str(excl) for excl in exclusions)
 
     return False
 
 
-def nodeInIriStem(n: Node, s: Union[ShExJ.IRIREF, ShExJ.Wildcard]) -> bool:
+def nodeInIriStem(n: Node, s: Union[str, ShExJ.IRIREF, ShExJ.Wildcard]) -> bool:
     """
        **nodeIn**: asserts that an RDF node n is equal to an RDF term s or is in a set defined by a
        :py:class:`ShExJ.IriStem`, :py:class:`LiteralStem` or :py:class:`LanguageStem`.
@@ -216,7 +220,7 @@ def nodeInLiteralStem(n: Node, s: Union[str, ShExJ.Wildcard]) -> bool:
          #) `n` is an :py:class:`rdflib.Literal` and fn:starts-with(`n`, `s`)
      """
     return isinstance(s, ShExJ.Wildcard) or \
-        (isinstance(n, Literal) and str(n.value).startswith(s))
+        (isinstance(n, Literal) and str(n.value).startswith(str(s)))
 
 
 def nodeInLanguageStem(n: Node, s: Union[ShExJ.LANGTAG, ShExJ.Wildcard]) -> bool:
