@@ -7,8 +7,10 @@ from pyshex.shape_expressions_language.p5_4_node_constraints import satisfies2
 from pyshex.shape_expressions_language.p5_5_shapes_and_triple_expressions import satisfiesShape
 from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
+from pyshex.utils.debug_utils import satisfies_wrapper
 
 
+@satisfies_wrapper
 def satisfies(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExpr) -> bool:
     """ `5.3 Shape Expressions <http://shex.io/shex-semantics/#node-constraint-semantics>`_
 
@@ -29,12 +31,13 @@ def satisfies(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExpr) -> bool:
             * Se is a shapeExprRef and there exists in the schema a shape expression se2 with that id and
                       satisfies(n, se2, G, m).
 
+          .. note:: Where is the documentation on recursion?  All I can find is
+           `5.9.4 Recursion Example <http://shex.io/shex-semantics/#example-recursion>`_
           """
-
     if isinstance(se, ShExJ.NodeConstraint):
-        return satisfies2(n, se)
+        return satisfies2(cntxt, n, se)
     elif isinstance(se, ShExJ.Shape):
-        return satisfiesShape(n, se, cntxt)
+        return satisfiesShape(cntxt, n, se)
     elif isinstance(se, ShExJ.ShapeOr):
         return satisifesShapeOr(cntxt, n, se)
     elif isinstance(se, ShExJ.ShapeAnd):

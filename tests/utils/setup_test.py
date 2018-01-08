@@ -3,13 +3,14 @@ from typing import Tuple, Optional
 
 from ShExJSG import ShExJ
 from pyjsg.jsglib import jsg
-from rdflib import Graph, RDF, RDFS, XSD, Namespace
+from rdflib import Graph, RDF, RDFS, XSD
 from rdflib.namespace import FOAF
 
 from pyshex.shape_expressions_language.p5_context import Context
+from pyshex.utils.rdf_namespace import RDFNamespace
 
-EX = Namespace("http://schema.example/")
-INST = Namespace("http://inst.example/#")
+EX = RDFNamespace("http://schema.example/")
+INST = RDFNamespace("http://inst.example/#")
 
 rdf_header = f"""
 prefix ex: <{EX}>

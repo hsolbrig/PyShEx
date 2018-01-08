@@ -1,5 +1,5 @@
-from typing import Union, Tuple
-from rdflib import URIRef, BNode, Literal
+from typing import Union, Tuple, Iterator, Optional
+from rdflib import URIRef, BNode, Literal, Graph
 
 #  This document assumes an understanding of the ShEx notation and terminology.
 #
@@ -19,21 +19,35 @@ FocusNode = Node
 TripleSubject = Union[URIRef, BNode]
 TriplePredicate = URIRef
 TripleObject = Union[URIRef, Literal, BNode]
+Triple = Tuple[TripleSubject, TriplePredicate, TripleObject]
 
 
-class RDFTriple:
-    def __init__(self, t_or_subject: Union[Tuple[TripleSubject, TriplePredicate, TripleObject]],
-                 predicate: TriplePredicate=None,
-                 object: TripleObject=None) -> None:
-        self.subject: TripleSubject = t_or_subject if object else t_or_subject[0]
-        self.predicate: TriplePredicate = predicate if predicate else t_or_subject[1]
-        self.object: TripleObject = object if object else t_or_subject[2]
+class RDFTriple(tuple):
 
-    def __lt__(self, other: "RDFTriple") -> bool:
-        if self.subject == other.subject:
-            if self.predicate == other.predicate:
-                return self.object < other.object
-            else:
-                return self.predicate < other.predicate
-        else:
-            return self.subject < other .subject
+    def __init__(self, _: Triple) -> None:
+        super().__init__()
+
+    @property
+    def s(self) -> TripleSubject:
+        return self[0]
+
+    @property
+    def p(self) -> TriplePredicate:
+        return self[1]
+
+    @property
+    def o(self) -> TripleObject:
+        return self[2]
+
+    def __str__(self) -> str:
+        return f"<{self.s}> <{self.p}> {self.o} ."
+
+
+class RDFGraph(set):
+    def __init__(self, ts: Optional[Union[Iterator[RDFTriple], Iterator[Triple]]]=None) -> None:
+        super().__init__([t if isinstance(t, RDFTriple) else RDFTriple(t) for t in ts] if ts is not None else [])
+
+    def __str__(self) -> str:
+        g = Graph()
+        [g.add((e.s, e.p, e.o)) for e in self]
+        return g.serialize(format="turtle").decode()

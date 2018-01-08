@@ -78,8 +78,11 @@ class ShExManifestEntry:
             if isinstance(schema_uri, URIRef):
                 return urlopen(schema_uri_str).read().decode()
             else:
-                with open(schema_uri_str) as schema_file:
-                    return schema_file.read()
+                try:
+                    with open(schema_uri_str) as schema_file:
+                        return schema_file.read()
+                except FileNotFoundError as e:
+                    print(e.strerror)
         return None
 
     def shex_schema(self) -> Optional[ShExJ.Schema]:
@@ -110,7 +113,9 @@ class ShExManifestEntry:
 
     def data_graph(self, fmt="turtle") -> Optional[Graph]:
         g = Graph()
-        g.parse(data=self.data(), format=fmt)
+        data_ttl = """@base <https://raw.githubusercontent.com/shexSpec/shexTest/master/validation/manifest> .
+""" + self.data()
+        g.parse(data=data_ttl, format=fmt)
         return g
 
     def __str__(self):

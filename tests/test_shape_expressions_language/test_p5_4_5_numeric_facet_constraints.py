@@ -3,7 +3,7 @@ import unittest
 from rdflib import URIRef
 
 from pyshex.shape_expressions_language.p5_4_node_constraints import nodeSatisfiesNumericFacet
-from tests.utils.setup_test import setup_test, EX, rdf_header, gen_rdf
+from tests.utils.setup_test import EX, gen_rdf, setup_context
 
 shex_1 = """{ "type": "Schema", "shapes": [
   { "id": "http://schema.example/IssueShape",
@@ -44,18 +44,18 @@ rdf_2 = gen_rdf("""<http://a.example/s1>
 
 class NumericFacetTestCase(unittest.TestCase):
     def test_example_1(self):
-        schema, g = setup_test(shex_1, rdf_1)
-        nc = schema.shapes[0].expression.valueExpr
-        self.assertTrue(nodeSatisfiesNumericFacet(g.value(EX.issue1, EX.confirmations), nc))
-        self.assertTrue(nodeSatisfiesNumericFacet(g.value(EX.issue2, EX.confirmations), nc))
-        self.assertFalse(nodeSatisfiesNumericFacet(g.value(EX.issue3, EX.confirmations), nc))
-        self.assertFalse(nodeSatisfiesNumericFacet(g.value(EX.issue4, EX.confirmations), nc))
+        cntxt = setup_context(shex_1, rdf_1)
+        nc = cntxt.schema.shapes[0].expression.valueExpr
+        self.assertTrue(nodeSatisfiesNumericFacet(cntxt, cntxt.graph.value(EX.issue1, EX.confirmations), nc))
+        self.assertTrue(nodeSatisfiesNumericFacet(cntxt, cntxt.graph.value(EX.issue2, EX.confirmations), nc))
+        self.assertFalse(nodeSatisfiesNumericFacet(cntxt, cntxt.graph.value(EX.issue3, EX.confirmations), nc))
+        self.assertFalse(nodeSatisfiesNumericFacet(cntxt, cntxt.graph.value(EX.issue4, EX.confirmations), nc))
 
     def test_trailing_zero(self):
-        schema, g = setup_test(shex_2, rdf_2)
-        nc = schema.shapes[0].expression.valueExpr
-        self.assertTrue(nodeSatisfiesNumericFacet(g.value(URIRef("http://a.example/s1"),
-                                                          URIRef("http://a.example/p1")), nc))
+        cntxt = setup_context(shex_2, rdf_2)
+        nc = cntxt.schema.shapes[0].expression.valueExpr
+        self.assertTrue(nodeSatisfiesNumericFacet(cntxt, cntxt.graph.value(URIRef("http://a.example/s1"),
+                                                                           URIRef("http://a.example/p1")), nc))
 
 
 if __name__ == '__main__':

@@ -2,6 +2,8 @@ from typing import Optional, Union, List
 
 from ShExJSG import ShExJ
 from ShExJSG.ShExJ import IRIREF
+from pyjsg.jsglib.jsg import isinstance_
+from rdflib import URIRef
 
 from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import START, shapeLabel
@@ -69,7 +71,7 @@ def predicates_in_expression(expression: ShExJ.shapeExpr, cntxt: Context) -> Lis
         if isinstance(expr, ShExJ.Shape) and expr.expression is not None:
             if isinstance(expr.expression, ShExJ.TripleConstraint):
                 predicates.append(expr.expression.predicate)
-            elif isinstance(expr.expression, ShExJ.tripleExprLabel):
+            elif isinstance_(expr.expression, ShExJ.tripleExprLabel):
                 predicates.append(cntxt.tripleExprFor(expr.expression).predicate)
 
     cntxt.visit_shapes(expression, predicate_finder, predicates)

@@ -2,13 +2,10 @@
 Partition utilities -
 taken from `Stack Overflow <https://stackoverflow.com/questions/19368375/set-partitions-in-python>`_
 """
-from typing import Set, List
+from typing import List, Iterator, Tuple
 
-import functools
-from rdflib import Graph
+from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import RDFGraph
 
-from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import RDFTriple
-from tests.utils.setup_test import gen_rdf
 
 """
 taken from `Stack Overflow <https://codereview.stackexchange.com/questions/1526/finding-all-k-subset-partitions>`_
@@ -16,11 +13,12 @@ taken from `Stack Overflow <https://codereview.stackexchange.com/questions/1526/
 A python implementation of Knuth's algorithm.
 """
 
+
 def algorithm_u(ns, m):
-    def visit(n, a):
-        ps = [[] for i in range(m)]
-        for j in range(n):
-            ps[a[j + 1]].append(ns[j])
+    def visit(nv, av):
+        ps = [[] for _ in range(m)]
+        for jv in range(nv):
+            ps[av[jv + 1]].append(ns[jv])
         return ps
 
     def f(mu, nu, sigma, n, a):
@@ -87,47 +85,49 @@ def algorithm_u(ns, m):
             for v in b(mu - 1, nu - 1, (mu + sigma) % 2, n, a):
                 yield v
 
-    n = len(ns)
-    a = [0] * (n + 1)
+    ng = len(ns)
+    ag = [0] * (ng + 1)
     for j in range(1, m + 1):
-        a[n - m + j] = j - 1
-    return f(m, n, 0, n, a) if m > 1 else [[ns]]
+        ag[ng - m + j] = j - 1
+    return f(m, ng, 0, ng, ag) if m > 1 else [[ns]]
 
 
-@functools.lru_cache()
-def integer_partition(size: int, nparts: int) -> List[List[List[int]]]:
+def integer_partition(size: int, nparts: int) -> Iterator[List[List[int]]]:
     # Note: can't cache a generator (!)
     # If we've got fewer elements that the minimum number of parts, all bets are off
-    return list(algorithm_u(range(size), nparts))
+    for part in algorithm_u(range(size), nparts):
+        yield part
 
 
-def partition_t(T: List[RDFTriple], nparts: int, cached=True) -> List[List[List[RDFTriple]]]:
+def partition_t(T: RDFGraph, nparts: int) -> Iterator[List[RDFGraph]]:
     """
     Partition T into all possible partitions of T of size nparts
     :param T: Set of RDF triples to be partitioned
     :param nparts: number of partitions (e.g. 2 means return all possible 2 set partitions
-    :param cached: True means used the cached access
     :return: Iterator that returns partitions
 
     We don't actually partition the triples directly -- instead, we partition a set of integers that
     reference elements in the (ordered) set and return those
     """
-    partitions = integer_partition(len(T), nparts) if cached else list(algorithm_u(range(len(T)), nparts))
-    for partition in partitions:
-        yield [[T[e] for e in element] for element in partition]
+    t_list = sorted(list(T))        # Sorted not strictly necessary, but aids testing
+    return map(lambda element: [RDFGraph([t_list[e] for e in part]) for part in element],
+               integer_partition(len(T), nparts))
 
 
-def partition_2(T: List[RDFTriple]) -> List[List[RDFTriple]]:
+def partition_2(T: RDFGraph) -> List[Tuple[RDFGraph, RDFGraph]]:
     """
     Partition T into all possible combinations of two subsets
-    :param T:
+    :param T: RDF Graph to partition
     :return:
     """
     if len(T) == 0:
-        yield [[],[]]
+        yield (RDFGraph(), RDFGraph())
     elif len(T) == 1:
-        yield [T, []]
+        yield (T, RDFGraph())
+        yield (RDFGraph(), T)
     else:
-        yield [T, []]
+        yield (T, RDFGraph())
         for e in partition_t(T, 2):
-            yield e
+            yield (e[0], e[1])
+            yield (e[1], e[0])
+        yield (RDFGraph(), T)

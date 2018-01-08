@@ -2,7 +2,7 @@ import unittest
 
 from rdflib.namespace import FOAF
 
-from tests.utils.setup_test import rdf_header, setup_test, EX, gen_rdf
+from tests.utils.setup_test import rdf_header, setup_test, EX, gen_rdf, setup_context
 
 shex_1 = """{ "type": "Schema", "shapes": [
   { "id": "http://schema.example/NoActionIssueShape",
@@ -62,28 +62,31 @@ rdf_3 = gen_rdf("""<issue8> foaf:mbox 123 .
 class ValuesConstraintTestCase(unittest.TestCase):
     def test_example_1(self):
         from pyshex.shape_expressions_language.p5_4_node_constraints import nodeSatisfiesValues
-        schema, g = setup_test(shex_1, rdf_1)
-        nc = schema.shapes[0].expression.valueExpr
-        self.assertTrue(nodeSatisfiesValues(g.value(EX.issue1, EX.state), nc))
-        self.assertFalse(nodeSatisfiesValues(g.value(EX.issue2, EX.state), nc))
+
+        cntxt = setup_context(shex_1, rdf_1)
+        nc = cntxt.schema.shapes[0].expression.valueExpr
+        self.assertTrue(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue1, EX.state), nc))
+        self.assertFalse(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue2, EX.state), nc))
 
     def test_example_2(self):
         from pyshex.shape_expressions_language.p5_4_node_constraints import nodeSatisfiesValues
-        schema, g = setup_test(shex_2, rdf_2)
-        nc = schema.shapes[0].expression.valueExpr
-        self.assertTrue(nodeSatisfiesValues(g.value(EX.issue3, FOAF.mbox), nc))
-        self.assertTrue(nodeSatisfiesValues(g.value(EX.issue4, FOAF.mbox), nc))
-        self.assertTrue(nodeSatisfiesValues(g.value(EX.issue5, FOAF.mbox), nc))
-        self.assertFalse(nodeSatisfiesValues(g.value(EX.issue6, FOAF.mbox), nc))
-        self.assertFalse(nodeSatisfiesValues(g.value(EX.issue7, FOAF.mbox), nc))
+
+        cntxt = setup_context(shex_2, rdf_2)
+        nc = cntxt.schema.shapes[0].expression.valueExpr
+        self.assertTrue(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue3, FOAF.mbox), nc))
+        self.assertTrue(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue4, FOAF.mbox), nc))
+        self.assertTrue(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue5, FOAF.mbox), nc))
+        self.assertFalse(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue6, FOAF.mbox), nc))
+        self.assertFalse(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue7, FOAF.mbox), nc))
 
     def test_example_3(self):
         from pyshex.shape_expressions_language.p5_4_node_constraints import nodeSatisfiesValues
-        schema, g = setup_test(shex_3, rdf_3)
-        nc = schema.shapes[0].expression.valueExpr
-        self.assertTrue(nodeSatisfiesValues(g.value(EX.issue8, FOAF.mbox), nc))
-        self.assertTrue(nodeSatisfiesValues(g.value(EX.issue9, FOAF.mbox), nc))
-        self.assertFalse(nodeSatisfiesValues(g.value(EX.issue10, FOAF.mbox), nc))
+
+        cntxt = setup_context(shex_3, rdf_3)
+        nc = cntxt.schema.shapes[0].expression.valueExpr
+        self.assertTrue(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue8, FOAF.mbox), nc))
+        self.assertTrue(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue9, FOAF.mbox), nc))
+        self.assertFalse(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue10, FOAF.mbox), nc))
 
 
 if __name__ == '__main__':

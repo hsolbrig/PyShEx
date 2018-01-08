@@ -7,32 +7,36 @@ from ShExJSG import ShExJ
 from pyjsg.jsglib.jsg import isinstance_
 from rdflib import URIRef, BNode, Literal, XSD, RDF
 
+from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
 from pyshex.sparql11_query.p17_1_operand_data_types import is_sparql_operand_datatype, is_numeric
 from pyshex.utils.datatype_utils import can_cast_to, total_digits, fraction_digits, pattern_match, map_object_literal
-from pyshex.utils.value_set_utils import objectValueMatches, uriref_startswith_iriref, uriref_matches_iriref
+from pyshex.utils.debug_utils import satisfies_wrapper, nodeSatisfies_wrapper
+from pyshex.utils.value_set_utils import objectValueMatches, uriref_startswith_iriref
 
 
-def satisfies2(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
+@satisfies_wrapper
+def satisfies2(cntxt: Context, n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
     """ `5.4.1 Semantics <http://shex.io/shex-semantics/#node-constraint-semantics>`_
 
     For a node n and constraint nc, satisfies2(n, nc) if and only if for every nodeKind, datatype, xsFacet and
     values constraint value v present in nc nodeSatisfies(n, v). The following sections define nodeSatisfies for
     each of these types of constraints:
     """
-    # print("---> satisfies2")
+    # TODO: Debug
     # print(f"\t nodeSatisfiesNodeKind(n, nc) -> {nodeSatisfiesNodeKind(n, nc)}")
     # print(f"\t nodeSatisfiesDataType(n, nc) -> {nodeSatisfiesDataType(n, nc)}")
     # print(f"\t nodeSatisfiesStringFacet(n, nc) -> {nodeSatisfiesStringFacet(n, nc)}")
     # print(f"\t nodeSatisfiesNumericFacet(n, nc) -> {nodeSatisfiesNumericFacet(n, nc)}")
     # print(f"\t nodeSatisfiesValues(n, nc) -> {nodeSatisfiesValues(n, nc)}")
-    return nodeSatisfiesNodeKind(n, nc) and nodeSatisfiesDataType(n, nc) and \
-        nodeSatisfiesStringFacet(n, nc) and nodeSatisfiesNumericFacet(n, nc) and \
-        nodeSatisfiesValues(n, nc)
+    return nodeSatisfiesNodeKind(cntxt, n, nc) and nodeSatisfiesDataType(cntxt, n, nc) and \
+        nodeSatisfiesStringFacet(cntxt, n, nc) and nodeSatisfiesNumericFacet(cntxt, n, nc) and \
+        nodeSatisfiesValues(cntxt, n, nc)
 
 
-def nodeSatisfiesNodeKind(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
+@nodeSatisfies_wrapper
+def nodeSatisfiesNodeKind(_: Context, n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
     """ `5.4.2 Node Kind Constraints <http://shex.io/shex-semantics/#nodeKind>`_
 
     For a node n and constraint value v, nodeSatisfies(n, v) if:
@@ -49,7 +53,8 @@ def nodeSatisfiesNodeKind(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
         (nc.nodeKind == 'nonliteral' and isinstance(n, (URIRef, BNode)))
 
 
-def nodeSatisfiesDataType(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
+@nodeSatisfies_wrapper
+def nodeSatisfiesDataType(_: Context, n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
     """ `5.4.3 Datatype Constraints <http://shex.io/shex-semantics/#datatype>`_
 
     For a node n and constraint value v, nodeSatisfies(n, v) if n is an Literal with the datatype v and, if v is in
@@ -60,8 +65,8 @@ def nodeSatisfiesDataType(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
     # TODO: reconcile this with rdflib and the spec
     # TODO: for all of these situations, create a special error when nodeSelector is None
     return nc.datatype is None or \
-        (str(_datatype(n)) == nc.datatype and n.value is not None and
-         (not is_sparql_operand_datatype(nc.datatype) or can_cast_to(n, nc.datatype)))
+        (str(_datatype(n)) == nc.datatype and
+         (not is_sparql_operand_datatype(nc.datatype) or (n.datatype is not None and can_cast_to(n, nc.datatype))))
 
 
 def _datatype(n: nodeSelector) -> Optional[str]:
@@ -70,7 +75,8 @@ def _datatype(n: nodeSelector) -> Optional[str]:
         str(n.datatype)
 
 
-def nodeSatisfiesStringFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
+@nodeSatisfies_wrapper
+def nodeSatisfiesStringFacet(_: Context, n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
     """ `5.4.5 XML Schema String Facet Constraints <ttp://shex.io/shex-semantics/#xs-string>`_
 
      String facet constraints apply to the lexical form of the RDF Literals and IRIs and blank node
@@ -109,14 +115,15 @@ def nodeSatisfiesStringFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
         return True
 
 
-def nodeSatisfiesNumericFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
+@nodeSatisfies_wrapper
+def nodeSatisfiesNumericFacet(_: Context, n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
     """ `5.4.5 XML Schema Numeric Facet Constraints <http://shex.io/shex-semantics/#xs-numeric>`_
 
     Numeric facet constraints apply to the numeric value of RDF Literals with datatypes listed in SPARQL 1.1
     Operand Data Types[sparql11-query]. Numeric constraints on non-numeric values fail. totaldigits and
     fractiondigits constraints on values not derived from xsd:decimal fail.
     """
-    if nc.minexclusive.val is not None or nc.minexclusive.val is not None or nc.maxinclusive.val is not None \
+    if nc.mininclusive.val is not None or nc.minexclusive.val is not None or nc.maxinclusive.val is not None \
             or nc.maxexclusive.val is not None or nc.totaldigits.val is not None or nc.fractiondigits.val is not None:
         if is_numeric(n):
             v = n.value
@@ -134,15 +141,17 @@ def nodeSatisfiesNumericFacet(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool
     return True
 
 
-def nodeSatisfiesValues(n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
+@nodeSatisfies_wrapper
+def nodeSatisfiesValues(cntxt: Context, n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
     """ `5.4.5 Values Constraint <http://shex.io/shex-semantics/#values>`_
 
      For a node n and constraint value v, nodeSatisfies(n, v) if n matches some valueSetValue vsv in v.
     """
-    return any(_nodeSatisfiesValue(n, vsv) for vsv in nc.values) if nc.values is not None else True
+    return any(_nodeSatisfiesValue(cntxt, n, vsv) for vsv in nc.values) if nc.values is not None else True
 
 
-def _nodeSatisfiesValue(n: nodeSelector, vsv: ShExJ.valueSetValue) -> bool:
+@nodeSatisfies_wrapper
+def _nodeSatisfiesValue(cntxt: Context, n: nodeSelector, vsv: ShExJ.valueSetValue) -> bool:
     """
     A term matches a valueSetValue if:
         * vsv is an objectValue and n = vsv.
@@ -173,30 +182,31 @@ def _nodeSatisfiesValue(n: nodeSelector, vsv: ShExJ.valueSetValue) -> bool:
             return False
 
     if isinstance(vsv, ShExJ.IriStem):
-        return nodeInIriStem(n, vsv.stem)
+        return nodeInIriStem(cntxt, n, vsv.stem)
 
     if isinstance(vsv, ShExJ.IriStemRange):
         exclusions = vsv.exclusions if vsv.exclusions is not None else []
-        return nodeInIriStem(n, vsv.stem) and not any(uriref_matches_iriref(n, excl) for excl in exclusions)
+        return nodeInIriStem(cntxt, n, vsv.stem) and not any(uriref_startswith_iriref(n, excl.stem) for excl in exclusions)
 
     if isinstance(vsv, ShExJ.LiteralStem):
-        return nodeInLiteralStem(n, vsv.stem)
+        return nodeInLiteralStem(cntxt, n, vsv.stem)
 
     if isinstance(vsv, ShExJ.LiteralStemRange):
         exclusions = vsv.exclusions if vsv.exclusions is not None else []
-        return nodeInLiteralStem(n, vsv.stem) and not any(str(n) == excl for excl in exclusions)
+        return nodeInLiteralStem(cntxt, n, vsv.stem) and not any(str(n) == excl for excl in exclusions)
 
     if isinstance(vsv, ShExJ.LanguageStem):
-        return nodeInLanguageStem(n, vsv.stem)
+        return nodeInLanguageStem(cntxt, n, vsv.stem)
 
     if isinstance(vsv, ShExJ.LanguageStemRange):
         exclusions = vsv.exclusions if vsv.exclusions is not None else []
-        return nodeInLanguageStem(n, vsv.stem) and not any(str(n) == str(excl) for excl in exclusions)
+        return nodeInLanguageStem(cntxt, n, vsv.stem) and not any(str(n) == str(excl) for excl in exclusions)
 
     return False
 
 
-def nodeInIriStem(n: Node, s: Union[str, ShExJ.IRIREF, ShExJ.Wildcard]) -> bool:
+@nodeSatisfies_wrapper
+def nodeInIriStem(_: Context, n: Node, s: ShExJ.IriStem) -> bool:
     """
        **nodeIn**: asserts that an RDF node n is equal to an RDF term s or is in a set defined by a
        :py:class:`ShExJ.IriStem`, :py:class:`LiteralStem` or :py:class:`LanguageStem`.
@@ -206,10 +216,10 @@ def nodeInIriStem(n: Node, s: Union[str, ShExJ.IRIREF, ShExJ.Wildcard]) -> bool:
         #) `n` is an :py:class:`rdflib.URIRef` and fn:starts-with(`n`, `s`)
     """
     return isinstance(s, ShExJ.Wildcard) or \
-        (isinstance(n, URIRef) and uriref_startswith_iriref(n, s))
+        (isinstance(n, URIRef) and uriref_startswith_iriref(n, str(s)))
 
 
-def nodeInLiteralStem(n: Node, s: Union[str, ShExJ.Wildcard]) -> bool:
+def nodeInLiteralStem(_: Context, n: Node, s: ShExJ.LiteralStem) -> bool:
     """ http://shex.io/shex-semantics/#values
 
         **nodeIn**: asserts that an RDF node n is equal to an RDF term s or is in a set defined by a
@@ -223,7 +233,7 @@ def nodeInLiteralStem(n: Node, s: Union[str, ShExJ.Wildcard]) -> bool:
         (isinstance(n, Literal) and str(n.value).startswith(str(s)))
 
 
-def nodeInLanguageStem(n: Node, s: Union[ShExJ.LANGTAG, ShExJ.Wildcard]) -> bool:
+def nodeInLanguageStem(_: Context, n: Node, s: ShExJ.LanguageStem) -> bool:
     """ http://shex.io/shex-semantics/#values
 
         **nodeIn**: asserts that an RDF node n is equal to an RDF term s or is in a set defined by a
@@ -237,7 +247,8 @@ def nodeInLanguageStem(n: Node, s: Union[ShExJ.LANGTAG, ShExJ.Wildcard]) -> bool
         (isinstance(n, Literal) and n.language is not None and str(n.language).startswith(str(s)))
 
 
-def nodeInBnodeStem(n: Node, s: Union[str, ShExJ.Wildcard]) -> bool:
+@nodeSatisfies_wrapper
+def nodeInBnodeStem(cntxt: Context, n: Node, s: Union[str, ShExJ.Wildcard]) -> bool:
     """ http://shex.io/shex-semantics/#values
 
         **nodeIn**: asserts that an RDF node n is equal to an RDF term s or is in a set defined by a

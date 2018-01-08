@@ -54,6 +54,8 @@ def is_numeric(n: Node) -> bool:
 
 def is_sparql_operand_datatype(n: Union[Node, str]) -> bool:
     # From: https://www.w3.org/TR/sparql11-query/#operandDataTypes
+    if isinstance(n, str):
+        n = URIRef(n)
     return is_plain_literal(n) or (is_typed_literal(n) and cast(Literal, n).datatype in [
         XSD.integer,
         XSD.decimal,

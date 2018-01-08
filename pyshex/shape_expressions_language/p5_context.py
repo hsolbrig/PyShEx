@@ -5,11 +5,21 @@ Context for evaluation engine -- carries all of the global variables (schema, gr
 We might fold the various routines inside context and replace "cntxt: Context" with "self", but we will have to see.
 
 """
-from typing import Dict, Any, Callable, Optional
+from typing import Dict, Any, Callable, Optional, List, Tuple
 
 from ShExJSG import ShExJ
 from ShExJSG.ShExJ import Schema
-from rdflib import Graph
+from rdflib import Graph, BNode
+
+from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
+
+
+class DebugContext:
+    def __init__(self):
+        self.trace_indent = 0
+        self.trace_satisfies = False
+        self.trace_nodeSatisfies = False
+        self.trace_matches = False
 
 
 class _VisitorCenter:
@@ -59,11 +69,22 @@ class Context:
 
         :param g: RDF graph
         :param s: ShExJ Schema instance
+
         """
-        self.graph = g
-        self.schema = s
+        self.graph: Graph = g
+        self.schema: ShExJ.Schema = s
         self.schema_id_map: Dict[ShExJ.shapeExprLabel, ShExJ.shapeExpr] = {}
         self.te_id_map: Dict[ShExJ.tripleExprLabel, ShExJ.tripleExpr] = {}
+
+        # A list of node selectors/shape expressions that are being evaluated.  If we attempt to evaluate
+        # an entry for a second time, we, instead, put the entry into the assumptions table.  We start with 'true'
+        # and, if the result is 'true' then we count it as success.  If not, we switch to false and try again
+        self.evaluating: List[Tuple[nodeSelector, ShExJ.shapeExpr]] = []
+        self.assumptions: Dict[Tuple[nodeSelector, ShExJ.shapeExpr], bool] = {}
+
+        # Debugging options
+        self.debug_context = DebugContext()
+
         if self.schema.start is not None:
             self._gen_schema_xref(self.schema.start)
         if self.schema.shapes is not None:
@@ -130,7 +151,8 @@ class Context:
         if visit_center is None:
             visit_center = _VisitorCenter(f, arg_cntxt)
         has_id = 'id' in expr and expr.id is not None
-        if not has_id or not (visit_center.already_seen_shape(expr.id) or visit_center.actively_visiting_shape(expr.id)):
+        if not has_id or not (visit_center.already_seen_shape(expr.id)
+                              or visit_center.actively_visiting_shape(expr.id)):
 
             # Visit the root expression
             if has_id:
@@ -182,7 +204,7 @@ class Context:
             elif ShExJ.isinstance_(expr, ShExJ.tripleExprLabel):
                 if not visit_center.actively_visiting_shape(str(expr)):
                     visit_center.start_visiting_shape(str(expr))
-                    self.visit_shapes(self.tripleExprFor(expr), f, arg_cntxt, visit_center)
+                    self.visit_shapes(self.shapeExprFor(expr), f, arg_cntxt, visit_center)
                     visit_center.done_visiting_shape(str(expr))
             if has_id:
                 visit_center.done_visiting_te(expr.id)
@@ -207,3 +229,42 @@ class Context:
         """
         if isinstance(shape, ShExJ.Shape) and shape.expression is not None:
             visit_center.f(visit_center.arg_cntxt, shape.expression, self)
+
+    def start_evaluating(self, n: nodeSelector, s: ShExJ.shapeExpr) -> Optional[bool]:
+        """
+        Indicate that we are beginning to evaluate n in terms of s.
+        :param n: nodeSelector to be evaluated
+        :param s: expression for node evaluation
+        :return: Assumed evaluation result.  If None, evaluation must be performed
+        """
+        if not s.id:
+            s.id = str(BNode())
+        key = (n, s.id)
+        if key not in self.evaluating:
+            self.evaluating.append(key)
+            return None
+        elif key not in self.assumptions:
+            self.assumptions[key] = True
+            return True
+        else:
+            return self.assumptions[key]
+
+    def done_evaluating(self, n: nodeSelector, s: ShExJ.shapeExpr, result: bool) -> bool:
+        """
+        Indicate that we have completed evaluating n in terms of s.
+
+        :param n: nodeselector that was evaluated
+        :param s: expression for node evaluation
+        :param result: result of evaluation
+        :return: True means that evaluation was successful, False means try the evaluation again
+        """
+        key = (n, s.id)
+        self.evaluating.remove(key)
+        if key not in self.assumptions:
+            return True
+        elif self.assumptions[key] == result:
+            del self.assumptions[key]
+            return True
+        else:
+            self.assumptions[key] = False
+            return False

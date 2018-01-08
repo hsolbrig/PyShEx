@@ -5,22 +5,20 @@
     * Node: one of IRI, blank node, Literal
     * Graph: a set of Triples of (subject, predicate, object)
 """
-from typing import Set, Iterator, Tuple
+from typing import Set
 
-from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node, RDFTriple, TriplePredicate, \
-    TripleSubject, TripleObject
+from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node, RDFTriple, \
+    TriplePredicate, RDFGraph
 from rdflib import Graph
 
-# This specification makes use of the following namespaces:
-from rdflib import RDF, RDFS, XSD
-from rdflib import Namespace
+from pyshex.utils.rdf_namespace import RDFNamespace
 
-SHEX = Namespace("http://www.w3.org/ns/shex#")
+SHEX = RDFNamespace("http://www.w3.org/ns/shex#")
 
 
-def arcsOut(G: Graph, n: Node) -> Set[RDFTriple]:
+def arcsOut(G: Graph, n: Node) -> RDFGraph:
     """ arcsOut(G, n) is the set of triples in a graph G with subject n. """
-    return {RDFTriple(e) for e in G.triples((n, None, None))}
+    return RDFGraph(G.triples((n, None, None)))
 
 
 def predicatesOut(G: Graph, n: Node) -> Set[TriplePredicate]:
@@ -28,9 +26,9 @@ def predicatesOut(G: Graph, n: Node) -> Set[TriplePredicate]:
     return {p for p, _ in G.predicate_objects(n)}
 
 
-def arcsIn(G: Graph, n: Node) -> Set[RDFTriple]:
+def arcsIn(G: Graph, n: Node) -> RDFGraph:
     """ arcsIn(G, n) is the set of triples in a graph G with object n. """
-    return {RDFTriple(e) for e in G.triples((None, None, n))}
+    return RDFGraph(G.triples((None, None, n)))
 
 
 def predicatesIn(G: Graph, n: Node) -> Set[TriplePredicate]:
@@ -38,7 +36,7 @@ def predicatesIn(G: Graph, n: Node) -> Set[TriplePredicate]:
     return {p for _, p in G.subject_predicates(n)}
 
 
-def neigh(G: Graph, n: Node) -> Set[RDFTriple]:
+def neigh(G: Graph, n: Node) -> RDFGraph:
     """  neigh(G, n) is the neighbourhood of the node n in the graph G.
 
          neigh(G, n) = arcsOut(G, n) ∪ arcsIn(G, n)
@@ -52,5 +50,3 @@ def predicates(G: Graph, n: Node) -> Set[TriplePredicate]:
         predicates(G, n) = predicatesOut(G, n) ∪ predicatesIn(G, n)
     """
     return predicatesOut(G, n) | predicatesIn(G, n)
-
-

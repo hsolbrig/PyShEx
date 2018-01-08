@@ -27,10 +27,9 @@ def satisfiesShapeAnd(cntxt: Context, n: nodeSelector, se: ShExJ.ShapeAnd) -> bo
 ## Current status
 We are currently working through the tests that are defined in the [shexTest](https://github.com/shexSpec/shexTest/) [validation](https://github.com/shexSpec/shexTest/tree/master/validation) directory.
 
-At the moment, we can pass all of the tests in the manifest up to `1dotOne2dot_pass_p1`, with the following exceptions:
+At the moment, we can pass 218 of the tests in the manifest up to `1dotInline1_selfReference`, with the following exceptions:
 
 1) BNode name matching tests -- rdflib does not preserve BNode identifiers, so these tests are not possible.
-2) `1datatype_pass` -- this uses a non-sparql datatype and the spec says that this does not have to pass.
 3) RDF literals with single quotes and escaped internal quotes -- this bug was reported and (I though) fixed in rdflib, but apparently it didn't take.
 4) Double values of '0E0' and '0e0' - rdflib doesn't parse this representation.
 5) 1literalPattern_with_ascii_boundaries -- this is so crazy that I can't even read it in my browser.  We'll cope with insane UTF-16 codes after we get the rest of this stuff done

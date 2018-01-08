@@ -14,6 +14,7 @@ shex_1 = """{ "type": "Schema", "shapes": [
 
 
 class SimpleExamplesTestCase(unittest.TestCase):
+    @unittest.skipIf(True, "Not implemented")
     def test_example_1(self):
         # from pyshex.shape_expressions_language.p5_3_shape_expressions import satisfies
         # cntxt = setup_context(shex_1, None)
