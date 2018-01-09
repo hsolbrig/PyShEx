@@ -3,7 +3,7 @@
     {
       "@base": "https://raw.githubusercontent.com/shexSpec/shexTest/master/validation/manifest"
     },
-    "context.jsonld"
+    "../context.jsonld"
   ],
   "@graph": [
     {
@@ -347,8 +347,8 @@
           "extensionResults": [],
           "name": "bnode1dot_fail-missing",
           "trait": [
-            "TriplePattern",
-            "ToldBNode"
+            "BNodeShapeLabel",
+            "TriplePattern"
           ],
           "comment": "_:S { <p1> . } on { <s1> <p2> <o1> }",
           "status": "mf:proposed"
@@ -365,8 +365,8 @@
           "extensionResults": [],
           "name": "bnode1dot_pass-others_lexicallyEarlier",
           "trait": [
-            "TriplePattern",
-            "ToldBNode"
+            "BNodeShapeLabel",
+            "TriplePattern"
           ],
           "comment": "_:S1 { <p1> . } on { <s1> <p0> <o0>; <p1> <o1> }",
           "status": "mf:proposed"
@@ -10921,7 +10921,7 @@
           "name": "1literalPatternabEnd_fail-bnode-match",
           "trait": [
             "PaternFacet",
-            "ToldBNode"
+            "LexicalBNode"
           ],
           "comment": "<S1> { <p1> LITERAL PATTERN \"bc$\" } on { <s1> <p1> _:bc }",
           "status": "mf:proposed"
@@ -11213,7 +11213,8 @@
           "extensionResults": [],
           "name": "1bnodePattern_fail-bnode-long",
           "trait": [
-            "PaternFacet"
+            "PaternFacet",
+            "LexicalBNode"
           ],
           "comment": "<S1> { <p1> BNODE PATTERN \"bc\" } on { <s1> <p1> _:abc }",
           "status": "mf:proposed"
@@ -11367,7 +11368,8 @@
           "extensionResults": [],
           "name": "1nonliteralPattern_pass-bnode-long",
           "trait": [
-            "PaternFacet"
+            "PaternFacet",
+            "LexicalBNode"
           ],
           "comment": "<S1> { <p1> NONLITERAL PATTERN \"bc$\" } on { <s1> <p1> _:abc }",
           "status": "mf:proposed"
@@ -14076,7 +14078,7 @@
           "extensionResults": [],
           "name": "1NOTdot_failempty",
           "trait": [
-            "wildcard"
+            "Wildcard"
           ],
           "comment": "<S1> { <p1> NOT . } on {  }",
           "status": "mf:proposed"
@@ -16756,6 +16758,7 @@
           "extensionResults": [],
           "name": "0focusIRI_other_fail-bnodeFocusLabel",
           "trait": [
+            "ToldBNode",
             "Empty"
           ],
           "comment": "<S> IRI {  } on { _:abcd <p1> <o1> }",
@@ -16790,6 +16793,7 @@
           "extensionResults": [],
           "name": "0focusIRI_empty_fail-bnodeFocusLabel",
           "trait": [
+            "ToldBNode",
             "Empty"
           ],
           "comment": "<S> IRI {  } on { }",
@@ -16824,6 +16828,7 @@
           "extensionResults": [],
           "name": "0focusBNODE_empty",
           "trait": [
+            "ToldBNode",
             "Empty"
           ],
           "comment": "<S> BNODE {  } on _:abcd in { }",
@@ -16877,7 +16882,6 @@
           "name": "1focusIRI_dot_fail-bnodeFocusLabel",
           "trait": [
             "FocusConstraint",
-            "LexicalBNode",
             "ToldBNode"
           ],
           "comment": "<S> IRI { <p1> . } on <s> in { _:abcd <p1> <o1> }",
@@ -16989,7 +16993,7 @@
           "extensionResults": [],
           "name": "focusdatatype_fail",
           "trait": [
-            "focusConstraint"
+            "FocusConstraint"
           ],
           "comment": "<S> <dt1> on { <s1> <p1> 'ab'^^my:bloodType999 }",
           "status": "mf:proposed"
@@ -17029,7 +17033,7 @@
           "extensionResults": [],
           "name": "focusdatatype_fail-empty",
           "trait": [
-            "focusConstraint"
+            "FocusConstraint"
           ],
           "comment": "<S> <dt1> on 'ab'^^<bloodType999> in {  }",
           "status": "mf:proposed"
@@ -17375,6 +17379,7 @@
           "name": "1focusMinLength-dot_fail-bnode-short",
           "trait": [
             "FocusConstraint",
+            "LexicalBNode",
             "LengthFacet",
             "ToldBNode"
           ],
@@ -17525,6 +17530,7 @@
           "name": "1focusMaxLength-dot_fail-bnode-long",
           "trait": [
             "FocusConstraint",
+            "LexicalBNode",
             "LengthFacet"
           ],
           "comment": "<S1> MAXLENGTH 19 { <p1> . } on { _:abcdefghijklmnopqrst <p1> <o1> }",
@@ -17627,7 +17633,9 @@
           "extensionResults": [],
           "name": "1focusPatternB-dot_fail-bnode-short",
           "trait": [
-            "PaternFacet"
+            "PaternFacet",
+            "LexicalBNode",
+            "ToldBNode"
           ],
           "comment": "<S1> PATTERN 'abcdefghijklmnopqrs' { <p1> } on { _:abcd <p1> <o1> }",
           "status": "mf:proposed"
@@ -17645,7 +17653,8 @@
           "name": "1focusPatternB-dot_pass-bnode-match",
           "trait": [
             "PaternFacet",
-            "LexicalBNode"
+            "LexicalBNode",
+            "ToldBNode"
           ],
           "comment": "<S1> PATTERN 'abcdefghijklmnopqrs' { <p1> } on { _:abcdefghijklmnopqrs <p1> <o1> }",
           "status": "mf:proposed"
@@ -17662,7 +17671,9 @@
           "extensionResults": [],
           "name": "1focusPatternB-dot_pass-bnode-long",
           "trait": [
-            "PaternFacet"
+            "PaternFacet",
+            "LexicalBNode",
+            "ToldBNode"
           ],
           "comment": "<S1> PATTERN 'abcdefghijklmnopqrs' { <p1> } on { _:abcdefghijklmnopqrst <p1> <o1> }",
           "status": "mf:proposed"
@@ -17772,6 +17783,7 @@
           "name": "1focusBNODELength_dot_fail-short",
           "trait": [
             "FocusConstraint",
+            "LexicalBNode",
             "LengthFacet",
             "ToldBNode"
           ],
@@ -17791,6 +17803,7 @@
           "name": "1focusBNODELength_dot_pass",
           "trait": [
             "FocusConstraint",
+            "LexicalBNode",
             "LengthFacet",
             "ToldBNode"
           ],
@@ -17810,6 +17823,7 @@
           "name": "1focusBNODELength_dot_fail-long",
           "trait": [
             "FocusConstraint",
+            "LexicalBNode",
             "LengthFacet",
             "ToldBNode"
           ],

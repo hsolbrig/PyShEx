@@ -47,12 +47,12 @@ class ManifestTestCase(unittest.TestCase):
     data_dir = os.path.join(os.path.split(os.path.abspath(__file__))[0], 'data')
 
     def test_basics_ttl(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'short_manifest.ttl'), 'turtle')
-        self.assertEqual(entries_list, set(mfst.entries.keys()))
+        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), 'turtle')
+        self.assertEqual(entries_list, set(mfst.entries.keys()).intersection(entries_list))
 
     def test_basics_jsonld(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'short_manifest.jsonld'))
-        self.assertEqual(entries_list, set(mfst.entries.keys()))
+        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.jsonld'))
+        self.assertEqual(entries_list, set(mfst.entries.keys()).intersection(entries_list))
 
     def attributes_tester(self, mfst: ShExManifest) -> None:
         me = mfst.entries['1dotSemi_pass-noOthers']
@@ -74,7 +74,7 @@ class ManifestTestCase(unittest.TestCase):
         self.assertEqual(me.focus, URIRef("http://a.example/s1"))
 
         me = mfst.entries['bnode1dot_pass-others_lexicallyEarlier'][0]
-        self.assertEqual({SHT.ToldBNode, SHT.TriplePattern}, me.traits, )
+        self.assertEqual({SHT.BNodeShapeLabel, SHT.TriplePattern}, me.traits)
 
         me = mfst.entries['1inversedot_fail-empty'][0]
         self.assertEqual({SHT.TriplePattern}, me.traits)
@@ -84,16 +84,16 @@ class ManifestTestCase(unittest.TestCase):
         self.assertEqual(me.comments, "<S> { ^<p1> . } on {  }")
 
     def test_attributes_ttl(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'short_manifest.ttl'), fmt="turtle")
+        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), fmt="turtle")
         self.attributes_tester(mfst)
 
     @unittest.skipIf(True, "Issue report #27 filed in shexTest")
     def test_attributes_jsonld(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'short_manifest.jsonld'))
+        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.jsonld'))
         self.attributes_tester(mfst)
 
     def test_shex(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'short_manifest.ttl'), "turtle")
+        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), "turtle")
         me = mfst.entries['1Adot_pass'][0]
         self.assertEqual(URIRef('https://raw.githubusercontent.com/shexSpec/shexTest/master/schemas/1Adot.shex'),
                          me.schema_uri)
@@ -101,7 +101,7 @@ class ManifestTestCase(unittest.TestCase):
             self.assertEqual(jsg.load(shex_file, ShExJ), mfst.entries['1Adot_pass'][0].shex_schema())
 
     def test_data(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'short_manifest.ttl'), 'turtle')
+        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), 'turtle')
         me = mfst.entries['PstarT'][0]
         g = Graph()
         g.parse(os.path.join(self.data_dir, 'Pstar.ttl'), format="turtle")
@@ -115,6 +115,22 @@ class ManifestTestCase(unittest.TestCase):
     def test_full_json(self):
         mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.jsonld'))
         self.assertEqual(entries_list, entries_list.intersection(mfst.entries))
+
+    def test_externs(self):
+        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), 'turtle')
+        me = mfst.entries['shapeExtern_pass'][0]
+        self.assertEqual(
+            [URIRef('https://raw.githubusercontent.com/shexSpec/shexTest/master/schemas/shapeExtern.shextern')],
+            me.externs)
+        me = mfst.entries['1Adot_pass'][0]
+        self.assertEqual([], me.externs)
+
+    @unittest.skipIf(True, "Externs won't work until we get json for the external schema")
+    def test_extern_str(self):
+        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), 'turtle')
+        me = mfst.entries['shapeExtern_pass'][0]
+        self.assertIsNotNone(me.extern_shape_for(ShExJ.IRIREF("http://a.example/Sext")))
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -9,7 +9,7 @@ from typing import Dict, Any, Callable, Optional, List, Tuple, Union
 
 from ShExJSG import ShExJ
 from ShExJSG.ShExJ import Schema
-from rdflib import Graph, BNode
+from rdflib import Graph, BNode, Namespace
 
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector, START
 
@@ -60,21 +60,32 @@ class _VisitorCenter:
         return id_ in self._seen_tes
 
 
+def default_external_shape_resolver(_: ShExJ.IRIREF) -> Optional[ShExJ.Shape]:
+    """ Default external shape resolution function """
+    return None
+
+
 class Context:
     """ Environment for ShExJ evaluation """
-    def __init__(self, g: Optional[Graph], s: Schema):
+    def __init__(self, g: Optional[Graph], s: Schema,
+                 external_shape_resolver: Optional[Callable[[ShExJ.IRIREF], Optional[ShExJ.Shape]]]=None,
+                 base_namespace: Optional[Namespace]=None) -> None:
         """
         Create a context consisting of an RDF Graph and a ShEx Schema and generate a identifier to
         item map.
 
         :param g: RDF graph
         :param s: ShExJ Schema instance
-
+        :param external_shape_resolver: External resolution function
+        :param base_namespace:
         """
         self.graph: Graph = g
         self.schema: ShExJ.Schema = s
         self.schema_id_map: Dict[ShExJ.shapeExprLabel, ShExJ.shapeExpr] = {}
         self.te_id_map: Dict[ShExJ.tripleExprLabel, ShExJ.tripleExpr] = {}
+        self.external_shape_for = external_shape_resolver if external_shape_resolver \
+            else default_external_shape_resolver
+        self.base_namespace = base_namespace
 
         # A list of node selectors/shape expressions that are being evaluated.  If we attempt to evaluate
         # an entry for a second time, we, instead, put the entry into the assumptions table.  We start with 'true'
@@ -101,15 +112,18 @@ class Context:
             if expr.id in self.schema_id_map:
                 return
             else:
-                self.schema_id_map[expr.id] = expr
+                self.schema_id_map[self._resolve_relative_uri(expr.id)] = expr
         if isinstance(expr, (ShExJ.ShapeOr, ShExJ.ShapeAnd)):
             for expr2 in expr.shapeExprs:
                 self._gen_schema_xref(expr2)
         elif isinstance(expr, ShExJ.ShapeNot):
-            self._gen_schema_xref(expr)
+            self._gen_schema_xref(expr.shapeExpr)
         elif isinstance(expr, ShExJ.Shape):
             if expr.expression is not None:
                 self._gen_te_xref(expr.expression)
+
+    def _resolve_relative_uri(self, ref: ShExJ.shapeExprLabel) -> ShExJ.shapeExprLabel:
+        return ShExJ.IRIREF(str(self.base_namespace[str(ref)])) if ':' not in str(ref) and self.base_namespace else ref
 
     def _gen_te_xref(self, expr: ShExJ.tripleExpr) -> None:
         """
@@ -122,7 +136,7 @@ class Context:
             if expr.id in self.te_id_map:
                 return
             else:
-                self.te_id_map[expr.id] = expr
+                self.te_id_map[self._resolve_relative_uri(expr.id)] = expr
         if isinstance(expr, (ShExJ.OneOf, ShExJ.EachOf)):
             for expr2 in expr.expressions:
                 self._gen_te_xref(expr2)
@@ -136,7 +150,7 @@ class Context:
 
     def shapeExprFor(self, id_: Union[ShExJ.shapeExprLabel, START]) -> Optional[ShExJ.shapeExpr]:
         """ Return the shape expression that corresponds to id """
-        return self.schema.start if id_ is START else self.schema_id_map.get(str(id_))
+        return self.schema.start if id_ is START else self.schema_id_map.get(id_)
 
     def visit_shapes(self, expr: ShExJ.shapeExpr, f: Callable[[Any, ShExJ.shapeExpr, "Context"], None], arg_cntxt: Any,
                      visit_center: _VisitorCenter = None, follow_inner_shapes: bool=True) -> None:
@@ -199,9 +213,9 @@ class Context:
             elif isinstance(expr, ShExJ.TripleConstraint):
                 if expr.valueExpr is not None:
                     self.visit_shapes(expr.valueExpr,
-                                                  lambda ac, te, cntxt: self._visit_shape_te(te, visit_center),
-                                                  arg_cntxt,
-                                                  visit_center)
+                                      lambda ac, te, cntxt: self._visit_shape_te(te, visit_center),
+                                      arg_cntxt,
+                                      visit_center)
             elif ShExJ.isinstance_(expr, ShExJ.tripleExprLabel):
                 if not visit_center.actively_visiting_te(str(expr)):
                     visit_center.start_visiting_te(str(expr))

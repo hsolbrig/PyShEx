@@ -75,7 +75,8 @@ def satisfiesExternal(cntxt: Context, n: nodeSelector, se: ShExJ.ShapeExternal) 
     """ Se is a ShapeExternal and implementation-specific mechansims not defined in this specification indicate
      success.
      """
-    return False
+    extern_shape = cntxt.external_shape_for(se.id)
+    return extern_shape is not None and satisfies(cntxt, n, extern_shape)
 
 
 def satisfiesShapeExprRef(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExprLabel) -> bool:

@@ -1,12 +1,13 @@
-from typing import List, Dict, Set, Union, Optional
+from typing import List, Dict, Set, Union, Optional, cast
 
 from ShExJSG import ShExJ
 from pyjsg.jsglib import jsg
-from rdflib import Graph, ConjunctiveGraph, RDF, RDFS, URIRef, Namespace, Literal
+from rdflib import Graph, ConjunctiveGraph, RDF, RDFS, URIRef, Namespace, Literal, BNode
 from urllib.request import urlopen
 
 from rdflib.collection import Collection
 
+from pyshex.shape_expressions_language.p5_context import Context
 from tests.utils.uri_redirector import URIRedirector
 
 SHT = Namespace("http://www.w3.org/ns/shacl/test-suite#")
@@ -72,18 +73,7 @@ class ShExManifestEntry:
 
     def schema(self) -> Optional[str]:
         if self.schema_uri:
-            # TODO: remove this when ShExC and ttl parsers are available
-            schema_uri = self.owner.schema_uri(self.schema_uri)
-            schema_uri_str = str(self.owner.schema_uri(self.schema_uri)).replace(".shex", ".json")
-            if isinstance(schema_uri, URIRef):
-                return urlopen(schema_uri_str).read().decode()
-            else:
-                try:
-                    with open(schema_uri_str) as schema_file:
-                        return schema_file.read()
-                except FileNotFoundError as e:
-                    print(e.strerror)
-        return None
+            return self._fetch_schema(self.schema_uri)
 
     def shex_schema(self) -> Optional[ShExJ.Schema]:
         schema = self.schema()
@@ -117,6 +107,42 @@ class ShExManifestEntry:
 """ + self.data()
         g.parse(data=data_ttl, format=fmt)
         return g
+
+    @property
+    def externs(self) -> List[URIRef]:
+        externs = self._action_obj(SHT.shapeExterns)
+        return [] if externs is None else [e for e in Collection(self.g, externs)] \
+            if isinstance(externs, BNode) else [externs]
+
+    def resolve_extern(self, ref: ShExJ.shapeExprLabel) -> Optional[ShExJ.Shape]:
+        pass
+
+    def _fetch_schema(self, uri: URIRef) -> Optional[str]:
+        # TODO: remove this when ShExC and ttl parsers are available
+        schema_uri = self.owner.schema_uri(uri)
+        if '.shextern' in str(self.owner.schema_uri(uri)):
+            schema_uri_str = str(self.owner.schema_uri(uri)).replace(".shextern", ".jsontern")
+        else:
+            schema_uri_str = str(self.owner.schema_uri(uri)).replace(".shex", ".json")
+        if isinstance(schema_uri, URIRef):
+            return urlopen(schema_uri_str).read().decode()
+        else:
+            try:
+                with open(schema_uri_str) as schema_file:
+                    return schema_file.read()
+            except FileNotFoundError as e:
+                print(e.strerror)
+
+    def extern_shape_for(self, ref: ShExJ.IRIREF) -> Optional[ShExJ.Shape]:
+        for extern in self.externs:
+            schema_str = self._fetch_schema(extern)
+            if schema_str:
+                schema = cast(ShExJ.Schema, jsg.loads(schema_str, ShExJ))
+                cntxt = Context(None, schema)
+                shape = cntxt.shapeExprFor(ref)
+                if shape:
+                    return shape
+        return None
 
     def __str__(self):
         return str(self.name)
