@@ -27,26 +27,12 @@ def satisfiesShapeAnd(cntxt: Context, n: nodeSelector, se: ShExJ.ShapeAnd) -> bo
 ## Current status
 We are currently working through the tests that are defined in the [shexTest](https://github.com/shexSpec/shexTest/) [validation](https://github.com/shexSpec/shexTest/tree/master/validation) directory.
 
-At the moment, we can pass 218 of the tests in the manifest up to `1dotInline1_selfReference`, with the following exceptions:
+At the moment, we can pass 218 of the tests in the manifest up to `NOT1dotOR2dot_pass-NoShape1`, with the following exceptions:
 
 1) BNode name matching tests -- rdflib does not preserve BNode identifiers, so these tests are not possible.
 3) RDF literals with single quotes and escaped internal quotes -- this bug was reported and (I though) fixed in rdflib, but apparently it didn't take.
 4) Double values of '0E0' and '0e0' - rdflib doesn't parse this representation.
 5) 1literalPattern_with_ascii_boundaries -- this is so crazy that I can't even read it in my browser.  We'll cope with insane UTF-16 codes after we get the rest of this stuff done
-6) A number of fraction digits tests where the tests just appear to be broken.  As an example, `1literalFractiondigits_pass-decimal-short` asserts that  
-```text
-<http://a.example/s1> 
-<http://a.example/p1> 
-"1.2345"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-```
-
-should pass
-```text
-<http://a.example/S1> {
-   <http://a.example/p1> LITERAL FRACTIONDIGITS 5
-}
-```
-(What am I missing?)
 
 
 ## Notes

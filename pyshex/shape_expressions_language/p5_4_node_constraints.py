@@ -13,7 +13,7 @@ from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSel
 from pyshex.sparql11_query.p17_1_operand_data_types import is_sparql_operand_datatype, is_numeric
 from pyshex.utils.datatype_utils import can_cast_to, total_digits, fraction_digits, pattern_match, map_object_literal
 from pyshex.utils.debug_utils import satisfies_wrapper, nodeSatisfies_wrapper
-from pyshex.utils.value_set_utils import objectValueMatches, uriref_startswith_iriref
+from pyshex.utils.value_set_utils import objectValueMatches, uriref_startswith_iriref, uriref_matches_iriref
 
 
 @satisfies_wrapper
@@ -132,8 +132,10 @@ def nodeSatisfiesNumericFacet(_: Context, n: nodeSelector, nc: ShExJ.NodeConstra
                        (nc.minexclusive.val is None or v > nc.minexclusive.val) and \
                        (nc.maxinclusive.val is None or v <= nc.maxinclusive.val) and \
                        (nc.maxexclusive.val is None or v < nc.maxexclusive.val) and \
-                       (nc.totaldigits.val is None or total_digits(n) == nc.totaldigits.val) and \
-                       (nc.fractiondigits.val is None or fraction_digits(n) == nc.fractiondigits.val)
+                       (nc.totaldigits.val is None or (total_digits(n) is not None and
+                                                       total_digits(n) <= nc.totaldigits.val)) and \
+                       (nc.fractiondigits.val is None or (fraction_digits(n) is not None and
+                                                          fraction_digits(n) <= nc.fractiondigits.val))
             else:
                 return False
         else:
@@ -186,7 +188,9 @@ def _nodeSatisfiesValue(cntxt: Context, n: nodeSelector, vsv: ShExJ.valueSetValu
 
     if isinstance(vsv, ShExJ.IriStemRange):
         exclusions = vsv.exclusions if vsv.exclusions is not None else []
-        return nodeInIriStem(cntxt, n, vsv.stem) and not any(uriref_startswith_iriref(n, excl.stem) for excl in exclusions)
+        return nodeInIriStem(cntxt, n, vsv.stem) and not any(
+            (uriref_matches_iriref(n, excl) if isinstance(excl, str) else
+             uriref_startswith_iriref(n, excl.stem)) for excl in exclusions)
 
     if isinstance(vsv, ShExJ.LiteralStem):
         return nodeInLiteralStem(cntxt, n, vsv.stem)

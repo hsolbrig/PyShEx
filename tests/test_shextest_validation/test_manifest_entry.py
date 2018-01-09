@@ -23,6 +23,7 @@ AWAIT_FANCY_STUFF = "Too crazy for the first pass"
 CRLF_ISSUE = "Code expects crlf and not parsed that way"
 DIGITS_ISSUE = "Fraction digits should fail"
 NO_JSON = "No json representation of schema is available"
+NON_EXISTENT_FOCUS = "Focus node in manifest doesn't exist"
 
 skip_traits = [SHT.LexicalBNode]
 
@@ -33,12 +34,6 @@ expected_failures = {
      "1val1STRING_LITERAL1_with_all_punctuation_fail": RDFLIB_QUOTE,
      "1val1DOUBLE_pass": "0E0 is not a valid RDF double value",
      "1val1DOUBLElowercase_pass": "0e0 is not a valid RDF double value",
-     "1literalFractiondigits_pass-decimal-short": DIGITS_ISSUE,
-     "1literalFractiondigits_pass-integer-short": DIGITS_ISSUE,
-     "1literalFractiondigits_pass-xsd_integer-short": DIGITS_ISSUE,
-     "1literalTotaldigits_pass-decimal-short": DIGITS_ISSUE,
-     "1literalTotaldigits_pass-xsd_integer-short": DIGITS_ISSUE,
-     "1literalTotaldigits_pass-byte-short": DIGITS_ISSUE,
      "1bnodeLength_pass-bnode-equal": BNODE_ISSUE,
      "1nonliteralLength_pass-bnode-equal": BNODE_ISSUE,
      "1bnodeMaxlength_pass-bnode-short": BNODE_ISSUE,
@@ -56,7 +51,13 @@ expected_failures = {
      "1nonliteralPattern_pass-bnode-match": BNODE_ISSUE,
      "1nonliteralPattern_pass-bnode-long": BNODE_ISSUE,
      "1NOTIRI_passLv": NO_JSON,
-     "1NOTIRI_failIo1": NO_JSON
+     "1NOTIRI_failIo1": NO_JSON,
+     "3groupdotExtra3NLex_pass-iri2": NON_EXISTENT_FOCUS,
+     "1focusBNODE_dot_pass": BNODE_ISSUE,
+     "1focusPatternB-dot_pass-bnode-long": BNODE_ISSUE,
+     "1focusMinLength-dot_pass-bnode-long": BNODE_ISSUE,
+     "1focusBNODELength_dot_pass": BNODE_ISSUE
+
 }
 
 

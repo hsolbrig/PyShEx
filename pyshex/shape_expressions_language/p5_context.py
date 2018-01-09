@@ -5,13 +5,13 @@ Context for evaluation engine -- carries all of the global variables (schema, gr
 We might fold the various routines inside context and replace "cntxt: Context" with "self", but we will have to see.
 
 """
-from typing import Dict, Any, Callable, Optional, List, Tuple
+from typing import Dict, Any, Callable, Optional, List, Tuple, Union
 
 from ShExJSG import ShExJ
 from ShExJSG.ShExJ import Schema
 from rdflib import Graph, BNode
 
-from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
+from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector, START
 
 
 class DebugContext:
@@ -134,12 +134,12 @@ class Context:
         """ Return the triple expression that corresponds to id """
         return self.te_id_map[id_]
 
-    def shapeExprFor(self, id_: ShExJ.shapeExprLabel) -> ShExJ.shapeExpr:
+    def shapeExprFor(self, id_: Union[ShExJ.shapeExprLabel, START]) -> Optional[ShExJ.shapeExpr]:
         """ Return the shape expression that corresponds to id """
-        return self.schema_id_map.get(id_)
+        return self.schema.start if id_ is START else self.schema_id_map.get(str(id_))
 
     def visit_shapes(self, expr: ShExJ.shapeExpr, f: Callable[[Any, ShExJ.shapeExpr, "Context"], None], arg_cntxt: Any,
-                     visit_center: _VisitorCenter = None) -> None:
+                     visit_center: _VisitorCenter = None, follow_inner_shapes: bool=True) -> None:
         """
         Visit expr and all of its "descendant" shapes.
 
@@ -147,6 +147,7 @@ class Context:
         :param f: visitor function
         :param arg_cntxt: accompanying context for the visitor function
         :param visit_center: Recursive visit context.  (Not normally supplied on an external call)
+        :param follow_inner_shapes: Follow nested shapes or just visit on outer level
         """
         if visit_center is None:
             visit_center = _VisitorCenter(f, arg_cntxt)
@@ -162,17 +163,17 @@ class Context:
             # Traverse the expression and visit its components
             if isinstance(expr, (ShExJ.ShapeOr, ShExJ.ShapeAnd)):
                 for expr2 in expr.shapeExprs:
-                    self.visit_shapes(expr2, f, arg_cntxt, visit_center)
+                    self.visit_shapes(expr2, f, arg_cntxt, visit_center, follow_inner_shapes=follow_inner_shapes)
             elif isinstance(expr, ShExJ.ShapeNot):
-                self.visit_shapes(expr.shapeExpr, f, arg_cntxt, visit_center)
+                self.visit_shapes(expr.shapeExpr, f, arg_cntxt, visit_center, follow_inner_shapes=follow_inner_shapes)
             elif isinstance(expr, ShExJ.Shape):
-                if expr.expression is not None:
+                if expr.expression is not None and follow_inner_shapes:
                     self.visit_triple_expressions(expr.expression,
                                                   lambda ac, te, cntxt: self._visit_shape_te(te, visit_center),
                                                   arg_cntxt,
                                                   visit_center)
             elif ShExJ.isinstance_(expr, ShExJ.shapeExprLabel):
-                if not visit_center.actively_visiting_shape(str(expr)):
+                if not visit_center.actively_visiting_shape(str(expr)) and follow_inner_shapes:
                     visit_center.start_visiting_shape(str(expr))
                     self.visit_shapes(self.shapeExprFor(expr), f, arg_cntxt, visit_center)
                     visit_center.done_visiting_shape(str(expr))
@@ -197,15 +198,15 @@ class Context:
                     self.visit_triple_expressions(expr2, f, arg_cntxt, visit_center)
             elif isinstance(expr, ShExJ.TripleConstraint):
                 if expr.valueExpr is not None:
-                    self.visit_triple_expressions(expr.valueExpr,
-                                                  lambda ac, te, cntxt: self._visit_te_shape(te, visit_center),
+                    self.visit_shapes(expr.valueExpr,
+                                                  lambda ac, te, cntxt: self._visit_shape_te(te, visit_center),
                                                   arg_cntxt,
                                                   visit_center)
             elif ShExJ.isinstance_(expr, ShExJ.tripleExprLabel):
-                if not visit_center.actively_visiting_shape(str(expr)):
-                    visit_center.start_visiting_shape(str(expr))
-                    self.visit_shapes(self.shapeExprFor(expr), f, arg_cntxt, visit_center)
-                    visit_center.done_visiting_shape(str(expr))
+                if not visit_center.actively_visiting_te(str(expr)):
+                    visit_center.start_visiting_te(str(expr))
+                    self.visit_triple_expressions(self.tripleExprFor(expr), f, arg_cntxt, visit_center)
+                    visit_center.done_visiting_te(str(expr))
             if has_id:
                 visit_center.done_visiting_te(expr.id)
 

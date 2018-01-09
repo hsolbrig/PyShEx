@@ -2,19 +2,17 @@
 Partition utilities -
 taken from `Stack Overflow <https://stackoverflow.com/questions/19368375/set-partitions-in-python>`_
 """
-from typing import List, Iterator, Tuple
+from itertools import permutations
+from typing import List, Iterator, Tuple, Set
 
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import RDFGraph
 
 
-"""
-taken from `Stack Overflow <https://codereview.stackexchange.com/questions/1526/finding-all-k-subset-partitions>`_
-
-A python implementation of Knuth's algorithm.
-"""
-
-
 def algorithm_u(ns, m):
+    """
+    taken from `Stack Overflow <https://codereview.stackexchange.com/questions/1526/finding-all-k-subset-partitions>`_
+
+    """
     def visit(nv, av):
         ps = [[] for _ in range(m)]
         for jv in range(nv):
@@ -93,13 +91,56 @@ def algorithm_u(ns, m):
 
 
 def integer_partition(size: int, nparts: int) -> Iterator[List[List[int]]]:
-    # Note: can't cache a generator (!)
-    # If we've got fewer elements that the minimum number of parts, all bets are off
+    """ Partition a list of integers into a list of partitions """
     for part in algorithm_u(range(size), nparts):
         yield part
 
 
-def partition_t(T: RDFGraph, nparts: int) -> Iterator[List[RDFGraph]]:
+def filtered_integer_partition(nelements: int, nparts: int) -> Iterator[Tuple[Tuple[int]]]:
+    seen: Set[Tuple[Tuple[int, ...], ...]] = set()
+
+    # Start with the entire set
+    if nelements == 0:
+        yield tuple(tuple() for _ in range(nparts))
+    else:
+        for npart in range(min(nelements, nparts), 0, -1):
+            if npart == 1:
+                t1 = tuple(range(nelements))
+                t2 = [() for _ in range(nparts - 1)]
+                total = tuple([t1] + t2)
+                for permutation in permutations(total):
+                    pt = tuple(permutation)
+                    if pt not in seen:
+                        seen.add(pt)
+                        yield pt
+            else:
+                for int_partition in integer_partition(nelements, npart):
+                    t1 = [tuple(e) for e in int_partition]
+                    t2 = [() for _ in range(nparts - npart)]
+                    total = tuple(t1 + t2)
+                    for permutation in permutations(total):
+                        for permutation in permutations(total):
+                            pt = tuple(permutation)
+                            if pt not in seen:
+                                seen.add(pt)
+                                yield pt
+
+
+    # def strip_empty_members(partition: List[List[int]]) -> Tuple[Tuple[int, ...], ...]:
+    #     return tuple(tuple([p for p in part if p < nelements]) for part in partition)
+    #
+    # if nelements == 0:
+    #     yield tuple(tuple() for _ in range(nparts))
+    # else:
+    #     for int_partition in integer_partition(nelements + nparts - 1, nparts):
+    #         for permutation in permutations(int_partition):
+    #             stripped_perm = strip_empty_members(permutation)
+    #             if stripped_perm not in seen:
+    #                 seen.add(stripped_perm)
+    #                 yield stripped_perm
+
+
+def partition_t(T: RDFGraph, nparts: int) -> Iterator[Tuple[RDFGraph, ...]]:
     """
     Partition T into all possible partitions of T of size nparts
     :param T: Set of RDF triples to be partitioned
@@ -109,9 +150,18 @@ def partition_t(T: RDFGraph, nparts: int) -> Iterator[List[RDFGraph]]:
     We don't actually partition the triples directly -- instead, we partition a set of integers that
     reference elements in the (ordered) set and return those
     """
-    t_list = sorted(list(T))        # Sorted not strictly necessary, but aids testing
-    return map(lambda element: [RDFGraph([t_list[e] for e in part]) for part in element],
-               integer_partition(len(T), nparts))
+    def partition_map(partition: List[List[int]]) -> Tuple[RDFGraph, ...]:
+        rval: List[RDFGraph, ...] = []
+        for part in partition:
+            if len(part) == 1 and part[0] >= t_list_len:
+                rval.append(RDFGraph())
+            else:
+                rval.append(RDFGraph([t_list[e] for e in part if e < t_list_len]))
+        return tuple(rval)
+
+    t_list = sorted(list(T))      # Sorted not strictly necessary, but aids testing
+    t_list_len = len(t_list)
+    return map(lambda partition: partition_map(partition), filtered_integer_partition(t_list_len, nparts))
 
 
 def partition_2(T: RDFGraph) -> List[Tuple[RDFGraph, RDFGraph]]:
@@ -120,14 +170,5 @@ def partition_2(T: RDFGraph) -> List[Tuple[RDFGraph, RDFGraph]]:
     :param T: RDF Graph to partition
     :return:
     """
-    if len(T) == 0:
-        yield (RDFGraph(), RDFGraph())
-    elif len(T) == 1:
-        yield (T, RDFGraph())
-        yield (RDFGraph(), T)
-    else:
-        yield (T, RDFGraph())
-        for e in partition_t(T, 2):
-            yield (e[0], e[1])
-            yield (e[1], e[0])
-        yield (RDFGraph(), T)
+    for p in partition_t(T, 2):
+        yield p

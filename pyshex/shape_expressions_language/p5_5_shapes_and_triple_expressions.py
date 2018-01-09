@@ -1,8 +1,9 @@
 """ Implementation of `5.5 Shapes and Triple Expressions <http://shex.io/shex-semantics/#shapes-and-TEs>`_"""
 
-from typing import List, Optional
+from typing import List, Optional, Union
 
 from ShExJSG import ShExJ
+from pyjsg.jsglib.jsg import isinstance_
 from rdflib import URIRef
 
 from pyshex.shape_expressions_language.p3_terminology import neigh, arcsOut
@@ -119,33 +120,35 @@ def matches(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExpr) -> bool:
             * expr has no valueExpr
             * or `satisfies(value, valueExpr, G, m).
     """
+    if isinstance_(expr, ShExJ.tripleExprLabel):
+        expr = cntxt.tripleExprFor(expr)
     return matchesCardinality(cntxt, T, expr) and \
         (expr.semActs is None or semActsSatisfied(expr.semActs, cntxt))
 
 
 @matches_wrapper
-def matchesCardinality(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExpr) -> bool:
+def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr, ShExJ.tripleExprLabel]) -> bool:
     """ Evaluate cardinality expression
     expr has a cardinality of min and/or max not equal to 1, where a max of -1 is treated as unbounded, and
     T can be partitioned into k subsets T1, T2,…Tk such that min ≤ k ≤ max and for each Tn,
     matches(Tn, expr, m) by the remaining rules in this list.
     """
-    if len(T) < (expr.min.val if expr.min.val is not None else 1):
+    # Set the cardinatlity defaults
+    min_ = expr.min.val if expr.min.val is not None else 1
+    max_ = expr.max.val if expr.max.val is not None else -1
+
+    if len(T) < (min_):
         return False
-    for partition in _partitions(T, expr.min.val, expr.max.val):
+    for partition in _partitions(T, min_, max_):
         if all(matchesExpr(cntxt, entry, expr) for entry in partition):
             return True
     return expr.min.val == 0
 
 
 def _partitions(T: RDFGraph, min_: Optional[int], max_: Optional[int]) -> List[List[RDFGraph]]:
-    if min_ is None:
-        min_ = 1
-    if max_ is None:
-        max_ = 1
     if max_ == 1:
         yield [T]
-    for k in range(min_, (len(T) if max_ == -1 else min(max_, len(T))) + 1):
+    for k in range(min_, (max(len(T), min_) if max_ == -1 else max_)+1):
         for partition in partition_t(T, k):
             yield partition
 
@@ -162,7 +165,7 @@ def matchesExpr(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExpr) -> bool:
     elif isinstance(expr, ShExJ.TripleConstraint):
         return matchesTripleConstraint(cntxt, T, expr)
     elif isinstance(expr, ShExJ.tripleExprLabel):
-        return False
+        return matchesTripleExprRef(cntxt, T, expr)
     else:
         raise Exception("Unknown expression")
 

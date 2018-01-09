@@ -6,7 +6,7 @@ from ShExJSG import ShExJ
 from pyjsg.jsglib.jsg import JSGString, JSGObject
 from rdflib import Literal
 
-from pyshex.sparql11_query.p17_1_operand_data_types import is_decimal, is_integer
+from pyshex.sparql11_query.p17_1_operand_data_types import is_decimal, is_integer, is_numeric
 
 
 def can_cast_to(v: Literal, dt: str) -> bool:
@@ -24,7 +24,7 @@ def total_digits(n: Literal) -> Optional[int]:
 
      totaldigits and fractiondigits constraints on values not derived from xsd:decimal fail.
      """
-    return len(str(abs(int(n.value)))) + fraction_digits(n) if is_decimal(n) and n.value is not None else None
+    return len(str(abs(int(n.value)))) + fraction_digits(n) if is_numeric(n) and n.value is not None else None
 
 
 def fraction_digits(n: Literal) -> Optional[int]:
@@ -35,8 +35,8 @@ def fraction_digits(n: Literal) -> Optional[int]:
     """
     # Note - the last expression below isolates the fractional portion, reverses it (e.g. 017320 --> 023710) and
     #        converts it to an integer and back to a string
-    return None if not is_decimal(n) or n.value is None \
-        else 0 if is_integer(n) or str(n.value).split('.')[1] == '0' \
+    return None if not is_numeric(n) or n.value is None \
+        else 0 if is_integer(n) or '.' not in str(n.value) or str(n.value).split('.')[1] == '0' \
         else len(str(int(str(n.value).split('.')[1][::-1])))
 
 

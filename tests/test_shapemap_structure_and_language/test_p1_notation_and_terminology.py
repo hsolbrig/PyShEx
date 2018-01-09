@@ -39,19 +39,11 @@ rdf_1 = gen_rdf("""
 <issue3> ex:submittedOn "2016-07"^^xsd:date .""")
 
 
-rdf_out = """@prefix ns1: <http://schema.example/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-ns1:issue1 ns1:submittedOn "2016-07-08"^^xsd:date .
+rdf_out = """ns1:issue1 ns1:submittedOn "2016-07-08"^^xsd:date .
 
 ns1:issue2 ns1:submittedOn "2016-07-08T01:23:45+00:00"^^xsd:dateTime .
 
-ns1:issue3 ns1:submittedOn "2016-07-01"^^xsd:date .
-
-"""
+ns1:issue3 ns1:submittedOn "2016-07-01"^^xsd:date ."""
 
 
 class NotationAndTerminologyTestCase(unittest.TestCase):

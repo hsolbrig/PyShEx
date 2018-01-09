@@ -1,3 +1,4 @@
+import re
 from typing import Union, Tuple, Iterator, Optional
 from rdflib import URIRef, BNode, Literal, Graph
 
@@ -50,4 +51,4 @@ class RDFGraph(set):
     def __str__(self) -> str:
         g = Graph()
         [g.add((e.s, e.p, e.o)) for e in self]
-        return g.serialize(format="turtle").decode()
+        return re.sub(r'^@prefix.*', '', g.serialize(format="turtle").decode(), flags=re.MULTILINE).strip()

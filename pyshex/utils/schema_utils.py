@@ -17,7 +17,7 @@ def reference_of(selector: shapeLabel, cntxt: Union[Context, ShExJ.Schema] ) -> 
     :return:
     """
     schema = cntxt.schema if isinstance(cntxt, Context) else cntxt
-    if isinstance(selector, START):
+    if selector is START:
         return schema.start
     for expr in schema.shapes:
         if not isinstance(expr, ShExJ.ShapeExternal) and expr.id == selector:
@@ -74,5 +74,5 @@ def predicates_in_expression(expression: ShExJ.shapeExpr, cntxt: Context) -> Lis
             elif isinstance_(expr.expression, ShExJ.tripleExprLabel):
                 predicates.append(cntxt.tripleExprFor(expr.expression).predicate)
 
-    cntxt.visit_shapes(expression, predicate_finder, predicates)
+    cntxt.visit_shapes(expression, predicate_finder, predicates, follow_inner_shapes=False)
     return predicates
