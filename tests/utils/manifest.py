@@ -1,13 +1,13 @@
-from typing import List, Dict, Set, Union, Optional, cast
+from typing import List, Dict, Set, Union, Optional
 
 from ShExJSG import ShExJ
-from pyjsg.jsglib import jsg
 from rdflib import Graph, ConjunctiveGraph, RDF, RDFS, URIRef, Namespace, Literal, BNode
 from urllib.request import urlopen
 
 from rdflib.collection import Collection
 
 from pyshex.shape_expressions_language.p5_context import Context
+from pyshex.utils.schema_loader import SchemaLoader
 from tests.utils.uri_redirector import URIRedirector
 
 SHT = Namespace("http://www.w3.org/ns/shacl/test-suite#")
@@ -71,13 +71,8 @@ class ShExManifestEntry:
     def schema_uri(self) -> Optional[URIRef]:
         return self._action_obj(SHT.schema)
 
-    def schema(self) -> Optional[str]:
-        if self.schema_uri:
-            return self._fetch_schema(self.schema_uri)
-
     def shex_schema(self) -> Optional[ShExJ.Schema]:
-        schema = self.schema()
-        return jsg.loads(schema, ShExJ) if schema is not None else None
+        return self.owner.schema_loader.load(self.schema_uri)
 
     @property
     def shape(self) -> Optional[URIRef]:
@@ -114,34 +109,13 @@ class ShExManifestEntry:
         return [] if externs is None else [e for e in Collection(self.g, externs)] \
             if isinstance(externs, BNode) else [externs]
 
-    def resolve_extern(self, ref: ShExJ.shapeExprLabel) -> Optional[ShExJ.Shape]:
-        pass
-
-    def _fetch_schema(self, uri: URIRef) -> Optional[str]:
-        # TODO: remove this when ShExC and ttl parsers are available
-        schema_uri = self.owner.schema_uri(uri)
-        if '.shextern' in str(self.owner.schema_uri(uri)):
-            schema_uri_str = str(self.owner.schema_uri(uri)).replace(".shextern", ".jsontern")
-        else:
-            schema_uri_str = str(self.owner.schema_uri(uri)).replace(".shex", ".json")
-        if isinstance(schema_uri, URIRef):
-            return urlopen(schema_uri_str).read().decode()
-        else:
-            try:
-                with open(schema_uri_str) as schema_file:
-                    return schema_file.read()
-            except FileNotFoundError as e:
-                print(e.strerror)
-
     def extern_shape_for(self, ref: ShExJ.IRIREF) -> Optional[ShExJ.Shape]:
         for extern in self.externs:
-            schema_str = self._fetch_schema(extern)
-            if schema_str:
-                schema = cast(ShExJ.Schema, jsg.loads(schema_str, ShExJ))
-                cntxt = Context(None, schema)
-                shape = cntxt.shapeExprFor(ref)
-                if shape:
-                    return shape
+            extern_schema = self.owner.schema_loader.load(extern)
+            if extern_schema:
+                cntxt = Context(None, extern_schema)
+                if ref in cntxt.schema_id_map:
+                    return cntxt.schema_id_map[ref]
         return None
 
     def __str__(self):
@@ -149,12 +123,19 @@ class ShExManifestEntry:
 
 
 class ShExManifest:
-    def __init__(self, file_loc: str, fmt: str='json-ld') -> None:
-        self.g = ConjunctiveGraph()
-        self.g.parse(file_loc, format=fmt)
-        self.entries: Dict[str, List[ShExManifestEntry]] = {}
+    def __init__(self, file_loc: str, manifest_format: str='json-ld', shex_format=None) -> None:
+        """
+        A ShEx Manifest traversal tool
 
-        self.schema_redirector: Optional[URIRedirector] = None
+        :param file_loc: Location of the manifest file
+        :param manifest_format: Format of the manifest file (e.g. 'turtle', 'json-ld')
+        :param shex_format: Format of the ShEx files in the manifest. If None, use what the manifest says, otherwise
+        replace '.shex' with shex_format
+        """
+        self.g = ConjunctiveGraph()
+        self.g.parse(file_loc, format=manifest_format)
+        self.entries: Dict[str, List[ShExManifestEntry]] = {}
+        self.schema_loader = SchemaLoader(shex_format)
         self.data_redirector: Optional[URIRedirector] = None
 
         manifest = self.g.value(None, RDF.type, MF.Manifest, any=False)
@@ -164,6 +145,3 @@ class ShExManifest:
 
     def data_uri(self, uri: URIRef) -> Union[URIRef, str]:
         return self.data_redirector.uri_for(uri) if self.data_redirector else uri
-
-    def schema_uri(self, uri: URIRef) -> Union[URIRef, str]:
-        return self.schema_redirector.uri_for(uri) if self.schema_redirector else uri

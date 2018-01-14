@@ -1,6 +1,7 @@
 # Python implementation of ShEx 2.0
-This package is a reasonably literal implementation of the [Shape Expressions Language 2.0](http://shex.io/shex-semantics/).
+This package is a reasonably literal implementation of the [Shape Expressions Language 2.0](http://shex.io/shex-semantics/).  It can parse and "execute" ShExC and ShExJ source.
 
+## General Layout
 The root `pyshex` package is subdivided into:
 
 * [shape_expressions_language](pyshex/shape_expressions_language) - implementation of the various sections in  [Shape Expressions Language 2.0](http://shex.io/shex-semantics/).  As an example, [3. Terminology](http://shex.io/shex-semantics/#terminology) is implemented in [p3_terminology.py](pyshex/shape_expressions_language/p3_terminology.py), [5.2 Validation Definition](http://shex.io/shex-semantics/#validation) in [p5_2_validation_definition.py](pyshex/shape_expressions_language/p5_2_validation_definition.py), etc.
@@ -24,22 +25,34 @@ def satisfiesShapeAnd(cntxt: Context, n: nodeSelector, se: ShExJ.ShapeAnd) -> bo
     return all(satisfies(cntxt, n, se2) for se2 in se.shapeExprs)
 ```
 
+## Dependencies
+This package is built using:
+* [ShExJSG](https://github.com/hsolbrig/ShExJSG) -- an object representation of the ShEx AST as defined by [ShEx.jsg](https://github.com/shexSpec/shexTest/blob/master/doc/ShExJ.jsg) and compiled through the [PyJSG](https://github.com/hsolbrig/pyjsg) compiler.
+* The python [ShExC](https://github.com/shexSpec/grammar/tree/master/parsers/python) compiler -- which transforms the [Shape Expressions Language](http://shex.io/shex-semantics/index.html) into ShExJSG images.
+* [rdflib](https://rdflib.readthedocs.io/en/stable/) 
+
 ## Current status
 This implementation passes all of the tests in the master branch of [validation/manifest.ttl](https://raw.githubusercontent.com/shexSpec/shexTest/master/validation/manifest.ttl) with the following exceptions:
 
 At the moment, there are 1077 tests, of which:
 
-* 932 pass
-* 145 skipped
+* 967 pass
+* 110 are skipped - reasons:
+1) (2) '0E0' and '0e0' are not recognized by the rdflib parser as a double value
+2) (1) Extraneous 'id' field for Schema (2.1 feature?)
+3) (1) Takes too long -- we need to beef up the partition generator
+4) (4) Test uses IMPORT -- not implemented in ShEx 2.0, and not tagged as such
+5) (2) Test uses multi-byte literals aren't tagged as such
+6) (3) RDFLib single quote parsing issue
+7) (2) sht:BNodeShapeLabel - rdflib doesn't preserve bnodes
+8) (13) sht:Import - test uses V2.1 IMPORT feature
+9) (5) sht:Include ...
+10) (30) sht:LexicalBNode - test counts on preservation of BNODES
+11) (22) sht:OutsideBMP -- test uses multi byte unicode
+12) (3) sht:ShapeMap ...
+13) (20) sht:ToldBNode
+14) (2) sht:relativeIRI -- this isn't a real problem, but we havent taken time to deal with this in the test harness
 
-1) BNode name matching tests -- rdflib does not preserve BNode identifiers, so these tests are not possible.
-2) RDF literals with single quotes and escaped internal quotes -- this bug was reported and (I though) fixed in rdflib, but apparently it didn't take.
-3) Double values of '0E0' and '0e0' - rdflib doesn't parse this representation.
-4) Relative URI's - we're running this test locally and haven't figured out all of the bits of rewrite we have to do.  
-5) Carriage Returns -- the rdflib parser reads a newline as '\n' instead of '\r\n', so embedded carriage return matches fail.
-6) There is no JSON representation of ".shextern" files
-7) Test uses a 2.1 feature (IMPORTS)
-8) There are a number of files (all starting with "1NOT", curiously) that do not have JSON representations in the [schemas directory](https://github.com/shexSpec/shexTest/tree/master/schemas).
 
 We've also skipped two tests:
 * `skipped` - the ShEx schema has an `id` in the outermost level, which fails the parser
@@ -50,7 +63,7 @@ As mentioned above, at the moment this is as literal an implementation of the sp
 
 
 ## Notes
-[test_manifest_entry.py](tests/test_shextest_validation/test_manifest_entry.py) is the current testing tool.  Once we get through the complete set of tests we'll create a command line tool and a UI
+[test_manifest_entry.py](tests/utils/manifest_tester.py) is the current testing tool.  Once we get through the complete set of tests we'll create a command line tool and a UI
 
 Note: At the moment we're just returning pass/fail.  We need to find documentation about what the return document should look like before we start returning detailed reports.
 

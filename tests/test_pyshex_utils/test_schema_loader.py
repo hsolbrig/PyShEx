@@ -107,7 +107,6 @@ class SchemaLoaderTestCase(unittest.TestCase):
         schema = loader.load(fileurl)
         self.assertEqual("http://a.example/S1", schema.shapes[0].id)
 
-
     def test_location_rewrite(self):
         loader = SchemaLoader()
         # Note: Deliberately a bad URL to make sure this works
@@ -116,6 +115,17 @@ class SchemaLoaderTestCase(unittest.TestCase):
         fileloc = loader.base_location + 'startCode3.shex'
         schema = loader.load(fileloc)
         self.assertEqual("http://a.example/S1", schema.shapes[0].id)
+
+    def test_format_change(self):
+        loc = "https://raw.githubusercontent.com/shexSpec/shexTest/2.0/schemas/startCode3"
+        loader = SchemaLoader(schema_format='json')
+        self.assertEqual(f"{loc}.json", loader.location_rewrite(f"{loc}.shex"))
+        self.assertEqual(f"{loc}.jsontern", loader.location_rewrite(f"{loc}.shextern"))
+        loader.schema_format = 'shex'
+        self.assertEqual(f"{loc}.shex", loader.location_rewrite(f"{loc}.shex"))
+        self.assertEqual(f"{loc}.shextern", loader.location_rewrite(f"{loc}.shextern"))
+        self.assertEqual(f"{loc}.shextern", loader.location_rewrite(f"{loc}.jsontern"))
+
 
 
 if __name__ == '__main__':

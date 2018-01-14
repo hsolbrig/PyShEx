@@ -51,7 +51,7 @@ def reencode_escapes(pattern: str) -> str:
 
 def _subf(matchobj) -> str:
     o = matchobj.group(0)
-    return o if o[1] in ['\\', '^', '$', '?'] else '\t' if o[1] == 't' else '\n' if o[1] == 'n' else '\r' if o[1] == 'r' \
+    return o if o[1] in ['\\', '^', '$', '?', ','] else '\t' if o[1] == 't' else '\n' if o[1] == 'n' else '\r' if o[1] == 'r' \
         else o[1]
 
 

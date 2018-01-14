@@ -11,10 +11,10 @@ from pyshex.shape_expressions_language.p5_7_semantic_actions import semActsSatis
 from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import RDFGraph
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
-from pyshex.utils.debug_utils import satisfies_wrapper, matches_wrapper
+from pyshex.utils.debug_utils import satisfies_wrapper, matches_wrapper, remainder_wrapper
 from pyshex.utils.partitions import partition_t, partition_2
 from pyshex.utils.schema_utils import predicates_in_expression
-from pyshex.utils.value_set_utils import uriref_matches_iriref
+from pyshex.utils.value_set_utils import uriref_matches_iriref, iriref_to_uriref
 
 
 @satisfies_wrapper
@@ -55,6 +55,7 @@ def satisfiesShape(cntxt: Context, n: nodeSelector, S: ShExJ.Shape) -> bool:
     return rslt
 
 
+@remainder_wrapper
 def valid_remainder(cntxt: Context, n: nodeSelector, remainder: RDFGraph, S: ShExJ.Shape) -> bool:
     """
     Let **outs** be the arcsOut in remainder: `outs = remainder ∩ arcsOut(G, n)`.
@@ -89,7 +90,7 @@ def valid_remainder(cntxt: Context, n: nodeSelector, remainder: RDFGraph, S: ShE
         return False
 
     # There is no triple in **matchables** whose predicate does not appear in extra.
-    extras = {URIRef(e) for e in S.extra} if S.extra is not None else {}
+    extras = {iriref_to_uriref(e) for e in S.extra} if S.extra is not None else {}
     if any(t.p not in extras for t in matchables):
         return False
 

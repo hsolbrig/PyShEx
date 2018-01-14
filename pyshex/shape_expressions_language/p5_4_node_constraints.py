@@ -189,7 +189,7 @@ def _nodeSatisfiesValue(cntxt: Context, n: nodeSelector, vsv: ShExJ.valueSetValu
     if isinstance(vsv, ShExJ.IriStemRange):
         exclusions = vsv.exclusions if vsv.exclusions is not None else []
         return nodeInIriStem(cntxt, n, vsv.stem) and not any(
-            (uriref_matches_iriref(n, excl) if isinstance(excl, str) else
+            (uriref_matches_iriref(n, excl) if isinstance(excl, ShExJ.IRIREF) else
              uriref_startswith_iriref(n, excl.stem)) for excl in exclusions)
 
     if isinstance(vsv, ShExJ.LiteralStem):

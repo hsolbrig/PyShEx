@@ -84,7 +84,7 @@ class ManifestTestCase(unittest.TestCase):
         self.assertEqual(me.comments, "<S> { ^<p1> . } on {  }")
 
     def test_attributes_ttl(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), fmt="turtle")
+        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), manifest_format="turtle")
         self.attributes_tester(mfst)
 
     @unittest.skipIf(True, "Issue report #27 filed in shexTest")
@@ -98,7 +98,9 @@ class ManifestTestCase(unittest.TestCase):
         self.assertEqual(URIRef('https://raw.githubusercontent.com/shexSpec/shexTest/master/schemas/1Adot.shex'),
                          me.schema_uri)
         with open(os.path.join(self.data_dir, '1Adot.json')) as shex_file:
-            self.assertEqual(jsg.load(shex_file, ShExJ), mfst.entries['1Adot_pass'][0].shex_schema())
+            target_shex_file = jsg.load(shex_file, ShExJ)
+            del target_shex_file['@context']
+            self.assertEqual(target_shex_file._as_json, mfst.entries['1Adot_pass'][0].shex_schema()._as_json)
 
     def test_data(self):
         mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), 'turtle')

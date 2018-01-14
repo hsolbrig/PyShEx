@@ -9,6 +9,7 @@ from typing import Dict, Any, Callable, Optional, List, Tuple, Union
 
 from ShExJSG import ShExJ
 from ShExJSG.ShExJ import Schema
+from pyjsg.jsglib.jsg import isinstance_
 from rdflib import Graph, BNode, Namespace
 
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector, START
@@ -102,13 +103,13 @@ class Context:
             for e in self.schema.shapes:
                 self._gen_schema_xref(e)
 
-    def _gen_schema_xref(self, expr: ShExJ.shapeExpr) -> None:
+    def _gen_schema_xref(self, expr: Optional[Union[ShExJ.shapeExprLabel, ShExJ.shapeExpr]]) -> None:
         """
         Generate the schema_id_map
 
         :param expr: root shape expression
         """
-        if 'id' in expr and expr.id is not None:
+        if expr is not None and not isinstance_(expr, ShExJ.shapeExprLabel) and 'id' in expr and expr.id is not None:
             if expr.id in self.schema_id_map:
                 return
             else:
@@ -125,14 +126,14 @@ class Context:
     def _resolve_relative_uri(self, ref: ShExJ.shapeExprLabel) -> ShExJ.shapeExprLabel:
         return ShExJ.IRIREF(str(self.base_namespace[str(ref)])) if ':' not in str(ref) and self.base_namespace else ref
 
-    def _gen_te_xref(self, expr: ShExJ.tripleExpr) -> None:
+    def _gen_te_xref(self, expr: Union[ShExJ.tripleExpr, ShExJ.tripleExprLabel]) -> None:
         """
         Generate the triple expression map (te_id_map)
 
         :param expr: root triple expression
 
         """
-        if 'id' in expr and expr.id is not None:
+        if expr is not None and not isinstance_(expr, ShExJ.tripleExprLabel) and 'id' in expr and expr.id is not None:
             if expr.id in self.te_id_map:
                 return
             else:

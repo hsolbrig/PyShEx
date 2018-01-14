@@ -25,6 +25,7 @@
 # LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
 # OF THE POSSIBILITY OF SUCH DAMAGE.
+import re
 from typing import cast, Union, TextIO
 from urllib.request import urlopen
 
@@ -34,9 +35,10 @@ from pyshexc.parser_impl import generate_shexj
 
 
 class SchemaLoader:
-    def __init__(self, base_location=None, redirect_location=None) -> None:
+    def __init__(self, base_location=None, redirect_location=None, schema_format=None) -> None:
         self.base_location = base_location
         self.redirect_location = redirect_location
+        self.schema_format=schema_format
 
     def load(self, schema_location: Union[str, TextIO]) -> ShExJ.Schema:
         """ Load a ShEx Schema from schema_location
@@ -45,7 +47,7 @@ class SchemaLoader:
         :return: ShEx Schema represented by schema_location
         """
         if isinstance(schema_location, str):
-            real_schema_location = self._location_rewrite(schema_location)
+            real_schema_location = self.location_rewrite(schema_location)
             if ':' in real_schema_location:
                 schema_txt = urlopen(real_schema_location).read().decode()
             else:
@@ -67,6 +69,9 @@ class SchemaLoader:
         else:
             return generate_shexj.parse(schema_txt)
 
-    def _location_rewrite(self, schema_location: str) -> str:
-        return schema_location.replace(self.base_location, self.redirect_location) \
+    def location_rewrite(self, schema_location: str) -> str:
+        rval = schema_location.replace(self.base_location, self.redirect_location) \
             if self.base_location and schema_location.startswith(self.base_location) else schema_location
+        if self.schema_format:
+            rval = re.sub(r'\.[^.]+?(tern)?$',f'.{self.schema_format}\\1', rval)
+        return rval

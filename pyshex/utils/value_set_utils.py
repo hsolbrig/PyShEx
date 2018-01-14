@@ -1,4 +1,4 @@
-from typing import Union
+from typing import Union, Optional
 
 from ShExJSG import ShExJ
 from ShExJSG.ShExJ import IRIREF
@@ -32,5 +32,9 @@ def uriref_startswith_iriref(v1: URIRef, v2: Union[str, ShExJ.IRIREF]) -> bool:
 
 def literal_matches_objectliteral(v1: Literal, v2: ShExJ.ObjectLiteral) -> bool:
     """ Compare :py:class:`rdflib.Literal` with :py:class:`ShExJ.objectLiteral` """
-    v2_lit = Literal(v2.value, datatype=v2.type, lang=v2.language)
+    v2_lit = Literal(v2.value, datatype=iriref_to_uriref(v2.type), lang=str(v2.language) if v2.language else None)
     return v1 == v2_lit
+
+
+def iriref_to_uriref(v: Union[str, ShExJ.IRIREF]) -> Optional[URIRef]:
+    return URIRef(str(v)) if v else None
