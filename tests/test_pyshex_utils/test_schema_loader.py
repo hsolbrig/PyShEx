@@ -118,7 +118,7 @@ class SchemaLoaderTestCase(unittest.TestCase):
 
     def test_format_change(self):
         loc = "https://raw.githubusercontent.com/shexSpec/shexTest/2.0/schemas/startCode3"
-        loader = SchemaLoader(schema_format='json')
+        loader = SchemaLoader(schema_type_suffix='json')
         self.assertEqual(f"{loc}.json", loader.location_rewrite(f"{loc}.shex"))
         self.assertEqual(f"{loc}.jsontern", loader.location_rewrite(f"{loc}.shextern"))
         loader.schema_format = 'shex'

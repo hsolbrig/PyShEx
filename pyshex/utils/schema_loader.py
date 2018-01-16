@@ -35,10 +35,18 @@ from pyshexc.parser_impl import generate_shexj
 
 
 class SchemaLoader:
-    def __init__(self, base_location=None, redirect_location=None, schema_format=None) -> None:
+    def __init__(self, base_location=None, redirect_location=None, schema_type_suffix=None, base_uri=None) -> None:
+        """ ShEx Schema loader, with the ability to redirect URI's to local directories or other URL's
+
+        :param base_location: Location base supplied to `load` function
+        :param redirect_location: Location to replace base for actual load
+        :param schema_type_suffix: Replace schema file type suffix with this
+        :param base_uri: Base URI to add to the schema before parsing for relative URI's
+        """
         self.base_location = base_location
         self.redirect_location = redirect_location
-        self.schema_format=schema_format
+        self.schema_format=schema_type_suffix
+        self.base_uri = base_uri
 
     def load(self, schema_location: Union[str, TextIO]) -> ShExJ.Schema:
         """ Load a ShEx Schema from schema_location

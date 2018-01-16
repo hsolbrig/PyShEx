@@ -10,7 +10,7 @@ if sys.version_info < (3, 6):
 
 setup(
     name='PyShEx',
-    version='0.1.0',
+    version='0.1.2',
     packages=['scripts', 'pyshex', 'pyshex.shape_expressions_language', 'pyshex.shapemap_structure_and_language',
               'pyshex.sparql11_query', 'pyshex.utils'],
     url="http://github.com/hsolbrig/PyShEx",
@@ -26,5 +26,6 @@ setup(
         'Environment :: Console',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Compilers',
-        'Programming Language :: Python :: 3 :: Only']
+        'Programming Language :: Python :: 3 :: Only',
+        'Programming Language :: Python :: 3.6']
 )

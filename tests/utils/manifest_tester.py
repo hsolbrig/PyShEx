@@ -21,7 +21,7 @@ DEBUG = False
 TEST_SKIPS_ONLY = False                  # Double check that all skips need skipping
 
 # Local equivalent of online data files
-# LOCAL_FILE_LOC = "git/shexSpec/shexTest/"
+# LOCAL_FILE_LOC = (path to shexSpec git image)/git/shexSpec/shexTest/"
 LOCAL_FILE_LOC = ''
 
 # Do Not Change this - must match manifest
@@ -36,7 +36,7 @@ CRLF_ISSUE = "Code expects crlf and not parsed that way"
 NO_SHEXTERN = "No JSON representation of shapeExtern.shextern"
 USES_IMPORTS = "Uses IMPORTS and no facet saying as much"
 LONG_UCHAR = "Uses multi-byte literals"
-skip_traits = [SHT.Import, SHT.Include, SHT.relativeIRI, SHT.BNodeShapeLabel, SHT.ShapeMap, SHT.OutsideBMP,
+skip_traits = [SHT.Import, SHT.Include, SHT.BNodeShapeLabel, SHT.ShapeMap, SHT.OutsideBMP,
                SHT.ToldBNode, SHT.LexicalBNode]
 
 # NOTE: A lot of expected failures aren't included in this list, as, at the moment, we just fail and don't say why.
@@ -80,7 +80,7 @@ class ManifestEntryTestCase(unittest.TestCase):
         cls.nskipped = 0
         cls.nfailed = 0
         cls.start_skipped = 0
-        cls.skip_reasons: Dict[str, int] = {}     # int as an object -- list is one long
+        cls.skip_reasons: Dict[str, int] = {}
 
     @staticmethod
     def URIname(uri: URIRef) -> str:
@@ -88,7 +88,7 @@ class ManifestEntryTestCase(unittest.TestCase):
 
     def eval_entry(self, entry_name: str) -> bool:
         mes = self.mfst.entries[entry_name]
-        for me in mes:
+        for me in mes:                          # There can be more than one entry per name...
             # Determine the start point
             if not self.started:
                 if me.name != START_AFTER:
@@ -127,6 +127,8 @@ class ManifestEntryTestCase(unittest.TestCase):
                 return True
             if TEST_SKIPS_ONLY and not should_skip:
                 return True
+
+            # Validate the entry
             if VERBOSE:
                 shex_uri = self.mfst.schema_loader.location_rewrite(me.schema_uri)
                 data_uri = self.mfst.data_redirector.uri_for(me.data_uri) \
@@ -143,12 +145,14 @@ class ManifestEntryTestCase(unittest.TestCase):
                 print(f"\t TRAITS: ({','.join(me.traits)})")
                 self.nskipped += 1
                 return True
-            cntxt = Context(me.data_graph(), me.shex_schema(), me.extern_shape_for)
+            cntxt = Context(d, s, me.extern_shape_for)
             cntxt.debug_context.trace_nodeSatisfies = cntxt.debug_context.trace_satisfies = \
                 cntxt.debug_context.trace_matches = DEBUG
             map_ = FixedShapeMap()
             map_.add(ShapeAssociation(me.focus, ShExJ.IRIREF(me.shape)))
             test_result = isValid(cntxt, map_) or not me.should_pass
+
+            # Analyze the result
             if not VERBOSE and not test_result:
                 print(f"Failed {me.name} ({'P' if me.should_pass else 'F'}): {me.schema_uri} - {me.data_uri}")
                 print(f"\t TRAITS: ({','.join(me.traits)})")

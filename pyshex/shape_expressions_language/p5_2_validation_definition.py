@@ -20,5 +20,5 @@ def isValid(cntxt: Context, m: FixedShapeMap) -> bool:
     """
     return all(s is not None and satisfies(cntxt, n, s)
                for n, s in [(e.nodeSelector,
-                             cntxt.shapeExprFor(e.shapeLabel if e.shapeLabel is START or
-                                                                e.shapeLabel.val is not None else START)) for e in m])
+                             cntxt.shapeExprFor(e.shapeLabel if e.shapeLabel is START else
+                                                START if e.shapeLabel is None else str(e.shapeLabel))) for e in m])
