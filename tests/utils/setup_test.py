@@ -23,7 +23,7 @@ prefix foaf: <{FOAF}>
 """
 
 
-def setup_context(shex_str: str, rdf_str: Optional[str]):
+def setup_context(shex_str: str, rdf_str: Optional[str]) -> Context:
     schema, g = setup_test(shex_str, rdf_str)
     if g is None:
         g = Graph()

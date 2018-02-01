@@ -63,16 +63,18 @@ def predicates_in_expression(expression: ShExJ.shapeExpr, cntxt: Context) -> Lis
 
     :param expression: Expression to scan for predicates
     :param cntxt: Context of evaluation
-    "return: List of predicates
+    :return: List of predicates
     """
     predicates: List[IRIREF] = []
 
-    def predicate_finder(predicates: List[IRIREF], expr: ShExJ.shapeExpr, cntxt: Context) -> None:
-        if isinstance(expr, ShExJ.Shape) and expr.expression is not None:
-            if isinstance(expr.expression, ShExJ.TripleConstraint):
-                predicates.append(expr.expression.predicate)
-            elif isinstance_(expr.expression, ShExJ.tripleExprLabel):
-                predicates.append(cntxt.tripleExprFor(expr.expression).predicate)
+    def predicate_finder(predicates: List[IRIREF], tc: ShExJ.TripleConstraint, cntxt: Context) -> None:
+        if isinstance(tc, ShExJ.TripleConstraint):
+            predicates.append(tc.predicate)
 
-    cntxt.visit_shapes(expression, predicate_finder, predicates, follow_inner_shapes=False)
+    def triple_expr_finder(predicates: List[IRIREF], expr: ShExJ.shapeExpr, cntxt: Context) -> None:
+        if isinstance(expr, ShExJ.Shape) and expr.expression is not None:
+            cntxt.visit_triple_expressions(expr.expression, predicate_finder, predicates)
+
+    # TODO: follow_inner_shapes as True probably goes too far, but we definitely need to cross shape/triplecons
+    cntxt.visit_shapes(expression, triple_expr_finder, predicates, follow_inner_shapes=False)
     return predicates

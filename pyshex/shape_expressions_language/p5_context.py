@@ -166,7 +166,7 @@ class Context:
         """
         if visit_center is None:
             visit_center = _VisitorCenter(f, arg_cntxt)
-        has_id = 'id' in expr and expr.id is not None
+        has_id = getattr(expr, 'id', None) is not None
         if not has_id or not (visit_center.already_seen_shape(expr.id)
                               or visit_center.actively_visiting_shape(expr.id)):
 
@@ -200,7 +200,7 @@ class Context:
         if visit_center is None:
             visit_center = _VisitorCenter(f, arg_cntxt)
         has_id = 'id' in expr and expr.id is not None
-        if not has_id or visit_center.already_seen_te(expr.id):
+        if not has_id or not visit_center.already_seen_te(expr.id):
 
             # Visit the root expression
             if has_id:

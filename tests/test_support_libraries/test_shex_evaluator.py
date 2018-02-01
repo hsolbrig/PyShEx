@@ -1,0 +1,62 @@
+import os
+from rdflib import Graph
+
+from pyshex import ShExEvaluator, PrefixLibrary
+import unittest
+
+from pyshex.shapemap_structure_and_language.p3_shapemap_structure import START
+
+shex_schema = """
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX pr: <http://www.wikidata.org/prop/reference/>
+PREFIX prv: <http://www.wikidata.org/prop/reference/value/>
+PREFIX pv: <http://www.wikidata.org/prop/value/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX gw: <http://genewiki.shape/>
+
+
+start = @gw:cancer
+gw:cancer {
+  p:P1748 {
+    prov:wasDerivedFrom @<reference>
+  }+
+}
+
+<reference> {
+  pr:P248  IRI ;
+  pr:P813  xsd:dateTime ;
+  pr:P699  LITERAL
+}
+"""
+
+loc_prefixes = PrefixLibrary(None,
+                             wikidata="http://www.wikidata.org/entity/",
+                             gw="http://genewiki.shape/")
+
+
+class ShExEvaluatorTestCase(unittest.TestCase):
+    def test_empty_constructor(self):
+        evaluator = ShExEvaluator()
+        self.assertEqual("""@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .""", evaluator.rdf.strip())
+        self.assertIsNone(evaluator.schema)
+        self.assertIsNone(evaluator.focus)
+        self.assertEqual([], evaluator.foci)
+        self.assertEqual([START], evaluator.start)
+        self.assertEqual("turtle", evaluator.rdf_format)
+        self.assertTrue(isinstance(evaluator.g, Graph))
+
+    def test_complete_constructor(self):
+        test_rdf = os.path.join(os.path.split(os.path.abspath(__file__))[0], '..', 'test_issues', 'data', 'Q18557122.ttl')
+        evaluator = ShExEvaluator(test_rdf, shex_schema, loc_prefixes.WIKIDATA, 
+                                  [loc_prefixes.GW.cancer, loc_prefixes.WIKIDATA.cancer])
+        from pprint import PrettyPrinter; pp = PrettyPrinter().pprint
+        pp(evaluator.evaluate())
+        
+
+if __name__ == '__main__':
+    unittest.main()

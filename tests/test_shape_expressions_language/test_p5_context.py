@@ -3,6 +3,7 @@ import json
 from typing import List
 
 from ShExJSG import ShExJ
+from ShExJSG.ShExJ import IRIREF
 from rdflib import URIRef, RDF
 
 from pyshex.shape_expressions_language.p5_context import Context
@@ -33,13 +34,15 @@ rdf_1 = gen_rdf(""" <Alice> ex:shoeSize "30"^^xsd:integer .
 <TheMoon> ex:madeOf <GreenCheese> .""")
 
 
-def predicate_finder(predicates: List[URIRef], expr: ShExJ.shapeExpr, cntxt: Context) -> None:
+def predicate_finder(predicates: List[URIRef], tc: ShExJ.TripleConstraint, cntxt: Context) -> None:
+    if isinstance(tc, ShExJ.TripleConstraint):
+        predicates.append(URIRef(tc.predicate))
+
+
+def triple_expr_finder(predicates: List[URIRef], expr: ShExJ.shapeExpr, cntxt: Context) -> None:
     if isinstance(expr, ShExJ.Shape) and expr.expression is not None:
-        if isinstance(expr.expression, ShExJ.TripleConstraint):
-            predicates.append(URIRef(expr.expression.predicate))
-        elif isinstance(expr.expression, ShExJ.tripleExprLabel):
-            predicates.append(URIRef(cntxt.tripleExprFor(expr.expression).predicate))
-        
+        cntxt.visit_triple_expressions(expr.expression, predicate_finder, predicates)
+
 
 class ContextTestCase(unittest.TestCase):
     def test_basic_context(self):
@@ -52,10 +55,10 @@ class ContextTestCase(unittest.TestCase):
     def test_predicate_scan(self):
         c = setup_context(shex_1, rdf_1)
         predicates: List[URIRef] = []
-        c.visit_shapes(c.shapeExprFor('http://schema.example/UserShape'), predicate_finder, predicates)
+        c.visit_shapes(c.shapeExprFor(IRIREF('http://schema.example/UserShape')), triple_expr_finder, predicates)
         self.assertEqual([RDF.type], predicates)
         # Quick test of the utility function
-        self.assertEqual(predicates_in_expression(c.shapeExprFor('http://schema.example/UserShape'), c),
+        self.assertEqual(predicates_in_expression(c.shapeExprFor(IRIREF('http://schema.example/UserShape')), c),
                          [ShExJ.IRIREF(str(u)) for u in predicates])
 
 

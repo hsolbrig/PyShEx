@@ -1,11 +1,12 @@
 import unittest
 import os
 
+import sys
 from ShExJSG import ShExJ
 from pyjsg.jsglib import jsg
 from rdflib import URIRef, Namespace, Graph
 
-from tests.utils.manifest import ShExManifest
+from tests.utils.manifest import ShExManifest, manifest_ttl, manifest_json, validation_dir, schemas_dir
 
 SHEX = Namespace("http://www.w3.org/ns/shex#")
 MF = Namespace("http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#")
@@ -43,15 +44,18 @@ entries_list = {
             'PstarT'}
 
 
+# TODO: Remove this once the rdflib list recursion issue is resolved
+sys.setrecursionlimit(1200)
+
+
 class ManifestTestCase(unittest.TestCase):
-    data_dir = os.path.join(os.path.split(os.path.abspath(__file__))[0], 'data')
 
     def test_basics_ttl(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), 'turtle')
+        mfst = ShExManifest(manifest_ttl, 'turtle')
         self.assertEqual(entries_list, set(mfst.entries.keys()).intersection(entries_list))
 
     def test_basics_jsonld(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.jsonld'))
+        mfst = ShExManifest(manifest_json)
         self.assertEqual(entries_list, set(mfst.entries.keys()).intersection(entries_list))
 
     def attributes_tester(self, mfst: ShExManifest) -> None:
@@ -84,42 +88,41 @@ class ManifestTestCase(unittest.TestCase):
         self.assertEqual(me.comments, "<S> { ^<p1> . } on {  }")
 
     def test_attributes_ttl(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), manifest_format="turtle")
+        mfst = ShExManifest(manifest_ttl, manifest_format="turtle")
         self.attributes_tester(mfst)
 
     @unittest.skipIf(True, "Issue report #27 filed in shexTest")
     def test_attributes_jsonld(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.jsonld'))
+        mfst = ShExManifest(manifest_json)
         self.attributes_tester(mfst)
 
     def test_shex(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), "turtle")
+        mfst = ShExManifest(manifest_ttl, "turtle")
         me = mfst.entries['1Adot_pass'][0]
         self.assertEqual(URIRef('https://raw.githubusercontent.com/shexSpec/shexTest/master/schemas/1Adot.shex'),
                          me.schema_uri)
-        with open(os.path.join(self.data_dir, '1Adot.json')) as shex_file:
+        with open(os.path.join(schemas_dir, '1Adot.json')) as shex_file:
             target_shex_file = jsg.load(shex_file, ShExJ)
             del target_shex_file['@context']
             self.assertEqual(target_shex_file._as_json, mfst.entries['1Adot_pass'][0].shex_schema()._as_json)
 
     def test_data(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), 'turtle')
+        mfst = ShExManifest(manifest_ttl, 'turtle')
         me = mfst.entries['PstarT'][0]
         g = Graph()
-        g.parse(os.path.join(self.data_dir, 'Pstar.ttl'), format="turtle")
+        g.parse(os.path.join(validation_dir, 'Pstar.ttl'), format="turtle")
         self.assertEqual(set(g), set(me.data_graph(fmt="turtle")))
 
-    @unittest.skipIf(True, "Won't work until rdflib issue is merged")
     def test_full_ttl(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), 'turtle')
+        mfst = ShExManifest(manifest_ttl, 'turtle')
         self.assertEqual(entries_list, entries_list.intersection(mfst.entries))
 
     def test_full_json(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.jsonld'))
+        mfst = ShExManifest(manifest_json)
         self.assertEqual(entries_list, entries_list.intersection(mfst.entries))
 
     def test_externs(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), 'turtle')
+        mfst = ShExManifest(manifest_ttl, 'turtle')
         me = mfst.entries['shapeExtern_pass'][0]
         self.assertEqual(
             [URIRef('https://raw.githubusercontent.com/shexSpec/shexTest/master/schemas/shapeExtern.shextern')],
@@ -127,9 +130,8 @@ class ManifestTestCase(unittest.TestCase):
         me = mfst.entries['1Adot_pass'][0]
         self.assertEqual([], me.externs)
 
-    @unittest.skipIf(True, "Externs won't work until we get json for the external schema")
     def test_extern_str(self):
-        mfst = ShExManifest(os.path.join(self.data_dir, 'manifest.ttl'), 'turtle')
+        mfst = ShExManifest(manifest_ttl, 'turtle')
         me = mfst.entries['shapeExtern_pass'][0]
         self.assertIsNotNone(me.extern_shape_for(ShExJ.IRIREF("http://a.example/Sext")))
 

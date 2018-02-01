@@ -4,7 +4,6 @@ from typing import List, Optional, Union
 
 from ShExJSG import ShExJ
 from pyjsg.jsglib.jsg import isinstance_
-from rdflib import URIRef
 
 from pyshex.shape_expressions_language.p3_terminology import neigh, arcsOut
 from pyshex.shape_expressions_language.p5_7_semantic_actions import semActsSatisfied
@@ -38,10 +37,24 @@ def satisfiesShape(cntxt: Context, n: nodeSelector, S: ShExJ.Shape) -> bool:
     # Recursion detection.  If start_evaluating returns a boolean value, this is the assumed result of the shape
     # evaluation.  If it doesn't, evaluation is needed
     rslt = cntxt.start_evaluating(n, S)
+    predicates = predicates_in_expression(S, cntxt)
+    matchables = RDFGraph([t for t in neighborhood if str(t.p) in predicates])
+    non_matchables = RDFGraph([t for t in neighborhood if str(t.p) not in predicates])
+    if S.closed.val and len(non_matchables):
+        return False
+
+    if cntxt.debug_context.trace_satisfies:
+        sep = '\n\t            '
+        print("\n**** satisfiesShape -->")
+        print(f"\tsubject: {n}")
+        print(f"\tpredicates: {sep.join(str(p) for p in predicates)}")
+        print(f"\tmatchables: {sep.join(str(m) for m in matchables)}")
+        print()
+
     if rslt is None:
         # Evaluate the actual expression
         if S.expression:
-            for matched, remainder in partition_2(neighborhood):
+            for matched, remainder in partition_2(matchables):
                 if matches(cntxt, matched, S.expression) and valid_remainder(cntxt, n, remainder, S):
                     rslt = True
                     break
@@ -56,7 +69,7 @@ def satisfiesShape(cntxt: Context, n: nodeSelector, S: ShExJ.Shape) -> bool:
 
 
 @remainder_wrapper
-def valid_remainder(cntxt: Context, n: nodeSelector, remainder: RDFGraph, S: ShExJ.Shape) -> bool:
+def valid_remainder(cntxt: Context, n: nodeSelector, matchables: RDFGraph, S: ShExJ.Shape) -> bool:
     """
     Let **outs** be the arcsOut in remainder: `outs = remainder ∩ arcsOut(G, n)`.
 
@@ -71,12 +84,13 @@ def valid_remainder(cntxt: Context, n: nodeSelector, remainder: RDFGraph, S: ShE
 
     :param cntxt: evaluation context
     :param n: focus node
-    :param remainder: non-matched triples
+    :param matchables: non-matched triples
     :param S: Shape being evaluated
     :return: True if remainder is valid
     """
+    # TODO: Update this and satisfies to address the new algorithm
     # Let **outs** be the arcsOut in remainder: `outs = remainder ∩ arcsOut(G, n)`.
-    outs = arcsOut(cntxt.graph, n).intersection(remainder)
+    outs = arcsOut(cntxt.graph, n).intersection(matchables)
 
     # predicates that in a TripleConstraint in `expression`
     predicates = predicates_in_expression(S, cntxt)
@@ -134,11 +148,12 @@ def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr
     T can be partitioned into k subsets T1, T2,…Tk such that min ≤ k ≤ max and for each Tn,
     matches(Tn, expr, m) by the remaining rules in this list.
     """
-    # Set the cardinatlity defaults
+    # TODO: Cardinality defaults into spec
+    # Set the cardinality defaults
     min_ = expr.min.val if expr.min.val is not None else 1
-    max_ = expr.max.val if expr.max.val is not None else -1
+    max_ = expr.max.val if expr.max.val is not None else 1
 
-    if len(T) < (min_):
+    if len(T) < min_:
         return False
     for partition in _partitions(T, min_, max_):
         if all(matchesExpr(cntxt, entry, expr) for entry in partition):

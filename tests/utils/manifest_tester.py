@@ -3,62 +3,65 @@ import unittest
 import os
 from typing import Dict
 
+import sys
 from ShExJSG import ShExJ
 from rdflib import URIRef
 
 from pyshex.shape_expressions_language.p5_2_validation_definition import isValid
 from pyshex.shape_expressions_language.p5_context import Context
-from pyshex.shapemap_structure_and_language.p3_shapemap_structure import ShapeAssociation, FixedShapeMap
-from tests.utils.manifest import ShExManifest, SHT
+from pyshex.shapemap_structure_and_language.p3_shapemap_structure import ShapeAssociation, FixedShapeMap, START
+from tests.utils.manifest import ShExManifest, SHT, validation_dir
 from tests.utils.uri_redirector import URIRedirector
 
-ENTRY_NAME = ''             # Individual element to test
-START_AFTER = ''            # Element to start at (or after)
+# TODO: Remove this whenever rdflib issue #124 is fixed (https://github.com/RDFLib/rdflib/issues/804)
+sys.setrecursionlimit(1200)
 
-CONTINUE_ON_FAIL = False
+ENTRY_NAME = '1dotOne2dot_pass_p1'              # Individual element to test
+START_AFTER = ''                    # Element to start at (or after)
+
+CONTINUE_ON_FAIL = True
 VERBOSE = True
-DEBUG = False
+DEBUG = bool(ENTRY_NAME)
 TEST_SKIPS_ONLY = False                  # Double check that all skips need skipping
 
 # Local equivalent of online data files
-# LOCAL_FILE_LOC = (path to shexSpec git image)/git/shexSpec/shexTest/"
-LOCAL_FILE_LOC = ''
+# TODO: Remove this
+LOCAL_FILE_LOC = os.path.expanduser("~/Development/git/shexSpec/shexTest/")
+# LOCAL_FILE_LOC = ''
 
 # Do Not Change this - must match manifest
 REMOTE_FILE_LOC = "https://raw.githubusercontent.com/shexSpec/shexTest/master/"
 
 # Reasons for skipping things
 BNODE_ISSUE = "Blank Nodes are not preserved in RDF"
-RDFLIB_DOUBLE = "0E0 is not a valid RDF double value"
-RDFLIB_QUOTE = "rdflib not parsing single quote escapes correctly"
 AWAIT_FANCY_STUFF = "Too crazy for the first pass"
 CRLF_ISSUE = "Code expects crlf and not parsed that way"
-NO_SHEXTERN = "No JSON representation of shapeExtern.shextern"
 USES_IMPORTS = "Uses IMPORTS and no facet saying as much"
 LONG_UCHAR = "Uses multi-byte literals"
+RDFLIB_ISSUE = "RDFLIB single quote parsing error"
+FALSE_LEAD_ISSUE = "Unknown issue with false lead"
+
 skip_traits = [SHT.Import, SHT.Include, SHT.BNodeShapeLabel, SHT.ShapeMap, SHT.OutsideBMP,
                SHT.ToldBNode, SHT.LexicalBNode]
+
+# We can't do an effective test on relative files when we're rewriting URI's
+if LOCAL_FILE_LOC:
+    skip_traits.append(SHT.relativeIRI)
 
 # NOTE: A lot of expected failures aren't included in this list, as, at the moment, we just fail and don't say why.
 # skipped test fails json only
 expected_failures = {
-     "1val1STRING_LITERAL1_with_all_punctuation_pass": RDFLIB_QUOTE,
-     "1val1STRING_LITERAL1_with_all_controls_fail": RDFLIB_QUOTE,
-     "1val1STRING_LITERAL1_with_all_punctuation_fail": RDFLIB_QUOTE,
-     "1val1DOUBLE_pass": RDFLIB_DOUBLE,
-     "1val1DOUBLElowercase_pass": RDFLIB_DOUBLE,
-     "1literalPattern_with_all_punctuation_pass": RDFLIB_QUOTE,
-     "1literalPattern_with_all_punctuation_fail": RDFLIB_QUOTE,
      "1literalPattern_with_ascii_boundaries_pass": AWAIT_FANCY_STUFF,
      "1literalPattern_with_ascii_boundaries_fail": AWAIT_FANCY_STUFF,
-     "repeated-group": "Needs smarter partition processor",
-     "skipped": "Extra 'id' field in schema",
      "1valExprRef-IV1_fail-lit-short": USES_IMPORTS,
      "1valExprRef-IV1_pass-lit-equal": USES_IMPORTS,
      "1valExprRefbnode-IV1_fail-lit-short": USES_IMPORTS,
      "1valExprRefbnode-IV1_pass-lit-equal": USES_IMPORTS,
      "1val1STRING_LITERAL1_with_ECHAR_escapes_fail": LONG_UCHAR,
      "1val1STRING_LITERAL1_with_ECHAR_escapes_pass": LONG_UCHAR,
+     "1val1STRING_LITERAL1_with_all_punctuation_fail": RDFLIB_ISSUE,
+     "1val1STRING_LITERAL1_with_all_punctuation_pass": RDFLIB_ISSUE,
+     "false-lead-excluding-value-shape": FALSE_LEAD_ISSUE
 }
 
 
@@ -66,11 +69,10 @@ class ManifestEntryTestCase(unittest.TestCase):
     """
     Base class for manifest tests
     """
-    data_dir = os.path.join(os.path.split(os.path.abspath(__file__))[0], '..', 'test_utils', 'data')
 
     @classmethod
     def setUpClass(cls):
-        cls.mfst = ShExManifest(os.path.join(cls.data_dir, 'manifest.ttl'), manifest_format="turtle")
+        cls.mfst = ShExManifest(os.path.join(validation_dir, 'manifest.ttl'), manifest_format="turtle")
         if LOCAL_FILE_LOC:
             cls.mfst.schema_loader.base_location = REMOTE_FILE_LOC
             cls.mfst.schema_loader.redirect_location = LOCAL_FILE_LOC
@@ -134,8 +136,8 @@ class ManifestEntryTestCase(unittest.TestCase):
                 data_uri = self.mfst.data_redirector.uri_for(me.data_uri) \
                     if self.mfst.data_redirector else me.data_uri
                 print(f"Testing {me.name} ({'P' if me.should_pass else 'F'}): {shex_uri} - {data_uri}")
-            d, s = me.data_graph(), me.shex_schema()
-            if d is None and me.data_uri:
+            g, s = me.data_graph(), me.shex_schema()
+            if g is None and me.data_uri:
                 print("\t ERROR: Unable to load data file")
                 print(f"\t TRAITS: ({','.join(me.traits)})")
                 self.nskipped += 1
@@ -145,11 +147,11 @@ class ManifestEntryTestCase(unittest.TestCase):
                 print(f"\t TRAITS: ({','.join(me.traits)})")
                 self.nskipped += 1
                 return True
-            cntxt = Context(d, s, me.extern_shape_for)
+            cntxt = Context(g, s, me.extern_shape_for)
             cntxt.debug_context.trace_nodeSatisfies = cntxt.debug_context.trace_satisfies = \
                 cntxt.debug_context.trace_matches = DEBUG
             map_ = FixedShapeMap()
-            map_.add(ShapeAssociation(me.focus, ShExJ.IRIREF(me.shape)))
+            map_.add(ShapeAssociation(me.focus, ShExJ.IRIREF(me.shape) if me.shape else START))
             test_result = isValid(cntxt, map_) or not me.should_pass
 
             # Analyze the result

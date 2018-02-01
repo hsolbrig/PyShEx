@@ -1,0 +1,3185 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix wikibase: <http://wikiba.se/ontology-beta#> .
+@prefix wds: <http://www.wikidata.org/entity/statement/> .
+@prefix wdata: <https://www.wikidata.org/wiki/Special:EntityData/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <http://schema.org/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix wdv: <http://www.wikidata.org/value/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wdtn: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix psv: <http://www.wikidata.org/prop/statement/value/> .
+@prefix psn: <http://www.wikidata.org/prop/statement/value-normalized/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pqv: <http://www.wikidata.org/prop/qualifier/value/> .
+@prefix pqn: <http://www.wikidata.org/prop/qualifier/value-normalized/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix prn: <http://www.wikidata.org/prop/reference/value-normalized/> .
+@prefix wdno: <http://www.wikidata.org/prop/novalue/> .
+
+wdata:Q18557112 a schema:Dataset ;
+	schema:about wd:Q18557112 ;
+	cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+	schema:softwareVersion "0.1.0" ;
+	schema:version "604468388"^^xsd:integer ;
+	schema:dateModified "2017-12-05T23:18:45Z"^^xsd:dateTime ;
+	wikibase:statements "8"^^xsd:integer ;
+	wikibase:identifiers "2"^^xsd:integer ;
+	wikibase:sitelinks "0"^^xsd:integer .
+
+wd:Q18557112 a wikibase:Item ;
+	rdfs:label "heart fibrosarcoma"@en ;
+	skos:prefLabel "heart fibrosarcoma"@en ;
+	schema:name "heart fibrosarcoma"@en ;
+	schema:description "Human disease"@en,
+		"Krankheit"@de,
+		"مرض يصيب الإنسان"@ar ;
+	skos:altLabel "Fibrosarcoma of the Heart"@en,
+		"cardiac fibrosarcoma"@en ;
+	wdt:P699 "DOID:6033" ;
+	wdt:P279 wd:Q18556700,
+		wd:Q1362453 ;
+	wdt:P1748 "C5361" ;
+	wdt:P2888 <http://purl.obolibrary.org/obo/DOID_6033>,
+		<http://identifiers.org/doid/DOID:6033> ;
+	wdt:P31 wd:Q12136 ;
+	wdt:P2892 "C1332844" ;
+	p:P699 wds:Q18557112-D371AB2F-912A-4B66-9AA5-45C1C6FA1C41 .
+
+wds:Q18557112-D371AB2F-912A-4B66-9AA5-45C1C6FA1C41 a wikibase:Statement,
+		wikibase:BestRank ;
+	wikibase:rank wikibase:NormalRank ;
+	ps:P699 "DOID:6033" ;
+	prov:wasDerivedFrom wdref:4a32ed5a1e12468412bd2718851ea2b5f0f10561 .
+
+wd:Q18557112 p:P279 wds:Q18557112-57736765-32CE-4E0F-B812-AB8ACC608AE6 .
+
+wds:Q18557112-57736765-32CE-4E0F-B812-AB8ACC608AE6 a wikibase:Statement,
+		wikibase:BestRank ;
+	wikibase:rank wikibase:NormalRank ;
+	ps:P279 wd:Q18556700 ;
+	prov:wasDerivedFrom wdref:4a32ed5a1e12468412bd2718851ea2b5f0f10561 .
+
+wd:Q18557112 p:P279 wds:Q18557112-95859E1B-5327-487B-961F-EB938D1631C0 .
+
+wds:Q18557112-95859E1B-5327-487B-961F-EB938D1631C0 a wikibase:Statement,
+		wikibase:BestRank ;
+	wikibase:rank wikibase:NormalRank ;
+	ps:P279 wd:Q1362453 ;
+	prov:wasDerivedFrom wdref:e9648df64cbc06b78c637befc4c074781454f9a6 .
+
+wd:Q18557112 p:P1748 wds:Q18557112-24748E1D-FEDF-4398-ABFC-F2F3E783CBB3 .
+
+wds:Q18557112-24748E1D-FEDF-4398-ABFC-F2F3E783CBB3 a wikibase:Statement,
+		wikibase:BestRank ;
+	wikibase:rank wikibase:NormalRank ;
+	ps:P1748 "C5361" ;
+	prov:wasDerivedFrom wdref:4a32ed5a1e12468412bd2718851ea2b5f0f10561 .
+
+wd:Q18557112 p:P2888 wds:Q18557112-7C112117-F185-4C8A-9057-05289632CC6E .
+
+wds:Q18557112-7C112117-F185-4C8A-9057-05289632CC6E a wikibase:Statement,
+		wikibase:BestRank ;
+	wikibase:rank wikibase:NormalRank ;
+	ps:P2888 <http://purl.obolibrary.org/obo/DOID_6033> ;
+	prov:wasDerivedFrom wdref:4a32ed5a1e12468412bd2718851ea2b5f0f10561 .
+
+wd:Q18557112 p:P2888 wds:Q18557112-802FFA91-C3DD-4C30-8521-2D4FE65496CB .
+
+wds:Q18557112-802FFA91-C3DD-4C30-8521-2D4FE65496CB a wikibase:Statement,
+		wikibase:BestRank ;
+	wikibase:rank wikibase:NormalRank ;
+	ps:P2888 <http://identifiers.org/doid/DOID:6033> ;
+	prov:wasDerivedFrom wdref:60bb74f27bdb5e4d44a6b7008bfc67e8de886334 .
+
+wd:Q18557112 p:P31 wds:Q18557112-160E2F16-9395-4EBC-8429-DEE4F2CCE98E .
+
+wds:Q18557112-160E2F16-9395-4EBC-8429-DEE4F2CCE98E a wikibase:Statement,
+		wikibase:BestRank ;
+	wikibase:rank wikibase:NormalRank ;
+	ps:P31 wd:Q12136 ;
+	prov:wasDerivedFrom wdref:4a32ed5a1e12468412bd2718851ea2b5f0f10561 .
+
+wd:Q18557112 p:P2892 wds:Q18557112-1150E508-D38E-4636-9C81-107D07AEBB36 .
+
+wds:Q18557112-1150E508-D38E-4636-9C81-107D07AEBB36 a wikibase:Statement,
+		wikibase:BestRank ;
+	wikibase:rank wikibase:NormalRank ;
+	ps:P2892 "C1332844" ;
+	prov:wasDerivedFrom wdref:4a32ed5a1e12468412bd2718851ea2b5f0f10561 .
+
+wd:P699 a wikibase:Property ;
+	rdfs:label "Disease Ontology ID"@en ;
+	skos:prefLabel "Disease Ontology ID"@en ;
+	schema:name "Disease Ontology ID"@en ;
+	rdfs:label "identificador Disease Ontology"@ca ;
+	skos:prefLabel "identificador Disease Ontology"@ca ;
+	schema:name "identificador Disease Ontology"@ca ;
+	rdfs:label "Disease Ontology-identificatiecode"@nl ;
+	skos:prefLabel "Disease Ontology-identificatiecode"@nl ;
+	schema:name "Disease Ontology-identificatiecode"@nl ;
+	rdfs:label "Disease-Ontology-ID"@de ;
+	skos:prefLabel "Disease-Ontology-ID"@de ;
+	schema:name "Disease-Ontology-ID"@de ;
+	rdfs:label "identyfikator Disease Ontology"@pl ;
+	skos:prefLabel "identyfikator Disease Ontology"@pl ;
+	schema:name "identyfikator Disease Ontology"@pl ;
+	rdfs:label "identificant Disease Ontology"@oc ;
+	skos:prefLabel "identificant Disease Ontology"@oc ;
+	schema:name "identificant Disease Ontology"@oc ;
+	rdfs:label "identificador Ontología de enfermedades"@es ;
+	skos:prefLabel "identificador Ontología de enfermedades"@es ;
+	schema:name "identificador Ontología de enfermedades"@es ;
+	rdfs:label "identificador Disease Ontology"@pt ;
+	skos:prefLabel "identificador Disease Ontology"@pt ;
+	schema:name "identificador Disease Ontology"@pt ;
+	rdfs:label "identifiant de Disease Ontology"@fr ;
+	skos:prefLabel "identifiant de Disease Ontology"@fr ;
+	schema:name "identifiant de Disease Ontology"@fr ;
+	rdfs:label "код Disease Ontology"@ru ;
+	skos:prefLabel "код Disease Ontology"@ru ;
+	schema:name "код Disease Ontology"@ru ;
+	rdfs:label "شناسۀ جوهره‌شناسی بیماری‌ها"@fa ;
+	skos:prefLabel "شناسۀ جوهره‌شناسی بیماری‌ها"@fa ;
+	schema:name "شناسۀ جوهره‌شناسی بیماری‌ها"@fa ;
+	rdfs:label "Disease Ontology-azonosító"@hu ;
+	skos:prefLabel "Disease Ontology-azonosító"@hu ;
+	schema:name "Disease Ontology-azonosító"@hu ;
+	rdfs:label "রোগের অন্টোলজি আইডি"@bn ;
+	skos:prefLabel "রোগের অন্টোলজি আইডি"@bn ;
+	schema:name "রোগের অন্টোলজি আইডি"@bn ;
+	rdfs:label "kód Disease Ontology"@cs ;
+	skos:prefLabel "kód Disease Ontology"@cs ;
+	schema:name "kód Disease Ontology"@cs ;
+	rdfs:label "ознака по Disease Ontology"@mk ;
+	skos:prefLabel "ознака по Disease Ontology"@mk ;
+	schema:name "ознака по Disease Ontology"@mk ;
+	rdfs:label "Disease Ontology ID"@sco ;
+	skos:prefLabel "Disease Ontology ID"@sco ;
+	schema:name "Disease Ontology ID"@sco ;
+	rdfs:label "còdici idintificativu Disease Ontology"@scn ;
+	skos:prefLabel "còdici idintificativu Disease Ontology"@scn ;
+	schema:name "còdici idintificativu Disease Ontology"@scn ;
+	rdfs:label "Disease Ontology"@sr ;
+	skos:prefLabel "Disease Ontology"@sr ;
+	schema:name "Disease Ontology"@sr ;
+	rdfs:label "Disease Ontology ID"@hr ;
+	skos:prefLabel "Disease Ontology ID"@hr ;
+	schema:name "Disease Ontology ID"@hr ;
+	rdfs:label "identificativo Disease Ontology"@it ;
+	skos:prefLabel "identificativo Disease Ontology"@it ;
+	schema:name "identificativo Disease Ontology"@it ;
+	rdfs:label "Disease Ontology-ID"@da ;
+	skos:prefLabel "Disease Ontology-ID"@da ;
+	schema:name "Disease Ontology-ID"@da ;
+	rdfs:label "Disease Ontology ID"@ja ;
+	skos:prefLabel "Disease Ontology ID"@ja ;
+	schema:name "Disease Ontology ID"@ja ;
+	rdfs:label "identigilo de Disease Ontology"@eo ;
+	skos:prefLabel "identigilo de Disease Ontology"@eo ;
+	schema:name "identigilo de Disease Ontology"@eo ;
+	rdfs:label "ідэнтыфікатар Disease Ontology"@be-tarask ;
+	skos:prefLabel "ідэнтыфікатар Disease Ontology"@be-tarask ;
+	schema:name "ідэнтыфікатар Disease Ontology"@be-tarask ;
+	rdfs:label "Disease Ontology -tunniste"@fi ;
+	skos:prefLabel "Disease Ontology -tunniste"@fi ;
+	schema:name "Disease Ontology -tunniste"@fi ;
+	rdfs:label "Disease Ontology-ID"@nn ;
+	skos:prefLabel "Disease Ontology-ID"@nn ;
+	schema:name "Disease Ontology-ID"@nn ;
+	rdfs:label "معرف أنطولوجية المرض"@ar ;
+	skos:prefLabel "معرف أنطولوجية المرض"@ar ;
+	schema:name "معرف أنطولوجية المرض"@ar ;
+	rdfs:label "ідентифікатор Disease Ontology"@uk ;
+	skos:prefLabel "ідентифікатор Disease Ontology"@uk ;
+	schema:name "ідентифікатор Disease Ontology"@uk ;
+	schema:description "identifier in the Disease Ontology database"@en,
+		"identificador en la base de datos Disease Ontology"@es,
+		"Kennung in der Disease-Ontology-Datenbank"@de,
+		"ID dans la base de données de DiseaseOntology.org"@fr,
+		"còdici idintificativu di na malatìa ntâ basi di dati dû situ DiseaseOntology.org"@scn,
+		"identifikator za bazu podataka Disease Ontology"@hr,
+		"identificatore del database Disease Ontology"@it,
+		"identifikator for emner i Disease Ontology"@da,
+		"Disease OntologyデータベースのID"@ja,
+		"ідэнтыфікатар у базе зьвестак Disease Ontology"@be-tarask,
+		"ідентифікатор у базі даних хвороб Disease Ontology"@uk ;
+	a wikibase:Property ;
+	wikibase:propertyType <http://wikiba.se/ontology-beta#ExternalId> ;
+	wikibase:directClaim wdt:P699 ;
+	wikibase:claim p:P699 ;
+	wikibase:statementProperty ps:P699 ;
+	wikibase:statementValue psv:P699 ;
+	wikibase:qualifier pq:P699 ;
+	wikibase:qualifierValue pqv:P699 ;
+	wikibase:reference pr:P699 ;
+	wikibase:referenceValue prv:P699 ;
+	wikibase:novalue wdno:P699 ;
+	wikibase:directClaimNormalized wdtn:P699 ;
+	wikibase:statementValueNormalized psn:P699 ;
+	wikibase:qualifierValueNormalized pqn:P699 ;
+	wikibase:referenceValueNormalized prn:P699 .
+
+p:P699 a owl:ObjectProperty .
+
+psv:P699 a owl:ObjectProperty .
+
+pqv:P699 a owl:ObjectProperty .
+
+prv:P699 a owl:ObjectProperty .
+
+wdt:P699 a owl:DatatypeProperty .
+
+ps:P699 a owl:DatatypeProperty .
+
+pq:P699 a owl:DatatypeProperty .
+
+pr:P699 a owl:DatatypeProperty .
+
+psn:P699 a owl:ObjectProperty .
+
+pqn:P699 a owl:ObjectProperty .
+
+prn:P699 a owl:ObjectProperty .
+
+wdtn:P699 a owl:ObjectProperty .
+
+wdno:P699 a owl:Class ;
+	owl:complementOf _:genid1 .
+
+_:genid1 a owl:Restriction ;
+	owl:onProperty wdt:P699 ;
+	owl:someValuesFrom owl:Thing .
+
+wd:Q18556700 a wikibase:Item ;
+	rdfs:label "heart sarcoma"@en ;
+	skos:prefLabel "heart sarcoma"@en ;
+	schema:name "heart sarcoma"@en ;
+	rdfs:label "kora sarkomo"@eo ;
+	skos:prefLabel "kora sarkomo"@eo ;
+	schema:name "kora sarkomo"@eo ;
+	schema:description "sarcoma and malignant neoplasm of heart that is located in the heart"@en,
+		"Krankheit"@de .
+
+wd:P279 a wikibase:Property ;
+	rdfs:label "subclass of"@en ;
+	skos:prefLabel "subclass of"@en ;
+	schema:name "subclass of"@en ;
+	rdfs:label "subclasse de"@ca ;
+	skos:prefLabel "subclasse de"@ca ;
+	schema:name "subclasse de"@ca ;
+	rdfs:label "다음의 하위 개념임"@ko ;
+	skos:prefLabel "다음의 하위 개념임"@ko ;
+	schema:name "다음의 하위 개념임"@ko ;
+	rdfs:label "subklasse van"@nl ;
+	skos:prefLabel "subklasse van"@nl ;
+	schema:name "subklasse van"@nl ;
+	rdfs:label "генерализација"@sr ;
+	skos:prefLabel "генерализација"@sr ;
+	schema:name "генерализација"@sr ;
+	rdfs:label "Unterklasse von"@de ;
+	skos:prefLabel "Unterklasse von"@de ;
+	schema:name "Unterklasse von"@de ;
+	rdfs:label "подкласс от"@ru ;
+	skos:prefLabel "подкласс от"@ru ;
+	schema:name "подкласс от"@ru ;
+	rdfs:label "'n soort"@af ;
+	skos:prefLabel "'n soort"@af ;
+	schema:name "'n soort"@af ;
+	rdfs:label "subclase de"@es ;
+	skos:prefLabel "subclase de"@es ;
+	schema:name "subclase de"@es ;
+	rdfs:label "上位クラス"@ja ;
+	skos:prefLabel "上位クラス"@ja ;
+	schema:name "上位クラス"@ja ;
+	rdfs:label "є підкласом класу"@uk ;
+	skos:prefLabel "є підкласом класу"@uk ;
+	schema:name "є підкласом класу"@uk ;
+	rdfs:label "sottoclasse di"@it ;
+	skos:prefLabel "sottoclasse di"@it ;
+	schema:name "sottoclasse di"@it ;
+	rdfs:label "абагульняецца"@be ;
+	skos:prefLabel "абагульняецца"@be ;
+	schema:name "абагульняецца"@be ;
+	rdfs:label "sous-classe de"@fr ;
+	skos:prefLabel "sous-classe de"@fr ;
+	schema:name "sous-classe de"@fr ;
+	rdfs:label "subclasse de"@pt ;
+	skos:prefLabel "subclasse de"@pt ;
+	schema:name "subclasse de"@pt ;
+	rdfs:label "زیرردۀ"@fa ;
+	skos:prefLabel "زیرردۀ"@fa ;
+	schema:name "زیرردۀ"@fa ;
+	rdfs:label "je podklasa od"@hr ;
+	skos:prefLabel "je podklasa od"@hr ;
+	schema:name "je podklasa od"@hr ;
+	rdfs:label "undergrupp till"@sv ;
+	skos:prefLabel "undergrupp till"@sv ;
+	schema:name "undergrupp till"@sv ;
+	rdfs:label "subclase de"@gl ;
+	skos:prefLabel "subclase de"@gl ;
+	schema:name "subclase de"@gl ;
+	rdfs:label "תת קבוצה של"@he ;
+	skos:prefLabel "תת קבוצה של"@he ;
+	schema:name "תת קבוצה של"@he ;
+	rdfs:label "sub dari"@min ;
+	skos:prefLabel "sub dari"@min ;
+	schema:name "sub dari"@min ;
+	rdfs:label "subkelas dari"@id ;
+	skos:prefLabel "subkelas dari"@id ;
+	schema:name "subkelas dari"@id ;
+	rdfs:label "subclasse de"@pt-br ;
+	skos:prefLabel "subclasse de"@pt-br ;
+	schema:name "subclasse de"@pt-br ;
+	rdfs:label "phân lớp của"@vi ;
+	skos:prefLabel "phân lớp của"@vi ;
+	schema:name "phân lớp của"@vi ;
+	rdfs:label "υποκλάση του"@el ;
+	skos:prefLabel "υποκλάση του"@el ;
+	schema:name "υποκλάση του"@el ;
+	rdfs:label "subclasă a"@ro ;
+	skos:prefLabel "subclasă a"@ro ;
+	schema:name "subclasă a"@ro ;
+	rdfs:label "typ nadrzędny"@pl ;
+	skos:prefLabel "typ nadrzędny"@pl ;
+	schema:name "typ nadrzędny"@pl ;
+	rdfs:label "subklase iti"@ilo ;
+	skos:prefLabel "subklase iti"@ilo ;
+	schema:name "subklase iti"@ilo ;
+	rdfs:label "underklasse til"@da ;
+	skos:prefLabel "underklasse til"@da ;
+	schema:name "underklasse til"@da ;
+	rdfs:label "nadtřída"@cs ;
+	skos:prefLabel "nadtřída"@cs ;
+	schema:name "nadtřída"@cs ;
+	rdfs:label "上級分類"@zh ;
+	skos:prefLabel "上級分類"@zh ;
+	schema:name "上級分類"@zh ;
+	rdfs:label "alosztálya ennek"@hu ;
+	skos:prefLabel "alosztálya ennek"@hu ;
+	schema:name "alosztálya ennek"@hu ;
+	rdfs:label "apakšklase"@lv ;
+	skos:prefLabel "apakšklase"@lv ;
+	schema:name "apakšklase"@lv ;
+	rdfs:label "上级分类"@zh-cn ;
+	skos:prefLabel "上级分类"@zh-cn ;
+	schema:name "上级分类"@zh-cn ;
+	rdfs:label "quyidagi tushunchaning ostsinfidir"@uz ;
+	skos:prefLabel "quyidagi tushunchaning ostsinfidir"@uz ;
+	schema:name "quyidagi tushunchaning ostsinfidir"@uz ;
+	rdfs:label "ქვეკლასი"@ka ;
+	skos:prefLabel "ქვეკლასი"@ka ;
+	schema:name "ქვეკლასი"@ka ;
+	rdfs:label "underklasse av"@nb ;
+	skos:prefLabel "underklasse av"@nb ;
+	schema:name "underklasse av"@nb ;
+	rdfs:label "Ünnerklass vun"@nds ;
+	skos:prefLabel "Ünnerklass vun"@nds ;
+	schema:name "Ünnerklass vun"@nds ;
+	rdfs:label "sub-aro de"@eo ;
+	skos:prefLabel "sub-aro de"@eo ;
+	schema:name "sub-aro de"@eo ;
+	rdfs:label "উপশ্রেণী"@bn ;
+	skos:prefLabel "উপশ্রেণী"@bn ;
+	schema:name "উপশ্রেণী"@bn ;
+	rdfs:label "je podklasa od"@bs ;
+	skos:prefLabel "je podklasa od"@bs ;
+	schema:name "je podklasa od"@bs ;
+	rdfs:label "上级分类"@zh-hans ;
+	skos:prefLabel "上级分类"@zh-hans ;
+	schema:name "上级分类"@zh-hans ;
+	rdfs:label "上級分類"@zh-hant ;
+	skos:prefLabel "上級分類"@zh-hant ;
+	schema:name "上級分類"@zh-hant ;
+	rdfs:label "上級分類"@zh-tw ;
+	skos:prefLabel "上級分類"@zh-tw ;
+	schema:name "上級分類"@zh-tw ;
+	rdfs:label "podradený pojem"@sk ;
+	skos:prefLabel "podradený pojem"@sk ;
+	schema:name "podradený pojem"@sk ;
+	rdfs:label "isrummad eus"@br ;
+	skos:prefLabel "isrummad eus"@br ;
+	schema:name "isrummad eus"@br ;
+	rdfs:label "onderklasse van"@nds-nl ;
+	skos:prefLabel "onderklasse van"@nds-nl ;
+	schema:name "onderklasse van"@nds-nl ;
+	rdfs:label "nënklasë e"@sq ;
+	skos:prefLabel "nënklasë e"@sq ;
+	schema:name "nënklasë e"@sq ;
+	rdfs:label "падкляса ад"@be-tarask ;
+	skos:prefLabel "падкляса ад"@be-tarask ;
+	schema:name "падкляса ад"@be-tarask ;
+	rdfs:label "alt sınıfı"@tr ;
+	skos:prefLabel "alt sınıfı"@tr ;
+	schema:name "alt sınıfı"@tr ;
+	rdfs:label "подклас на"@bg ;
+	skos:prefLabel "подклас на"@bg ;
+	schema:name "подклас на"@bg ;
+	rdfs:label "er ein underklasse av"@nn ;
+	skos:prefLabel "er ein underklasse av"@nn ;
+	schema:name "er ein underklasse av"@nn ;
+	rdfs:label "supercategoria"@la ;
+	skos:prefLabel "supercategoria"@la ;
+	schema:name "supercategoria"@la ;
+	rdfs:label "กลุ่มย่อยของ"@th ;
+	skos:prefLabel "กลุ่มย่อยของ"@th ;
+	schema:name "กลุ่มย่อยของ"@th ;
+	rdfs:label "subclass of"@en-gb ;
+	skos:prefLabel "subclass of"@en-gb ;
+	schema:name "subclass of"@en-gb ;
+	rdfs:label "subclass of"@en-ca ;
+	skos:prefLabel "subclass of"@en-ca ;
+	schema:name "subclass of"@en-ca ;
+	rdfs:label "sosclassa de"@oc ;
+	skos:prefLabel "sosclassa de"@oc ;
+	schema:name "sosclassa de"@oc ;
+	rdfs:label "поткласа на"@mk ;
+	skos:prefLabel "поткласа на"@mk ;
+	schema:name "поткласа на"@mk ;
+	rdfs:label "alaluokka kohteelle"@fi ;
+	skos:prefLabel "alaluokka kohteelle"@fi ;
+	schema:name "alaluokka kohteelle"@fi ;
+	rdfs:label "lo se klesi"@jbo ;
+	skos:prefLabel "lo se klesi"@jbo ;
+	schema:name "lo se klesi"@jbo ;
+	rdfs:label "નો પેટા-પ્રકાર"@gu ;
+	skos:prefLabel "નો પેટા-પ્રકાર"@gu ;
+	schema:name "નો પેટા-પ્રકાર"@gu ;
+	rdfs:label "subkelas"@ms ;
+	skos:prefLabel "subkelas"@ms ;
+	schema:name "subkelas"@ms ;
+	rdfs:label "אונטערקלאס פון"@yi ;
+	skos:prefLabel "אונטערקלאס פון"@yi ;
+	schema:name "אונטערקלאס פון"@yi ;
+	rdfs:label "undirflokkur af"@is ;
+	skos:prefLabel "undirflokkur af"@is ;
+	schema:name "undirflokkur af"@is ;
+	rdfs:label "Ënnerklass vu(n)"@lb ;
+	skos:prefLabel "Ënnerklass vu(n)"@lb ;
+	schema:name "Ënnerklass vu(n)"@lb ;
+	rdfs:label "subcless o"@sco ;
+	skos:prefLabel "subcless o"@sco ;
+	schema:name "subcless o"@sco ;
+	rdfs:label "ենթակատեգորիա"@hy ;
+	skos:prefLabel "ենթակատեգորիա"@hy ;
+	schema:name "ենթակատեգորիա"@hy ;
+	rdfs:label "isch e Unterklass vo"@gsw ;
+	skos:prefLabel "isch e Unterklass vo"@gsw ;
+	schema:name "isch e Unterklass vo"@gsw ;
+	rdfs:label "上級分類"@zh-hk ;
+	skos:prefLabel "上級分類"@zh-hk ;
+	schema:name "上級分類"@zh-hk ;
+	rdfs:label "దీనియొక్క ఉపతరగతి"@te ;
+	skos:prefLabel "దీనియొక్క ఉపతరగతి"@te ;
+	schema:name "దీనియొక్క ఉపతరగతి"@te ;
+	rdfs:label "ଏହାର ମୁଖ୍ୟଶ୍ରେଣୀ"@or ;
+	skos:prefLabel "ଏହାର ମୁଖ୍ୟଶ୍ରେଣୀ"@or ;
+	schema:name "ଏହାର ମୁଖ୍ୟଶ୍ରେଣୀ"@or ;
+	rdfs:label "ay uri ng"@tl ;
+	skos:prefLabel "ay uri ng"@tl ;
+	schema:name "ay uri ng"@tl ;
+	rdfs:label "генерализација"@sr-ec ;
+	skos:prefLabel "генерализација"@sr-ec ;
+	schema:name "генерализација"@sr-ec ;
+	rdfs:label "generalizacija"@sr-el ;
+	skos:prefLabel "generalizacija"@sr-el ;
+	schema:name "generalizacija"@sr-el ;
+	rdfs:label "का उपवर्ग"@hi ;
+	skos:prefLabel "का उपवर्ग"@hi ;
+	schema:name "का उपवर्ग"@hi ;
+	rdfs:label "podpomenka od"@sl ;
+	skos:prefLabel "podpomenka od"@sl ;
+	schema:name "podpomenka od"@sl ;
+	rdfs:label "subclasse de"@ia ;
+	skos:prefLabel "subclasse de"@ia ;
+	schema:name "subclasse de"@ia ;
+	rdfs:label "es en Ongerjropp vun"@ksh ;
+	skos:prefLabel "es en Ongerjropp vun"@ksh ;
+	schema:name "es en Ongerjropp vun"@ksh ;
+	rdfs:label "suttaclassi di"@scn ;
+	skos:prefLabel "suttaclassi di"@scn ;
+	schema:name "suttaclassi di"@scn ;
+	rdfs:label "subklasse fan"@fy ;
+	skos:prefLabel "subklasse fan"@fy ;
+	schema:name "subklasse fan"@fy ;
+	rdfs:label "honen azpiklasea"@eu ;
+	skos:prefLabel "honen azpiklasea"@eu ;
+	schema:name "honen azpiklasea"@eu ;
+	rdfs:label "бухара класс"@ce ;
+	skos:prefLabel "бухара класс"@ce ;
+	schema:name "бухара класс"@ce ;
+	rdfs:label "को उपसमूह"@ne ;
+	skos:prefLabel "को उपसमूह"@ne ;
+	schema:name "को उपसमूह"@ne ;
+	rdfs:label "صنف فرعي من"@ar ;
+	skos:prefLabel "صنف فرعي من"@ar ;
+	schema:name "صنف فرعي من"@ar ;
+	rdfs:label "subclase de"@ast ;
+	skos:prefLabel "subclase de"@ast ;
+	schema:name "subclase de"@ast ;
+	rdfs:label "isddosbarth o'r canlynol"@cy ;
+	skos:prefLabel "isddosbarth o'r canlynol"@cy ;
+	schema:name "isddosbarth o'r canlynol"@cy ;
+	rdfs:label "kuulub rühma"@et ;
+	skos:prefLabel "kuulub rühma"@et ;
+	schema:name "kuulub rühma"@et ;
+	rdfs:label "poklasis"@lt ;
+	skos:prefLabel "poklasis"@lt ;
+	schema:name "poklasis"@lt ;
+	rdfs:label "Onerklas faan"@frr ;
+	skos:prefLabel "Onerklas faan"@frr ;
+	schema:name "Onerklas faan"@frr ;
+	rdfs:label "zana-tsokajy"@mg ;
+	skos:prefLabel "zana-tsokajy"@mg ;
+	schema:name "zana-tsokajy"@mg ;
+	rdfs:label "இதன் துணைவகை"@ta ;
+	skos:prefLabel "இதன் துணைவகை"@ta ;
+	schema:name "இதன் துணைவகை"@ta ;
+	rdfs:label "undirbólkur av"@fo ;
+	skos:prefLabel "undirbólkur av"@fo ;
+	schema:name "undirbólkur av"@fo ;
+	rdfs:label "上級分類"@zh-mo ;
+	skos:prefLabel "上級分類"@zh-mo ;
+	schema:name "上級分類"@zh-mo ;
+	rdfs:label "上级分类"@zh-sg ;
+	skos:prefLabel "上级分类"@zh-sg ;
+	schema:name "上级分类"@zh-sg ;
+	rdfs:label "എന്തിന്റെ ഉപവിഭാഗം"@ml ;
+	skos:prefLabel "എന്തിന്റെ ഉപവിഭാഗം"@ml ;
+	schema:name "എന്തിന്റെ ഉപവിഭാഗം"@ml ;
+	rdfs:label "subklaso di"@io ;
+	skos:prefLabel "subklaso di"@io ;
+	schema:name "subklaso di"@io ;
+	rdfs:label "subclase de"@an ;
+	skos:prefLabel "subclase de"@an ;
+	schema:name "subclase de"@an ;
+	rdfs:label "зерсаҳифа аз"@tg ;
+	skos:prefLabel "зерсаҳифа аз"@tg ;
+	schema:name "зерсаҳифа аз"@tg ;
+	rdfs:label "fo-aicme de"@ga ;
+	skos:prefLabel "fo-aicme de"@ga ;
+	schema:name "fo-aicme de"@ga ;
+	rdfs:label "lábee"@yo ;
+	skos:prefLabel "lábee"@yo ;
+	schema:name "lábee"@yo ;
+	rdfs:label "ಉಪವರ್ಗೊ"@tcy ;
+	skos:prefLabel "ಉಪವರ್ಗೊ"@tcy ;
+	schema:name "ಉಪವರ್ಗೊ"@tcy ;
+	rdfs:label "ಉಪವರ್ಗ"@kn ;
+	skos:prefLabel "ಉಪವರ್ಗ"@kn ;
+	schema:name "ಉಪವರ್ಗ"@kn ;
+	rdfs:label "зерсинф аз"@tg-cyrl ;
+	skos:prefLabel "зерсинф аз"@tg-cyrl ;
+	schema:name "зерсинф аз"@tg-cyrl ;
+	rdfs:label "менә моның ассыйныфы"@tt-cyrl ;
+	skos:prefLabel "менә моның ассыйныфы"@tt-cyrl ;
+	schema:name "менә моның ассыйныфы"@tt-cyrl ;
+	rdfs:label "menä monıñ assıynıfı"@tt-latn ;
+	skos:prefLabel "menä monıñ assıynıfı"@tt-latn ;
+	schema:name "menä monıñ assıynıfı"@tt-latn ;
+	rdfs:label "менә моның ассыйныфы"@tt ;
+	skos:prefLabel "менә моның ассыйныфы"@tt ;
+	schema:name "менә моның ассыйныфы"@tt ;
+	rdfs:label "podrjadownja wot"@hsb ;
+	skos:prefLabel "podrjadownja wot"@hsb ;
+	schema:name "podrjadownja wot"@hsb ;
+	rdfs:label "ਉਪ ਸ਼੍ਰੇਣੀ"@pa ;
+	skos:prefLabel "ਉਪ ਸ਼੍ਰੇਣੀ"@pa ;
+	schema:name "ਉਪ ਸ਼੍ਰੇਣੀ"@pa ;
+	rdfs:label "ذیلی درجہ"@ur ;
+	skos:prefLabel "ذیلی درجہ"@ur ;
+	schema:name "ذیلی درجہ"@ur ;
+	rdfs:label "субкласс"@ba ;
+	skos:prefLabel "субкласс"@ba ;
+	schema:name "субкласс"@ba ;
+	schema:description "all instances of these items are instances of those items; this item is a class (subset) of that item. Not to be confused with P31 (instance of)"@en,
+		"deze klasse is een deelverzameling van die (grotere) klasse"@nl,
+		"Dieses Element ist eine Klasse/Gruppe jenes Elements (Beispiel: Auto ist eine Unterklasse von Fahrzeug)"@de,
+		"каждый частный случай данного элемента также частный случай следующего(-их) элемента(-ов)"@ru,
+		"この項目を下位とする上位のクラス（分類・概念）"@ja,
+		"este elemento es una clase del otro"@es,
+		"amin dagitoy a banag ket pagarigan dagitoy a banag; daytoy a banag ket maysa a klase iti dayta a banag"@ilo,
+		"dit element is n spesifieke klasse van de klasse waor t in zit. Veurbeeld: auto is ne onderklasse van voertuug."@nds-nl,
+		"all instances of these items are instances of those items; this item is a class (subset) of that item. Not to be confused with P31 (instance of)"@en-gb,
+		"all instances of these items are instances of those items; this item is a class (subset) of that item. Not to be confused with P31 (instance of)"@en-ca,
+		"třída, jejíž podtřídou/podskupinou tato třída je (všechny prvky této množiny jsou také prvky oné množiny)"@cs,
+		"aquest grup d'elements pertany a un altre grup més general"@ca,
+		"далучае да элемента спіс гіперонімаў - шырэйшых паняццяў, чым гэты элемент"@be,
+		"X sous-classe de Y : tous les éléments qui sont des instances (exemples) de X sont aussi des éléments instances de Y. Ne pas confondre avec la propriété P31 (instance de)"@fr,
+		"todas as instâncias destes itens são instâncias daqueles itens; este item é uma classe daquele item. Não confundir com Property:P31 (instância de)"@pt-br,
+		"આ લેખ છે તે લેખનો પ્રકાર છે"@gu,
+		"az elem egy csoportja ezeknek az elemeknek. Példa: az autó egy alosztálya a járműveknek"@hu,
+		"kaikki nämä kohteet ovat esiintymiä noista kohteista; tämä kohde on tuon kohteen luokka"@fi,
+		"ĉiuj ĉi eroj estas instancoj de tiuj eroj; tiu ĉi ero estas subklaso de tiu ero"@eo,
+		"X sosclassa de Y : totes los elements que son d'instàncias (exemples) de X son tanben d'elements instàncias de Y"@oc,
+		"alle disse emner er tilfælde af disse emner; dette emne er en klasse af det emne"@da,
+		"此项的上级分类"@zh,
+		"항목 주제는 다음의 개념을 특징에 따라 다시 정의한 하위 개념임 (이 항목을 범주로 삼는 하위 항목 주제들의 상위 개념들에는 이 항목의 상위 개념도 포함되어 있어야 함)"@ko,
+		"tutti gli elementi che sono istanze (degli esempi di) del soggetto (proprietà P31) sono anche istanze di questo elemento;"@it,
+		"此项的上级分类"@zh-hans,
+		"此项的上级分类"@zh-cn,
+		"semua contoh dari butir ini adalah bagian dari sebuah jenis lain yang lebih luas, jangan bingung dengan Atribut:P31 (contoh dari)"@id,
+		"此項的上級分類"@zh-hk,
+		"све ове ставке су примери тих ставки; ова ставка је класа те ставке"@sr,
+		"све ове ставке су примери тих ставки; ова ставка је класа те ставке"@sr-ec,
+		"sve ove stavke su primeri tih stavki; ova stavka je klasa te stavke"@sr-el,
+		"subjektet har forekomster som er en ekte delmengde av dette andre elementets forekomster"@nb,
+		"wszystkie elementy tego typu są również elementami typu nadrzędnego"@pl,
+		"dat heh es en kleinere Jropp vun Saache wie dat doh"@ksh,
+		"tutti l'esemplara di stu suggettu, su' macari esemplara di l'oggettu"@scn,
+		"همهٔ این آیتم‌ها زیرگروه آن  آیتم هستند؛ این آیتم بخشی از آن آیتم است."@fa,
+		"elementu hau beste honen klase bat da"@eu,
+		"esti grupu d'elementos pertenez a otru grupu más xeneral"@ast,
+		"усі приклади цих елементів є прикладами елементів також цього класу; приєднує до елемента перелік гіперонімів — більш широких понять; не плутати з Property:P31 (є одним із)"@uk,
+		"此項的上級分類"@zh-hant,
+		"此項的上級分類"@zh-mo,
+		"此项的上级分类"@zh-sg,
+		"此項的上級分類"@zh-tw,
+		"αυτό το στοιχείο είναι μια υποκλάση εκείνων των στοιχείων (Παράδειγμα: το αυτοκίνητο είναι υποκλάση του μεταφορικού μέσου)"@el,
+		"todas as instâncias destes itens são instâncias daqueles itens; este item é uma classe daquele item. Não confundir com Property:P31 (instância de)"@pt,
+		"denna grupp av objekt är en undergrupp till en mer övergripande samlingsgrupp"@sv,
+		"جميع خصائص هذه العناصر هي خصائص لتلك العناصر؛ هذا العنصر هو صنف (مجموعة فرعية) لذلك العنصر. ويجب أن لا يتم الخلط بينه وبين الخاصية: P31 (حالة خاصة من)."@ar,
+		"ಈ ಅಂಸೊಲೆ ಮಾತ ನಿದರ್ಶನೊಲು ಆ ಅಂಸೊಲೆ ನಿದರ್ಶನೊಲು ಆದುಲ್ಲೊ; ಈ ಅಂಸೊ ಆ ಅಂಸೊದ ವರ್ಗೊ ಆದುಂಡು(ಉಪವಿಬಾಗೊ). P31 ಗುಣೊಕ್ಕು ಗೊಂದಲೊ ಆವೊಡ್ಚಿ"@tcy,
+		"ಈಅಂಶಗಳ ಎಲ್ಲಾ ನಿದರ್ಶನಗಳು ಆ ಅಂಶಗಳ ನಿದರ್ಶನಗಳಾಗಿವೆ; ಈ ಅಂಶ ಆ ಅಂಶದ ವರ್ಗವಾಗಿದೆ (ಉಪವಿಭಾಗ). P31 ಗುಣಕ್ಕೆ ಗೊಂದಲಕ್ಕೀಡಾಗಬಾರದು"@kn,
+		"элементка гипоним куша — моңа караганда киңерәк төшенчә. Property:P31 (\"төшенчәнең аерым очрагы\") белән бутамаска!"@tt-cyrl,
+		"elementqa giponim quşa — moña qarağanda kiñeräq töşençä. Property:P31 (\"töşençäneñ ayırım oçrağı\") belän butamasqa!"@tt-latn,
+		"элементка гипоним куша — моңа караганда киңерәк төшенчә. Property:P31 (\"төшенчәнең аерым очрагы\") белән бутамаска!"@tt,
+		"ਉਪ ਸ਼੍ਰੇਣੀ"@pa,
+		"ଏହା ଯେଉଁ ଶ୍ରେଣୀର ଉପଶ୍ରେଣୀ ଅଟେ"@or,
+		"semua contoh benda-benda ini ialah contoh benda-benda itu; benda ini ialah kelas (subset) benda itu. Jangan mengelirukan dengan P31 (contoh)"@ms ;
+	a wikibase:Property ;
+	wikibase:propertyType <http://wikiba.se/ontology-beta#WikibaseItem> ;
+	wikibase:directClaim wdt:P279 ;
+	wikibase:claim p:P279 ;
+	wikibase:statementProperty ps:P279 ;
+	wikibase:statementValue psv:P279 ;
+	wikibase:qualifier pq:P279 ;
+	wikibase:qualifierValue pqv:P279 ;
+	wikibase:reference pr:P279 ;
+	wikibase:referenceValue prv:P279 ;
+	wikibase:novalue wdno:P279 .
+
+p:P279 a owl:ObjectProperty .
+
+psv:P279 a owl:ObjectProperty .
+
+pqv:P279 a owl:ObjectProperty .
+
+prv:P279 a owl:ObjectProperty .
+
+wdt:P279 a owl:ObjectProperty .
+
+ps:P279 a owl:ObjectProperty .
+
+pq:P279 a owl:ObjectProperty .
+
+pr:P279 a owl:ObjectProperty .
+
+wdno:P279 a owl:Class ;
+	owl:complementOf _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty wdt:P279 ;
+	owl:someValuesFrom owl:Thing .
+
+wd:Q1362453 a wikibase:Item ;
+	rdfs:label "Fibrosarkom"@de ;
+	skos:prefLabel "Fibrosarkom"@de ;
+	schema:name "Fibrosarkom"@de ;
+	rdfs:label "fibrosarcoma"@en ;
+	skos:prefLabel "fibrosarcoma"@en ;
+	schema:name "fibrosarcoma"@en ;
+	rdfs:label "fibrosarcome"@fr ;
+	skos:prefLabel "fibrosarcome"@fr ;
+	schema:name "fibrosarcome"@fr ;
+	rdfs:label "fibrosarcoma"@it ;
+	skos:prefLabel "fibrosarcoma"@it ;
+	schema:name "fibrosarcoma"@it ;
+	rdfs:label "Fibrosarcom"@ro ;
+	skos:prefLabel "Fibrosarcom"@ro ;
+	schema:name "Fibrosarcom"@ro ;
+	rdfs:label "Фибросаркома"@ru ;
+	skos:prefLabel "Фибросаркома"@ru ;
+	schema:name "Фибросаркома"@ru ;
+	rdfs:label "fibrosarcoma"@es ;
+	skos:prefLabel "fibrosarcoma"@es ;
+	schema:name "fibrosarcoma"@es ;
+	rdfs:label "fibrosarcoma"@nl ;
+	skos:prefLabel "fibrosarcoma"@nl ;
+	schema:name "fibrosarcoma"@nl ;
+	rdfs:label "fibrossarcoma"@pt ;
+	skos:prefLabel "fibrossarcoma"@pt ;
+	schema:name "fibrossarcoma"@pt ;
+	rdfs:label "Włókniakomięsak"@pl ;
+	skos:prefLabel "Włókniakomięsak"@pl ;
+	schema:name "Włókniakomięsak"@pl ;
+	rdfs:label "纖維肉瘤"@zh-hant ;
+	skos:prefLabel "纖維肉瘤"@zh-hant ;
+	schema:name "纖維肉瘤"@zh-hant ;
+	rdfs:label "纤维肉瘤"@zh-cn ;
+	skos:prefLabel "纤维肉瘤"@zh-cn ;
+	schema:name "纤维肉瘤"@zh-cn ;
+	rdfs:label "線維肉腫"@ja ;
+	skos:prefLabel "線維肉腫"@ja ;
+	schema:name "線維肉腫"@ja ;
+	rdfs:label "Фибросаркома"@kk ;
+	skos:prefLabel "Фибросаркома"@kk ;
+	schema:name "Фибросаркома"@kk ;
+	rdfs:label "fibrosarkomo"@eo ;
+	skos:prefLabel "fibrosarkomo"@eo ;
+	schema:name "fibrosarkomo"@eo ;
+	schema:description "connective tissue cancer that has material basis in fibrous connective tissue and characterized by the presence of immature proliferating fibroblasts or undifferentiated anaplastic spindle cells in a storiform pattern"@en,
+		"Krankheit"@de .
+
+wd:P1748 a wikibase:Property ;
+	rdfs:label "NCI Thesaurus-id"@nb ;
+	skos:prefLabel "NCI Thesaurus-id"@nb ;
+	schema:name "NCI Thesaurus-id"@nb ;
+	rdfs:label "NCI Thesaurus ID"@en ;
+	skos:prefLabel "NCI Thesaurus ID"@en ;
+	schema:name "NCI Thesaurus ID"@en ;
+	rdfs:label "NCI-Thesaurus-ID"@de ;
+	skos:prefLabel "NCI-Thesaurus-ID"@de ;
+	schema:name "NCI-Thesaurus-ID"@de ;
+	rdfs:label "код NCI Thesaurus"@ru ;
+	skos:prefLabel "код NCI Thesaurus"@ru ;
+	schema:name "код NCI Thesaurus"@ru ;
+	rdfs:label "identificador NCI Thesaurus"@ca ;
+	skos:prefLabel "identificador NCI Thesaurus"@ca ;
+	schema:name "identificador NCI Thesaurus"@ca ;
+	rdfs:label "NCIt-identificatiecode"@nl ;
+	skos:prefLabel "NCIt-identificatiecode"@nl ;
+	schema:name "NCIt-identificatiecode"@nl ;
+	rdfs:label "identifiant NCI Thesaurus"@fr ;
+	skos:prefLabel "identifiant NCI Thesaurus"@fr ;
+	schema:name "identifiant NCI Thesaurus"@fr ;
+	rdfs:label "NCI Thesaurus ID"@hr ;
+	skos:prefLabel "NCI Thesaurus ID"@hr ;
+	schema:name "NCI Thesaurus ID"@hr ;
+	rdfs:label "identificador NCI Thesaurus"@pt ;
+	skos:prefLabel "identificador NCI Thesaurus"@pt ;
+	schema:name "identificador NCI Thesaurus"@pt ;
+	rdfs:label "شناسه واژگنج NCI"@fa ;
+	skos:prefLabel "شناسه واژگنج NCI"@fa ;
+	schema:name "شناسه واژگنج NCI"@fa ;
+	rdfs:label "назнака во толковникот на NCI"@mk ;
+	skos:prefLabel "назнака во толковникот на NCI"@mk ;
+	schema:name "назнака во толковникот на NCI"@mk ;
+	rdfs:label "identificador NCI Thesaurus"@es ;
+	skos:prefLabel "identificador NCI Thesaurus"@es ;
+	schema:name "identificador NCI Thesaurus"@es ;
+	rdfs:label "identificador NCI Thesaurus"@pt-br ;
+	skos:prefLabel "identificador NCI Thesaurus"@pt-br ;
+	schema:name "identificador NCI Thesaurus"@pt-br ;
+	rdfs:label "NCI Thesaurus ID"@cs ;
+	skos:prefLabel "NCI Thesaurus ID"@cs ;
+	schema:name "NCI Thesaurus ID"@cs ;
+	rdfs:label "identificativo NCI Thesaurus"@it ;
+	skos:prefLabel "identificativo NCI Thesaurus"@it ;
+	schema:name "identificativo NCI Thesaurus"@it ;
+	rdfs:label "ідэнтыфікатар NCI Thesaurus"@be-tarask ;
+	skos:prefLabel "ідэнтыфікатар NCI Thesaurus"@be-tarask ;
+	schema:name "ідэнтыфікатар NCI Thesaurus"@be-tarask ;
+	rdfs:label "NCI Thesaurus ID"@ja ;
+	skos:prefLabel "NCI Thesaurus ID"@ja ;
+	schema:name "NCI Thesaurus ID"@ja ;
+	rdfs:label "NCI-Thesaurus -tunniste"@fi ;
+	skos:prefLabel "NCI-Thesaurus -tunniste"@fi ;
+	schema:name "NCI-Thesaurus -tunniste"@fi ;
+	rdfs:label "NCI Thesaurus կոդ"@hy ;
+	skos:prefLabel "NCI Thesaurus կոդ"@hy ;
+	schema:name "NCI Thesaurus կոդ"@hy ;
+	rdfs:label "NCI Thesaurus-ID"@nn ;
+	skos:prefLabel "NCI Thesaurus-ID"@nn ;
+	schema:name "NCI Thesaurus-ID"@nn ;
+	rdfs:label "Thesawrws NCI"@cy ;
+	skos:prefLabel "Thesawrws NCI"@cy ;
+	schema:name "Thesawrws NCI"@cy ;
+	rdfs:label "NCI-Thesaurus-ID"@lb ;
+	skos:prefLabel "NCI-Thesaurus-ID"@lb ;
+	schema:name "NCI-Thesaurus-ID"@lb ;
+	rdfs:label "معرف قاموس المعهد الوطني للسرطان"@ar ;
+	skos:prefLabel "معرف قاموس المعهد الوطني للسرطان"@ar ;
+	schema:name "معرف قاموس المعهد الوطني للسرطان"@ar ;
+	rdfs:label "ідентифікатор NCI Thesaurus"@uk ;
+	skos:prefLabel "ідентифікатор NCI Thesaurus"@uk ;
+	schema:name "ідентифікатор NCI Thesaurus"@uk ;
+	rdfs:label "NCI Thesaurus коды"@tt ;
+	skos:prefLabel "NCI Thesaurus коды"@tt ;
+	schema:name "NCI Thesaurus коды"@tt ;
+	schema:description "identifier in the United States National Cancer Institute Thesaurus, vocabulary for clinical care, translational and basic research, etc"@en,
+		"identifiant du National Cancer Institute Thesaurus des États-Unis"@fr,
+		"identifikator za bazu podataka National Cancer Institute Thesaurus"@hr,
+		"شناسه واژگنج NCI ایالات متحده"@fa,
+		"identificador del National Cancer Institute Thesaurus de Estados Unidos"@es,
+		"identifikátor v United States National Cancer Institute Thesaurus"@cs,
+		"identificatore nel United States National Cancer Institute Thesaurus, vocabolario per le cure cliniche, le traduzioni e la ricerca di base"@it,
+		"ідэнтыфікатар у тэзаўрусе Нацыянальнага інстытуту рака ЗША — слоўніку клінічнай дапамогі, перакладных і базавых дасьледаваньняў і да т.п."@be-tarask,
+		"ідентифікатор у тезаурусі Національного інституту раку (National Cancer Institute, NCI) США, словнику для клінічного догляду, трансляційних та базових дослідження тощо"@uk ;
+	a wikibase:Property ;
+	wikibase:propertyType <http://wikiba.se/ontology-beta#String> ;
+	wikibase:directClaim wdt:P1748 ;
+	wikibase:claim p:P1748 ;
+	wikibase:statementProperty ps:P1748 ;
+	wikibase:statementValue psv:P1748 ;
+	wikibase:qualifier pq:P1748 ;
+	wikibase:qualifierValue pqv:P1748 ;
+	wikibase:reference pr:P1748 ;
+	wikibase:referenceValue prv:P1748 ;
+	wikibase:novalue wdno:P1748 .
+
+p:P1748 a owl:ObjectProperty .
+
+psv:P1748 a owl:ObjectProperty .
+
+pqv:P1748 a owl:ObjectProperty .
+
+prv:P1748 a owl:ObjectProperty .
+
+wdt:P1748 a owl:DatatypeProperty .
+
+ps:P1748 a owl:DatatypeProperty .
+
+pq:P1748 a owl:DatatypeProperty .
+
+pr:P1748 a owl:DatatypeProperty .
+
+wdno:P1748 a owl:Class ;
+	owl:complementOf _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty wdt:P1748 ;
+	owl:someValuesFrom owl:Thing .
+
+wd:P2888 a wikibase:Property ;
+	rdfs:label "exact match"@en ;
+	skos:prefLabel "exact match"@en ;
+	schema:name "exact match"@en ;
+	rdfs:label "correspondência exata"@pt ;
+	skos:prefLabel "correspondência exata"@pt ;
+	schema:name "correspondência exata"@pt ;
+	rdfs:label "plene kongruas kun"@eo ;
+	skos:prefLabel "plene kongruas kun"@eo ;
+	schema:name "plene kongruas kun"@eo ;
+	rdfs:label "eksakt samsvar"@nb ;
+	skos:prefLabel "eksakt samsvar"@nb ;
+	schema:name "eksakt samsvar"@nb ;
+	rdfs:label "в точности соответствует"@ru ;
+	skos:prefLabel "в точности соответствует"@ru ;
+	schema:name "в точности соответствует"@ru ;
+	rdfs:label "correspondencia exacta"@es ;
+	skos:prefLabel "correspondencia exacta"@es ;
+	schema:name "correspondencia exacta"@es ;
+	rdfs:label "потпуно подударање"@sr ;
+	skos:prefLabel "потпуно подударање"@sr ;
+	schema:name "потпуно подударање"@sr ;
+	rdfs:label "corrisponde esattamente"@it ;
+	skos:prefLabel "corrisponde esattamente"@it ;
+	schema:name "corrisponde esattamente"@it ;
+	rdfs:label "exakte Übereinstimmung"@de ;
+	skos:prefLabel "exakte Übereinstimmung"@de ;
+	schema:name "exakte Übereinstimmung"@de ;
+	rdfs:label "correspondance exacte"@fr ;
+	skos:prefLabel "correspondance exacte"@fr ;
+	schema:name "correspondance exacte"@fr ;
+	rdfs:label "точно совпаѓање"@mk ;
+	skos:prefLabel "точно совпаѓање"@mk ;
+	schema:name "точно совпаѓање"@mk ;
+	rdfs:label "exakt träff"@sv ;
+	skos:prefLabel "exakt träff"@sv ;
+	schema:name "exakt träff"@sv ;
+	rdfs:label "exacte overeenkomst"@nl ;
+	skos:prefLabel "exacte overeenkomst"@nl ;
+	schema:name "exacte overeenkomst"@nl ;
+	rdfs:label "exact match"@sco ;
+	skos:prefLabel "exact match"@sco ;
+	schema:name "exact match"@sco ;
+	rdfs:label "同一の概念"@ja ;
+	skos:prefLabel "同一の概念"@ja ;
+	schema:name "同一の概念"@ja ;
+	rdfs:label "হুবহু মিল সম্পন্ন"@bn ;
+	skos:prefLabel "হুবহু মিল সম্পন্ন"@bn ;
+	schema:name "হুবহু মিল সম্পন্ন"@bn ;
+	rdfs:label "eksakt overensstemmelse"@da ;
+	skos:prefLabel "eksakt overensstemmelse"@da ;
+	schema:name "eksakt overensstemmelse"@da ;
+	rdfs:label "تطابق تام"@ar ;
+	skos:prefLabel "تطابق تام"@ar ;
+	schema:name "تطابق تام"@ar ;
+	rdfs:label "tikras sutapimas"@lt ;
+	skos:prefLabel "tikras sutapimas"@lt ;
+	schema:name "tikras sutapimas"@lt ;
+	rdfs:label "přesná shoda"@cs ;
+	skos:prefLabel "přesná shoda"@cs ;
+	schema:name "přesná shoda"@cs ;
+	rdfs:label "精确匹配"@zh-hans ;
+	skos:prefLabel "精确匹配"@zh-hans ;
+	schema:name "精确匹配"@zh-hans ;
+	rdfs:label "correspondència exacta"@ca ;
+	skos:prefLabel "correspondència exacta"@ca ;
+	schema:name "correspondència exacta"@ca ;
+	rdfs:label "дакладна  адпавядае"@be ;
+	skos:prefLabel "дакладна  адпавядае"@be ;
+	schema:name "дакладна  адпавядае"@be ;
+	rdfs:label "дакладная адпаведнасьць"@be-tarask ;
+	skos:prefLabel "дакладная адпаведнасьць"@be-tarask ;
+	schema:name "дакладная адпаведнасьць"@be-tarask ;
+	rdfs:label "correspondencia exacta"@gl ;
+	skos:prefLabel "correspondencia exacta"@gl ;
+	schema:name "correspondencia exacta"@gl ;
+	rdfs:label "baliokidetasun zehatza"@eu ;
+	skos:prefLabel "baliokidetasun zehatza"@eu ;
+	schema:name "baliokidetasun zehatza"@eu ;
+	rdfs:label "точно відповідає"@uk ;
+	skos:prefLabel "точно відповідає"@uk ;
+	schema:name "точно відповідає"@uk ;
+	rdfs:label "correspondéncia exacta"@oc ;
+	skos:prefLabel "correspondéncia exacta"@oc ;
+	schema:name "correspondéncia exacta"@oc ;
+	rdfs:label "odpowiednik"@pl ;
+	skos:prefLabel "odpowiednik"@pl ;
+	schema:name "odpowiednik"@pl ;
+	rdfs:label "presná zhoda"@sk ;
+	skos:prefLabel "presná zhoda"@sk ;
+	schema:name "presná zhoda"@sk ;
+	rdfs:label "eksakt samsvar"@nn ;
+	skos:prefLabel "eksakt samsvar"@nn ;
+	schema:name "eksakt samsvar"@nn ;
+	rdfs:label "sama kuin"@fi ;
+	skos:prefLabel "sama kuin"@fi ;
+	schema:name "sama kuin"@fi ;
+	rdfs:label "精确匹配"@zh ;
+	skos:prefLabel "精确匹配"@zh ;
+	schema:name "精确匹配"@zh ;
+	rdfs:label "זיהוי מדויק"@he ;
+	skos:prefLabel "זיהוי מדויק"@he ;
+	schema:name "זיהוי מדויק"@he ;
+	rdfs:label "correspondentia exacte"@ia ;
+	skos:prefLabel "correspondentia exacte"@ia ;
+	schema:name "correspondentia exacte"@ia ;
+	rdfs:label "exakt Iwwereneestëmmung"@lb ;
+	skos:prefLabel "exakt Iwwereneestëmmung"@lb ;
+	schema:name "exakt Iwwereneestëmmung"@lb ;
+	rdfs:label "pontos egyezés"@hu ;
+	skos:prefLabel "pontos egyezés"@hu ;
+	schema:name "pontos egyezés"@hu ;
+	rdfs:label "trùng khớp chính xác"@vi ;
+	skos:prefLabel "trùng khớp chính xác"@vi ;
+	schema:name "trùng khớp chính xác"@vi ;
+	rdfs:label "tam eşleşimi"@tr ;
+	skos:prefLabel "tam eşleşimi"@tr ;
+	schema:name "tam eşleşimi"@tr ;
+	rdfs:label "cysyniad o'r un fath"@cy ;
+	skos:prefLabel "cysyniad o'r un fath"@cy ;
+	schema:name "cysyniad o'r un fath"@cy ;
+	schema:description "used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably"@en,
+		"brukes for å lenke til et samsvarende begrep i en ekstern ontologi, der begrepet er likt nok emnet at de kan brukes om hverandre"@nb,
+		"usado para conectar dos conceptos, indica un alto grado de confianza de que el concepto puede ser usado de forma intercambiable"@es,
+		"collega due concetti, indicando un elevato grado di certezza che i concetti possono essere usati in modo intercambiabile"@it,
+		"verwendet um zwei Konzepte zu verbinden, wobei mit großer Sicherheit gilt, dass beide untereinander auswechselbar sind"@de,
+		"দুটি ধরণাকে সংযোগ করতে; যেগুলি ধারণা অদলবদল করে ব্যবহার করা যেতে পারে, আস্থা উচ্চ ডিগ্রী ইঙ্গিত ব্যবহার"@bn,
+		"link mellem to lignende emner i forskellige ontologier"@da,
+		"تستخدم لربط مفهومين، مما يدل على درجة عالية من الثقة بأن المفاهيم يمكن أن تستخدم بالتبادل"@ar,
+		"ссылка на страницу в другой онлайн базе данных"@ru,
+		"сувязь двух канцэпцыяў, якая паказвае высокую ступень перакананасьці, што канцэпцыі могуць быць узаемазаменнымі"@be-tarask,
+		"usado para conectar dous conceptos, indica un alto grao de confianza de que o concepto pode ser usado de forma intercambiable"@gl,
+		"utilisé pour lier deux concepts, indiquant un grand niveau de confiance que les concepts  peuvent être utilisés interchangeablement"@fr,
+		"לשימוש לקישור בין שני קונצפטים שמתאר שהם זהים ברמת סבירות מאוד גבוהה"@he,
+		"iki kavramı birbirine bağlar ve bu da kavramların gerekirse birbirlerinin yerine kullanılabileceğini gösteren bir güven ölçüsü olur."@tr,
+		"посилання на сторінку в інший онлайн базі даних"@uk,
+		"usada para interligar dois conceitos, indicando um alto grau de confiança que os conceitos podem ser usados de forma intercambiável"@pt ;
+	a wikibase:Property ;
+	wikibase:propertyType <http://wikiba.se/ontology-beta#Url> ;
+	wikibase:directClaim wdt:P2888 ;
+	wikibase:claim p:P2888 ;
+	wikibase:statementProperty ps:P2888 ;
+	wikibase:statementValue psv:P2888 ;
+	wikibase:qualifier pq:P2888 ;
+	wikibase:qualifierValue pqv:P2888 ;
+	wikibase:reference pr:P2888 ;
+	wikibase:referenceValue prv:P2888 ;
+	wikibase:novalue wdno:P2888 .
+
+p:P2888 a owl:ObjectProperty .
+
+psv:P2888 a owl:ObjectProperty .
+
+pqv:P2888 a owl:ObjectProperty .
+
+prv:P2888 a owl:ObjectProperty .
+
+wdt:P2888 a owl:ObjectProperty .
+
+ps:P2888 a owl:ObjectProperty .
+
+pq:P2888 a owl:ObjectProperty .
+
+pr:P2888 a owl:ObjectProperty .
+
+wdno:P2888 a owl:Class ;
+	owl:complementOf _:genid4 .
+
+_:genid4 a owl:Restriction ;
+	owl:onProperty wdt:P2888 ;
+	owl:someValuesFrom owl:Thing .
+
+wd:Q12136 a wikibase:Item ;
+	rdfs:label "malattia"@it ;
+	skos:prefLabel "malattia"@it ;
+	schema:name "malattia"@it ;
+	rdfs:label "maladie"@fr ;
+	skos:prefLabel "maladie"@fr ;
+	schema:name "maladie"@fr ;
+	rdfs:label "disease"@en ;
+	skos:prefLabel "disease"@en ;
+	schema:name "disease"@en ;
+	rdfs:label "Krankheit"@de ;
+	skos:prefLabel "Krankheit"@de ;
+	schema:name "Krankheit"@de ;
+	rdfs:label "Ādl"@ang ;
+	skos:prefLabel "Ādl"@ang ;
+	schema:name "Ādl"@ang ;
+	rdfs:label "Malautía"@an ;
+	skos:prefLabel "Malautía"@an ;
+	schema:name "Malautía"@an ;
+	rdfs:label "ܟܘܪܗܢܐ"@arc ;
+	skos:prefLabel "ܟܘܪܗܢܐ"@arc ;
+	schema:name "ܟܘܪܗܢܐ"@arc ;
+	rdfs:label "مرض"@ar ;
+	skos:prefLabel "مرض"@ar ;
+	schema:name "مرض"@ar ;
+	rdfs:label "Enfermedá"@ast ;
+	skos:prefLabel "Enfermedá"@ast ;
+	schema:name "Enfermedá"@ast ;
+	rdfs:label "Usu"@ay ;
+	skos:prefLabel "Usu"@ay ;
+	schema:name "Usu"@ay ;
+	rdfs:label "Xəstəlik"@az ;
+	skos:prefLabel "Xəstəlik"@az ;
+	schema:name "Xəstəlik"@az ;
+	rdfs:label "хвароба"@be ;
+	skos:prefLabel "хвароба"@be ;
+	schema:name "хвароба"@be ;
+	rdfs:label "Болест"@bg ;
+	skos:prefLabel "Болест"@bg ;
+	schema:name "Болест"@bg ;
+	rdfs:label "Garing"@bjn ;
+	skos:prefLabel "Garing"@bjn ;
+	schema:name "Garing"@bjn ;
+	rdfs:label "Banaw"@bm ;
+	skos:prefLabel "Banaw"@bm ;
+	schema:name "Banaw"@bm ;
+	rdfs:label "রোগ"@bn ;
+	skos:prefLabel "রোগ"@bn ;
+	schema:name "রোগ"@bn ;
+	rdfs:label "ན་ཚ།"@bo ;
+	skos:prefLabel "ན་ཚ།"@bo ;
+	schema:name "ན་ཚ།"@bo ;
+	rdfs:label "kleñved"@br ;
+	skos:prefLabel "kleñved"@br ;
+	schema:name "kleñved"@br ;
+	rdfs:label "Bolest"@bs ;
+	skos:prefLabel "Bolest"@bs ;
+	schema:name "Bolest"@bs ;
+	rdfs:label "malaltia"@ca ;
+	skos:prefLabel "malaltia"@ca ;
+	schema:name "malaltia"@ca ;
+	rdfs:label "nemoc"@cs ;
+	skos:prefLabel "nemoc"@cs ;
+	schema:name "nemoc"@cs ;
+	rdfs:label "Clefyd"@cy ;
+	skos:prefLabel "Clefyd"@cy ;
+	schema:name "Clefyd"@cy ;
+	rdfs:label "sygdom"@da ;
+	skos:prefLabel "sygdom"@da ;
+	schema:name "sygdom"@da ;
+	rdfs:label "ασθένεια"@el ;
+	skos:prefLabel "ασθένεια"@el ;
+	schema:name "ασθένεια"@el ;
+	rdfs:label "malsano"@eo ;
+	skos:prefLabel "malsano"@eo ;
+	schema:name "malsano"@eo ;
+	rdfs:label "enfermedad"@es ;
+	skos:prefLabel "enfermedad"@es ;
+	schema:name "enfermedad"@es ;
+	rdfs:label "Haigus"@et ;
+	skos:prefLabel "Haigus"@et ;
+	schema:name "Haigus"@et ;
+	rdfs:label "eritasun"@eu ;
+	skos:prefLabel "eritasun"@eu ;
+	schema:name "eritasun"@eu ;
+	rdfs:label "Malotia"@ext ;
+	skos:prefLabel "Malotia"@ext ;
+	schema:name "Malotia"@ext ;
+	rdfs:label "بیماری"@fa ;
+	skos:prefLabel "بیماری"@fa ;
+	schema:name "بیماری"@fa ;
+	rdfs:label "sairaus"@fi ;
+	skos:prefLabel "sairaus"@fi ;
+	schema:name "sairaus"@fi ;
+	rdfs:label "sykte"@fy ;
+	skos:prefLabel "sykte"@fy ;
+	schema:name "sykte"@fy ;
+	rdfs:label "病"@gan ;
+	skos:prefLabel "病"@gan ;
+	schema:name "病"@gan ;
+	rdfs:label "Galar"@ga ;
+	skos:prefLabel "Galar"@ga ;
+	schema:name "Galar"@ga ;
+	rdfs:label "doenza"@gl ;
+	skos:prefLabel "doenza"@gl ;
+	schema:name "doenza"@gl ;
+	rdfs:label "Mba'asy"@gn ;
+	skos:prefLabel "Mba'asy"@gn ;
+	schema:name "Mba'asy"@gn ;
+	rdfs:label "מחלה"@he ;
+	skos:prefLabel "מחלה"@he ;
+	schema:name "מחלה"@he ;
+	rdfs:label "रोग"@hi ;
+	skos:prefLabel "रोग"@hi ;
+	schema:name "रोग"@hi ;
+	rdfs:label "bolest"@hr ;
+	skos:prefLabel "bolest"@hr ;
+	schema:name "bolest"@hr ;
+	rdfs:label "Maladi"@ht ;
+	skos:prefLabel "Maladi"@ht ;
+	schema:name "Maladi"@ht ;
+	rdfs:label "betegség"@hu ;
+	skos:prefLabel "betegség"@hu ;
+	schema:name "betegség"@hu ;
+	rdfs:label "հիվանդություն"@hy ;
+	skos:prefLabel "հիվանդություն"@hy ;
+	schema:name "հիվանդություն"@hy ;
+	rdfs:label "maladia"@ia ;
+	skos:prefLabel "maladia"@ia ;
+	schema:name "maladia"@ia ;
+	rdfs:label "penyakit"@id ;
+	skos:prefLabel "penyakit"@id ;
+	schema:name "penyakit"@id ;
+	rdfs:label "morbo"@io ;
+	skos:prefLabel "morbo"@io ;
+	schema:name "morbo"@io ;
+	rdfs:label "Sjúkdómur"@is ;
+	skos:prefLabel "Sjúkdómur"@is ;
+	schema:name "Sjúkdómur"@is ;
+	rdfs:label "病気"@ja ;
+	skos:prefLabel "病気"@ja ;
+	schema:name "病気"@ja ;
+	rdfs:label "Panyakit"@jv ;
+	skos:prefLabel "Panyakit"@jv ;
+	schema:name "Panyakit"@jv ;
+	rdfs:label "დაავადება"@ka ;
+	skos:prefLabel "დაავადება"@ka ;
+	schema:name "დაავადება"@ka ;
+	rdfs:label "Дерт"@kk ;
+	skos:prefLabel "Дерт"@kk ;
+	schema:name "Дерт"@kk ;
+	rdfs:label "질병"@ko ;
+	skos:prefLabel "질병"@ko ;
+	schema:name "질병"@ko ;
+	rdfs:label "Nesaxî"@ku ;
+	skos:prefLabel "Nesaxî"@ku ;
+	schema:name "Nesaxî"@ku ;
+	rdfs:label "Оору"@ky ;
+	skos:prefLabel "Оору"@ky ;
+	schema:name "Оору"@ky ;
+	rdfs:label "Morbus"@la ;
+	skos:prefLabel "Morbus"@la ;
+	schema:name "Morbus"@la ;
+	rdfs:label "Krenkde"@li ;
+	skos:prefLabel "Krenkde"@li ;
+	schema:name "Krenkde"@li ;
+	rdfs:label "Bokɔnɔ"@ln ;
+	skos:prefLabel "Bokɔnɔ"@ln ;
+	schema:name "Bokɔnɔ"@ln ;
+	rdfs:label "Liga"@lt ;
+	skos:prefLabel "Liga"@lt ;
+	schema:name "Liga"@lt ;
+	rdfs:label "slimība"@lv ;
+	skos:prefLabel "slimība"@lv ;
+	schema:name "slimība"@lv ;
+	rdfs:label "Penyakit"@map-bms ;
+	skos:prefLabel "Penyakit"@map-bms ;
+	schema:name "Penyakit"@map-bms ;
+	rdfs:label "aretina"@mg ;
+	skos:prefLabel "aretina"@mg ;
+	schema:name "aretina"@mg ;
+	rdfs:label "болест"@mk ;
+	skos:prefLabel "болест"@mk ;
+	schema:name "болест"@mk ;
+	rdfs:label "രോഗം"@ml ;
+	skos:prefLabel "രോഗം"@ml ;
+	schema:name "രോഗം"@ml ;
+	rdfs:label "रोग"@mr ;
+	skos:prefLabel "रोग"@mr ;
+	schema:name "रोग"@mr ;
+	rdfs:label "Penyakit"@ms ;
+	skos:prefLabel "Penyakit"@ms ;
+	schema:name "Penyakit"@ms ;
+	rdfs:label "Ормат"@myv ;
+	skos:prefLabel "Ормат"@myv ;
+	schema:name "Ормат"@myv ;
+	rdfs:label "Cocoliztli"@nah ;
+	skos:prefLabel "Cocoliztli"@nah ;
+	schema:name "Cocoliztli"@nah ;
+	rdfs:label "रोग"@ne ;
+	skos:prefLabel "रोग"@ne ;
+	schema:name "रोग"@ne ;
+	rdfs:label "ziekte"@nl ;
+	skos:prefLabel "ziekte"@nl ;
+	schema:name "ziekte"@nl ;
+	rdfs:label "sjukdom"@nn ;
+	skos:prefLabel "sjukdom"@nn ;
+	schema:name "sjukdom"@nn ;
+	rdfs:label "malautiá"@oc ;
+	skos:prefLabel "malautiá"@oc ;
+	schema:name "malautiá"@oc ;
+	rdfs:label "choroba"@pl ;
+	skos:prefLabel "choroba"@pl ;
+	schema:name "choroba"@pl ;
+	rdfs:label "روگ"@pnb ;
+	skos:prefLabel "روگ"@pnb ;
+	schema:name "روگ"@pnb ;
+	rdfs:label "ناروغي"@ps ;
+	skos:prefLabel "ناروغي"@ps ;
+	schema:name "ناروغي"@ps ;
+	rdfs:label "doença"@pt ;
+	skos:prefLabel "doença"@pt ;
+	schema:name "doença"@pt ;
+	rdfs:label "Unquy"@qu ;
+	skos:prefLabel "Unquy"@qu ;
+	schema:name "Unquy"@qu ;
+	rdfs:label "boală"@ro ;
+	skos:prefLabel "boală"@ro ;
+	schema:name "boală"@ro ;
+	rdfs:label "Хворота"@rue ;
+	skos:prefLabel "Хворота"@rue ;
+	schema:name "Хворота"@rue ;
+	rdfs:label "болезнь"@ru ;
+	skos:prefLabel "болезнь"@ru ;
+	schema:name "болезнь"@ru ;
+	rdfs:label "Ыарыы"@sah ;
+	skos:prefLabel "Ыарыы"@sah ;
+	schema:name "Ыарыы"@sah ;
+	rdfs:label "affizzioni"@scn ;
+	skos:prefLabel "affizzioni"@scn ;
+	schema:name "affizzioni"@scn ;
+	rdfs:label "Bolest"@sh ;
+	skos:prefLabel "Bolest"@sh ;
+	schema:name "Bolest"@sh ;
+	rdfs:label "රෝග"@si ;
+	skos:prefLabel "රෝග"@si ;
+	schema:name "රෝග"@si ;
+	rdfs:label "Choroba"@sk ;
+	skos:prefLabel "Choroba"@sk ;
+	schema:name "Choroba"@sk ;
+	rdfs:label "Bolezen"@sl ;
+	skos:prefLabel "Bolezen"@sl ;
+	schema:name "Bolezen"@sl ;
+	rdfs:label "Cudur"@so ;
+	skos:prefLabel "Cudur"@so ;
+	schema:name "Cudur"@so ;
+	rdfs:label "Sëmundja"@sq ;
+	skos:prefLabel "Sëmundja"@sq ;
+	schema:name "Sëmundja"@sq ;
+	rdfs:label "болест"@sr ;
+	skos:prefLabel "болест"@sr ;
+	schema:name "болест"@sr ;
+	rdfs:label "sjukdom"@sv ;
+	skos:prefLabel "sjukdom"@sv ;
+	schema:name "sjukdom"@sv ;
+	rdfs:label "நோய்"@ta ;
+	skos:prefLabel "நோய்"@ta ;
+	schema:name "நோய்"@ta ;
+	rdfs:label "వ్యాధి"@te ;
+	skos:prefLabel "వ్యాధి"@te ;
+	schema:name "వ్యాధి"@te ;
+	rdfs:label "โรค"@th ;
+	skos:prefLabel "โรค"@th ;
+	schema:name "โรค"@th ;
+	rdfs:label "Karamdaman"@tl ;
+	skos:prefLabel "Karamdaman"@tl ;
+	schema:name "Karamdaman"@tl ;
+	rdfs:label "Hastalık"@tr ;
+	skos:prefLabel "Hastalık"@tr ;
+	schema:name "Hastalık"@tr ;
+	rdfs:label "хвороба"@uk ;
+	skos:prefLabel "хвороба"@uk ;
+	schema:name "хвороба"@uk ;
+	rdfs:label "مرض"@ur ;
+	skos:prefLabel "مرض"@ur ;
+	schema:name "مرض"@ur ;
+	rdfs:label "bệnh"@vi ;
+	skos:prefLabel "bệnh"@vi ;
+	schema:name "bệnh"@vi ;
+	rdfs:label "Sakit"@war ;
+	skos:prefLabel "Sakit"@war ;
+	schema:name "Sakit"@war ;
+	rdfs:label "Maladeye"@wa ;
+	skos:prefLabel "Maladeye"@wa ;
+	schema:name "Maladeye"@wa ;
+	rdfs:label "קראנקייט"@yi ;
+	skos:prefLabel "קראנקייט"@yi ;
+	schema:name "קראנקייט"@yi ;
+	rdfs:label "Àrùn"@yo ;
+	skos:prefLabel "Àrùn"@yo ;
+	schema:name "Àrùn"@yo ;
+	rdfs:label "疾病"@zh ;
+	skos:prefLabel "疾病"@zh ;
+	schema:name "疾病"@zh ;
+	rdfs:label "хвароба"@be-tarask ;
+	skos:prefLabel "хвароба"@be-tarask ;
+	schema:name "хвароба"@be-tarask ;
+	rdfs:label "disease"@en-gb ;
+	skos:prefLabel "disease"@en-gb ;
+	schema:name "disease"@en-gb ;
+	rdfs:label "Kasallik"@uz ;
+	skos:prefLabel "Kasallik"@uz ;
+	schema:name "Kasallik"@uz ;
+	rdfs:label "sakit"@ilo ;
+	skos:prefLabel "sakit"@ilo ;
+	schema:name "sakit"@ilo ;
+	rdfs:label "Өвчин"@mn ;
+	skos:prefLabel "Өвчин"@mn ;
+	schema:name "Өвчин"@mn ;
+	rdfs:label "ਰੋਗ"@pa ;
+	skos:prefLabel "ਰੋਗ"@pa ;
+	schema:name "ਰੋਗ"@pa ;
+	rdfs:label "نەخۆشی"@ckb ;
+	skos:prefLabel "نەخۆشی"@ckb ;
+	schema:name "نەخۆشی"@ckb ;
+	rdfs:label "sykdom"@nb ;
+	skos:prefLabel "sykdom"@nb ;
+	schema:name "sykdom"@nb ;
+	rdfs:label "болест"@sr-ec ;
+	skos:prefLabel "болест"@sr-ec ;
+	schema:name "болест"@sr-ec ;
+	rdfs:label "bolest"@sr-el ;
+	skos:prefLabel "bolest"@sr-el ;
+	schema:name "bolest"@sr-el ;
+	rdfs:label "病"@yue ;
+	skos:prefLabel "病"@yue ;
+	schema:name "病"@yue ;
+	rdfs:label "Lėga"@sgs ;
+	skos:prefLabel "Lėga"@sgs ;
+	schema:name "Lėga"@sgs ;
+	rdfs:label "Үбшэн"@bxr ;
+	skos:prefLabel "Үбшэн"@bxr ;
+	schema:name "Үбшэн"@bxr ;
+	rdfs:label "Pīⁿ"@nan ;
+	skos:prefLabel "Pīⁿ"@nan ;
+	schema:name "Pīⁿ"@nan ;
+	rdfs:label "Беморӣ"@tg ;
+	skos:prefLabel "Беморӣ"@tg ;
+	schema:name "Беморӣ"@tg ;
+	rdfs:label "Tõbi"@vro ;
+	skos:prefLabel "Tõbi"@vro ;
+	schema:name "Tõbi"@vro ;
+	rdfs:label "疾病"@zh-hk ;
+	skos:prefLabel "疾病"@zh-hk ;
+	schema:name "疾病"@zh-hk ;
+	rdfs:label "疾病"@zh-tw ;
+	skos:prefLabel "疾病"@zh-tw ;
+	schema:name "疾病"@zh-tw ;
+	rdfs:label "疾病"@zh-cn ;
+	skos:prefLabel "疾病"@zh-cn ;
+	schema:name "疾病"@zh-cn ;
+	rdfs:label "Высьом"@kv ;
+	skos:prefLabel "Высьом"@kv ;
+	schema:name "Высьом"@kv ;
+	rdfs:label "disease"@sco ;
+	skos:prefLabel "disease"@sco ;
+	schema:name "disease"@sco ;
+	rdfs:label "Ugonjwa"@sw ;
+	skos:prefLabel "Ugonjwa"@sw ;
+	schema:name "Ugonjwa"@sw ;
+	rdfs:label "Chhi̍t-phiang"@hak ;
+	skos:prefLabel "Chhi̍t-phiang"@hak ;
+	schema:name "Chhi̍t-phiang"@hak ;
+	rdfs:label "Krankheit"@gsw ;
+	skos:prefLabel "Krankheit"@gsw ;
+	schema:name "Krankheit"@gsw ;
+	rdfs:label "Lângoari"@rup ;
+	skos:prefLabel "Lângoari"@rup ;
+	schema:name "Lângoari"@rup ;
+	rdfs:label "مرض"@sd ;
+	skos:prefLabel "مرض"@sd ;
+	schema:name "مرض"@sd ;
+	rdfs:label "Isifiso"@xh ;
+	skos:prefLabel "Isifiso"@xh ;
+	schema:name "Isifiso"@xh ;
+	rdfs:label "ৰোগ"@as ;
+	skos:prefLabel "ৰোগ"@as ;
+	schema:name "ৰোগ"@as ;
+	rdfs:label "siekte"@af ;
+	skos:prefLabel "siekte"@af ;
+	schema:name "siekte"@af ;
+	rdfs:label "siki"@srn ;
+	skos:prefLabel "siki"@srn ;
+	schema:name "siki"@srn ;
+	rdfs:label "Diziiz"@jam ;
+	skos:prefLabel "Diziiz"@jam ;
+	schema:name "Diziiz"@jam ;
+	rdfs:label "Ауырыу"@ba ;
+	skos:prefLabel "Ауырыу"@ba ;
+	schema:name "Ауырыу"@ba ;
+	rdfs:label "Авыру"@tt ;
+	skos:prefLabel "Авыру"@tt ;
+	schema:name "Авыру"@tt ;
+	rdfs:label "Mavabyi"@ts ;
+	skos:prefLabel "Mavabyi"@ts ;
+	schema:name "Mavabyi"@ts ;
+	rdfs:label "疾病"@zh-hans ;
+	skos:prefLabel "疾病"@zh-hans ;
+	schema:name "疾病"@zh-hans ;
+	rdfs:label "疾病"@zh-hant ;
+	skos:prefLabel "疾病"@zh-hant ;
+	schema:name "疾病"@zh-hant ;
+	rdfs:label "疾病"@zh-mo ;
+	skos:prefLabel "疾病"@zh-mo ;
+	schema:name "疾病"@zh-mo ;
+	rdfs:label "疾病"@zh-my ;
+	skos:prefLabel "疾病"@zh-my ;
+	schema:name "疾病"@zh-my ;
+	rdfs:label "疾病"@zh-sg ;
+	skos:prefLabel "疾病"@zh-sg ;
+	schema:name "疾病"@zh-sg ;
+	rdfs:label "d)lele"@ee ;
+	skos:prefLabel "d)lele"@ee ;
+	schema:name "d)lele"@ee ;
+	rdfs:label "yare3"@ak ;
+	skos:prefLabel "yare3"@ak ;
+	schema:name "yare3"@ak ;
+	rdfs:label "ರೋಗ"@kn ;
+	skos:prefLabel "ರೋಗ"@kn ;
+	schema:name "ರೋಗ"@kn ;
+	rdfs:label "Krankheet"@lb ;
+	skos:prefLabel "Krankheet"@lb ;
+	schema:name "Krankheet"@lb ;
+	rdfs:label "Krankheit"@nds ;
+	skos:prefLabel "Krankheit"@nds ;
+	schema:name "Krankheit"@nds ;
+	schema:description "alterazione dello stato fisiologico e psicologico dell'organismo"@it,
+		"нарушение нормальной жизнедеятельности организма, возникающее в ответ на действие патогенных факторов"@ru,
+		"abnormal condition affecting organisms"@en,
+		"condición anormal que afecta el cuerpo de un organismo"@es,
+		"altération de la santé"@fr,
+		"abnormal condition affecting an organism"@en-gb,
+		"saan a normal a kondision nga umapay ti bagi iti maysa nga organismo"@ilo,
+		"Störung der Funktion eines Organs, der Psyche oder des gesamten Organismus"@de,
+		"ненормално стање које неповољно утиче на организам"@sr,
+		"ненормално стање које неповољно утиче на организам"@sr-ec,
+		"nenormalno stanje koje nepovoljno utiče na organizam"@sr-el,
+		"gastrolcologis"@ur,
+		"μη φυσιολογική κατάσταση που επηρεάζει ένα οργανισμό"@el,
+		"影响生物的异常状况"@zh-cn,
+		"影響生物的異常狀況"@zh,
+		"影響生物的異常狀況"@zh-hk,
+		"影響生物的異常狀況"@zh-tw,
+		"nervous desease"@ml,
+		"altirazzioni dâ saluti"@scn,
+		"生体がその形態や生理・精神機能に障害を起こした状態"@ja,
+		"funcționare sau condiție nenormală a unui organ sau funcții anatomice, alterare a stării de sănătate"@ro,
+		"патологічний процес, який проявляється порушеннями морфології (анатомічної, гістологічної будови), обміну речовин чи / та функціонування організму (його частин) у людини / тварини."@uk,
+		"kondisi tak normal yang berefek kepada badan suatu organisme"@id,
+		"影響生物的異常狀況"@zh-mo,
+		"影响生物的异常状况"@zh-hans,
+		"影響生物的異常狀況"@zh-hant,
+		"影响生物的异常状况"@zh-my,
+		"影响生物的异常状况"@zh-sg,
+		"schadelijke lichamelijke of psychische afwijking van een organisme"@nl,
+		"condición anormal que afecta o corpo dun organismo"@gl,
+		"negativen Impakt op d'Gesondheet, duerch d'Stéirung vun der Funktioun vun engem Organ, der Psyche oder dem gesamten Organismus"@lb,
+		"Distúrbio de um órgão"@pt .
+
+wd:P31 a wikibase:Property ;
+	rdfs:label "instance of"@en ;
+	skos:prefLabel "instance of"@en ;
+	schema:name "instance of"@en ;
+	rdfs:label "nature de l'élément"@fr ;
+	skos:prefLabel "nature de l'élément"@fr ;
+	schema:name "nature de l'élément"@fr ;
+	rdfs:label "ist ein(e)"@de ;
+	skos:prefLabel "ist ein(e)"@de ;
+	schema:name "ist ein(e)"@de ;
+	rdfs:label "istanza di"@it ;
+	skos:prefLabel "istanza di"@it ;
+	schema:name "istanza di"@it ;
+	rdfs:label "instância de"@pt-br ;
+	skos:prefLabel "instância de"@pt-br ;
+	schema:name "instância de"@pt-br ;
+	rdfs:label "estas"@eo ;
+	skos:prefLabel "estas"@eo ;
+	schema:name "estas"@eo ;
+	rdfs:label "הוא"@he ;
+	skos:prefLabel "הוא"@he ;
+	schema:name "הוא"@he ;
+	rdfs:label "instancia de"@es ;
+	skos:prefLabel "instancia de"@es ;
+	schema:name "instancia de"@es ;
+	rdfs:label "esiintymä kohteesta"@fi ;
+	skos:prefLabel "esiintymä kohteesta"@fi ;
+	schema:name "esiintymä kohteesta"@fi ;
+	rdfs:label "ez egy"@hu ;
+	skos:prefLabel "ez egy"@hu ;
+	schema:name "ez egy"@hu ;
+	rdfs:label "это частный случай понятия"@ru ;
+	skos:prefLabel "это частный случай понятия"@ru ;
+	schema:name "это частный случай понятия"@ru ;
+	rdfs:label "je"@hr ;
+	skos:prefLabel "je"@hr ;
+	schema:name "je"@hr ;
+	rdfs:label "is een"@nl ;
+	skos:prefLabel "is een"@nl ;
+	schema:name "is een"@nl ;
+	rdfs:label "είναι"@el ;
+	skos:prefLabel "είναι"@el ;
+	schema:name "είναι"@el ;
+	rdfs:label "jest to"@pl ;
+	skos:prefLabel "jest to"@pl ;
+	schema:name "jest to"@pl ;
+	rdfs:label "је"@sr ;
+	skos:prefLabel "је"@sr ;
+	schema:name "је"@sr ;
+	rdfs:label "instància de"@ca ;
+	skos:prefLabel "instància de"@ca ;
+	schema:name "instància de"@ca ;
+	rdfs:label "instance (čeho)"@cs ;
+	skos:prefLabel "instance (čeho)"@cs ;
+	schema:name "instance (čeho)"@cs ;
+	rdfs:label "forekomst av"@nb ;
+	skos:prefLabel "forekomst av"@nb ;
+	schema:name "forekomst av"@nb ;
+	rdfs:label "instância de"@pt ;
+	skos:prefLabel "instância de"@pt ;
+	schema:name "instância de"@pt ;
+	rdfs:label "pagarigan iti"@ilo ;
+	skos:prefLabel "pagarigan iti"@ilo ;
+	schema:name "pagarigan iti"@ilo ;
+	rdfs:label "primerek od"@sl ;
+	skos:prefLabel "primerek od"@sl ;
+	schema:name "primerek od"@sl ;
+	rdfs:label "гэта"@be ;
+	skos:prefLabel "гэта"@be ;
+	schema:name "гэта"@be ;
+	rdfs:label "다음 종류에 속함"@ko ;
+	skos:prefLabel "다음 종류에 속함"@ko ;
+	schema:name "다음 종류에 속함"@ko ;
+	rdfs:label "førekomst av"@nn ;
+	skos:prefLabel "førekomst av"@nn ;
+	schema:name "førekomst av"@nn ;
+	rdfs:label "là một"@vi ;
+	skos:prefLabel "là một"@vi ;
+	schema:name "là một"@vi ;
+	rdfs:label "асобны выпадак панятку"@be-tarask ;
+	skos:prefLabel "асобны выпадак панятку"@be-tarask ;
+	schema:name "асобны выпадак панятку"@be-tarask ;
+	rdfs:label "je"@bs ;
+	skos:prefLabel "je"@bs ;
+	schema:name "je"@bs ;
+	rdfs:label "เป็น"@th ;
+	skos:prefLabel "เป็น"@th ;
+	schema:name "เป็น"@th ;
+	rdfs:label "є одним із"@uk ;
+	skos:prefLabel "є одним із"@uk ;
+	schema:name "є одним із"@uk ;
+	rdfs:label "instance of"@en-gb ;
+	skos:prefLabel "instance of"@en-gb ;
+	schema:name "instance of"@en-gb ;
+	rdfs:label "instance of"@en-ca ;
+	skos:prefLabel "instance of"@en-ca ;
+	schema:name "instance of"@en-ca ;
+	rdfs:label "分類"@ja ;
+	skos:prefLabel "分類"@ja ;
+	schema:name "分類"@ja ;
+	rdfs:label "bu"@uz ;
+	skos:prefLabel "bu"@uz ;
+	schema:name "bu"@uz ;
+	rdfs:label "ir"@lv ;
+	skos:prefLabel "ir"@lv ;
+	schema:name "ir"@lv ;
+	rdfs:label "est"@la ;
+	skos:prefLabel "est"@la ;
+	schema:name "est"@la ;
+	rdfs:label "یک نمونه از"@fa ;
+	skos:prefLabel "یک نمونه از"@fa ;
+	schema:name "یک نمونه از"@fa ;
+	rdfs:label "instans av"@sv ;
+	skos:prefLabel "instans av"@sv ;
+	schema:name "instans av"@sv ;
+	rdfs:label "is en"@nds ;
+	skos:prefLabel "is en"@nds ;
+	schema:name "is en"@nds ;
+	rdfs:label "este un/o"@ro ;
+	skos:prefLabel "este un/o"@ro ;
+	schema:name "este un/o"@ro ;
+	rdfs:label "வகை"@ta ;
+	skos:prefLabel "வகை"@ta ;
+	schema:name "வகை"@ta ;
+	rdfs:label "adolah"@min ;
+	skos:prefLabel "adolah"@min ;
+	schema:name "adolah"@min ;
+	rdfs:label "adalah"@id ;
+	skos:prefLabel "adalah"@id ;
+	schema:name "adalah"@id ;
+	rdfs:label "é un/unha"@gl ;
+	skos:prefLabel "é un/unha"@gl ;
+	schema:name "é un/unha"@gl ;
+	rdfs:label "er"@is ;
+	skos:prefLabel "er"@is ;
+	schema:name "er"@is ;
+	rdfs:label "is 'n"@af ;
+	skos:prefLabel "is 'n"@af ;
+	schema:name "is 'n"@af ;
+	rdfs:label "არის"@ka ;
+	skos:prefLabel "არის"@ka ;
+	schema:name "არის"@ka ;
+	rdfs:label "ist eine Instanz von"@de-at ;
+	skos:prefLabel "ist eine Instanz von"@de-at ;
+	schema:name "ist eine Instanz von"@de-at ;
+	rdfs:label "tilfælde af"@da ;
+	skos:prefLabel "tilfælde af"@da ;
+	schema:name "tilfælde af"@da ;
+	rdfs:label "instance o"@sco ;
+	skos:prefLabel "instance o"@sco ;
+	schema:name "instance o"@sco ;
+	rdfs:label "je"@sk ;
+	skos:prefLabel "je"@sk ;
+	schema:name "je"@sk ;
+	rdfs:label "ist eine Instanz von"@de-ch ;
+	skos:prefLabel "ist eine Instanz von"@de-ch ;
+	schema:name "ist eine Instanz von"@de-ch ;
+	rdfs:label "is a Instanz vo"@bar ;
+	skos:prefLabel "is a Instanz vo"@bar ;
+	schema:name "is a Instanz vo"@bar ;
+	rdfs:label "নিদর্শন"@bn ;
+	skos:prefLabel "নিদর্শন"@bn ;
+	schema:name "নিদর্শন"@bn ;
+	rdfs:label "l'è un(a)"@lmo ;
+	skos:prefLabel "l'è un(a)"@lmo ;
+	schema:name "l'è un(a)"@lmo ;
+	rdfs:label "is n"@nds-nl ;
+	skos:prefLabel "is n"@nds-nl ;
+	schema:name "is n"@nds-nl ;
+	rdfs:label "je(su)"@sh ;
+	skos:prefLabel "je(su)"@sh ;
+	schema:name "je(su)"@sh ;
+	rdfs:label "doare an elfenn"@br ;
+	skos:prefLabel "doare an elfenn"@br ;
+	schema:name "doare an elfenn"@br ;
+	rdfs:label "инстанция на"@bg ;
+	skos:prefLabel "инстанция на"@bg ;
+	schema:name "инстанция на"@bg ;
+	rdfs:label "प्रकार"@mr ;
+	skos:prefLabel "प्रकार"@mr ;
+	schema:name "प्रकार"@mr ;
+	rdfs:label "نموونەیەک لە"@ckb ;
+	skos:prefLabel "نموونەیەک لە"@ckb ;
+	schema:name "نموونەیەک لە"@ckb ;
+	rdfs:label "حالة خاصة من"@ar ;
+	skos:prefLabel "حالة خاصة من"@ar ;
+	schema:name "حالة خاصة من"@ar ;
+	rdfs:label "üksikjuht nähtusest"@et ;
+	skos:prefLabel "üksikjuht nähtusest"@et ;
+	schema:name "üksikjuht nähtusest"@et ;
+	rdfs:label "est un"@pcd ;
+	skos:prefLabel "est un"@pcd ;
+	schema:name "est un"@pcd ;
+	rdfs:label "nedir"@tr ;
+	skos:prefLabel "nedir"@tr ;
+	schema:name "nedir"@tr ;
+	rdfs:label "उदहारण है"@hi ;
+	skos:prefLabel "उदहारण है"@hi ;
+	schema:name "उदहारण है"@hi ;
+	rdfs:label "је"@sr-ec ;
+	skos:prefLabel "је"@sr-ec ;
+	schema:name "је"@sr-ec ;
+	rdfs:label "istanza di"@co ;
+	skos:prefLabel "istanza di"@co ;
+	schema:name "istanza di"@co ;
+	rdfs:label "natura de l'element"@oc ;
+	skos:prefLabel "natura de l'element"@oc ;
+	schema:name "natura de l'element"@oc ;
+	rdfs:label "е"@mk ;
+	skos:prefLabel "е"@mk ;
+	schema:name "е"@mk ;
+	rdfs:label "פֿאַל"@yi ;
+	skos:prefLabel "פֿאַל"@yi ;
+	schema:name "פֿאַל"@yi ;
+	rdfs:label "性質"@zh ;
+	skos:prefLabel "性質"@zh ;
+	schema:name "性質"@zh ;
+	rdfs:label "serese mupli"@jbo ;
+	skos:prefLabel "serese mupli"@jbo ;
+	schema:name "serese mupli"@jbo ;
+	rdfs:label "ઉદાહરણ"@gu ;
+	skos:prefLabel "ઉદાહરણ"@gu ;
+	schema:name "ઉદાહરણ"@gu ;
+	rdfs:label "contoh"@ms ;
+	skos:prefLabel "contoh"@ms ;
+	schema:name "contoh"@ms ;
+	rdfs:label "ay halimbawa ng"@tl ;
+	skos:prefLabel "ay halimbawa ng"@tl ;
+	schema:name "ay halimbawa ng"@tl ;
+	rdfs:label "è in(a)"@rm ;
+	skos:prefLabel "è in(a)"@rm ;
+	schema:name "è in(a)"@rm ;
+	rdfs:label "es e Beischpell för e(n(e))"@ksh ;
+	skos:prefLabel "es e Beischpell för e(n(e))"@ksh ;
+	schema:name "es e Beischpell för e(n(e))"@ksh ;
+	rdfs:label "ass eng/e(e)(n)"@lb ;
+	skos:prefLabel "ass eng/e(e)(n)"@lb ;
+	schema:name "ass eng/e(e)(n)"@lb ;
+	rdfs:label "to je"@csb ;
+	skos:prefLabel "to je"@csb ;
+	schema:name "to je"@csb ;
+	rdfs:label "Nchumu"@ts ;
+	skos:prefLabel "Nchumu"@ts ;
+	schema:name "Nchumu"@ts ;
+	rdfs:label "isch e"@gsw ;
+	skos:prefLabel "isch e"@gsw ;
+	schema:name "isch e"@gsw ;
+	rdfs:label "دِلِوس"@mzn ;
+	skos:prefLabel "دِلِوس"@mzn ;
+	schema:name "دِلِوس"@mzn ;
+	rdfs:label "దీనియొక్క ఒక అవతారం"@te ;
+	skos:prefLabel "దీనియొక్క ఒక అవతారం"@te ;
+	schema:name "దీనియొక్క ఒక అవతారం"@te ;
+	rdfs:label "ଦୃଷ୍ଟାନ୍ତ"@or ;
+	skos:prefLabel "ଦୃଷ୍ଟାନ୍ତ"@or ;
+	schema:name "ଦୃଷ୍ଟାନ୍ତ"@or ;
+	rdfs:label "je"@sr-el ;
+	skos:prefLabel "je"@sr-el ;
+	schema:name "je"@sr-el ;
+	rdfs:label "is n(e)"@stq ;
+	skos:prefLabel "is n(e)"@stq ;
+	schema:name "is n(e)"@stq ;
+	rdfs:label "instantia de"@ia ;
+	skos:prefLabel "instantia de"@ia ;
+	schema:name "instantia de"@ia ;
+	rdfs:label "no tipo 'e"@nap ;
+	skos:prefLabel "no tipo 'e"@nap ;
+	schema:name "no tipo 'e"@nap ;
+	rdfs:label "係一個"@yue ;
+	skos:prefLabel "係一個"@yue ;
+	schema:name "係一個"@yue ;
+	rdfs:label "karazana"@mg ;
+	skos:prefLabel "karazana"@mg ;
+	schema:name "karazana"@mg ;
+	rdfs:label "esimplari di"@scn ;
+	skos:prefLabel "esimplari di"@scn ;
+	schema:name "esimplari di"@scn ;
+	rdfs:label "honako hau da"@eu ;
+	skos:prefLabel "honako hau da"@eu ;
+	schema:name "honako hau da"@eu ;
+	rdfs:label "is in"@fy ;
+	skos:prefLabel "is in"@fy ;
+	schema:name "is in"@fy ;
+	rdfs:label "പ്രത്യേകമായ ഉദാഹരണം"@ml ;
+	skos:prefLabel "പ്രത്യേകമായ ഉദാഹരണം"@ml ;
+	schema:name "പ്രത്യേകമായ ഉദാഹരണം"@ml ;
+	rdfs:label "төшенчәнең аерым очрагы"@tt ;
+	skos:prefLabel "төшенчәнең аерым очрагы"@tt ;
+	schema:name "төшенчәнең аерым очрагы"@tt ;
+	rdfs:label "хӀара долара кхетам бу"@ce ;
+	skos:prefLabel "хӀара долара кхетам бу"@ce ;
+	schema:name "хӀара долара кхетам бу"@ce ;
+	rdfs:label "उदाहरण"@ne ;
+	skos:prefLabel "उदाहरण"@ne ;
+	schema:name "उदाहरण"@ne ;
+	rdfs:label "instancia de"@ast ;
+	skos:prefLabel "instancia de"@ast ;
+	schema:name "instancia de"@ast ;
+	rdfs:label "enghraifft o'r canlynol"@cy ;
+	skos:prefLabel "enghraifft o'r canlynol"@cy ;
+	schema:name "enghraifft o'r canlynol"@cy ;
+	rdfs:label "yra"@lt ;
+	skos:prefLabel "yra"@lt ;
+	schema:name "yra"@lt ;
+	rdfs:label "հասկացության մասնավոր դեպք"@hy ;
+	skos:prefLabel "հասկացության մասնավոր դեպք"@hy ;
+	schema:name "հասկացության մասնավոր դեպք"@hy ;
+	rdfs:label "उदाहरण"@mai ;
+	skos:prefLabel "उदाहरण"@mai ;
+	schema:name "उदाहरण"@mai ;
+	rdfs:label "As en"@frr ;
+	skos:prefLabel "As en"@frr ;
+	schema:name "As en"@frr ;
+	rdfs:label "er eitt"@fo ;
+	skos:prefLabel "er eitt"@fo ;
+	schema:name "er eitt"@fo ;
+	rdfs:label "ಉದಾಹರಣೆಗೆ"@kn ;
+	skos:prefLabel "ಉದಾಹರಣೆಗೆ"@kn ;
+	schema:name "ಉದಾಹರಣೆಗೆ"@kn ;
+	rdfs:label "shampla de"@ga ;
+	skos:prefLabel "shampla de"@ga ;
+	schema:name "shampla de"@ga ;
+	rdfs:label "egzanp nan"@ht ;
+	skos:prefLabel "egzanp nan"@ht ;
+	schema:name "egzanp nan"@ht ;
+	rdfs:label "esas"@io ;
+	skos:prefLabel "esas"@io ;
+	schema:name "esas"@io ;
+	rdfs:label "binon"@vo ;
+	skos:prefLabel "binon"@vo ;
+	schema:name "binon"@vo ;
+	rdfs:label "性質"@zh-hant ;
+	skos:prefLabel "性質"@zh-hant ;
+	schema:name "性質"@zh-hant ;
+	rdfs:label "性质"@zh-hans ;
+	skos:prefLabel "性质"@zh-hans ;
+	schema:name "性质"@zh-hans ;
+	rdfs:label "性質"@zh-hk ;
+	skos:prefLabel "性質"@zh-hk ;
+	schema:name "性質"@zh-hk ;
+	rdfs:label "性质"@zh-cn ;
+	skos:prefLabel "性质"@zh-cn ;
+	schema:name "性质"@zh-cn ;
+	rdfs:label "性質"@zh-mo ;
+	skos:prefLabel "性質"@zh-mo ;
+	schema:name "性質"@zh-mo ;
+	rdfs:label "性质"@zh-sg ;
+	skos:prefLabel "性质"@zh-sg ;
+	schema:name "性质"@zh-sg ;
+	rdfs:label "性質"@zh-tw ;
+	skos:prefLabel "性質"@zh-tw ;
+	schema:name "性質"@zh-tw ;
+	rdfs:label "ਨਮੂਨਾ ਹੈ"@pa ;
+	skos:prefLabel "ਨਮੂਨਾ ਹੈ"@pa ;
+	schema:name "ਨਮੂਨਾ ਹੈ"@pa ;
+	rdfs:label "mînakek ji bo"@ku-latn ;
+	skos:prefLabel "mînakek ji bo"@ku-latn ;
+	schema:name "mînakek ji bo"@ku-latn ;
+	rdfs:label "instancë e"@sq ;
+	skos:prefLabel "instancë e"@sq ;
+	schema:name "instancë e"@sq ;
+	rdfs:label "alimbawa ning"@pam ;
+	skos:prefLabel "alimbawa ning"@pam ;
+	schema:name "alimbawa ning"@pam ;
+	rdfs:label "je"@hsb ;
+	skos:prefLabel "je"@hsb ;
+	schema:name "je"@hsb ;
+	rdfs:label "instancia de"@an ;
+	skos:prefLabel "instancia de"@an ;
+	schema:name "instancia de"@an ;
+	rdfs:label "як намуна аз"@tg ;
+	skos:prefLabel "як намуна аз"@tg ;
+	schema:name "як намуна аз"@tg ;
+	rdfs:label "классы"@ky ;
+	skos:prefLabel "классы"@ky ;
+	schema:name "классы"@ky ;
+	rdfs:label "төшөнсәнең шәхсән осрағы"@ba ;
+	skos:prefLabel "төшөнсәнең шәхсән осрағы"@ba ;
+	schema:name "төшөнсәнең шәхсән осрағы"@ba ;
+	rdfs:label "àkórí"@yo ;
+	skos:prefLabel "àkórí"@yo ;
+	schema:name "àkórí"@yo ;
+	rdfs:label "ಉದಾರ್ಮೆಗ್"@tcy ;
+	skos:prefLabel "ಉದಾರ್ಮೆಗ್"@tcy ;
+	schema:name "ಉದಾರ್ಮೆಗ್"@tcy ;
+	rdfs:label "як намуна аз"@tg-cyrl ;
+	skos:prefLabel "як намуна аз"@tg-cyrl ;
+	schema:name "як намуна аз"@tg-cyrl ;
+	rdfs:label "yak namuna az"@tg-latn ;
+	skos:prefLabel "yak namuna az"@tg-latn ;
+	schema:name "yak namuna az"@tg-latn ;
+	rdfs:label "töşençäneñ ayırım oçrağı"@tt-latn ;
+	skos:prefLabel "töşençäneñ ayırım oçrağı"@tt-latn ;
+	schema:name "töşençäneñ ayırım oçrağı"@tt-latn ;
+	rdfs:label "төшенчәнең аерым очрагы"@tt-cyrl ;
+	skos:prefLabel "төшенчәнең аерым очрагы"@tt-cyrl ;
+	schema:name "төшенчәнең аерым очрагы"@tt-cyrl ;
+	rdfs:label "anlayışın xüsusi halıdır"@az ;
+	skos:prefLabel "anlayışın xüsusi halıdır"@az ;
+	schema:name "anlayışın xüsusi halıdır"@az ;
+	rdfs:label "مثال بہ"@ur ;
+	skos:prefLabel "مثال بہ"@ur ;
+	schema:name "مثال بہ"@ur ;
+	rdfs:label "واحد من"@arz ;
+	skos:prefLabel "واحد من"@arz ;
+	schema:name "واحد من"@arz ;
+	rdfs:label "өйдөбүл сорҕото (биирдэмэ)"@sah ;
+	skos:prefLabel "өйдөбүл сорҕото (биирдэмэ)"@sah ;
+	schema:name "өйдөбүл сорҕото (биирдэмэ)"@sah ;
+	schema:description "that class of which this subject is a particular example and member. (Subject typically an individual member with Proper Name label.) Different from P279 (subclass of)"@en,
+		"questo elemento è un'istanza di questa classe, categoria o gruppo di oggetti"@it,
+		"Cet élément est un exemple spécifique de cette classe qui en précise la nature. Ne pas confondre avec la propriété P279 (sous-classe de)."@fr,
+		"aquela classe a qual este sujeito é um membro e exemplo particular. (O sujeito é tipicamente um membro individual com um Nome Próprio). Diferente da P279 (subclasse de)"@pt-br,
+		"az elem egy példánya valaminek, vagy egy csoport tagja. Nem egyenlő a P279 (alosztálya ennek) tulajdonsággal"@hu,
+		"ova stavka je primjer ove druge stavke"@hr,
+		"Ausprägung oder Exemplar einer Sache, Mitglied einer Klasse. Unterscheide von P279 (Unterklasse von)."@de,
+		"αυτό το αντικείμενο είναι εξειδικευμένο παράδειγμα και μέλος αυτής της τάξης. Δεν θα πρέπει να συγχέεται με την Ιδιότητα:P279"@el,
+		"kohde, johon ominaisuus liitetään, on esiintymä ominaisuuden arvoksi asetettavasta kohteesta"@fi,
+		"daytoy a banag ket maysa a pagarigan iti daytoy a sabali a banag"@ilo,
+		"dette elementet er et konkret objekt/eksemplar (instans) av denne klassen, kategorien eller objektgruppen"@nb,
+		"este elemento es un ejemplar del otro elemento"@es,
+		"khoản mục này là một thực thể của khoản mục kia"@vi,
+		"агульнае азначэньне, чым зьяўляецца аб’ект"@be-tarask,
+		"この項目をインスタンスとする種類・概念"@ja,
+		"that class of which this subject is a particular example and member. (Subject typically an individual member with Proper Name label.) Different from P279 (subclass of)"@en-gb,
+		"that class of which this subject is a particular example and member. (Subject typically an individual member with Proper Name label.) Different from P279 (subclass of)"@en-ca,
+		"stanowi przykład (jest elementem) danej klasy"@pl,
+		"šī vienība ir šīs citas vienības instance"@lv,
+		"aquest element és un objecte concret (instància) d'aquesta classe, categoria o grup d'objectes"@ca,
+		"är ett konkret objekt (instans) av denna klass, kategori eller objektgrupp"@sv,
+		"آیتم مورد نظر یک نوع ... است"@fa,
+		"o elemento é unha instancia doutro elemento"@gl,
+		"Þessi hlutur er dæmi um annan hlut"@is,
+		"dit item is een exemplaar (instantie) van deze groep elementen"@nl,
+		"данный элемент представляет собой конкретный объект (экземпляр / частный случай) класса, категории. Не путать с Property:P279 (\"подкласс от\")."@ru,
+		"цей елемент є конкретним прикладом об'єкта (окремим випадком) такого класу, категорії чи групи об'єктів"@uk,
+		"Ausprägung oder Exemplar einer Sache"@de-at,
+		"dette emne er et konkret objekt af denne kategori, klasse eller objektgruppe."@da,
+		"acest element este un exemplar din clasa definită de acel element"@ro,
+		"Ausprägung oder Exemplar einer Sache"@de-ch,
+		"dit item is n eksemplaor/instansie van t tweede item (Veurbeeld: \"Mark Rutte\" is nen \"politieker\")"@nds-nl,
+		"הנדון הוא מקרה של"@he,
+		"обектът е инстанция на даден клас"@bg,
+		"यह आइटम इस अन्य आइटम का उदहारण है"@hi,
+		"ова ставка је конкретан објекат (инстанца) класе, категорије или групе објеката"@sr,
+		"ова ставка је конкретан објекат (инстанца) класе, категорије или групе објеката"@sr-ec,
+		"предметот е примерок/случај на друг предмет"@mk,
+		"tato položka je jedna konkrétní věc (exemplář, příklad) patřící do této třídy, kategorie nebo skupiny předmětů"@cs,
+		"આ લેખ આ પ્રકાર અથવા શ્રેણીના અન્ય લેખોનું સચોટ ઉદાહરણ છે."@gu,
+		"di Saach es ene beschtemmpte, konkrete Jääjeschtand vun dä Zoot, udder Jropp, udder dä Aat"@ksh,
+		"tiu ĉi ero estas konkreta aĵo (instanco) de tiu ĉi klaso, kategorio aŭ objektogrupo"@eo,
+		"항목 주제는 다음 종류에 속함 (해당 종류에 속하는 것 중 하나를 고르라고 했을 때 이 항목도 고를 수 있어야 함)"@ko,
+		"natura de, expression de o exemplar de"@oc,
+		"آیتم جور"@mzn,
+		"本項目所屬的性質，本以項目為實例的類別"@zh,
+		"este item é uma instância deste outro item"@pt,
+		"Butir ini adalah contoh spesifik dan anggota dari sebuah kelas tertentu. Jangan bingung dengan atribut Property:P279 (subkelas dari)."@id,
+		"ova stavka je konkretan objekat (instanca) klase, kategorije ili grupe objekata"@sr-el,
+		"bez' ez eo an elfenn-mañ lodek eus ar rummad pe renkad-mañ, pe un elfenn eus ur strollad"@br,
+		"je konkretna izvedba objekta v razredu, kategoriji ali skupini objektov"@sl,
+		"sto fatto o sta cosa è no tipo 'e nato elemento"@nap,
+		"حجيج"@rif,
+		"呢件嘢係以下概念嘅一個實例"@yue,
+		"sta cosa è n'esimplari cuncretu di sta classi, di sta catigurìa, o di stu cuncettu"@scn,
+		"elementu hau mota, kategoria edo ale talde honen ale (adibide) konkretu bat da"@eu,
+		"ျမန္မာဘာသာ"@my,
+		"कुनै पनि वस्तुको एक स्थिती जनाउँछ र कुनै पनि समूहको सदस्य रहेको जनाउँछ"@ne,
+		"esti elementu ye un casu concretu d'esta categoría o grupu"@ast,
+		"இவ்வுருப்படியானது, குறிப்பிடப்படுகின்ற வகுப்பைச் சேர்ந்ததும் அவ்வகுப்புக்கான ஒரு திட்டவட்டமான எடுத்துக்காட்டும் ஆகும்."@ta,
+		"本項目所屬的性質，本以項目為實例的類別"@zh-hant,
+		"本项目所属的性质，本以项目为实例的类别"@zh-hans,
+		"本項目所屬的性質，本以項目為實例的類別"@zh-hk,
+		"本项目所属的性质，本以项目为实例的类别"@zh-cn,
+		"本項目所屬的性質，本以項目為實例的類別"@zh-mo,
+		"本项目所属的性质，本以项目为实例的类别"@zh-sg,
+		"本項目所屬的性質，本以項目為實例的類別"@zh-tw,
+		"აღნიშნული ელემენტი წარმოადგენს კონკრეტული ობიექტის კლასს, კატეგორიას ან ობიექტთა ჯგუფს"@ka,
+		"ky artikull është një shembull specifik dhe një anëtar i asaj klase. Për të mos ngatërrohet me tiparin Property:P279 (nënklasën e)"@sq,
+		"táto položka je jedna konkrétna vec (exemplár, príklad) patriaci do tejto triedy, kategórie alebo skupiny predmetov"@sk,
+		"Bu madde belirli bir örnektir ve o sınıfın bir üyesidir. Özellikle karıştırılmamalıdır:P279 (alt sınıfı)"@tr,
+		"što je objekt?"@hsb,
+		"صنف من الأشياء يوجد شيء واحد منه ولا يتكرر. ويجب أن لا يتم الخلط بينه وبين الخاصية: P279 (نوع فرعي من)."@ar,
+		"คุณลักษณะที่บ่งบอกถึงสิ่งๆ นั้นว่าเป็นตัวอย่างและเป็นสมาชิกของกลุ่มใด (โดยปกติทุกรายการมีป้ายชื่อที่ถูกต้อง) แตกต่างจาก P279 (กลุ่มย่อยของ)"@th,
+		"Element vun enger Grupp, Kategorie oder Klass"@lb,
+		"ಈ ವಿಸಯೊ ಒಂಜಿ ನಿರ್ದಿಸ್ಟೊ ಉದಾರ್ಮೆ ಬುಕ್ಕೊ ಸದಸ್ಯೆ ಆದಿಪ್ಪುನ ಹ್ಯಾಟ್ ವರ್ಗೊ."@tcy,
+		"that cless o that this subject is a particular exemple an member. (Subject teepically an individual member wi Proper Name label.) Different frae P279 (subcless o)."@sco,
+		"bu element müəyyən anlayışın xüsusi halını təsvir edir. P279 (yarımsinif) ilə səhv salmayın."@az,
+		"kelas di mana subjek ini merupakan contoh tertentu dan ahli. (Subjek biasanya ahli individu dengan label Nama Khas.) Berbeza daripada P279 (subkelas)"@ms,
+		"бу тыл ханнык эрэ бөлөх биирдэмэ. Маны кытта булкуйума: Property:P279"@sah ;
+	a wikibase:Property ;
+	wikibase:propertyType <http://wikiba.se/ontology-beta#WikibaseItem> ;
+	wikibase:directClaim wdt:P31 ;
+	wikibase:claim p:P31 ;
+	wikibase:statementProperty ps:P31 ;
+	wikibase:statementValue psv:P31 ;
+	wikibase:qualifier pq:P31 ;
+	wikibase:qualifierValue pqv:P31 ;
+	wikibase:reference pr:P31 ;
+	wikibase:referenceValue prv:P31 ;
+	wikibase:novalue wdno:P31 .
+
+p:P31 a owl:ObjectProperty .
+
+psv:P31 a owl:ObjectProperty .
+
+pqv:P31 a owl:ObjectProperty .
+
+prv:P31 a owl:ObjectProperty .
+
+wdt:P31 a owl:ObjectProperty .
+
+ps:P31 a owl:ObjectProperty .
+
+pq:P31 a owl:ObjectProperty .
+
+pr:P31 a owl:ObjectProperty .
+
+wdno:P31 a owl:Class ;
+	owl:complementOf _:genid5 .
+
+_:genid5 a owl:Restriction ;
+	owl:onProperty wdt:P31 ;
+	owl:someValuesFrom owl:Thing .
+
+wd:P2892 a wikibase:Property ;
+	rdfs:label "UMLS CUI"@en ;
+	skos:prefLabel "UMLS CUI"@en ;
+	schema:name "UMLS CUI"@en ;
+	rdfs:label "UMLS CUI"@ru ;
+	skos:prefLabel "UMLS CUI"@ru ;
+	schema:name "UMLS CUI"@ru ;
+	rdfs:label "UMLS CUI"@pl ;
+	skos:prefLabel "UMLS CUI"@pl ;
+	schema:name "UMLS CUI"@pl ;
+	rdfs:label "UMLS CUI"@de ;
+	skos:prefLabel "UMLS CUI"@de ;
+	schema:name "UMLS CUI"@de ;
+	rdfs:label "UMLS CUI"@es ;
+	skos:prefLabel "UMLS CUI"@es ;
+	schema:name "UMLS CUI"@es ;
+	rdfs:label "UMLS CUI"@fr ;
+	skos:prefLabel "UMLS CUI"@fr ;
+	schema:name "UMLS CUI"@fr ;
+	rdfs:label "UMLS CUI"@be-tarask ;
+	skos:prefLabel "UMLS CUI"@be-tarask ;
+	schema:name "UMLS CUI"@be-tarask ;
+	rdfs:label "UMLS CUI"@ja ;
+	skos:prefLabel "UMLS CUI"@ja ;
+	schema:name "UMLS CUI"@ja ;
+	rdfs:label "UMLS CUI"@it ;
+	skos:prefLabel "UMLS CUI"@it ;
+	schema:name "UMLS CUI"@it ;
+	rdfs:label "UMLS CUI"@mk ;
+	skos:prefLabel "UMLS CUI"@mk ;
+	schema:name "UMLS CUI"@mk ;
+	rdfs:label "UMLS CUI"@oc ;
+	skos:prefLabel "UMLS CUI"@oc ;
+	schema:name "UMLS CUI"@oc ;
+	rdfs:label "UMLS CUI"@nl ;
+	skos:prefLabel "UMLS CUI"@nl ;
+	schema:name "UMLS CUI"@nl ;
+	rdfs:label "UMLS CUI"@ca ;
+	skos:prefLabel "UMLS CUI"@ca ;
+	schema:name "UMLS CUI"@ca ;
+	rdfs:label "UMLS CUI"@nn ;
+	skos:prefLabel "UMLS CUI"@nn ;
+	schema:name "UMLS CUI"@nn ;
+	rdfs:label "UMLS CUI"@nb ;
+	skos:prefLabel "UMLS CUI"@nb ;
+	schema:name "UMLS CUI"@nb ;
+	rdfs:label "UMLS CUI"@uk ;
+	skos:prefLabel "UMLS CUI"@uk ;
+	schema:name "UMLS CUI"@uk ;
+	rdfs:label "نظام اللغة الطبية الموحدة"@ar ;
+	skos:prefLabel "نظام اللغة الطبية الموحدة"@ar ;
+	schema:name "نظام اللغة الطبية الموحدة"@ar ;
+	schema:description "NLM Unified Medical Language System (UMLS) controlled biomedical vocabulary unique identifier"@en,
+		"NLM Unified Medical Language System (UMLS) controlled unique identifier"@ru,
+		"Unified Medical Language System (UMLS) controlled biomedical vocabulary unique identifier (CUI)"@fr,
+		"унікальны ідэнтыфікатар, кантраляваны біямэдычным слоўнікам Уніфікаванай мэдычнай моўнай сыстэмы (UMLS) NLM"@be-tarask,
+		"Unified Medical Language System"@it,
+		"NLM Unified Medical Language System (UMLS) controlled unique identifier (CUI)"@uk ;
+	a wikibase:Property ;
+	wikibase:propertyType <http://wikiba.se/ontology-beta#ExternalId> ;
+	wikibase:directClaim wdt:P2892 ;
+	wikibase:claim p:P2892 ;
+	wikibase:statementProperty ps:P2892 ;
+	wikibase:statementValue psv:P2892 ;
+	wikibase:qualifier pq:P2892 ;
+	wikibase:qualifierValue pqv:P2892 ;
+	wikibase:reference pr:P2892 ;
+	wikibase:referenceValue prv:P2892 ;
+	wikibase:novalue wdno:P2892 ;
+	wikibase:directClaimNormalized wdtn:P2892 ;
+	wikibase:statementValueNormalized psn:P2892 ;
+	wikibase:qualifierValueNormalized pqn:P2892 ;
+	wikibase:referenceValueNormalized prn:P2892 .
+
+p:P2892 a owl:ObjectProperty .
+
+psv:P2892 a owl:ObjectProperty .
+
+pqv:P2892 a owl:ObjectProperty .
+
+prv:P2892 a owl:ObjectProperty .
+
+wdt:P2892 a owl:DatatypeProperty .
+
+ps:P2892 a owl:DatatypeProperty .
+
+pq:P2892 a owl:DatatypeProperty .
+
+pr:P2892 a owl:DatatypeProperty .
+
+psn:P2892 a owl:ObjectProperty .
+
+pqn:P2892 a owl:ObjectProperty .
+
+prn:P2892 a owl:ObjectProperty .
+
+wdtn:P2892 a owl:ObjectProperty .
+
+wdno:P2892 a owl:Class ;
+	owl:complementOf _:genid6 .
+
+_:genid6 a owl:Restriction ;
+	owl:onProperty wdt:P2892 ;
+	owl:someValuesFrom owl:Thing .
+
+wd:Q44741730 a wikibase:Item ;
+	rdfs:label "Disease Ontology release 2017-179"@en ;
+	skos:prefLabel "Disease Ontology release 2017-179"@en ;
+	schema:name "Disease Ontology release 2017-179"@en ;
+	schema:description "Release of the Disease Ontology"@en .
+
+wd:P248 a wikibase:Property ;
+	rdfs:label "affirmé dans"@fr ;
+	skos:prefLabel "affirmé dans"@fr ;
+	schema:name "affirmé dans"@fr ;
+	rdfs:label "stated in"@en ;
+	skos:prefLabel "stated in"@en ;
+	schema:name "stated in"@en ;
+	rdfs:label "afirmat a"@ca ;
+	skos:prefLabel "afirmat a"@ca ;
+	schema:name "afirmat a"@ca ;
+	rdfs:label "ذکر شده در"@fa ;
+	skos:prefLabel "ذکر شده در"@fa ;
+	schema:name "ذکر شده در"@fa ;
+	rdfs:label "наведено у"@sr ;
+	skos:prefLabel "наведено у"@sr ;
+	schema:name "наведено у"@sr ;
+	rdfs:label "nachgewiesen in"@de ;
+	skos:prefLabel "nachgewiesen in"@de ;
+	schema:name "nachgewiesen in"@de ;
+	rdfs:label "állítva itt"@hu ;
+	skos:prefLabel "állítva itt"@hu ;
+	schema:name "állítva itt"@hu ;
+	rdfs:label "vermeld in"@nl ;
+	skos:prefLabel "vermeld in"@nl ;
+	schema:name "vermeld in"@nl ;
+	rdfs:label "утверждается в"@ru ;
+	skos:prefLabel "утверждается в"@ru ;
+	schema:name "утверждается в"@ru ;
+	rdfs:label "fonte dell'affermazione"@it ;
+	skos:prefLabel "fonte dell'affermazione"@it ;
+	schema:name "fonte dell'affermazione"@it ;
+	rdfs:label "źródło"@pl ;
+	skos:prefLabel "źródło"@pl ;
+	schema:name "źródło"@pl ;
+	rdfs:label "vermeld in"@af ;
+	skos:prefLabel "vermeld in"@af ;
+	schema:name "vermeld in"@af ;
+	rdfs:label "джерело"@uk ;
+	skos:prefLabel "джерело"@uk ;
+	schema:name "джерело"@uk ;
+	rdfs:label "出典"@ja ;
+	skos:prefLabel "出典"@ja ;
+	schema:name "出典"@ja ;
+	rdfs:label "afirmado en"@es ;
+	skos:prefLabel "afirmado en"@es ;
+	schema:name "afirmado en"@es ;
+	rdfs:label "afirmado em"@pt ;
+	skos:prefLabel "afirmado em"@pt ;
+	schema:name "afirmado em"@pt ;
+	rdfs:label "δηλώνεται σε"@el ;
+	skos:prefLabel "δηλώνεται σε"@el ;
+	schema:name "δηλώνεται σε"@el ;
+	rdfs:label "naibagbaga idiay"@ilo ;
+	skos:prefLabel "naibagbaga idiay"@ilo ;
+	schema:name "naibagbaga idiay"@ilo ;
+	rdfs:label "được tuyên bố trong"@vi ;
+	skos:prefLabel "được tuyên bố trong"@vi ;
+	schema:name "được tuyên bố trong"@vi ;
+	rdfs:label "зьвесткі з"@be-tarask ;
+	skos:prefLabel "зьвесткі з"@be-tarask ;
+	schema:name "зьвесткі з"@be-tarask ;
+	rdfs:label "载于"@zh-hans ;
+	skos:prefLabel "载于"@zh-hans ;
+	schema:name "载于"@zh-hans ;
+	rdfs:label "載於"@zh-hant ;
+	skos:prefLabel "載於"@zh-hant ;
+	schema:name "載於"@zh-hant ;
+	rdfs:label "afirmat în"@ro ;
+	skos:prefLabel "afirmat în"@ro ;
+	schema:name "afirmat în"@ro ;
+	rdfs:label "steiht in"@nds ;
+	skos:prefLabel "steiht in"@nds ;
+	schema:name "steiht in"@nds ;
+	rdfs:label "נטען ב"@he ;
+	skos:prefLabel "נטען ב"@he ;
+	schema:name "נטען ב"@he ;
+	rdfs:label "afirmado em"@pt-br ;
+	skos:prefLabel "afirmado em"@pt-br ;
+	schema:name "afirmado em"@pt-br ;
+	rdfs:label "паведамляецца ў"@be ;
+	skos:prefLabel "паведамляецца ў"@be ;
+	schema:name "паведамляецца ў"@be ;
+	rdfs:label "anført i"@da ;
+	skos:prefLabel "anført i"@da ;
+	schema:name "anført i"@da ;
+	rdfs:label "anges i"@sv ;
+	skos:prefLabel "anges i"@sv ;
+	schema:name "anges i"@sv ;
+	rdfs:label "наведено во"@mk ;
+	skos:prefLabel "наведено во"@mk ;
+	schema:name "наведено во"@mk ;
+	rdfs:label "uvedeno v"@cs ;
+	skos:prefLabel "uvedeno v"@cs ;
+	schema:name "uvedeno v"@cs ;
+	rdfs:label "sagt i"@nn ;
+	skos:prefLabel "sagt i"@nn ;
+	schema:name "sagt i"@nn ;
+	rdfs:label "todettu"@fi ;
+	skos:prefLabel "todettu"@fi ;
+	schema:name "todettu"@fi ;
+	rdfs:label "载于"@zh ;
+	skos:prefLabel "载于"@zh ;
+	schema:name "载于"@zh ;
+	rdfs:label "载于"@zh-cn ;
+	skos:prefLabel "载于"@zh-cn ;
+	schema:name "载于"@zh-cn ;
+	rdfs:label "dinyatakan dalam"@ms ;
+	skos:prefLabel "dinyatakan dalam"@ms ;
+	schema:name "dinyatakan dalam"@ms ;
+	rdfs:label "navedeno u"@bs ;
+	skos:prefLabel "navedeno u"@bs ;
+	schema:name "navedeno u"@bs ;
+	rdfs:label "asertita en"@eo ;
+	skos:prefLabel "asertita en"@eo ;
+	schema:name "asertita en"@eo ;
+	rdfs:label "nevnt i"@nb ;
+	skos:prefLabel "nevnt i"@nb ;
+	schema:name "nevnt i"@nb ;
+	rdfs:label "apgalvojums izteikts"@lv ;
+	skos:prefLabel "apgalvojums izteikts"@lv ;
+	schema:name "apgalvojums izteikts"@lv ;
+	rdfs:label "statit in"@sco ;
+	skos:prefLabel "statit in"@sco ;
+	schema:name "statit in"@sco ;
+	rdfs:label "afirmat dins"@oc ;
+	skos:prefLabel "afirmat dins"@oc ;
+	schema:name "afirmat dins"@oc ;
+	rdfs:label "다음에 서술되어 있음"@ko ;
+	skos:prefLabel "다음에 서술되어 있음"@ko ;
+	schema:name "다음에 서술되어 있음"@ko ;
+	rdfs:label "noogwise in"@gsw ;
+	skos:prefLabel "noogwise in"@gsw ;
+	schema:name "noogwise in"@gsw ;
+	rdfs:label "載於"@zh-hk ;
+	skos:prefLabel "載於"@zh-hk ;
+	schema:name "載於"@zh-hk ;
+	rdfs:label "მტკიცდება"@ka ;
+	skos:prefLabel "მტკიცდება"@ka ;
+	schema:name "მტკიცდება"@ka ;
+	rdfs:label "allikas"@et ;
+	skos:prefLabel "allikas"@et ;
+	schema:name "allikas"@et ;
+	rdfs:label "afirmado en"@gl ;
+	skos:prefLabel "afirmado en"@gl ;
+	schema:name "afirmado en"@gl ;
+	rdfs:label "कहा गया"@hi ;
+	skos:prefLabel "कहा गया"@hi ;
+	schema:name "कहा गया"@hi ;
+	rdfs:label "ఇక్కడ ప్రస్తావించారు"@te ;
+	skos:prefLabel "ఇక్కడ ప్రస్తావించారు"@te ;
+	schema:name "ఇక్కడ ప్రస్తావించారు"@te ;
+	rdfs:label "載於"@zh-tw ;
+	skos:prefLabel "載於"@zh-tw ;
+	schema:name "載於"@zh-tw ;
+	rdfs:label "наведено у"@sr-ec ;
+	skos:prefLabel "наведено у"@sr-ec ;
+	schema:name "наведено у"@sr-ec ;
+	rdfs:label "navedeno u"@sr-el ;
+	skos:prefLabel "navedeno u"@sr-el ;
+	schema:name "navedeno u"@sr-el ;
+	rdfs:label "stated in"@en-gb ;
+	skos:prefLabel "stated in"@en-gb ;
+	schema:name "stated in"@en-gb ;
+	rdfs:label "konfirméiert an/op"@lb ;
+	skos:prefLabel "konfirméiert an/op"@lb ;
+	schema:name "konfirméiert an/op"@lb ;
+	rdfs:label "navedeno v"@sl ;
+	skos:prefLabel "navedeno v"@sl ;
+	schema:name "navedeno v"@sl ;
+	rdfs:label "affirmate in"@ia ;
+	skos:prefLabel "affirmate in"@ia ;
+	schema:name "affirmate in"@ia ;
+	rdfs:label "affirmatu nta"@scn ;
+	skos:prefLabel "affirmatu nta"@scn ;
+	schema:name "affirmatu nta"@scn ;
+	rdfs:label "مذكور في"@ar ;
+	skos:prefLabel "مذكور في"@ar ;
+	schema:name "مذكور في"@ar ;
+	rdfs:label "apud"@la ;
+	skos:prefLabel "apud"@la ;
+	schema:name "apud"@la ;
+	rdfs:label "voalaza anaty"@mg ;
+	skos:prefLabel "voalaza anaty"@mg ;
+	schema:name "voalaza anaty"@mg ;
+	rdfs:label "stated in"@en-ca ;
+	skos:prefLabel "stated in"@en-ca ;
+	schema:name "stated in"@en-ca ;
+	rdfs:label "указано в"@bg ;
+	skos:prefLabel "указано в"@bg ;
+	schema:name "указано в"@bg ;
+	rdfs:label "sumber rujukan"@id ;
+	skos:prefLabel "sumber rujukan"@id ;
+	schema:name "sumber rujukan"@id ;
+	rdfs:label "adierazpenaren kokalekua"@eu ;
+	skos:prefLabel "adierazpenaren kokalekua"@eu ;
+	schema:name "adierazpenaren kokalekua"@eu ;
+	rdfs:label "հաստատվում է"@hy ;
+	skos:prefLabel "հաստատվում է"@hy ;
+	schema:name "հաստատվում է"@hy ;
+	rdfs:label "afirmao en"@ast ;
+	skos:prefLabel "afirmao en"@ast ;
+	schema:name "afirmao en"@ast ;
+	rdfs:label "datganwyd yn"@cy ;
+	skos:prefLabel "datganwyd yn"@cy ;
+	schema:name "datganwyd yn"@cy ;
+	rdfs:label "nakasaad sa"@tl ;
+	skos:prefLabel "nakasaad sa"@tl ;
+	schema:name "nakasaad sa"@tl ;
+	rdfs:label "ବର୍ଣ୍ଣିତ ହେଇଛି"@or ;
+	skos:prefLabel "ବର୍ଣ୍ଣିତ ହେଇଛି"@or ;
+	schema:name "ବର୍ଣ୍ଣିତ ହେଇଛି"@or ;
+	rdfs:label "Efterwiset uun"@frr ;
+	skos:prefLabel "Efterwiset uun"@frr ;
+	schema:name "Efterwiset uun"@frr ;
+	rdfs:label "উদ্ধৃতির ভাষা"@bn ;
+	skos:prefLabel "উদ্ধৃতির ভাষা"@bn ;
+	schema:name "উদ্ধৃতির ভাষা"@bn ;
+	rdfs:label "載於"@zh-mo ;
+	skos:prefLabel "載於"@zh-mo ;
+	schema:name "載於"@zh-mo ;
+	rdfs:label "载于"@zh-my ;
+	skos:prefLabel "载于"@zh-my ;
+	schema:name "载于"@zh-my ;
+	rdfs:label "载于"@zh-sg ;
+	skos:prefLabel "载于"@zh-sg ;
+	schema:name "载于"@zh-sg ;
+	rdfs:label "કહેવાયું છે"@gu ;
+	skos:prefLabel "કહેવાયું છે"@gu ;
+	schema:name "કહેવાયું છે"@gu ;
+	rdfs:label "uvedené v"@sk ;
+	skos:prefLabel "uvedené v"@sk ;
+	schema:name "uvedené v"@sk ;
+	rdfs:label "meneget e"@br ;
+	skos:prefLabel "meneget e"@br ;
+	schema:name "meneget e"@br ;
+	rdfs:label "хабар дода шудааст дар"@tg ;
+	skos:prefLabel "хабар дода шудааст дар"@tg ;
+	schema:name "хабар дода шудааст дар"@tg ;
+	rdfs:label "хабар дода шудааст дар"@tg-cyrl ;
+	skos:prefLabel "хабар дода шудааст дар"@tg-cyrl ;
+	schema:name "хабар дода шудааст дар"@tg-cyrl ;
+	rdfs:label "ritt"@nap ;
+	skos:prefLabel "ritt"@nap ;
+	schema:name "ritt"@nap ;
+	rdfs:label "нәшер ителгән мәғлүмәт сығанағы"@ba ;
+	skos:prefLabel "нәшер ителгән мәғлүмәт сығанағы"@ba ;
+	schema:name "нәшер ителгән мәғлүмәт сығанағы"@ba ;
+	rdfs:label "مذکور در"@ur ;
+	skos:prefLabel "مذکور در"@ur ;
+	schema:name "مذکور در"@ur ;
+	rdfs:label "iddianın kaynağı"@tr ;
+	skos:prefLabel "iddianın kaynağı"@tr ;
+	schema:name "iddianın kaynağı"@tr ;
+	rdfs:label "กล่าวถึงใน"@th ;
+	skos:prefLabel "กล่าวถึงใน"@th ;
+	schema:name "กล่าวถึงใน"@th ;
+	schema:description "à utiliser dans le champ référence, pour indiquer un ouvrage dans lequel la déclaration est corroborée"@fr,
+		"to be used in the references field, to the information source in which a claim is made was made; for qualifiers use P805"@en,
+		"per utilitzar en el camp \"Fonts\", indica el text en què es realitza una afirmació"@ca,
+		"te gebruiken als bron, om aan te geven waar de claim vermeld staat"@nl,
+		"proprietà per i riferimenti; indica il luogo (figurato) o l'autore di una data dichiarazione"@it,
+		"opis źródła, skąd pochodzi dana informacja"@pl,
+		"出典欄で使用し、その主張がなされた情報源の在り処を示す"@ja,
+		"a ser usado en el campo fuente para indicar un texto donde una afirmación es presentada"@es,
+		"für die Angabe der Quelle der Behauptung im Fundstellenfeld"@de,
+		"για χρήση σε πεδία πηγής, για να δηλωθεί το κείμενο όπου γίνεται ένας ισχυρισμός"@el,
+		"mausarto idiay pagikabilan ti taudan, tapno mangibaga ti testo nga ayan ti pakaaramidan ti tunton"@ilo,
+		"назва крыніцы, зь якой паходзіць сьцьверджаньне"@be-tarask,
+		"proprietatea se utilizează în câmpuln „sursă”, pentru a indica textul din care provine afirmația respectivă"@ro,
+		"לשימוש בשדה מקור בלבד. לציון המקום בו נטענה הטענה"@he,
+		"(فقط در بخش «منبع» استفاده می‌شود)"@fa,
+		"til brug i kildeangivelser"@da,
+		"использовать в списке источников для указания источника данного заявления"@ru,
+		"用于“来源”，表明在哪里被声明"@zh-hans,
+		"用於資料來源，以示聲明的來源"@zh-hant,
+		"avsedd att användas för källor"@sv,
+		"се користи во полето за извор за да се укаже каде е искажано тоа тврдење"@mk,
+		"usado para indicar onde na fonte a alegação é feita"@pt-br,
+		"用于来源字段，显示信息来源"@zh-cn,
+		"til bruk i kildefeltet, for å indikere hvor en påstand kommer fra"@nb,
+		"izmantošanai avota laukā, lai norādītu, kur apgalvojums ir izteikts"@lv,
+		"用於資料來源，以示聲明的來源"@zh-hk,
+		"စမ္းသံုးႀကည္႔ပါ"@my,
+		"用於資料來源，以示聲明的來源"@zh-tw,
+		"to be used in the references field, to indicate where a claim is made"@en-gb,
+		"väite allikas"@et,
+		"用于来源字段，显示信息来源"@zh,
+		"di adupirari ntô campu surgenti, p'innicari unni fu fatta n'affirmazzioni"@scn,
+		"للاستخدام في حقل المصدر للإشارة إلى مكان اﻻدعاء"@ar,
+		"to be used in the source field, to indicate where a claim is made"@en-ca,
+		"използва се при източниците, за да укаже къде е било направено твърдението"@bg,
+		"sumber rujukan"@id,
+		"джерело твердження, використовується в полі джерел"@uk,
+		"käytetään lähdeviitteissä viittaamaan lähteen kohteeseen"@fi,
+		"pa indicar nel campu «fontes» el testu onde se fai una afirmación"@ast,
+		"이 서술은 다음 출전(정보원)를 참고해 작성된 서술임"@ko,
+		"উৎস অংশে ব্যবহারের জন্য"@bn,
+		"Iturria eremuan erabili baieztapena  non egiten den adierazteko"@eu,
+		"મૂળ સંદર્ભ જેમાં આપેલ કિંમતનો ઉલ્લેખ હોય"@gu,
+		"pro usar in un referentia, le origine de un assertion o dato"@ia,
+		"pro označení zdroje tvrzení"@cs,
+		"proprietà pe' riferiment; ric chi ha ritt a dichiarazion o a ro' sta scritt"@nap,
+		"మూలాలు (రిఫరెన్సులు) ఫీల్డులో ఇచ్చే వివరం ఇది"@te,
+		"kaynak (referans) alanlarında söz konusu iddianın nerede ve kimin tarafından belirtildiğini açıklamak için kullanılır"@tr,
+		"a ser utilizada no campo de referências, para a fonte de informação em que a afirmação é feita; para qualificadores utilize P805"@pt ;
+	a wikibase:Property ;
+	wikibase:propertyType <http://wikiba.se/ontology-beta#WikibaseItem> ;
+	wikibase:directClaim wdt:P248 ;
+	wikibase:claim p:P248 ;
+	wikibase:statementProperty ps:P248 ;
+	wikibase:statementValue psv:P248 ;
+	wikibase:qualifier pq:P248 ;
+	wikibase:qualifierValue pqv:P248 ;
+	wikibase:reference pr:P248 ;
+	wikibase:referenceValue prv:P248 ;
+	wikibase:novalue wdno:P248 .
+
+p:P248 a owl:ObjectProperty .
+
+psv:P248 a owl:ObjectProperty .
+
+pqv:P248 a owl:ObjectProperty .
+
+prv:P248 a owl:ObjectProperty .
+
+wdt:P248 a owl:ObjectProperty .
+
+ps:P248 a owl:ObjectProperty .
+
+pq:P248 a owl:ObjectProperty .
+
+pr:P248 a owl:ObjectProperty .
+
+wdno:P248 a owl:Class ;
+	owl:complementOf _:genid7 .
+
+_:genid7 a owl:Restriction ;
+	owl:onProperty wdt:P248 ;
+	owl:someValuesFrom owl:Thing .
+
+wd:P813 a wikibase:Property ;
+	rdfs:label "retrieved"@en ;
+	skos:prefLabel "retrieved"@en ;
+	schema:name "retrieved"@en ;
+	rdfs:label "retrieved"@en-ca ;
+	skos:prefLabel "retrieved"@en-ca ;
+	schema:name "retrieved"@en-ca ;
+	rdfs:label "hämtdatum"@sv ;
+	skos:prefLabel "hämtdatum"@sv ;
+	schema:name "hämtdatum"@sv ;
+	rdfs:label "زمان بازیابی داده‌ها"@fa ;
+	skos:prefLabel "زمان بازیابی داده‌ها"@fa ;
+	schema:name "زمان بازیابی داده‌ها"@fa ;
+	rdfs:label "data de acesso"@pt ;
+	skos:prefLabel "data de acesso"@pt ;
+	schema:name "data de acesso"@pt ;
+	rdfs:label "geraadpleegd op"@nl ;
+	skos:prefLabel "geraadpleegd op"@nl ;
+	schema:name "geraadpleegd op"@nl ;
+	rdfs:label "datum přístupu"@cs ;
+	skos:prefLabel "datum přístupu"@cs ;
+	schema:name "datum přístupu"@cs ;
+	rdfs:label "date de consultation"@fr ;
+	skos:prefLabel "date de consultation"@fr ;
+	schema:name "date de consultation"@fr ;
+	rdfs:label "датум преузимања"@sr ;
+	skos:prefLabel "датум преузимања"@sr ;
+	schema:name "датум преузимања"@sr ;
+	rdfs:label "датум преузимања"@sr-ec ;
+	skos:prefLabel "датум преузимања"@sr-ec ;
+	schema:name "датум преузимања"@sr-ec ;
+	rdfs:label "datum preuzimanja"@sr-el ;
+	skos:prefLabel "datum preuzimanja"@sr-el ;
+	schema:name "datum preuzimanja"@sr-el ;
+	rdfs:label "data de consulta"@pt-br ;
+	skos:prefLabel "data de consulta"@pt-br ;
+	schema:name "data de consulta"@pt-br ;
+	rdfs:label "data de consulta"@ca ;
+	skos:prefLabel "data de consulta"@ca ;
+	schema:name "data de consulta"@ca ;
+	rdfs:label "consultato il"@it ;
+	skos:prefLabel "consultato il"@it ;
+	schema:name "consultato il"@it ;
+	rdfs:label "hozzáférés ideje"@hu ;
+	skos:prefLabel "hozzáférés ideje"@hu ;
+	schema:name "hozzáférés ideje"@hu ;
+	rdfs:label "дата доступу"@uk ;
+	skos:prefLabel "дата доступу"@uk ;
+	schema:name "дата доступу"@uk ;
+	rdfs:label "viittauspäivä"@fi ;
+	skos:prefLabel "viittauspäivä"@fi ;
+	schema:name "viittauspäivä"@fi ;
+	rdfs:label "abgerufen am"@de ;
+	skos:prefLabel "abgerufen am"@de ;
+	schema:name "abgerufen am"@de ;
+	rdfs:label "data dostępu"@pl ;
+	skos:prefLabel "data dostępu"@pl ;
+	schema:name "data dostępu"@pl ;
+	rdfs:label "afropen an'n"@nds ;
+	skos:prefLabel "afropen an'n"@nds ;
+	schema:name "afropen an'n"@nds ;
+	rdfs:label "fecha de acceso"@es ;
+	skos:prefLabel "fecha de acceso"@es ;
+	schema:name "fecha de acceso"@es ;
+	rdfs:label "дата проверки"@ru ;
+	skos:prefLabel "дата проверки"@ru ;
+	schema:name "дата проверки"@ru ;
+	rdfs:label "besøksdato"@nb ;
+	skos:prefLabel "besøksdato"@nb ;
+	schema:name "besøksdato"@nb ;
+	rdfs:label "дата праверкі"@be ;
+	skos:prefLabel "дата праверкі"@be ;
+	schema:name "дата праверкі"@be ;
+	rdfs:label "확인한 날짜"@ko ;
+	skos:prefLabel "확인한 날짜"@ko ;
+	schema:name "확인한 날짜"@ko ;
+	rdfs:label "pārbaudes datums"@lv ;
+	skos:prefLabel "pārbaudes datums"@lv ;
+	schema:name "pārbaudes datums"@lv ;
+	rdfs:label "hentet den"@da ;
+	skos:prefLabel "hentet den"@da ;
+	schema:name "hentet den"@da ;
+	rdfs:label "閲覧日"@ja ;
+	skos:prefLabel "閲覧日"@ja ;
+	schema:name "閲覧日"@ja ;
+	rdfs:label "дата праверкі"@be-tarask ;
+	skos:prefLabel "дата праверкі"@be-tarask ;
+	schema:name "дата праверкі"@be-tarask ;
+	rdfs:label "பார்த்தெடுத்த நாள்"@ta ;
+	skos:prefLabel "பார்த்தெடுத்த நாள்"@ta ;
+	schema:name "பார்த்தெடுத்த நாள்"@ta ;
+	rdfs:label "ngày truy cập"@vi ;
+	skos:prefLabel "ngày truy cập"@vi ;
+	schema:name "ngày truy cập"@vi ;
+	rdfs:label "检索日期"@zh ;
+	skos:prefLabel "检索日期"@zh ;
+	schema:name "检索日期"@zh ;
+	rdfs:label "retrieved"@en-gb ;
+	skos:prefLabel "retrieved"@en-gb ;
+	schema:name "retrieved"@en-gb ;
+	rdfs:label "प्राप्त करने की तिथि"@hi ;
+	skos:prefLabel "प्राप्त करने की तिथि"@hi ;
+	schema:name "प्राप्त करने की तिथि"@hi ;
+	rdfs:label "ημερομηνία ανάκτησης"@el ;
+	skos:prefLabel "ημερομηνία ανάκτησης"@el ;
+	schema:name "ημερομηνία ανάκτησης"@el ;
+	rdfs:label "data accesării"@ro ;
+	skos:prefLabel "data accesării"@ro ;
+	schema:name "data accesării"@ro ;
+	rdfs:label "检索日期"@zh-hans ;
+	skos:prefLabel "检索日期"@zh-hans ;
+	schema:name "检索日期"@zh-hans ;
+	rdfs:label "תאריך אחזור"@he ;
+	skos:prefLabel "תאריך אחזור"@he ;
+	schema:name "תאריך אחזור"@he ;
+	rdfs:label "date retrieved"@sco ;
+	skos:prefLabel "date retrieved"@sco ;
+	schema:name "date retrieved"@sco ;
+	rdfs:label "consultéiert den"@lb ;
+	skos:prefLabel "consultéiert den"@lb ;
+	schema:name "consultéiert den"@lb ;
+	rdfs:label "datum pridobitve"@sl ;
+	skos:prefLabel "datum pridobitve"@sl ;
+	schema:name "datum pridobitve"@sl ;
+	rdfs:label "vaadatud"@et ;
+	skos:prefLabel "vaadatud"@et ;
+	schema:name "vaadatud"@et ;
+	rdfs:label "检索日期"@zh-cn ;
+	skos:prefLabel "检索日期"@zh-cn ;
+	schema:name "检索日期"@zh-cn ;
+	rdfs:label "檢索日期"@zh-hk ;
+	skos:prefLabel "檢索日期"@zh-hk ;
+	schema:name "檢索日期"@zh-hk ;
+	rdfs:label "檢索日期"@zh-tw ;
+	skos:prefLabel "檢索日期"@zh-tw ;
+	schema:name "檢索日期"@zh-tw ;
+	rdfs:label "檢索日期"@zh-hant ;
+	skos:prefLabel "檢索日期"@zh-hant ;
+	schema:name "檢索日期"@zh-hant ;
+	rdfs:label "data dâ cunsultazzioni"@scn ;
+	skos:prefLabel "data dâ cunsultazzioni"@scn ;
+	schema:name "data dâ cunsultazzioni"@scn ;
+	rdfs:label "датум на проверка"@mk ;
+	skos:prefLabel "датум на проверка"@mk ;
+	schema:name "датум на проверка"@mk ;
+	rdfs:label "alirdato"@eo ;
+	skos:prefLabel "alirdato"@eo ;
+	schema:name "alirdato"@eo ;
+	rdfs:label "sartze-data"@eu ;
+	skos:prefLabel "sartze-data"@eu ;
+	schema:name "sartze-data"@eu ;
+	rdfs:label "repertum die"@la ;
+	skos:prefLabel "repertum die"@la ;
+	schema:name "repertum die"@la ;
+	rdfs:label "дата на проверка"@bg ;
+	skos:prefLabel "дата на проверка"@bg ;
+	schema:name "дата на проверка"@bg ;
+	rdfs:label "data de acceso"@gl ;
+	skos:prefLabel "data de acceso"@gl ;
+	schema:name "data de acceso"@gl ;
+	rdfs:label "diakses tgl."@id ;
+	skos:prefLabel "diakses tgl."@id ;
+	schema:name "diakses tgl."@id ;
+	rdfs:label "pristupljeno"@bs ;
+	skos:prefLabel "pristupljeno"@bs ;
+	schema:name "pristupljeno"@bs ;
+	rdfs:label "վերցված է"@hy ;
+	skos:prefLabel "վերցված է"@hy ;
+	schema:name "վերցված է"@hy ;
+	rdfs:label "dyddiad cyrchiad"@cy ;
+	skos:prefLabel "dyddiad cyrchiad"@cy ;
+	schema:name "dyddiad cyrchiad"@cy ;
+	rdfs:label "vitjingsdato"@nn ;
+	skos:prefLabel "vitjingsdato"@nn ;
+	schema:name "vitjingsdato"@nn ;
+	rdfs:label "الوصول"@ar ;
+	skos:prefLabel "الوصول"@ar ;
+	schema:name "الوصول"@ar ;
+	rdfs:label "Ufrepen di"@frr ;
+	skos:prefLabel "Ufrepen di"@frr ;
+	schema:name "Ufrepen di"@frr ;
+	rdfs:label "data de consulta"@ast ;
+	skos:prefLabel "data de consulta"@ast ;
+	schema:name "data de consulta"@ast ;
+	rdfs:label "সংগ্রহের তারিখ"@bn ;
+	skos:prefLabel "সংগ্রহের তারিখ"@bn ;
+	schema:name "সংগ্রহের তারিখ"@bn ;
+	rdfs:label "ବାହାର କରାଯାଇଥିଲା"@or ;
+	skos:prefLabel "ବାହାର କରାଯାଇଥିଲା"@or ;
+	schema:name "ବାହାର କରାଯାଇଥିଲା"@or ;
+	rdfs:label "შემოწმებულია"@ka ;
+	skos:prefLabel "შემოწმებულია"@ka ;
+	schema:name "შემოწმებულია"@ka ;
+	rdfs:label "檢索日期"@zh-mo ;
+	skos:prefLabel "檢索日期"@zh-mo ;
+	schema:name "檢索日期"@zh-mo ;
+	rdfs:label "检索日期"@zh-sg ;
+	skos:prefLabel "检索日期"@zh-sg ;
+	schema:name "检索日期"@zh-sg ;
+	rdfs:label "જે તારીખે મેળવાયું હોય"@gu ;
+	skos:prefLabel "જે તારીખે મેળવાયું હોય"@gu ;
+	schema:name "જે તારીખે મેળવાયું હોય"@gu ;
+	rdfs:label "dátum prístupu"@sk ;
+	skos:prefLabel "dátum prístupu"@sk ;
+	schema:name "dátum prístupu"@sk ;
+	rdfs:label "calendata d'acceso"@an ;
+	skos:prefLabel "calendata d'acceso"@an ;
+	schema:name "calendata d'acceso"@an ;
+	rdfs:label "санаи тафтиш"@tg ;
+	skos:prefLabel "санаи тафтиш"@tg ;
+	schema:name "санаи тафтиш"@tg ;
+	rdfs:label "data de consulta"@ia ;
+	skos:prefLabel "data de consulta"@ia ;
+	schema:name "data de consulta"@ia ;
+	rdfs:label "اخذ شدہ بتاریخ"@ur ;
+	skos:prefLabel "اخذ شدہ بتاریخ"@ur ;
+	schema:name "اخذ شدہ بتاریخ"@ur ;
+	rdfs:label "naala idi"@ilo ;
+	skos:prefLabel "naala idi"@ilo ;
+	schema:name "naala idi"@ilo ;
+	rdfs:label "санаи тафтиш"@tg-cyrl ;
+	skos:prefLabel "санаи тафтиш"@tg-cyrl ;
+	schema:name "санаи тафтиш"@tg-cyrl ;
+	rdfs:label "тикшереү ваҡыты"@ba ;
+	skos:prefLabel "тикшереү ваҡыты"@ba ;
+	schema:name "тикшереү ваҡыты"@ba ;
+	rdfs:label "สืบค้นเมื่อ"@th ;
+	skos:prefLabel "สืบค้นเมื่อ"@th ;
+	schema:name "สืบค้นเมื่อ"@th ;
+	rdfs:label "erişim tarihi"@tr ;
+	skos:prefLabel "erişim tarihi"@tr ;
+	schema:name "erişim tarihi"@tr ;
+	rdfs:label "సేకరించబడిన సమయం"@te ;
+	skos:prefLabel "సేకరించబడిన సమయం"@te ;
+	schema:name "సేకరించబడిన సమయం"@te ;
+	rdfs:label "preuzeto"@hr ;
+	skos:prefLabel "preuzeto"@hr ;
+	schema:name "preuzeto"@hr ;
+	schema:description "date or point in time that information was retrieved from a database or website (for use in online sources)"@en,
+		"date or point in time that information was retrieved from a database or website (for use in online sources)"@en-ca,
+		"زمانی که  داده‌ها از ب.د یا وب‌گاه مورد نظر بازیابی شده‌اند‌ (برای منابع برخط استفاده شود)"@fa,
+		"kvalifikátor ke zdrojům: kdy byla informace ze zdroje získána"@cs,
+		"date à laquelle l'information a été importée d'une base de données ou consultée sur un site web"@fr,
+		"date em que a informação foi consultada em uma base de dados ou website (para uso em fontes online)"@pt-br,
+		"data em que a informação foi obtida de uma base de dados ou website (para uso em fontes online)"@pt,
+		"дата, коли інформацію було отримано з бази даних чи веб-сайту (для використання з онлайн-джерелами)"@uk,
+		"Datum, an dem die referenzierte Information zuletzt geprüft wurde"@de,
+		"data in cui l'informazione è stata raccolta (consultando un sito web o database)"@it,
+		"fecha en que la información fue importada de una base de datos o página web"@es,
+		"когда информация была получена из базы данных или веб-сайта (использовать в разделе источников)"@ru,
+		"калі інфармацыя была атрымана з базы даных або вэб-сайта (выкарыстоўваць у раздзеле крыніц)"@be,
+		"웹사이트나 데이터베이스에서 정보가 확인된 날짜나 시점 (온라인 출처/정보원을 위해 사용함)"@ko,
+		"datums, kurā informācija tika iegūta no datubāzes vai tīmekļa vietnes (izmantošanai tiešsaistes avotiem)"@lv,
+		"情報をデータベースやウェブサイトから取得した日付（オンラインの情報源について使う）"@ja,
+		"дата, калі інфармацыя была атрыманая з базы зьвестак або вэб-бачыны"@be-tarask,
+		"date or point in time that information was retrieved from a database or website (for use in online sources)"@en-gb,
+		"ημερομηνία στην οποία ανακτήθηκε η πληροφορία από μια βάση δεδομένων ή ιστότοπο (για χρήση σε online πηγές)"@el,
+		"datum då informationen hämtades från en databas eller webbplats"@sv,
+		"תאריך בו המידע נמצא בבסיס הנתונים או באתר אינטרנט"@he,
+		"andmeallika vaatamise kuupäev"@et,
+		"检索或访问该数据库或网站的日期（用于网上来源）"@zh,
+		"data quannu la nfurmazzioni fu' pigghiata di na basi dati o nu situ, di usari pi' surgenti in linia"@scn,
+		"datum waarop de betreffende bron is geraadpleegd"@nl,
+		"datu-base edo webgune batean informazioa kontsultatua izan zen data"@eu,
+		"дата, на която информацията е била взета от определен справочник (база от данни, сайт) (за ползване при посочване на източници)"@bg,
+		"data na cal a información foi importada dunha base de datos ou sitio web"@gl,
+		"tanggal mengakses informasi terkait"@id,
+		"dato eller tidspunkt da informasjon ble hentet fra en database eller nettside (for bruk i kilder)"@nb,
+		"päivä, jolloin tieto haettiin tietokannasta tai verkkosivulta"@fi,
+		"ինֆորմացիան տվյալների բազայից կամ կայքերից վերցնելու ամսաթիվը (օնլայն աղբյուրների համար)"@hy,
+		"az információ weblapról vagy adatbázisból történt lekérésének ideje vagy dátuma (online források esetén)"@hu,
+		"dato hvor informationen blev hentet fra en database eller et websted"@da,
+		"puntu temporal nel que se consultó la información"@ast,
+		"ডাটাবেস বা ওয়েবসাইট থেকে তথ্যপ্রাপ্তির তারিখ বা সময়"@bn,
+		"ଯେଉଁ ତାରିଖରେ ଦେଖାଯାଇଥିଲା"@or,
+		"تاريخ أو نقطة في الزمن حيث تم الحصول على المعلومة من قاعدة بيانات أو موقع إلكتروني (تستخدم مع المراجع الموجودة على الإنترنت)"@ar,
+		"datum, ko je bila informacija vzeta iz vira"@sl,
+		"data en què es va importar la informació d'una font"@ca,
+		"ડેટાબેઝ અથવા જાળસ્થળ પરથી જે સમય અને સ્થળે મેળવાયું હોય"@gu,
+		"data al qual le information ha essite importate ab un base de datos o consultate sur un sito web"@ia,
+		"czas pobrania informacji z bazy danych lub strony internetowej (dla źródeł internetowych)"@pl,
+		"petsa wenno punto ti panawen a naala idi ti pakaaammo manipud iti database wenno website (para iti panagusar kadagiti taudan ti online)"@ilo,
+		"мәғлүмәт сайттан йәки үҙгәреүсән мәғлүмәт базаһынан алынған осраҡта ҡулланыла"@ba,
+		"bir bilgininin veri tabanından ya da web sitesinden alındığı tarih veya zaman (çevrim içi kaynaklarda kullanın)"@tr,
+		"datum na koji je informacija zadnji put provjerena"@hr ;
+	a wikibase:Property ;
+	wikibase:propertyType <http://wikiba.se/ontology-beta#Time> ;
+	wikibase:directClaim wdt:P813 ;
+	wikibase:claim p:P813 ;
+	wikibase:statementProperty ps:P813 ;
+	wikibase:statementValue psv:P813 ;
+	wikibase:qualifier pq:P813 ;
+	wikibase:qualifierValue pqv:P813 ;
+	wikibase:reference pr:P813 ;
+	wikibase:referenceValue prv:P813 ;
+	wikibase:novalue wdno:P813 .
+
+p:P813 a owl:ObjectProperty .
+
+psv:P813 a owl:ObjectProperty .
+
+pqv:P813 a owl:ObjectProperty .
+
+prv:P813 a owl:ObjectProperty .
+
+wdt:P813 a owl:DatatypeProperty .
+
+ps:P813 a owl:DatatypeProperty .
+
+pq:P813 a owl:DatatypeProperty .
+
+pr:P813 a owl:DatatypeProperty .
+
+wdno:P813 a owl:Class ;
+	owl:complementOf _:genid8 .
+
+_:genid8 a owl:Restriction ;
+	owl:onProperty wdt:P813 ;
+	owl:someValuesFrom owl:Thing .
+
+wd:Q41516079 a wikibase:Item ;
+	rdfs:label "Disease Ontology release 2017-09-29"@en ;
+	skos:prefLabel "Disease Ontology release 2017-09-29"@en ;
+	schema:name "Disease Ontology release 2017-09-29"@en ;
+	schema:description "Release of the Disease Ontology"@en .
+
+wd:Q16335166 a wikibase:Item ;
+	rdfs:label "Identifiers.org Registry"@en ;
+	skos:prefLabel "Identifiers.org Registry"@en ;
+	schema:name "Identifiers.org Registry"@en .
+
+wd:P854 a wikibase:Property ;
+	rdfs:label "참고한 URL"@ko ;
+	skos:prefLabel "참고한 URL"@ko ;
+	schema:name "참고한 URL"@ko ;
+	rdfs:label "afirmado en la dirección web"@es ;
+	skos:prefLabel "afirmado en la dirección web"@es ;
+	schema:name "afirmado en la dirección web"@es ;
+	rdfs:label "URL"@be-tarask ;
+	skos:prefLabel "URL"@be-tarask ;
+	schema:name "URL"@be-tarask ;
+	rdfs:label "URL de la référence"@fr ;
+	skos:prefLabel "URL de la référence"@fr ;
+	schema:name "URL de la référence"@fr ;
+	rdfs:label "URL di riferimento"@it ;
+	skos:prefLabel "URL di riferimento"@it ;
+	schema:name "URL di riferimento"@it ;
+	rdfs:label "URL voor bron"@nl ;
+	skos:prefLabel "URL voor bron"@nl ;
+	schema:name "URL voor bron"@nl ;
+	rdfs:label "URL de referência"@pt ;
+	skos:prefLabel "URL de referência"@pt ;
+	schema:name "URL de referência"@pt ;
+	rdfs:label "lähde-URL"@fi ;
+	skos:prefLabel "lähde-URL"@fi ;
+	schema:name "lähde-URL"@fi ;
+	rdfs:label "URL de la referència"@ca ;
+	skos:prefLabel "URL de la referència"@ca ;
+	schema:name "URL de la referència"@ca ;
+	rdfs:label "URL der Fundstelle"@de ;
+	skos:prefLabel "URL der Fundstelle"@de ;
+	schema:name "URL der Fundstelle"@de ;
+	rdfs:label "URL-ссылка на источник"@ru ;
+	skos:prefLabel "URL-ссылка на источник"@ru ;
+	schema:name "URL-ссылка на источник"@ru ;
+	rdfs:label "referens-url"@sv ;
+	skos:prefLabel "referens-url"@sv ;
+	schema:name "referens-url"@sv ;
+	rdfs:label "URL"@lv ;
+	skos:prefLabel "URL"@lv ;
+	schema:name "URL"@lv ;
+	rdfs:label "веза референце"@sr ;
+	skos:prefLabel "веза референце"@sr ;
+	schema:name "веза референце"@sr ;
+	rdfs:label "URL"@sr-ec ;
+	skos:prefLabel "URL"@sr-ec ;
+	schema:name "URL"@sr-ec ;
+	rdfs:label "URL"@sr-el ;
+	skos:prefLabel "URL"@sr-el ;
+	schema:name "URL"@sr-el ;
+	rdfs:label "જાળસ્થળ"@gu ;
+	skos:prefLabel "જાળસ્થળ"@gu ;
+	schema:name "જાળસ્થળ"@gu ;
+	rdfs:label "URL de referenco"@eo ;
+	skos:prefLabel "URL de referenco"@eo ;
+	schema:name "URL de referenco"@eo ;
+	rdfs:label "URL reference"@cs ;
+	skos:prefLabel "URL reference"@cs ;
+	schema:name "URL reference"@cs ;
+	rdfs:label "URL referencie"@sk ;
+	skos:prefLabel "URL referencie"@sk ;
+	schema:name "URL referencie"@sk ;
+	rdfs:label "URL źródła"@pl ;
+	skos:prefLabel "URL źródła"@pl ;
+	schema:name "URL źródła"@pl ;
+	rdfs:label "reference-URL"@da ;
+	skos:prefLabel "reference-URL"@da ;
+	schema:name "reference-URL"@da ;
+	rdfs:label "URL"@is ;
+	skos:prefLabel "URL"@is ;
+	schema:name "URL"@is ;
+	rdfs:label "keldu-URL"@fo ;
+	skos:prefLabel "keldu-URL"@fo ;
+	schema:name "keldu-URL"@fo ;
+	rdfs:label "referanse-URL"@nn ;
+	skos:prefLabel "referanse-URL"@nn ;
+	schema:name "referanse-URL"@nn ;
+	rdfs:label "referanse-URL"@nb ;
+	skos:prefLabel "referanse-URL"@nb ;
+	schema:name "referanse-URL"@nb ;
+	rdfs:label "তথ্যসূত্র ইউআরএল"@bn ;
+	skos:prefLabel "তথ্যসূত্র ইউআরএল"@bn ;
+	schema:name "তথ্যসূত্র ইউআরএল"@bn ;
+	rdfs:label "forrás URL-je"@hu ;
+	skos:prefLabel "forrás URL-je"@hu ;
+	schema:name "forrás URL-je"@hu ;
+	rdfs:label "来源网址"@zh-hans ;
+	skos:prefLabel "来源网址"@zh-hans ;
+	schema:name "来源网址"@zh-hans ;
+	rdfs:label "来源网址"@zh ;
+	skos:prefLabel "来源网址"@zh ;
+	schema:name "来源网址"@zh ;
+	rdfs:label "來源網址"@zh-hant ;
+	skos:prefLabel "來源網址"@zh-hant ;
+	schema:name "來源網址"@zh-hant ;
+	rdfs:label "URL para referências"@pt-br ;
+	skos:prefLabel "URL para referências"@pt-br ;
+	schema:name "URL para referências"@pt-br ;
+	rdfs:label "URL"@mk ;
+	skos:prefLabel "URL"@mk ;
+	schema:name "URL"@mk ;
+	rdfs:label "URL"@vi ;
+	skos:prefLabel "URL"@vi ;
+	schema:name "URL"@vi ;
+	rdfs:label "cyfeirnod URL"@cy ;
+	skos:prefLabel "cyfeirnod URL"@cy ;
+	schema:name "cyfeirnod URL"@cy ;
+	rdfs:label "URL"@gl ;
+	skos:prefLabel "URL"@gl ;
+	schema:name "URL"@gl ;
+	rdfs:label "出典URL"@ja ;
+	skos:prefLabel "出典URL"@ja ;
+	schema:name "出典URL"@ja ;
+	rdfs:label "URL"@be ;
+	skos:prefLabel "URL"@be ;
+	schema:name "URL"@be ;
+	rdfs:label "نشانی اینترنتی"@fa ;
+	skos:prefLabel "نشانی اینترنتی"@fa ;
+	schema:name "نشانی اینترنتی"@fa ;
+	rdfs:label "URL πηγής"@el ;
+	skos:prefLabel "URL πηγής"@el ;
+	schema:name "URL πηγής"@el ;
+	rdfs:label "உரலி"@ta ;
+	skos:prefLabel "உரலி"@ta ;
+	schema:name "உரலி"@ta ;
+	rdfs:label "מקור URL"@he ;
+	skos:prefLabel "מקור URL"@he ;
+	schema:name "מקור URL"@he ;
+	rdfs:label "URL"@kl ;
+	skos:prefLabel "URL"@kl ;
+	schema:name "URL"@kl ;
+	rdfs:label "URL"@et ;
+	skos:prefLabel "URL"@et ;
+	schema:name "URL"@et ;
+	rdfs:label "URL"@sco ;
+	skos:prefLabel "URL"@sco ;
+	schema:name "URL"@sco ;
+	rdfs:label "URL"@nds ;
+	skos:prefLabel "URL"@nds ;
+	schema:name "URL"@nds ;
+	rdfs:label "URL"@io ;
+	skos:prefLabel "URL"@io ;
+	schema:name "URL"@io ;
+	rdfs:label "संदर्भ यूआरएल"@hi ;
+	skos:prefLabel "संदर्भ यूआरएल"@hi ;
+	schema:name "संदर्भ यूआरएल"@hi ;
+	rdfs:label "URL"@lb ;
+	skos:prefLabel "URL"@lb ;
+	schema:name "URL"@lb ;
+	rdfs:label "URL de referință"@ro ;
+	skos:prefLabel "URL de referință"@ro ;
+	schema:name "URL de referință"@ro ;
+	rdfs:label "URL-посилання на джерело"@uk ;
+	skos:prefLabel "URL-посилання на джерело"@uk ;
+	schema:name "URL-посилання на джерело"@uk ;
+	rdfs:label "reference URL"@en-gb ;
+	skos:prefLabel "reference URL"@en-gb ;
+	schema:name "reference URL"@en-gb ;
+	rdfs:label "verwysing URL"@af ;
+	skos:prefLabel "verwysing URL"@af ;
+	schema:name "verwysing URL"@af ;
+	rdfs:label "spletni naslov"@sl ;
+	skos:prefLabel "spletni naslov"@sl ;
+	schema:name "spletni naslov"@sl ;
+	rdfs:label "來源網址"@zh-hk ;
+	skos:prefLabel "來源網址"@zh-hk ;
+	schema:name "來源網址"@zh-hk ;
+	rdfs:label "來源網址"@zh-tw ;
+	skos:prefLabel "來源網址"@zh-tw ;
+	schema:name "來源網址"@zh-tw ;
+	rdfs:label "URL di rifirimentu"@scn ;
+	skos:prefLabel "URL di rifirimentu"@scn ;
+	schema:name "URL di rifirimentu"@scn ;
+	rdfs:label "URL reference"@bs ;
+	skos:prefLabel "URL reference"@bs ;
+	schema:name "URL reference"@bs ;
+	rdfs:label "URL"@br ;
+	skos:prefLabel "URL"@br ;
+	schema:name "URL"@br ;
+	rdfs:label "संदर्भ दुवा"@mr ;
+	skos:prefLabel "संदर्भ दुवा"@mr ;
+	schema:name "संदर्भ दुवा"@mr ;
+	rdfs:label "reference URL"@en-ca ;
+	skos:prefLabel "reference URL"@en-ca ;
+	schema:name "reference URL"@en-ca ;
+	rdfs:label "URL на източник"@bg ;
+	skos:prefLabel "URL на източник"@bg ;
+	schema:name "URL на източник"@bg ;
+	rdfs:label "հիպերհղում"@hy ;
+	skos:prefLabel "հիպերհղում"@hy ;
+	schema:name "հիպերհղում"@hy ;
+	rdfs:label "URL de la referencia"@ast ;
+	skos:prefLabel "URL de la referencia"@ast ;
+	schema:name "URL de la referencia"@ast ;
+	rdfs:label "وصلة مرجع"@ar ;
+	skos:prefLabel "وصلة مرجع"@ar ;
+	schema:name "وصلة مرجع"@ar ;
+	rdfs:label "šaltinio URL"@lt ;
+	skos:prefLabel "šaltinio URL"@lt ;
+	schema:name "šaltinio URL"@lt ;
+	rdfs:label "situs rujukan"@id ;
+	skos:prefLabel "situs rujukan"@id ;
+	schema:name "situs rujukan"@id ;
+	rdfs:label "URL der Referenz"@de-at ;
+	skos:prefLabel "URL der Referenz"@de-at ;
+	schema:name "URL der Referenz"@de-at ;
+	rdfs:label "URL der Referenz"@de-ch ;
+	skos:prefLabel "URL der Referenz"@de-ch ;
+	schema:name "URL der Referenz"@de-ch ;
+	rdfs:label "ଆଧାର ୟୁଆରଏଲ"@or ;
+	skos:prefLabel "ଆଧାର ୟୁଆରଏଲ"@or ;
+	schema:name "ଆଧାର ୟୁଆରଏଲ"@or ;
+	rdfs:label "URL erreferentzia"@eu ;
+	skos:prefLabel "URL erreferentzia"@eu ;
+	schema:name "URL erreferentzia"@eu ;
+	rdfs:label "來源網址"@zh-mo ;
+	skos:prefLabel "來源網址"@zh-mo ;
+	schema:name "來源網址"@zh-mo ;
+	rdfs:label "来源网址"@zh-cn ;
+	skos:prefLabel "来源网址"@zh-cn ;
+	schema:name "来源网址"@zh-cn ;
+	rdfs:label "来源网址"@zh-my ;
+	skos:prefLabel "来源网址"@zh-my ;
+	schema:name "来源网址"@zh-my ;
+	rdfs:label "来源网址"@zh-sg ;
+	skos:prefLabel "来源网址"@zh-sg ;
+	schema:name "来源网址"@zh-sg ;
+	rdfs:label "წყაროს URL"@ka ;
+	skos:prefLabel "წყაროს URL"@ka ;
+	schema:name "წყაროს URL"@ka ;
+	rdfs:label "URL de la referéncia"@oc ;
+	skos:prefLabel "URL de la referéncia"@oc ;
+	schema:name "URL de la referéncia"@oc ;
+	rdfs:label "kaynak URL"@tr ;
+	skos:prefLabel "kaynak URL"@tr ;
+	schema:name "kaynak URL"@tr ;
+	rdfs:label "حوالہ یو آر ایل"@ur ;
+	skos:prefLabel "حوالہ یو آر ایل"@ur ;
+	schema:name "حوالہ یو آر ایل"@ur ;
+	rdfs:label "ยูอาร์แอลที่อ้างอิง"@th ;
+	skos:prefLabel "ยูอาร์แอลที่อ้างอิง"@th ;
+	schema:name "ยูอาร์แอลที่อ้างอิง"@th ;
+	rdfs:label "пайванди URL ба сарчашма"@tg ;
+	skos:prefLabel "пайванди URL ба сарчашма"@tg ;
+	schema:name "пайванди URL ба сарчашма"@tg ;
+	rdfs:label "adresse URL de referentia"@ia ;
+	skos:prefLabel "adresse URL de referentia"@ia ;
+	schema:name "adresse URL de referentia"@ia ;
+	rdfs:label "referenca URL"@sq ;
+	skos:prefLabel "referenca URL"@sq ;
+	schema:name "referenca URL"@sq ;
+	rdfs:label "URL ti nagibasaran"@ilo ;
+	skos:prefLabel "URL ti nagibasaran"@ilo ;
+	schema:name "URL ti nagibasaran"@ilo ;
+	rdfs:label "пайванди URL ба сарчашма"@tg-cyrl ;
+	skos:prefLabel "пайванди URL ба сарчашма"@tg-cyrl ;
+	schema:name "пайванди URL ба сарчашма"@tg-cyrl ;
+	rdfs:label "reference URL"@en ;
+	skos:prefLabel "reference URL"@en ;
+	schema:name "reference URL"@en ;
+	rdfs:label "Сығанаҡҡа URL-һылтанма"@ba ;
+	skos:prefLabel "Сығанаҡҡа URL-һылтанма"@ba ;
+	schema:name "Сығанаҡҡа URL-һылтанма"@ba ;
+	schema:description "이 서술을 작성할 때 참고한 인터넷 URL"@ko,
+		"спасылка на сайт"@be-tarask,
+		"devrait être défini pour les URLs des sites internet utilisés comme référence"@fr,
+		"deve essere utilizzato per gli URL di internet come riferimenti"@it,
+		"endereço eletrónico do site"@pt,
+		"käytetään internetosoitteille lähteissä"@fi,
+		"propiedad creada para ser usada como referencia"@es,
+		"adreça web utilitzada com a referència"@ca,
+		"Internetadresse für Quellenangaben"@de,
+		"paredzēts izmantošanai interneta saitēm atsaucēs"@lv,
+		"bedoeld voor websiteadressen bij bronnen"@nl,
+		"ઈન્ટરનેટની કડી ને સંદર્ભ તરીકે લઈને જ વપરાવું જોઈએ"@gu,
+		"używany do podawania adresów internetowych jako źródeł"@pl,
+		"skal bruges som Internet URL'er som henvisninger"@da,
+		"brukes for kildehenvisninger til nettsider"@nb,
+		"hivatkozásként használt URL-címekhez kell használni"@hu,
+		"endereço do site"@pt-br,
+		"应用于参考文献的互联网地址"@zh-hans,
+		"dylid ei ddefnyddio ar gyfer urls rhyngrwyd fel cyfeiriadau"@cy,
+		"برای نشانی‌های اینترنتی به‌عنوان منبع استفاده شود"@fa,
+		"应用于列出来源信息中的网址"@zh,
+		"για χρήση διευθύνσεων URL ως πηγές"@el,
+		"pro použití jako reference – jinak viz P856"@cs,
+		"используется для URL (адреса веб-страницы) в качестве источника"@ru,
+		"nur por referencoj — alikaze vidu P856"@eo,
+		"nur por referi - altrakaze videz P856"@io,
+		"संदर्भ के रूप में इंटरनेट यूआरएल के इस्तेमाल के लिए"@hi,
+		"Adress vun der Internetsäit"@lb,
+		"should be used for internet urls as references"@en-gb,
+		"moet gebruik word vir die internet urls as verwysings"@af,
+		"只用於列出資料來源的網址"@zh-hk,
+		"URL ca punta a na fonti di sta nfurmazzioni"@scn,
+		"koristi se za internet URLove kao reference"@bs,
+		"används för internetadresser som referenser"@sv,
+		"интернет адрес на източник"@bg,
+		"адреса сторінки-джерела в Інтернеті (URL)"@uk,
+		"URL"@hy,
+		"tien d'usase pa les URLs d'internet como referencies"@ast,
+		"naslov spletne strani"@sl,
+		"dipergunakan untuk Lokator Sumber Seragam (URL) yang dijadikan rujukan"@id,
+		"verður nýtt til internetadressur sum keldur"@fo,
+		"URL helbide bat  erreferentzia bezala erabiltzen denean"@eu,
+		"出典としてのインターネットURLに使用される"@ja,
+		"يجب أن تستخدم لعناوين أو وصلات الإنترنيت كمراجع"@ar,
+		"URL อินเทอร์เน็ตที่เป็นแหล่งอ้างอิง"@th,
+		"debe esser definite pro adresses URL de sitos web usate como referentia"@ia,
+		"duhet të përdoret për referencat me URL në internet"@sq,
+		"nasken a mausar kadagiti URL ti internet a kas dagiti nagibasaran"@ilo,
+		"should be used for internet URLs as references"@en,
+		"संदर्भ म्हणून आंतरजालाच्या यूआरएलसाठी वापरण्यात यावे"@mr,
+		"веб-сайт адресына һылтанма"@ba ;
+	a wikibase:Property ;
+	wikibase:propertyType <http://wikiba.se/ontology-beta#Url> ;
+	wikibase:directClaim wdt:P854 ;
+	wikibase:claim p:P854 ;
+	wikibase:statementProperty ps:P854 ;
+	wikibase:statementValue psv:P854 ;
+	wikibase:qualifier pq:P854 ;
+	wikibase:qualifierValue pqv:P854 ;
+	wikibase:reference pr:P854 ;
+	wikibase:referenceValue prv:P854 ;
+	wikibase:novalue wdno:P854 .
+
+p:P854 a owl:ObjectProperty .
+
+psv:P854 a owl:ObjectProperty .
+
+pqv:P854 a owl:ObjectProperty .
+
+prv:P854 a owl:ObjectProperty .
+
+wdt:P854 a owl:ObjectProperty .
+
+ps:P854 a owl:ObjectProperty .
+
+pq:P854 a owl:ObjectProperty .
+
+pr:P854 a owl:ObjectProperty .
+
+wdno:P854 a owl:Class ;
+	owl:complementOf _:genid9 .
+
+_:genid9 a owl:Restriction ;
+	owl:onProperty wdt:P854 ;
+	owl:someValuesFrom owl:Thing .
+
+wdv:d6d4ad686ee34c554f0fab9521943bba a wikibase:TimeValue ;
+	wikibase:timeValue "2017-12-05T00:00:00Z"^^xsd:dateTime ;
+	wikibase:timePrecision "11"^^xsd:integer ;
+	wikibase:timeTimezone "0"^^xsd:integer ;
+	wikibase:timeCalendarModel <http://www.wikidata.org/entity/Q1985727> .
+
+wdv:26513e319c364222a55fb8ead8bdf279 a wikibase:TimeValue ;
+	wikibase:timeValue "2017-10-02T00:00:00Z"^^xsd:dateTime ;
+	wikibase:timePrecision "11"^^xsd:integer ;
+	wikibase:timeTimezone "0"^^xsd:integer ;
+	wikibase:timeCalendarModel <http://www.wikidata.org/entity/Q1985727> .
+
+wdref:4a32ed5a1e12468412bd2718851ea2b5f0f10561 a wikibase:Reference ;
+	pr:P248 wd:Q44741730 ;
+	pr:P813 "2017-12-05T00:00:00Z"^^xsd:dateTime ;
+	prv:P813 wdv:d6d4ad686ee34c554f0fab9521943bba ;
+	pr:P699 "DOID:6033" .
+
+wdref:e9648df64cbc06b78c637befc4c074781454f9a6 a wikibase:Reference ;
+	pr:P248 wd:Q41516079 ;
+	pr:P813 "2017-10-02T00:00:00Z"^^xsd:dateTime ;
+	prv:P813 wdv:26513e319c364222a55fb8ead8bdf279 ;
+	pr:P699 "DOID:6033" .
+
+wdref:60bb74f27bdb5e4d44a6b7008bfc67e8de886334 a wikibase:Reference ;
+	pr:P248 wd:Q16335166 ;
+	pr:P854 <http://www.ebi.ac.uk/miriam/main/collections/MIR:00000233> .

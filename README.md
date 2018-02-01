@@ -1,5 +1,22 @@
 # Python implementation of ShEx 2.0
+[![Pyversions](https://img.shields.io/pypi/pyversions/PyShEx.svg)](https://pypi.python.org/pypi/PyShEx)
+
 This package is a reasonably literal implementation of the [Shape Expressions Language 2.0](http://shex.io/shex-semantics/).  It can parse and "execute" ShExC and ShExJ source.
+
+## Revisions
+* 0.2.dev3 -- added SchemaEvaluator and other tweaks.  There are still some unit tests that fail -- beware
+
+## Installation
+```bash
+pip install ShEx
+```
+Note: If you need to escape single quotes in RDF literals, you will need to install the bleeding edge
+of rdflib:
+```bash
+pip uninstall rdflib
+pip install git+https://github.com/rdflib/rdflib
+```
+Unfortunately, however, `rdflib-jsonld` is NOT compatible with the bleeding edge rdflib, so you can't use a json-ld parser in this situation.
 
 ## General Layout
 The root `pyshex` package is subdivided into:
@@ -38,12 +55,10 @@ At the moment, there are 1077 tests, of which:
 
 * 967 pass
 * 110 are skipped - reasons:
-1) (2) '0E0' and '0e0' are not recognized by the rdflib parser as a double value
 2) (1) Extraneous 'id' field for Schema (2.1 feature?)
 3) (1) Takes too long -- we need to beef up the partition generator
 4) (4) Test uses IMPORT -- not implemented in ShEx 2.0, and not tagged as such
 5) (2) Test uses multi-byte literals aren't tagged as such
-6) (3) RDFLib single quote parsing issue
 7) (2) sht:BNodeShapeLabel - rdflib doesn't preserve bnodes
 8) (13) sht:Import - test uses V2.1 IMPORT feature
 9) (5) sht:Include ...
