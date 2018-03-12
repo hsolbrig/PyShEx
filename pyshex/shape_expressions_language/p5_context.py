@@ -19,8 +19,41 @@ class DebugContext:
     def __init__(self):
         self.trace_indent = 0
         self.trace_satisfies = False
+        self.satisfies_depth = 0
+        self.matches_depth = 0
         self.trace_nodeSatisfies = False
         self.trace_matches = False
+        self.eachof_depth = 0
+
+    def d(self) -> str:
+        """ Print a depth indicator """
+        return "(" + str(self.satisfies_depth) + ("." + str(self.matches_depth) if self.matches_depth else "") + ")"
+
+    def splus(self) -> None:
+        self.satisfies_depth += 1
+
+    def sminus(self) -> None:
+        self.satisfies_depth -= 1
+
+    def mplus(self) -> None:
+        self.matches_depth += 1
+
+    def mminus(self) -> None:
+        self.matches_depth -= 1
+
+    @staticmethod
+    def s(ndeep) -> str:
+        return '\t' * ndeep
+
+    @staticmethod
+    def rs(ndeep) -> str:
+        return '\n' + DebugContext.s(ndeep)
+
+    @staticmethod
+    def i(ndeep: int, txt: str, txt_list: Optional[List[object]]=None) -> str:
+        if txt_list is None:
+            txt_list = []
+        return DebugContext.s(ndeep) + txt + ' ' + DebugContext.rs(ndeep+1).join(str(e) for e in txt_list)
 
 
 class _VisitorCenter:
