@@ -56,6 +56,17 @@ def triple_in_shape(expr: ShExJ.shapeExpr, label: ShExJ.tripleExprLabel, cntxt: 
     return te
 
 
+def triple_constraints_in_expression(expression: ShExJ.shapeExpr, cntxt: Context) -> List[ShExJ.TripleConstraint]:
+    tes: List[ShExJ.TripleConstraint] = []
+
+    def triple_expr_visitor(tes: List[ShExJ.TripleConstraint], expr: ShExJ.TripleConstraint, _: Context) -> None:
+        if isinstance(expr, ShExJ.TripleConstraint):
+            tes.append(expr)
+
+    cntxt.visit_triple_expressions(expression, triple_expr_visitor, tes)
+    return tes
+
+
 def predicates_in_expression(expression: ShExJ.shapeExpr, cntxt: Context) -> List[IRIREF]:
     """ Return the set of predicates that "appears in a TripleConstraint in an expression
     
