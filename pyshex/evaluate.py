@@ -38,8 +38,11 @@ def evaluate(g: Graph(),
     if not isinstance(start, URIRef) and start is not START:
         start = IRIREF(str(start))
     cntxt = Context(g, schema)
-    cntxt.debug_context.trace_satisfies = cntxt.debug_context.trace_matches = \
+    # TODO: fix API to allow a bit more refinement here...
+    cntxt.debug_context.trace_satisfies =  \
         cntxt.debug_context.trace_nodeSatisfies = debug_trace
+    # cntxt.debug_context.trace_satisfies = cntxt.debug_context.trace_matches = \
+    #     cntxt.debug_context.trace_nodeSatisfies = debug_trace
     map_ = FixedShapeMap()
     map_.add(ShapeAssociation(focus, start))
     test_result = isValid(cntxt, map_)
