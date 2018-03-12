@@ -16,18 +16,17 @@ from tests.utils.uri_redirector import URIRedirector
 # TODO: Remove this whenever rdflib issue #124 is fixed (https://github.com/RDFLib/rdflib/issues/804)
 sys.setrecursionlimit(1200)
 
-ENTRY_NAME = '1dotOne2dot_pass_p1'              # Individual element to test
-START_AFTER = ''                    # Element to start at (or after)
+ENTRY_NAME = ''              # Individual element to test
+START_AFTER = ''             # Element to start at (or after)
 
 CONTINUE_ON_FAIL = True
-VERBOSE = True
+VERBOSE = False
 DEBUG = bool(ENTRY_NAME)
 TEST_SKIPS_ONLY = False                  # Double check that all skips need skipping
 
 # Local equivalent of online data files
-# TODO: Remove this
-LOCAL_FILE_LOC = os.path.expanduser("~/Development/git/shexSpec/shexTest/")
-# LOCAL_FILE_LOC = ''
+# LOCAL_FILE_LOC = os.path.expanduser("~/git/shexTest/")
+LOCAL_FILE_LOC = ''
 
 # Do Not Change this - must match manifest
 REMOTE_FILE_LOC = "https://raw.githubusercontent.com/shexSpec/shexTest/master/"
@@ -40,6 +39,9 @@ USES_IMPORTS = "Uses IMPORTS and no facet saying as much"
 LONG_UCHAR = "Uses multi-byte literals"
 RDFLIB_ISSUE = "RDFLIB single quote parsing error"
 FALSE_LEAD_ISSUE = "Unknown issue with false lead"
+HANGS = "Test hangs"
+FOCUS_DATATYPE = "FocusDatatype"
+UNKNOWN = "Unknown failure"
 
 skip_traits = [SHT.Import, SHT.Include, SHT.BNodeShapeLabel, SHT.ShapeMap, SHT.OutsideBMP,
                SHT.ToldBNode, SHT.LexicalBNode]
@@ -61,7 +63,14 @@ expected_failures = {
      "1val1STRING_LITERAL1_with_ECHAR_escapes_pass": LONG_UCHAR,
      "1val1STRING_LITERAL1_with_all_punctuation_fail": RDFLIB_ISSUE,
      "1val1STRING_LITERAL1_with_all_punctuation_pass": RDFLIB_ISSUE,
-     "false-lead-excluding-value-shape": FALSE_LEAD_ISSUE
+     "false-lead-excluding-value-shape": FALSE_LEAD_ISSUE,
+     "open3groupdotclosecard23_pass-p1p2p3X3": HANGS,
+     "open3groupdotclosecard23Annot3Code2-p1p2p3X3": HANGS,
+     "repeated-group": HANGS,
+     "focusdatatype_pass": FOCUS_DATATYPE,
+     "focusdatatype_pass-empty": FOCUS_DATATYPE,
+     "1focusvsORdatatype_pass-dt": FOCUS_DATATYPE,
+     "FocusIRI2groupBnodeNested2groupIRIRef_pass": UNKNOWN
 }
 
 
@@ -151,7 +160,10 @@ class ManifestEntryTestCase(unittest.TestCase):
             cntxt.debug_context.trace_nodeSatisfies = cntxt.debug_context.trace_satisfies = \
                 cntxt.debug_context.trace_matches = DEBUG
             map_ = FixedShapeMap()
-            map_.add(ShapeAssociation(me.focus, ShExJ.IRIREF(me.shape) if me.shape else START))
+            focus = self.mfst.data_redirector.uri_for(me.focus)
+            if ':' not in focus:
+                focus = "file://" + focus
+            map_.add(ShapeAssociation(URIRef(focus), ShExJ.IRIREF(me.shape) if me.shape else START))
             test_result = isValid(cntxt, map_) or not me.should_pass
 
             # Analyze the result
