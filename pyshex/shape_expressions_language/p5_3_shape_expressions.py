@@ -95,6 +95,7 @@ def satisfiesShapeExprRef(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExprLa
     for shape in cntxt.schema.shapes:
         if shape.id == se:
             return satisfies(cntxt, n, shape)
-    if cntxt.debug_context.trace_satisfies:
-        print(cntxt.debug_context.indent(1, "!! Shape not found !!"))
+    c = cntxt.debug_context
+    if c.trace_satisfies:
+        print(c.i(1, f"***** Shape {se} not found"))
     return False
