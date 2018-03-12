@@ -34,22 +34,31 @@ def satisfies(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExpr) -> bool:
           .. note:: Where is the documentation on recursion?  All I can find is
            `5.9.4 Recursion Example <http://shex.io/shex-semantics/#example-recursion>`_
           """
+    c = cntxt.debug_context
+    if c.trace_satisfies:
+        c.splus()
+        print(f"--> Satisfies {c.d()}: "
+              f"{n} {str(se) if isinstance_(se, ShExJ.shapeExprLabel) else 'type: ' + str(type(se))}")
     if isinstance(se, ShExJ.NodeConstraint):
-        return satisfies2(cntxt, n, se)
+        rval = satisfies2(cntxt, n, se)
     elif isinstance(se, ShExJ.Shape):
-        return satisfiesShape(cntxt, n, se)
+        rval = satisfiesShape(cntxt, n, se)
     elif isinstance(se, ShExJ.ShapeOr):
-        return satisifesShapeOr(cntxt, n, se)
+        rval = satisifesShapeOr(cntxt, n, se)
     elif isinstance(se, ShExJ.ShapeAnd):
-        return satisfiesShapeAnd(cntxt, n, se)
+        rval = satisfiesShapeAnd(cntxt, n, se)
     elif isinstance(se, ShExJ.ShapeNot):
-        return satisfiesShapeNot(cntxt, n, se)
+        rval = satisfiesShapeNot(cntxt, n, se)
     elif isinstance(se, ShExJ.ShapeExternal):
-        return satisfiesExternal(cntxt, n, se)
+        rval = satisfiesExternal(cntxt, n, se)
     elif isinstance_(se, ShExJ.shapeExprLabel):
-        return satisfiesShapeExprRef(cntxt, n, se)
+        rval = satisfiesShapeExprRef(cntxt, n, se)
     else:
         raise NotImplementedError(f"Unrecognized shapeExpr: {type(se)}")
+    if c.trace_satisfies:
+        print(f"<-- Satisfies {c.d()} {rval}")
+        c.sminus()
+    return rval
 
 
 def notSatisfies(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExpr) -> bool:
@@ -86,4 +95,6 @@ def satisfiesShapeExprRef(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExprLa
     for shape in cntxt.schema.shapes:
         if shape.id == se:
             return satisfies(cntxt, n, shape)
+    if cntxt.debug_context.trace_satisfies:
+        print(cntxt.debug_context.indent(1, "!! Shape not found !!"))
     return False
