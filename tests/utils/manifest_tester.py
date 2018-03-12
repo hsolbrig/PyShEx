@@ -20,13 +20,13 @@ ENTRY_NAME = ''              # Individual element to test
 START_AFTER = ''             # Element to start at (or after)
 
 CONTINUE_ON_FAIL = True
-VERBOSE = False
+VERBOSE = True
 DEBUG = bool(ENTRY_NAME)
 TEST_SKIPS_ONLY = False                  # Double check that all skips need skipping
 
 # Local equivalent of online data files
-# LOCAL_FILE_LOC = os.path.expanduser("~/git/shexTest/")
-LOCAL_FILE_LOC = ''
+LOCAL_FILE_LOC = os.path.expanduser("~/git/shexTest/")
+# LOCAL_FILE_LOC = ''
 
 # Do Not Change this - must match manifest
 REMOTE_FILE_LOC = "https://raw.githubusercontent.com/shexSpec/shexTest/master/"
