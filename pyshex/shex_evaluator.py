@@ -22,6 +22,10 @@ URILIST = List[URI]
 URIPARM = Union[str, URIRef, URILIST]
 
 
+def normalize_uriparm(p: Optional[URIPARM]) -> Optional[List[URIRef]]:
+    return [URIRef(p)] if isinstance(p, str) else [p] if isinstance(p, URIRef) else p
+
+
 class ShExEvaluator:
     """ Shape Expressions Evaluator """
 
@@ -47,9 +51,9 @@ class ShExEvaluator:
         self._schema = None
         self.schema = schema
         self._focus = None
-        self.focus = focus
+        self.focus = normalize_uriparm(focus)
         self._start = None
-        self.start = start
+        self.start = normalize_uriparm(start)
         self.debug = debug
 
     @property
@@ -93,7 +97,7 @@ class ShExEvaluator:
 
         :param shex:  Schema
         """
-        self._schema = None if shex is None else SchemaLoader().loads(shex)
+        self._schema = SchemaLoader().loads(shex) if isinstance(shex, str) else shex
 
     @property
     def focus(self) -> Optional[List[URIRef]]:
@@ -149,21 +153,23 @@ class ShExEvaluator:
                  rdf_format: Optional[str] = None,
                  debug: Optional[bool] = None) -> List[EvaluationResult]:
         if rdf or shex or focus or start:
+            if not rdf_format:
+                rdf_format = self.rdf_format
             evaluator = ShExEvaluator(rdf, shex, focus, start, rdf_format)
             if not rdf:
                 evaluator.g = self.g
             if not shex:
                 evaluator._schema = self._schema
-            if not focus:
-                evaluator._focus = self._focus
-            if not start:
-                evaluator._start = self._start
+            evaluator._focus = normalize_uriparm(focus) if focus else self._focus
+            evaluator._start = normalize_uriparm(start) if start else self._start
         else:
             evaluator = self
 
         cntxt = Context(evaluator.g, evaluator._schema)
-        cntxt.debug_context.trace_satisfies = cntxt.debug_context.trace_matches = \
-            cntxt.debug_context.trace_nodeSatisfies = debug if debug is not None else self.debug
+        # TODO: Clean this up
+        cntxt.debug_context.trace_satisfies = debug if debug is not None else self.debug
+        # cntxt.debug_context.trace_satisfies = cntxt.debug_context.trace_matches = \
+        #     cntxt.debug_context.trace_nodeSatisfies = debug if debug is not None else self.debug
 
         rval = []
         for start in evaluator.start:
