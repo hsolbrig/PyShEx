@@ -1,10 +1,13 @@
 # Python implementation of ShEx 2.0
 [![Pyversions](https://img.shields.io/pypi/pyversions/PyShEx.svg)](https://pypi.python.org/pypi/PyShEx)
 
+[![PyPi](https://version-image.appspot.com/pypi/?name=PyShEx)](https://pypi.python.org/pypi/PyShEx)
+
 This package is a reasonably literal implementation of the [Shape Expressions Language 2.0](http://shex.io/shex-semantics/).  It can parse and "execute" ShExC and ShExJ source.
 
 ## Revisions
 * 0.2.dev3 -- added SchemaEvaluator and other tweaks.  There are still some unit tests that fail -- beware
+* 0.3.0 -- Fix several issues.  Still does not pass all unit tests -- see `test_manifest.py` for details
 
 ## Installation
 ```bash

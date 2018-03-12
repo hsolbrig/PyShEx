@@ -1,12 +1,11 @@
-import jsonasobj
+import os
 import unittest
 
-import os
+import jsonasobj
+import pandas as pd
 import requests
 from SPARQLWrapper import SPARQLWrapper, JSON
-import pandas as pd
-from ShExJSG import Schema, ShExC
-from rdflib import URIRef
+from ShExJSG import ShExC
 
 from pyshex import PrefixLibrary, ShExEvaluator
 
@@ -48,7 +47,6 @@ class ReactomeTestCase(unittest.TestCase):
                 shex = ShExC(schema).schema
                 print("==== Schema =====")
                 print(shex._as_json_dumps())
-                pfx = PrefixLibrary(schema, wikidata="http://www.wikidata.org/entity/")
 
                 evaluator = ShExEvaluator(schema=shex, debug=True)
                 sparql_query = case.queryMap.replace("SPARQL '''", "").replace("'''@START", "")
@@ -63,6 +61,7 @@ class ReactomeTestCase(unittest.TestCase):
                         else:
                             print(
                                 "item with issue: " + str(result.focus) + " - " + "shape applied: " + str(result.start))
+        self.assertTrue(True, "Testing for a hang")
 
     def test_single_reactome(self):
         data_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data'))

@@ -10,7 +10,7 @@ if sys.version_info < (3, 6):
 
 setup(
     name='PyShEx',
-    version='0.2.dev3',
+    version='0.3.0',
     packages=['scripts', 'pyshex', 'pyshex.shape_expressions_language', 'pyshex.shapemap_structure_and_language',
               'pyshex.sparql11_query', 'pyshex.utils'],
     url="http://github.com/hsolbrig/PyShEx",
@@ -20,7 +20,7 @@ setup(
     description='Python ShEx Implementation',
     install_requires=['ShExJSG>=0.1.2', 'PyShExC>=0.3.0', 'rdflib>=4.2.2', 'rdflib-jsonld>=0.4.0', 'requests',
                       'urllib3'],
-    tests_require=['PyJSG'],
+    tests_require=['PyJSG', 'jsonasobj', 'SPARQLWrapper', 'pandas'],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Console',
