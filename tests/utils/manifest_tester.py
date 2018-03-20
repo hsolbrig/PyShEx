@@ -20,7 +20,7 @@ ENTRY_NAME = ''              # Individual element to test
 START_AFTER = ''             # Element to start at (or after)
 
 CONTINUE_ON_FAIL = True
-VERBOSE = True
+VERBOSE = False
 DEBUG = bool(ENTRY_NAME)
 TEST_SKIPS_ONLY = False                  # Double check that all skips need skipping
 
@@ -32,19 +32,16 @@ LOCAL_FILE_LOC = os.path.expanduser("~/git/shexTest/")
 REMOTE_FILE_LOC = "https://raw.githubusercontent.com/shexSpec/shexTest/master/"
 
 # Reasons for skipping things
-BNODE_ISSUE = "Blank Nodes are not preserved in RDF"
 AWAIT_FANCY_STUFF = "Too crazy for the first pass"
-CRLF_ISSUE = "Code expects crlf and not parsed that way"
 USES_IMPORTS = "Uses IMPORTS and no facet saying as much"
 LONG_UCHAR = "Uses multi-byte literals"
 RDFLIB_ISSUE = "RDFLIB single quote parsing error"
 FALSE_LEAD_ISSUE = "Unknown issue with false lead"
-HANGS = "Test hangs"
 FOCUS_DATATYPE = "FocusDatatype"
-UNKNOWN = "Unknown failure"
+GREEDY_ISSUE = "Greedy issue - needs resolution"
 
 skip_traits = [SHT.Import, SHT.Include, SHT.BNodeShapeLabel, SHT.ShapeMap, SHT.OutsideBMP,
-               SHT.ToldBNode, SHT.LexicalBNode]
+               SHT.ToldBNode, SHT.LexicalBNode, SHT.Greedy, SHT.Exhaustive]
 
 # We can't do an effective test on relative files when we're rewriting URI's
 if LOCAL_FILE_LOC:
@@ -55,7 +52,6 @@ if LOCAL_FILE_LOC:
 expected_failures = {
      "1literalPattern_with_ascii_boundaries_pass": AWAIT_FANCY_STUFF,
      "1literalPattern_with_ascii_boundaries_fail": AWAIT_FANCY_STUFF,
-     "1valExprRef-IV1_fail-lit-short": USES_IMPORTS,
      "1valExprRef-IV1_pass-lit-equal": USES_IMPORTS,
      "1valExprRefbnode-IV1_fail-lit-short": USES_IMPORTS,
      "1valExprRefbnode-IV1_pass-lit-equal": USES_IMPORTS,
@@ -63,14 +59,11 @@ expected_failures = {
      "1val1STRING_LITERAL1_with_ECHAR_escapes_pass": LONG_UCHAR,
      "1val1STRING_LITERAL1_with_all_punctuation_fail": RDFLIB_ISSUE,
      "1val1STRING_LITERAL1_with_all_punctuation_pass": RDFLIB_ISSUE,
-     "false-lead-excluding-value-shape": FALSE_LEAD_ISSUE,
-     "open3groupdotclosecard23_pass-p1p2p3X3": HANGS,
-     "open3groupdotclosecard23Annot3Code2-p1p2p3X3": HANGS,
-     "repeated-group": HANGS,
      "focusdatatype_pass": FOCUS_DATATYPE,
      "focusdatatype_pass-empty": FOCUS_DATATYPE,
      "1focusvsORdatatype_pass-dt": FOCUS_DATATYPE,
-     "FocusIRI2groupBnodeNested2groupIRIRef_pass": UNKNOWN
+     "PstarT": GREEDY_ISSUE,
+     "PstarTstar": GREEDY_ISSUE
 }
 
 

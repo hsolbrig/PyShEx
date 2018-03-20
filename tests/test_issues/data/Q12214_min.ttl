@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix wikibase: <http://wikiba.se/ontology-beta#> .
+@prefix wds: <http://www.wikidata.org/entity/statement/> .
+@prefix wdata: <https://www.wikidata.org/wiki/Special:EntityData/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+
+wd:Q12214 p:P279 wds:Q12214-93138cd6-4150-3e3f-0b31-fabce61ff691 .
+
+wds:Q12214-93138cd6-4150-3e3f-0b31-fabce61ff691 a wikibase:Statement,
+		wikibase:BestRank ;
+	wikibase:rank wikibase:NormalRank ;
+	ps:P279 wd:Q18975241 .

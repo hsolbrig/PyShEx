@@ -1,0 +1,29 @@
+# Shape Expression for Diseases in Wikidata
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX prv: <http://www.wikidata.org/prop/reference/value/>
+PREFIX pr:  <http://www.wikidata.org/prop/reference/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX do: <http://purl.obolibrary.org/obo/DOID_>
+PREFIX doio: <http://identifiers.org/doid/>
+PREFIX mir: <http://www.ebi.ac.uk/miriam/main/collections/>
+PREFIX gw: <http://micel.io/genewiki/>
+
+
+start = @gw:disease
+
+gw:disease EXTRA p:P31 {
+
+  # Statements
+  p:P279  @gw:P279_disease-parent-class*
+}
+
+gw:P279_disease-parent-class {
+  prov:wasDerivedFrom @gw:do-reference ;
+}

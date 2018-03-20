@@ -34,9 +34,10 @@ def get_sparql_dataframe(service, query):
 
 class ReactomeTestCase(unittest.TestCase):
 
+    @unittest.skipIf(True, "Takes a long time")
     def test_andras_loop(self):
         manifast_wikipathways = \
-            "https://raw.githubusercontent.com/shexSpec/schemas/master/Wikidata/pathways/Reactome/manifest.json"
+            "https://raw.githubusercontent.com/shexSpec/schemas/master/Wikidata/pathways/Reactome/manifest_all.json"
         manifest = jsonasobj.loads(requests.get(manifast_wikipathways).text)
 
         for case in manifest:
@@ -45,16 +46,16 @@ class ReactomeTestCase(unittest.TestCase):
                 sparql_endpoint = case.data.replace("Endpoint: ", "")
                 schema = requests.get(case.schemaURL).text
                 shex = ShExC(schema).schema
-                print("==== Schema =====")
-                print(shex._as_json_dumps())
+                # print("==== Schema =====")
+                # print(shex._as_json_dumps())
 
                 evaluator = ShExEvaluator(schema=shex, debug=True)
                 sparql_query = case.queryMap.replace("SPARQL '''", "").replace("'''@START", "")
 
                 df = get_sparql_dataframe(sparql_endpoint, sparql_query)
-                for wdid in df.item:
+                for wdid in df.item[:50]:
                     slurpeddata = requests.get(wdid + ".ttl")
-                    results = evaluator.evaluate(rdf=slurpeddata.text, focus=wdid, debug=True)
+                    results = evaluator.evaluate(rdf=slurpeddata.text, focus=wdid, debug=False)
                     for result in results:
                         if result.result:
                             print(str(result.focus) + ": CONFORMS")
@@ -63,6 +64,7 @@ class ReactomeTestCase(unittest.TestCase):
                                 "item with issue: " + str(result.focus) + " - " + "shape applied: " + str(result.start))
         self.assertTrue(True, "Testing for a hang")
 
+    @unittest.skipIf(True, "Takes a long time")
     def test_single_reactome(self):
         data_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data'))
         with open(os.path.join(data_path, 'reactome.shex')) as shexf:

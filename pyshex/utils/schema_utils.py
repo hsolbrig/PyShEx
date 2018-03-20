@@ -1,9 +1,7 @@
-from typing import Optional, Union, List
+from typing import Optional, Union, List, Dict
 
 from ShExJSG import ShExJ
 from ShExJSG.ShExJ import IRIREF
-from pyjsg.jsglib.jsg import isinstance_
-from rdflib import URIRef
 
 from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import START, shapeLabel
@@ -76,16 +74,52 @@ def predicates_in_expression(expression: ShExJ.shapeExpr, cntxt: Context) -> Lis
     :param cntxt: Context of evaluation
     :return: List of predicates
     """
-    predicates: List[IRIREF] = []
+    # predicates: List[IRIREF] = []
+    #
+    # def predicate_finder(predicates: List[IRIREF], tc: ShExJ.TripleConstraint, cntxt: Context) -> None:
+    #     if isinstance(tc, ShExJ.TripleConstraint):
+    #         predicates.append(tc.predicate)
+    #
+    # def triple_expr_finder(predicates: List[IRIREF], expr: ShExJ.shapeExpr, cntxt: Context) -> None:
+    #     if isinstance(expr, ShExJ.Shape) and expr.expression is not None:
+    #         cntxt.visit_triple_expressions(expr.expression, predicate_finder, predicates)
+    #
+    # # TODO: follow_inner_shapes as True probably goes too far, but we definitely need to cross shape/triplecons
+    # cntxt.visit_shapes(expression, triple_expr_finder, predicates, follow_inner_shapes=False)
+    # return predicates
+    return list(directed_predicates_in_expression(expression, cntxt).keys())
 
-    def predicate_finder(predicates: List[IRIREF], tc: ShExJ.TripleConstraint, cntxt: Context) -> None:
+
+class PredDirection:
+    def __init__(self) -> None:
+        self.is_fwd = False
+        self.is_rev = False
+
+    def dir(self, is_fwd: bool) -> None:
+        if is_fwd:
+            self.is_fwd = True
+        else:
+            self.is_rev = True
+
+
+def directed_predicates_in_expression(expression: ShExJ.shapeExpr, cntxt: Context) -> Dict[IRIREF, PredDirection]:
+    """ Directed predicates in expression -- return all predicates in shapeExpr along with which direction(s) they
+    evaluate
+
+    :param expression: Expression to scan
+    :param cntxt:
+    :return:
+    """
+    dir_predicates: Dict[IRIREF, PredDirection] = {}
+
+    def predicate_finder(predicates: Dict[IRIREF, PredDirection], tc: ShExJ.TripleConstraint, _: Context) -> None:
         if isinstance(tc, ShExJ.TripleConstraint):
-            predicates.append(tc.predicate)
+            predicates.setdefault(tc.predicate, PredDirection()).dir(tc.inverse.val is None or not tc.inverse.val)
 
-    def triple_expr_finder(predicates: List[IRIREF], expr: ShExJ.shapeExpr, cntxt: Context) -> None:
+    def triple_expr_finder(predicates: Dict[IRIREF, PredDirection], expr: ShExJ.shapeExpr, cntxt_: Context) -> None:
         if isinstance(expr, ShExJ.Shape) and expr.expression is not None:
-            cntxt.visit_triple_expressions(expr.expression, predicate_finder, predicates)
+            cntxt_.visit_triple_expressions(expr.expression, predicate_finder, predicates)
 
     # TODO: follow_inner_shapes as True probably goes too far, but we definitely need to cross shape/triplecons
-    cntxt.visit_shapes(expression, triple_expr_finder, predicates, follow_inner_shapes=False)
-    return predicates
+    cntxt.visit_shapes(expression, triple_expr_finder, dir_predicates, follow_inner_shapes=False)
+    return dir_predicates

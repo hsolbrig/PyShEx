@@ -9,11 +9,12 @@ from pyjsg.jsglib.jsg import isinstance_
 from pyshex.shape_expressions_language.p3_terminology import neigh, arcsOut
 from pyshex.shape_expressions_language.p5_7_semantic_actions import semActsSatisfied
 from pyshex.shape_expressions_language.p5_context import Context
-from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import RDFGraph
+from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import RDFGraph, RDFTriple
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
 from pyshex.utils.debug_utils import satisfies_wrapper, matches_wrapper, remainder_wrapper
 from pyshex.utils.partitions import partition_t, partition_2
-from pyshex.utils.schema_utils import predicates_in_expression, triple_constraints_in_expression
+from pyshex.utils.schema_utils import predicates_in_expression, triple_constraints_in_expression, \
+    directed_predicates_in_expression
 from pyshex.utils.value_set_utils import uriref_matches_iriref, iriref_to_uriref
 
 
@@ -38,15 +39,19 @@ def satisfiesShape(cntxt: Context, n: nodeSelector, S: ShExJ.Shape) -> bool:
     # Recursion detection.  If start_evaluating returns a boolean value, this is the assumed result of the shape
     # evaluation.  If it doesn't, evaluation is needed
     rslt = cntxt.start_evaluating(n, S)
-    predicates = predicates_in_expression(S, cntxt)
-    matchables = RDFGraph([t for t in neighborhood if str(t.p) in predicates])
-    non_matchables = RDFGraph([t for t in neighborhood if str(t.p) not in predicates])
+    predicates = directed_predicates_in_expression(S, cntxt)
+    matchables = RDFGraph([t for t in neighborhood if str(t.p) in predicates and
+                           ((predicates[IRIREF(t.p)].is_fwd and t.s == n) or
+                            (predicates[IRIREF(t.p)].is_rev and t.o == n))])
+
+    # TODO: this is incomplete - a CLOSED graph with inverse elements will fail (?)
+    non_matchables = RDFGraph([t for t in arcsOut(cntxt.graph, n) if t not in matchables])
 
     c = cntxt.debug_context
     if c.trace_satisfies:
         print(c.i(1, f"---> Satisfies shape {c.d()}"))
         print(c.i(2, f"subject: {n}"))
-        print(c.i(2, "predicates:", sorted(str(p) for p in predicates)))
+        print(c.i(2, "predicates:", sorted(str(p) for p in predicates.keys())))
         print(c.i(2, "matchables:", sorted(str(m) for m in matchables)))
         print()
 
@@ -117,7 +122,7 @@ def valid_remainder(cntxt: Context, n: nodeSelector, matchables: RDFGraph, S: Sh
     if matchables and S.expression is not None:
         tes = triple_constraints_in_expression(S.expression, cntxt)
         for m in matchables:
-            if any(matchesTripleConstraint(cntxt, RDFGraph([m]), te) for te in tes):
+            if any(matchesTripleConstraint(cntxt, m, te) for te in tes):
                 return False
 
     # There is no triple in **matchables** whose predicate does not appear in extra.
@@ -179,18 +184,24 @@ def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr
     min_ = expr.min.val if expr.min.val is not None else 1
     max_ = expr.max.val if expr.max.val is not None else 1
 
+    # if len(T) == 0 and min_ == 0:
+    #     return True
+    #
+    # # TODO: What do we do about max_ = 0?
+    # if len(T) < min_ or len(T) == 0 or (0 <= max_ < len(T)):
+    #     return False
+    # # partition_counter = 0
+    #
+    # if matchesExpr(cntxt, T, expr):
+    #     return True
+    #
+    # # TODO: Check this out -- skipping partitions test may be less than ideal in this situation
+    # # if min_ == 0:
+    # #     return True
     if len(T) < min_:
         return False
-    partition_counter = 0
-
-    if matchesExpr(cntxt, T, expr):
-        return True
-
-    # TODO: Check this out -- skipping partitions test may be less than ideal in this situation
-    if min_ == 0:
-        return True
     for partition in _partitions(T, min_, max_):
-        partition_counter += 1
+        # print(f"Partition({min_}, {max_}): {','.join(str(len(e)) for e in partition)}")
         if all(matchesExpr(cntxt, entry, expr) for entry in partition):
             return True
     return False
@@ -220,7 +231,7 @@ def matchesExpr(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExpr) -> bool:
     elif isinstance(expr, ShExJ.EachOf):
         rval = matchesEachOf(cntxt, T, expr)
     elif isinstance(expr, ShExJ.TripleConstraint):
-        rval = matchesTripleConstraint(cntxt, T, expr)
+        rval = all(matchesTripleConstraint(cntxt, t, expr) for t in T)
     elif isinstance(expr, ShExJ.tripleExprLabel):
         rval = matchesTripleExprRef(cntxt, T, expr)
     else:
@@ -283,10 +294,16 @@ def matchesEachOf(cntxt: Context, T: RDFGraph, expr: ShExJ.EachOf) -> bool:
             if c.trace_matches:
                 print()
 
-        success = all(r[0] for r in rslt)
+        success = all(r[1] for r in rslt)
     else:
         success = False
     # success = not mixed_expression and all(matches(cntxt, partition_map[e.predicate], e) for e in expr.expressions)
+    # if success:
+    #     print('*' * 20)
+    #     print(expr._as_json_dumps())
+    #     for t in T:
+    #         print(f"\t{t}")
+    #     print('=' * 20)
 
     if not success and mixed_expression:
         for partition in _partitions(T, len(expr.expressions), len(expr.expressions)):
@@ -299,12 +316,11 @@ def matchesEachOf(cntxt: Context, T: RDFGraph, expr: ShExJ.EachOf) -> bool:
 
 
 @matches_wrapper
-def matchesTripleConstraint(cntxt: Context, T: RDFGraph, expr: ShExJ.TripleConstraint) -> bool:
+def matchesTripleConstraint(cntxt: Context, t: RDFTriple, expr: ShExJ.TripleConstraint) -> bool:
     """
     expr is a TripleConstraint and:
 
-    * T is a set of one triple.
-    * Let t be the soul triple in T.
+    * t is a triple
     * t's predicate equals expr's predicate.
       Let value be t's subject if inverse is true, else t's object.
     * if inverse is true, t is in arcsIn, else t is in arcsOut.
@@ -312,30 +328,14 @@ def matchesTripleConstraint(cntxt: Context, T: RDFGraph, expr: ShExJ.TripleConst
     """
     from pyshex.shape_expressions_language.p5_3_shape_expressions import satisfies
 
-    c = cntxt.debug_context
-    if c.trace_matches:
-        if len(T) != 1:
-            print(c.i(4, f"<---> matchesTripleConstraint {c.d()} False (len={len(T)})"))
+    if uriref_matches_iriref(t.p, expr.predicate):
+        value = t.s if expr.inverse.val else t.o
+        if expr.valueExpr is None or satisfies(cntxt, value, expr.valueExpr):
+            return True
         else:
-            print(c.i(4, f"---> matchesTripleConstraint {c.d()}"))
-
-    if len(T) == 1:
-        for t in T:
-            if uriref_matches_iriref(t.p, expr.predicate):
-                value = t.s if expr.inverse.val else t.o
-                if expr.valueExpr is None or satisfies(cntxt, value, expr.valueExpr):
-                    if c.trace_matches:
-                        print(c.i(4, f"<--- matchesTripleConstraint {c.d()} True"))
-                    return True
-                else:
-                    if c.trace_matches:
-                        print(c.i(4, f"---> matchesTripleConstraint {c.d()} "
-                                     f"False - value {value} doesn't match"))
-            else:
-                if c.trace_matches:
-                    print(c.i(4, f"---> matchesTripleConstraint {c.d()} "
-                                 f"False - predicate {t.p} doesn't match {expr.predicate}"))
-    return False
+            return False
+    else:
+        return False
 
 
 @matches_wrapper
@@ -344,4 +344,5 @@ def matchesTripleExprRef(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExprLabe
     expr is an tripleExprRef and satisfies(value, tripleExprWithId(tripleExprRef), G, m).
     The tripleExprWithId function is defined in Triple Expression Reference Requirement below.
     """
-    return matchesTripleConstraint(cntxt, T, cntxt.tripleExprFor(expr))
+    expr = cntxt.tripleExprFor(expr)
+    return all(matchesTripleConstraint(cntxt, t, expr) for t in T)

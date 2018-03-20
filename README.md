@@ -56,25 +56,18 @@ This implementation passes all of the tests in the master branch of [validation/
 
 At the moment, there are 1077 tests, of which:
 
-* 967 pass
-* 110 are skipped - reasons:
-2) (1) Extraneous 'id' field for Schema (2.1 feature?)
-3) (1) Takes too long -- we need to beef up the partition generator
-4) (4) Test uses IMPORT -- not implemented in ShEx 2.0, and not tagged as such
-5) (2) Test uses multi-byte literals aren't tagged as such
-7) (2) sht:BNodeShapeLabel - rdflib doesn't preserve bnodes
-8) (13) sht:Import - test uses V2.1 IMPORT feature
-9) (5) sht:Include ...
-10) (30) sht:LexicalBNode - test counts on preservation of BNODES
-11) (22) sht:OutsideBMP -- test uses multi byte unicode
-12) (3) sht:ShapeMap ...
-13) (20) sht:ToldBNode
-14) (2) sht:relativeIRI -- this isn't a real problem, but we havent taken time to deal with this in the test harness
-
-
-We've also skipped two tests:
-* `skipped` - the ShEx schema has an `id` in the outermost level, which fails the parser
-* `repeated-group` - this tests the limits of our naive partition algorithm.
+* 969 pass
+* 108 are skipped - reasons:
+1) (44) Tests non-blank blank nodes (`rdflib` does not preserve bnode "identity")
+2) (24) sht:OutsideBMP -- test uses multi byte unicode
+3) (16) Uses ShEx 2.1 IMPORT feature -- not yet implemented
+4) (8) Focus is a non-blank blank node -- cannot implement in `rdflib`
+5) (3) Focus is a Literal  -- not yet implemented
+6) (5) Uses ShEx 2.1 INCLUDE feature -- not yet implemented
+7) (3) Uses manifest shapemap feature -- 
+8) (2) sht:relativeIRI -- this isn't a real problem, but we havent taken time to deal with this in the test harness
+9) (2) `rdflib` has a parsing error when escaping single quotes. (Issue submitted, awaiting release)
+10) (1) "false lead" -- unsure why this fails
 
 As mentioned above, at the moment this is as literal an implementation of the specification as was sensible.  This means, in particular, that we are less than clever when it comes to partition management.
 
