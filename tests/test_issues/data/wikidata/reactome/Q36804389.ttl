@@ -1,0 +1,158 @@
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ns1: <http://www.wikidata.org/prop/reference/value/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix po: <http://purl.obolibrary.org/obo/PW> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix react: <http://micel.io/reactome/> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/statement/Q36804385-4D3642E2-67D5-45AA-84EB-D0C424394AEB> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-69620" .
+
+<http://www.wikidata.org/entity/statement/Q36804389-64F07389-2C17-453C-82CA-3EB5F7294BE8> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/4ec6391a43415f99ababf1ba0f065701eae9f005> ;
+    ps:P703 wd:Q15978631 .
+
+<http://www.wikidata.org/entity/statement/Q36804389-7713A0AD-4C28-45E3-AC5C-74F0E26F63D8> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/4ec6391a43415f99ababf1ba0f065701eae9f005> ;
+    ps:P527 wd:Q36804393 .
+
+<http://www.wikidata.org/entity/statement/Q36804389-7CA5A650-72CD-40B8-A2DC-71713394BC4E> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/4ec6391a43415f99ababf1ba0f065701eae9f005> ;
+    ps:P361 wd:Q36804385 .
+
+<http://www.wikidata.org/entity/statement/Q36804389-A5C579F7-0797-4A3B-A491-8BFB8192D890> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/4ec6391a43415f99ababf1ba0f065701eae9f005> ;
+    ps:P527 wd:Q36804524 .
+
+<http://www.wikidata.org/entity/statement/Q36804389-B614D154-D2B2-4596-A7A6-4B31FE798342> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/4ec6391a43415f99ababf1ba0f065701eae9f005> ;
+    ps:P31 wd:Q4915012 .
+
+<http://www.wikidata.org/entity/statement/Q36804389-BC62E76F-FC58-49E7-A00B-E988C6D8BD0C> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-69615" .
+
+<http://www.wikidata.org/entity/statement/Q36804393-2D2CC0C1-A680-4245-B066-6715D1857A4B> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-69580" .
+
+<http://www.wikidata.org/entity/statement/Q36804524-34F1B515-064E-4964-9712-63FB185FA6B7> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-69613" .
+
+wd:Q36804385 rdfs:label "Cell Cycle Checkpoints" ;
+    schema:dateModified "2017-12-12T11:04:56+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway Cell Cycle Checkpoints in Homo sapiens" ;
+    schema:version 607606522 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 9 ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q36804385-025B8672-F2A7-44CB-BBED-76425A8D5B6E> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q36804385-98FA3D3B-2310-4748-BA0F-D47D06F68A6D>,
+        <http://www.wikidata.org/entity/statement/Q36804385-B3A0DC2D-2AD8-49E2-BB85-50F478B7E8DA> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q36804385-EA98A114-FB11-430A-8F69-1E68166ACFDB> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q36804385-4D3642E2-67D5-45AA-84EB-D0C424394AEB> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q36804385-79EFB5EB-FE2D-4AEC-AB1A-4FD540163708>,
+        <http://www.wikidata.org/entity/statement/Q36804385-90A7321A-9B0F-4333-8B8C-7BFDE1FCB10D>,
+        <http://www.wikidata.org/entity/statement/Q36804385-ED5CD377-149C-4077-A196-6A878BEDEB1A> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q36804385-1EB8CB00-7E8A-464E-B074-3A32419BE010> ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-69620> ;
+    wdt:P31 wd:Q1068809,
+        wd:Q4915012 ;
+    wdt:P361 wd:Q45314008 ;
+    wdt:P3937 "R-HSA-69620" ;
+    wdt:P527 wd:Q36804389,
+        wd:Q36804562,
+        wd:Q36813119 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q36804393 rdfs:label "p53-Dependent G1/S DNA damage checkpoint" ;
+    schema:dateModified "2017-12-12T10:34:06+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway p53-Dependent G1/S DNA damage checkpoint in Homo sapiens" ;
+    schema:version 607589934 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 7 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q36804393-366A6331-D1EF-4F88-983B-A33CFEE9311C> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q36804393-0E23A2FB-644A-479E-873A-8CC26E5EF38D> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q36804393-F5A02FFE-8306-47B0-901B-79B2AE469DA7> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q36804393-7DDFC853-DB58-44D7-9F3C-C24E673B4E34> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q36804393-2D2CC0C1-A680-4245-B066-6715D1857A4B> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q36804393-BEF9DDB9-22E9-4489-8B46-341A620BF511> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q36804393-8738E6A8-14E1-4C08-83A8-977F159B484C> ;
+    wdt:P2860 wd:Q37152060 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-69580> ;
+    wdt:P31 wd:Q4915012 ;
+    wdt:P361 wd:Q36804389 ;
+    wdt:P3937 "R-HSA-69580" ;
+    wdt:P527 wd:Q36804398 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q36804524 rdfs:label "p53-Independent G1/S DNA damage checkpoint" ;
+    schema:dateModified "2017-12-12T10:34:18+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway p53-Independent G1/S DNA damage checkpoint in Homo sapiens" ;
+    schema:version 607590070 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 7 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q36804524-5270105D-EFF9-4ACA-BC81-814AE08DEFD2> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q36804524-ACC95C9E-89E2-4885-BE56-06E8DD4CFE2F> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q36804524-B042FFEC-BD57-45FF-A513-029411B5D86F> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q36804524-ED9ED043-809D-45C1-8902-C77158689B92> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q36804524-34F1B515-064E-4964-9712-63FB185FA6B7> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q36804524-29F6D289-9AE1-4EBE-933D-B399DEE4D738> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q36804524-60CE0C81-FBD1-4520-92FA-7ED4C79EE14B> ;
+    wdt:P2860 wd:Q28611930 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-69613> ;
+    wdt:P31 wd:Q4915012 ;
+    wdt:P361 wd:Q36804389 ;
+    wdt:P3937 "R-HSA-69613" ;
+    wdt:P527 wd:Q36804530 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q36804389 rdfs:label "G1/S DNA Damage Checkpoints" ;
+    schema:dateModified "2017-12-12T10:34:03+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway G1/S DNA Damage Checkpoints in Homo sapiens" ;
+    schema:version 607589905 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 7 ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q36804389-61B24F37-AD0E-4E87-A1FD-952EFB04FF8A> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q36804389-B614D154-D2B2-4596-A7A6-4B31FE798342> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q36804389-7CA5A650-72CD-40B8-A2DC-71713394BC4E> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q36804389-BC62E76F-FC58-49E7-A00B-E988C6D8BD0C> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q36804389-7713A0AD-4C28-45E3-AC5C-74F0E26F63D8>,
+        <http://www.wikidata.org/entity/statement/Q36804389-A5C579F7-0797-4A3B-A491-8BFB8192D890> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q36804389-64F07389-2C17-453C-82CA-3EB5F7294BE8> ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-69615> ;
+    wdt:P31 wd:Q4915012 ;
+    wdt:P361 wd:Q36804385 ;
+    wdt:P3937 "R-HSA-69615" ;
+    wdt:P527 wd:Q36804393,
+        wd:Q36804524 ;
+    wdt:P703 wd:Q15978631 .
+
+<http://www.wikidata.org/reference/4ec6391a43415f99ababf1ba0f065701eae9f005> pr:P248 wd:Q2134522 ;
+    pr:P3937 "R-HSA-69615" ;
+    pr:P813 "2017-12-12T00:00:00+00:00"^^xsd:dateTime ;
+    ns1:P813 <http://www.wikidata.org/value/7c6e303e2f33a755d588bc343eb9ce9e> .
+

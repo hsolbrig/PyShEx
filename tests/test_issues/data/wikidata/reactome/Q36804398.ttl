@@ -1,0 +1,683 @@
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://www.wikidata.org/prop/reference/value/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix po: <http://purl.obolibrary.org/obo/PW> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix react: <http://micel.io/reactome/> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/statement/Q14818020-8A81B474-D457-423D-A003-080ACB4C0860> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:d8eb3e0322e69c60e51a939a4c63bd63206b838f ;
+    ps:P31 wd:Q2996394 .
+
+<http://www.wikidata.org/entity/statement/Q24322597-DD20D823-AD64-4E86-A8F6-91B056DF62C6> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/3c2304646f8d151d188035ca02828975412015ba> ;
+    ps:P698 "9153395" .
+
+<http://www.wikidata.org/entity/statement/Q27860744-BA4FC765-99FC-46E6-AE6D-C39D6077616D> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:b1c8334ff6d31c3a5da4f34856e79182feea0acf ;
+    ps:P698 "9153396" .
+
+<http://www.wikidata.org/entity/statement/Q29615437-8D5AD471-50A7-433B-B5D1-D043433C0D25> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/67c11b8d0bc5bd8f84c0190f9d18ce14191d596b>,
+        wdref:cbe89fb783a587bb6aa6be0c9e0730cf1041b2f8 ;
+    ps:P698 "1423616" .
+
+<http://www.wikidata.org/entity/statement/Q36804393-2D2CC0C1-A680-4245-B066-6715D1857A4B> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-69580" .
+
+<http://www.wikidata.org/entity/statement/Q36804398-1CC7FBBA-ADEC-453D-8423-5125772E0531> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/2cdeb68e7156733200be23e38e769d26c1dbea5e> ;
+    ps:P527 wd:Q36804515 .
+
+<http://www.wikidata.org/entity/statement/Q36804398-2CB03F86-1BFC-46E5-AA8F-62B347F6B869> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/2cdeb68e7156733200be23e38e769d26c1dbea5e> ;
+    ps:P2860 wd:Q27860744 .
+
+<http://www.wikidata.org/entity/statement/Q36804398-58B93C9B-ADFB-4852-82A7-14593D06CC4F> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/2cdeb68e7156733200be23e38e769d26c1dbea5e> ;
+    ps:P361 wd:Q36804393 .
+
+<http://www.wikidata.org/entity/statement/Q36804398-6267FCD0-19EC-4322-B0AF-A6A40C0D1BD1> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/2cdeb68e7156733200be23e38e769d26c1dbea5e> ;
+    ps:P2860 wd:Q41511230 .
+
+<http://www.wikidata.org/entity/statement/Q36804398-6AD8E2A4-8566-461F-94B1-29766BE0736C> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-69563" .
+
+<http://www.wikidata.org/entity/statement/Q36804398-7CAEDF24-E86A-495E-A789-2C43F27CFB3C> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/2cdeb68e7156733200be23e38e769d26c1dbea5e> ;
+    ps:P31 wd:Q14818020 .
+
+<http://www.wikidata.org/entity/statement/Q36804398-9F14458A-47E0-43FE-BFE5-8F6FF2BF4643> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/2cdeb68e7156733200be23e38e769d26c1dbea5e> ;
+    ps:P2860 wd:Q29615437 .
+
+<http://www.wikidata.org/entity/statement/Q36804398-A8BACD73-418B-44D6-BF03-296F8A9D82FA> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/2cdeb68e7156733200be23e38e769d26c1dbea5e> ;
+    ps:P527 wd:Q36804403 .
+
+<http://www.wikidata.org/entity/statement/Q36804398-D4C8A338-7C88-4477-B8BF-C965C8645BF2> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/2cdeb68e7156733200be23e38e769d26c1dbea5e> ;
+    ps:P527 wd:Q36804520 .
+
+<http://www.wikidata.org/entity/statement/Q36804398-DB44BCA9-44AA-47DE-B814-FB3F1F69C239> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/2cdeb68e7156733200be23e38e769d26c1dbea5e> ;
+    ps:P2860 wd:Q24322597 .
+
+<http://www.wikidata.org/entity/statement/Q36804398-DF247BCC-AC12-409D-BA5A-98C8CB274A24> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/2cdeb68e7156733200be23e38e769d26c1dbea5e> ;
+    ps:P527 wd:Q36804479 .
+
+<http://www.wikidata.org/entity/statement/Q36804398-E0FA35EE-FF87-42C3-AD3D-0ABEFEFE42D4> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/2cdeb68e7156733200be23e38e769d26c1dbea5e> ;
+    ps:P31 wd:Q4915012 .
+
+<http://www.wikidata.org/entity/statement/Q36804398-F36FAA5D-DED3-45E1-91C2-29AA20265171> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/2cdeb68e7156733200be23e38e769d26c1dbea5e> ;
+    ps:P703 wd:Q15978631 .
+
+<http://www.wikidata.org/entity/statement/Q36804403-435D68AE-6F6C-4EB5-9B4A-CA5A8760B653> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-69541" .
+
+<http://www.wikidata.org/entity/statement/Q36804479-B06A620A-1EB5-47DE-A3D3-B5C8FE1E3505> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-69560" .
+
+<http://www.wikidata.org/entity/statement/Q36804515-FEFCEEC3-8F5E-44CA-BBFB-DEBCE3EA1FC2> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-69562" .
+
+<http://www.wikidata.org/entity/statement/Q36804520-2EA1E727-12AA-4C73-BF87-C283772F9B10> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-187934" .
+
+<http://www.wikidata.org/entity/statement/Q41511230-7CD91007-ACAD-48CE-BAED-486C9DCBB2B9> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/4a15c34aff7be2ff8e2d4b46f2f7a71d6ec7f76f> ;
+    ps:P698 "8247533" .
+
+wd:Q14818020 rdfs:label "DNA damage response, signal transduction by p53 class mediator resulting in cell cycle arrest" ;
+    schema:dateModified "2018-02-07T09:01:09+00:00"^^xsd:dateTime ;
+    schema:description "A cascade of processes induced by the cell cycle regulator phosphoprotein p53, or an equivalent protein, in response to the detection of DNA damage and resulting in the stopping or reduction in rate of the cell cycle.",
+        "biologisch proces" ;
+    schema:version 627840783 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 6 ;
+    skos:altLabel "GO:0006977",
+        "positive regulation of cell cycle arrest by p53-mediated DNA damage response" ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q14818020-125E6F36-8C67-44EC-9AF0-65FA6F93F0FF>,
+        <http://www.wikidata.org/entity/statement/Q14818020-50EA6A17-87D9-44A4-8E63-62BC00079C0F>,
+        <http://www.wikidata.org/entity/statement/Q14818020-78FEF8FF-0B59-4ABA-BD20-B33C8370AE96> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q14818020-05258014-9702-4970-808B-95A120F2D705> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q14818020-8A81B474-D457-423D-A003-080ACB4C0860> ;
+    p:P686 <http://www.wikidata.org/entity/statement/Q14818020-0DE86D83-1079-4618-AFF9-815153EBD880> ;
+    wdt:P279 wd:Q14818045,
+        wd:Q14818080,
+        wd:Q21105069 ;
+    wdt:P2888 <http://purl.obolibrary.org/obo/GO_0006977> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P686 "GO:0006977" .
+
+wd:Q24322597 rdfs:label "Mdm2 promotes the rapid degradation of p53" ;
+    schema:dateModified "2017-10-13T21:24:14+00:00"^^xsd:dateTime ;
+    schema:description "1997 nî lūn-bûn",
+        "1997年の論文",
+        "1997年論文",
+        "1997年论文",
+        "1997년 논문",
+        "article científic",
+        "article scientific",
+        "article scientifique (publié 1997/05/15)",
+        "articol științific",
+        "articolo scientifico (pubblicato il 1997/05/15)",
+        "artigo científico",
+        "artigo científico (publicado na 1997/05/15)",
+        "artikull shkencor",
+        "artikulong pang-agham",
+        "artykuł naukowy",
+        "artículo científico publicado en 1997",
+        "artículu científicu",
+        "bilimsel makale",
+        "bài báo khoa học",
+        "mokslinis straipsnis",
+        "naučni članak",
+        "scienca artikolo",
+        "scientific article",
+        "teaduslik artikkel",
+        "tieteellinen artikkeli",
+        "tudományos cikk",
+        "vedecký článok (publikovaný 1997/05/15)",
+        "vetenskaplig artikel (publicerad på 1997/05/15)",
+        "videnskabelig artikel (udgivet  1997/05/15)",
+        "vitenskapelig artikkel",
+        "vitskapeleg artikkel",
+        "vědecký článek publikovaný v roce 1997",
+        "wetenschappelijk artikel (gepubliceerd op 15.05.1997)",
+        "wissenschaftlicher Artikel (veröffentlicht am 1997/05/15)",
+        "επιστημονικό άρθρο",
+        "мақолаи илмӣ",
+        "наукова стаття",
+        "научна статия",
+        "научная статья",
+        "научни чланак",
+        "научни чланак (објављен 1997/05/15)",
+        "գիտական հոդված",
+        "מאמר מדעי",
+        "مقالة علمية (نشرت في 15-5-1997)",
+        "บทความทางวิทยาศาสตร์",
+        "სამეცნიერო სტატია" ;
+    schema:version 576758817 ;
+    wikibase:identifiers 3 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 15 ;
+    p:P1433 <http://www.wikidata.org/entity/statement/Q24322597-67C9DD94-8059-4AC4-A0F8-93F423915029> ;
+    p:P1476 <http://www.wikidata.org/entity/statement/Q24322597-EBE0D6CA-EFBD-4981-AB53-B13C75A4BD3D> ;
+    p:P2093 <http://www.wikidata.org/entity/statement/Q24322597-0D8C7A8E-03F9-420C-80AF-8B183D4B47C3>,
+        <http://www.wikidata.org/entity/statement/Q24322597-5C09BA6E-9304-4B2B-876A-3DE0F6232B53>,
+        <http://www.wikidata.org/entity/statement/Q24322597-9C68A89F-F103-4115-89BB-68B3BBC90FAB>,
+        <http://www.wikidata.org/entity/statement/Q24322597-D414B935-819C-4A4B-8806-01F7CE6AE089> ;
+    p:P304 <http://www.wikidata.org/entity/statement/Q24322597-71930D9D-E2C7-4291-B63C-F822CA6B3EFF> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q24322597-AD807A2C-D00A-43E8-A2ED-203D85DA9871> ;
+    p:P3181 <http://www.wikidata.org/entity/statement/Q24322597-8770A412-5A0D-4EB4-AFF4-3F972B192788> ;
+    p:P356 <http://www.wikidata.org/entity/statement/Q24322597-6AC1DA8B-5675-4E19-9615-B24E28B67EF3> ;
+    p:P407 <http://www.wikidata.org/entity/statement/Q24322597-4E9E3921-E633-4839-A297-61DA8D2A52D1> ;
+    p:P433 <http://www.wikidata.org/entity/statement/Q24322597-AB93AA00-96FB-44E3-BFBB-81F04DD65AE2> ;
+    p:P478 <http://www.wikidata.org/entity/statement/Q24322597-293C0BA2-D53F-41D1-8F71-A3C465904832> ;
+    p:P577 <http://www.wikidata.org/entity/statement/Q24322597-A32969FD-FC53-43BF-BE2E-6AFBDF015CCE> ;
+    p:P698 <http://www.wikidata.org/entity/statement/Q24322597-DD20D823-AD64-4E86-A8F6-91B056DF62C6> ;
+    ns1:P356 <https://doi.org/10.1038/387296A0> ;
+    wdt:P1433 wd:Q180445 ;
+    wdt:P1476 "Mdm2 promotes the rapid degradation of p53" ;
+    wdt:P2093 "A Kazaz",
+        "M Oren",
+        "R Maya",
+        "Y Haupt" ;
+    wdt:P304 "296-9" ;
+    wdt:P31 wd:Q13442814 ;
+    wdt:P3181 "279766" ;
+    wdt:P356 "10.1038/387296A0" ;
+    wdt:P407 wd:Q1860 ;
+    wdt:P433 "6630" ;
+    wdt:P478 "387" ;
+    wdt:P577 "1997-05-15T00:00:00+00:00"^^xsd:dateTime ;
+    wdt:P698 "9153395" .
+
+wd:Q27860744 rdfs:label "Regulation of p53 stability by Mdm2" ;
+    schema:dateModified "2017-10-26T01:38:35+00:00"^^xsd:dateTime ;
+    schema:description "1997 nî lūn-bûn",
+        "1997年の論文",
+        "1997年論文",
+        "1997年论文",
+        "1997년 논문",
+        "article científic",
+        "article scientific",
+        "article scientifique",
+        "articol științific",
+        "articolo scientifico (pubblicato il 1997/05/15)",
+        "artigo científico",
+        "artigo científico (publicado na 1997/05/15)",
+        "artikull shkencor",
+        "artikulong pang-agham",
+        "artykuł naukowy",
+        "artículo científico publicado en 1997",
+        "artículu científicu",
+        "bilimsel makale",
+        "bài báo khoa học",
+        "mokslinis straipsnis",
+        "naučni članak",
+        "scienca artikolo",
+        "scientific article (publication date: 15 May 1997)",
+        "teaduslik artikkel",
+        "tieteellinen artikkeli",
+        "tudományos cikk",
+        "vedecký článok (publikovaný 1997/05/15)",
+        "vetenskaplig artikel",
+        "videnskabelig artikel (udgivet  1997/05/15)",
+        "vitenskapelig artikkel",
+        "vitskapeleg artikkel",
+        "vědecký článek publikovaný v roce 1997",
+        "wetenschappelijk artikel (gepubliceerd op 1997/05/15)",
+        "wissenschaftlicher Artikel",
+        "επιστημονικό άρθρο",
+        "мақолаи илмӣ",
+        "наукова стаття",
+        "научна статия",
+        "научная статья",
+        "научни чланак",
+        "գիտական հոդված",
+        "מאמר מדעי",
+        "مقالة علمية (نشرت في 15-5-1997)",
+        "১৯৯৭-এ প্রকাশিত বৈজ্ঞানিক নিবন্ধ",
+        "บทความทางวิทยาศาสตร์",
+        "სამეცნიერო სტატია" ;
+    schema:version 584193047 ;
+    wikibase:identifiers 3 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 14 ;
+    p:P1433 <http://www.wikidata.org/entity/statement/Q27860744-5684759F-6E18-4CB7-9C69-BE209A727DA6> ;
+    p:P1476 <http://www.wikidata.org/entity/statement/Q27860744-CFE42C6C-8F0B-436E-8B1F-3B06CB24DA25> ;
+    p:P2093 <http://www.wikidata.org/entity/statement/Q27860744-40DF6689-899B-45BF-8F84-8B3523E27AFF>,
+        <http://www.wikidata.org/entity/statement/Q27860744-61E7E422-28F8-4E1D-9443-922F0103AE9C>,
+        <http://www.wikidata.org/entity/statement/Q27860744-6AE47690-2E46-45F2-9F6A-41407A0F200F> ;
+    p:P304 <http://www.wikidata.org/entity/statement/Q27860744-3CCD3EDE-917D-46AB-A153-E1DF9712A7F8> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q27860744-B539D07F-DCBD-4A24-A122-7A76A4C26F64> ;
+    p:P3181 <http://www.wikidata.org/entity/statement/Q27860744-C36F9DAC-34FB-411A-B8C2-94A927FD0A88> ;
+    p:P356 <http://www.wikidata.org/entity/statement/Q27860744-34D4A572-C588-4D75-8179-80D5CB5246FB> ;
+    p:P407 <http://www.wikidata.org/entity/statement/Q27860744-AF863715-1158-4210-9861-88C33B886EAB> ;
+    p:P433 <http://www.wikidata.org/entity/statement/Q27860744-09F7BCC4-6F24-4E1A-ADC4-322D9BC8DEFF> ;
+    p:P478 <http://www.wikidata.org/entity/statement/Q27860744-44FBE41F-CCD6-41E4-8234-BFD5187C2F06> ;
+    p:P577 <http://www.wikidata.org/entity/statement/Q27860744-508DEB3A-D63F-45F5-B729-FE70F2F63028> ;
+    p:P698 <http://www.wikidata.org/entity/statement/Q27860744-BA4FC765-99FC-46E6-AE6D-C39D6077616D> ;
+    ns1:P356 <https://doi.org/10.1038/387299A0> ;
+    wdt:P1433 wd:Q180445 ;
+    wdt:P1476 "Regulation of p53 stability by Mdm2" ;
+    wdt:P2093 "K H Vousden",
+        "M H Kubbutat",
+        "S N Jones" ;
+    wdt:P304 "299-303" ;
+    wdt:P31 wd:Q13442814 ;
+    wdt:P3181 "540666" ;
+    wdt:P356 "10.1038/387299A0" ;
+    wdt:P407 wd:Q1860 ;
+    wdt:P433 "6630" ;
+    wdt:P478 "387" ;
+    wdt:P577 "1997-05-15T00:00:00+00:00"^^xsd:dateTime ;
+    wdt:P698 "9153396" .
+
+wd:Q29615437 rdfs:label "A mammalian cell cycle checkpoint pathway utilizing p53 and GADD45 is defective in ataxia-telangiectasia" ;
+    schema:dateModified "2017-11-13T05:55:14+00:00"^^xsd:dateTime ;
+    schema:description "1992 nî lūn-bûn",
+        "1992年の論文",
+        "1992年論文",
+        "1992年论文",
+        "1992년 논문",
+        "article científic",
+        "article scientific",
+        "article scientifique",
+        "articol științific",
+        "articolo scientifico",
+        "artigo científico",
+        "artikull shkencor",
+        "artikulong pang-agham",
+        "artykuł naukowy",
+        "artículo científico publicado en 1992",
+        "artículu científicu",
+        "bilimsel makale",
+        "bài báo khoa học",
+        "mokslinis straipsnis",
+        "naučni članak",
+        "scienca artikolo",
+        "scientific article (publication date: 13 November 1992)",
+        "teaduslik artikkel",
+        "tieteellinen artikkeli",
+        "tudományos cikk",
+        "vedecký článok",
+        "vetenskaplig artikel",
+        "videnskabelig artikel",
+        "vitenskapelig artikkel",
+        "vitskapeleg artikkel",
+        "vědecký článek",
+        "wetenschappelijk artikel",
+        "wissenschaftlicher Artikel",
+        "επιστημονικό άρθρο",
+        "мақолаи илмӣ",
+        "наукова стаття",
+        "научна статия",
+        "научная статья",
+        "научни чланак",
+        "գիտական հոդված",
+        "מאמר מדעי",
+        "مقالة علمية (نشرت في 13-11-1992)",
+        "১৯৯২-এ প্রকাশিত বৈজ্ঞানিক নিবন্ধ",
+        "บทความทางวิทยาศาสตร์",
+        "სამეცნიერო სტატია" ;
+    schema:version 593147717 ;
+    wikibase:identifiers 3 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 20 ;
+    p:P1433 <http://www.wikidata.org/entity/statement/Q29615437-3C8F5AFA-49F7-4DED-9A8F-3BE0766D84FC> ;
+    p:P1476 <http://www.wikidata.org/entity/statement/Q29615437-AF3952C6-35F7-4371-B80E-67070B11F5C1> ;
+    p:P2093 <http://www.wikidata.org/entity/statement/Q29615437-023299B4-21C7-42D8-8ECC-CAA24E446017>,
+        <http://www.wikidata.org/entity/statement/Q29615437-0CAC5DD8-F093-4D21-972A-557B18D73121>,
+        <http://www.wikidata.org/entity/statement/Q29615437-18CF0B08-C7BC-4D14-8FA2-D0FD186036E2>,
+        <http://www.wikidata.org/entity/statement/Q29615437-2A5806B1-E8C1-4733-9D2E-BA11979148B2>,
+        <http://www.wikidata.org/entity/statement/Q29615437-443CB2B4-8365-4B72-B880-F3BB32B4140A>,
+        <http://www.wikidata.org/entity/statement/Q29615437-60A0A983-8814-4ABE-A42C-D47C24DDBA83>,
+        <http://www.wikidata.org/entity/statement/Q29615437-B438EBC9-A125-47FB-A4E7-0C58FFCB2A4C>,
+        <http://www.wikidata.org/entity/statement/Q29615437-D4CBC324-FB7F-47F7-9989-EE2E8D7CAE93>,
+        <http://www.wikidata.org/entity/statement/Q29615437-F38C29E2-627E-4666-A878-5844C05C9E32> ;
+    p:P304 <http://www.wikidata.org/entity/statement/Q29615437-91D231D2-1D84-44B8-8419-05B35E64480D> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q29615437-2C9CAD74-7C6C-4F53-94AB-30CB8DFB9F83> ;
+    p:P3181 <http://www.wikidata.org/entity/statement/Q29615437-B5F4B779-F30F-4118-9A4A-C14257F10AAE> ;
+    p:P356 <http://www.wikidata.org/entity/statement/Q29615437-D002DEE8-569D-44BA-93BA-B89187232D92> ;
+    p:P407 <http://www.wikidata.org/entity/statement/Q29615437-C92A8344-318F-4A28-9AF4-0E4B3AB9BDF9> ;
+    p:P433 <http://www.wikidata.org/entity/statement/Q29615437-07D1613E-50EF-4394-A9FA-796F5F18D672> ;
+    p:P478 <http://www.wikidata.org/entity/statement/Q29615437-D224210F-0C2E-4043-A663-9F275A4ACD68> ;
+    p:P577 <http://www.wikidata.org/entity/statement/Q29615437-F2D2BF87-CB24-4077-8EF6-48AEA058D4EF> ;
+    p:P698 <http://www.wikidata.org/entity/statement/Q29615437-8D5AD471-50A7-433B-B5D1-D043433C0D25> ;
+    ns1:P356 <https://doi.org/10.1016/0092-8674(92)90593-2> ;
+    wdt:P1433 wd:Q655814 ;
+    wdt:P1476 "A mammalian cell cycle checkpoint pathway utilizing p53 and GADD45 is defective in ataxia-telangiectasia" ;
+    wdt:P2093 "Carrier F",
+        "Fornace AJ Jr",
+        "Jacks T",
+        "Kastan MB",
+        "Plunkett BS",
+        "Vogelstein B",
+        "Walsh WV",
+        "Zhan Q",
+        "el-Deiry WS" ;
+    wdt:P304 "587-97" ;
+    wdt:P31 wd:Q13442814 ;
+    wdt:P3181 "2015406" ;
+    wdt:P356 "10.1016/0092-8674(92)90593-2" ;
+    wdt:P407 wd:Q1860 ;
+    wdt:P433 "4" ;
+    wdt:P478 "71" ;
+    wdt:P577 "1992-11-13T00:00:00+00:00"^^xsd:dateTime ;
+    wdt:P698 "1423616" .
+
+wd:Q36804393 rdfs:label "p53-Dependent G1/S DNA damage checkpoint" ;
+    schema:dateModified "2017-12-12T10:34:06+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway p53-Dependent G1/S DNA damage checkpoint in Homo sapiens" ;
+    schema:version 607589934 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 7 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q36804393-366A6331-D1EF-4F88-983B-A33CFEE9311C> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q36804393-0E23A2FB-644A-479E-873A-8CC26E5EF38D> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q36804393-F5A02FFE-8306-47B0-901B-79B2AE469DA7> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q36804393-7DDFC853-DB58-44D7-9F3C-C24E673B4E34> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q36804393-2D2CC0C1-A680-4245-B066-6715D1857A4B> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q36804393-BEF9DDB9-22E9-4489-8B46-341A620BF511> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q36804393-8738E6A8-14E1-4C08-83A8-977F159B484C> ;
+    wdt:P2860 wd:Q37152060 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-69580> ;
+    wdt:P31 wd:Q4915012 ;
+    wdt:P361 wd:Q36804389 ;
+    wdt:P3937 "R-HSA-69580" ;
+    wdt:P527 wd:Q36804398 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q36804403 rdfs:label "Stabilization of p53" ;
+    schema:dateModified "2018-03-02T10:23:43+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway Stabilization of p53 in Homo sapiens" ;
+    schema:version 642179997 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 20 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q36804403-27480CA0-373D-4A1C-BDDA-079B3CDE5DD3>,
+        <http://www.wikidata.org/entity/statement/Q36804403-77DD034E-32F7-4D91-801E-640F03DB3016>,
+        <http://www.wikidata.org/entity/statement/Q36804403-8E09C41C-6448-4765-B6B2-88B88F9FE674>,
+        <http://www.wikidata.org/entity/statement/Q36804403-94D0988F-343F-4E63-9763-627E336C5863> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q36804403-6D58649A-4026-4C9D-A82B-30A69E2FC6D4> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q36804403-6BD3B75C-ADFA-4D5F-9826-6ECC11D1E984> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q36804403-C1511B78-812F-4C6D-8937-9FB7BAFC59E6> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q36804403-435D68AE-6F6C-4EB5-9B4A-CA5A8760B653> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q36804403-11D01B4A-76E7-480D-A4AD-0CCAC82B9624>,
+        <http://www.wikidata.org/entity/statement/Q36804403-1F3AB719-62B6-4002-AAE1-1D95CBC887D3>,
+        <http://www.wikidata.org/entity/statement/Q36804403-3876ED40-3D56-405D-95B4-619EFD2F1111>,
+        <http://www.wikidata.org/entity/statement/Q36804403-46D548D3-55EE-4353-AA2F-13DE6B23FFF5>,
+        <http://www.wikidata.org/entity/statement/Q36804403-4D46E526-C77A-4C7E-90AF-3F79D0CBB81D>,
+        <http://www.wikidata.org/entity/statement/Q36804403-4F3C3E0F-D1AB-43C7-866A-51A52499E848>,
+        <http://www.wikidata.org/entity/statement/Q36804403-71BD5E76-5A0D-4A2A-A0B5-4037166FAEA5>,
+        <http://www.wikidata.org/entity/statement/Q36804403-C2F1A217-99B1-4B59-BF31-41D941851B7F>,
+        <http://www.wikidata.org/entity/statement/Q36804403-CA6693EF-E23C-4D0F-99DF-56AA4E253F95>,
+        <http://www.wikidata.org/entity/statement/Q36804403-E08AE601-25CB-4B25-85D4-4240604E3511>,
+        <http://www.wikidata.org/entity/statement/Q36804403-F2E211DA-4045-424F-A46B-97242F5DF288> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q36804403-5D8A35FA-EACC-4F3F-81BB-9764A5EA8EDD> ;
+    wdt:P2860 wd:Q24610054,
+        wd:Q24610106,
+        wd:Q28138195,
+        wd:Q28364113 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-69541> ;
+    wdt:P31 wd:Q4915012 ;
+    wdt:P361 wd:Q36804398 ;
+    wdt:P3937 "R-HSA-69541" ;
+    wdt:P527 wd:Q36804408,
+        wd:Q36804412,
+        wd:Q36804417,
+        wd:Q36804421,
+        wd:Q36804425,
+        wd:Q36804429,
+        wd:Q36804434,
+        wd:Q36804438,
+        wd:Q36804443,
+        wd:Q36804446,
+        wd:Q36804451 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q36804479 rdfs:label "Transcriptional activation of p53 responsive genes" ;
+    schema:dateModified "2017-12-12T10:34:14+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway Transcriptional activation of p53 responsive genes   in Homo sapiens" ;
+    schema:version 607590030 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 10 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q36804479-25DA01BA-C727-4659-BF09-8F36F5473DDF>,
+        <http://www.wikidata.org/entity/statement/Q36804479-437380E5-AF72-481D-B012-36365F29127B>,
+        <http://www.wikidata.org/entity/statement/Q36804479-8F4A8046-9763-4CBF-B432-61FB6CB8E46E>,
+        <http://www.wikidata.org/entity/statement/Q36804479-CF05A823-A102-4390-ACFA-BD793D04A8A2> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q36804479-E49A9E32-C103-4F78-94AA-1CAA3BA95D12> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q36804479-41F7B36C-4093-4707-8F80-F8126EA7C604> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q36804479-94CB449C-53DA-4DD5-9FB2-4133E4FD8881> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q36804479-B06A620A-1EB5-47DE-A3D3-B5C8FE1E3505> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q36804479-B231A038-33AC-42BB-9241-978EE5EED273> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q36804479-F388C92A-C62C-4A33-AD72-0B854EBD2ACF> ;
+    wdt:P2860 wd:Q24319848,
+        wd:Q27861121,
+        wd:Q28257305,
+        wd:Q29616465 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-69560> ;
+    wdt:P31 wd:Q4915012 ;
+    wdt:P361 wd:Q36804398 ;
+    wdt:P3937 "R-HSA-69560" ;
+    wdt:P527 wd:Q36804484 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q36804515 rdfs:label "Inactivation of Cyclin E:Cdk2 complexes by p27/p21" ;
+    schema:dateModified "2018-03-01T11:29:19+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Inactivation of Cyclin E:Cdk2 complexes by p27/p21 in Homo sapiens" ;
+    schema:version 641377943 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 12 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q36804515-034BE09C-C8BC-449D-9C34-74587722EF9D>,
+        <http://www.wikidata.org/entity/statement/Q36804515-0E2DB383-1627-42F0-B4C0-137FFE0BF0C5>,
+        <http://www.wikidata.org/entity/statement/Q36804515-E5ACE85E-A4D7-4DBE-8186-EB30BA62775B> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q36804515-F8FCEB97-3925-4DEB-B6E4-2A8ED5F2D0D2> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q36804515-9702ED22-94DF-4D84-9824-3BA7047FD75F> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q36804515-03C6C94C-1E55-4A3E-8C67-3FF375195492> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q36804515-FEFCEEC3-8F5E-44CA-BBFB-DEBCE3EA1FC2> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q36804515-6F2C6A55-D9F5-4EA3-89D9-F0E55DE575F3>,
+        <http://www.wikidata.org/entity/statement/Q36804515-C0AD963D-0192-4B05-8BD6-B5206D766321>,
+        <http://www.wikidata.org/entity/statement/Q36804515-D6B1DB15-BC9A-47CD-92C4-E550EF538AF1>,
+        <http://www.wikidata.org/entity/statement/Q36804515-F8AB7820-D28C-425F-9E2D-AE25D27D7CBD> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q36804515-1CEA1AC2-8F6E-4B5F-AD1D-DA5F6F1F1268> ;
+    wdt:P2860 wd:Q24319848,
+        wd:Q28609667,
+        wd:Q46785123 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-69562> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q36804398 ;
+    wdt:P3937 "R-HSA-69562" ;
+    wdt:P527 wd:Q50250527,
+        wd:Q50250530,
+        wd:Q50250533 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q36804520 rdfs:label "Inactivation of Cyclin A:Cdk2 complexes by p27/p21" ;
+    schema:dateModified "2018-03-01T11:29:23+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Inactivation of Cyclin A:Cdk2 complexes by p27/p21 in Homo sapiens" ;
+    schema:version 641377970 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 11 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q36804520-C71E7F4D-C060-4274-BC45-CD54743B9B24>,
+        <http://www.wikidata.org/entity/statement/Q36804520-E0A252E9-3F68-43E1-AB76-6F9ECCA8CA41> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q36804520-A38B9ED6-CB8E-4080-8501-0B5665658E17> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q36804520-CD8B75F4-A0E0-46EF-8CBB-95834CA93E2B> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q36804520-91819C9E-676F-4E45-9AAF-93996224D6ED> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q36804520-2EA1E727-12AA-4C73-BF87-C283772F9B10> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q36804520-299C966A-D203-4EFB-9489-282B6E117AD5>,
+        <http://www.wikidata.org/entity/statement/Q36804520-439C6CCC-3EED-4EFD-86AC-B841759CAA6F>,
+        <http://www.wikidata.org/entity/statement/Q36804520-799437F9-0977-434E-92DC-CD294A803210>,
+        <http://www.wikidata.org/entity/statement/Q36804520-C0547F5E-6F0E-4545-AC52-CFBD21CD4A61> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q36804520-162E7CF1-D585-4664-9F9E-1FBF9D0698E8> ;
+    wdt:P2860 wd:Q24319848,
+        wd:Q28609667 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-187934> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q36804398 ;
+    wdt:P3937 "R-HSA-187934" ;
+    wdt:P527 wd:Q50250530,
+        wd:Q50250536,
+        wd:Q50250539 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q41511230 rdfs:label "Ionizing radiation and UV induction of p53 protein by different pathways in ataxia-telangiectasia cells." ;
+    schema:dateModified "2017-10-02T02:43:34+00:00"^^xsd:dateTime ;
+    schema:description "1993 nî lūn-bûn",
+        "1993年の論文",
+        "1993年論文",
+        "1993年论文",
+        "1993년 논문",
+        "article científic",
+        "article scientific",
+        "article scientifique",
+        "articol științific",
+        "articolo scientifico",
+        "artigo científico",
+        "artikel ilmiah",
+        "artikull shkencor",
+        "artikulong pang-agham",
+        "artykuł naukowy",
+        "artículo científico publicado en 1993",
+        "artículu científicu",
+        "bilimsel makale",
+        "bài báo khoa học",
+        "naučni članak",
+        "scienca artikolo",
+        "scientific article published on December 1993",
+        "teaduslik artikkel",
+        "tieteellinen artikkeli",
+        "tudományos cikk",
+        "vedecký článok",
+        "vetenskaplig artikel",
+        "videnskabelig artikel",
+        "vitenskapelig artikkel",
+        "vitskapeleg artikkel",
+        "vědecký článek",
+        "wetenschappelijk artikel",
+        "wissenschaftlicher Artikel",
+        "επιστημονικό άρθρο",
+        "мақолаи илмӣ",
+        "наукова стаття",
+        "научна статия",
+        "научная статья",
+        "научни чланак",
+        "מאמר מדעי",
+        "مقالة علمية نشرت في ديسمبر 1993",
+        "ডিসেম্বর ১৯৯৩-এ প্রকাশিত বৈজ্ঞানিক নিবন্ধ",
+        "บทความทางวิทยาศาสตร์",
+        "სამეცნიერო სტატია" ;
+    schema:version 570920439 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 10 ;
+    p:P1433 <http://www.wikidata.org/entity/statement/Q41511230-D02B50CC-DAF0-4766-80E7-B34F101EEB7E> ;
+    p:P1476 <http://www.wikidata.org/entity/statement/Q41511230-7C53866B-AE08-4673-86D1-C49B38343F85> ;
+    p:P2093 <http://www.wikidata.org/entity/statement/Q41511230-44439AF6-C896-405E-B20E-A761C8881C64>,
+        <http://www.wikidata.org/entity/statement/Q41511230-9AA9636B-C6A1-4BC2-8236-89ECBAE5673C> ;
+    p:P304 <http://www.wikidata.org/entity/statement/Q41511230-C64B4C1C-31EA-4ADB-A25C-4986598556FD> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q41511230-AE823AEB-DEAA-459C-BE43-CD76DDC587EE> ;
+    p:P433 <http://www.wikidata.org/entity/statement/Q41511230-2EC0E393-EDC0-4066-B9B3-819B402EEFEC> ;
+    p:P478 <http://www.wikidata.org/entity/statement/Q41511230-12D12B13-795C-404C-8830-D882E89234C7> ;
+    p:P577 <http://www.wikidata.org/entity/statement/Q41511230-621C8491-7FAE-44FE-96D4-D181AB3F5D84> ;
+    p:P698 <http://www.wikidata.org/entity/statement/Q41511230-7CD91007-ACAD-48CE-BAED-486C9DCBB2B9> ;
+    wdt:P1433 wd:Q1568657 ;
+    wdt:P1476 "Ionizing radiation and UV induction of p53 protein by different pathways in ataxia-telangiectasia cells." ;
+    wdt:P2093 "K K Khanna",
+        "M F Lavin" ;
+    wdt:P304 "3307-3312" ;
+    wdt:P31 wd:Q13442814 ;
+    wdt:P433 "12" ;
+    wdt:P478 "8" ;
+    wdt:P577 "1993-12-01T00:00:00+00:00"^^xsd:dateTime ;
+    wdt:P698 "8247533" .
+
+wd:Q36804398 rdfs:label "p53-Dependent G1 DNA Damage Response" ;
+    schema:dateModified "2018-03-02T10:23:41+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway p53-Dependent G1 DNA Damage Response in Homo sapiens" ;
+    schema:version 642179973 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 14 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q36804398-2CB03F86-1BFC-46E5-AA8F-62B347F6B869>,
+        <http://www.wikidata.org/entity/statement/Q36804398-6267FCD0-19EC-4322-B0AF-A6A40C0D1BD1>,
+        <http://www.wikidata.org/entity/statement/Q36804398-9F14458A-47E0-43FE-BFE5-8F6FF2BF4643>,
+        <http://www.wikidata.org/entity/statement/Q36804398-DB44BCA9-44AA-47DE-B814-FB3F1F69C239> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q36804398-97DA275F-A69F-4996-9D81-60F6D56BF7AC> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q36804398-7CAEDF24-E86A-495E-A789-2C43F27CFB3C>,
+        <http://www.wikidata.org/entity/statement/Q36804398-E0FA35EE-FF87-42C3-AD3D-0ABEFEFE42D4> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q36804398-58B93C9B-ADFB-4852-82A7-14593D06CC4F> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q36804398-6AD8E2A4-8566-461F-94B1-29766BE0736C> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q36804398-1CC7FBBA-ADEC-453D-8423-5125772E0531>,
+        <http://www.wikidata.org/entity/statement/Q36804398-A8BACD73-418B-44D6-BF03-296F8A9D82FA>,
+        <http://www.wikidata.org/entity/statement/Q36804398-D4C8A338-7C88-4477-B8BF-C965C8645BF2>,
+        <http://www.wikidata.org/entity/statement/Q36804398-DF247BCC-AC12-409D-BA5A-98C8CB274A24> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q36804398-F36FAA5D-DED3-45E1-91C2-29AA20265171> ;
+    wdt:P2860 wd:Q24322597,
+        wd:Q27860744,
+        wd:Q29615437,
+        wd:Q41511230 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-69563> ;
+    wdt:P31 wd:Q14818020,
+        wd:Q4915012 ;
+    wdt:P361 wd:Q36804393 ;
+    wdt:P3937 "R-HSA-69563" ;
+    wdt:P527 wd:Q36804403,
+        wd:Q36804479,
+        wd:Q36804515,
+        wd:Q36804520 ;
+    wdt:P703 wd:Q15978631 .
+
+<http://www.wikidata.org/reference/2cdeb68e7156733200be23e38e769d26c1dbea5e> pr:P248 wd:Q2134522 ;
+    pr:P3937 "R-HSA-69563" ;
+    pr:P813 "2018-03-02T00:00:00+00:00"^^xsd:dateTime ;
+    ns2:P813 <http://www.wikidata.org/value/7f8c80245a6de20c98efee69fb9c488f> .
+

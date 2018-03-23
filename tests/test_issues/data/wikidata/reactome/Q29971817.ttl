@@ -1,0 +1,855 @@
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ns1: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix po: <http://purl.obolibrary.org/obo/PW> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix react: <http://micel.io/reactome/> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/statement/Q14599717-BF4506CC-534D-40CE-9168-75C0C6832371> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:d8eb3e0322e69c60e51a939a4c63bd63206b838f ;
+    ps:P31 wd:Q2996394 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-1554C59C-9DCF-407A-89AE-ECAB61C8258B> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q50294329 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-25D1B1EA-01EB-4B1B-91CF-1371A927EEFE> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q50294317 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-2AA55B2A-201C-4949-8EB5-71FFBE4C2A9B> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q50294316 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-2E9BD262-5F6E-4C4A-9E23-2B65E631218C> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q50294314 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-51346EF8-01E1-411D-925D-40C5B658E6F5> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P361 wd:Q34340147 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-66821969-E8C0-441A-8844-CE01DC5C7524> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q34340174 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-6F8D4161-BFE1-47DC-8BD0-CB45556F3ED0> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q50294315 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-70D6B5E7-AB78-495D-83C4-303A273D42EC> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P31 wd:Q14599717 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-78B24EEA-06C1-4DA7-AA85-83825061B926> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q34340181 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-793CABE0-9F79-4956-938D-CB5CDFADD909> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P31 wd:Q4915012 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-7AF881C2-17D8-4AD4-852E-6B125E28BAE7> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q50294326 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-81F3D12E-8A35-4DF1-AB4A-14F28CCD4E9A> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P703 wd:Q15978631 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-9729067F-BD1D-4F2E-BF49-8C12DC088128> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q50294320 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-9C576FCE-B00D-4747-BC8A-C3F25125F448> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q50294325 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-A0EFC42D-F647-4910-9B47-59A16D987DC8> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q50294328 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-A4DEBB31-649A-4F6E-B419-D7F00F546321> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q50294319 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-A7C5988F-EA0D-4E8D-914E-87F9546C0498> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P2860 wd:Q34621641 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-C0DA42D5-59EB-479C-A909-B11F7DC8DF20> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q50294322 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-C4A51ADC-69B0-4CA7-A14C-05458CBA413B> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q34340177 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-DDFB6AE5-6DB5-4CCE-B0E0-6DF4CAF3F601> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q50294321 .
+
+<http://www.wikidata.org/entity/statement/Q29971817-EC2B4959-8CFA-4C10-9C08-A85A006BE1C1> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-196791" .
+
+<http://www.wikidata.org/entity/statement/Q29971817-F6688AF4-9245-45D5-BCCB-EFB7BF3AD5AB> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef ;
+    ps:P527 wd:Q50294324 .
+
+<http://www.wikidata.org/entity/statement/Q34340147-92F61C12-706A-4CDF-8D73-0B552EC5EF1C> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-8957322" .
+
+<http://www.wikidata.org/entity/statement/Q34340174-7AEAC7C6-C36F-4FAB-950D-392D943775CE> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-209754" .
+
+<http://www.wikidata.org/entity/statement/Q34340177-25A36371-317D-4BD0-86C8-B2B99DAA6634> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-8963872" .
+
+<http://www.wikidata.org/entity/statement/Q34340181-016AD7E8-30E0-4919-9BE6-A42ADC846221> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-350147" .
+
+<http://www.wikidata.org/entity/statement/Q34621641-A57AA94B-5DC0-463C-8603-13DAED8AEE9A> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/913265900c2961f010c59e1d2c0ed1d9249a8f6d> ;
+    ps:P698 "26681795" .
+
+<http://www.wikidata.org/entity/statement/Q50294314-D4993CA6-912A-49D0-9316-E3061E9A6828> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-209738" .
+
+<http://www.wikidata.org/entity/statement/Q50294315-CB4CF756-62BF-47DB-8A17-C6C85F017204> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-8963851" .
+
+<http://www.wikidata.org/entity/statement/Q50294316-406CDDD6-3B1B-4A3C-9467-B4676C703C35> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-209845" .
+
+<http://www.wikidata.org/entity/statement/Q50294317-BEE612FA-0596-4A83-874D-EF1F8C3875BD> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-6807242" .
+
+<http://www.wikidata.org/entity/statement/Q50294319-A97443E9-3E1E-4DFF-B335-05C5C5386F96> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-209944" .
+
+<http://www.wikidata.org/entity/statement/Q50294320-D2BE3E47-D861-43CC-B968-4ECA51AB21DA> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-350186" .
+
+<http://www.wikidata.org/entity/statement/Q50294321-EBD6520B-AA39-4BDE-9938-C1A32D278C4F> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-350168" .
+
+<http://www.wikidata.org/entity/statement/Q50294322-CDEF7E70-1A56-4A9A-A39E-93C37E501F0C> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-209760" .
+
+<http://www.wikidata.org/entity/statement/Q50294324-D0EA51BA-C8A5-41F2-87AD-4A186D13692C> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-350158" .
+
+<http://www.wikidata.org/entity/statement/Q50294325-488B1CF4-FF32-4783-AA8E-85E7835C6B39> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-8963864" .
+
+<http://www.wikidata.org/entity/statement/Q50294326-A73F239C-D35C-4609-BBEF-FF83809152E8> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-209766" .
+
+<http://www.wikidata.org/entity/statement/Q50294328-D4014461-4E0E-4977-8B48-2C736079F609> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-209868" .
+
+<http://www.wikidata.org/entity/statement/Q50294329-ED5528AE-1A70-4273-BC8A-F60A618DC9C4> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-209765" .
+
+wd:Q14599717 rdfs:label "vitamin D metabolic process" ;
+    schema:dateModified "2018-02-07T03:31:19+00:00"^^xsd:dateTime ;
+    schema:description "The chemical reactions and pathways involving vitamin D, any of a group of related, fat-soluble compounds that are derived from delta-5,7 steroids and play a central role in calcium metabolism. Specific forms of vitamin D include calciferol (ergocalc",
+        "biologisch proces" ;
+    schema:version 627746440 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 6 ;
+    skos:altLabel "GO:0042359",
+        "vitamin D metabolism" ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q14599717-1A23BF76-7CDD-4712-A312-ED37FFD83686>,
+        <http://www.wikidata.org/entity/statement/Q14599717-AB873B0C-C1FA-45A1-BB12-48BDE969FAA8>,
+        <http://www.wikidata.org/entity/statement/Q14599717-F1C6BDF1-0552-4700-9B24-2DD4671CC6E2> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q14599717-E0DA2B98-3584-4A34-8049-CEB04B48A4A0> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q14599717-BF4506CC-534D-40CE-9168-75C0C6832371> ;
+    p:P686 <http://www.wikidata.org/entity/statement/Q14599717-728A4041-241B-4492-9AE1-B9DCB14C712A> ;
+    wdt:P279 wd:Q14327702,
+        wd:Q22275535,
+        wd:Q22282644 ;
+    wdt:P2888 <http://purl.obolibrary.org/obo/GO_0042359> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P686 "GO:0042359" .
+
+wd:Q34340147 rdfs:label "Metabolism of steroids" ;
+    schema:dateModified "2017-12-21T09:47:31+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway Metabolism of steroids in Homo sapiens" ;
+    schema:version 611712561 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 16 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q34340147-062A249A-F22E-464D-82F0-85CE23A4EFBF>,
+        <http://www.wikidata.org/entity/statement/Q34340147-4F12996A-7E9E-4F42-9DAB-00E7275FD4D5>,
+        <http://www.wikidata.org/entity/statement/Q34340147-74B45612-5042-415E-8BF4-C4A3CD06338D>,
+        <http://www.wikidata.org/entity/statement/Q34340147-9F230142-604C-4D53-BA89-AF88890DC736>,
+        <http://www.wikidata.org/entity/statement/Q34340147-C3F72F6A-818E-4D4F-9103-92B806AC1F84> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q34340147-4065B5AA-6C33-4769-8477-D2EE2BD3C55C> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q34340147-07814871-57E9-4EA4-87BC-219418367B69>,
+        <http://www.wikidata.org/entity/statement/Q34340147-5603E1B1-2858-43C9-AA54-06328F2AF5EF> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q34340147-0AFFB80D-5F4F-4B0D-90C8-84FA4DC716CC> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q34340147-92F61C12-706A-4CDF-8D73-0B552EC5EF1C> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q34340147-73644C56-65AA-470C-84E1-D65F7E103DB3>,
+        <http://www.wikidata.org/entity/statement/Q34340147-7E44F00A-162E-462F-BF2A-11ACF829F23B>,
+        <http://www.wikidata.org/entity/statement/Q34340147-CB6E2926-E4C6-45EE-80BD-79431CF31460>,
+        <http://www.wikidata.org/entity/statement/Q34340147-D5EBBC52-366C-4567-983E-0569075F19D8>,
+        <http://www.wikidata.org/entity/statement/Q34340147-DF841B2F-49DE-4148-8182-156BFB60D74B> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q34340147-31CC82F4-D322-44A4-BDE9-994FC38B7D9D> ;
+    wdt:P2860 wd:Q24652984,
+        wd:Q27919675,
+        wd:Q28204726,
+        wd:Q28296995,
+        wd:Q28609699 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-8957322> ;
+    wdt:P31 wd:Q14327702,
+        wd:Q4915012 ;
+    wdt:P361 wd:Q45317220 ;
+    wdt:P3937 "R-HSA-8957322" ;
+    wdt:P527 wd:Q29971817,
+        wd:Q34340150,
+        wd:Q45317319,
+        wd:Q45317321,
+        wd:Q45317328 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q34340174 rdfs:label "Photolytic cleavage and thermal isomerization of 7-dehydroCHOL" ;
+    schema:dateModified "2018-03-01T18:36:32+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Photolytic cleavage and thermal isomerization of 7-dehydroCHOL in Homo sapiens" ;
+    schema:version 641586870 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 7 ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q34340174-9BB065F6-8219-4CD7-BE2B-CBF8A985ECC0> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q34340174-DCA8A438-512F-4A17-B682-B28427CD6CCD> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q34340174-6F040107-19AF-4277-B72A-CBFD599E6B04> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q34340174-7AEAC7C6-C36F-4FAB-950D-392D943775CE> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q34340174-142BCC82-912C-4F9C-9131-925BBF15AF42>,
+        <http://www.wikidata.org/entity/statement/Q34340174-F7B7D3A7-68BE-4C81-83F6-228403C93D82> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q34340174-CA31B277-4800-4771-9FF9-789FAAE46AFA> ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-209754> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-209754" ;
+    wdt:P527 wd:Q139347,
+        wd:Q139350 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q34340177 rdfs:label "VD3 translocates from ER membrane to extracellular region" ;
+    schema:dateModified "2018-03-01T18:36:35+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction VD3 translocates from ER membrane to extracellular region in Homo sapiens" ;
+    schema:version 641586899 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 8 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q34340177-3EFF599F-343C-4B9E-8F9D-776503B19278> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q34340177-AC472C71-E4A0-4558-A267-DFB5827DC0B7> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q34340177-DB141065-4F57-4991-A02D-8BE61AF1B2FD> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q34340177-189E4B98-5753-4626-8D9A-61E8901C173F> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q34340177-25A36371-317D-4BD0-86C8-B2B99DAA6634> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q34340177-510F7F3B-9328-41A6-9868-74E522D9CD2E>,
+        <http://www.wikidata.org/entity/statement/Q34340177-688D3F8F-917F-4A8A-9EE5-5F089388084D> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q34340177-FB564886-150B-4C29-BA56-561161B2E127> ;
+    wdt:P2860 wd:Q24292185 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-8963872> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-8963872" ;
+    wdt:P527 wd:Q139347 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q34340181 rdfs:label "VD3 translocates from extracellular region to ER membrane" ;
+    schema:dateModified "2018-03-01T18:36:43+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction VD3 translocates from extracellular region to ER membrane in Homo sapiens" ;
+    schema:version 641586984 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 8 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q34340181-23D5F102-5A45-43F4-9595-1B2B20B35243> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q34340181-75346216-7D21-4234-A2ED-F9EBB3590605> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q34340181-B3B57A16-4E7B-473F-93A1-53856BC6001F> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q34340181-C4FFA282-04DE-4705-8FB4-267784E62746> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q34340181-016AD7E8-30E0-4919-9BE6-A42ADC846221> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q34340181-A51523E3-FAD5-4E3D-80F8-1171ADDA387D>,
+        <http://www.wikidata.org/entity/statement/Q34340181-DE23BD07-0DAF-410E-8561-08468745C19D> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q34340181-5B76E5CE-046E-409E-AA4A-902BA8C04694> ;
+    wdt:P2860 wd:Q34355684 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-350147> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-350147" ;
+    wdt:P527 wd:Q139347 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q34621641 rdfs:label "Vitamin D: Metabolism, Molecular Mechanism of Action, and Pleiotropic Effects." ;
+    schema:dateModified "2017-10-10T06:25:52+00:00"^^xsd:dateTime ;
+    schema:description "2016 nî lūn-bûn",
+        "2016年の論文",
+        "2016年論文",
+        "2016年论文",
+        "2016년 논문",
+        "article científic",
+        "article scientific",
+        "article scientifique",
+        "articol științific",
+        "articolo scientifico",
+        "artigo científico",
+        "artikull shkencor",
+        "artikulong pang-agham",
+        "artykuł naukowy",
+        "artículo científico publicado en 2016",
+        "artículu científicu",
+        "bilimsel makale",
+        "bài báo khoa học",
+        "mokslinis straipsnis",
+        "naučni članak",
+        "scienca artikolo",
+        "scientific article",
+        "teaduslik artikkel",
+        "tieteellinen artikkeli",
+        "tudományos cikk",
+        "vedecký článok",
+        "vetenskaplig artikel",
+        "videnskabelig artikel",
+        "vitenskapelig artikkel",
+        "vitskapeleg artikkel",
+        "vědecký článek",
+        "wetenschappelijk artikel",
+        "wissenschaftlicher Artikel",
+        "επιστημονικό άρθρο",
+        "мақолаи илмӣ",
+        "наукова стаття",
+        "научна статия",
+        "научная статья",
+        "научни чланак",
+        "գիտական հոդված",
+        "מאמר מדעי",
+        "مقالة علمية",
+        "২০১৬-এ প্রকাশিত বৈজ্ঞানিক নিবন্ধ",
+        "บทความทางวิทยาศาสตร์",
+        "სამეცნიერო სტატია" ;
+    schema:version 574822817 ;
+    wikibase:identifiers 3 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 15 ;
+    p:P1433 <http://www.wikidata.org/entity/statement/Q34621641-525AA38B-1839-4FC7-BA7E-A2C068D74365> ;
+    p:P1476 <http://www.wikidata.org/entity/statement/Q34621641-F008CDC9-A921-43EF-AD8C-99C161BF8D19> ;
+    p:P2093 <http://www.wikidata.org/entity/statement/Q34621641-5B64C2D1-6B77-4F86-8E88-FBBCB6366ED3>,
+        <http://www.wikidata.org/entity/statement/Q34621641-6902FA82-003E-4663-98ED-FCBBC676DF57>,
+        <http://www.wikidata.org/entity/statement/Q34621641-6D268924-2052-42A8-A087-866560E9D144>,
+        <http://www.wikidata.org/entity/statement/Q34621641-A3628299-4596-4232-BC19-10C1A61F3AE5>,
+        <http://www.wikidata.org/entity/statement/Q34621641-F4A007D5-F879-403B-9262-3A625737049F> ;
+    p:P304 <http://www.wikidata.org/entity/statement/Q34621641-40098A20-E9C0-4C6B-9D64-25A3CCA4E463> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q34621641-D507D036-0976-4C74-8125-312636DD19DD> ;
+    p:P356 <http://www.wikidata.org/entity/statement/Q34621641-7C21D2BF-A734-4368-98C8-C143AD7A73A3> ;
+    p:P433 <http://www.wikidata.org/entity/statement/Q34621641-E7435B32-45F4-4F97-A93B-421501A53485> ;
+    p:P478 <http://www.wikidata.org/entity/statement/Q34621641-F90B61E3-0835-4B95-B8D4-FAD4F54CFC03> ;
+    p:P577 <http://www.wikidata.org/entity/statement/Q34621641-63CE09E0-9578-4912-BB81-A792326500C4> ;
+    p:P698 <http://www.wikidata.org/entity/statement/Q34621641-A57AA94B-5DC0-463C-8603-13DAED8AEE9A> ;
+    p:P932 <http://www.wikidata.org/entity/statement/Q34621641-6550C456-0B48-4515-9094-356559F36555> ;
+    ns2:P356 <https://doi.org/10.1152/PHYSREV.00014.2015> ;
+    wdt:P1433 wd:Q1091827 ;
+    wdt:P1476 "Vitamin D: Metabolism, Molecular Mechanism of Action, and Pleiotropic Effects." ;
+    wdt:P2093 "Annemieke Verstuyf",
+        "Geert Carmeliet",
+        "Lieve Verlinden",
+        "Puneet Dhawan",
+        "Sylvia Christakos" ;
+    wdt:P304 "365-408" ;
+    wdt:P31 wd:Q13442814 ;
+    wdt:P356 "10.1152/PHYSREV.00014.2015" ;
+    wdt:P433 "1" ;
+    wdt:P478 "96" ;
+    wdt:P577 "2016-01-01T00:00:00+00:00"^^xsd:dateTime ;
+    wdt:P698 "26681795" ;
+    wdt:P932 "4839493" .
+
+wd:Q50294314 rdfs:label "VD3 binds GC" ;
+    schema:dateModified "2018-03-01T18:36:38+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction VD3 binds GC in Homo sapiens" ;
+    schema:version 641586929 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 10 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294314-355B93E5-4C82-4DF5-9357-558BE2F0097A>,
+        <http://www.wikidata.org/entity/statement/Q50294314-CC25E13A-4132-46C8-A1CA-A4E4CBFA7702> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294314-E87CD790-E7B2-4EFD-95EE-0BE031E86F02> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294314-B765F150-7907-4EF8-9E2C-6C237C8A0A7B> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294314-648F6E76-C09A-4EAE-8697-241B84A527C5> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294314-D4993CA6-912A-49D0-9316-E3061E9A6828> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294314-108984F7-0C1C-4860-B8AF-4C105AB4A92A>,
+        <http://www.wikidata.org/entity/statement/Q50294314-6603DFB8-5039-47D7-A861-07FEC908415E>,
+        <http://www.wikidata.org/entity/statement/Q50294314-82685A73-5C3F-410C-A83A-70E3393E6831> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294314-6F31408A-2A2B-46DE-84DA-81E28D812E6B> ;
+    wdt:P2860 wd:Q24292185,
+        wd:Q37095215 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-209738> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-209738" ;
+    wdt:P527 wd:Q139347,
+        wd:Q50265488,
+        wd:Q906435 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294315 rdfs:label "VD3 dissociates from GC" ;
+    schema:dateModified "2018-03-01T18:36:40+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction VD3 dissociates from GC in Homo sapiens" ;
+    schema:version 641586953 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 9 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294315-D7D106E9-B895-45B7-984A-2D52BB5D2D3A> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294315-7AB15B33-A17A-45D2-B7C2-F873D4A96DF4> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294315-A963FE70-BA45-4887-8DB0-30D15D87A76D> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294315-55BC8F8D-C8B3-4629-9441-8D71F4D0D59B> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294315-CB4CF756-62BF-47DB-8A17-C6C85F017204> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294315-51F00465-1C61-44E1-A846-E1F48EF31EF0>,
+        <http://www.wikidata.org/entity/statement/Q50294315-89D70003-3596-4714-A9E2-FCB5949ACFFF>,
+        <http://www.wikidata.org/entity/statement/Q50294315-A64193EC-D535-473E-B965-6FBB97C3A3F0> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294315-CB1771E0-DB07-4B0E-863D-D282E8BE13B6> ;
+    wdt:P2860 wd:Q24292185 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-8963851> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-8963851" ;
+    wdt:P527 wd:Q139347,
+        wd:Q50265488,
+        wd:Q906435 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294316 rdfs:label "CYP2R1 25-hydroxylates VD3" ;
+    schema:dateModified "2018-03-01T18:36:46+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction CYP2R1 25-hydroxylates VD3 in Homo sapiens" ;
+    schema:version 641587020 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 15 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294316-8DECF632-5CBF-498D-BC31-DFBA74C7D326>,
+        <http://www.wikidata.org/entity/statement/Q50294316-F83E1701-424D-40F5-B065-AAD9901CF5BB> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294316-2B4DD172-1591-4E6F-AED3-A54D4FFCD5E3> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294316-9F9D8EB3-42C8-4C2D-B9E3-0832D4E1E8DC> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294316-4D9BD1DF-B86D-4336-9E35-A790B1B60031> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294316-406CDDD6-3B1B-4A3C-9467-B4676C703C35> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294316-245548C6-951E-4E88-AAB5-2C83553E57D1>,
+        <http://www.wikidata.org/entity/statement/Q50294316-2F414F78-3077-4360-B6D6-D6C451ED650D>,
+        <http://www.wikidata.org/entity/statement/Q50294316-314713BC-138A-429E-9A13-4209ADAB19E9>,
+        <http://www.wikidata.org/entity/statement/Q50294316-7C43E1CA-C44C-4F84-8C35-01620054FA5F>,
+        <http://www.wikidata.org/entity/statement/Q50294316-8BB649DD-5707-405C-A4F2-A1748015F206>,
+        <http://www.wikidata.org/entity/statement/Q50294316-A6C0B837-4934-4F5B-837F-008B6292EC1A>,
+        <http://www.wikidata.org/entity/statement/Q50294316-BB7AD4F2-299D-451F-ACBD-4C99973230EA>,
+        <http://www.wikidata.org/entity/statement/Q50294316-D8A5C8E0-7F68-49FB-A07A-16A37DBE413A> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294316-021C1A97-D0C7-4B3B-97B1-B2609DAB4A02> ;
+    wdt:P2860 wd:Q28591006,
+        wd:Q34355684 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-209845> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-209845" ;
+    wdt:P527 wd:Q139307,
+        wd:Q139347,
+        wd:Q21117307,
+        wd:Q26841327,
+        wd:Q26987754,
+        wd:Q283,
+        wd:Q506710,
+        wd:Q5203615 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294317 rdfs:label "CDL translocates from ER membrane to extracellular region" ;
+    schema:dateModified "2018-03-01T18:36:49+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction CDL translocates from ER membrane to extracellular region in Homo sapiens" ;
+    schema:version 641587049 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 8 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294317-A62F99B1-9974-442C-A063-8BDE126C8658> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294317-39830A26-A988-4FA0-B60B-3BCDF60533E7> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294317-7FF54376-1267-46D1-9709-1E284DC60DDF> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294317-3EFB4270-494C-45CD-9D1A-6EC284AFD332> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294317-BEE612FA-0596-4A83-874D-EF1F8C3875BD> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294317-08550B7D-B0CF-4437-B290-9D9F450EA3C5>,
+        <http://www.wikidata.org/entity/statement/Q50294317-4762D3C7-4B24-43B1-995D-58340768B999> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294317-F46DF359-C21F-43CE-9E76-2CB7CF96DE78> ;
+    wdt:P2860 wd:Q24292185 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-6807242> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-6807242" ;
+    wdt:P527 wd:Q139307 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294319 rdfs:label "Calcidiol binds GC" ;
+    schema:dateModified "2018-03-01T18:36:51+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Calcidiol binds GC in Homo sapiens" ;
+    schema:version 641587075 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 9 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294319-3BB34DCD-3C8F-4E3A-9B85-AAA9002406E3> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294319-C7E6FEAD-B984-478D-A0F2-B7320640CF06> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294319-F6B57BF8-0D6C-4C5E-847D-3DA3ABDE1208> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294319-FD28CA97-48CB-4E9C-BB01-698381544C80> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294319-A97443E9-3E1E-4DFF-B335-05C5C5386F96> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294319-04775799-B098-464E-BC12-31827B6CE299>,
+        <http://www.wikidata.org/entity/statement/Q50294319-2B3F13DF-1E80-4CB1-B1C6-9FE0A3E46247>,
+        <http://www.wikidata.org/entity/statement/Q50294319-4C37834A-9AF6-4DD0-B1B8-57048E7D6B3A> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294319-34ED80BB-0250-4238-9C6C-8D19E476AD9A> ;
+    wdt:P2860 wd:Q24292185 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-209944> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-209944" ;
+    wdt:P527 wd:Q139307,
+        wd:Q50265489,
+        wd:Q906435 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294320 rdfs:label "CUBN binds GC:CDL" ;
+    schema:dateModified "2018-03-01T18:36:54+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction CUBN binds GC:CDL in Homo sapiens" ;
+    schema:version 641587107 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 9 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294320-B7CA0C54-C976-47FC-B907-3F64B7B4788E> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294320-D9FAE284-E705-49A1-912A-1A5565114B15> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294320-A6171847-7CFF-4A97-8A50-866AE885B935> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294320-08A0206E-473F-48A1-A476-6A0536772F87> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294320-D2BE3E47-D861-43CC-B968-4ECA51AB21DA> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294320-30E70E81-8F46-4570-85FB-2CD71C1D670F>,
+        <http://www.wikidata.org/entity/statement/Q50294320-6CE04A2F-868B-42A1-98FB-1236511A8DB7>,
+        <http://www.wikidata.org/entity/statement/Q50294320-E7C13214-555A-47C0-8343-9189AAACB8F7> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294320-2F6F262E-80DE-4EFB-AA78-CF1BF52FEA6B> ;
+    wdt:P2860 wd:Q24555085 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-350186> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-350186" ;
+    wdt:P527 wd:Q1142947,
+        wd:Q50265489,
+        wd:Q50265491 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294321 rdfs:label "LRP2 transports CUBN:GC:CDL from extracellular region to cytosol" ;
+    schema:dateModified "2018-03-01T18:37:00+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction LRP2 transports CUBN:GC:CDL from extracellular region to cytosol in Homo sapiens" ;
+    schema:version 641587166 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 12 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294321-5478157E-E2C8-468E-8D2F-222785E959B3>,
+        <http://www.wikidata.org/entity/statement/Q50294321-6C0CA831-D825-47FF-91A5-CD0A7FCCB9E9>,
+        <http://www.wikidata.org/entity/statement/Q50294321-CA07ECCB-EE7C-48C1-98F5-CE9F6A284E4A>,
+        <http://www.wikidata.org/entity/statement/Q50294321-DCA9C375-15C2-48CF-8135-C976042C5BDF> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294321-0DAEBA1A-8D97-4F99-81E1-65D9138BAFCE> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294321-159FF350-5922-409E-A7E2-19E3E4DED9AB> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294321-7EDBDCFA-AE6E-4B11-AE2B-AAD45151066D> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294321-EBD6520B-AA39-4BDE-9938-C1A32D278C4F> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294321-39AB1F02-36BE-43E8-B1AA-5298E8C1833C>,
+        <http://www.wikidata.org/entity/statement/Q50294321-40C31E02-FF15-41E8-979A-478B8E127C1C>,
+        <http://www.wikidata.org/entity/statement/Q50294321-E9F3300C-AFE7-474D-909F-DC85C6A455B0> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294321-EB9D5753-60AC-4115-96B5-A62F0F1EFBA7> ;
+    wdt:P2860 wd:Q24320176,
+        wd:Q28370564,
+        wd:Q28647094,
+        wd:Q37877297 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-350168> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-350168" ;
+    wdt:P527 wd:Q21202030,
+        wd:Q50265491,
+        wd:Q50265492 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294322 rdfs:label "CUBN:GC:CDL translocates from cytosol to lysosomal lumen" ;
+    schema:dateModified "2018-03-01T18:37:03+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction CUBN:GC:CDL translocates from cytosol to lysosomal lumen in Homo sapiens" ;
+    schema:version 641587198 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 9 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294322-ADD99FC8-C19A-4F48-A2C9-C163E56B1D38>,
+        <http://www.wikidata.org/entity/statement/Q50294322-DE28AF7E-E5F1-40F3-8CF5-CF3996A2A181> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294322-77CD6431-F6E6-4D2B-BD61-2BEA7770680E> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294322-10DE3E97-137B-4627-B707-68129AF0E1FE> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294322-9E8CA4C7-75FA-4692-B641-D921166D2ECE> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294322-CDEF7E70-1A56-4A9A-A39E-93C37E501F0C> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294322-03829A8B-F11E-49F8-BDF6-25C9B4EDEB31>,
+        <http://www.wikidata.org/entity/statement/Q50294322-C43A6DE5-255A-4C2C-91C8-1007F5F93466> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294322-6B50BC02-23F2-469E-9D02-37E8B42DF309> ;
+    wdt:P2860 wd:Q24532205,
+        wd:Q28647105 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-209760> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-209760" ;
+    wdt:P527 wd:Q50265492,
+        wd:Q50265496 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294324 rdfs:label "LGMN degrades GC" ;
+    schema:dateModified "2018-03-01T18:37:06+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction LGMN degrades GC in Homo sapiens" ;
+    schema:version 641587235 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 9 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294324-8C58981B-19E2-49A9-A1E3-8E822088BB39> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294324-1ED0A404-C674-4562-98F0-EF72661EE566> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294324-E9C8E496-A15E-4912-A0AE-0A33F8CAF5DC> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294324-2594DF3A-9CD1-400B-87E7-5EA658FFFDBE> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294324-D0EA51BA-C8A5-41F2-87AD-4A186D13692C> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294324-2F9C09CF-AE73-43C4-9A1D-6A274B25F327>,
+        <http://www.wikidata.org/entity/statement/Q50294324-7AECCFBE-582F-4C96-87CC-5E3213B7AD56>,
+        <http://www.wikidata.org/entity/statement/Q50294324-8DAECFC0-4680-40D2-AFB0-CBF97C4AAAE8> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294324-CBB32ED9-721D-4C5F-8F68-EDC82A171440> ;
+    wdt:P2860 wd:Q28370564 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-350158> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-350158" ;
+    wdt:P527 wd:Q22680135,
+        wd:Q50265496,
+        wd:Q50265498 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294325 rdfs:label "CUBN dissociates from CDL" ;
+    schema:dateModified "2018-03-01T18:37:08+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction CUBN dissociates from CDL in Homo sapiens" ;
+    schema:version 641587266 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 9 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294325-B6ACE1F9-6528-4BD8-AB22-4AEE985428D1> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294325-8B10CA51-0DE4-4C51-B08E-C1A4FA4752D6> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294325-C6A40F33-327F-4CF6-AFDD-1B57DC940D81> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294325-19619E36-EE94-4FD9-845A-13103828EFFA> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294325-488B1CF4-FF32-4783-AA8E-85E7835C6B39> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294325-0A729722-67F3-496C-81D1-F443B844C17A>,
+        <http://www.wikidata.org/entity/statement/Q50294325-2BD6399A-C8C6-4EB2-BA20-87EA3885CFEB>,
+        <http://www.wikidata.org/entity/statement/Q50294325-77C5D798-9705-488C-8979-C1E4B6AB20E2> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294325-097E48E0-7A33-49DE-BA9C-4AAE50486B3E> ;
+    wdt:P2860 wd:Q28370564 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-8963864> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-8963864" ;
+    wdt:P527 wd:Q1142947,
+        wd:Q139307,
+        wd:Q50265498 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294326 rdfs:label "CDL translocates from lysosomal lumen to cytosol" ;
+    schema:dateModified "2018-03-01T18:37:11+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction CDL translocates from lysosomal lumen to cytosol in Homo sapiens" ;
+    schema:version 641587297 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 8 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294326-BBB295E1-0A34-4A34-9512-86281DA1E737> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294326-9A0E15ED-5BC2-4482-870C-F237D059906C> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294326-8D8A2EB9-6144-44E4-B195-E52F12315D8E> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294326-75331E7A-1301-48F4-90F2-F253505E2028> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294326-A73F239C-D35C-4609-BBEF-FF83809152E8> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294326-348742B9-5771-4E0E-9860-FB84FFCF8801>,
+        <http://www.wikidata.org/entity/statement/Q50294326-A3CCA09B-5F19-4B0D-9529-E1DFA5ECBB10> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294326-55B8AC86-2DBF-4DD6-B11F-4A81F0667146> ;
+    wdt:P2860 wd:Q28071416 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-209766> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-209766" ;
+    wdt:P527 wd:Q139307 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294328 rdfs:label "CYP27B1 hydroxylates CDL to CTL" ;
+    schema:dateModified "2018-03-15T18:19:53+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction CYP27B1 hydroxylates CDL to CTL in Homo sapiens" ;
+    schema:version 649991896 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 16 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294328-184692BF-400C-439D-A144-886CC0FFB1AD>,
+        <http://www.wikidata.org/entity/statement/Q50294328-1B00F291-A485-496F-A738-A068E76ECA4E>,
+        <http://www.wikidata.org/entity/statement/Q50294328-ED097D51-0D14-4E99-88F1-C811543BD84D> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294328-28225156-B381-4A44-A15D-EEB45BFA1F37> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294328-ACE307D0-26A1-40C6-8AF1-EC42E2AC6747> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294328-8F1F3B2E-3DF2-43BF-9BC8-82EEC4C2B7DF> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294328-D4014461-4E0E-4977-8B48-2C736079F609> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294328-2A7EF560-2BCA-4373-91BE-3BE6DCDC8ABE>,
+        <http://www.wikidata.org/entity/statement/Q50294328-539E313B-4CB1-4AF6-96E4-3999ABF4755E>,
+        <http://www.wikidata.org/entity/statement/Q50294328-570C36FE-7F65-42E9-A5AE-FBF5B08E5178>,
+        <http://www.wikidata.org/entity/statement/Q50294328-928E0522-C16D-4801-B74F-32EE8F6D9CEF>,
+        <http://www.wikidata.org/entity/statement/Q50294328-A50250EB-FEF1-4EEA-83BF-D368C59AE650>,
+        <http://www.wikidata.org/entity/statement/Q50294328-B471CEFA-3F45-4319-A2BA-B5188B49C4F4>,
+        <http://www.wikidata.org/entity/statement/Q50294328-E2E731C6-79C0-4177-9E48-8FBA5C1C1F47>,
+        <http://www.wikidata.org/entity/statement/Q50294328-E834BAF6-004C-49B7-9A17-A8BEA66D8F93> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294328-DE4C4C16-B88F-4493-A6D5-1D25723EFBDE> ;
+    wdt:P2860 wd:Q24307649,
+        wd:Q28609923,
+        wd:Q50336010 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-209868> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-209868" ;
+    wdt:P527 wd:Q139195,
+        wd:Q139307,
+        wd:Q26841327,
+        wd:Q26987754,
+        wd:Q283,
+        wd:Q3650237,
+        wd:Q506710,
+        wd:Q5203615 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294329 rdfs:label "CYP24A1 hydroxylates CTL; inactivating it" ;
+    schema:dateModified "2018-03-01T18:37:17+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction CYP24A1 hydroxylates CTL; inactivating it in Homo sapiens" ;
+    schema:version 641587363 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 13 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294329-55CEC960-418A-4CEB-833E-0FBBB804CEE3> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294329-8DC93663-BAB2-4963-B5CC-D49D2B917230> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294329-2E3E1A70-EF8F-44B5-8763-045A407E3855> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294329-CA4E83EE-AAEB-4748-BC5C-6FA030473A38> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294329-ED5528AE-1A70-4273-BC8A-F60A618DC9C4> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294329-146E4911-E21D-4D04-9DB0-44A9D935BED3>,
+        <http://www.wikidata.org/entity/statement/Q50294329-2714ED1C-B5BC-4110-BA75-78D4338F10EB>,
+        <http://www.wikidata.org/entity/statement/Q50294329-5A50471A-4E76-4CD0-890E-D1C1E2DF27C2>,
+        <http://www.wikidata.org/entity/statement/Q50294329-9818E26F-F9F6-4F46-843D-9D210932581B>,
+        <http://www.wikidata.org/entity/statement/Q50294329-B7E9DCDC-9E94-4A48-8701-8C24D1A3C305>,
+        <http://www.wikidata.org/entity/statement/Q50294329-E6AED788-53D4-49B1-8424-119E34B2D2E3>,
+        <http://www.wikidata.org/entity/statement/Q50294329-EC2F432E-3B32-4F6F-890A-F83780CFFA42> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294329-D2ED2230-64C6-47E6-BD20-64BBB2695D95> ;
+    wdt:P2860 wd:Q24308870 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-209765> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29971817 ;
+    wdt:P3937 "R-HSA-209765" ;
+    wdt:P527 wd:Q139195,
+        wd:Q21110757,
+        wd:Q26841327,
+        wd:Q26987754,
+        wd:Q283,
+        wd:Q506710,
+        wd:Q5203615 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q29971817 rdfs:label "Vitamin D (calciferol) metabolism" ;
+    schema:dateModified "2018-03-02T11:02:43+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway Vitamin D (calciferol) metabolism in Homo sapiens" ;
+    schema:version 642200003 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 23 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q29971817-A7C5988F-EA0D-4E8D-914E-87F9546C0498> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q29971817-7F9792B1-217C-4C67-BA23-F418AEC097FF> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q29971817-70D6B5E7-AB78-495D-83C4-303A273D42EC>,
+        <http://www.wikidata.org/entity/statement/Q29971817-793CABE0-9F79-4956-938D-CB5CDFADD909> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q29971817-51346EF8-01E1-411D-925D-40C5B658E6F5> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q29971817-EC2B4959-8CFA-4C10-9C08-A85A006BE1C1> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q29971817-1554C59C-9DCF-407A-89AE-ECAB61C8258B>,
+        <http://www.wikidata.org/entity/statement/Q29971817-25D1B1EA-01EB-4B1B-91CF-1371A927EEFE>,
+        <http://www.wikidata.org/entity/statement/Q29971817-2AA55B2A-201C-4949-8EB5-71FFBE4C2A9B>,
+        <http://www.wikidata.org/entity/statement/Q29971817-2E9BD262-5F6E-4C4A-9E23-2B65E631218C>,
+        <http://www.wikidata.org/entity/statement/Q29971817-66821969-E8C0-441A-8844-CE01DC5C7524>,
+        <http://www.wikidata.org/entity/statement/Q29971817-6F8D4161-BFE1-47DC-8BD0-CB45556F3ED0>,
+        <http://www.wikidata.org/entity/statement/Q29971817-78B24EEA-06C1-4DA7-AA85-83825061B926>,
+        <http://www.wikidata.org/entity/statement/Q29971817-7AF881C2-17D8-4AD4-852E-6B125E28BAE7>,
+        <http://www.wikidata.org/entity/statement/Q29971817-9729067F-BD1D-4F2E-BF49-8C12DC088128>,
+        <http://www.wikidata.org/entity/statement/Q29971817-9C576FCE-B00D-4747-BC8A-C3F25125F448>,
+        <http://www.wikidata.org/entity/statement/Q29971817-A0EFC42D-F647-4910-9B47-59A16D987DC8>,
+        <http://www.wikidata.org/entity/statement/Q29971817-A4DEBB31-649A-4F6E-B419-D7F00F546321>,
+        <http://www.wikidata.org/entity/statement/Q29971817-C0DA42D5-59EB-479C-A909-B11F7DC8DF20>,
+        <http://www.wikidata.org/entity/statement/Q29971817-C4A51ADC-69B0-4CA7-A14C-05458CBA413B>,
+        <http://www.wikidata.org/entity/statement/Q29971817-DDFB6AE5-6DB5-4CCE-B0E0-6DF4CAF3F601>,
+        <http://www.wikidata.org/entity/statement/Q29971817-F6688AF4-9245-45D5-BCCB-EFB7BF3AD5AB> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q29971817-81F3D12E-8A35-4DF1-AB4A-14F28CCD4E9A> ;
+    wdt:P2860 wd:Q34621641 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-196791> ;
+    wdt:P31 wd:Q14599717,
+        wd:Q4915012 ;
+    wdt:P361 wd:Q34340147 ;
+    wdt:P3937 "R-HSA-196791" ;
+    wdt:P527 wd:Q34340174,
+        wd:Q34340177,
+        wd:Q34340181,
+        wd:Q50294314,
+        wd:Q50294315,
+        wd:Q50294316,
+        wd:Q50294317,
+        wd:Q50294319,
+        wd:Q50294320,
+        wd:Q50294321,
+        wd:Q50294322,
+        wd:Q50294324,
+        wd:Q50294325,
+        wd:Q50294326,
+        wd:Q50294328,
+        wd:Q50294329 ;
+    wdt:P703 wd:Q15978631 .
+
+wdref:f1350726e96d89ae5eb4cb27cbe111a2b3bce8ef pr:P248 wd:Q2134522 ;
+    pr:P3937 "R-HSA-196791" ;
+    pr:P813 "2018-03-02T00:00:00+00:00"^^xsd:dateTime ;
+    ns1:P813 <http://www.wikidata.org/value/7f8c80245a6de20c98efee69fb9c488f> .
+

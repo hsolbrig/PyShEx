@@ -7,10 +7,9 @@
 """
 from typing import Set
 
-from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node, RDFTriple, \
-    TriplePredicate, RDFGraph
 from rdflib import Graph
 
+from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node, TriplePredicate, RDFGraph
 from pyshex.utils.rdf_namespace import RDFNamespace
 
 SHEX = RDFNamespace("http://www.w3.org/ns/shex#")

@@ -1,0 +1,10 @@
+[
+    {
+        "schemaLabel": "disease shape",
+        "schemaURL": "https://raw.githubusercontent.com/SuLab/Genewiki-ShEx/master/diseases/wikidata-disease-ontology.shex",
+        "dataLabel": "Get all diseases from Wikidata" ,
+        "data": "Endpoint: https://query.wikidata.org/sparql",
+        "queryMap": "SPARQL '''PREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT ?item WHERE { ?item wdt:P699 ?doid .}'''@START",
+        "status": "conformant"
+    }
+]

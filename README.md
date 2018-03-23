@@ -8,6 +8,8 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 ## Revisions
 * 0.2.dev3 -- added SchemaEvaluator and other tweaks.  There are still some unit tests that fail -- beware
 * 0.3.0 -- Fix several issues.  Still does not pass all unit tests -- see `test_manifest.py` for details
+* 0.4.0 -- Added sparql_slurper capabilities. 
+* 0.4.1 -- Resolves several issues with reactome and disease test cases
 
 ## Installation
 ```bash
@@ -52,12 +54,19 @@ This package is built using:
 * [rdflib](https://rdflib.readthedocs.io/en/stable/) 
 
 ## Current status
+Performance has been improved, but our current implementation of the `sparql_slurper` is entirely too fine-grained. Our
+next steps include:
+1) Get non-conformance reasons into the responses
+2) Improve diagnostic and debugging tools
+3) Add a time-out to catch really long evaluations
+4) Adjust the slurper to pull larget chunks as needed and then refine on the retrieval end
+
 This implementation passes all of the tests in the master branch of [validation/manifest.ttl](https://raw.githubusercontent.com/shexSpec/shexTest/master/validation/manifest.ttl) with the following exceptions:
 
 At the moment, there are 1077 tests, of which:
 
-* 969 pass
-* 108 are skipped - reasons:
+* 960 pass
+* 117 are skipped - reasons:
 1) (44) Tests non-blank blank nodes (`rdflib` does not preserve bnode "identity")
 2) (24) sht:OutsideBMP -- test uses multi byte unicode
 3) (16) Uses ShEx 2.1 IMPORT feature -- not yet implemented
@@ -74,7 +83,7 @@ As mentioned above, at the moment this is as literal an implementation of the sp
 
 
 ## Notes
-[test_manifest_entry.py](tests/utils/manifest_tester.py) is the current testing tool.  Once we get through the complete set of tests we'll create a command line tool and a UI
+[manifest_tester.py](tests/utils/manifest_tester.py) is the current testing tool.  Once we get through the complete set of tests we'll create a command line tool and a UI
 
 Note: At the moment we're just returning pass/fail.  We need to find documentation about what the return document should look like before we start returning detailed reports.
 

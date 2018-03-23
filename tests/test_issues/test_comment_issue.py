@@ -29,8 +29,10 @@ gw:cancer {
 
 
 class ShexCommentTestCase(unittest.TestCase):
+
     def test_1(self):
         shex = ShExC(shex_schema)
+        self.assertTrue(True, "Compiler didn't crap out")
 
 
 if __name__ == '__main__':

@@ -10,11 +10,11 @@ from ShExJSG import ShExJ
 from pyshex.shape_expressions_language.p5_3_shape_expressions import satisfies
 from pyshex.shape_expressions_language.p5_7_semantic_actions import semActsSatisfied
 from pyshex.shape_expressions_language.p5_context import Context
-from pyshex.shapemap_structure_and_language.p3_shapemap_structure import ShapeMapType
+from pyshex.shapemap_structure_and_language.p3_shapemap_structure import ShapeMapType, nodeSelector
 from pyshex.utils.schema_utils import reference_of
 
 
-def conforms(m: ShapeMapType, cntxt: Context) -> bool:
+def conforms(cntxt: Context, n: nodeSelector, S: ShExJ.Shape) -> bool:
     """ `5.6.1 Schema Validation Requirement <http://shex.io/shex-semantics/#validation-requirement>`_
     
     A graph G is said to conform with a schema S with a ShapeMap m when:
@@ -24,14 +24,12 @@ def conforms(m: ShapeMapType, cntxt: Context) -> bool:
         sei references a ShapeExpr in shapes, and
         satisfies(n, sei, G, m) for each shape sei in sen.
 
-    :param S:  schema
-    :param m: ShapeMap
-    :param cntxt: context carrying the Graph and other useful things
     :return:
     """
-    return semActsSatisfied(cntxt.schema.startActs, cntxt) and \
-        all(reference_of(cntxt.schema, sa.shapeLabel) is not None and
-            satisfies(cntxt, sa.nodeSelector, reference_of(S, sa.shapeLabel)) for sa in m)
+    # return semActsSatisfied(cntxt.schema.startActs, cntxt) and \
+    #     all(reference_of(cntxt.schema, sa.shapeLabel) is not None and
+    #
+    return True
 
 
 def valid_shape_references(S: ShExJ.Schema, cntxt: Context) -> bool:

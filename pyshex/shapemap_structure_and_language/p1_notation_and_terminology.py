@@ -1,5 +1,6 @@
 import re
 from typing import Union, Tuple, Iterator, Optional
+
 from rdflib import URIRef, BNode, Literal, Graph
 
 #  This document assumes an understanding of the ShEx notation and terminology.
@@ -52,3 +53,6 @@ class RDFGraph(set):
         g = Graph()
         [g.add((e.s, e.p, e.o)) for e in self]
         return re.sub(r'^@prefix.*', '', g.serialize(format="turtle").decode(), flags=re.MULTILINE).strip()
+
+    def add_triples(self, triples: Iterator[Triple]):
+        super().update([RDFTriple(t) for t in triples])

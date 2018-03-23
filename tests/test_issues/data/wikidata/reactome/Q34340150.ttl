@@ -1,0 +1,1616 @@
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://www.wikidata.org/prop/reference/value/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix po: <http://purl.obolibrary.org/obo/PW> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix react: <http://micel.io/reactome/> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/statement/Q14599306-2765DB79-F4C6-4CCC-B49D-25328DEA9DAD> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:d8eb3e0322e69c60e51a939a4c63bd63206b838f ;
+    ps:P31 wd:Q2996394 .
+
+<http://www.wikidata.org/entity/statement/Q28609696-EC171075-E46F-42BF-BFEB-595697AAC6BD> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/21fafa1cc8cea7f09f9c1062f29eb5004e670337> ;
+    ps:P698 "12668600" .
+
+<http://www.wikidata.org/entity/statement/Q28609699-B44BDB70-6DC4-4EB4-BC58-2592792D0867> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/56579e613c23798b65508b8731e9b28d291fb15c> ;
+    ps:P698 "1390320" .
+
+<http://www.wikidata.org/entity/statement/Q34340147-92F61C12-706A-4CDF-8D73-0B552EC5EF1C> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-8957322" .
+
+<http://www.wikidata.org/entity/statement/Q34340150-0B24C8FD-66D9-40C4-A997-FC62BC97565C> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P2860 wd:Q36795958 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-107C9616-7919-4045-987B-7C69B275CDF5> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294084 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-17F2A92E-CC59-48F3-98DA-80843916A24F> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294074 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-1EC49567-BA8F-4F4A-B86B-E6584D0B3570> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P2860 wd:Q36796007 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-217A2A61-7743-4944-B4A2-925CC20BBFED> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q34340158 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-22941389-9F18-4D0C-B9AA-CD282C4A2D8A> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294090 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-2E028B65-B24F-43FF-B239-92C2DB97E998> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294082 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-44F32124-C090-4B53-B0F9-14F3C61266F2> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294071 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-4C9FDA0B-D7E9-4122-8B73-5910A0E9C89D> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P2860 wd:Q28609699 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-71AE8E8B-113C-4A3E-AEF2-7E43D49B1B55> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294092 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-71F7CFA4-D0D4-4767-B416-052365D98588> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P31 wd:Q4915012 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-739073D7-06DE-4D26-B371-58FE4AEB1100> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294077 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-77ED6C76-CF4A-45CF-BC4F-F22F1DDB8E58> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294079 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-7EA5545F-1E5B-427F-88EB-B37FB4B34090> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294085 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-88CE09BF-70CC-4F4C-870F-68FCBE20A018> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P2860 wd:Q28609696 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-927EF853-1A46-4B07-8367-A03AE0D5C5AB> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P361 wd:Q34340147 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-95AA441F-B76D-4945-B23E-920A9043365A> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294083 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-965408C0-8469-475B-9686-BEF780E48A92> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294086 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-972B1D80-2D09-4AA9-A5EB-51A3914C9CC8> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-191273" .
+
+<http://www.wikidata.org/entity/statement/Q34340150-9CCD76F0-E1D3-4704-AFB7-7C8EDBA57A92> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P703 wd:Q15978631 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-A1059DDC-1E2E-42D7-9568-1D8AE25C694C> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q34340154 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-AA205662-4700-4091-AC97-4E2DC004FB4E> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294067 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-ACF55354-4B7D-4345-AA23-3ECF54063F7E> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q34340161 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-B26D286B-D7B3-4D14-9333-AF3537E05FF4> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P2860 wd:Q34610844 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-B467FC96-5A27-47C6-B7D7-0775862CEAD1> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294087 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-B543DB98-CCCC-4EED-9722-6327ADF80EEE> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294070 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-B987CEF1-1775-4E5B-8969-01A396C912FA> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294101 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-C0BFB8BE-172F-4111-99C8-89812FBAAD5E> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294088 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-C1D54C6C-BA3C-4E51-8D0D-F51350BDCEDA> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294076 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-C5F4DE64-3CC5-4273-A71F-5784E6C53464> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294073 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-C7A24874-2256-46F0-A82C-77A79E18C214> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294080 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-CF212BBA-A6E0-432A-BADC-3A536916CBAC> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294081 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-CF69D5F7-FA28-46BC-852E-F763A5C6F46F> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294089 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-D1ECD3E3-B375-4057-BF4A-A7A142FDB326> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P31 wd:Q14599306 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-D393D8C8-F36A-47E8-BB95-DDEDD22A5631> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q45317317 .
+
+<http://www.wikidata.org/entity/statement/Q34340150-DA579027-E7FB-49CB-9455-FAD8A1C1D551> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:fd2330afe800db6ae40c55e071458851151a5960 ;
+    ps:P527 wd:Q50294069 .
+
+<http://www.wikidata.org/entity/statement/Q34340154-083B29C2-B5A6-44FC-B631-508FB3A5AC72> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-8848215" .
+
+<http://www.wikidata.org/entity/statement/Q34340158-E7F6E498-E98B-44E6-A5A5-DA15A339D055> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-191323" .
+
+<http://www.wikidata.org/entity/statement/Q34340161-5E5F3EE7-BEFD-4F71-A738-92D1FB6867E2> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-6807047" .
+
+<http://www.wikidata.org/entity/statement/Q34610844-25D9A27A-8692-4CD0-A207-97CF81BD786C> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:cf61315f6472e987e8feffa91d49f92a782b0678 ;
+    ps:P698 "11969204" .
+
+<http://www.wikidata.org/entity/statement/Q36795958-080A537E-0EA5-4548-A86E-0D5F0FA54CFC> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:ce2e87d3c837a6064d0af95a55f63739dd687abd ;
+    ps:P698 "3524618" .
+
+<http://www.wikidata.org/entity/statement/Q36796007-8B43E4DA-AFE8-48B8-B1EC-C7FAB6FC5FA7> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/7e20184a1a5ae7185449ffe6f7cd3f5469cefbf1> ;
+    ps:P698 "16054061" .
+
+<http://www.wikidata.org/entity/statement/Q45317317-017E1E12-BB6A-4286-A977-FC35A9924832> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-6807062" .
+
+<http://www.wikidata.org/entity/statement/Q50294067-45CA1032-3535-4CA7-963C-89F8821DCD2C> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-191352" .
+
+<http://www.wikidata.org/entity/statement/Q50294069-0DFF2CC2-4937-4F67-9624-571BF504BAF2> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-191380" .
+
+<http://www.wikidata.org/entity/statement/Q50294070-EC635946-5E27-41C3-B8AE-752E5A8C85B9> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-191422" .
+
+<http://www.wikidata.org/entity/statement/Q50294071-E0CE755E-6279-46DA-AEAC-C218D5742414> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-191414" .
+
+<http://www.wikidata.org/entity/statement/Q50294073-D539DAF5-BF05-42CF-A69C-F84E4D72D30F> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-191382" .
+
+<http://www.wikidata.org/entity/statement/Q50294074-6C5DEE2C-F12B-4C47-91E9-D3E940EF4234> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-191322" .
+
+<http://www.wikidata.org/entity/statement/Q50294076-9D0AB18A-96DE-45DC-9E92-456AFAA6327E> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-191303" .
+
+<http://www.wikidata.org/entity/statement/Q50294077-F0A1507B-E4E8-4D35-B8D1-BF22C417ED5A> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-191405" .
+
+<http://www.wikidata.org/entity/statement/Q50294079-29494E48-CBA1-49C6-B3F5-931EDE1F4C23> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-8952137" .
+
+<http://www.wikidata.org/entity/statement/Q50294080-18D18388-394E-4FCB-A42C-FF02776C9948> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-191402" .
+
+<http://www.wikidata.org/entity/statement/Q50294081-B916B516-737A-4F18-9474-AD0A11B2C83D> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-191299" .
+
+<http://www.wikidata.org/entity/statement/Q50294082-0A48A21B-6273-488E-A46F-659FD9FE7ADD> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-191366" .
+
+<http://www.wikidata.org/entity/statement/Q50294083-64F19B54-FA74-410A-BAE8-407F2B4879AC> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-194678" .
+
+<http://www.wikidata.org/entity/statement/Q50294084-A7615E9E-EAD7-4050-852D-F0F5E4289663> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-194674" .
+
+<http://www.wikidata.org/entity/statement/Q50294085-9CE198D0-500A-41FF-ACFE-938E5067C012> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-194698" .
+
+<http://www.wikidata.org/entity/statement/Q50294086-4E8F0A14-7B35-43BE-9B42-7793D0E72CC3> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-194641" .
+
+<http://www.wikidata.org/entity/statement/Q50294087-2F7CDDD4-D506-4F6F-B953-02F5C34B498A> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-194642" .
+
+<http://www.wikidata.org/entity/statement/Q50294088-C0F5B564-0C73-4FA1-9071-82B733A312FF> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-194689" .
+
+<http://www.wikidata.org/entity/statement/Q50294089-04DA8441-AF7F-4B9B-A8A6-04C45D178C0F> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-194669" .
+
+<http://www.wikidata.org/entity/statement/Q50294090-54234123-0E7F-4CE8-B250-5010BBF7CE70> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-194718" .
+
+<http://www.wikidata.org/entity/statement/Q50294092-3D91331A-7FEC-436E-AD95-41F485A24590> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-194632" .
+
+<http://www.wikidata.org/entity/statement/Q50294101-5D268F8F-CC23-40FF-886C-BA43AC77C4B6> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-5250531" .
+
+wd:Q14599306 rdfs:label "biosintetski proces holesterola",
+        "cholesterol biosynthetic process",
+        "биосинтетски процес холестерола" ;
+    schema:dateModified "2018-02-07T03:31:39+00:00"^^xsd:dateTime ;
+    schema:description "The chemical reactions and pathways resulting in the formation of cholesterol, cholest-5-en-3 beta-ol, the principal sterol of vertebrates and the precursor of many steroids, including bile acids and steroid hormones.",
+        "biologisch proces" ;
+    schema:version 627746540 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 6 ;
+    skos:altLabel "GO:0006695",
+        "cholesterol anabolism",
+        "cholesterol biosynthesis",
+        "cholesterol formation",
+        "cholesterol synthesis" ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q14599306-72E98747-6B95-4643-9BB6-0634FFEB8AF3>,
+        <http://www.wikidata.org/entity/statement/Q14599306-9FDB6897-CC9B-49DA-90C4-1A47EF3CA383>,
+        <http://www.wikidata.org/entity/statement/Q14599306-C7A41810-0D54-486D-8DCB-B0F045CFF9DC> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q14599306-7A3B3D56-2810-4309-BF78-6625D9EC842F> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q14599306-2765DB79-F4C6-4CCC-B49D-25328DEA9DAD> ;
+    p:P686 <http://www.wikidata.org/entity/statement/Q14599306-647B0A5A-D33D-477F-BAD4-64060A09E338> ;
+    wdt:P279 wd:Q14599650,
+        wd:Q14599661,
+        wd:Q22274649 ;
+    wdt:P2888 <http://purl.obolibrary.org/obo/GO_0006695> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P686 "GO:0006695" .
+
+wd:Q28609696 rdfs:label "Disorders of cholesterol biosynthesis: prototypic metabolic malformation syndromes" ;
+    schema:dateModified "2017-07-02T13:04:45+00:00"^^xsd:dateTime ;
+    schema:description "scientific journal article",
+        "vedecký článok (publikovaný 2003/04/01)",
+        "vědecký článek publikovaný v roce 2003",
+        "wetenschappelijk artikel (gepubliceerd op 2003/04/01)",
+        "مقالة علمية (نشرت في أبريل 2003)" ;
+    schema:version 511723523 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 8 ;
+    p:P1433 <http://www.wikidata.org/entity/statement/Q28609696-863174CD-2120-48C5-B343-1EA3E798049B> ;
+    p:P1476 <http://www.wikidata.org/entity/statement/Q28609696-310B8435-C7EF-4FAC-84D6-6D03B51D6A93> ;
+    p:P2093 <http://www.wikidata.org/entity/statement/Q28609696-CCA985C5-73BA-487D-BD8C-1BA426A7E619> ;
+    p:P304 <http://www.wikidata.org/entity/statement/Q28609696-E10C446A-90E1-4A7B-8F77-398F4A46D9AE> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q28609696-E4E15A6D-1CBD-4E28-9126-6FFAA4D6A095> ;
+    p:P478 <http://www.wikidata.org/entity/statement/Q28609696-C1122840-7441-466B-B377-67E8356610DD> ;
+    p:P577 <http://www.wikidata.org/entity/statement/Q28609696-5AE21A5A-F561-4CA1-9E82-3FE3B0A2E3B0> ;
+    p:P698 <http://www.wikidata.org/entity/statement/Q28609696-EC171075-E46F-42BF-BFEB-595697AAC6BD> ;
+    wdt:P1433 wd:Q2720965 ;
+    wdt:P1476 "Disorders of cholesterol biosynthesis: prototypic metabolic malformation syndromes" ;
+    wdt:P2093 "Gail E. Herman" ;
+    wdt:P304 "R75–88" ;
+    wdt:P31 wd:Q13442814 ;
+    wdt:P478 "12 Spec No 1" ;
+    wdt:P577 "2003-04-01T00:00:00+00:00"^^xsd:dateTime ;
+    wdt:P698 "12668600" .
+
+wd:Q34340147 rdfs:label "Metabolism of steroids" ;
+    schema:dateModified "2017-12-21T09:47:31+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway Metabolism of steroids in Homo sapiens" ;
+    schema:version 611712561 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 16 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q34340147-062A249A-F22E-464D-82F0-85CE23A4EFBF>,
+        <http://www.wikidata.org/entity/statement/Q34340147-4F12996A-7E9E-4F42-9DAB-00E7275FD4D5>,
+        <http://www.wikidata.org/entity/statement/Q34340147-74B45612-5042-415E-8BF4-C4A3CD06338D>,
+        <http://www.wikidata.org/entity/statement/Q34340147-9F230142-604C-4D53-BA89-AF88890DC736>,
+        <http://www.wikidata.org/entity/statement/Q34340147-C3F72F6A-818E-4D4F-9103-92B806AC1F84> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q34340147-4065B5AA-6C33-4769-8477-D2EE2BD3C55C> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q34340147-07814871-57E9-4EA4-87BC-219418367B69>,
+        <http://www.wikidata.org/entity/statement/Q34340147-5603E1B1-2858-43C9-AA54-06328F2AF5EF> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q34340147-0AFFB80D-5F4F-4B0D-90C8-84FA4DC716CC> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q34340147-92F61C12-706A-4CDF-8D73-0B552EC5EF1C> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q34340147-73644C56-65AA-470C-84E1-D65F7E103DB3>,
+        <http://www.wikidata.org/entity/statement/Q34340147-7E44F00A-162E-462F-BF2A-11ACF829F23B>,
+        <http://www.wikidata.org/entity/statement/Q34340147-CB6E2926-E4C6-45EE-80BD-79431CF31460>,
+        <http://www.wikidata.org/entity/statement/Q34340147-D5EBBC52-366C-4567-983E-0569075F19D8>,
+        <http://www.wikidata.org/entity/statement/Q34340147-DF841B2F-49DE-4148-8182-156BFB60D74B> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q34340147-31CC82F4-D322-44A4-BDE9-994FC38B7D9D> ;
+    wdt:P2860 wd:Q24652984,
+        wd:Q27919675,
+        wd:Q28204726,
+        wd:Q28296995,
+        wd:Q28609699 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-8957322> ;
+    wdt:P31 wd:Q14327702,
+        wd:Q4915012 ;
+    wdt:P361 wd:Q45317220 ;
+    wdt:P3937 "R-HSA-8957322" ;
+    wdt:P527 wd:Q29971817,
+        wd:Q34340150,
+        wd:Q45317319,
+        wd:Q45317321,
+        wd:Q45317328 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q34340154 rdfs:label "ACAT2 condenses 2 Ac-CoA to form ACA-CoA" ;
+    schema:dateModified "2018-03-01T18:25:26+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction ACAT2 condenses 2 Ac-CoA to form ACA-CoA in Homo sapiens" ;
+    schema:version 641579437 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 12 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q34340154-3D030F2F-38AC-498A-9C07-D1B4B694422E>,
+        <http://www.wikidata.org/entity/statement/Q34340154-ECE9566D-2625-4522-B5AE-F7048DC4E7BE> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q34340154-E1CEE429-5AF8-48CE-AC17-479247A9E0D2> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q34340154-A9657C2D-983A-45CD-B967-C3F9E6174D3A> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q34340154-1188CCFD-7C6F-479D-ACF9-F567693DB2A2> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q34340154-083B29C2-B5A6-44FC-B631-508FB3A5AC72> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q34340154-01B741E0-AF48-49D9-9008-C8D9B04A099C>,
+        <http://www.wikidata.org/entity/statement/Q34340154-458FED7F-F271-4005-B4F5-9B01E72AB97A>,
+        <http://www.wikidata.org/entity/statement/Q34340154-A7C4D3D2-DB5B-480E-B51A-66C038BB39EE>,
+        <http://www.wikidata.org/entity/statement/Q34340154-C0AB8C71-FE7A-4C01-8A50-DE1C89B59B77>,
+        <http://www.wikidata.org/entity/statement/Q34340154-C8A38B11-E607-49E4-8FCC-CF644618DE68> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q34340154-0C28466C-614E-43B8-B7E2-A8E5A93E423D> ;
+    wdt:P2860 wd:Q24319084,
+        wd:Q34447448 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-8848215> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-8848215" ;
+    wdt:P527 wd:Q2639429,
+        wd:Q283,
+        wd:Q407635,
+        wd:Q50265296,
+        wd:Q715317 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q34340158 rdfs:label "HMGCS1 condenses Ac-CoA and ACA-CoA to form bHMG-CoA" ;
+    schema:dateModified "2018-03-01T18:25:30+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction HMGCS1 condenses Ac-CoA and ACA-CoA to form bHMG-CoA in Homo sapiens" ;
+    schema:version 641579492 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 12 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q34340158-D05267B0-96FC-497F-83E6-1B0AB9D46019> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q34340158-EB0159EF-83E3-48B4-B6BE-921A8B6DC3A0> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q34340158-511D72B6-7BE9-464E-B56A-716EA856D1FA> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q34340158-2F6D8BD3-A106-4B14-A9C5-6247AA1D2E6E> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q34340158-E7F6E498-E98B-44E6-A5A5-DA15A339D055> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q34340158-5C0AA656-D6DF-41F1-84FA-C90E63F8FD34>,
+        <http://www.wikidata.org/entity/statement/Q34340158-6144E7A8-903E-45D4-8818-74DA11F3CA1B>,
+        <http://www.wikidata.org/entity/statement/Q34340158-68EBE1B8-17AC-4BDD-9B81-4B0AA63A1DBB>,
+        <http://www.wikidata.org/entity/statement/Q34340158-CC4074AA-35C2-4FFD-BDE5-DF76BEECECFF>,
+        <http://www.wikidata.org/entity/statement/Q34340158-D7239365-EAD7-45C3-979F-85A3141271AC>,
+        <http://www.wikidata.org/entity/statement/Q34340158-DDD45709-1F5C-411A-AC2B-D7CD11A2D03D> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q34340158-C7031BB6-6585-4FBE-9262-783E59DB3B42> ;
+    wdt:P2860 wd:Q24319858 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-191323> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-191323" ;
+    wdt:P527 wd:Q21118293,
+        wd:Q2639429,
+        wd:Q283,
+        wd:Q307532,
+        wd:Q407635,
+        wd:Q715317 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q34340161 rdfs:label "Cholesterol biosynthesis via desmosterol" ;
+    schema:dateModified "2018-03-02T11:02:07+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway Cholesterol biosynthesis via desmosterol in Homo sapiens" ;
+    schema:version 642199687 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 11 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q34340161-A04EE83F-C069-47BE-9F31-FC76A1D1D31D> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q34340161-5FE385BF-32D2-40B0-B7DB-F2AF5516A5E6> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q34340161-3A070378-12EE-4393-947A-15CB86CAFEB8>,
+        <http://www.wikidata.org/entity/statement/Q34340161-78FF32F7-5A00-4911-9B5C-AE1319FB928E> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q34340161-6C088C31-FB93-4171-BE9A-510514C32B8E> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q34340161-5E5F3EE7-BEFD-4F71-A738-92D1FB6867E2> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q34340161-333F4999-BBFD-49F2-B2ED-F91597A1F838>,
+        <http://www.wikidata.org/entity/statement/Q34340161-70A81772-4D0C-4B7A-A364-B84E298A6FC3>,
+        <http://www.wikidata.org/entity/statement/Q34340161-738A873A-D6A1-41AD-A83A-7328136EB162>,
+        <http://www.wikidata.org/entity/statement/Q34340161-CEB8FFD6-4140-477C-9A2B-52565E46B07B> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q34340161-DA012B23-D326-4336-AB08-03367E7EBD61> ;
+    wdt:P2860 wd:Q28647131 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-6807047> ;
+    wdt:P31 wd:Q22282936,
+        wd:Q4915012 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-6807047" ;
+    wdt:P527 wd:Q34340165,
+        wd:Q50294094,
+        wd:Q50294095,
+        wd:Q50294096 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q34610844 rdfs:label "Membrane-bound enzymes of cholesterol synthesis from lanosterol." ;
+    schema:dateModified "2017-10-10T04:19:12+00:00"^^xsd:dateTime ;
+    schema:description "2002 nî lūn-bûn",
+        "2002年の論文",
+        "2002年論文",
+        "2002年论文",
+        "2002년 논문",
+        "article científic",
+        "article scientific",
+        "article scientifique",
+        "articol științific",
+        "articolo scientifico",
+        "artigo científico",
+        "artikull shkencor",
+        "artikulong pang-agham",
+        "artykuł naukowy",
+        "artículo científico publicado en 2002",
+        "artículu científicu",
+        "bilimsel makale",
+        "bài báo khoa học",
+        "mokslinis straipsnis",
+        "naučni članak",
+        "scienca artikolo",
+        "scientific article",
+        "teaduslik artikkel",
+        "tieteellinen artikkeli",
+        "tudományos cikk",
+        "vedecký článok",
+        "vetenskaplig artikel",
+        "videnskabelig artikel",
+        "vitenskapelig artikkel",
+        "vitskapeleg artikkel",
+        "vědecký článek",
+        "wetenschappelijk artikel",
+        "wissenschaftlicher Artikel",
+        "επιστημονικό άρθρο",
+        "мақолаи илмӣ",
+        "наукова стаття",
+        "научна статия",
+        "научная статья",
+        "научни чланак",
+        "գիտական հոդված",
+        "מאמר מדעי",
+        "مقالة علمية",
+        "২০০২-এ প্রকাশিত বৈজ্ঞানিক নিবন্ধ",
+        "บทความทางวิทยาศาสตร์",
+        "სამეცნიერო სტატია" ;
+    schema:version 574793046 ;
+    wikibase:identifiers 2 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 10 ;
+    p:P1433 <http://www.wikidata.org/entity/statement/Q34610844-F0A6267F-2CAB-4810-A792-F8553D682EA1> ;
+    p:P1476 <http://www.wikidata.org/entity/statement/Q34610844-3CE168FD-539D-4AD1-B6A8-497CAE33C5DF> ;
+    p:P2093 <http://www.wikidata.org/entity/statement/Q34610844-6A963E8D-DA10-43E7-83BE-CD44C6E05363> ;
+    p:P304 <http://www.wikidata.org/entity/statement/Q34610844-3A72F9DF-A9B3-413B-81DC-EA54D985D3B2> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q34610844-F728A1B9-FF71-4DA9-9EBD-CD094B1554EE> ;
+    p:P356 <http://www.wikidata.org/entity/statement/Q34610844-3E9CB9C0-EE59-40BD-872C-F29997FE9E70> ;
+    p:P433 <http://www.wikidata.org/entity/statement/Q34610844-3962C5DE-4CBC-4840-8595-1628293828DF> ;
+    p:P478 <http://www.wikidata.org/entity/statement/Q34610844-64873D5B-9937-43F9-8D3E-D6CEDD174309> ;
+    p:P577 <http://www.wikidata.org/entity/statement/Q34610844-2A9FA4EB-E6FC-40B4-940C-2978A00E45C4> ;
+    p:P698 <http://www.wikidata.org/entity/statement/Q34610844-25D9A27A-8692-4CD0-A207-97CF81BD786C> ;
+    ns1:P356 <https://doi.org/10.1006/BBRC.2001.2008> ;
+    wdt:P1433 wd:Q864228 ;
+    wdt:P1476 "Membrane-bound enzymes of cholesterol synthesis from lanosterol." ;
+    wdt:P2093 "James L Gaylor" ;
+    wdt:P304 "1139-1146" ;
+    wdt:P31 wd:Q13442814 ;
+    wdt:P356 "10.1006/BBRC.2001.2008" ;
+    wdt:P433 "5" ;
+    wdt:P478 "292" ;
+    wdt:P577 "2002-04-01T00:00:00+00:00"^^xsd:dateTime ;
+    wdt:P698 "11969204" .
+
+wd:Q36795958 rdfs:label "Regulation of cholesterol biosynthesis." ;
+    schema:dateModified "2017-09-12T16:46:04+00:00"^^xsd:dateTime ;
+    schema:description "1986 nî lūn-bûn",
+        "1986年の論文",
+        "1986年論文",
+        "1986年论文",
+        "1986년 논문",
+        "article científic",
+        "article scientific",
+        "article scientifique",
+        "articol științific",
+        "articolo scientifico",
+        "artigo científico",
+        "artikel ilmiah",
+        "artikull shkencor",
+        "artikulong pang-agham",
+        "artykuł naukowy",
+        "artículo científico publicado en 1986",
+        "artículu científicu",
+        "bilimsel makale",
+        "bài báo khoa học",
+        "naučni članak",
+        "scienca artikolo",
+        "scientific article published on January 1986",
+        "teaduslik artikkel",
+        "tieteellinen artikkeli",
+        "tudományos cikk",
+        "vedecký článok",
+        "vetenskaplig artikel",
+        "videnskabelig artikel",
+        "vitenskapelig artikkel",
+        "vitskapeleg artikkel",
+        "vědecký článek",
+        "wetenschappelijk artikel",
+        "wissenschaftlicher Artikel",
+        "επιστημονικό άρθρο",
+        "мақолаи илмӣ",
+        "наукова стаття",
+        "научна статия",
+        "научная статья",
+        "научни чланак",
+        "מאמר מדעי",
+        "مقالة علمية نشرت في يناير 1986",
+        "জানুয়ারি ১৯৮৬-এ প্রকাশিত বৈজ্ঞানিক নিবন্ধ",
+        "บทความทางวิทยาศาสตร์",
+        "სამეცნიერო სტატია" ;
+    schema:version 557246865 ;
+    wikibase:identifiers 2 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 10 ;
+    p:P1433 <http://www.wikidata.org/entity/statement/Q36795958-2932A83B-FAD6-4A99-AB53-311B5C4FA983> ;
+    p:P1476 <http://www.wikidata.org/entity/statement/Q36795958-1476BDB3-5D89-48CF-A894-568E2D66A170> ;
+    p:P2093 <http://www.wikidata.org/entity/statement/Q36795958-0BC0CBA4-C209-4E7E-BCE3-3E788DCD096D>,
+        <http://www.wikidata.org/entity/statement/Q36795958-A0C303A0-02FB-4E01-BD02-5281844E62FE> ;
+    p:P304 <http://www.wikidata.org/entity/statement/Q36795958-DFDA322D-3EE5-43BA-ABF5-F0AB757E2E97> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q36795958-0D527D71-5793-40EF-A6E6-CE12D28E639D> ;
+    p:P356 <http://www.wikidata.org/entity/statement/Q36795958-D9D14F27-ECD1-4867-AAEF-784D34437BE0> ;
+    p:P478 <http://www.wikidata.org/entity/statement/Q36795958-EC04ABD1-9A0A-4968-9A76-C9E19294BDE0> ;
+    p:P577 <http://www.wikidata.org/entity/statement/Q36795958-AC7667D8-98F5-465F-A67D-FED4F100D2A7> ;
+    p:P698 <http://www.wikidata.org/entity/statement/Q36795958-080A537E-0EA5-4548-A86E-0D5F0FA54CFC> ;
+    ns1:P356 <https://doi.org/10.1146/ANNUREV.NU.06.070186.001333> ;
+    wdt:P1433 wd:Q4769675 ;
+    wdt:P1476 "Regulation of cholesterol biosynthesis." ;
+    wdt:P2093 "Rudney H",
+        "Sexton RC" ;
+    wdt:P304 "245-272" ;
+    wdt:P31 wd:Q13442814 ;
+    wdt:P356 "10.1146/ANNUREV.NU.06.070186.001333" ;
+    wdt:P478 "6" ;
+    wdt:P577 "1986-01-01T00:00:00+00:00"^^xsd:dateTime ;
+    wdt:P698 "3524618" .
+
+wd:Q36796007 rdfs:label "Insig-mediated degradation of HMG CoA reductase stimulated by lanosterol, an intermediate in the synthesis of cholesterol." ;
+    schema:dateModified "2017-09-12T16:47:25+00:00"^^xsd:dateTime ;
+    schema:description "2005 nî lūn-bûn",
+        "2005年の論文",
+        "2005年論文",
+        "2005年论文",
+        "2005년 논문",
+        "article científic",
+        "article scientific",
+        "article scientifique",
+        "articol științific",
+        "articolo scientifico",
+        "artigo científico",
+        "artikel ilmiah",
+        "artikull shkencor",
+        "artikulong pang-agham",
+        "artykuł naukowy",
+        "artículo científico publicado en 2005",
+        "artículu científicu",
+        "bilimsel makale",
+        "bài báo khoa học",
+        "naučni članak",
+        "scienca artikolo",
+        "scientific article published on March 2005",
+        "teaduslik artikkel",
+        "tieteellinen artikkeli",
+        "tudományos cikk",
+        "vedecký článok",
+        "vetenskaplig artikel",
+        "videnskabelig artikel",
+        "vitenskapelig artikkel",
+        "vitskapeleg artikkel",
+        "vědecký článek",
+        "wetenschappelijk artikel",
+        "wissenschaftlicher Artikel",
+        "επιστημονικό άρθρο",
+        "мақолаи илмӣ",
+        "наукова стаття",
+        "научна статия",
+        "научная статья",
+        "научни чланак",
+        "מאמר מדעי",
+        "مقالة علمية نشرت في مارس 2005",
+        "মার্চ ২০০৫-এ প্রকাশিত বৈজ্ঞানিক নিবন্ধ",
+        "บทความทางวิทยาศาสตร์",
+        "სამეცნიერო სტატია" ;
+    schema:version 557247766 ;
+    wikibase:identifiers 2 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 12 ;
+    p:P1433 <http://www.wikidata.org/entity/statement/Q36796007-4BD5AF42-21E0-4927-B436-9C4FD500D437> ;
+    p:P1476 <http://www.wikidata.org/entity/statement/Q36796007-E97624CB-8257-4177-9377-F2A08E36734C> ;
+    p:P2093 <http://www.wikidata.org/entity/statement/Q36796007-98311158-3B23-439E-BDFF-D7FDB7F26C16>,
+        <http://www.wikidata.org/entity/statement/Q36796007-A16852E3-74A8-467E-ABD6-CB4F9DAD3F7F>,
+        <http://www.wikidata.org/entity/statement/Q36796007-CE24DB89-FB5E-4A55-9D16-5D0A8565CFE9> ;
+    p:P304 <http://www.wikidata.org/entity/statement/Q36796007-473FE112-C029-4436-97EA-D51B33BFBA05> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q36796007-A1D1FBF6-BCA2-4DD6-8407-6E32F1ACBC77> ;
+    p:P356 <http://www.wikidata.org/entity/statement/Q36796007-881C85BA-2B2A-40D8-A060-9A6B1AD4102E> ;
+    p:P433 <http://www.wikidata.org/entity/statement/Q36796007-EE9487F4-C9CF-40F1-ACBA-F8A7BE4E2621> ;
+    p:P478 <http://www.wikidata.org/entity/statement/Q36796007-88CA0EF2-FF34-47FA-A17B-F897ABE99685> ;
+    p:P577 <http://www.wikidata.org/entity/statement/Q36796007-D825CB6F-4819-40C5-87C8-4646FE164794> ;
+    p:P698 <http://www.wikidata.org/entity/statement/Q36796007-8B43E4DA-AFE8-48B8-B1EC-C7FAB6FC5FA7> ;
+    ns1:P356 <https://doi.org/10.1016/J.CMET.2005.01.001> ;
+    wdt:P1433 wd:Q1254684 ;
+    wdt:P1476 "Insig-mediated degradation of HMG CoA reductase stimulated by lanosterol, an intermediate in the synthesis of cholesterol." ;
+    wdt:P2093 "Bao-Liang Song",
+        "Norman B Javitt",
+        "Russell A DeBose-Boyd" ;
+    wdt:P304 "179-189" ;
+    wdt:P31 wd:Q13442814 ;
+    wdt:P356 "10.1016/J.CMET.2005.01.001" ;
+    wdt:P433 "3" ;
+    wdt:P478 "1" ;
+    wdt:P577 "2005-03-01T00:00:00+00:00"^^xsd:dateTime ;
+    wdt:P698 "16054061" .
+
+wd:Q45317317 rdfs:label "Cholesterol biosynthesis via lathosterol" ;
+    schema:dateModified "2018-03-02T11:02:12+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway Cholesterol biosynthesis via lathosterol in Homo sapiens" ;
+    schema:version 642199724 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 12 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q45317317-354B6168-C046-488C-BBF4-27E256F39778>,
+        <http://www.wikidata.org/entity/statement/Q45317317-52C50364-ECD5-4249-B73D-FD8EAD8954EE> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q45317317-01765664-A5E2-4ACB-92EF-A7637DD5C000> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q45317317-863EE445-AD66-4A75-BA09-517C187CBC96>,
+        <http://www.wikidata.org/entity/statement/Q45317317-879C7C93-D61B-4E03-B319-8ACA6F80EBB4> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q45317317-DDF3BF59-4C8E-44A1-80FA-504BA3926097> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q45317317-017E1E12-BB6A-4286-A977-FC35A9924832> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q45317317-003B08F0-5FBD-4ECB-818C-D5777B140DA4>,
+        <http://www.wikidata.org/entity/statement/Q45317317-775ED3F5-D74A-477D-8BEE-7D38CE003B51>,
+        <http://www.wikidata.org/entity/statement/Q45317317-7BE4112B-97E8-4537-A1A6-E3490833C7FC>,
+        <http://www.wikidata.org/entity/statement/Q45317317-7F969D3C-0079-4611-B50E-A7B1017ADF3A> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q45317317-7B897AFE-BA5F-43F1-B6B8-12A11929A314> ;
+    wdt:P2860 wd:Q28638556,
+        wd:Q28647131 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-6807062> ;
+    wdt:P31 wd:Q21209320,
+        wd:Q4915012 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-6807062" ;
+    wdt:P527 wd:Q50294097,
+        wd:Q50294098,
+        wd:Q50294099,
+        wd:Q50294100 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294067 rdfs:label "Reduction of HMG-CoA produces mevalonate" ;
+    schema:dateModified "2018-03-01T18:25:34+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Reduction of HMG-CoA produces mevalonate in Homo sapiens" ;
+    schema:version 641579527 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 12 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294067-4F7D6ACB-6AE2-4339-9DBE-36880B10D692> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294067-970FE2EC-C73B-4144-82B2-B9828660C3CA> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294067-189F164C-1C9B-42AD-B99A-8BD08A64E72E> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294067-25778EA4-C3BB-41B8-AE84-12B85E1A0D6B> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294067-45CA1032-3535-4CA7-963C-89F8821DCD2C> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294067-4B3F004B-6AA0-4F51-A5C0-BDCC5EAB21C4>,
+        <http://www.wikidata.org/entity/statement/Q50294067-67C859B2-7F73-43B2-93E3-6672F7BDBE33>,
+        <http://www.wikidata.org/entity/statement/Q50294067-6C610F79-94E7-4B7A-914E-2AFD5BE7F417>,
+        <http://www.wikidata.org/entity/statement/Q50294067-8584ACC2-2735-44A8-97D1-E352A00752FE>,
+        <http://www.wikidata.org/entity/statement/Q50294067-90A1500A-05D6-4D85-B8D4-05F6E200AA3C>,
+        <http://www.wikidata.org/entity/statement/Q50294067-EF218113-D6B7-4A49-9576-7F6781FBE946> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294067-91A1CE2F-43E3-42C8-9CD4-6DD576181A77> ;
+    wdt:P2860 wd:Q22253264 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-191352> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-191352" ;
+    wdt:P527 wd:Q26841327,
+        wd:Q26987754,
+        wd:Q307532,
+        wd:Q407635,
+        wd:Q50265299,
+        wd:Q506710 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294069 rdfs:label "Mevalonate is phosphorylated to mevalonate-5-phosphate" ;
+    schema:dateModified "2018-03-01T18:25:38+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Mevalonate is phosphorylated to mevalonate-5-phosphate in Homo sapiens" ;
+    schema:version 641579581 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 11 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294069-54CADBDA-9287-4082-9E31-E165346C787D>,
+        <http://www.wikidata.org/entity/statement/Q50294069-557E6952-73C3-4E66-B94D-88BC6E33B95C> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294069-B7148A97-B7FF-47B0-950D-39EDE674F9F0> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294069-894E492C-7D9C-4673-BFF8-2297D49A6CAC> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294069-F8091554-6508-4DA5-AF72-6E87881600C0> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294069-0DFF2CC2-4937-4F67-9624-571BF504BAF2> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294069-0318FBBB-A4C8-4FC8-ACAA-7E9E5870F970>,
+        <http://www.wikidata.org/entity/statement/Q50294069-271F076E-0EE9-4031-9812-C1AF42412A3B>,
+        <http://www.wikidata.org/entity/statement/Q50294069-E6DC05CE-BB6B-49DA-A99D-88879D7569F3>,
+        <http://www.wikidata.org/entity/statement/Q50294069-FE3B22BE-725F-479C-BCC1-01E5C5E9DDFE> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294069-C800D797-5FA4-403D-95F2-AE803E710FC5> ;
+    wdt:P2860 wd:Q24292898,
+        wd:Q24305289 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-191380> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-191380" ;
+    wdt:P527 wd:Q185253,
+        wd:Q27464491,
+        wd:Q50265303,
+        wd:Q80863 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294070 rdfs:label "Mevalonate-5-phosphate is further phosphorylated." ;
+    schema:dateModified "2018-03-01T18:25:43+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Mevalonate-5-phosphate is further phosphorylated. in Homo sapiens" ;
+    schema:version 641579641 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 12 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294070-A37D668A-E42E-4DA3-BB05-585A57E9C9C3>,
+        <http://www.wikidata.org/entity/statement/Q50294070-D5F823D1-D3A6-4BF0-A0B0-0DD7E69D5523> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294070-0C8C2B2B-3F04-40AF-853C-A9629EC4E477> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294070-75F22A81-1436-4C39-88EC-C7F76530B52D> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294070-4932D66A-9848-4954-BDA5-8999476E7F23> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294070-EC635946-5E27-41C3-B8AE-752E5A8C85B9> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294070-03CBAA61-70A5-44E5-BEC2-645DF2B6F13D>,
+        <http://www.wikidata.org/entity/statement/Q50294070-294F3125-75C4-4815-93F5-64693E171C68>,
+        <http://www.wikidata.org/entity/statement/Q50294070-81A19070-F13E-4222-B7F7-D48E5B0FC5C5>,
+        <http://www.wikidata.org/entity/statement/Q50294070-A4C029D4-6F7A-4E01-B09F-90836F8279AB>,
+        <http://www.wikidata.org/entity/statement/Q50294070-BF9A9DD5-E889-4363-8B9B-29DA7EB0983C> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294070-CE897A66-B699-43D1-B566-F1195551B3D5> ;
+    wdt:P2860 wd:Q24305203,
+        wd:Q24306669 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-191422> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-191422" ;
+    wdt:P527 wd:Q185253,
+        wd:Q22676988,
+        wd:Q27088509,
+        wd:Q27464491,
+        wd:Q80863 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294071 rdfs:label "MVD decarboxylates MVA5PP to IPPP" ;
+    schema:dateModified "2018-03-01T18:25:48+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction MVD decarboxylates MVA5PP to IPPP in Homo sapiens" ;
+    schema:version 641579693 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 13 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294071-61E36D69-D982-4B9C-B356-E3368A1B73AD> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294071-7F80908C-261B-47B8-BE4B-2D047C1A7415> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294071-EDBBBE88-2E70-44C1-B70E-1B0F05B21252> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294071-D8957D22-3AF5-401E-8CE7-22FFBE6B7B89> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294071-E0CE755E-6279-46DA-AEAC-C218D5742414> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294071-01DC3FD5-76F7-4B05-8707-F5376B50DCF1>,
+        <http://www.wikidata.org/entity/statement/Q50294071-1509898A-9FB8-492A-B9E4-A5AB849B5ED8>,
+        <http://www.wikidata.org/entity/statement/Q50294071-42EAE192-60C4-4497-B832-557BD5A4B6D8>,
+        <http://www.wikidata.org/entity/statement/Q50294071-463EB350-C147-4DFD-8291-49B5A449424C>,
+        <http://www.wikidata.org/entity/statement/Q50294071-55BAEDD2-FB08-4069-9DBD-B7EDE4881E78>,
+        <http://www.wikidata.org/entity/statement/Q50294071-57CE2859-1BA9-4452-B5A0-0F99F9EFCB72>,
+        <http://www.wikidata.org/entity/statement/Q50294071-9CDE7F08-48DD-4D45-A589-0C31108A2D13> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294071-55383473-7CDA-4AF3-9DCE-F0C641C59E2F> ;
+    wdt:P2860 wd:Q24309416 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-191414> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-191414" ;
+    wdt:P527 wd:Q177811,
+        wd:Q185253,
+        wd:Q1997,
+        wd:Q27088509,
+        wd:Q417403,
+        wd:Q50265304,
+        wd:Q80863 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294073 rdfs:label "Isopentenyl pyrophosphate rearranges to dimethylallyl pyrophosphate" ;
+    schema:dateModified "2018-03-01T18:25:51+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Isopentenyl pyrophosphate rearranges to dimethylallyl pyrophosphate in Homo sapiens" ;
+    schema:version 641579723 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 9 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294073-AC5471AE-120A-4ADC-AEEC-C1FAD99EB04D> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294073-B4CA253E-2842-471D-A0BC-0BD3563A78D5> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294073-D3DB1BF8-D4A8-40CF-A2BA-B98C96496F33> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294073-B616567C-BD4A-4EC2-A381-ED95370A3056> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294073-D539DAF5-BF05-42CF-A69C-F84E4D72D30F> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294073-3C7E8176-F8C4-42A7-9D95-614210DC21D6>,
+        <http://www.wikidata.org/entity/statement/Q50294073-660F156B-3A04-478F-A0E8-1ED41C7C8E7B>,
+        <http://www.wikidata.org/entity/statement/Q50294073-E17880E9-55B5-4140-9810-BD2DF27042FF> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294073-29133C63-B1EB-43F0-BD72-F724CA24AF76> ;
+    wdt:P2860 wd:Q24323357 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-191382> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-191382" ;
+    wdt:P527 wd:Q417398,
+        wd:Q417403,
+        wd:Q50265306 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294074 rdfs:label "Addition of isopentenyl pyrophosphate to DMAPP" ;
+    schema:dateModified "2018-03-01T18:25:54+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Addition of isopentenyl pyrophosphate to DMAPP in Homo sapiens" ;
+    schema:version 641579761 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 13 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294074-2FAF0D77-39E7-40F9-A1E1-2701742196D0>,
+        <http://www.wikidata.org/entity/statement/Q50294074-4B7AEE13-460A-44B4-82EE-61D005AA2508>,
+        <http://www.wikidata.org/entity/statement/Q50294074-ADCFF267-48E1-45AF-857A-86847793C369> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294074-10B0A55B-724E-464B-AB7F-1BFF2489038D> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294074-F4155256-0246-4E38-B1D2-AA0676659AFE> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294074-8DC0695B-ACE5-4F43-8A53-51E26592A2A6> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294074-6C5DEE2C-F12B-4C47-91E9-D3E940EF4234> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294074-431586BC-28EE-40FC-A480-174A26F8E98E>,
+        <http://www.wikidata.org/entity/statement/Q50294074-61437989-22CE-4E8C-A437-173B0CCCF880>,
+        <http://www.wikidata.org/entity/statement/Q50294074-7A57181F-A8B8-491D-96C5-5F1890F0ADA2>,
+        <http://www.wikidata.org/entity/statement/Q50294074-C5AD0F84-A429-4F67-8E3D-AF27128ADB2E>,
+        <http://www.wikidata.org/entity/statement/Q50294074-D61C1105-29CE-4E5F-B442-91CE7F2026A0> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294074-4052D6C4-E1C8-458C-8B93-DA119CBF214C> ;
+    wdt:P2860 wd:Q22008794,
+        wd:Q24314460,
+        wd:Q34523564 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-191322> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-191322" ;
+    wdt:P527 wd:Q411092,
+        wd:Q417398,
+        wd:Q417403,
+        wd:Q418125,
+        wd:Q50265309 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294076 rdfs:label "Another isopentenyl pyrophosphate is added to geranyl pyrophosphate" ;
+    schema:dateModified "2018-03-01T18:25:57+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Another isopentenyl pyrophosphate is added to geranyl pyrophosphate in Homo sapiens" ;
+    schema:version 641579790 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 13 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294076-0790918D-4F26-4EAA-9FD2-7D606EE964BD>,
+        <http://www.wikidata.org/entity/statement/Q50294076-52BFE31F-26B7-4875-81FD-4C2258861E42>,
+        <http://www.wikidata.org/entity/statement/Q50294076-C9D017FD-8F43-46F0-AA26-B0BE5A0E2EEC> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294076-77B1C8D2-7B76-4490-98EC-9DED93C82DF5> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294076-EEBB08C2-31EF-420A-B9DC-21B6700DFE4A> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294076-C2DF016D-49D1-4745-B5BC-9525A96794E9> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294076-9D0AB18A-96DE-45DC-9E92-456AFAA6327E> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294076-26D68779-545A-4C67-A631-22C9F153FF49>,
+        <http://www.wikidata.org/entity/statement/Q50294076-63E539BC-5DFA-4EB4-A95A-1E99D5FC9E41>,
+        <http://www.wikidata.org/entity/statement/Q50294076-730D7CA7-8823-482D-9B93-EF73A8FDCD29>,
+        <http://www.wikidata.org/entity/statement/Q50294076-B7988D5E-B685-4070-8A79-2F9F580C8C90>,
+        <http://www.wikidata.org/entity/statement/Q50294076-F9044E94-DA28-443B-9D4E-F75EBBDAC3C8> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294076-5461F13C-1656-4EC6-A65D-F2DA8688B83E> ;
+    wdt:P2860 wd:Q22008794,
+        wd:Q24314460,
+        wd:Q34523564 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-191303> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-191303" ;
+    wdt:P527 wd:Q2699676,
+        wd:Q411092,
+        wd:Q417403,
+        wd:Q418125,
+        wd:Q50265309 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294077 rdfs:label "Two FPP molecules dimerize to form presqualene diphosphate" ;
+    schema:dateModified "2018-03-01T18:26:00+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Two FPP molecules dimerize to form presqualene diphosphate in Homo sapiens" ;
+    schema:version 641579826 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 10 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294077-F628ED92-396F-4A27-8D8D-B08CB8B8F8C7> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294077-712728C9-9043-45E3-A2D4-55C1DE1E0147> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294077-F1372C9D-A42C-4350-A13E-A467C44B5509> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294077-5F899A8B-8247-4FED-86C9-07973967B620> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294077-F0A1507B-E4E8-4D35-B8D1-BF22C417ED5A> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294077-30A3A49A-C7DA-47A9-979E-58056393D19D>,
+        <http://www.wikidata.org/entity/statement/Q50294077-4BB3155B-8389-43E7-8364-2D66D29DF1FA>,
+        <http://www.wikidata.org/entity/statement/Q50294077-738C81BB-7E1D-45CF-8AF0-9704A83C0B6E>,
+        <http://www.wikidata.org/entity/statement/Q50294077-785A5DDF-87FD-456C-8CFF-EE9DB9B00504> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294077-F6A063A1-93EB-4C24-8EE1-DB4B23610C58> ;
+    wdt:P2860 wd:Q27625375 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-191405> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-191405" ;
+    wdt:P527 wd:Q2699676,
+        wd:Q27088444,
+        wd:Q411092,
+        wd:Q50265318 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294079 rdfs:label "Phospholipid phosphatase 6 hydrolyses Presqualene diphosphate to presqualene monophosphate" ;
+    schema:dateModified "2018-03-01T18:26:02+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Phospholipid phosphatase 6 hydrolyses Presqualene diphosphate to presqualene monophosphate in Homo sapiens" ;
+    schema:version 641579854 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 10 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294079-3DCCD6AC-70E3-4581-B7C6-7D3DA30BAF6E> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294079-094B0C15-0E53-48BE-858D-E6670F085D2C> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294079-40C45880-131D-44E3-BB9E-76BF33C4D094> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294079-D9660013-F8F0-4BC4-B0F4-477A6144FE94> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294079-29494E48-CBA1-49C6-B3F5-931EDE1F4C23> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294079-19AE810C-6424-4140-82E1-D37876AE6A17>,
+        <http://www.wikidata.org/entity/statement/Q50294079-3F82A1C0-1AAB-4374-8F99-0C0CD0C50B95>,
+        <http://www.wikidata.org/entity/statement/Q50294079-B813D2BB-35B7-4C40-8B76-C3F2D8C98115>,
+        <http://www.wikidata.org/entity/statement/Q50294079-BA716F30-4E20-4298-8FA1-CBC5028D804E> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294079-05F7450C-445B-44A0-AA9C-A6BDF6B8743D> ;
+    wdt:P2860 wd:Q42428341 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-8952137> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-8952137" ;
+    wdt:P527 wd:Q177811,
+        wd:Q21124331,
+        wd:Q27088444,
+        wd:Q283 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294080 rdfs:label "Reduction of presqualene diphosphate to form squalene" ;
+    schema:dateModified "2018-03-01T18:26:06+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Reduction of presqualene diphosphate to form squalene in Homo sapiens" ;
+    schema:version 641579894 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 13 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294080-64C6CD5F-20B2-4DEC-9EAB-99B55C14E6AF> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294080-5CE2741B-3292-4041-B60B-1EA918960899> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294080-BAE01FAC-671C-4D5D-B841-A09947F4EED7> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294080-A5CDAB83-F957-48A2-8A66-A30B41DD4247> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294080-18D18388-394E-4FCB-A42C-FF02776C9948> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294080-05AD5B7C-0464-4492-A32A-B447DDA1D567>,
+        <http://www.wikidata.org/entity/statement/Q50294080-42EE7300-4EC3-46BA-B255-72CCA1CBDEF6>,
+        <http://www.wikidata.org/entity/statement/Q50294080-4FD1686B-F00E-4305-B3C3-3B95D2686AE5>,
+        <http://www.wikidata.org/entity/statement/Q50294080-54AA9A91-D699-4204-AD95-D99410D70DDB>,
+        <http://www.wikidata.org/entity/statement/Q50294080-98A6540E-35CE-4215-BD77-FEF7008C25BE>,
+        <http://www.wikidata.org/entity/statement/Q50294080-A3CB7C05-17AE-4FD1-8DF1-7A6F572796B5>,
+        <http://www.wikidata.org/entity/statement/Q50294080-ABC9BFA5-91F1-4B41-8921-4D50AFB1236A> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294080-2D78F91C-F2D5-4D2C-A847-067CF73ADFF0> ;
+    wdt:P2860 wd:Q27625375 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-191402> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-191402" ;
+    wdt:P527 wd:Q26841327,
+        wd:Q26987754,
+        wd:Q27088444,
+        wd:Q407560,
+        wd:Q411092,
+        wd:Q50265318,
+        wd:Q506710 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294081 rdfs:label "Squalene is oxidized to its epoxide" ;
+    schema:dateModified "2018-03-01T18:26:08+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Squalene is oxidized to its epoxide in Homo sapiens" ;
+    schema:version 641579924 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 15 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294081-E8D65615-FBC7-4F4C-89E5-AD9D805BE048> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294081-745AB217-DAAC-4748-8CF4-C0FEE5510DDC> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294081-16237772-E52B-4B4F-A30D-044D29A067FE> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294081-EE3E71D0-FCF3-41DF-90D7-F450075C9849> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294081-B916B516-737A-4F18-9474-AD0A11B2C83D> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294081-206E9B3B-2AD9-4603-837E-AAEF996D4949>,
+        <http://www.wikidata.org/entity/statement/Q50294081-45DEB2F0-4208-4AD7-8C1C-603C8BD23048>,
+        <http://www.wikidata.org/entity/statement/Q50294081-608B4103-B964-492B-9FB8-008E24C8304F>,
+        <http://www.wikidata.org/entity/statement/Q50294081-61DEEBEC-1772-4C27-B1D0-85F75F0173AF>,
+        <http://www.wikidata.org/entity/statement/Q50294081-831BBD42-B91A-4521-A358-6F1BF398ED35>,
+        <http://www.wikidata.org/entity/statement/Q50294081-96AA0DDE-4F5E-49B3-87B4-B226E3E839A2>,
+        <http://www.wikidata.org/entity/statement/Q50294081-A86C9A8B-C61C-4B5A-B165-ADD15AED8C82>,
+        <http://www.wikidata.org/entity/statement/Q50294081-C7F880AC-6FD1-40EC-B5BC-F48C7C6F8568>,
+        <http://www.wikidata.org/entity/statement/Q50294081-D6F10482-7CD7-419D-BF67-4B4244E881C1> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294081-5A112D5C-8D59-4047-8A9E-69E8D1774345> ;
+    wdt:P2860 wd:Q28144368 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-191299> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-191299" ;
+    wdt:P527 wd:Q26841327,
+        wd:Q26987754,
+        wd:Q27453274,
+        wd:Q283,
+        wd:Q33108774,
+        wd:Q407560,
+        wd:Q50265320,
+        wd:Q506710,
+        wd:Q5203615 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294082 rdfs:label "Squalene 2;3-epoxide cyclizes; forming lanosterol" ;
+    schema:dateModified "2018-03-01T18:26:14+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Squalene 2;3-epoxide cyclizes; forming lanosterol in Homo sapiens" ;
+    schema:version 641579990 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 11 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294082-05933F3F-D032-4FDC-82CA-97790BE3F532>,
+        <http://www.wikidata.org/entity/statement/Q50294082-26014063-8407-4B56-8762-53F8CC791F7E> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294082-4781E871-F74B-40DA-8055-F2B685556198> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294082-2429D6EB-AEB9-4F95-871B-4000972DB6C1> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294082-44B82499-7042-4543-B5D0-36AEE50F1A6A> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294082-0A48A21B-6273-488E-A46F-659FD9FE7ADD> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294082-9BBAC1B2-1E10-4846-A091-11FE4935E916>,
+        <http://www.wikidata.org/entity/statement/Q50294082-AC0EFDB8-EE3C-490E-9761-A2184201630E>,
+        <http://www.wikidata.org/entity/statement/Q50294082-ADF8D837-00EC-4442-8460-CFD403A84FB3>,
+        <http://www.wikidata.org/entity/statement/Q50294082-D61A3356-7ECA-4C38-BC2A-129E2481C232> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294082-ABEBFC20-B89A-4277-AF36-C09DC0F946A3> ;
+    wdt:P2860 wd:Q28275396,
+        wd:Q28639784 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-191366> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-191366" ;
+    wdt:P527 wd:Q27453274,
+        wd:Q33108774,
+        wd:Q410833,
+        wd:Q414996 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294083 rdfs:label "CYP51A1 demethylates LNSOL" ;
+    schema:dateModified "2018-03-01T18:26:18+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction CYP51A1 demethylates LNSOL in Homo sapiens" ;
+    schema:version 641580030 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 16 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294083-4298638D-514F-4FE2-A1D7-2EA2141021C2>,
+        <http://www.wikidata.org/entity/statement/Q50294083-CAAC5F44-AC80-4E14-AFD3-1170D3CEA4BE> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294083-6D3B52FF-2D13-4FFD-A423-0808A4A3B74D> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294083-962B62CD-DB66-4E91-8A7B-8D6BA967EC71> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294083-908A71F6-2043-44FD-9B02-0DFD79EBF562> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294083-64F19B54-FA74-410A-BAE8-407F2B4879AC> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294083-03F6287E-272B-498F-A3CE-E91583785991>,
+        <http://www.wikidata.org/entity/statement/Q50294083-32EC462D-50B1-4D43-B980-0B5A2C1742D0>,
+        <http://www.wikidata.org/entity/statement/Q50294083-726915EE-E126-4FB8-92EE-DF3A1A0640CC>,
+        <http://www.wikidata.org/entity/statement/Q50294083-9725280F-B857-4723-90C8-7B41F30E3090>,
+        <http://www.wikidata.org/entity/statement/Q50294083-B8C361AA-5694-4CFC-824B-B1AAB78B33A4>,
+        <http://www.wikidata.org/entity/statement/Q50294083-BAADB2F4-6477-4F10-AFEC-5AE1BB12E9DD>,
+        <http://www.wikidata.org/entity/statement/Q50294083-E0ACC589-0649-485F-8179-D3189BE5ABFA>,
+        <http://www.wikidata.org/entity/statement/Q50294083-E86550FC-C324-4540-9C6B-DB8830603142>,
+        <http://www.wikidata.org/entity/statement/Q50294083-E97E79C9-9736-4848-BCBA-B5CE1BDAC3C8> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294083-8C37F605-E90E-4FC5-BD9B-D39CB7A4E685> ;
+    wdt:P2860 wd:Q24299075,
+        wd:Q36797786 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-194678> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-194678" ;
+    wdt:P527 wd:Q161233,
+        wd:Q21100886,
+        wd:Q26841327,
+        wd:Q26987754,
+        wd:Q27102638,
+        wd:Q283,
+        wd:Q414996,
+        wd:Q506710,
+        wd:Q5203615 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294084 rdfs:label "4;4-dimethylcholesta-8(9);14;24-trien-3beta-ol is reduced to 4;4-dimethylcholesta-8(9);24-dien-3beta-ol" ;
+    schema:dateModified "2018-03-01T18:26:22+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction 4;4-dimethylcholesta-8(9);14;24-trien-3beta-ol is reduced to 4;4-dimethylcholesta-8(9);24-dien-3beta-ol in Homo sapiens" ;
+    schema:version 641580068 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 12 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294084-FC63A192-C075-432E-A6C8-E1093F0B0A13> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294084-4B977ED7-AAD0-4BDC-8854-F43C7A135828> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294084-076B322E-D00D-419F-91DE-D73ADB5AD952> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294084-CED2B90B-7DE1-4CF6-BB8B-3CCD2ED6D1D1> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294084-A7615E9E-EAD7-4050-852D-F0F5E4289663> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294084-2E04CEDD-F4E9-4833-8E60-02075B1125DA>,
+        <http://www.wikidata.org/entity/statement/Q50294084-402A79EC-7F66-4098-A416-241855954BB9>,
+        <http://www.wikidata.org/entity/statement/Q50294084-4FDF2225-A758-4D96-9E85-82F412723FCF>,
+        <http://www.wikidata.org/entity/statement/Q50294084-92FDDC46-9C7F-4BED-94F8-A52054DDEA73>,
+        <http://www.wikidata.org/entity/statement/Q50294084-D5D831F6-563F-4DDB-A053-5751778B2CA0>,
+        <http://www.wikidata.org/entity/statement/Q50294084-D92E5C64-6376-40B5-AC18-22BD605C3C74> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294084-9A78A36D-5F4F-462F-A1D3-D843731DDD78> ;
+    wdt:P2860 wd:Q24532084 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-194674> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-194674" ;
+    wdt:P527 wd:Q26841327,
+        wd:Q26987754,
+        wd:Q27102638,
+        wd:Q27103032,
+        wd:Q506710,
+        wd:Q6481869 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294085 rdfs:label "4;4-dimethylcholesta-8(9);14;24-trien-3beta-ol is reduced to 4;4-dimethylcholesta-8(9);24-dien-3beta-ol [TM7SF2]" ;
+    schema:dateModified "2018-03-01T18:26:25+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction 4;4-dimethylcholesta-8(9);14;24-trien-3beta-ol is reduced to 4;4-dimethylcholesta-8(9);24-dien-3beta-ol [TM7SF2] in Homo sapiens" ;
+    schema:version 641580097 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 12 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294085-C98A6C07-F060-47AF-8584-972A3005F626> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294085-ACD9C5C9-AE2C-4928-990D-3F309D9FF027> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294085-AADA92A4-82BF-4E38-93E7-1D87CD7B4FF5> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294085-943AD183-56D8-4FDA-9C00-0352CDA2AC69> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294085-9CE198D0-500A-41FF-ACFE-938E5067C012> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294085-0DA99796-2231-4586-BF7C-E094013A0DD0>,
+        <http://www.wikidata.org/entity/statement/Q50294085-4B7CD3CB-C5E7-4CC8-8D1B-2AA25C325D04>,
+        <http://www.wikidata.org/entity/statement/Q50294085-724C7F81-0A48-4F81-91DD-2E301478AB5D>,
+        <http://www.wikidata.org/entity/statement/Q50294085-B1D6C500-36C8-4641-9892-84DA28BE7879>,
+        <http://www.wikidata.org/entity/statement/Q50294085-D102C916-4A19-4699-B726-D61D145EBA49>,
+        <http://www.wikidata.org/entity/statement/Q50294085-E68BE908-D841-49CD-BF6E-3BB4C2242A4D> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294085-CBE2143D-E477-4F32-90E0-1AB4FE52AFA4> ;
+    wdt:P2860 wd:Q34539915 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-194698> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-194698" ;
+    wdt:P527 wd:Q21105914,
+        wd:Q26841327,
+        wd:Q26987754,
+        wd:Q27102638,
+        wd:Q27103032,
+        wd:Q506710 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294086 rdfs:label "4;4-dimethylcholesta-8(9);24-dien-3beta-ol is oxidized to 4-methyl;4-carboxycholesta-8(9);24-dien-3beta-ol" ;
+    schema:dateModified "2018-03-01T18:26:28+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction 4;4-dimethylcholesta-8(9);24-dien-3beta-ol is oxidized to 4-methyl;4-carboxycholesta-8(9);24-dien-3beta-ol in Homo sapiens" ;
+    schema:version 641580129 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 14 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294086-D9EFB049-A53A-489D-BDA8-2E23D0329C79> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294086-160F4F3C-B602-4A6D-81E2-A7656F8D830F> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294086-556D0256-8865-4242-8DEA-C7D57C5E2AB1> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294086-D1A36479-66C7-470C-B7D1-381F96544AEB> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294086-4E8F0A14-7B35-43BE-9B42-7793D0E72CC3> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294086-1C2899C8-7EE5-4D58-A943-E89627A67C43>,
+        <http://www.wikidata.org/entity/statement/Q50294086-2D7EF43A-B0BB-4A39-8146-FD4813C28AE4>,
+        <http://www.wikidata.org/entity/statement/Q50294086-41BDD0AD-7D5B-420D-AAA5-D3620666C2A6>,
+        <http://www.wikidata.org/entity/statement/Q50294086-66CF4E1D-9ED7-4ECB-A326-BCBEF2E21101>,
+        <http://www.wikidata.org/entity/statement/Q50294086-842DD64D-1A6F-4401-96CF-AFD9356E0C02>,
+        <http://www.wikidata.org/entity/statement/Q50294086-863D5B1E-A453-4187-8EB5-F204002C1B73>,
+        <http://www.wikidata.org/entity/statement/Q50294086-E91C1188-3C72-4FA6-BFAF-B95214BE962B>,
+        <http://www.wikidata.org/entity/statement/Q50294086-FD992BA9-255E-4027-AB97-DF46E2C88056> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294086-94B777AB-F815-4B8B-B27F-7C344D25375A> ;
+    wdt:P2860 wd:Q24321668 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-194641> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-194641" ;
+    wdt:P527 wd:Q21137667,
+        wd:Q26841327,
+        wd:Q26987754,
+        wd:Q27102638,
+        wd:Q27132847,
+        wd:Q283,
+        wd:Q506710,
+        wd:Q5203615 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294087 rdfs:label "4-methyl;4-carboxycholesta-8(9);24-dien-3beta-ol is decarboxylated and oxidized to form 4-methylcholesta-8(9);24-dien-3-one" ;
+    schema:dateModified "2018-03-01T18:26:31+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction 4-methyl;4-carboxycholesta-8(9);24-dien-3beta-ol is decarboxylated and oxidized to form 4-methylcholesta-8(9);24-dien-3-one in Homo sapiens" ;
+    schema:version 641580163 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 13 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294087-7AB56DF8-8413-4868-9E4D-FB4FBCAABD47> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294087-79C8E615-76B2-4254-8FA2-71A152BC030B> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294087-37496FFD-351F-4AC9-8C88-C2693A62DC43> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294087-549D5682-3FD8-46BB-8FAD-1FFC83D5A6D2> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294087-2F7CDDD4-D506-4F6F-B953-02F5C34B498A> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294087-22D843CF-EC48-4A98-90AF-05F92C994F47>,
+        <http://www.wikidata.org/entity/statement/Q50294087-417FE5F7-9645-4900-AAE8-52F4333C5C36>,
+        <http://www.wikidata.org/entity/statement/Q50294087-42E6D07F-8532-4DED-BAAB-E5F458BB03C6>,
+        <http://www.wikidata.org/entity/statement/Q50294087-61602E0F-1BA9-40EE-981A-9BD5F2D1A0F2>,
+        <http://www.wikidata.org/entity/statement/Q50294087-6D97FDAE-F801-41F5-A363-A3B2CF782673>,
+        <http://www.wikidata.org/entity/statement/Q50294087-AC13EDA3-9BA2-4EC4-A017-C4EB5F49FC5B>,
+        <http://www.wikidata.org/entity/statement/Q50294087-C13F0094-17E5-4973-B5D5-CC13CAFEDBB7> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294087-9C59F224-0AAD-4FB9-88A5-6CFE0B97A3F1> ;
+    wdt:P2860 wd:Q28204612 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-194642> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-194642" ;
+    wdt:P527 wd:Q1997,
+        wd:Q21121749,
+        wd:Q26987253,
+        wd:Q26987453,
+        wd:Q27122135,
+        wd:Q27132847,
+        wd:Q506710 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294088 rdfs:label "4-methylcholesta-8(9);24-dien-3-one is reduced to 4-methylcholesta-8(9);24-dien-3beta-ol" ;
+    schema:dateModified "2018-03-01T18:26:34+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction 4-methylcholesta-8(9);24-dien-3-one is reduced to 4-methylcholesta-8(9);24-dien-3beta-ol in Homo sapiens" ;
+    schema:version 641580210 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 12 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294088-E4F4BDBC-05C1-4A5F-810D-CC19A7272F13> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294088-44D1316B-CBB3-4361-9917-30125D51A8F7> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294088-71432DFB-A15F-4B85-BB7A-89972818175B> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294088-11EB1740-ABAC-4283-8E7A-459F0C3C7E05> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294088-C0F5B564-0C73-4FA1-9071-82B733A312FF> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294088-0E55227A-326F-406B-B8D3-C87C8514A5DE>,
+        <http://www.wikidata.org/entity/statement/Q50294088-3974C4E1-E294-4072-971B-1E498AC3150D>,
+        <http://www.wikidata.org/entity/statement/Q50294088-4AA0A7BD-2F23-4568-9981-EFE00CAAA318>,
+        <http://www.wikidata.org/entity/statement/Q50294088-68E231EC-E85D-47A2-9DF5-126A69DD4D98>,
+        <http://www.wikidata.org/entity/statement/Q50294088-90AE5265-66E7-44C9-AD02-464BB58B2B11>,
+        <http://www.wikidata.org/entity/statement/Q50294088-D812ED3B-2C65-4C71-960E-B75A8F9CC79B> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294088-47FD5B52-1714-490C-B234-59C358829B2C> ;
+    wdt:P2860 wd:Q28590873 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-194689> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-194689" ;
+    wdt:P527 wd:Q22680035,
+        wd:Q26841327,
+        wd:Q26987754,
+        wd:Q27122135,
+        wd:Q27132845,
+        wd:Q506710 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294089 rdfs:label "4-methylcholesta-8(9);24-dien-3beta-ol is oxidized to 4-carboxycholesta-8(9);24-dien-3beta-ol" ;
+    schema:dateModified "2018-03-01T18:26:37+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction 4-methylcholesta-8(9);24-dien-3beta-ol is oxidized to 4-carboxycholesta-8(9);24-dien-3beta-ol in Homo sapiens" ;
+    schema:version 641580243 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 14 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294089-A6F3BBE4-937F-454D-BD34-CA476A997992> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294089-7188940A-6928-485F-BF8D-B62D25E1AEA9> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294089-4A054A03-9D55-4EF9-8E90-6244A78D2FA5> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294089-E7E17439-2D9D-4023-B534-D09D9FD9CC4D> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294089-04DA8441-AF7F-4B9B-A8A6-04C45D178C0F> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294089-008B82AB-4FAD-49EB-8A84-C0F3A39E4359>,
+        <http://www.wikidata.org/entity/statement/Q50294089-3351C45A-4A08-468F-BF75-93ED5FFC11A3>,
+        <http://www.wikidata.org/entity/statement/Q50294089-3624B296-2F90-483C-A124-CA9F3239B8EC>,
+        <http://www.wikidata.org/entity/statement/Q50294089-3B5477E2-FA57-471C-90A2-26BE82519869>,
+        <http://www.wikidata.org/entity/statement/Q50294089-410C0562-B96D-4863-A1A3-445052A4E58F>,
+        <http://www.wikidata.org/entity/statement/Q50294089-6EB9838E-6378-4185-9B85-5C398B34B62F>,
+        <http://www.wikidata.org/entity/statement/Q50294089-AEDDBBB6-1FAD-48A4-8D5F-901A80BE6654>,
+        <http://www.wikidata.org/entity/statement/Q50294089-E65D2716-A7E6-4C9A-8E56-FB18D8EFF075> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294089-FE2EDA43-951F-4AAC-8D8A-4CB8D3DAC700> ;
+    wdt:P2860 wd:Q24321668 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-194669> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-194669" ;
+    wdt:P527 wd:Q21137667,
+        wd:Q26841327,
+        wd:Q26987754,
+        wd:Q27132845,
+        wd:Q27132850,
+        wd:Q283,
+        wd:Q506710,
+        wd:Q5203615 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294090 rdfs:label "4-carboxycholesta-8(9);24-dien-3beta-ol is decarboxylated and oxidized to form cholesta-8(9);24-dien-3-one (zymosterone)" ;
+    schema:dateModified "2018-03-01T18:26:40+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction 4-carboxycholesta-8(9);24-dien-3beta-ol is decarboxylated and oxidized to form cholesta-8(9);24-dien-3-one (zymosterone) in Homo sapiens" ;
+    schema:version 641580271 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 13 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294090-44FD9951-AEFE-483E-A475-6709DC9C4F7C> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294090-09B4CA82-C4EE-4776-BB77-0FA4C75D0E92> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294090-494E0B5A-884D-4843-BC43-0D9B29A722BF> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294090-EE73EC3F-707F-41E2-AC7D-BDAD11C355F7> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294090-54234123-0E7F-4CE8-B250-5010BBF7CE70> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294090-056D1991-DD46-4918-AFE4-09EB3C61BD09>,
+        <http://www.wikidata.org/entity/statement/Q50294090-05DF787D-8AAE-4A61-BCE4-9D1927C787EC>,
+        <http://www.wikidata.org/entity/statement/Q50294090-526D5E1D-A6EC-4458-97B3-F0A586D628D5>,
+        <http://www.wikidata.org/entity/statement/Q50294090-6864BFA0-F992-4238-957F-33A3E7E896FB>,
+        <http://www.wikidata.org/entity/statement/Q50294090-9386B524-C102-4D89-9E1A-2C0FE9EA19BE>,
+        <http://www.wikidata.org/entity/statement/Q50294090-9C81152B-FF86-465E-AEBD-079648B045D0>,
+        <http://www.wikidata.org/entity/statement/Q50294090-FE11E9F9-1AEE-4043-8A0D-8DD2E8BDC737> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294090-0B073271-152C-4A0E-A6E3-9092269091A1> ;
+    wdt:P2860 wd:Q28204612 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-194718> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-194718" ;
+    wdt:P527 wd:Q1997,
+        wd:Q21121749,
+        wd:Q26987253,
+        wd:Q26987453,
+        wd:Q27123413,
+        wd:Q27132850,
+        wd:Q506710 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294092 rdfs:label "Zymosterone (cholesta-8(9);24-dien-3-one) is reduced to zymosterol (cholesta-8(9);24-dien-3beta-ol)" ;
+    schema:dateModified "2018-03-17T20:34:06+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Zymosterone (cholesta-8(9);24-dien-3-one) is reduced to zymosterol (cholesta-8(9);24-dien-3beta-ol) in Homo sapiens" ;
+    schema:version 651512282 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 12 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294092-A874906E-801E-4261-925C-12F228BC9573> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294092-C8F5E26D-011F-48E4-BDC8-BD963F87012E> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294092-B412BD18-E785-4A7E-8A89-A93F4B62164D> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294092-56A3DF28-C50A-4E92-B6FB-1B321EE79241> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294092-3D91331A-7FEC-436E-AD95-41F485A24590> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294092-02D600CF-3B91-44A2-B641-1A810B3CA19A>,
+        <http://www.wikidata.org/entity/statement/Q50294092-4B5948D8-7683-4ECE-9012-5B5DF3CA6CA5>,
+        <http://www.wikidata.org/entity/statement/Q50294092-4C4417AF-55A3-4178-9D9A-530BB88CB7CA>,
+        <http://www.wikidata.org/entity/statement/Q50294092-618E8804-9FA5-4C3D-AA6E-2F65DEACF3BA>,
+        <http://www.wikidata.org/entity/statement/Q50294092-AB258506-4BED-4D54-86DF-FF7DAE155890>,
+        <http://www.wikidata.org/entity/statement/Q50294092-F53BF8BF-3DAB-44ED-A880-EDB43FD038FE> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294092-F691C7CF-DA97-454A-9946-39FBBC9BAFE0> ;
+    wdt:P2860 wd:Q28590873 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-194632> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-194632" ;
+    wdt:P527 wd:Q22680035,
+        wd:Q26841327,
+        wd:Q26987754,
+        wd:Q27123413,
+        wd:Q3576424,
+        wd:Q506710 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50294101 rdfs:label "ARV1 transports CHOL from ER membrane to plasma membrane" ;
+    schema:dateModified "2018-03-15T18:16:13+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction ARV1 transports CHOL from ER membrane to plasma membrane in Homo sapiens" ;
+    schema:version 649989743 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 10 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50294101-0C40E4D4-C9B5-4A4B-B998-181CEA010518>,
+        <http://www.wikidata.org/entity/statement/Q50294101-8E094F48-AE96-4583-AF7D-5E6CA712D802> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50294101-DCEA332C-DA12-42E6-BAB4-48CE6580F365> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50294101-88DAE394-BE0C-4472-99D1-78630FDB1815> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50294101-A247AB7F-3348-495F-9A75-4F90B3543D69> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50294101-5D268F8F-CC23-40FF-886C-BA43AC77C4B6> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50294101-31918409-C7ED-4659-A8AB-E85B230BB48F>,
+        <http://www.wikidata.org/entity/statement/Q50294101-4338AABE-6944-4875-97AC-5424F47BBA78>,
+        <http://www.wikidata.org/entity/statement/Q50294101-99842894-C4D8-4C51-881F-41F8E704AB3A> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50294101-0AE2D885-B040-4509-A45F-11C9DA571EF0> ;
+    wdt:P2860 wd:Q27933964,
+        wd:Q27940092 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-5250531> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-5250531" ;
+    wdt:P527 wd:Q21105285,
+        wd:Q43656 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q28609699 rdfs:label "Cholesterol biosynthesis and metabolism" ;
+    schema:dateModified "2017-07-02T13:04:44+00:00"^^xsd:dateTime ;
+    schema:description "scientific journal article",
+        "vedecký článok (publikovaný 1992/04/01)",
+        "vědecký článek publikovaný v roce 1992",
+        "wetenschappelijk artikel (gepubliceerd op 1992/04/01)",
+        "مقالة علمية (نشرت في أبريل 1992)" ;
+    schema:version 511723501 ;
+    wikibase:identifiers 2 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 10 ;
+    p:P1433 <http://www.wikidata.org/entity/statement/Q28609699-DEA08341-C452-46E9-BC68-927F1B658E90> ;
+    p:P1476 <http://www.wikidata.org/entity/statement/Q28609699-A25F3F65-8A01-407B-849D-B008F0D432FF> ;
+    p:P2093 <http://www.wikidata.org/entity/statement/Q28609699-095BF51F-C8BA-4B73-99DD-CA8D958DE1EB> ;
+    p:P304 <http://www.wikidata.org/entity/statement/Q28609699-B294A36B-9447-4961-865A-DFE9FB7B0456> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q28609699-41C0AD24-2D01-4506-9187-26BA02E783EC> ;
+    p:P356 <http://www.wikidata.org/entity/statement/Q28609699-D1B8F09A-B496-402A-8287-8D7E84A8AF87> ;
+    p:P433 <http://www.wikidata.org/entity/statement/Q28609699-C0A34C44-8519-4B23-AABF-97EDAEBA558E> ;
+    p:P478 <http://www.wikidata.org/entity/statement/Q28609699-67B3436A-D237-4290-9B0D-045EEF9D99AD> ;
+    p:P577 <http://www.wikidata.org/entity/statement/Q28609699-AF65D81E-8E7B-41BC-9E63-6E6A9E11380C> ;
+    p:P698 <http://www.wikidata.org/entity/statement/Q28609699-B44BDB70-6DC4-4EB4-BC58-2592792D0867> ;
+    ns1:P356 <https://doi.org/10.1007/BF00054556> ;
+    wdt:P1433 wd:Q2473050 ;
+    wdt:P1476 "Cholesterol biosynthesis and metabolism" ;
+    wdt:P2093 "D. W. Russell" ;
+    wdt:P304 "103–110" ;
+    wdt:P31 wd:Q13442814 ;
+    wdt:P356 "10.1007/BF00054556" ;
+    wdt:P433 "2" ;
+    wdt:P478 "6" ;
+    wdt:P577 "1992-04-01T00:00:00+00:00"^^xsd:dateTime ;
+    wdt:P698 "1390320" .
+
+wd:Q34340150 rdfs:label "Cholesterol biosynthesis" ;
+    schema:dateModified "2018-03-02T11:02:05+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway Cholesterol biosynthesis in Homo sapiens" ;
+    schema:version 642199668 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 37 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q34340150-0B24C8FD-66D9-40C4-A997-FC62BC97565C>,
+        <http://www.wikidata.org/entity/statement/Q34340150-1EC49567-BA8F-4F4A-B86B-E6584D0B3570>,
+        <http://www.wikidata.org/entity/statement/Q34340150-4C9FDA0B-D7E9-4122-8B73-5910A0E9C89D>,
+        <http://www.wikidata.org/entity/statement/Q34340150-88CE09BF-70CC-4F4C-870F-68FCBE20A018>,
+        <http://www.wikidata.org/entity/statement/Q34340150-B26D286B-D7B3-4D14-9333-AF3537E05FF4> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q34340150-06695235-F6F8-4972-A1D8-8275E770DB54> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q34340150-71F7CFA4-D0D4-4767-B416-052365D98588>,
+        <http://www.wikidata.org/entity/statement/Q34340150-D1ECD3E3-B375-4057-BF4A-A7A142FDB326> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q34340150-927EF853-1A46-4B07-8367-A03AE0D5C5AB> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q34340150-972B1D80-2D09-4AA9-A5EB-51A3914C9CC8> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q34340150-107C9616-7919-4045-987B-7C69B275CDF5>,
+        <http://www.wikidata.org/entity/statement/Q34340150-17F2A92E-CC59-48F3-98DA-80843916A24F>,
+        <http://www.wikidata.org/entity/statement/Q34340150-217A2A61-7743-4944-B4A2-925CC20BBFED>,
+        <http://www.wikidata.org/entity/statement/Q34340150-22941389-9F18-4D0C-B9AA-CD282C4A2D8A>,
+        <http://www.wikidata.org/entity/statement/Q34340150-2E028B65-B24F-43FF-B239-92C2DB97E998>,
+        <http://www.wikidata.org/entity/statement/Q34340150-44F32124-C090-4B53-B0F9-14F3C61266F2>,
+        <http://www.wikidata.org/entity/statement/Q34340150-71AE8E8B-113C-4A3E-AEF2-7E43D49B1B55>,
+        <http://www.wikidata.org/entity/statement/Q34340150-739073D7-06DE-4D26-B371-58FE4AEB1100>,
+        <http://www.wikidata.org/entity/statement/Q34340150-77ED6C76-CF4A-45CF-BC4F-F22F1DDB8E58>,
+        <http://www.wikidata.org/entity/statement/Q34340150-7EA5545F-1E5B-427F-88EB-B37FB4B34090>,
+        <http://www.wikidata.org/entity/statement/Q34340150-95AA441F-B76D-4945-B23E-920A9043365A>,
+        <http://www.wikidata.org/entity/statement/Q34340150-965408C0-8469-475B-9686-BEF780E48A92>,
+        <http://www.wikidata.org/entity/statement/Q34340150-A1059DDC-1E2E-42D7-9568-1D8AE25C694C>,
+        <http://www.wikidata.org/entity/statement/Q34340150-AA205662-4700-4091-AC97-4E2DC004FB4E>,
+        <http://www.wikidata.org/entity/statement/Q34340150-ACF55354-4B7D-4345-AA23-3ECF54063F7E>,
+        <http://www.wikidata.org/entity/statement/Q34340150-B467FC96-5A27-47C6-B7D7-0775862CEAD1>,
+        <http://www.wikidata.org/entity/statement/Q34340150-B543DB98-CCCC-4EED-9722-6327ADF80EEE>,
+        <http://www.wikidata.org/entity/statement/Q34340150-B987CEF1-1775-4E5B-8969-01A396C912FA>,
+        <http://www.wikidata.org/entity/statement/Q34340150-C0BFB8BE-172F-4111-99C8-89812FBAAD5E>,
+        <http://www.wikidata.org/entity/statement/Q34340150-C1D54C6C-BA3C-4E51-8D0D-F51350BDCEDA>,
+        <http://www.wikidata.org/entity/statement/Q34340150-C5F4DE64-3CC5-4273-A71F-5784E6C53464>,
+        <http://www.wikidata.org/entity/statement/Q34340150-C7A24874-2256-46F0-A82C-77A79E18C214>,
+        <http://www.wikidata.org/entity/statement/Q34340150-CF212BBA-A6E0-432A-BADC-3A536916CBAC>,
+        <http://www.wikidata.org/entity/statement/Q34340150-CF69D5F7-FA28-46BC-852E-F763A5C6F46F>,
+        <http://www.wikidata.org/entity/statement/Q34340150-D393D8C8-F36A-47E8-BB95-DDEDD22A5631>,
+        <http://www.wikidata.org/entity/statement/Q34340150-DA579027-E7FB-49CB-9455-FAD8A1C1D551> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q34340150-9CCD76F0-E1D3-4704-AFB7-7C8EDBA57A92> ;
+    wdt:P2860 wd:Q28609696,
+        wd:Q28609699,
+        wd:Q34610844,
+        wd:Q36795958,
+        wd:Q36796007 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-191273> ;
+    wdt:P31 wd:Q14599306,
+        wd:Q4915012 ;
+    wdt:P361 wd:Q34340147 ;
+    wdt:P3937 "R-HSA-191273" ;
+    wdt:P527 wd:Q34340154,
+        wd:Q34340158,
+        wd:Q34340161,
+        wd:Q45317317,
+        wd:Q50294067,
+        wd:Q50294069,
+        wd:Q50294070,
+        wd:Q50294071,
+        wd:Q50294073,
+        wd:Q50294074,
+        wd:Q50294076,
+        wd:Q50294077,
+        wd:Q50294079,
+        wd:Q50294080,
+        wd:Q50294081,
+        wd:Q50294082,
+        wd:Q50294083,
+        wd:Q50294084,
+        wd:Q50294085,
+        wd:Q50294086,
+        wd:Q50294087,
+        wd:Q50294088,
+        wd:Q50294089,
+        wd:Q50294090,
+        wd:Q50294092,
+        wd:Q50294101 ;
+    wdt:P703 wd:Q15978631 .
+
+wdref:fd2330afe800db6ae40c55e071458851151a5960 pr:P248 wd:Q2134522 ;
+    pr:P3937 "R-HSA-191273" ;
+    pr:P813 "2018-03-02T00:00:00+00:00"^^xsd:dateTime ;
+    ns2:P813 <http://www.wikidata.org/value/7f8c80245a6de20c98efee69fb9c488f> .
+

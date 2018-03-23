@@ -19,27 +19,19 @@ class DebugContext:
     def __init__(self):
         self.trace_indent = 0
         self.trace_satisfies = False
+        self.trace_slurps = False
         self.satisfies_depth = 0
-        self.matches_depth = 0
-        self.trace_nodeSatisfies = False
-        self.trace_matches = False
         self.eachof_depth = 0
 
     def d(self) -> str:
-        """ Print a depth indicator """
-        return "(" + str(self.satisfies_depth) + ("." + str(self.matches_depth) if self.matches_depth else "") + ")"
+        """ Return a depth indicator """
+        return f"({self.satisfies_depth})"
 
     def splus(self) -> None:
         self.satisfies_depth += 1
 
     def sminus(self) -> None:
         self.satisfies_depth -= 1
-
-    def mplus(self) -> None:
-        self.matches_depth += 1
-
-    def mminus(self) -> None:
-        self.matches_depth -= 1
 
     @staticmethod
     def s(ndeep) -> str:
@@ -120,6 +112,9 @@ class Context:
         self.external_shape_for = external_shape_resolver if external_shape_resolver \
             else default_external_shape_resolver
         self.base_namespace = base_namespace
+        # For SPARQL API's, true means pull ALL predicate objects for a given subject, false means only the
+        # predicates that are needed
+        self.over_slurp = True
 
         # A list of node selectors/shape expressions that are being evaluated.  If we attempt to evaluate
         # an entry for a second time, we, instead, put the entry into the assumptions table.  We start with 'true'

@@ -24,7 +24,7 @@ class FalsePositiveTestCase(unittest.TestCase):
         self.assertFalse(e.evaluate()[0].result)
 
     def test_false_positive(self):
-        with open(os.path.join(self.test_data, 'disease.shex')) as f:
+        with open(os.path.join(self.test_data, 'shex', 'disease.shex')) as f:
             shex = f.read()
         e = ShExEvaluator(os.path.join(self.test_data, 'Q12214.ttl'), shex, WIKIDATA.Q12214, debug=False)
         self.assertFalse(e.evaluate()[0].result)

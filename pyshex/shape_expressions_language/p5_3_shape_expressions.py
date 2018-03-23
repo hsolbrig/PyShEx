@@ -7,10 +7,8 @@ from pyshex.shape_expressions_language.p5_4_node_constraints import satisfies2
 from pyshex.shape_expressions_language.p5_5_shapes_and_triple_expressions import satisfiesShape
 from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
-from pyshex.utils.debug_utils import satisfies_wrapper
 
 
-@satisfies_wrapper
 def satisfies(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExpr) -> bool:
     """ `5.3 Shape Expressions <http://shex.io/shex-semantics/#node-constraint-semantics>`_
 
@@ -36,9 +34,11 @@ def satisfies(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExpr) -> bool:
           """
     c = cntxt.debug_context
     if c.trace_satisfies:
+        se_text = str(se) if isinstance_(se, ShExJ.shapeExprLabel) else\
+            se._as_json_dumps() if isinstance(se, ShExJ.NodeConstraint) else\
+            'type: ' + str(type(se))
+        print(c.i(c.satisfies_depth, f"--> Satisfies {c.d()}: {n} {se_text}"))
         c.splus()
-        print(f"--> Satisfies {c.d()}: "
-              f"{n} {str(se) if isinstance_(se, ShExJ.shapeExprLabel) else 'type: ' + str(type(se))}")
     if isinstance(se, ShExJ.NodeConstraint):
         rval = satisfies2(cntxt, n, se)
     elif isinstance(se, ShExJ.Shape):
@@ -56,8 +56,8 @@ def satisfies(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExpr) -> bool:
     else:
         raise NotImplementedError(f"Unrecognized shapeExpr: {type(se)}")
     if c.trace_satisfies:
-        print(f"<-- Satisfies {c.d()} {rval}")
         c.sminus()
+        print(c.i(c.satisfies_depth, f"<-- Satisfies {c.d()} {rval}"))
     return rval
 
 

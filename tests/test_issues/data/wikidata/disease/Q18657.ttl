@@ -1,0 +1,201 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix gw: <http://micel.io/genewiki/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns3: <http://www.wikidata.org/prop/statement/value-normalized/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q18657 rdfs:label "Anhwylder Hunaniaeth Datgysylltiol",
+        "Benlik ikileşmesi",
+        "Dedublarea personalității",
+        "Disociativna motnja identitete",
+        "Disociativní porucha identity",
+        "Disocijativni poremećaj ličnosti",
+        "Disocijativni poremećaji",
+        "Disocijativni poremećaji osobnosti",
+        "Dissociativ identitetsstörning",
+        "Dissosiatiivinen identiteettihäiriö",
+        "Dissoziativ Perséinlechkeetsstéierung",
+        "Dissoziative Identitätsstören",
+        "Disszociatív személyiség",
+        "Disòrdini di dintitati dissuciata",
+        "Palainan kakobeh",
+        "Pemecahan kepribadian",
+        "Personlighedsspaltning",
+        "Rối loạn đa nhân cách",
+        "Transtorno dissociativo de identidade",
+        "Zaburzenie dysocjacyjne tożsamości",
+        "disocia-identeca malsaono",
+        "dissociatieve identiteitsstoornis",
+        "dissociative identity disorder",
+        "dissosiativ identitetsforstyrrelse",
+        "dissoziative Identitätsstörung",
+        "disturbo dissociativo dell'identità",
+        "kura runtu mamani quispi ari quepay",
+        "mpd",
+        "trastorn dissociatiu de la identitat",
+        "trastorno de identidad disociativo",
+        "trouble dissociatif de l'identité",
+        "Διασχιστική διαταραχή ταυτότητας",
+        "Множинна особистість",
+        "диссоциативное расстройство идентичности",
+        "кемлекнең диссатсиятив бозылышы",
+        "הפרעת זהות דיסוציאטיבית",
+        "اختلال تجزیه هویت",
+        "اضطراب الهوية التفارقي",
+        "تفارقی شناختی اضطراب",
+        "बहुव्यक्तित्व",
+        "பல்வகை ஆளுமை நோய்",
+        "మల్టిపుల్ పర్సనాలిటీ డిజార్డర్",
+        "იდენტურობის დისოციაციური აშლილობა",
+        "解離性人格疾患",
+        "解離性同一性障害",
+        "해리성 정체 장애" ;
+    schema:dateModified "2018-03-18T11:09:57+00:00"^^xsd:dateTime ;
+    schema:description "Patología consistente en la existencia de dos o más personalidades o identidades en un individuo.",
+        "apara vekthitham",
+        "dissoziative Störung, bei der Wahrnehmung, Erinnerung und das Erleben der Identität betroffen sind",
+        "disturbo psichico della dissociazione: è un disturbo mentale definito nel 1994 da una serie di criteri diagnostici come un particolare tipo di disturbo dissociativo nel DSM.",
+        "mental disorder characterized by at least two distinct and relatively enduring identities or dissociated personality states",
+        "trouble mental défini en 1994 dans le DSM par un ensemble de critères diagnostiques comme un type particulier de trouble dissociatif.",
+        "психическое расстройство",
+        "הפרעה נפשית" ;
+    schema:version 652007114 ;
+    ns1:identifiers 11 ;
+    ns1:sitelinks 44 ;
+    ns1:statements 23 ;
+    skos:altLabel "AHD",
+        "DDI",
+        "DID",
+        "Dissociative identity disorder",
+        "Disturbo di personalità multipla",
+        "MPD",
+        "Personalità multipla",
+        "Personalità multiple",
+        "TDI",
+        "Trastorno de personalidad multiple",
+        "Trastorno de personalidad múltiple",
+        "multiple personality disorder",
+        "plurpersoneca malsano",
+        "trouble de la personnalité multiple",
+        "Διαταραχή πολλαπλής προσωπικότητας",
+        "множественная личность",
+        "расстройство множественной личности",
+        "اضطراب تعدد الشخصيات",
+        "解離型認同異常",
+        "解離型認同異常（英）" ;
+    p:P1417 <http://www.wikidata.org/entity/statement/Q18657-88CEF272-3E57-4D39-BC8A-B7296E87285D> ;
+    p:P1692 <http://www.wikidata.org/entity/statement/Q18657-E415E51F-AF8F-45C4-83D3-8F2F9C99BFC1> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q18657-6156094A-A1AE-45DF-8F11-9A4DF89577ED> ;
+    p:P18 <http://www.wikidata.org/entity/statement/Q18657-55001D50-1408-4969-9AF9-E2F720C6DA9F> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q18657-210FB739-910A-49C3-B67F-80C045104F11>,
+        <http://www.wikidata.org/entity/statement/Q18657-58352f9f-4d55-ffef-7c7a-dc1988d09c6a>,
+        <http://www.wikidata.org/entity/statement/Q18657-af57cbf5-4a00-2707-e706-54255c85e909> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q18657-7A2DD546-043C-4AF1-942E-5E9322C29393> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q18657-0689CD8E-81E4-439C-BCE7-4FF2FBCDF421>,
+        <http://www.wikidata.org/entity/statement/Q18657-785AC500-26B8-4AC0-A4B3-D7E5A72CF974> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q18657-4B769EAE-568B-4DB5-812E-61F124D4C066> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q18657-B5F41C75-2C31-4344-8DBE-E0968526FE27> ;
+    p:P349 <http://www.wikidata.org/entity/statement/Q18657-BC0D4DFD-04FA-4148-A1ED-BC96CD5D3B78> ;
+    p:P3569 <http://www.wikidata.org/entity/statement/Q18657-14A6159C-F737-48A9-9A09-2A25921DEF41> ;
+    p:P373 <http://www.wikidata.org/entity/statement/Q18657-8F100846-EAEC-4299-8583-E35617586869> ;
+    p:P3827 <http://www.wikidata.org/entity/statement/Q18657-BABEFB86-82BB-4BC4-BB9C-637B106F3B2E> ;
+    p:P4229 <http://www.wikidata.org/entity/statement/Q18657-42690C69-A7D1-444F-8A9D-47284B76A32C> ;
+    p:P460 <http://www.wikidata.org/entity/statement/Q18657-de9ad585-4d10-8a90-bdb3-e8c9888e176f> ;
+    p:P486 <http://www.wikidata.org/entity/statement/q18657-B9BC5A48-D3EE-46D9-AE11-98DED2BBDD84> ;
+    p:P508 <http://www.wikidata.org/entity/statement/Q18657-af9932b9-435a-29f6-17f8-e4ee301ce639> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q18657-81507899-A517-43B0-A685-B30CBE272AD6> ;
+    p:P673 <http://www.wikidata.org/entity/statement/q18657-9EB2622D-D047-4676-AC77-EA9E7B819DED> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q18657-8BF375E0-09E0-4FD5-A1F3-7CCFF0CDB08E> ;
+    ns2:P349 <http://id.ndl.go.jp/auth/ndlna/00572744> ;
+    ns2:P486 <http://id.nlm.nih.gov/mesh/D009105> ;
+    ns2:P508 <http://purl.org/bncf/tid/55653> ;
+    ns2:P646 <http://g.co/kg/m/09wnd> ;
+    wdt:P1417 "science/dissociative-identity-disorder" ;
+    wdt:P1692 "300.14" ;
+    wdt:P1748 "C94330" ;
+    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Dissociative%20identity%20disorder.jpg> ;
+    wdt:P1995 wd:Q183257,
+        wd:Q7867,
+        wd:Q9418 ;
+    wdt:P279 wd:Q2627467 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:10934>,
+        <http://purl.obolibrary.org/obo/DOID_10934> ;
+    wdt:P2892 "C0026773" ;
+    wdt:P31 wd:Q12136 ;
+    wdt:P349 "00572744" ;
+    wdt:P3569 "levenswetenschappen-en-geneeskunde/dissociatieve-identiteitsstoornis" ;
+    wdt:P373 "Dissociative identity disorder" ;
+    wdt:P3827 "multiple-personality-disorder" ;
+    wdt:P4229 "F44.81" ;
+    wdt:P460 wd:Q41112 ;
+    wdt:P486 "D009105" ;
+    wdt:P508 "55653" ;
+    wdt:P646 "/m/09wnd" ;
+    wdt:P673 "916186" ;
+    wdt:P699 "DOID:10934" .
+
+<http://www.wikidata.org/entity/statement/Q18657-0689CD8E-81E4-439C-BCE7-4FF2FBCDF421> a ns1:BestRank ;
+    ns1:rank ns1:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/9a940e17e6d50489fc0b04a34cae72f0897c78fc> ;
+    ps:P2888 <http://purl.obolibrary.org/obo/DOID_10934> .
+
+<http://www.wikidata.org/entity/statement/Q18657-4B769EAE-568B-4DB5-812E-61F124D4C066> a ns1:BestRank ;
+    ns1:rank ns1:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/9a940e17e6d50489fc0b04a34cae72f0897c78fc> ;
+    ps:P2892 "C0026773" .
+
+<http://www.wikidata.org/entity/statement/Q18657-6156094A-A1AE-45DF-8F11-9A4DF89577ED> a ns1:BestRank ;
+    ns1:rank ns1:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/9a940e17e6d50489fc0b04a34cae72f0897c78fc> ;
+    ps:P1748 "C94330" .
+
+<http://www.wikidata.org/entity/statement/Q18657-785AC500-26B8-4AC0-A4B3-D7E5A72CF974> a ns1:BestRank ;
+    ns1:rank ns1:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
+    ps:P2888 <http://identifiers.org/doid/DOID:10934> .
+
+<http://www.wikidata.org/entity/statement/Q18657-7A2DD546-043C-4AF1-942E-5E9322C29393> a ns1:BestRank ;
+    ns1:rank ns1:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/9a940e17e6d50489fc0b04a34cae72f0897c78fc> ;
+    ps:P279 wd:Q2627467 .
+
+<http://www.wikidata.org/entity/statement/Q18657-8BF375E0-09E0-4FD5-A1F3-7CCFF0CDB08E> a ns1:BestRank ;
+    ns1:rank ns1:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/9a940e17e6d50489fc0b04a34cae72f0897c78fc> ;
+    ps:P699 "DOID:10934" .
+
+<http://www.wikidata.org/entity/statement/Q18657-B5F41C75-2C31-4344-8DBE-E0968526FE27> a ns1:BestRank ;
+    ns1:rank ns1:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/9a940e17e6d50489fc0b04a34cae72f0897c78fc> ;
+    ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/entity/statement/q18657-B9BC5A48-D3EE-46D9-AE11-98DED2BBDD84> a ns1:BestRank ;
+    ns1:rank ns1:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/9a940e17e6d50489fc0b04a34cae72f0897c78fc> ;
+    ps:P486 "D009105" ;
+    ns3:P486 <http://id.nlm.nih.gov/mesh/D009105> .
+
+<http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> pr:P248 wd:Q16335166 ;
+    pr:P854 <http://www.ebi.ac.uk/miriam/main/collections/MIR:00000233> .
+
+<http://www.wikidata.org/reference/9a940e17e6d50489fc0b04a34cae72f0897c78fc> pr:P248 wd:Q50349458 ;
+    pr:P699 "DOID:10934" ;
+    pr:P813 "2018-03-05T00:00:00+00:00"^^xsd:dateTime ;
+    prv:P813 <http://www.wikidata.org/value/1e3a6bea7157623e35de26b2a62a80cb> .
+

@@ -6,7 +6,7 @@ from ShExJSG import ShExJ
 from pyjsg.jsglib.jsg import JSGString, JSGObject
 from rdflib import Literal
 
-from pyshex.sparql11_query.p17_1_operand_data_types import is_decimal, is_integer, is_numeric
+from pyshex.sparql11_query.p17_1_operand_data_types import is_integer, is_numeric
 
 
 def can_cast_to(v: Literal, dt: str) -> bool:

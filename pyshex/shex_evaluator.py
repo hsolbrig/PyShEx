@@ -35,7 +35,8 @@ class ShExEvaluator:
                  focus: Optional[URIPARM] = None,
                  start: Optional[URIPARM] = None,
                  rdf_format: str = "turtle",
-                 debug: bool = False) -> None:
+                 debug: bool = False,
+                 debug_slurps: bool = False) -> None:
         """ Evaluator constructor.  All of the parameters below can be set in the constructor or at runtime
 
         :param rdf: RDF string, file name, URL or Graph for evaluation.
@@ -44,6 +45,7 @@ class ShExEvaluator:
         :param start: start node(s). If absent, the START node in the schema is used
         :param rdf_format: format for RDF. Default: "Turtle"
         :param debug: emit semi-helpful debug information
+        :param debug: debug graph fetch calls
         """
         self.rdf_format = rdf_format
         self.g = None
@@ -55,6 +57,7 @@ class ShExEvaluator:
         self._start = None
         self.start = normalize_uriparm(start)
         self.debug = debug
+        self.debug_slurps = debug_slurps
 
     @property
     def rdf(self) -> str:
@@ -151,12 +154,13 @@ class ShExEvaluator:
                  focus: Optional[URIPARM] = None,
                  start: Optional[URIPARM] = None,
                  rdf_format: Optional[str] = None,
-                 debug: Optional[bool] = None) -> List[EvaluationResult]:
+                 debug: Optional[bool] = None,
+                 debug_slurps: Optional[bool] = None) -> List[EvaluationResult]:
         if rdf or shex or focus or start:
             if not rdf_format:
                 rdf_format = self.rdf_format
             evaluator = ShExEvaluator(rdf, shex, focus, start, rdf_format)
-            if not rdf:
+            if rdf is None:
                 evaluator.g = self.g
             if not shex:
                 evaluator._schema = self._schema
@@ -168,6 +172,7 @@ class ShExEvaluator:
         cntxt = Context(evaluator.g, evaluator._schema)
         # TODO: Clean this up
         cntxt.debug_context.trace_satisfies = debug if debug is not None else self.debug
+        cntxt.debug_context.trace_slurps = debug_slurps if debug_slurps is not None else self.debug_slurps
         # cntxt.debug_context.trace_satisfies = cntxt.debug_context.trace_matches = \
         #     cntxt.debug_context.trace_nodeSatisfies = debug if debug is not None else self.debug
 

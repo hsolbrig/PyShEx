@@ -1,0 +1,659 @@
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ns1: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix po: <http://purl.obolibrary.org/obo/PW> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix react: <http://micel.io/reactome/> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/statement/Q24646392-FF70E831-167A-4710-8882-285436D65667> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:d3f2c3cbb9cbfee178fb7b0f023c5d8fbfdce0d8 ;
+    ps:P698 "18303019" .
+
+<http://www.wikidata.org/entity/statement/Q29017194-45E6B804-988F-42CA-A319-7AC42903A248> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/88f33334e464b69ecb5fc5690e6119be9b17354f> ;
+    ps:P527 wd:Q50296275 .
+
+<http://www.wikidata.org/entity/statement/Q29017194-483A24A4-2E2B-4F43-89EA-403BD7352B10> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/88f33334e464b69ecb5fc5690e6119be9b17354f> ;
+    ps:P527 wd:Q50296274 .
+
+<http://www.wikidata.org/entity/statement/Q29017194-4C524AC2-8F23-4323-A341-93467707649A> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/88f33334e464b69ecb5fc5690e6119be9b17354f> ;
+    ps:P527 wd:Q50296257 .
+
+<http://www.wikidata.org/entity/statement/Q29017194-5302F6D9-9E3A-4738-BFEF-432F38DA2BA3> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/88f33334e464b69ecb5fc5690e6119be9b17354f> ;
+    ps:P2860 wd:Q24646392 .
+
+<http://www.wikidata.org/entity/statement/Q29017194-57B876E0-01F4-4529-9EBE-816FE7E054C2> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/88f33334e464b69ecb5fc5690e6119be9b17354f> ;
+    ps:P527 wd:Q50296256 .
+
+<http://www.wikidata.org/entity/statement/Q29017194-6109D9D6-6A87-4F44-8F9D-6EA4C11EC711> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/88f33334e464b69ecb5fc5690e6119be9b17354f> ;
+    ps:P527 wd:Q50296258 .
+
+<http://www.wikidata.org/entity/statement/Q29017194-6479876C-4ABA-407D-8DE7-864CF4A2260D> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/88f33334e464b69ecb5fc5690e6119be9b17354f> ;
+    ps:P361 wd:Q45317649 .
+
+<http://www.wikidata.org/entity/statement/Q29017194-7CCBE861-89A9-4770-9D29-646E4A94456B> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/88f33334e464b69ecb5fc5690e6119be9b17354f> ;
+    ps:P703 wd:Q15978631 .
+
+<http://www.wikidata.org/entity/statement/Q29017194-AB50625F-7FBE-4F00-8447-04DF17F2340A> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/88f33334e464b69ecb5fc5690e6119be9b17354f> ;
+    ps:P31 wd:Q847556 .
+
+<http://www.wikidata.org/entity/statement/Q29017194-B0DD604D-A548-4C4F-AC1D-CF4AC11C2590> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/88f33334e464b69ecb5fc5690e6119be9b17354f> ;
+    ps:P527 wd:Q45317659 .
+
+<http://www.wikidata.org/entity/statement/Q29017194-a78136ed-49ba-4604-1d9b-63230dbba9d6> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-532668" .
+
+<http://www.wikidata.org/entity/statement/Q29017194-c50f2d33-4ea1-5782-c147-2ab8e76c24b7> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom <http://www.wikidata.org/reference/88f33334e464b69ecb5fc5690e6119be9b17354f> ;
+    ps:P31 wd:Q4915012 .
+
+<http://www.wikidata.org/entity/statement/Q45317649-4086678B-92B2-470D-BEC2-4BE8B65728B3> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-446203" .
+
+<http://www.wikidata.org/entity/statement/Q45317659-A3900D73-FE01-493C-B0E5-5E81FFA4C141> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-901042" .
+
+<http://www.wikidata.org/entity/statement/Q50296256-ABA6EF82-6350-4C01-88CF-FE57312F7343> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-532678" .
+
+<http://www.wikidata.org/entity/statement/Q50296257-DABE21AB-EC3D-4982-AA16-531C382C917A> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-901006" .
+
+<http://www.wikidata.org/entity/statement/Q50296258-1E0E1DE5-C2C1-4AD6-89C7-1E7D7190DD3A> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-532667" .
+
+<http://www.wikidata.org/entity/statement/Q50296274-332001C2-C835-4571-BD80-772D7A82B3A7> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-8850594" .
+
+<http://www.wikidata.org/entity/statement/Q50296275-4797DA16-C964-46A5-B8F2-4BD7252F2915> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    ps:P3937 "R-HSA-8853379" .
+
+<http://www.wikidata.org/entity/statement/Q847556-597D59D1-11B0-4D66-9A53-24ABA6D905B4> a wikibase:BestRank ;
+    wikibase:rank wikibase:NormalRank ;
+    prov:wasDerivedFrom wdref:d8eb3e0322e69c60e51a939a4c63bd63206b838f ;
+    ps:P31 wd:Q2996394 .
+
+wd:Q45317649 rdfs:label "Asparagine N-linked glycosylation" ;
+    schema:dateModified "2018-03-02T11:10:37+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway Asparagine N-linked glycosylation in Homo sapiens" ;
+    schema:version 642204069 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 16 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q45317649-071C1AC3-F21D-4287-84D5-09AE6BB14499>,
+        <http://www.wikidata.org/entity/statement/Q45317649-42944D5B-4AFB-4D79-90A8-C8640A676564>,
+        <http://www.wikidata.org/entity/statement/Q45317649-A6C3E99F-A25A-414F-AA4D-36A9AD499FD3>,
+        <http://www.wikidata.org/entity/statement/Q45317649-D635C7E0-264D-4759-88E0-40FD926FA709> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q45317649-7D271401-9DC9-46B2-B940-0FBD9DB5D011> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q45317649-8378A48A-69A2-4B4E-9E24-7956914E8B91>,
+        <http://www.wikidata.org/entity/statement/Q45317649-ED66446A-D1F4-4AA3-911D-7AEBBFE04CF0> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q45317649-165DFBDA-76F9-47F5-A0CD-32AF8F095190> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q45317649-4086678B-92B2-470D-BEC2-4BE8B65728B3> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q45317649-271DB0CF-3A51-479E-AFAA-7075A7175820>,
+        <http://www.wikidata.org/entity/statement/Q45317649-2BD1AB64-3474-4CA4-8B06-ED315AA3E6F6>,
+        <http://www.wikidata.org/entity/statement/Q45317649-BDD4D4D5-5B68-4CC3-A316-EDD4C2EBDDE2>,
+        <http://www.wikidata.org/entity/statement/Q45317649-C41AF285-AD63-4F4A-BAEE-1290040D5950>,
+        <http://www.wikidata.org/entity/statement/Q45317649-E48F3CB2-406C-4F5E-B6EB-C2A09A482A9E>,
+        <http://www.wikidata.org/entity/statement/Q45317649-FB2C8E1E-890D-41E4-B91D-3A779AC86BB3> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q45317649-1BAE948A-576A-48CC-91D1-57A8C1AB07E5> ;
+    wdt:P2860 wd:Q28610113,
+        wd:Q33248322,
+        wd:Q37555655,
+        wd:Q37569249 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-446203> ;
+    wdt:P31 wd:Q14633895,
+        wd:Q4915012 ;
+    wdt:P361 wd:Q45317632 ;
+    wdt:P3937 "R-HSA-446203" ;
+    wdt:P527 wd:Q29017194,
+        wd:Q45317650,
+        wd:Q45317661,
+        wd:Q50296255,
+        wd:Q50296349,
+        wd:Q50296350 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q45317659 rdfs:label "Calnexin/calreticulin cycle" ;
+    schema:dateModified "2018-03-02T11:10:58+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway Calnexin/calreticulin cycle in Homo sapiens" ;
+    schema:version 642204236 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 12 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q45317659-5EA15E2E-5AE2-487F-B346-B75B6FAE5AE9>,
+        <http://www.wikidata.org/entity/statement/Q45317659-94BB8671-676E-43D6-AB9D-35FF4FD96935> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q45317659-02DB9735-CE91-4901-AE3C-4DF5D8AABF9A> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q45317659-0E0282B6-7E57-40F1-B797-071988488E9F> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q45317659-8AD55C85-F669-470F-8F53-505AFDC16B74> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q45317659-A3900D73-FE01-493C-B0E5-5E81FFA4C141> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q45317659-27D7C017-97AF-45C1-BCEA-F87A2F6FC615>,
+        <http://www.wikidata.org/entity/statement/Q45317659-6230257D-62CC-41B4-977E-092B6149287E>,
+        <http://www.wikidata.org/entity/statement/Q45317659-A9B9B087-85ED-4C0A-A6A4-12C76D7BD4E7>,
+        <http://www.wikidata.org/entity/statement/Q45317659-C2A82047-5305-4FAA-BCE4-2CDCC74D73F1>,
+        <http://www.wikidata.org/entity/statement/Q45317659-C59EC3E4-82F3-4C05-B7B7-3A3E2E2628E3> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q45317659-34016093-F31E-40E6-84DC-8BC9A7B0D10D> ;
+    wdt:P2860 wd:Q24646392,
+        wd:Q36678050 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-901042> ;
+    wdt:P31 wd:Q4915012 ;
+    wdt:P361 wd:Q29017194 ;
+    wdt:P3937 "R-HSA-901042" ;
+    wdt:P527 wd:Q45317660,
+        wd:Q50296259,
+        wd:Q50296260,
+        wd:Q50296261,
+        wd:Q50296262 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50296256 rdfs:label "Trimming of the first glucose by by mannosyl-oligosaccharide glucosidase" ;
+    schema:dateModified "2018-03-01T20:55:17+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Trimming of the first glucose by by mannosyl-oligosaccharide glucosidase in Homo sapiens" ;
+    schema:version 641687308 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 11 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50296256-4B4228DE-5887-471A-A686-89497EC4F891>,
+        <http://www.wikidata.org/entity/statement/Q50296256-875918E5-CDCA-4E79-8C8D-BDA6DC574C46> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50296256-5627062F-5F97-4B18-B358-A8CB491B787F> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50296256-A244FBBE-BCBF-421A-9583-25D33BA01D9D> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50296256-6A1B1479-7DA7-4E5A-9DD1-3A1F875ACA0E> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50296256-ABA6EF82-6350-4C01-88CF-FE57312F7343> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50296256-0FE1184E-0E75-460D-B3E7-EFD8C1B0DB00>,
+        <http://www.wikidata.org/entity/statement/Q50296256-903E1F1E-0298-485C-85B1-A25DF7466A9A>,
+        <http://www.wikidata.org/entity/statement/Q50296256-B986F6ED-6C80-463D-8319-B20EC8B214B1>,
+        <http://www.wikidata.org/entity/statement/Q50296256-E4335B0B-F145-4321-9D4F-ACE9262C4A38> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50296256-A40C7CC6-C9FE-48EB-BF4F-2EB8049CE52B> ;
+    wdt:P2860 wd:Q28344213,
+        wd:Q28609692 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-532678> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29017194 ;
+    wdt:P3937 "R-HSA-532678" ;
+    wdt:P527 wd:Q22676893,
+        wd:Q23905965,
+        wd:Q50256438,
+        wd:Q50268171 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50296257 rdfs:label "Binding of Malectin" ;
+    schema:dateModified "2018-03-01T20:55:20+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Binding of Malectin in Homo sapiens" ;
+    schema:version 641687348 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 9 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50296257-68656818-4934-4E82-A977-46439899D74C> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50296257-62988223-6EF4-4F34-B00F-3562DBA2D81C> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50296257-24475756-2BA1-4B18-A06B-4B220331474C> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50296257-F04FBC39-C4D1-4AA3-9A27-9912C61F240E> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50296257-DABE21AB-EC3D-4982-AA16-531C382C917A> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50296257-1B73E83D-46B8-4DD5-9A74-8B0AE45E4CF4>,
+        <http://www.wikidata.org/entity/statement/Q50296257-A7888477-A479-4E3D-950A-EA716A872434>,
+        <http://www.wikidata.org/entity/statement/Q50296257-AC46AC6C-2614-4197-818E-C67E50B93CE9> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50296257-FE7B28D3-5D92-40D0-9B34-B5740E4291F3> ;
+    wdt:P2860 wd:Q27650749 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-901006> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29017194 ;
+    wdt:P3937 "R-HSA-901006" ;
+    wdt:P527 wd:Q21133374,
+        wd:Q50268171,
+        wd:Q50268174 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50296258 rdfs:label "Removal of the second glucose by glucosidase II" ;
+    schema:dateModified "2018-03-01T20:55:23+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Removal of the second glucose by glucosidase II in Homo sapiens" ;
+    schema:version 641687379 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 11 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50296258-2F37FB9D-1C9D-414F-A4D1-9A64A81E9DB8> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50296258-B526D302-7FE3-45A8-A44E-C38CD1E3EB4F> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50296258-FB7E6FC0-D80A-41CF-AE21-F005FC8DEF38> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50296258-B9616776-9312-483C-8C07-9F11E4A8C8C1> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50296258-1E0E1DE5-C2C1-4AD6-89C7-1E7D7190DD3A> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50296258-11395136-2C79-4993-91C1-ADEEF826602A>,
+        <http://www.wikidata.org/entity/statement/Q50296258-9802CE88-5494-4CE5-9D65-5D232E0B220B>,
+        <http://www.wikidata.org/entity/statement/Q50296258-99274FE5-F369-44CF-9FE7-06DCE49B92D2>,
+        <http://www.wikidata.org/entity/statement/Q50296258-B3BCCC71-0A46-49E2-B934-4F40F52C0108>,
+        <http://www.wikidata.org/entity/statement/Q50296258-F432A2B3-FB42-4359-9285-8CEEDC8DC049> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50296258-84F6B71F-3D1F-4BE0-9933-757E6EF6B464> ;
+    wdt:P2860 wd:Q28142779 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-532667> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29017194 ;
+    wdt:P3937 "R-HSA-532667" ;
+    wdt:P527 wd:Q21133374,
+        wd:Q23905965,
+        wd:Q50268174,
+        wd:Q50268176,
+        wd:Q50268178 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50296274 rdfs:label "Deglycosylation complex hydrolyses N-glycans from unfolded glycoproteins" ;
+    schema:dateModified "2018-03-01T20:56:03+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction Deglycosylation complex hydrolyses N-glycans from unfolded glycoproteins in Homo sapiens" ;
+    schema:version 641687862 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 15 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50296274-3FB44023-0DFF-414A-AC14-A332FE0BD5B4>,
+        <http://www.wikidata.org/entity/statement/Q50296274-4EEEBAAB-FCA4-4B86-9786-0D1DBF7E6C30>,
+        <http://www.wikidata.org/entity/statement/Q50296274-9BAE53A5-0175-4BBF-88AC-09DDA5575523>,
+        <http://www.wikidata.org/entity/statement/Q50296274-A5E6476E-7C98-47C4-A8C0-03CB6A105AE0>,
+        <http://www.wikidata.org/entity/statement/Q50296274-B9AF2540-991C-4B23-A207-5FB2619545EC>,
+        <http://www.wikidata.org/entity/statement/Q50296274-F710D249-303A-4D7B-BDCF-6351C870A6F3> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50296274-A8CFB7F5-3A60-4C3E-B45B-C859AF11BF91> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50296274-3F3221BE-17E1-471A-8048-13855FC4AA8B> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50296274-474DF4E2-EED0-4493-9C4E-BB85FA15454B> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50296274-332001C2-C835-4571-BD80-772D7A82B3A7> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50296274-0B6AD13D-4604-43B5-8194-B87C13CD4741>,
+        <http://www.wikidata.org/entity/statement/Q50296274-18BC3E3A-4B4E-4B61-8958-7F6FE880387D>,
+        <http://www.wikidata.org/entity/statement/Q50296274-57111A47-6DE0-419C-8F60-B0F0FE213F9B>,
+        <http://www.wikidata.org/entity/statement/Q50296274-5CA84E37-EB08-4057-AD7F-B9989DC29F57> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50296274-633262D7-8809-4D63-B7CB-F6FBDB863D75> ;
+    wdt:P2860 wd:Q24297732,
+        wd:Q24303569,
+        wd:Q24303684,
+        wd:Q24324257,
+        wd:Q24536195,
+        wd:Q30274598 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-8850594> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29017194 ;
+    wdt:P3937 "R-HSA-8850594" ;
+    wdt:P527 wd:Q283,
+        wd:Q50268224,
+        wd:Q50268237,
+        wd:Q50268238 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q50296275 rdfs:label "ENGASE hydrolyses unfolded protein:(GlcNAc)2 (Man(9-5)" ;
+    schema:dateModified "2018-03-01T20:56:07+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological reaction ENGASE hydrolyses unfolded protein:(GlcNAc)2 (Man(9-5) in Homo sapiens" ;
+    schema:version 641687901 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 10 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q50296275-C64BE94F-5F8F-4CB0-B067-290635EE1C16> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q50296275-9AF2C811-CF6D-44D2-9C5F-A6F7C3C3E5D0> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q50296275-C456C5DF-A8F4-46AF-A457-B6A427F18104> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q50296275-E0A1EBE9-05DD-454C-A8C2-7F539F9B17B2> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q50296275-4797DA16-C964-46A5-B8F2-4BD7252F2915> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q50296275-1DFF7545-9131-4877-9774-65FA7C73DBCB>,
+        <http://www.wikidata.org/entity/statement/Q50296275-24065C1D-33D9-4274-BCAB-B57FFC92BA47>,
+        <http://www.wikidata.org/entity/statement/Q50296275-87022FBD-99DA-467D-BF9A-88A5F4AF9790>,
+        <http://www.wikidata.org/entity/statement/Q50296275-E79219B9-D18D-41C1-B0C7-297037572E7A> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q50296275-4187ED6C-5E3A-4541-8495-9C91021C2D16> ;
+    wdt:P2860 wd:Q34075191 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-8853379> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P361 wd:Q29017194 ;
+    wdt:P3937 "R-HSA-8853379" ;
+    wdt:P527 wd:Q21107271,
+        wd:Q283,
+        wd:Q50268224,
+        wd:Q50268239 ;
+    wdt:P703 wd:Q15978631 .
+
+wd:Q847556 rdfs:label "Plierea proteinelor",
+        "Pregamento de proteínas",
+        "Proteiinilaskos",
+        "Proteinfaltung",
+        "Proteinsko savijanje",
+        "Proteinveckning",
+        "Skladanie bielkovín",
+        "Zwijanie białka",
+        "eiwitvouwing",
+        "enovelamento de proteínas",
+        "plegament proteic",
+        "plegamiento de proteínas",
+        "protein folding",
+        "proteinfalding",
+        "repliement de protéine",
+        "ripiegamento di proteine",
+        "skládání proteinů",
+        "Згортання білків",
+        "Протеинско савијање",
+        "Уургийн нугалралт",
+        "Фолдинг белка",
+        "קיפול חלבונים",
+        "تاشدگی پروتئین",
+        "طي البروتين",
+        "புரோட்டின் மடிப்பு",
+        "フォールディング",
+        "蛋白質摺疊",
+        "蛋白质折叠",
+        "단백질 접힘" ;
+    schema:dateModified "2018-02-07T13:58:44+00:00"^^xsd:dateTime ;
+    schema:description "The process of assisting in the covalent and noncovalent assembly of single chain polypeptides or multisubunit complexes into the correct tertiary structure.",
+        "biologisch proces" ;
+    schema:version 627937081 ;
+    wikibase:identifiers 5 ;
+    wikibase:sitelinks 28 ;
+    wikibase:statements 11 ;
+    skos:altLabel "Dobramento de proteínas",
+        "Enovelamento das proteínas",
+        "Fałdowanie białka",
+        "Folding",
+        "Folding proteico",
+        "Folding proteinas",
+        "GO:0006457",
+        "Plegament de proteïnes",
+        "Plegamiento de proteinas",
+        "Protein folding",
+        "Proteinski folding",
+        "Proteinsko sklapanje",
+        "Proteinvikning",
+        "Replegament proteic",
+        "Repliement de proteine",
+        "Repliement de protéines",
+        "Repliement des protéines",
+        "Repliement protéique",
+        "Savijanje proteina",
+        "plegamiento proteico",
+        "proteinfolding",
+        "Фолдинг",
+        "Фолдинг белков",
+        "קיפול חלבון",
+        "التفاف البروتين",
+        "پیچش پروتئین",
+        "タンパク質フォールディング",
+        "タンパク質フォールド",
+        "蛋白质折叠学",
+        "단백질 폴딩",
+        "단백질접힘" ;
+    p:P227 <http://www.wikidata.org/entity/statement/Q847556-BAC17E3F-9B3F-42D8-9135-735E7A799502> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q847556-8B9832EB-19C6-4EC8-AFF2-429CD3B18EDA> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q847556-E12FA378-3200-49CE-B65A-D2965A9F2C9B> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q847556-597D59D1-11B0-4D66-9A53-24ABA6D905B4> ;
+    p:P3417 <http://www.wikidata.org/entity/statement/Q847556-4CFCDC19-148E-47ED-9693-F499D25BCEE4> ;
+    p:P373 <http://www.wikidata.org/entity/statement/q847556-C8CB5612-26D4-4F72-B363-868E493FD3C7> ;
+    p:P3827 <http://www.wikidata.org/entity/statement/Q847556-7FCAB9DC-1211-437E-8A8B-471D67EF9270> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q847556-771A3F25-5E0A-44D1-97D4-D4CD1D736A46> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q847556-56D7DB02-9022-48F2-ADAC-91A7DE6015E1> ;
+    p:P686 <http://www.wikidata.org/entity/statement/Q847556-F0FE9A0E-4D18-4AF5-B602-422128743089> ;
+    p:P910 <http://www.wikidata.org/entity/statement/Q847556-8406A858-34FF-4711-A4B2-6A6EC465CACD> ;
+    ns2:P227 <http://d-nb.info/gnd/4324567-5> ;
+    ns2:P646 <http://g.co/kg/m/0dpy3> ;
+    wdt:P227 "4324567-5" ;
+    wdt:P279 wd:Q14873025 ;
+    wdt:P2888 <http://purl.obolibrary.org/obo/GO_0006457> ;
+    wdt:P31 wd:Q2996394 ;
+    wdt:P3417 "Protein-Folding" ;
+    wdt:P373 "Protein folding" ;
+    wdt:P3827 "protein-folding" ;
+    wdt:P527 wd:Q14633873 ;
+    wdt:P646 "/m/0dpy3" ;
+    wdt:P686 "GO:0006457" ;
+    wdt:P910 wd:Q10103575 .
+
+wd:Q24646392 rdfs:label "Getting in and out from calnexin/calreticulin cycles" ;
+    schema:dateModified "2017-10-21T22:00:33+00:00"^^xsd:dateTime ;
+    schema:description "2008 nî lūn-bûn",
+        "2008年の論文",
+        "2008年論文",
+        "2008年论文",
+        "2008년 논문",
+        "article científic",
+        "article scientific",
+        "article scientifique (publié 2008/04/18)",
+        "articol științific",
+        "articolo scientifico (pubblicato il 2008/04/18)",
+        "artigo científico",
+        "artigo científico (publicado na 2008/04/18)",
+        "artikull shkencor",
+        "artikulong pang-agham",
+        "artykuł naukowy",
+        "artículo científico publicado en 2008",
+        "artículu científicu",
+        "bilimsel makale",
+        "bài báo khoa học",
+        "mokslinis straipsnis",
+        "naučni članak",
+        "scienca artikolo",
+        "scientific article",
+        "teaduslik artikkel",
+        "tieteellinen artikkeli",
+        "tudományos cikk",
+        "vedecký článok (publikovaný 2008/04/18)",
+        "vetenskaplig artikel",
+        "videnskabelig artikel (udgivet  2008/04/18)",
+        "vitenskapelig artikkel",
+        "vitskapeleg artikkel",
+        "vědecký článek publikovaný v roce 2008",
+        "wetenschappelijk artikel (gepubliceerd op 18.04.2008)",
+        "wissenschaftlicher Artikel",
+        "επιστημονικό άρθρο",
+        "мақолаи илмӣ",
+        "наукова стаття",
+        "научна статия",
+        "научная статья",
+        "научни чланак",
+        "научни чланак (објављен 2008/04/18)",
+        "գիտական հոդված",
+        "מאמר מדעי",
+        "مقالة علمية نشرت في 18-4-2008 حول موضوع: علم الأحياء الخلوي",
+        "บทความทางวิทยาศาสตร์",
+        "სამეცნიერო სტატია" ;
+    schema:version 582456617 ;
+    wikibase:identifiers 4 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 66 ;
+    p:P1433 <http://www.wikidata.org/entity/statement/Q24646392-755A143E-A715-4196-B162-D53B1F67F9A1> ;
+    p:P1476 <http://www.wikidata.org/entity/statement/Q24646392-9A1B1258-1723-49BC-9E6A-D3BD4746B245> ;
+    p:P2093 <http://www.wikidata.org/entity/statement/Q24646392-345B34A8-AE5E-41EF-B13C-3128543B28FF>,
+        <http://www.wikidata.org/entity/statement/Q24646392-D0440C96-E903-4113-8840-2EF6CC649751> ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q24646392-00A7B8E2-927A-481F-B1A9-047BBEBBDDCA>,
+        <http://www.wikidata.org/entity/statement/Q24646392-012BEAFB-58FE-402E-BA91-797C963CDF97>,
+        <http://www.wikidata.org/entity/statement/Q24646392-0670AFE5-71E1-4F51-933D-84A9A4A50E3A>,
+        <http://www.wikidata.org/entity/statement/Q24646392-07CF6B65-DCAC-43D9-BA19-BCFBFE207458>,
+        <http://www.wikidata.org/entity/statement/Q24646392-07E003A5-3D72-4A2E-BE86-3292155963E7>,
+        <http://www.wikidata.org/entity/statement/Q24646392-0C755830-552C-43FE-A5C7-360A87235C0F>,
+        <http://www.wikidata.org/entity/statement/Q24646392-0E2586D5-C1BD-4143-A042-0AD1E984237D>,
+        <http://www.wikidata.org/entity/statement/Q24646392-1A8217ED-2414-4EDF-B6B5-4C68BB664D24>,
+        <http://www.wikidata.org/entity/statement/Q24646392-1DE930E3-022A-4601-90D1-2D4F53EF9165>,
+        <http://www.wikidata.org/entity/statement/Q24646392-2F658208-5E65-4A8E-8436-9CB7A4851A80>,
+        <http://www.wikidata.org/entity/statement/Q24646392-316D894A-2300-4089-85B6-FE802788D6EB>,
+        <http://www.wikidata.org/entity/statement/Q24646392-36316032-E66F-41D3-92BC-0811FD0E003F>,
+        <http://www.wikidata.org/entity/statement/Q24646392-37770706-C9FE-4B46-A2B7-6C77D8C23AEE>,
+        <http://www.wikidata.org/entity/statement/Q24646392-3BAC3230-0554-4D20-8CE0-813BFEEAA19E>,
+        <http://www.wikidata.org/entity/statement/Q24646392-4307A3E0-CC51-4252-9E1D-23740CAC8E2E>,
+        <http://www.wikidata.org/entity/statement/Q24646392-4871AA97-534E-40F5-BF39-5BE7C99E19B8>,
+        <http://www.wikidata.org/entity/statement/Q24646392-4E00B3EA-BC0B-464B-B862-808F97B703B8>,
+        <http://www.wikidata.org/entity/statement/Q24646392-50C4FF1F-3482-4AD6-8129-DCFB0E71D5C4>,
+        <http://www.wikidata.org/entity/statement/Q24646392-59BDD233-9EB5-4761-BD0F-D9C3E2833E00>,
+        <http://www.wikidata.org/entity/statement/Q24646392-5D6DA944-9331-4E6D-BE4E-B67AD9147402>,
+        <http://www.wikidata.org/entity/statement/Q24646392-61249361-D751-41FD-A091-7A9A95A644AD>,
+        <http://www.wikidata.org/entity/statement/Q24646392-675E1E71-EE9C-46B4-ACC2-1F5CF46BC904>,
+        <http://www.wikidata.org/entity/statement/Q24646392-69AB5E43-AA18-496F-9353-05A6B6D4992B>,
+        <http://www.wikidata.org/entity/statement/Q24646392-72DEA4BB-4CA2-413E-92FF-B80C9E67595D>,
+        <http://www.wikidata.org/entity/statement/Q24646392-775662E2-0B95-4A87-8788-3A1894210ACB>,
+        <http://www.wikidata.org/entity/statement/Q24646392-7BFB9211-907A-4AB6-B357-707391716C16>,
+        <http://www.wikidata.org/entity/statement/Q24646392-8062AB4D-6C15-4BF0-82BD-8AE427D9E9B2>,
+        <http://www.wikidata.org/entity/statement/Q24646392-8287B39F-E6D9-4061-AE28-A9E56BA726A3>,
+        <http://www.wikidata.org/entity/statement/Q24646392-848D70DB-CA5D-4DEB-B9AA-B813BF2110A6>,
+        <http://www.wikidata.org/entity/statement/Q24646392-858088A9-701B-4ACF-9792-1513D1EC09FD>,
+        <http://www.wikidata.org/entity/statement/Q24646392-88AF8DC9-11FF-4B1E-A865-A769ED9E093C>,
+        <http://www.wikidata.org/entity/statement/Q24646392-890FD238-CC67-40D5-8EF7-93776329BAC7>,
+        <http://www.wikidata.org/entity/statement/Q24646392-92872E6F-9014-48F0-BAAD-DF0240B8D49D>,
+        <http://www.wikidata.org/entity/statement/Q24646392-94D6BF2B-71FD-4023-A4FA-B60CC9813917>,
+        <http://www.wikidata.org/entity/statement/Q24646392-9F257AA8-B8FC-4143-8846-758BC37D7054>,
+        <http://www.wikidata.org/entity/statement/Q24646392-A18070D6-35A7-41D6-9279-9956A937D50A>,
+        <http://www.wikidata.org/entity/statement/Q24646392-A579D9A0-41F3-41F1-A1C4-9718ADB158B2>,
+        <http://www.wikidata.org/entity/statement/Q24646392-A581FFAD-49E7-4FC7-9646-C0D4A60F0198>,
+        <http://www.wikidata.org/entity/statement/Q24646392-A77BD1B3-8EC6-42CA-A003-0BDE0969E86F>,
+        <http://www.wikidata.org/entity/statement/Q24646392-B3342508-BF8F-4ED0-945D-2CF62A1FB68F>,
+        <http://www.wikidata.org/entity/statement/Q24646392-B9B5BB16-C2FD-4D4E-AF18-1A42434EF150>,
+        <http://www.wikidata.org/entity/statement/Q24646392-BE6DFF83-CB11-4732-826A-1C257642E0E6>,
+        <http://www.wikidata.org/entity/statement/Q24646392-C6B69FB4-21B6-425E-AC81-793ED1681E36>,
+        <http://www.wikidata.org/entity/statement/Q24646392-CA9F2FA3-287A-4058-A574-0DF1B49827FF>,
+        <http://www.wikidata.org/entity/statement/Q24646392-D7997DF5-E532-4E92-98DF-70B2D70B365A>,
+        <http://www.wikidata.org/entity/statement/Q24646392-DAF1D8A0-F4A5-4EDF-B064-4D6CADF5C056>,
+        <http://www.wikidata.org/entity/statement/Q24646392-DC47F952-4B33-45C2-A30A-4DD52B05B0E2>,
+        <http://www.wikidata.org/entity/statement/Q24646392-E9EA1CC6-C35A-4ECD-BAC8-8D7DA43D81A3>,
+        <http://www.wikidata.org/entity/statement/Q24646392-EA01CC76-0461-4362-BD21-0077B7F53E87>,
+        <http://www.wikidata.org/entity/statement/Q24646392-EB8D0681-FC86-46A0-A812-55DC375F6765>,
+        <http://www.wikidata.org/entity/statement/Q24646392-ECCBE5EA-1550-44E5-980A-27B277081826> ;
+    p:P304 <http://www.wikidata.org/entity/statement/Q24646392-0DAADEED-0CDB-4C14-87D7-5932973080E4> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q24646392-8ABFC0B0-A846-4046-8122-258E563FA203> ;
+    p:P3181 <http://www.wikidata.org/entity/statement/Q24646392-7163BB46-AE16-4B94-ABA3-1CB987D88174> ;
+    p:P356 <http://www.wikidata.org/entity/statement/Q24646392-6FE5D2E5-C5B3-44D7-86B8-38E8D4B4BA28> ;
+    p:P407 <http://www.wikidata.org/entity/statement/Q24646392-8278AE24-9A43-4B1C-987E-2F7949CADD5F> ;
+    p:P433 <http://www.wikidata.org/entity/statement/Q24646392-44F41A29-3D24-4AE2-ADCB-A4074BEFE870> ;
+    p:P478 <http://www.wikidata.org/entity/statement/Q24646392-EA58A824-D5B4-46B4-A64E-356C1BD8E4C9> ;
+    p:P577 <http://www.wikidata.org/entity/statement/Q24646392-9BCCE9A0-DD07-42C6-851E-4AD24CA9DAE9> ;
+    p:P698 <http://www.wikidata.org/entity/statement/Q24646392-FF70E831-167A-4710-8882-285436D65667> ;
+    p:P921 <http://www.wikidata.org/entity/statement/Q24646392-27C8E1F5-B271-4157-B366-644064405044> ;
+    p:P932 <http://www.wikidata.org/entity/statement/Q24646392-6BD74040-4A2E-4B2F-AEAB-FB8E45CEA924> ;
+    ns2:P356 <https://doi.org/10.1074/JBC.R700048200> ;
+    wdt:P1433 wd:Q867727 ;
+    wdt:P1476 "Getting in and out from calnexin/calreticulin cycles" ;
+    wdt:P2093 "Armando J Parodi",
+        "Julio J Caramelo" ;
+    wdt:P2860 wd:Q22010871,
+        wd:Q22254696,
+        wd:Q24296412,
+        wd:Q24300458,
+        wd:Q24300584,
+        wd:Q24313639,
+        wd:Q24522524,
+        wd:Q24683239,
+        wd:Q27863352,
+        wd:Q27933980,
+        wd:Q27937049,
+        wd:Q27939809,
+        wd:Q27939944,
+        wd:Q28212764,
+        wd:Q28259305,
+        wd:Q28296143,
+        wd:Q28296585,
+        wd:Q28577837,
+        wd:Q28593084,
+        wd:Q29616458,
+        wd:Q34019347,
+        wd:Q34049758,
+        wd:Q34285322,
+        wd:Q34394333,
+        wd:Q35613397,
+        wd:Q35852846,
+        wd:Q35941035,
+        wd:Q36234402,
+        wd:Q36276590,
+        wd:Q36288216,
+        wd:Q36391681,
+        wd:Q36638528,
+        wd:Q37621993,
+        wd:Q38299847,
+        wd:Q38301167,
+        wd:Q38302180,
+        wd:Q38319586,
+        wd:Q38321171,
+        wd:Q38322732,
+        wd:Q38336332,
+        wd:Q38346469,
+        wd:Q38353217,
+        wd:Q38354843,
+        wd:Q39617157,
+        wd:Q39735151,
+        wd:Q40087924,
+        wd:Q40229528,
+        wd:Q40347790,
+        wd:Q40410568,
+        wd:Q40597954,
+        wd:Q41509550 ;
+    wdt:P304 "10221-5" ;
+    wdt:P31 wd:Q13442814 ;
+    wdt:P3181 "3093503" ;
+    wdt:P356 "10.1074/JBC.R700048200" ;
+    wdt:P407 wd:Q1860 ;
+    wdt:P433 "16" ;
+    wdt:P478 "283" ;
+    wdt:P577 "2008-04-18T00:00:00+00:00"^^xsd:dateTime ;
+    wdt:P698 "18303019" ;
+    wdt:P921 wd:Q7141 ;
+    wdt:P932 "2447651" .
+
+wd:Q29017194 rdfs:label "N-glycan trimming in the ER and Calnexin/Calreticulin cycle" ;
+    schema:dateModified "2018-03-02T11:10:56+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway N-glycan trimming in the ER and Calnexin/Calreticulin cycle in Homo sapiens" ;
+    schema:version 642204223 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 13 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q29017194-5302F6D9-9E3A-4738-BFEF-432F38DA2BA3> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q29017194-DD5C3D27-B3A2-4621-A665-882AF86232CA> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q29017194-AB50625F-7FBE-4F00-8447-04DF17F2340A>,
+        <http://www.wikidata.org/entity/statement/Q29017194-c50f2d33-4ea1-5782-c147-2ab8e76c24b7> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q29017194-6479876C-4ABA-407D-8DE7-864CF4A2260D> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q29017194-a78136ed-49ba-4604-1d9b-63230dbba9d6> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q29017194-45E6B804-988F-42CA-A319-7AC42903A248>,
+        <http://www.wikidata.org/entity/statement/Q29017194-483A24A4-2E2B-4F43-89EA-403BD7352B10>,
+        <http://www.wikidata.org/entity/statement/Q29017194-4C524AC2-8F23-4323-A341-93467707649A>,
+        <http://www.wikidata.org/entity/statement/Q29017194-57B876E0-01F4-4529-9EBE-816FE7E054C2>,
+        <http://www.wikidata.org/entity/statement/Q29017194-6109D9D6-6A87-4F44-8F9D-6EA4C11EC711>,
+        <http://www.wikidata.org/entity/statement/Q29017194-B0DD604D-A548-4C4F-AC1D-CF4AC11C2590> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q29017194-7CCBE861-89A9-4770-9D29-646E4A94456B> ;
+    wdt:P2860 wd:Q24646392 ;
+    wdt:P2888 <http://identifiers.org/reactome:R-HSA-532668> ;
+    wdt:P31 wd:Q4915012,
+        wd:Q847556 ;
+    wdt:P361 wd:Q45317649 ;
+    wdt:P3937 "R-HSA-532668" ;
+    wdt:P527 wd:Q45317659,
+        wd:Q50296256,
+        wd:Q50296257,
+        wd:Q50296258,
+        wd:Q50296274,
+        wd:Q50296275 ;
+    wdt:P703 wd:Q15978631 .
+
+<http://www.wikidata.org/reference/88f33334e464b69ecb5fc5690e6119be9b17354f> pr:P248 wd:Q2134522 ;
+    pr:P3937 "R-HSA-532668" ;
+    pr:P813 "2018-03-02T00:00:00+00:00"^^xsd:dateTime ;
+    ns1:P813 <http://www.wikidata.org/value/7f8c80245a6de20c98efee69fb9c488f> .
+
