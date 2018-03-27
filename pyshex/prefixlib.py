@@ -1,7 +1,7 @@
 import re
 from typing import Union, Dict, Optional
 
-from rdflib import Namespace, Graph, RDF, RDFS, XSD
+from rdflib import Namespace, Graph, RDF, RDFS, XSD, URIRef
 from rdflib.namespace import DOAP, FOAF, DC, DCTERMS, VOID, SKOS, OWL, XMLNS
 
 
@@ -13,6 +13,7 @@ class PrefixLibrary:
         """
         if schema is not None:
             for line in schema.split('\n'):
+                line = line.strip()
                 m = re.match(r'PREFIX\s+(\S+):\s+<(\S+)>', line)
                 if not m:
                     m = re.match(r"@prefix\s+(\S+):\s+<(\S+)>\s+\.", line)
@@ -42,6 +43,17 @@ class PrefixLibrary:
         for prefix, namespace in self:
             g.bind(prefix.lower(), namespace)
         return self
+
+    def nsname(self, uri: Union[str, URIRef]) -> str:
+        uri = str(uri)
+        nsuri = ""
+        prefix = None
+        for pfx, ns in self:
+            nss = str(ns)
+            if uri.startswith(nss) and len(nss) > len(nsuri):
+                nsuri = nss
+                prefix = pfx
+        return (prefix.lower() + ':' + uri[len(nsuri):]) if prefix is not None else uri
 
 
 standard_prefixes = PrefixLibrary(None, rdf=RDF, rdfs=RDFS, xml=XMLNS, xsd=XSD)

@@ -124,6 +124,40 @@ gw:cancer {
 @prefix xmlns: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .""", g.serialize(format="turtle").decode().strip())
 
+    def test_nsname(self):
+        pl = PrefixLibrary("""@prefix owl: <http://www.w3.org/2002/07/owl#> .
+        @prefix wikibase: <http://wikiba.se/ontology-beta#> .
+        @prefix wds: <http://www.wikidata.org/entity/statement/> .
+        @prefix wdata: <https://www.wikidata.org/wiki/Special:EntityData/> .
+        @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+        @prefix schema: <http://schema.org/> .
+        @prefix cc: <http://creativecommons.org/ns#> .
+        @prefix geo: <http://www.opengis.net/ont/geosparql#> .
+        @prefix prov: <http://www.w3.org/ns/prov#> .
+        @prefix wdref: <http://www.wikidata.org/reference/> .
+        @prefix wdv: <http://www.wikidata.org/value/> .
+        @prefix wd: <http://www.wikidata.org/entity/> .
+        @prefix wdt: <http://www.wikidata.org/prop/direct/> .
+        @prefix wdtn: <http://www.wikidata.org/prop/direct-normalized/> .
+        @prefix p: <http://www.wikidata.org/prop/> .
+        @prefix ps: <http://www.wikidata.org/prop/statement/> .
+        @prefix psv: <http://www.wikidata.org/prop/statement/value/> .
+        @prefix psn: <http://www.wikidata.org/prop/statement/value-normalized/> .
+        @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+        @prefix pqv: <http://www.wikidata.org/prop/qualifier/value/> .
+        @prefix pqn: <http://www.wikidata.org/prop/qualifier/value-normalized/> .
+        @prefix pr: <http://www.wikidata.org/prop/reference/> .
+        @prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+        @prefix prn: <http://www.wikidata.org/prop/reference/value-normalized/> .
+        @prefix wdno: <http://www.wikidata.org/prop/novalue/> .
+
+        and some junk""")
+        self.assertEqual("wdt:penguins", pl.nsname("http://www.wikidata.org/prop/direct/penguins"))
+        self.assertEqual("p:polarbear", pl.nsname("http://www.wikidata.org/prop/polarbear"))
+        self.assertEqual("psn:elf", pl.nsname("http://www.wikidata.org/prop/statement/value-normalized/elf"))
+        self.assertEqual("http://www.wikidata1.org/prop/qualifier/",
+                         pl.nsname("http://www.wikidata1.org/prop/qualifier/"))
+
 
 
 if __name__ == '__main__':

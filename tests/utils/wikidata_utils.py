@@ -1,17 +1,13 @@
 import os
 import unittest
-from collections import namedtuple
-from typing import Optional, List, Dict, NamedTuple, Union, Tuple
+from typing import Optional, List, NamedTuple, Union
 
 import jsonasobj
-
 import requests
-from SPARQLWrapper import SPARQLWrapper, JSON, TURTLE
-from ShExJSG import ShExC
-from jsonasobj import JsonObj, loads
-from rdflib import Graph, URIRef, Literal
+from SPARQLWrapper import SPARQLWrapper, JSON
+from jsonasobj import loads
+from rdflib import URIRef, Literal
 from rdflib.namespace import SKOS
-from requests import Request, Response
 from sparql_slurper import SlurpyGraph
 
 from pyshex import PrefixLibrary, ShExEvaluator
@@ -80,7 +76,7 @@ class WikiDataTestCase(unittest.TestCase):
                 # slurper.debug_slurps = debug_slurps
                 prefixes.add_bindings(slurper)
                 print(f"Evaluating: {df}")
-                results = evaluator.evaluate(rdf=slurper, focus=df, debug=debug, debug_slurps=debug_slurps)
+                results = evaluator.evaluate(rdf=slurper, focus=df, debug=debug, debug_slurps=debug_slurps, over_slurp=False)
                 rval += results
                 if save_graph_dir:
                     element_name = df.rsplit('/', 1)[1]

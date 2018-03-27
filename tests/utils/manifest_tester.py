@@ -16,7 +16,7 @@ from tests.utils.uri_redirector import URIRedirector
 # TODO: Remove this whenever rdflib issue #124 is fixed (https://github.com/RDFLib/rdflib/issues/804)
 sys.setrecursionlimit(1200)
 
-ENTRY_NAME = ''              # Individual element to test
+ENTRY_NAME = 'false-lead-excluding-value-shape'              # Individual element to test
 START_AFTER = ''             # Element to start at (or after)
 
 CONTINUE_ON_FAIL = True
@@ -41,7 +41,7 @@ FOCUS_DATATYPE = "FocusDatatype"
 GREEDY_ISSUE = "Greedy issue - needs resolution"
 
 skip_traits = [SHT.Import, SHT.Include, SHT.BNodeShapeLabel, SHT.ShapeMap, SHT.OutsideBMP,
-               SHT.ToldBNode, SHT.LexicalBNode, SHT.Greedy, SHT.Exhaustive]
+               SHT.ToldBNode, SHT.LexicalBNode]
 
 # We can't do an effective test on relative files when we're rewriting URI's
 if LOCAL_FILE_LOC:
@@ -62,8 +62,6 @@ expected_failures = {
      "focusdatatype_pass": FOCUS_DATATYPE,
      "focusdatatype_pass-empty": FOCUS_DATATYPE,
      "1focusvsORdatatype_pass-dt": FOCUS_DATATYPE,
-     "PstarT": GREEDY_ISSUE,
-     "PstarTstar": GREEDY_ISSUE
 }
 
 
@@ -157,7 +155,7 @@ class ManifestEntryTestCase(unittest.TestCase):
             if ':' not in focus:
                 focus = "file://" + focus
             map_.add(ShapeAssociation(URIRef(focus), ShExJ.IRIREF(me.shape) if me.shape else START))
-            test_result = isValid(cntxt, map_) or not me.should_pass
+            test_result, reasons = isValid(cntxt, map_) or not me.should_pass
 
             # Analyze the result
             if not VERBOSE and not test_result:

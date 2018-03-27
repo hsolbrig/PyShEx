@@ -45,5 +45,5 @@ def evaluate(g: Graph(),
     #     cntxt.debug_context.trace_nodeSatisfies = debug_trace
     map_ = FixedShapeMap()
     map_.add(ShapeAssociation(focus, start))
-    test_result = isValid(cntxt, map_)
-    return test_result, None
+    test_result, reasons = isValid(cntxt, map_)
+    return test_result, '\n'.join(reasons)

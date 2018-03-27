@@ -112,6 +112,7 @@ class Context:
         self.external_shape_for = external_shape_resolver if external_shape_resolver \
             else default_external_shape_resolver
         self.base_namespace = base_namespace
+        self.reasons = []                   # List of failure reasons
         # For SPARQL API's, true means pull ALL predicate objects for a given subject, false means only the
         # predicates that are needed
         self.over_slurp = True
@@ -179,7 +180,10 @@ class Context:
 
     def shapeExprFor(self, id_: Union[ShExJ.shapeExprLabel, START]) -> Optional[ShExJ.shapeExpr]:
         """ Return the shape expression that corresponds to id """
-        return self.schema.start if id_ is START else self.schema_id_map.get(id_)
+        rval = self.schema.start if id_ is START else self.schema_id_map.get(id_)
+        if rval is None:
+            self.reasons.append("No start shape specified" if id_ is START else f"Shape: {id_} not found")
+        return rval
 
     def visit_shapes(self, expr: ShExJ.shapeExpr, f: Callable[[Any, ShExJ.shapeExpr, "Context"], None], arg_cntxt: Any,
                      visit_center: _VisitorCenter = None, follow_inner_shapes: bool=True) -> None:
@@ -275,8 +279,8 @@ class Context:
             visit_center.f(visit_center.arg_cntxt, shape.expression, self)
 
     def start_evaluating(self, n: nodeSelector, s: ShExJ.shapeExpr) -> Optional[bool]:
-        """
-        Indicate that we are beginning to evaluate n in terms of s.
+        """Indicate that we are beginning to evaluate n in terms of s.
+
         :param n: nodeSelector to be evaluated
         :param s: expression for node evaluation
         :return: Assumed evaluation result.  If None, evaluation must be performed

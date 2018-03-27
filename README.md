@@ -65,18 +65,16 @@ This implementation passes all of the tests in the master branch of [validation/
 
 At the moment, there are 1077 tests, of which:
 
-* 960 pass
-* 117 are skipped - reasons:
-1) (44) Tests non-blank blank nodes (`rdflib` does not preserve bnode "identity")
-2) (24) sht:OutsideBMP -- test uses multi byte unicode
-3) (16) Uses ShEx 2.1 IMPORT feature -- not yet implemented
-4) (8) Focus is a non-blank blank node -- cannot implement in `rdflib`
+* 970 pass
+* 107 are skipped - reasons:
+1) (52) sht:toldBNode, sht:LexicalBNode and sht:BNodeShapeLabel test non-blank blank nodes (`rdflib` does not preserve bnode "identity")
+2) (24) sht:OutsideBMP -- test uses multi byte unicode (two aren't tagged)
+3) (16) Uses ShEx 2.1 IMPORT feature -- not yet implemented (three aren't tagged)
 5) (3) Focus is a Literal  -- not yet implemented
 6) (5) Uses ShEx 2.1 INCLUDE feature -- not yet implemented
-7) (3) Uses manifest shapemap feature -- 
+7) (3) Uses manifest shapemap feature -- not yet implemented
 8) (2) sht:relativeIRI -- this isn't a real problem, but we havent taken time to deal with this in the test harness
 9) (2) `rdflib` has a parsing error when escaping single quotes. (Issue submitted, awaiting release)
-10) (1) "false lead" -- unsure why this fails
 
 As mentioned above, at the moment this is as literal an implementation of the specification as was sensible.  This means, in particular, that we are less than clever when it comes to partition management.
 

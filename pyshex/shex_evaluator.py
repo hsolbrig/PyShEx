@@ -36,7 +36,8 @@ class ShExEvaluator:
                  start: Optional[URIPARM] = None,
                  rdf_format: str = "turtle",
                  debug: bool = False,
-                 debug_slurps: bool = False) -> None:
+                 debug_slurps: bool = False,
+                 over_slurp: bool = None) -> None:
         """ Evaluator constructor.  All of the parameters below can be set in the constructor or at runtime
 
         :param rdf: RDF string, file name, URL or Graph for evaluation.
@@ -46,6 +47,7 @@ class ShExEvaluator:
         :param rdf_format: format for RDF. Default: "Turtle"
         :param debug: emit semi-helpful debug information
         :param debug: debug graph fetch calls
+        :param over_slurp: Controls whether SPARQL slurper does exact or over slurps
         """
         self.rdf_format = rdf_format
         self.g = None
@@ -58,6 +60,7 @@ class ShExEvaluator:
         self.start = normalize_uriparm(start)
         self.debug = debug
         self.debug_slurps = debug_slurps
+        self.over_slurp = over_slurp
 
     @property
     def rdf(self) -> str:
@@ -155,7 +158,8 @@ class ShExEvaluator:
                  start: Optional[URIPARM] = None,
                  rdf_format: Optional[str] = None,
                  debug: Optional[bool] = None,
-                 debug_slurps: Optional[bool] = None) -> List[EvaluationResult]:
+                 debug_slurps: Optional[bool] = None,
+                 over_slurp: Optional[bool] = None) -> List[EvaluationResult]:
         if rdf or shex or focus or start:
             if not rdf_format:
                 rdf_format = self.rdf_format
@@ -173,13 +177,13 @@ class ShExEvaluator:
         # TODO: Clean this up
         cntxt.debug_context.trace_satisfies = debug if debug is not None else self.debug
         cntxt.debug_context.trace_slurps = debug_slurps if debug_slurps is not None else self.debug_slurps
-        # cntxt.debug_context.trace_satisfies = cntxt.debug_context.trace_matches = \
-        #     cntxt.debug_context.trace_nodeSatisfies = debug if debug is not None else self.debug
+        cntxt.over_slurp = self.over_slurp if self.over_slurp is not None else self.over_slurp
 
         rval = []
         for start in evaluator.start:
             for focus in evaluator.foci:
                 map_ = FixedShapeMap()
                 map_.add(ShapeAssociation(focus, start))
-                rval.append(EvaluationResult(isValid(cntxt, map_), focus, start, ""))
+                success, fail_reasons = isValid(cntxt, map_)
+                rval.append(EvaluationResult(success, focus, start, '\n'.join(fail_reasons)))
         return rval
