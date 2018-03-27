@@ -10,7 +10,7 @@ if sys.version_info < (3, 6):
 
 setup(
     name='PyShEx',
-    version='0.4.1',
+    version='0.4.2',
     packages=['scripts', 'pyshex', 'pyshex.shape_expressions_language', 'pyshex.shapemap_structure_and_language',
               'pyshex.sparql11_query', 'pyshex.utils'],
     url="http://github.com/hsolbrig/PyShEx",

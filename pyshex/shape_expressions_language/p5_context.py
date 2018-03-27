@@ -293,26 +293,27 @@ class Context:
             return None
         elif key not in self.assumptions:
             self.assumptions[key] = True
-            return True
-        else:
-            return self.assumptions[key]
+        return self.assumptions[key]
 
-    def done_evaluating(self, n: nodeSelector, s: ShExJ.shapeExpr, result: bool) -> bool:
+    def done_evaluating(self, n: nodeSelector, s: ShExJ.shapeExpr, result: bool) -> Tuple[bool, bool]:
         """
         Indicate that we have completed evaluating n in terms of s.
 
         :param n: nodeselector that was evaluated
         :param s: expression for node evaluation
         :param result: result of evaluation
-        :return: True means that evaluation was successful, False means try the evaluation again
+        :return: Tuple - first element is whether we are done, second is whether evaluation was consistent
         """
         key = (n, s.id)
         self.evaluating.remove(key)
         if key not in self.assumptions:
-            return True
+            return True, True
         elif self.assumptions[key] == result:
             del self.assumptions[key]
-            return True
-        else:
+            return True, True
+        elif self.assumptions[key]:
             self.assumptions[key] = False
-            return False
+            return False, True
+        else:
+            self.reasons.append(f"{s.id}: Inconsistent recursive shape reference")
+            return True, False

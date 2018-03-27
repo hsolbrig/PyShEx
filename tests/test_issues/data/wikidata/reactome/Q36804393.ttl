@@ -1,6 +1,4 @@
 @prefix go: <http://purl.obolibrary.org/obo/GO> .
-@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
-@prefix ns2: <http://www.wikidata.org/prop/reference/value/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix po: <http://purl.obolibrary.org/obo/PW> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
@@ -19,216 +17,43 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.wikidata.org/entity/statement/Q36804389-BC62E76F-FC58-49E7-A00B-E988C6D8BD0C> a wikibase:BestRank ;
-    wikibase:rank wikibase:NormalRank ;
-    ps:P3937 "R-HSA-69615" .
-
-<http://www.wikidata.org/entity/statement/Q36804393-2D2CC0C1-A680-4245-B066-6715D1857A4B> a wikibase:BestRank ;
-    wikibase:rank wikibase:NormalRank ;
-    ps:P3937 "R-HSA-69580" .
-
-<http://www.wikidata.org/entity/statement/Q36804393-366A6331-D1EF-4F88-983B-A33CFEE9311C> a wikibase:BestRank ;
-    wikibase:rank wikibase:NormalRank ;
-    prov:wasDerivedFrom wdref:a4a08816fe26394f6591812a549a6929159dfd42 ;
-    ps:P2860 wd:Q37152060 .
-
-<http://www.wikidata.org/entity/statement/Q36804393-7DDFC853-DB58-44D7-9F3C-C24E673B4E34> a wikibase:BestRank ;
-    wikibase:rank wikibase:NormalRank ;
-    prov:wasDerivedFrom wdref:a4a08816fe26394f6591812a549a6929159dfd42 ;
-    ps:P361 wd:Q36804389 .
-
-<http://www.wikidata.org/entity/statement/Q36804393-8738E6A8-14E1-4C08-83A8-977F159B484C> a wikibase:BestRank ;
-    wikibase:rank wikibase:NormalRank ;
-    prov:wasDerivedFrom wdref:a4a08816fe26394f6591812a549a6929159dfd42 ;
-    ps:P703 wd:Q15978631 .
-
-<http://www.wikidata.org/entity/statement/Q36804393-BEF9DDB9-22E9-4489-8B46-341A620BF511> a wikibase:BestRank ;
-    wikibase:rank wikibase:NormalRank ;
-    prov:wasDerivedFrom wdref:a4a08816fe26394f6591812a549a6929159dfd42 ;
-    ps:P527 wd:Q36804398 .
-
-<http://www.wikidata.org/entity/statement/Q36804393-F5A02FFE-8306-47B0-901B-79B2AE469DA7> a wikibase:BestRank ;
-    wikibase:rank wikibase:NormalRank ;
-    prov:wasDerivedFrom wdref:a4a08816fe26394f6591812a549a6929159dfd42 ;
-    ps:P31 wd:Q4915012 .
-
-<http://www.wikidata.org/entity/statement/Q36804398-6AD8E2A4-8566-461F-94B1-29766BE0736C> a wikibase:BestRank ;
-    wikibase:rank wikibase:NormalRank ;
-    ps:P3937 "R-HSA-69563" .
-
-<http://www.wikidata.org/entity/statement/Q37152060-64253394-E841-4A10-83E4-436E754A60D9> a wikibase:BestRank ;
-    wikibase:rank wikibase:NormalRank ;
-    prov:wasDerivedFrom wdref:efb89f84989066c9bc5a73fc2db12328a3cd602f ;
-    ps:P698 "1323840" .
-
-wd:Q36804389 rdfs:label "G1/S DNA Damage Checkpoints" ;
-    schema:dateModified "2017-12-12T10:34:03+00:00"^^xsd:dateTime ;
-    schema:description "An instance of the biological pathway G1/S DNA Damage Checkpoints in Homo sapiens" ;
-    schema:version 607589905 ;
-    wikibase:identifiers 1 ;
-    wikibase:sitelinks 0 ;
-    wikibase:statements 7 ;
-    p:P2888 <http://www.wikidata.org/entity/statement/Q36804389-61B24F37-AD0E-4E87-A1FD-952EFB04FF8A> ;
-    p:P31 <http://www.wikidata.org/entity/statement/Q36804389-B614D154-D2B2-4596-A7A6-4B31FE798342> ;
-    p:P361 <http://www.wikidata.org/entity/statement/Q36804389-7CA5A650-72CD-40B8-A2DC-71713394BC4E> ;
-    p:P3937 <http://www.wikidata.org/entity/statement/Q36804389-BC62E76F-FC58-49E7-A00B-E988C6D8BD0C> ;
-    p:P527 <http://www.wikidata.org/entity/statement/Q36804389-7713A0AD-4C28-45E3-AC5C-74F0E26F63D8>,
-        <http://www.wikidata.org/entity/statement/Q36804389-A5C579F7-0797-4A3B-A491-8BFB8192D890> ;
-    p:P703 <http://www.wikidata.org/entity/statement/Q36804389-64F07389-2C17-453C-82CA-3EB5F7294BE8> ;
-    wdt:P2888 <http://identifiers.org/reactome:R-HSA-69615> ;
-    wdt:P31 wd:Q4915012 ;
-    wdt:P361 wd:Q36804385 ;
-    wdt:P3937 "R-HSA-69615" ;
-    wdt:P527 wd:Q36804393,
-        wd:Q36804524 ;
-    wdt:P703 wd:Q15978631 .
-
-wd:Q36804393 rdfs:label "p53-Dependent G1/S DNA damage checkpoint" ;
-    schema:dateModified "2017-12-12T10:34:06+00:00"^^xsd:dateTime ;
-    schema:description "An instance of the biological pathway p53-Dependent G1/S DNA damage checkpoint in Homo sapiens" ;
-    schema:version 607589934 ;
-    wikibase:identifiers 1 ;
-    wikibase:sitelinks 0 ;
-    wikibase:statements 7 ;
-    p:P2860 <http://www.wikidata.org/entity/statement/Q36804393-366A6331-D1EF-4F88-983B-A33CFEE9311C> ;
-    p:P2888 <http://www.wikidata.org/entity/statement/Q36804393-0E23A2FB-644A-479E-873A-8CC26E5EF38D> ;
+wd:Q36804393 p:P2860 <http://www.wikidata.org/entity/statement/Q36804393-366A6331-D1EF-4F88-983B-A33CFEE9311C> ;
     p:P31 <http://www.wikidata.org/entity/statement/Q36804393-F5A02FFE-8306-47B0-901B-79B2AE469DA7> ;
     p:P361 <http://www.wikidata.org/entity/statement/Q36804393-7DDFC853-DB58-44D7-9F3C-C24E673B4E34> ;
     p:P3937 <http://www.wikidata.org/entity/statement/Q36804393-2D2CC0C1-A680-4245-B066-6715D1857A4B> ;
     p:P527 <http://www.wikidata.org/entity/statement/Q36804393-BEF9DDB9-22E9-4489-8B46-341A620BF511> ;
-    p:P703 <http://www.wikidata.org/entity/statement/Q36804393-8738E6A8-14E1-4C08-83A8-977F159B484C> ;
-    wdt:P2860 wd:Q37152060 ;
-    wdt:P2888 <http://identifiers.org/reactome:R-HSA-69580> ;
-    wdt:P31 wd:Q4915012 ;
-    wdt:P361 wd:Q36804389 ;
-    wdt:P3937 "R-HSA-69580" ;
-    wdt:P527 wd:Q36804398 ;
-    wdt:P703 wd:Q15978631 .
+    p:P703 <http://www.wikidata.org/entity/statement/Q36804393-8738E6A8-14E1-4C08-83A8-977F159B484C> .
 
-wd:Q36804398 rdfs:label "p53-Dependent G1 DNA Damage Response" ;
-    schema:dateModified "2018-03-02T10:23:41+00:00"^^xsd:dateTime ;
-    schema:description "An instance of the biological pathway p53-Dependent G1 DNA Damage Response in Homo sapiens" ;
-    schema:version 642179973 ;
-    wikibase:identifiers 1 ;
-    wikibase:sitelinks 0 ;
-    wikibase:statements 14 ;
-    p:P2860 <http://www.wikidata.org/entity/statement/Q36804398-2CB03F86-1BFC-46E5-AA8F-62B347F6B869>,
-        <http://www.wikidata.org/entity/statement/Q36804398-6267FCD0-19EC-4322-B0AF-A6A40C0D1BD1>,
-        <http://www.wikidata.org/entity/statement/Q36804398-9F14458A-47E0-43FE-BFE5-8F6FF2BF4643>,
-        <http://www.wikidata.org/entity/statement/Q36804398-DB44BCA9-44AA-47DE-B814-FB3F1F69C239> ;
-    p:P2888 <http://www.wikidata.org/entity/statement/Q36804398-97DA275F-A69F-4996-9D81-60F6D56BF7AC> ;
-    p:P31 <http://www.wikidata.org/entity/statement/Q36804398-7CAEDF24-E86A-495E-A789-2C43F27CFB3C>,
-        <http://www.wikidata.org/entity/statement/Q36804398-E0FA35EE-FF87-42C3-AD3D-0ABEFEFE42D4> ;
-    p:P361 <http://www.wikidata.org/entity/statement/Q36804398-58B93C9B-ADFB-4852-82A7-14593D06CC4F> ;
-    p:P3937 <http://www.wikidata.org/entity/statement/Q36804398-6AD8E2A4-8566-461F-94B1-29766BE0736C> ;
-    p:P527 <http://www.wikidata.org/entity/statement/Q36804398-1CC7FBBA-ADEC-453D-8423-5125772E0531>,
-        <http://www.wikidata.org/entity/statement/Q36804398-A8BACD73-418B-44D6-BF03-296F8A9D82FA>,
-        <http://www.wikidata.org/entity/statement/Q36804398-D4C8A338-7C88-4477-B8BF-C965C8645BF2>,
-        <http://www.wikidata.org/entity/statement/Q36804398-DF247BCC-AC12-409D-BA5A-98C8CB274A24> ;
-    p:P703 <http://www.wikidata.org/entity/statement/Q36804398-F36FAA5D-DED3-45E1-91C2-29AA20265171> ;
-    wdt:P2860 wd:Q24322597,
-        wd:Q27860744,
-        wd:Q29615437,
-        wd:Q41511230 ;
-    wdt:P2888 <http://identifiers.org/reactome:R-HSA-69563> ;
-    wdt:P31 wd:Q14818020,
-        wd:Q4915012 ;
-    wdt:P361 wd:Q36804393 ;
-    wdt:P3937 "R-HSA-69563" ;
-    wdt:P527 wd:Q36804403,
-        wd:Q36804479,
-        wd:Q36804515,
-        wd:Q36804520 ;
-    wdt:P703 wd:Q15978631 .
+wd:Q36804389 p:P3937 <http://www.wikidata.org/entity/statement/Q36804389-BC62E76F-FC58-49E7-A00B-E988C6D8BD0C> .
 
-wd:Q37152060 rdfs:label "Wild-type p53 is a cell cycle checkpoint determinant following irradiation." ;
-    schema:dateModified "2018-03-19T17:47:31+00:00"^^xsd:dateTime ;
-    schema:description "article científic",
-        "article scientifique",
-        "articolo scientifico",
-        "artigo científico",
-        "bilimsel makale",
-        "scientific article published on August 1992",
-        "vedecký článok",
-        "vetenskaplig artikel",
-        "videnskabelig artikel",
-        "vědecký článek",
-        "wetenschappelijk artikel",
-        "wissenschaftlicher Artikel",
-        "научни чланак",
-        "مقالة علمية نشرت في أغسطس 1992" ;
-    schema:version 652979308 ;
-    wikibase:identifiers 3 ;
-    wikibase:sitelinks 0 ;
-    wikibase:statements 32 ;
-    p:P1433 <http://www.wikidata.org/entity/statement/Q37152060-E24997CE-5CAF-4174-9FE6-AA9C87811C7D> ;
-    p:P1476 <http://www.wikidata.org/entity/statement/Q37152060-F5A0F6FA-E72A-4A21-9CFF-FE9602BBE890> ;
-    p:P2093 <http://www.wikidata.org/entity/statement/Q37152060-8BBCCA24-F113-48F7-B22B-EF63CAD6BBCA>,
-        <http://www.wikidata.org/entity/statement/Q37152060-9E8DF775-22D4-4F19-8F9E-D96C241FF961>,
-        <http://www.wikidata.org/entity/statement/Q37152060-BC498013-76E3-4337-83C0-CC97D4F934CC>,
-        <http://www.wikidata.org/entity/statement/Q37152060-D4788034-B846-421A-94B4-8C8B03B47046> ;
-    p:P2860 <http://www.wikidata.org/entity/statement/Q37152060-0359A89D-F23A-4A17-A402-96945F13497C>,
-        <http://www.wikidata.org/entity/statement/Q37152060-1145D8E1-5864-4AE1-9876-4F7202FFF70E>,
-        <http://www.wikidata.org/entity/statement/Q37152060-1AB2A5F4-647C-4E12-84EA-41499BF453E1>,
-        <http://www.wikidata.org/entity/statement/Q37152060-1D81EB39-23BE-42FA-A962-72A8E9C196B5>,
-        <http://www.wikidata.org/entity/statement/Q37152060-212D9A6E-0D71-4B9F-870B-9A81F0E407FA>,
-        <http://www.wikidata.org/entity/statement/Q37152060-4AAAF061-0AB0-4ABE-A6F8-1F8E05517B14>,
-        <http://www.wikidata.org/entity/statement/Q37152060-527361BF-21A4-4371-B62E-B7366F552DE1>,
-        <http://www.wikidata.org/entity/statement/Q37152060-62E08837-233E-4BC0-85EC-877700478118>,
-        <http://www.wikidata.org/entity/statement/Q37152060-72C0D6A5-A17B-4BA3-8E34-8023070587A6>,
-        <http://www.wikidata.org/entity/statement/Q37152060-75C8A6AF-4C08-4E9E-82F0-07242777DF5D>,
-        <http://www.wikidata.org/entity/statement/Q37152060-8D165144-CBB7-4C49-B08C-3BD707E117C3>,
-        <http://www.wikidata.org/entity/statement/Q37152060-9517777C-591F-43F6-A6D3-74B4C89874A8>,
-        <http://www.wikidata.org/entity/statement/Q37152060-96249675-9A96-47BC-9BCC-48595D7DEF16>,
-        <http://www.wikidata.org/entity/statement/Q37152060-9A0A5592-AA9F-447F-A7B3-BEB29E807FBD>,
-        <http://www.wikidata.org/entity/statement/Q37152060-C28EB5D8-4CCC-475A-B1CD-C08F35A45F6F>,
-        <http://www.wikidata.org/entity/statement/Q37152060-D75F06B3-DE1A-4B1D-9F0B-27676E10EAF2>,
-        <http://www.wikidata.org/entity/statement/Q37152060-DC60AC83-E2E8-4B0E-9B48-C014D4C85EF3>,
-        <http://www.wikidata.org/entity/statement/Q37152060-E8B89A15-9A6F-4623-91B2-B691AB293498> ;
-    p:P304 <http://www.wikidata.org/entity/statement/Q37152060-D3DA7A9C-54CB-48A3-AC18-3967D06B53C2> ;
-    p:P31 <http://www.wikidata.org/entity/statement/Q37152060-38487403-2512-4480-A9F6-849C49BEA37E> ;
-    p:P356 <http://www.wikidata.org/entity/statement/Q37152060-607F924E-5F01-4689-8270-14A72F4B6381> ;
-    p:P433 <http://www.wikidata.org/entity/statement/Q37152060-A783507C-BA45-43E2-8DA2-0554E4F12474> ;
-    p:P478 <http://www.wikidata.org/entity/statement/Q37152060-F2FA9BE9-5E82-43EA-93E9-0787910BA0A2> ;
-    p:P577 <http://www.wikidata.org/entity/statement/Q37152060-F4D25588-FF22-45D4-A3E2-024AFEB059E0> ;
-    p:P698 <http://www.wikidata.org/entity/statement/Q37152060-64253394-E841-4A10-83E4-436E754A60D9> ;
-    p:P932 <http://www.wikidata.org/entity/statement/Q37152060-9399B122-0925-4C89-B06D-91EA9612535C> ;
-    ns1:P356 <https://doi.org/10.1073/PNAS.89.16.7491> ;
-    wdt:P1433 wd:Q1146531 ;
-    wdt:P1476 "Wild-type p53 is a cell cycle checkpoint determinant following irradiation." ;
-    wdt:P2093 "B S Plunkett",
-        "M B Kastan",
-        "S J Kuerbitz",
-        "W V Walsh" ;
-    wdt:P2860 wd:Q24306376,
-        wd:Q28131705,
-        wd:Q28269089,
-        wd:Q28302973,
-        wd:Q29618318,
-        wd:Q29618319,
-        wd:Q34254691,
-        wd:Q34440370,
-        wd:Q36294484,
-        wd:Q36419108,
-        wd:Q36726260,
-        wd:Q36774976,
-        wd:Q36782441,
-        wd:Q37676784,
-        wd:Q37951208,
-        wd:Q38521196,
-        wd:Q39726699,
-        wd:Q41202194 ;
-    wdt:P304 "7491-7495" ;
-    wdt:P31 wd:Q13442814 ;
-    wdt:P356 "10.1073/PNAS.89.16.7491" ;
-    wdt:P433 "16" ;
-    wdt:P478 "89" ;
-    wdt:P577 "1992-08-01T00:00:00+00:00"^^xsd:dateTime ;
-    wdt:P698 "1323840" ;
-    wdt:P932 "49736" .
+wd:Q36804398 p:P3937 <http://www.wikidata.org/entity/statement/Q36804398-6AD8E2A4-8566-461F-94B1-29766BE0736C> .
+
+wd:Q37152060 p:P698 <http://www.wikidata.org/entity/statement/Q37152060-64253394-E841-4A10-83E4-436E754A60D9> .
+
+<http://www.wikidata.org/entity/statement/Q36804389-BC62E76F-FC58-49E7-A00B-E988C6D8BD0C> ps:P3937 "R-HSA-69615" .
+
+<http://www.wikidata.org/entity/statement/Q36804393-2D2CC0C1-A680-4245-B066-6715D1857A4B> ps:P3937 "R-HSA-69580" .
+
+<http://www.wikidata.org/entity/statement/Q36804393-366A6331-D1EF-4F88-983B-A33CFEE9311C> prov:wasDerivedFrom wdref:a4a08816fe26394f6591812a549a6929159dfd42 ;
+    ps:P2860 wd:Q37152060 .
+
+<http://www.wikidata.org/entity/statement/Q36804393-7DDFC853-DB58-44D7-9F3C-C24E673B4E34> prov:wasDerivedFrom wdref:a4a08816fe26394f6591812a549a6929159dfd42 ;
+    ps:P361 wd:Q36804389 .
+
+<http://www.wikidata.org/entity/statement/Q36804393-8738E6A8-14E1-4C08-83A8-977F159B484C> prov:wasDerivedFrom wdref:a4a08816fe26394f6591812a549a6929159dfd42 ;
+    ps:P703 wd:Q15978631 .
+
+<http://www.wikidata.org/entity/statement/Q36804393-BEF9DDB9-22E9-4489-8B46-341A620BF511> prov:wasDerivedFrom wdref:a4a08816fe26394f6591812a549a6929159dfd42 ;
+    ps:P527 wd:Q36804398 .
+
+<http://www.wikidata.org/entity/statement/Q36804393-F5A02FFE-8306-47B0-901B-79B2AE469DA7> prov:wasDerivedFrom wdref:a4a08816fe26394f6591812a549a6929159dfd42 ;
+    ps:P31 wd:Q4915012 .
+
+<http://www.wikidata.org/entity/statement/Q36804398-6AD8E2A4-8566-461F-94B1-29766BE0736C> ps:P3937 "R-HSA-69563" .
+
+<http://www.wikidata.org/entity/statement/Q37152060-64253394-E841-4A10-83E4-436E754A60D9> ps:P698 "1323840" .
 
 wdref:a4a08816fe26394f6591812a549a6929159dfd42 pr:P248 wd:Q2134522 ;
     pr:P3937 "R-HSA-69580" ;
-    pr:P813 "2017-12-12T00:00:00+00:00"^^xsd:dateTime ;
-    ns2:P813 <http://www.wikidata.org/value/7c6e303e2f33a755d588bc343eb9ce9e> .
+    pr:P813 "2017-12-12T00:00:00+00:00"^^xsd:dateTime .
 

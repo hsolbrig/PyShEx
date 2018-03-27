@@ -10,6 +10,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.3.0 -- Fix several issues.  Still does not pass all unit tests -- see `test_manifest.py` for details
 * 0.4.0 -- Added sparql_slurper capabilities. 
 * 0.4.1 -- Resolves several issues with reactome and disease test cases
+* 0.4.2 -- Fix issues #13 (missing start) and #14 (Inconsistent shape causes loop)
 
 ## Installation
 ```bash

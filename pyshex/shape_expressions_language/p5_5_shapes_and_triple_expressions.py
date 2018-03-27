@@ -34,7 +34,7 @@ def satisfiesShape(cntxt: Context, n: nodeSelector, S: ShExJ.Shape) -> bool:
     """
 
     # Recursion detection.  If start_evaluating returns a boolean value, this is the assumed result of the shape
-    # evaluation.  If it doesn't, evaluation is needed
+    # evaluation.  If it returns None, then an initial evaluation is needed
     rslt = cntxt.start_evaluating(n, S)
 
     predicates = directed_predicates_in_expression(S, cntxt)
@@ -64,13 +64,15 @@ def satisfiesShape(cntxt: Context, n: nodeSelector, S: ShExJ.Shape) -> bool:
         # TODO: Is this working correctly on reverse items?
         non_matchables = RDFGraph([t for t in arcsOut(cntxt.graph, n) if t not in matchables])
         if len(non_matchables):
+            cntxt.reasons.append("Unmatched triples in CLOSED shape:")
+            cntxt.reasons += [f"\t{t}" for t in non_matchables]
             if c.trace_satisfies:
                 print(c.i(c.satisfies_depth,
                           f"<--- Satisfies shape {c.d()} FAIL - "
                           f"{len(non_matchables)} non-matching triples on a closed shape"))
                 print(c.i(c.satisfies_depth+1, "", non_matchables))
                 print()
-            return False
+            rslt = False
 
     if rslt is None:
         # Evaluate the actual expression.  Start assuming everything matches...
@@ -90,28 +92,15 @@ def satisfiesShape(cntxt: Context, n: nodeSelector, S: ShExJ.Shape) -> bool:
                         if matches(cntxt, permutation, S.expression):
                             rslt = True
                             break
-                # print("Counting partitions")
-                # total_partitions = len(list(partition_2(matchables)))
-                # if total_partitions > 100:
-                #     print("HERE")
-                # partition_count = 0
-                # for matched, remainder in partition_2(matchables):
-                #     partition_count += 1
-                #     if partition_count % 10 == 0:
-                #         print(f"@ {partition_count} or {total_partitions} @@@@@@")
-                #     if len(remainder):
-                #         if c.trace_satisfies:
-                #             print(c.i(c.satisfies_depth+1, f"matching: {len(matched)}, remainder: {len(remainder)}"))
-                #         if matches(cntxt, matched, S.expression) and valid_remainder(cntxt, n, remainder, S):
-                #             rslt = True
-                #             break
                 rslt = rslt or False
         else:
-            return True
+            rslt = True         # Empty shape
 
         # If an assumption was made and the result doesn't match the assumption, switch directions and try again
-        if not cntxt.done_evaluating(n, S, rslt):
+        done, consistent = cntxt.done_evaluating(n, S, rslt)
+        if not done:
             rslt = satisfiesShape(cntxt, n, S)
+        rslt = rslt and consistent
     if c.trace_satisfies:
         print(c.i(c.satisfies_depth, f"<--- Satisfies shape {c.d()} {rslt}"))
     return rslt
