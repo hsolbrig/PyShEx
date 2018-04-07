@@ -16,6 +16,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.4.0 -- Added sparql_slurper capabilities. 
 * 0.4.1 -- Resolves several issues with reactome and disease test cases
 * 0.4.2 -- Fix issues #13 (missing start) and #14 (Inconsistent shape causes loop)
+* 0.4.3 -- Fix issues #16 and #15 and some refactoring
 
 ## Installation
 ```bash
