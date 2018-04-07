@@ -2,13 +2,12 @@ from typing import Union, Optional
 
 from ShExJSG import ShExJ
 from ShExJSG.ShExJ import IRIREF
-from rdflib import URIRef, Literal, XSD
+from rdflib import URIRef, Literal
 
-from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
-from pyshex.sparql11_query.p17_1_operand_data_types import is_decimal, is_integer
+from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node
 
 
-def objectValueMatches(n: nodeSelector, vsv: ShExJ.objectValue) -> bool:
+def objectValueMatches(n: Node, vsv: ShExJ.objectValue) -> bool:
     """ http://shex.io/shex-semantics/#values
 
     Implements "n = vsv" where vsv is an objectValue and n is a Node

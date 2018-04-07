@@ -12,16 +12,15 @@ from ShExJSG.ShExJ import Schema
 from pyjsg.jsglib.jsg import isinstance_
 from rdflib import Graph, BNode, Namespace
 
-from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector, START
+from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node
+from pyshex.shapemap_structure_and_language.p3_shapemap_structure import START
 
 
 class DebugContext:
     def __init__(self):
-        self.trace_indent = 0
         self.trace_satisfies = False
         self.trace_slurps = False
         self.satisfies_depth = 0
-        self.eachof_depth = 0
 
     def d(self) -> str:
         """ Return a depth indicator """
@@ -35,7 +34,7 @@ class DebugContext:
 
     @staticmethod
     def s(ndeep) -> str:
-        return '\t' * ndeep
+        return '\t' * (ndeep - 1)
 
     @staticmethod
     def rs(ndeep) -> str:
@@ -45,6 +44,8 @@ class DebugContext:
     def i(ndeep: int, txt: str, txt_list: Optional[List[object]]=None) -> str:
         if txt_list is None:
             txt_list = []
+        elif len(txt_list) > 1:
+            txt_list.insert(0, '')
         return DebugContext.s(ndeep) + txt + ' ' + DebugContext.rs(ndeep+1).join(str(e) for e in txt_list)
 
 
@@ -120,8 +121,8 @@ class Context:
         # A list of node selectors/shape expressions that are being evaluated.  If we attempt to evaluate
         # an entry for a second time, we, instead, put the entry into the assumptions table.  We start with 'true'
         # and, if the result is 'true' then we count it as success.  If not, we switch to false and try again
-        self.evaluating: List[Tuple[nodeSelector, ShExJ.shapeExpr]] = []
-        self.assumptions: Dict[Tuple[nodeSelector, ShExJ.shapeExpr], bool] = {}
+        self.evaluating: List[Tuple[Node, ShExJ.shapeExpr]] = []
+        self.assumptions: Dict[Tuple[Node, ShExJ.shapeExpr], bool] = {}
 
         # Debugging options
         self.debug_context = DebugContext()
@@ -278,10 +279,10 @@ class Context:
         if isinstance(shape, ShExJ.Shape) and shape.expression is not None:
             visit_center.f(visit_center.arg_cntxt, shape.expression, self)
 
-    def start_evaluating(self, n: nodeSelector, s: ShExJ.shapeExpr) -> Optional[bool]:
+    def start_evaluating(self, n: Node, s: ShExJ.shapeExpr) -> Optional[bool]:
         """Indicate that we are beginning to evaluate n in terms of s.
 
-        :param n: nodeSelector to be evaluated
+        :param n: Node to be evaluated
         :param s: expression for node evaluation
         :return: Assumed evaluation result.  If None, evaluation must be performed
         """
@@ -295,11 +296,11 @@ class Context:
             self.assumptions[key] = True
         return self.assumptions[key]
 
-    def done_evaluating(self, n: nodeSelector, s: ShExJ.shapeExpr, result: bool) -> Tuple[bool, bool]:
+    def done_evaluating(self, n: Node, s: ShExJ.shapeExpr, result: bool) -> Tuple[bool, bool]:
         """
         Indicate that we have completed evaluating n in terms of s.
 
-        :param n: nodeselector that was evaluated
+        :param n: Node that was evaluated
         :param s: expression for node evaluation
         :param result: result of evaluation
         :return: Tuple - first element is whether we are done, second is whether evaluation was consistent

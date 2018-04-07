@@ -1,0 +1,67 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix gw: <http://micel.io/genewiki/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q604075 p:P1550 <http://www.wikidata.org/entity/statement/Q604075-D398F142-0EF7-4432-9D9E-639C28BF70B5> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q604075-23191585-FCDA-41CB-A7EB-A6A0EC0A6411> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q604075-91ce89bb-4998-873d-e439-cf7100816990>,
+        <http://www.wikidata.org/entity/statement/Q604075-F8444A2E-C3DC-4D2F-AF8E-A5AA30DC8B2A> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q604075-8EF196AA-AFC4-4D35-8F57-73F8B1654356>,
+        <http://www.wikidata.org/entity/statement/Q604075-E3C0A26B-198D-4FEF-A4B1-23DC84CA6D8C> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q604075-0C257E9C-EA51-432B-AAC1-0AD913A71A62> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q604075-8DE6C7F3-C62E-4F72-A640-527EAFD82C03> ;
+    p:P486 <http://www.wikidata.org/entity/statement/q604075-0D966F15-73BE-4466-ACAB-0782FB209327> ;
+    p:P492 <http://www.wikidata.org/entity/statement/q604075-F81F9878-D3CB-4515-8B67-202007CDE0B5> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q604075-ECAE6467-E549-4C46-A4F4-8E0B2CA3622F> .
+
+<http://www.wikidata.org/entity/statement/Q604075-0C257E9C-EA51-432B-AAC1-0AD913A71A62> prov:wasDerivedFrom <http://www.wikidata.org/reference/da3cde28e28cd90be8be223c25a3ba8ce7175a9f> ;
+    ps:P2892 "C0025268" .
+
+<http://www.wikidata.org/entity/statement/Q604075-23191585-FCDA-41CB-A7EB-A6A0EC0A6411> prov:wasDerivedFrom <http://www.wikidata.org/reference/da3cde28e28cd90be8be223c25a3ba8ce7175a9f> ;
+    ps:P1748 "C3226" .
+
+<http://www.wikidata.org/entity/statement/Q604075-8DE6C7F3-C62E-4F72-A640-527EAFD82C03> prov:wasDerivedFrom <http://www.wikidata.org/reference/da3cde28e28cd90be8be223c25a3ba8ce7175a9f> ;
+    ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/entity/statement/Q604075-8EF196AA-AFC4-4D35-8F57-73F8B1654356> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
+    ps:P2888 <http://identifiers.org/doid/DOID:0050430> .
+
+<http://www.wikidata.org/entity/statement/Q604075-D398F142-0EF7-4432-9D9E-639C28BF70B5> prov:wasDerivedFrom <http://www.wikidata.org/reference/da3cde28e28cd90be8be223c25a3ba8ce7175a9f> ;
+    ps:P1550 "247698" .
+
+<http://www.wikidata.org/entity/statement/Q604075-E3C0A26B-198D-4FEF-A4B1-23DC84CA6D8C> prov:wasDerivedFrom <http://www.wikidata.org/reference/da3cde28e28cd90be8be223c25a3ba8ce7175a9f> ;
+    ps:P2888 <http://purl.obolibrary.org/obo/DOID_0050430> .
+
+<http://www.wikidata.org/entity/statement/Q604075-ECAE6467-E549-4C46-A4F4-8E0B2CA3622F> prov:wasDerivedFrom <http://www.wikidata.org/reference/da3cde28e28cd90be8be223c25a3ba8ce7175a9f> ;
+    ps:P699 "DOID:0050430" .
+
+<http://www.wikidata.org/entity/statement/Q604075-F8444A2E-C3DC-4D2F-AF8E-A5AA30DC8B2A> prov:wasDerivedFrom <http://www.wikidata.org/reference/da3cde28e28cd90be8be223c25a3ba8ce7175a9f> .
+
+<http://www.wikidata.org/entity/statement/q604075-0D966F15-73BE-4466-ACAB-0782FB209327> prov:wasDerivedFrom <http://www.wikidata.org/reference/da3cde28e28cd90be8be223c25a3ba8ce7175a9f> ;
+    ps:P486 "D018813" .
+
+<http://www.wikidata.org/entity/statement/q604075-F81F9878-D3CB-4515-8B67-202007CDE0B5> prov:wasDerivedFrom <http://www.wikidata.org/reference/da3cde28e28cd90be8be223c25a3ba8ce7175a9f> ;
+    ps:P492 "171400" .
+
+<http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> pr:P248 wd:Q16335166 ;
+    pr:P854 <http://www.ebi.ac.uk/miriam/main/collections/MIR:00000233> .
+
+<http://www.wikidata.org/reference/da3cde28e28cd90be8be223c25a3ba8ce7175a9f> pr:P248 wd:Q50349458 ;
+    pr:P699 "DOID:0050430" ;
+    pr:P813 "2018-03-05T00:00:00+00:00"^^xsd:dateTime .
+

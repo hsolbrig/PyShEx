@@ -1,9 +1,12 @@
 """ Implementation of `5.2 Validation Definition <http://shex.io/shex-semantics/#validation>`_ """
 from typing import Tuple, List
 
+from pyjsg.jsglib.jsg import isinstance_
+
 from pyshex.shape_expressions_language.p5_3_shape_expressions import satisfies
 from pyshex.shape_expressions_language.p5_context import Context
-from pyshex.shapemap_structure_and_language.p3_shapemap_structure import FixedShapeMap, START
+from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node
+from pyshex.shapemap_structure_and_language.p3_shapemap_structure import FixedShapeMap, START, nodeSelector
 
 
 def isValid(cntxt: Context, m: FixedShapeMap) -> Tuple[bool, List[str]]:
@@ -17,8 +20,14 @@ def isValid(cntxt: Context, m: FixedShapeMap) -> Tuple[bool, List[str]]:
     :param m: list of NodeShape pairs to test
     :return: Success/failure indicator and, if fail, a list of failure reasons
     """
-    return all(s is not None and satisfies(cntxt, n, s)
+    return all(s is not None and _isValidSelector(n) and satisfies(cntxt, n, s)
                for n, s in [(e.nodeSelector,
                              cntxt.shapeExprFor(e.shapeLabel if e.shapeLabel is START else
                                                 START if e.shapeLabel is None else str(e.shapeLabel))) for e in m]), \
-           cntxt.reasons
+        cntxt.reasons
+
+
+def _isValidSelector(n: nodeSelector) -> bool:
+    if not isinstance_(n, Node):
+        raise NotImplementedError(f"Triple Patterns are not implemented: {n}")
+    return True

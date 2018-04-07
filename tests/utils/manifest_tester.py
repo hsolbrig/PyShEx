@@ -16,7 +16,7 @@ from tests.utils.uri_redirector import URIRedirector
 # TODO: Remove this whenever rdflib issue #124 is fixed (https://github.com/RDFLib/rdflib/issues/804)
 sys.setrecursionlimit(1200)
 
-ENTRY_NAME = 'false-lead-excluding-value-shape'              # Individual element to test
+ENTRY_NAME = ''              # Individual element to test
 START_AFTER = ''             # Element to start at (or after)
 
 CONTINUE_ON_FAIL = True
@@ -155,7 +155,8 @@ class ManifestEntryTestCase(unittest.TestCase):
             if ':' not in focus:
                 focus = "file://" + focus
             map_.add(ShapeAssociation(URIRef(focus), ShExJ.IRIREF(me.shape) if me.shape else START))
-            test_result, reasons = isValid(cntxt, map_) or not me.should_pass
+            rslt = isValid(cntxt, map_)
+            test_result, reasons = rslt[0] or not me.should_pass, rslt[1]
 
             # Analyze the result
             if not VERBOSE and not test_result:

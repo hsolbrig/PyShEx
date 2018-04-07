@@ -18,7 +18,7 @@ setup(
     author='Harold Solbrig',
     author_email='solbrig@solbrig-informatics.com',
     description='Python ShEx Implementation',
-    install_requires=['ShExJSG>=0.1.2', 'PyShExC>=0.3.0', 'rdflib>=4.2.2', 'rdflib-jsonld>=0.4.0', 'requests',
+    install_requires=['ShExJSG>=0.2.1', 'PyShExC>=0.3.2', 'rdflib>=4.2.2', 'rdflib-jsonld>=0.4.0', 'requests',
                       'urllib3'],
     tests_require=['PyJSG', 'jsonasobj', 'SPARQLWrapper', 'sparql_slurper'],
     classifiers=[

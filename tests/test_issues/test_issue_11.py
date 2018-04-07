@@ -14,13 +14,13 @@ class FalsePositiveTestCase(unittest.TestCase):
     def test_false_positive_minimum(self):
         with open(os.path.join(self.test_data, 'disease_min.shex')) as f:
             shex = f.read()
-        e = ShExEvaluator(os.path.join(self.test_data, 'Q12214_min.ttl'), shex, WIKIDATA.Q12214, debug=True)
+        e = ShExEvaluator(os.path.join(self.test_data, 'Q12214_min.ttl'), shex, WIKIDATA.Q12214, debug=False)
         self.assertFalse(e.evaluate()[0].result)
 
     def test_false_positive_minimum_2(self):
         with open(os.path.join(self.test_data, 'disease_min.shex')) as f:
             shex = f.read()
-        e = ShExEvaluator(os.path.join(self.test_data, 'Q12214_min_2.ttl'), shex, WIKIDATA.Q12214, debug=True)
+        e = ShExEvaluator(os.path.join(self.test_data, 'Q12214_min_2.ttl'), shex, WIKIDATA.Q12214, debug=False)
         self.assertFalse(e.evaluate()[0].result)
 
     def test_false_positive(self):

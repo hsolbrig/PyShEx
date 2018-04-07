@@ -1,0 +1,27 @@
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix po: <http://purl.obolibrary.org/obo/PW> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix react: <http://micel.io/reactome/> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q45316542 p:P2860 <http://www.wikidata.org/entity/statement/Q45316542-0ADBE112-8210-4E06-8018-B87B99FD224D>,
+        <http://www.wikidata.org/entity/statement/Q45316542-D78929C5-FE3D-487B-9EEB-43983F88E0BD> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q45316542-6D21DDDD-405C-42D2-AC30-80B0536C303D> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q45316542-15D3326F-6C5F-44BA-A37B-B86C19BAD9D5> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q45316542-E2F64FBD-E7BC-40D4-AA73-D2306FA09C5C> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q45316542-5F70D893-6392-4D95-BBC2-45AFACDC627B> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q45316542-085CED16-8D14-4FC9-9837-E787C2879BFF> .
+

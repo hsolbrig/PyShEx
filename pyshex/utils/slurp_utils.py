@@ -1,17 +1,17 @@
 import sys
 from contextlib import AbstractContextManager
-from rdflib import Graph
 
 from ShExJSG import ShExJ
+from rdflib import Graph
 from sparql_slurper import SlurpyGraph
 
 from pyshex.shape_expressions_language.p5_context import Context
-from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
+from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node
 
 
 class slurper(AbstractContextManager):
 
-    def __init__(self, cntxt: Context, n: nodeSelector, S: ShExJ.Shape):
+    def __init__(self, cntxt: Context, n: Node, S: ShExJ.Shape):
         self.graph: SlurpyGraph = cntxt.graph
         self.tracing = isinstance(self.graph, SlurpyGraph) and cntxt.debug_context.trace_slurps
         self.n = n

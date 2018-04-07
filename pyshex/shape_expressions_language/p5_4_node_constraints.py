@@ -1,21 +1,22 @@
 """ Implementation of `5.4 <http://shex.io/shex-semantics/#node-constraints>`_"""
 
 import numbers
-from typing import Union, Optional
+from typing import Union
 
 from ShExJSG import ShExJ
 from pyjsg.jsglib.jsg import isinstance_
 from rdflib import URIRef, BNode, Literal, XSD, RDF
 
-from pyshex.shape_expressions_language.p5_context import Context
+from pyshex.shape_expressions_language.p5_context import Context, DebugContext
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node
-from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
 from pyshex.sparql11_query.p17_1_operand_data_types import is_sparql_operand_datatype, is_numeric
 from pyshex.utils.datatype_utils import can_cast_to, total_digits, fraction_digits, pattern_match, map_object_literal
+from pyshex.utils.trace_utils import trace_satisfies
 from pyshex.utils.value_set_utils import objectValueMatches, uriref_startswith_iriref, uriref_matches_iriref
 
 
-def satisfies2(cntxt: Context, n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
+@trace_satisfies()
+def satisfiesNodeConstraint(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, _: DebugContext) -> bool:
     """ `5.4.1 Semantics <http://shex.io/shex-semantics/#node-constraint-semantics>`_
 
     For a node n and constraint nc, satisfies2(n, nc) if and only if for every nodeKind, datatype, xsFacet and
@@ -27,7 +28,8 @@ def satisfies2(cntxt: Context, n: nodeSelector, nc: ShExJ.NodeConstraint) -> boo
         nodeSatisfiesValues(cntxt, n, nc)
 
 
-def nodeSatisfiesNodeKind(_: Context, n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
+@trace_satisfies(newline=False, skip_trace=lambda nc: nc.nodeKind is None)
+def nodeSatisfiesNodeKind(_: Context, n: Node, nc: ShExJ.NodeConstraint, c: DebugContext) -> bool:
     """ `5.4.2 Node Kind Constraints <http://shex.io/shex-semantics/#nodeKind>`_
 
     For a node n and constraint value v, nodeSatisfies(n, v) if:
@@ -37,6 +39,8 @@ def nodeSatisfiesNodeKind(_: Context, n: nodeSelector, nc: ShExJ.NodeConstraint)
         * v = "literal" and n is a Literal.
         * v = "nonliteral" and n is an IRI or blank node.
     """
+    if c.trace_satisfies and nc.nodeKind is not None:
+        print(f" Kind: {nc.nodeKind}")
     return nc.nodeKind is None or \
         (nc.nodeKind == 'iri' and isinstance(n, URIRef)) or \
         (nc.nodeKind == 'bnode' and isinstance(n, BNode)) or \
@@ -44,7 +48,8 @@ def nodeSatisfiesNodeKind(_: Context, n: nodeSelector, nc: ShExJ.NodeConstraint)
         (nc.nodeKind == 'nonliteral' and isinstance(n, (URIRef, BNode)))
 
 
-def nodeSatisfiesDataType(_: Context, n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
+@trace_satisfies(newline=False, skip_trace=lambda nc: nc.datatype is None)
+def nodeSatisfiesDataType(_: Context, n: Node, nc: ShExJ.NodeConstraint, c: DebugContext) -> bool:
     """ `5.4.3 Datatype Constraints <http://shex.io/shex-semantics/#datatype>`_
 
     For a node n and constraint value v, nodeSatisfies(n, v) if n is an Literal with the datatype v and, if v is in
@@ -53,19 +58,27 @@ def nodeSatisfiesDataType(_: Context, n: nodeSelector, nc: ShExJ.NodeConstraint)
     supported by SPARQL MUST be tested but ShEx extensions MAY add support for other datatypes.
     """
     # TODO: reconcile this with rdflib and the spec
-    # TODO: for all of these situations, create a special error when nodeSelector is None
-    return nc.datatype is None or \
-        (str(_datatype(n)) == nc.datatype and
-         (not is_sparql_operand_datatype(nc.datatype) or (n.datatype is not None and can_cast_to(n, nc.datatype))))
+    # TODO: for all of these situations, create a special error when Node is None
+    if nc.datatype is None:
+        return True
+    if c.trace_satisfies:
+        print(f" Datatype: {nc.datatype}")
+    if not isinstance(n, Literal):
+        return False
+    actual_datatype = _datatype(n)
+    return actual_datatype == str(nc.datatype) or \
+        (is_sparql_operand_datatype(nc.datatype) and can_cast_to(n, nc.datatype))
 
 
-def _datatype(n: nodeSelector) -> Optional[str]:
-    return None if not isinstance(n, Literal) \
-        else str(RDF.langString) if (n.datatype is None or n.datatype == XSD.string) and n.language else \
+def _datatype(n: Literal) -> str:
+    return str(RDF.langString) if (n.datatype is None or n.datatype == XSD.string) and n.language else \
+        str(XSD.string) if n.datatype is None else \
         str(n.datatype)
 
 
-def nodeSatisfiesStringFacet(_: Context, n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
+@trace_satisfies(skip_trace=lambda nc: nc.length.val is None and nc.minlength.val is None and
+                                       nc.maxlength.val is None and nc.pattern.val is None)
+def nodeSatisfiesStringFacet(_: Context, n: Node, nc: ShExJ.NodeConstraint, _c: DebugContext) -> bool:
     """ `5.4.5 XML Schema String Facet Constraints <ttp://shex.io/shex-semantics/#xs-string>`_
 
      String facet constraints apply to the lexical form of the RDF Literals and IRIs and blank node
@@ -104,7 +117,10 @@ def nodeSatisfiesStringFacet(_: Context, n: nodeSelector, nc: ShExJ.NodeConstrai
         return True
 
 
-def nodeSatisfiesNumericFacet(_: Context, n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
+@trace_satisfies(newline=True, skip_trace=lambda nc: nc.mininclusive.val is None and nc.minexclusive.val is None and
+                                                  nc.maxinclusive.val is None and nc.maxexclusive.val is None and
+                                                  nc.totaldigits.val is None and nc.fractiondigits.val is None)
+def nodeSatisfiesNumericFacet(_: Context, n: Node, nc: ShExJ.NodeConstraint, _c: DebugContext) -> bool:
     """ `5.4.5 XML Schema Numeric Facet Constraints <http://shex.io/shex-semantics/#xs-numeric>`_
 
     Numeric facet constraints apply to the numeric value of RDF Literals with datatypes listed in SPARQL 1.1
@@ -131,7 +147,8 @@ def nodeSatisfiesNumericFacet(_: Context, n: nodeSelector, nc: ShExJ.NodeConstra
     return True
 
 
-def nodeSatisfiesValues(cntxt: Context, n: nodeSelector, nc: ShExJ.NodeConstraint) -> bool:
+@trace_satisfies(skip_trace=lambda nc: nc.values is None)
+def nodeSatisfiesValues(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, _c: DebugContext) -> bool:
     """ `5.4.5 Values Constraint <http://shex.io/shex-semantics/#values>`_
 
      For a node n and constraint value v, nodeSatisfies(n, v) if n matches some valueSetValue vsv in v.
@@ -139,7 +156,7 @@ def nodeSatisfiesValues(cntxt: Context, n: nodeSelector, nc: ShExJ.NodeConstrain
     return any(_nodeSatisfiesValue(cntxt, n, vsv) for vsv in nc.values) if nc.values is not None else True
 
 
-def _nodeSatisfiesValue(cntxt: Context, n: nodeSelector, vsv: ShExJ.valueSetValue) -> bool:
+def _nodeSatisfiesValue(cntxt: Context, n: Node, vsv: ShExJ.valueSetValue) -> bool:
     """
     A term matches a valueSetValue if:
         * vsv is an objectValue and n = vsv.
@@ -236,7 +253,7 @@ def nodeInLanguageStem(_: Context, n: Node, s: ShExJ.LanguageStem) -> bool:
         (isinstance(n, Literal) and n.language is not None and str(n.language).startswith(str(s)))
 
 
-def nodeInBnodeStem(cntxt: Context, n: Node, s: Union[str, ShExJ.Wildcard]) -> bool:
+def nodeInBnodeStem(_cntxt: Context, _n: Node, _s: Union[str, ShExJ.Wildcard]) -> bool:
     """ http://shex.io/shex-semantics/#values
 
         **nodeIn**: asserts that an RDF node n is equal to an RDF term s or is in a set defined by a

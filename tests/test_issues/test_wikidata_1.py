@@ -48,7 +48,7 @@ class WikiDataTestCase(unittest.TestCase):
     def test_wikidata_2(self):
         pfx = PrefixLibrary(shex_schema, wikidata="http://www.wikidata.org/entity/")
         evaluator = ShExEvaluator(self.test_path, shex_schema, pfx.WIKIDATA.Q18557112)
-        print(evaluator.evaluate(start=pfx.GW.cancer, debug=True))
+        print(evaluator.evaluate(start=pfx.GW.cancer, debug=False))
 
 
 if __name__ == '__main__':

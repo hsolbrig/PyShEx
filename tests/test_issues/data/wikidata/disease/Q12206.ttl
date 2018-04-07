@@ -27,29 +27,3 @@ wd:Q12206 p:P1550 <http://www.wikidata.org/entity/statement/Q12206-e0a0dfd0-48dc
     p:P486 <http://www.wikidata.org/entity/statement/Q12206-2DCF9818-CACB-4144-BFBC-01431817BE76> ;
     p:P699 <http://www.wikidata.org/entity/statement/Q12206-AEFD888E-5635-42D0-80EB-2C0C2E9A9FE2> .
 
-<http://www.wikidata.org/entity/statement/Q12206-2DCF9818-CACB-4144-BFBC-01431817BE76> prov:wasDerivedFrom <http://www.wikidata.org/reference/b6855f04e09d10fbde84792d78e619a55270a156> ;
-    ps:P486 "D003920" .
-
-<http://www.wikidata.org/entity/statement/Q12206-2FBAB73B-2FB7-4DD5-BED9-571F24FE4295> prov:wasDerivedFrom <http://www.wikidata.org/reference/b6855f04e09d10fbde84792d78e619a55270a156> ;
-    ps:P2888 <http://purl.obolibrary.org/obo/DOID_9351> .
-
-<http://www.wikidata.org/entity/statement/Q12206-56A68B5F-D22C-4F98-9D77-F0C44B25221A> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
-    ps:P2888 <http://identifiers.org/doid/DOID:9351> .
-
-<http://www.wikidata.org/entity/statement/Q12206-87DF6A00-5815-4C33-BCB7-6B9AD42CE6EE> prov:wasDerivedFrom <http://www.wikidata.org/reference/b6855f04e09d10fbde84792d78e619a55270a156> .
-
-<http://www.wikidata.org/entity/statement/Q12206-87EBB20B-2A16-4D75-965B-E729D3FBCCEB> prov:wasDerivedFrom <http://www.wikidata.org/reference/b6855f04e09d10fbde84792d78e619a55270a156> ;
-    ps:P31 wd:Q12136 .
-
-<http://www.wikidata.org/entity/statement/Q12206-AEFD888E-5635-42D0-80EB-2C0C2E9A9FE2> prov:wasDerivedFrom <http://www.wikidata.org/reference/b6855f04e09d10fbde84792d78e619a55270a156> ;
-    ps:P699 "DOID:9351" .
-
-<http://www.wikidata.org/entity/statement/Q12206-e0a0dfd0-48dc-49c8-0962-b14a237eac2d> ps:P1550 "101952" .
-
-<http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> pr:P248 wd:Q16335166 ;
-    pr:P854 <http://www.ebi.ac.uk/miriam/main/collections/MIR:00000233> .
-
-<http://www.wikidata.org/reference/b6855f04e09d10fbde84792d78e619a55270a156> pr:P248 wd:Q50349458 ;
-    pr:P699 "DOID:9351" ;
-    pr:P813 "2018-03-05T00:00:00+00:00"^^xsd:dateTime .
-

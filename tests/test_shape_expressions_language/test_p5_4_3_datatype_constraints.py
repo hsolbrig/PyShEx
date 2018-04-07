@@ -2,7 +2,7 @@ import unittest
 
 from rdflib import RDFS
 
-from tests.utils.setup_test import rdf_header, setup_test, EX, setup_context
+from tests.utils.setup_test import rdf_header, EX, setup_context
 
 shex_1 = """{ "type": "Schema", "shapes": [
   { "id": "http://schema.example/IssueShape",

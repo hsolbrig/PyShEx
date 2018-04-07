@@ -64,10 +64,6 @@ wd:Q11085 p:P1550 <http://www.wikidata.org/entity/statement/Q11085-579C1ADA-448E
 <http://www.wikidata.org/entity/statement/Q11085-85E13AC3-DEC0-4680-89E7-636C30DB3402> prov:wasDerivedFrom <http://www.wikidata.org/reference/a0d137b0c17c6c7ba600abedd1df89c0e61a93bb> ;
     ps:P492 "602404" .
 
-<http://www.wikidata.org/entity/statement/Q11085-9e70fa40-47bf-e344-c23e-23e9e5043a39> prov:wasDerivedFrom <http://www.wikidata.org/reference/bcfdfe23cf621b57597b4c4d9a611b598ef3364c>,
-        <http://www.wikidata.org/reference/da8ef301107ffdf9e85948e1870d1e0b1a3237ec> ;
-    ps:P31 wd:Q42303753 .
-
 <http://www.wikidata.org/entity/statement/Q11085-B5DFD19E-8C77-4CAE-B233-2715ABCC5D03> prov:wasDerivedFrom <http://www.wikidata.org/reference/a0d137b0c17c6c7ba600abedd1df89c0e61a93bb> ;
     ps:P492 "556500" .
 

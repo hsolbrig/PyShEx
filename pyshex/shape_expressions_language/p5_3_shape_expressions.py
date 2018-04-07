@@ -3,13 +3,14 @@
 from ShExJSG import ShExJ
 from pyjsg.jsglib.jsg import isinstance_
 
-from pyshex.shape_expressions_language.p5_4_node_constraints import satisfies2
+from pyshex.shape_expressions_language.p5_4_node_constraints import satisfiesNodeConstraint
 from pyshex.shape_expressions_language.p5_5_shapes_and_triple_expressions import satisfiesShape
-from pyshex.shape_expressions_language.p5_context import Context
-from pyshex.shapemap_structure_and_language.p3_shapemap_structure import nodeSelector
+from pyshex.shape_expressions_language.p5_context import Context, DebugContext
+from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node
+from pyshex.utils.trace_utils import trace_satisfies
 
 
-def satisfies(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExpr) -> bool:
+def satisfies(cntxt: Context, n: Node, se: ShExJ.shapeExpr) -> bool:
     """ `5.3 Shape Expressions <http://shex.io/shex-semantics/#node-constraint-semantics>`_
 
           satisfies: The expression satisfies(n, se, G, m) indicates that a node n and graph G satisfy a shape
@@ -32,15 +33,8 @@ def satisfies(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExpr) -> bool:
           .. note:: Where is the documentation on recursion?  All I can find is
            `5.9.4 Recursion Example <http://shex.io/shex-semantics/#example-recursion>`_
           """
-    c = cntxt.debug_context
-    if c.trace_satisfies:
-        se_text = str(se) if isinstance_(se, ShExJ.shapeExprLabel) else\
-            se._as_json_dumps() if isinstance(se, ShExJ.NodeConstraint) else\
-            'type: ' + str(type(se))
-        print(c.i(c.satisfies_depth, f"--> Satisfies {c.d()}: {n} {se_text}"))
-        c.splus()
     if isinstance(se, ShExJ.NodeConstraint):
-        rval = satisfies2(cntxt, n, se)
+        rval = satisfiesNodeConstraint(cntxt, n, se)
     elif isinstance(se, ShExJ.Shape):
         rval = satisfiesShape(cntxt, n, se)
     elif isinstance(se, ShExJ.ShapeOr):
@@ -55,47 +49,55 @@ def satisfies(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExpr) -> bool:
         rval = satisfiesShapeExprRef(cntxt, n, se)
     else:
         raise NotImplementedError(f"Unrecognized shapeExpr: {type(se)}")
-    if c.trace_satisfies:
-        c.sminus()
-        print(c.i(c.satisfies_depth, f"<-- Satisfies {c.d()} {rval}"))
     return rval
 
 
-def notSatisfies(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExpr) -> bool:
+@trace_satisfies()
+def notSatisfies(cntxt: Context, n: Node, se: ShExJ.shapeExpr, _: DebugContext) -> bool:
     return not satisfies(cntxt, n, se)
 
 
-def satisifesShapeOr(cntxt: Context, n: nodeSelector, se: ShExJ.ShapeOr) -> bool:
+@trace_satisfies()
+def satisifesShapeOr(cntxt: Context, n: Node, se: ShExJ.ShapeOr, _: DebugContext) -> bool:
     """ Se is a ShapeOr and there is some shape expression se2 in shapeExprs such that satisfies(n, se2, G, m). """
     return any(satisfies(cntxt, n, se2) for se2 in se.shapeExprs)
 
 
-def satisfiesShapeAnd(cntxt: Context, n: nodeSelector, se: ShExJ.ShapeAnd) -> bool:
+@trace_satisfies()
+def satisfiesShapeAnd(cntxt: Context, n: Node, se: ShExJ.ShapeAnd, _: DebugContext) -> bool:
     """ Se is a ShapeAnd and for every shape expression se2 in shapeExprs, satisfies(n, se2, G, m) """
     return all(satisfies(cntxt, n, se2) for se2 in se.shapeExprs)
 
 
-def satisfiesShapeNot(cntxt: Context, n: nodeSelector, se: ShExJ.ShapeNot) -> bool:
+@trace_satisfies()
+def satisfiesShapeNot(cntxt: Context, n: Node, se: ShExJ.ShapeNot, _: DebugContext) -> bool:
     """ Se is a ShapeNot and for the shape expression se2 at shapeExpr, notSatisfies(n, se2, G, m) """
     return not satisfies(cntxt, n, se.shapeExpr)
 
 
-def satisfiesExternal(cntxt: Context, n: nodeSelector, se: ShExJ.ShapeExternal) -> bool:
+@trace_satisfies(True)
+def satisfiesExternal(cntxt: Context, n: Node, se: ShExJ.ShapeExternal, c: DebugContext) -> bool:
     """ Se is a ShapeExternal and implementation-specific mechansims not defined in this specification indicate
      success.
      """
+    if c.trace_satisfies:
+        print(f"id: {se.id}")
     extern_shape = cntxt.external_shape_for(se.id)
-    return extern_shape is not None and satisfies(cntxt, n, extern_shape)
+    if extern_shape:
+        return satisfies(cntxt, n, extern_shape)
+    cntxt.reasons.append(f"{se.id}: Shape is not in Schema")
+    return False
 
 
-def satisfiesShapeExprRef(cntxt: Context, n: nodeSelector, se: ShExJ.shapeExprLabel) -> bool:
+@trace_satisfies(True)
+def satisfiesShapeExprRef(cntxt: Context, n: Node, se: ShExJ.shapeExprLabel, c: DebugContext) -> bool:
     """ Se is a shapeExprRef and there exists in the schema a shape expression se2 with that id
      and satisfies(n, se2, G, m).
      """
+    if c.trace_satisfies:
+        print(f"id: {se}")
     for shape in cntxt.schema.shapes:
         if shape.id == se:
             return satisfies(cntxt, n, shape)
-    c = cntxt.debug_context
-    if c.trace_satisfies:
-        print(c.i(1, f"***** Shape {se} not found"))
+    cntxt.reasons.append(f"{se}: Shape is not in Schema")
     return False
