@@ -80,7 +80,7 @@ def satisfiesExternal(cntxt: Context, n: Node, se: ShExJ.ShapeExternal, c: Debug
     """ Se is a ShapeExternal and implementation-specific mechansims not defined in this specification indicate
      success.
      """
-    if c.trace_satisfies:
+    if c.debug:
         print(f"id: {se.id}")
     extern_shape = cntxt.external_shape_for(se.id)
     if extern_shape:
@@ -94,7 +94,7 @@ def satisfiesShapeExprRef(cntxt: Context, n: Node, se: ShExJ.shapeExprLabel, c: 
     """ Se is a shapeExprRef and there exists in the schema a shape expression se2 with that id
      and satisfies(n, se2, G, m).
      """
-    if c.trace_satisfies:
+    if c.debug:
         print(f"id: {se}")
     for shape in cntxt.schema.shapes:
         if shape.id == se:

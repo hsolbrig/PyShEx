@@ -42,7 +42,7 @@ class ThreeGuardiansTestCase(unittest.TestCase):
         for result in ShExEvaluator(rdf=rdf,
                                     schema=schema,
                                     focus=p.INST.Eric,
-                                    start=p.SCHOOL.Enrollee).evaluate(debug=False):
+                                    start=p.SCHOOL.Enrollee).evaluate(debug=True):
             print(f"{result.focus}: {'Passing' if result.result else 'Failing'}: {result.reason}")
             self.assertFalse(result.result)
 
@@ -51,7 +51,7 @@ class ThreeGuardiansTestCase(unittest.TestCase):
         for result in ShExEvaluator(rdf=rdf,
                                     schema=schema,
                                     focus=p.INST.Fred,
-                                    start=p.SCHOOL.Encapsulated).evaluate(debug=False):
+                                    start=p.SCHOOL.Encapsulated).evaluate(debug=True):
             print(f"{result.focus}: {'Passing' if result.result else 'Failing'}: {result.reason}")
             self.assertFalse(result.result)
 

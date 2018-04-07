@@ -12,11 +12,11 @@ def trace_satisfies(newline: bool=True, skip_trace: Callable[[jsg.JSGObject], bo
         def wrapper(cntxt: Context, n: Node, expr: jsg.JSGObject) -> bool:
             c = cntxt.debug_context
             c.splus()
-            if c.trace_satisfies and not skip_trace(expr):
-                print(c.i(c.satisfies_depth, f'--> {f.__name__} {c.d()} node: {n}'), end=None if newline else '')
+            if c.debug and not skip_trace(expr):
+                print(c.i(0, f'--> {f.__name__} {c.d()} node: {n}'), end=None if newline else '')
             rval = f(cntxt, n, expr, c)
-            if c.trace_satisfies and not skip_trace(expr):
-                print(c.i(c.satisfies_depth, f'<-- {f.__name__} {c.d()} node: {n}: {rval}'))
+            if c.debug and not skip_trace(expr):
+                print(c.i(0, f'<-- {f.__name__} {c.d()} node: {n}: {rval}'))
             c.sminus()
             return rval
         return wrapper
@@ -28,11 +28,11 @@ def trace_matches(newline: bool=True):
         def wrapper(cntxt: Context, T: RDFGraph, expr: jsg.JSGObject) -> bool:
             c = cntxt.debug_context
             c.splus()
-            if c.trace_satisfies:
-                print(c.i(c.satisfies_depth, f'--> {f.__name__} {c.d()}'), end=None if newline else '')
+            if c.debug:
+                print(c.i(0, f'--> {f.__name__} {c.d()}'), end=None if newline else '')
             rval = f(cntxt, T, expr, c)
-            if c.trace_satisfies:
-                print(c.i(c.satisfies_depth, f'<-- {f.__name__} {c.d()} {rval}'))
+            if c.debug:
+                print(c.i(0, f'<-- {f.__name__} {c.d()} {rval}'))
             c.sminus()
             return rval
         return wrapper
@@ -44,11 +44,11 @@ def trace_matches_tripleconstraint(newline: bool=True):
         def wrapper(cntxt: Context, n: Node, expr: jsg.JSGObject) -> bool:
             c = cntxt.debug_context
             c.splus()
-            if c.trace_satisfies:
-                print(c.i(c.satisfies_depth, f'--> {f.__name__} {c.d()}'), end=None if newline else '')
+            if c.debug:
+                print(c.i(0, f'--> {f.__name__} {c.d()}'), end=None if newline else '')
             rval = f(cntxt, n, expr, c)
-            if c.trace_satisfies:
-                print(c.i(c.satisfies_depth, f'<-- {f.__name__} {c.d()} {rval}'))
+            if c.debug:
+                print(c.i(0, f'<-- {f.__name__} {c.d()} {rval}'))
             c.sminus()
             return rval
         return wrapper

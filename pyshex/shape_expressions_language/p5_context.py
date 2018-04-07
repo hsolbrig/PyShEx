@@ -18,19 +18,19 @@ from pyshex.shapemap_structure_and_language.p3_shapemap_structure import START
 
 class DebugContext:
     def __init__(self):
-        self.trace_satisfies = False
+        self.debug = False
         self.trace_slurps = False
-        self.satisfies_depth = 0
+        self.trace_depth = 0
 
     def d(self) -> str:
         """ Return a depth indicator """
-        return f"({self.satisfies_depth})"
+        return f"({self.trace_depth})"
 
     def splus(self) -> None:
-        self.satisfies_depth += 1
+        self.trace_depth += 1
 
     def sminus(self) -> None:
-        self.satisfies_depth -= 1
+        self.trace_depth -= 1
 
     @staticmethod
     def s(ndeep) -> str:
@@ -40,13 +40,13 @@ class DebugContext:
     def rs(ndeep) -> str:
         return '\n' + DebugContext.s(ndeep)
 
-    @staticmethod
-    def i(ndeep: int, txt: str, txt_list: Optional[List[object]]=None) -> str:
+    def i(self, bias: int, txt: str, txt_list: Optional[List[object]]=None) -> str:
         if txt_list is None:
             txt_list = []
         elif len(txt_list) > 1:
             txt_list.insert(0, '')
-        return DebugContext.s(ndeep) + txt + ' ' + DebugContext.rs(ndeep+1).join(str(e) for e in txt_list)
+        return DebugContext.s(self.trace_depth + bias) + txt + ' ' + \
+               DebugContext.rs(self.trace_depth + bias + 1).join(str(e) for e in txt_list)
 
 
 class _VisitorCenter:

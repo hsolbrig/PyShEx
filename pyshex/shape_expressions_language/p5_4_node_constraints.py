@@ -39,7 +39,7 @@ def nodeSatisfiesNodeKind(_: Context, n: Node, nc: ShExJ.NodeConstraint, c: Debu
         * v = "literal" and n is a Literal.
         * v = "nonliteral" and n is an IRI or blank node.
     """
-    if c.trace_satisfies and nc.nodeKind is not None:
+    if c.debug and nc.nodeKind is not None:
         print(f" Kind: {nc.nodeKind}")
     return nc.nodeKind is None or \
         (nc.nodeKind == 'iri' and isinstance(n, URIRef)) or \
@@ -61,7 +61,7 @@ def nodeSatisfiesDataType(_: Context, n: Node, nc: ShExJ.NodeConstraint, c: Debu
     # TODO: for all of these situations, create a special error when Node is None
     if nc.datatype is None:
         return True
-    if c.trace_satisfies:
+    if c.debug:
         print(f" Datatype: {nc.datatype}")
     if not isinstance(n, Literal):
         return False

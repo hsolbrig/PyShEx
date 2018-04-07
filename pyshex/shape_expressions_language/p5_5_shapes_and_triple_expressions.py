@@ -54,9 +54,9 @@ def satisfiesShape(cntxt: Context, n: Node, S: ShExJ.Shape, c: DebugContext) -> 
                                               iriref_to_uriref(predicate),
                                               n if direction.is_rev else None)))
 
-    if c.trace_satisfies:
-        print(c.i(c.satisfies_depth+1, "predicates:", sorted(str(p) for p in predicates.keys())))
-        print(c.i(c.satisfies_depth+1, "matchables:", sorted(str(m) for m in matchables)))
+    if c.debug:
+        print(c.i(1, "predicates:", sorted(str(p) for p in predicates.keys())))
+        print(c.i(1, "matchables:", sorted(str(m) for m in matchables)))
         print()
 
     if S.closed.val:
@@ -65,11 +65,11 @@ def satisfiesShape(cntxt: Context, n: Node, S: ShExJ.Shape, c: DebugContext) -> 
         if len(non_matchables):
             cntxt.reasons.append("Unmatched triples in CLOSED shape:")
             cntxt.reasons += [f"\t{t}" for t in non_matchables]
-            if c.trace_satisfies:
-                print(c.i(c.satisfies_depth,
+            if c.debug:
+                print(c.i(0,
                           f"<--- Satisfies shape {c.d()} FAIL - "
                           f"{len(non_matchables)} non-matching triples on a closed shape"))
-                print(c.i(c.satisfies_depth+1, "", non_matchables))
+                print(c.i(1, "", non_matchables))
                 print()
             rslt = False
 
@@ -83,8 +83,8 @@ def satisfiesShape(cntxt: Context, n: Node, S: ShExJ.Shape, c: DebugContext) -> 
                 if len(extras):
                     permutable_matchables = RDFGraph([t for t in matchables if t.p in extras])
                     non_permutable_matchables = RDFGraph([t for t in matchables if t not in permutable_matchables])
-                    if c.trace_satisfies:
-                        print(c.i(c.satisfies_depth+1,
+                    if c.debug:
+                        print(c.i(1,
                                   f"Complete match failed -- evaluating extras", extras))
                     for matched, remainder in partition_2(permutable_matchables):
                         permutation = non_permutable_matchables.union(matched)
@@ -180,7 +180,7 @@ def matches(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExpr) -> bool:
 
 @trace_matches(True)
 def matchesTripleExprLabel(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExprLabel, c: DebugContext) -> bool:
-    if c.trace_satisfies:
+    if c.debug:
         print(f" {expr}")
     te = cntxt.tripleExprFor(expr)
     if te:
@@ -205,7 +205,7 @@ def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr
         min_ = expr.min.val if expr.min.val is not None else 1
         max_ = expr.max.val if expr.max.val is not None else 1
 
-        if c.trace_satisfies:
+        if c.debug:
             print(f"{{{min_},{'*' if max_ == -1 else max_}}} matching {len(T)} triples")
         if isinstance(expr, ShExJ.TripleConstraint):
             return min_ <= len(T) <= (max_ if max_ >= 0 else len(T)) and \
@@ -315,9 +315,9 @@ def matchesTripleConstraint(cntxt: Context, t: RDFTriple, expr: ShExJ.TripleCons
     """
     from pyshex.shape_expressions_language.p5_3_shape_expressions import satisfies
 
-    if c.trace_satisfies:
-        print(c.i(c.satisfies_depth+1, f" triple: {t}"))
-        print(c.i(c.satisfies_depth+1, '', expr._as_json_dumps().split('\n')))
+    if c.debug:
+        print(c.i(1, f" triple: {t}"))
+        print(c.i(1, '', expr._as_json_dumps().split('\n')))
 
     if uriref_matches_iriref(t.p, expr.predicate):
         value = t.s if expr.inverse.val else t.o

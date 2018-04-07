@@ -148,8 +148,7 @@ class ManifestEntryTestCase(unittest.TestCase):
                 self.nskipped += 1
                 return True
             cntxt = Context(g, s, me.extern_shape_for)
-            cntxt.debug_context.trace_nodeSatisfies = cntxt.debug_context.trace_satisfies = \
-                cntxt.debug_context.trace_matches = DEBUG
+            cntxt.debug_context.debug = DEBUG
             map_ = FixedShapeMap()
             focus = self.mfst.data_redirector.uri_for(me.focus)
             if ':' not in focus:
