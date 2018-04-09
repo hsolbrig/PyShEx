@@ -20,7 +20,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 
 ## Installation
 ```bash
-pip install ShEx
+pip install PyShEx
 ```
 Note: If you need to escape single quotes in RDF literals, you will need to install the bleeding edge
 of rdflib:
