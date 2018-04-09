@@ -1,7 +1,7 @@
 import re
 import unittest
 
-
+from pyshex.parse_tree.parse_node import ParseNode
 from pyshex.shape_expressions_language.p5_4_node_constraints import nodeSatisfiesStringFacet
 from tests.utils.setup_test import rdf_header, EX, setup_context
 
@@ -54,21 +54,42 @@ class StringFacetTestCase(unittest.TestCase):
     def test_example_1(self):
         cntxt = setup_context(shex_1, rdf_1)
         nc = cntxt.schema.shapes[0].expression.valueExpr
-        self.assertTrue(nodeSatisfiesStringFacet(cntxt, cntxt.graph.value(EX.issue1, EX.submittedBy), nc))
-        self.assertFalse(nodeSatisfiesStringFacet(cntxt, cntxt.graph.value(EX.issue2, EX.submittedBy), nc))
+
+        focus = cntxt.graph.value(EX.issue1, EX.submittedBy)
+        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus)
+        self.assertTrue(nodeSatisfiesStringFacet(cntxt, focus, nc))
+        focus = cntxt.graph.value(EX.issue2, EX.submittedBy)
+        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus)
+        self.assertFalse(nodeSatisfiesStringFacet(cntxt, focus, nc))
+        self.assertEqual(['String length violation - minimum: 10 actual: 4'], cntxt.current_node.fail_reasons())
 
     def test_example_2(self):
         cntxt = setup_context(shex_2, rdf_2)
         nc = cntxt.schema.shapes[0].expression.valueExpr
-        self.assertTrue(nodeSatisfiesStringFacet(cntxt, cntxt.graph.value(EX.issue6, EX.submittedBy), nc))
-        self.assertFalse(nodeSatisfiesStringFacet(cntxt, cntxt.graph.value(EX.issue7, EX.submittedBy), nc))
+
+        focus = cntxt.graph.value(EX.issue6, EX.submittedBy)
+        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus)
+        self.assertTrue(nodeSatisfiesStringFacet(cntxt, focus, nc))
+        focus = cntxt.graph.value(EX.issue7, EX.submittedBy)
+        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus)
+        self.assertFalse(nodeSatisfiesStringFacet(cntxt, focus, nc))
+        self.assertEqual(['Pattern match failure - pattern: genuser[0-9]+ flags:i string: '
+                          'http://schema.example/genContact817'], cntxt.current_node.fail_reasons())
 
     def test_example_3(self):
         cntxt = setup_context(shex_3, rdf_3)
         nc = cntxt.schema.shapes[0].expression.valueExpr
-        self.assertTrue(nodeSatisfiesStringFacet(cntxt, cntxt.graph.value(EX.product6, EX.trademark), nc))
-        self.assertTrue(nodeSatisfiesStringFacet(cntxt, cntxt.graph.value(EX.product7, EX.trademark), nc))
-        self.assertFalse(nodeSatisfiesStringFacet(cntxt, cntxt.graph.value(EX.product8, EX.trademark), nc))
+        focus = cntxt.graph.value(EX.product6, EX.trademark)
+        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus)
+        self.assertTrue(nodeSatisfiesStringFacet(cntxt, focus, nc))
+        focus = cntxt.graph.value(EX.product7, EX.trademark)
+        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus)
+        self.assertTrue(nodeSatisfiesStringFacet(cntxt, focus, nc))
+        focus = cntxt.graph.value(EX.product8, EX.trademark)
+        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus)
+        self.assertFalse(nodeSatisfiesStringFacet(cntxt, focus, nc))
+        self.assertEqual(['Pattern match failure - pattern: ^\\t\\\\𝒸\\?$ flags:None string: \t'
+                          '\\\\U0001D4B8?'], cntxt.current_node.fail_reasons())
 
 
 if __name__ == '__main__':

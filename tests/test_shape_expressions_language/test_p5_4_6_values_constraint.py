@@ -2,7 +2,8 @@ import unittest
 
 from rdflib.namespace import FOAF
 
-from tests.utils.setup_test import rdf_header, setup_test, EX, gen_rdf, setup_context
+from pyshex.parse_tree.parse_node import ParseNode
+from tests.utils.setup_test import rdf_header, EX, gen_rdf, setup_context
 
 shex_1 = """{ "type": "Schema", "shapes": [
   { "id": "http://schema.example/NoActionIssueShape",
@@ -65,28 +66,64 @@ class ValuesConstraintTestCase(unittest.TestCase):
 
         cntxt = setup_context(shex_1, rdf_1)
         nc = cntxt.schema.shapes[0].expression.valueExpr
-        self.assertTrue(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue1, EX.state), nc))
-        self.assertFalse(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue2, EX.state), nc))
+        focus = cntxt.graph.value(EX.issue1, EX.state)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        self.assertTrue(nodeSatisfiesValues(cntxt, focus, nc))
+
+        focus = cntxt.graph.value(EX.issue2, EX.state)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
+        self.assertEqual(['Node: http://schema.example/Unresolved not in value set:\n'
+                          '\t {"values": ["http://schema.example/Resolved", "http://schema...'],
+                         cntxt.current_node.fail_reasons())
 
     def test_example_2(self):
         from pyshex.shape_expressions_language.p5_4_node_constraints import nodeSatisfiesValues
 
         cntxt = setup_context(shex_2, rdf_2)
         nc = cntxt.schema.shapes[0].expression.valueExpr
-        self.assertTrue(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue3, FOAF.mbox), nc))
-        self.assertTrue(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue4, FOAF.mbox), nc))
-        self.assertTrue(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue5, FOAF.mbox), nc))
-        self.assertFalse(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue6, FOAF.mbox), nc))
-        self.assertFalse(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue7, FOAF.mbox), nc))
+
+        focus = cntxt.graph.value(EX.issue3, FOAF.mbox)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        self.assertTrue(nodeSatisfiesValues(cntxt, focus, nc))
+
+        focus = cntxt.graph.value(EX.issue4, FOAF.mbox)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        self.assertTrue(nodeSatisfiesValues(cntxt, focus, nc))
+
+        focus = cntxt.graph.value(EX.issue6, FOAF.mbox)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
+        self.assertEqual(['Node: missing not in value set:\n'
+                         '\t {"values": [{"value": "N/A"}, {"stem": "mailto:engineering-"...'],
+                         cntxt.current_node.fail_reasons())
+
+        focus = cntxt.graph.value(EX.issue7, FOAF.mbox)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
+        self.assertEqual(['Node: mailto:sales-contacts-999@a.example not in value set:\n'
+                          '\t {"values": [{"value": "N/A"}, {"stem": "mailto:engineering-"...'],
+                         cntxt.current_node.fail_reasons())
 
     def test_example_3(self):
         from pyshex.shape_expressions_language.p5_4_node_constraints import nodeSatisfiesValues
 
         cntxt = setup_context(shex_3, rdf_3)
         nc = cntxt.schema.shapes[0].expression.valueExpr
-        self.assertTrue(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue8, FOAF.mbox), nc))
-        self.assertTrue(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue9, FOAF.mbox), nc))
-        self.assertFalse(nodeSatisfiesValues(cntxt, cntxt.graph.value(EX.issue10, FOAF.mbox), nc))
+        focus = cntxt.graph.value(EX.issue8, FOAF.mbox)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        self.assertTrue(nodeSatisfiesValues(cntxt, focus, nc))
+
+        focus = cntxt.graph.value(EX.issue9, FOAF.mbox)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        self.assertTrue(nodeSatisfiesValues(cntxt, focus, nc))
+
+        focus = cntxt.graph.value(EX.issue10, FOAF.mbox)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
+        self.assertEqual(['Node: mailto:engineering-2112@a.example not in value set:\n'
+                          '\t {"values": [{"stem": {"type": "Wildcard"}, "exclusions": [{"...'],
+                         cntxt.current_node.fail_reasons())
 
 
 if __name__ == '__main__':

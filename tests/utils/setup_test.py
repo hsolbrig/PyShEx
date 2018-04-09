@@ -6,6 +6,7 @@ from pyjsg.jsglib import jsg
 from rdflib import Graph, RDF, RDFS, XSD
 from rdflib.namespace import FOAF
 
+from pyshex.parse_tree.parse_node import ParseNode
 from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.utils.rdf_namespace import RDFNamespace
 
@@ -28,6 +29,7 @@ def setup_context(shex_str: str, rdf_str: Optional[str]) -> Context:
     if g is None:
         g = Graph()
         g.parse(rdf_header)
+    cntxt = Context(g, schema)
     return Context(g, schema)
 
 

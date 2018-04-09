@@ -1,5 +1,6 @@
 import unittest
 
+from pyshex.parse_tree.parse_node import ParseNode
 from tests.utils.setup_test import rdf_header, EX, setup_context
 
 shex_1 = """{ "type": "Schema", "shapes": [
@@ -19,13 +20,18 @@ class NodeKindConstraintTest(unittest.TestCase):
 
     def test_example_1(self):
         from pyshex.shape_expressions_language.p5_4_node_constraints import nodeSatisfiesNodeKind
-
         cntxt = setup_context(shex_1, rdf_1)
 
         nc = cntxt.schema.shapes[0].expression.valueExpr
-        # TODO: figure out how to get reason into this
-        self.assertTrue(nodeSatisfiesNodeKind(cntxt, cntxt.graph.value(EX.issue1, EX.state), nc))
-        self.assertFalse(nodeSatisfiesNodeKind(cntxt, cntxt.graph.value(EX.issue3, EX.state), nc))
+
+        focus = cntxt.graph.value(EX.issue1, EX.state)
+        cntxt.current_node = ParseNode(nodeSatisfiesNodeKind, nc, focus)
+        self.assertTrue(nodeSatisfiesNodeKind(cntxt, focus, nc))
+
+        focus = cntxt.graph.value(EX.issue3, EX.state)
+        cntxt.current_node = ParseNode(nodeSatisfiesNodeKind, nc, focus)
+        self.assertFalse(nodeSatisfiesNodeKind(cntxt, focus, nc))
+        self.assertEqual(['Node kind mismatch have: Literal expected: iri'], cntxt.current_node.fail_reasons())
 
 
 if __name__ == '__main__':

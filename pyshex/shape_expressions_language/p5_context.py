@@ -114,7 +114,7 @@ class Context:
         self.external_shape_for = external_shape_resolver if external_shape_resolver \
             else default_external_shape_resolver
         self.base_namespace = base_namespace
-        self.reasons = []                   # List of failure reasons
+
         # For SPARQL API's, true means pull ALL predicate objects for a given subject, false means only the
         # predicates that are needed
         self.over_slurp = True
@@ -184,9 +184,7 @@ class Context:
 
     def shapeExprFor(self, id_: Union[ShExJ.shapeExprLabel, START]) -> Optional[ShExJ.shapeExpr]:
         """ Return the shape expression that corresponds to id """
-        rval = self.schema.start if id_ is START else self.schema_id_map.get(id_)
-        if rval is None:
-            self.reasons.append("No start shape specified" if id_ is START else f"Shape: {id_} not found")
+        rval = self.schema.start if id_ is START else self.schema_id_map.get(str(id_))
         return rval
 
     def visit_shapes(self, expr: ShExJ.shapeExpr, f: Callable[[Any, ShExJ.shapeExpr, "Context"], None], arg_cntxt: Any,
@@ -319,8 +317,8 @@ class Context:
             self.assumptions[key] = False
             return False, True
         else:
-            self.reasons.append(f"{s.id}: Inconsistent recursive shape reference")
+            self.current_node.fail_reason = f"{s.id}: Inconsistent recursive shape reference"
             return True, False
 
     def process_reasons(self) -> List[str]:
-        return self.reasons
+        return self.current_node.fail_reasons()

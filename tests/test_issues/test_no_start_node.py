@@ -16,7 +16,7 @@ class NoStartNodeTestCase(unittest.TestCase):
         e = ShExEvaluator(rdf=g, schema=shex, focus=EX.x)
         rslt = e.evaluate()[0]
         self.assertFalse(rslt.result)
-        self.assertEqual("No start shape specified", rslt.reason)
+        self.assertEqual('START node is not specified or is invalid', rslt.reason)
 
     def test_bad_start(self):
         g = Graph()
@@ -24,7 +24,7 @@ class NoStartNodeTestCase(unittest.TestCase):
         e = ShExEvaluator(rdf=g, schema=shex, start=EX.c, focus=EX.x)
         rslt = e.evaluate()[0]
         self.assertFalse(rslt.result)
-        self.assertEqual("Shape: http://a.example/c not found", rslt.reason)
+        self.assertEqual('Shape: http://a.example/c not found in Schema', rslt.reason)
 
 
 if __name__ == '__main__':

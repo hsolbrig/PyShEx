@@ -2,6 +2,7 @@ import unittest
 
 from rdflib import RDFS
 
+from pyshex.parse_tree.parse_node import ParseNode
 from tests.utils.setup_test import rdf_header, EX, setup_context
 
 shex_1 = """{ "type": "Schema", "shapes": [
@@ -44,9 +45,20 @@ class DataTypeTestCase(unittest.TestCase):
 
         cntxt = setup_context(shex_1, rdf_1)
         nc = cntxt.schema.shapes[0].expression.valueExpr
-        self.assertTrue(nodeSatisfiesDataType(cntxt, cntxt.graph.value(EX.issue1, EX.submittedOn), nc))
-        self.assertFalse(nodeSatisfiesDataType(cntxt, cntxt.graph.value(EX.issue2, EX.submittedOn), nc))
-        self.assertFalse(nodeSatisfiesDataType(cntxt, cntxt.graph.value(EX.issue3b, EX.submittedOn), nc))
+        focus = cntxt.graph.value(EX.issue1, EX.submittedOn)
+        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
+        self.assertTrue(nodeSatisfiesDataType(cntxt, focus, nc))
+        focus = cntxt.graph.value(EX.issue2, EX.submittedOn)
+        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
+        self.assertFalse(nodeSatisfiesDataType(cntxt, focus, nc))
+        self.assertEqual(['Datatype mismatch - expected: http://www.w3.org/2001/XMLSchema#dateTime '
+                          'actual: http://www.w3.org/2001/XMLSchema#date'], cntxt.current_node.fail_reasons())
+
+        focus = cntxt.graph.value(EX.issue3b, EX.submittedOn)
+        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
+        self.assertFalse(nodeSatisfiesDataType(cntxt, focus, nc))
+        self.assertEqual(['Datatype mismatch - expected: http://www.w3.org/2001/XMLSchema#dateTime '
+                          'actual: http://www.w3.org/2001/XMLSchema#date'], cntxt.current_node.fail_reasons())
 
     @unittest.skipIf(True, "needs rdflib date parsing fix")
     def test_example_1a(self):
@@ -54,17 +66,28 @@ class DataTypeTestCase(unittest.TestCase):
 
         cntxt = setup_context(shex_1, rdf_1)
         nc = cntxt.schema.shapes[0].expression.valueExpr
-        self.assertFalse(nodeSatisfiesDataType(cntxt, cntxt.graph.value(EX.issue3, EX.submittedOn), nc))
-        self.assertFalse(nodeSatisfiesDataType(cntxt, cntxt.graph.value(EX.issue3a, EX.submittedOn), nc))
+        focus = cntxt.graph.value(EX.issue3, EX.submittedOn)
+        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
+        self.assertFalse(nodeSatisfiesDataType(cntxt, focus, nc))
+        focus = cntxt.graph.value(EX.issue3a, EX.submittedOn)
+        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
+        self.assertFalse(nodeSatisfiesDataType(cntxt, focus, nc))
 
     def test_example_2(self):
         from pyshex.shape_expressions_language.p5_4_node_constraints import nodeSatisfiesDataType
 
         cntxt = setup_context(shex_2, rdf_2)
         nc = cntxt.schema.shapes[0].expression.valueExpr
-        self.assertTrue(nodeSatisfiesDataType(cntxt, cntxt.graph.value(EX.issue3, RDFS.label), nc))
-        self.assertFalse(nodeSatisfiesDataType(cntxt, cntxt.graph.value(EX.issue4, RDFS.label), nc))
+        focus = cntxt.graph.value(EX.issue3, RDFS.label)
+        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
+        self.assertTrue(nodeSatisfiesDataType(cntxt, focus, nc))
 
+        focus = cntxt.graph.value(EX.issue4, RDFS.label)
+        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
+        self.assertFalse(nodeSatisfiesDataType(cntxt, focus, nc))
+        self.assertEqual(['Datatype mismatch - expected: '
+                          'http://www.w3.org/1999/02/22-rdf-syntax-ns#langString actual: '
+                          'http://www.w3.org/2001/XMLSchema#string'], cntxt.current_node.fail_reasons())
 
 if __name__ == '__main__':
     unittest.main()

@@ -22,6 +22,7 @@ def isValid(cntxt: Context, m: FixedShapeMap) -> Tuple[bool, List[str]]:
     :param m: list of NodeShape pairs to test
     :return: Success/failure indicator and, if fail, a list of failure reasons
     """
+    parse_nodes = []
     for nodeshapepair in m:
         n = nodeshapepair.nodeSelector
         if not isinstance_(n, Node):
@@ -32,6 +33,16 @@ def isValid(cntxt: Context, m: FixedShapeMap) -> Tuple[bool, List[str]]:
             s = cntxt.shapeExprFor(START if nodeshapepair.shapeLabel is None or nodeshapepair.shapeLabel is START
                                    else nodeshapepair.shapeLabel)
             cntxt.current_node = ParseNode(satisfies, s, n)
-            if not satisfies(cntxt, n, s):
+            if not s:
+                if nodeshapepair.shapeLabel is START or nodeshapepair.shapeLabel is None:
+                    cntxt.current_node.fail_reason = "START node is not specified or is invalid"
+                else:
+                    cntxt.current_node.fail_reason = f"Shape: {nodeshapepair.shapeLabel} not found in Schema"
                 return False, cntxt.process_reasons()
-        return True, []
+            parse_nodes.append(cntxt.current_node)
+            if not satisfies(cntxt, n, s):
+                cntxt.current_node.result = False
+                return False, cntxt.process_reasons()
+            else:
+                cntxt.current_node.result = True
+    return True, []

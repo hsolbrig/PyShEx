@@ -13,7 +13,7 @@ class EvaluationResult(NamedTuple):
     result: bool
     focus: URIRef
     start: URIRef
-    reason: str
+    reason: Optional[str]
 
 
 # Handy types
@@ -185,5 +185,5 @@ class ShExEvaluator:
                 map_ = FixedShapeMap()
                 map_.add(ShapeAssociation(focus, start))
                 success, fail_reasons = isValid(cntxt, map_)
-                rval.append(EvaluationResult(success, focus, start, '\n'.join(fail_reasons)))
+                rval.append(EvaluationResult(success, focus, start, '\n'.join(fail_reasons) if not success else ''))
         return rval

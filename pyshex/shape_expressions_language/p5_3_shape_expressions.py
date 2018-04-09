@@ -85,7 +85,7 @@ def satisfiesExternal(cntxt: Context, n: Node, se: ShExJ.ShapeExternal, c: Debug
     extern_shape = cntxt.external_shape_for(se.id)
     if extern_shape:
         return satisfies(cntxt, n, extern_shape)
-    cntxt.reasons.append(f"{se.id}: Shape is not in Schema")
+    cntxt.current_node.fail_reason = f"{se.id}: Shape is not in Schema"
     return False
 
 
@@ -99,5 +99,5 @@ def satisfiesShapeExprRef(cntxt: Context, n: Node, se: ShExJ.shapeExprLabel, c: 
     for shape in cntxt.schema.shapes:
         if shape.id == se:
             return satisfies(cntxt, n, shape)
-    cntxt.reasons.append(f"{se}: Shape is not in Schema")
+    cntxt.current_node.fail_reason = f"{se}: Shape is not in Schema"
     return False

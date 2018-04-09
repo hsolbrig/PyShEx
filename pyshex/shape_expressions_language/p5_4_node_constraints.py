@@ -29,7 +29,7 @@ def satisfiesNodeConstraint(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, _
 
 
 @trace_satisfies(newline=False, skip_trace=lambda nc: nc.nodeKind is None)
-def nodeSatisfiesNodeKind(_: Context, n: Node, nc: ShExJ.NodeConstraint, c: DebugContext) -> bool:
+def nodeSatisfiesNodeKind(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, c: DebugContext) -> bool:
     """ `5.4.2 Node Kind Constraints <http://shex.io/shex-semantics/#nodeKind>`_
 
     For a node n and constraint value v, nodeSatisfies(n, v) if:
@@ -41,15 +41,18 @@ def nodeSatisfiesNodeKind(_: Context, n: Node, nc: ShExJ.NodeConstraint, c: Debu
     """
     if c.debug and nc.nodeKind is not None:
         print(f" Kind: {nc.nodeKind}")
-    return nc.nodeKind is None or \
+    if nc.nodeKind is None or \
         (nc.nodeKind == 'iri' and isinstance(n, URIRef)) or \
         (nc.nodeKind == 'bnode' and isinstance(n, BNode)) or \
         (nc.nodeKind == 'literal' and isinstance(n, Literal)) or \
-        (nc.nodeKind == 'nonliteral' and isinstance(n, (URIRef, BNode)))
+        (nc.nodeKind == 'nonliteral' and isinstance(n, (URIRef, BNode))):
+        return True
+    cntxt.current_node.fail_reason = f"Node kind mismatch have: {type(n).__name__} expected: {nc.nodeKind}"
+    return False
 
 
 @trace_satisfies(newline=False, skip_trace=lambda nc: nc.datatype is None)
-def nodeSatisfiesDataType(_: Context, n: Node, nc: ShExJ.NodeConstraint, c: DebugContext) -> bool:
+def nodeSatisfiesDataType(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, c: DebugContext) -> bool:
     """ `5.4.3 Datatype Constraints <http://shex.io/shex-semantics/#datatype>`_
 
     For a node n and constraint value v, nodeSatisfies(n, v) if n is an Literal with the datatype v and, if v is in
@@ -57,17 +60,19 @@ def nodeSatisfiesDataType(_: Context, n: Node, nc: ShExJ.NodeConstraint, c: Debu
     n can be cast to the target type v per XPath Functions 3.1 section 19 Casting[xpath-functions]. Only datatypes
     supported by SPARQL MUST be tested but ShEx extensions MAY add support for other datatypes.
     """
-    # TODO: reconcile this with rdflib and the spec
-    # TODO: for all of these situations, create a special error when Node is None
     if nc.datatype is None:
         return True
     if c.debug:
         print(f" Datatype: {nc.datatype}")
     if not isinstance(n, Literal):
+        cntxt.current_node.fail_reason = f"Datatype constraint ({nc.datatype}) on {type(n).__name__} node"
         return False
     actual_datatype = _datatype(n)
-    return actual_datatype == str(nc.datatype) or \
-        (is_sparql_operand_datatype(nc.datatype) and can_cast_to(n, nc.datatype))
+    if actual_datatype == str(nc.datatype) or \
+        (is_sparql_operand_datatype(nc.datatype) and can_cast_to(n, nc.datatype)):
+        return True
+    cntxt.current_node.fail_reason = f"Datatype mismatch - expected: {nc.datatype} actual: {actual_datatype}"
+    return False
 
 
 def _datatype(n: Literal) -> str:
@@ -78,7 +83,7 @@ def _datatype(n: Literal) -> str:
 
 @trace_satisfies(skip_trace=lambda nc: nc.length.val is None and nc.minlength.val is None and
                                        nc.maxlength.val is None and nc.pattern.val is None)
-def nodeSatisfiesStringFacet(_: Context, n: Node, nc: ShExJ.NodeConstraint, _c: DebugContext) -> bool:
+def nodeSatisfiesStringFacet(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, _c: DebugContext) -> bool:
     """ `5.4.5 XML Schema String Facet Constraints <ttp://shex.io/shex-semantics/#xs-string>`_
 
      String facet constraints apply to the lexical form of the RDF Literals and IRIs and blank node
@@ -108,19 +113,33 @@ def nodeSatisfiesStringFacet(_: Context, n: Node, nc: ShExJ.NodeConstraint, _c: 
 
         # TODO: Figure out whether we need to connect this to the lxml exslt functions
         # TODO: Map flags if not
-        return (nc.length.val is None or len(lex) == nc.length.val) and \
-               (nc.minlength.val is None or len(lex) >= nc.minlength.val) and \
-               (nc.maxlength.val is None or len(lex) <= nc.maxlength.val) and \
-               (nc.pattern.val is None or pattern_match(nc.pattern.val, nc.flags.val, lex))
+        if (nc.length.val is None or len(lex) == nc.length.val) and \
+           (nc.minlength.val is None or len(lex) >= nc.minlength.val) and \
+           (nc.maxlength.val is None or len(lex) <= nc.maxlength.val) and \
+           (nc.pattern.val is None or pattern_match(nc.pattern.val, nc.flags.val, lex)):
+            return True
+        elif nc.length.val is not None and len(lex) != nc.length.val:
+            cntxt.current_node.fail_reason = f"String length mismatch - expected: {nc.length.val} actual: {len(lex)}"
+        elif nc.minlength.val is not None and len(lex) < nc.minlength.val:
+            cntxt.current_node.fail_reason = f"String length violation - minimum: {nc.minlength.val} actual: {len(lex)}"
+        elif nc.maxlength.val is not None and len(lex) > nc.maxlength.val:
+            cntxt.current_node.fail_reason = f"String length violation - maximum: {nc.maxlength.val} actual: {len(lex)}"
+        elif nc.pattern.val is not None and not pattern_match(nc.pattern.val, nc.flags.val, lex):
+            cntxt.current_node.fail_reason = f"Pattern match failure - pattern: {nc.pattern.val} flags:{nc.flags.val}" \
+                                             f" string: {lex}"
+        else:
+            cntxt.current_node.fail_reason = "Programming error - flame the programmer"
+        return False
+
 
     else:
         return True
 
 
 @trace_satisfies(newline=True, skip_trace=lambda nc: nc.mininclusive.val is None and nc.minexclusive.val is None and
-                                                  nc.maxinclusive.val is None and nc.maxexclusive.val is None and
-                                                  nc.totaldigits.val is None and nc.fractiondigits.val is None)
-def nodeSatisfiesNumericFacet(_: Context, n: Node, nc: ShExJ.NodeConstraint, _c: DebugContext) -> bool:
+                                                 nc.maxinclusive.val is None and nc.maxexclusive.val is None and
+                                                 nc.totaldigits.val is None and nc.fractiondigits.val is None)
+def nodeSatisfiesNumericFacet(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, _c: DebugContext) -> bool:
     """ `5.4.5 XML Schema Numeric Facet Constraints <http://shex.io/shex-semantics/#xs-numeric>`_
 
     Numeric facet constraints apply to the numeric value of RDF Literals with datatypes listed in SPARQL 1.1
@@ -132,17 +151,44 @@ def nodeSatisfiesNumericFacet(_: Context, n: Node, nc: ShExJ.NodeConstraint, _c:
         if is_numeric(n):
             v = n.value
             if isinstance(v, numbers.Number):
-                return (nc.mininclusive.val is None or v >= nc.mininclusive.val) and \
-                       (nc.minexclusive.val is None or v > nc.minexclusive.val) and \
-                       (nc.maxinclusive.val is None or v <= nc.maxinclusive.val) and \
-                       (nc.maxexclusive.val is None or v < nc.maxexclusive.val) and \
-                       (nc.totaldigits.val is None or (total_digits(n) is not None and
-                                                       total_digits(n) <= nc.totaldigits.val)) and \
-                       (nc.fractiondigits.val is None or (fraction_digits(n) is not None and
-                                                          fraction_digits(n) <= nc.fractiondigits.val))
+                if (nc.mininclusive.val is None or v >= nc.mininclusive.val) and \
+                   (nc.minexclusive.val is None or v > nc.minexclusive.val) and \
+                   (nc.maxinclusive.val is None or v <= nc.maxinclusive.val) and \
+                   (nc.maxexclusive.val is None or v < nc.maxexclusive.val) and \
+                   (nc.totaldigits.val is None or (total_digits(n) is not None and
+                                                   total_digits(n) <= nc.totaldigits.val)) and \
+                   (nc.fractiondigits.val is None or (fraction_digits(n) is not None and
+                                                      fraction_digits(n) <= nc.fractiondigits.val)):
+                    return True
+                else:
+                    if nc.mininclusive.val is not None and v < nc.mininclusive.val:
+                        cntxt.current_node.fail_reason = f"Numeric value volation - minimum inclusive: " \
+                                                         f"{nc.mininclusive.val} actual: {v}"
+                    elif nc.minexclusive.val is not None and v <= nc.minexclusive.val:
+                        cntxt.current_node.fail_reason = f"Numeric value volation - minimum exclusive: " \
+                                                         f"{nc.minexclusive.val} actual: {v}"
+                    elif nc.maxinclusive.val is not None and v > nc.maxinclusive.val:
+                        cntxt.current_node.fail_reason = f"Numeric value volation - maximum inclusive: " \
+                                                         f"{nc.maxinclusive.val} actual: {v}"
+                    elif nc.maxexclusive.val is not None and v >= nc.maxexclusive.val:
+                        cntxt.current_node.fail_reason = f"Numeric value volation - maximum exclusive: " \
+                                                         f"{nc.maxexclusive.val} actual: {v}"
+                    elif nc.totaldigits.val is not None and (total_digits(n) is None or
+                                                             total_digits(n) > nc.totaldigits.val):
+                        cntxt.current_node.fail_reason = f"Numeric value volation - max total digits: " \
+                                                         f"{nc.totaldigits.val} value: {v}"
+                    elif nc.fractiondigits.val is not None and (fraction_digits(n) is None or
+                                                                total_digits(n) > nc.fractiondigits.val):
+                        cntxt.current_node.fail_reason = f"Numeric value volation - max fractional digits: " \
+                                                         f"{nc.fractiondigits.val} value: {v}"
+                    else:
+                        cntxt.current_node.fail_reason = "Impossible error - kick the programmer"
+                    return False
             else:
+                cntxt.current_node.fail_reason = "Numeric test on non-number: {v}"
                 return False
         else:
+            cntxt.current_node.fail_reason = "Numeric test on non-number: {n}"
             return False
     return True
 
@@ -153,7 +199,18 @@ def nodeSatisfiesValues(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, _c: D
 
      For a node n and constraint value v, nodeSatisfies(n, v) if n matches some valueSetValue vsv in v.
     """
-    return any(_nodeSatisfiesValue(cntxt, n, vsv) for vsv in nc.values) if nc.values is not None else True
+    if nc.values is None:
+        return True
+    else:
+        if any(_nodeSatisfiesValue(cntxt, n, vsv) for vsv in nc.values):
+            return True
+        else:
+            crtab = '\n\t'
+            cntxt.current_node.fail_reason = f"Node: {n} not in value set:\n\t {nc._as_json[:60]}..."
+            return False
+
+
+
 
 
 def _nodeSatisfiesValue(cntxt: Context, n: Node, vsv: ShExJ.valueSetValue) -> bool:

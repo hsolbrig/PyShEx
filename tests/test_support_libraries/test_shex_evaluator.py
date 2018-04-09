@@ -1,5 +1,5 @@
 import os
-from rdflib import Graph
+from rdflib import Graph, URIRef
 
 from pyshex import ShExEvaluator, PrefixLibrary
 import unittest
@@ -54,9 +54,17 @@ class ShExEvaluatorTestCase(unittest.TestCase):
         test_rdf = os.path.join(os.path.split(os.path.abspath(__file__))[0], '..', 'test_issues', 'data', 'Q18557122.ttl')
         evaluator = ShExEvaluator(test_rdf, shex_schema, loc_prefixes.WIKIDATA, 
                                   [loc_prefixes.GW.cancer, loc_prefixes.WIKIDATA.cancer])
-        from pprint import PrettyPrinter; pp = PrettyPrinter().pprint
-        pp(evaluator.evaluate())
-        
+        results = evaluator.evaluate()
+        self.assertFalse(results[0].result)
+        self.assertEqual(URIRef('http://www.wikidata.org/entity/'), results[0].focus)
+        self.assertEqual(URIRef('http://genewiki.shape/cancer'), results[0].start)
+        self.assertEqual('No matching triples found for predicate http://www.wikidata.org/prop/P1748',
+                         results[0].reason)
+        self.assertEqual(URIRef('http://www.wikidata.org/entity/'), results[1].focus)
+        self.assertEqual(URIRef('http://www.wikidata.org/entity/cancer'), results[1].start)
+        self.assertEqual('Shape: http://www.wikidata.org/entity/cancer not found in Schema',
+                         results[1].reason)
+
 
 if __name__ == '__main__':
     unittest.main()

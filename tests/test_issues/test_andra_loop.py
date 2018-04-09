@@ -2,7 +2,6 @@ import os
 import os
 
 import jsonasobj
-import pandas as pd
 import requests
 from SPARQLWrapper import SPARQLWrapper, JSON
 from ShExJSG import ShExC

@@ -18,3 +18,13 @@ class ParseNode:
         self.result: bool = None
         self.fail_reason: Optional[str] = None
         self.nodes: List[ParseNode] = []
+
+    def fail_reasons(self, depth: int=0) -> List[str]:
+        if self.fail_reason:
+            rval = [depth*"  " + self.fail_reason]
+            depth += 1
+        else:
+            rval = []
+        for node in self.nodes:
+            rval += node.fail_reasons(depth)
+        return rval
