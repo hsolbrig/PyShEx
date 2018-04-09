@@ -69,7 +69,7 @@ def satisfiesShape(cntxt: Context, n: Node, S: ShExJ.Shape, c: DebugContext) -> 
                 print(c.i(0,
                           f"<--- Satisfies shape {c.d()} FAIL - "
                           f"{len(non_matchables)} non-matching triples on a closed shape"))
-                print(c.i(1, "", non_matchables))
+                print(c.i(1, "", list(non_matchables)))
                 print()
             rslt = False
 
@@ -85,7 +85,7 @@ def satisfiesShape(cntxt: Context, n: Node, S: ShExJ.Shape, c: DebugContext) -> 
                     non_permutable_matchables = RDFGraph([t for t in matchables if t not in permutable_matchables])
                     if c.debug:
                         print(c.i(1,
-                                  f"Complete match failed -- evaluating extras", extras))
+                                  f"Complete match failed -- evaluating extras", list(extras)))
                     for matched, remainder in partition_2(permutable_matchables):
                         permutation = non_permutable_matchables.union(matched)
                         if matches(cntxt, permutation, S.expression):
@@ -334,4 +334,6 @@ def matchesTripleExprRef(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExprLabe
     The tripleExprWithId function is defined in Triple Expression Reference Requirement below.
     """
     expr = cntxt.tripleExprFor(expr)
+    if expr is None:
+        cntxt.reasons.append(f"{expr}: Reference not found")
     return all(matchesTripleConstraint(cntxt, t, expr) for t in T)

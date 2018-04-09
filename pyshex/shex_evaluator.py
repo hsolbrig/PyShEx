@@ -1,6 +1,6 @@
 from typing import Optional, Union, List, NamedTuple, Iterable
 
-from ShExJSG import ShExJ, Schema, ShExC
+from ShExJSG import ShExJ, ShExC
 from rdflib import Graph, URIRef, Namespace
 
 from pyshex.shape_expressions_language.p5_2_validation_definition import isValid
@@ -177,7 +177,7 @@ class ShExEvaluator:
         # TODO: Clean this up
         cntxt.debug_context.debug = debug if debug is not None else self.debug
         cntxt.debug_context.trace_slurps = debug_slurps if debug_slurps is not None else self.debug_slurps
-        cntxt.over_slurp = self.over_slurp if self.over_slurp is not None else self.over_slurp
+        cntxt.over_slurp = self.over_slurp if over_slurp is not None else self.over_slurp
 
         rval = []
         for start in evaluator.start:

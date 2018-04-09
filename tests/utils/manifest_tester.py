@@ -25,7 +25,7 @@ DEBUG = bool(ENTRY_NAME)
 TEST_SKIPS_ONLY = False                  # Double check that all skips need skipping
 
 # Local equivalent of online data files
-LOCAL_FILE_LOC = os.path.expanduser("~/git/shexTest/")
+LOCAL_FILE_LOC = os.path.expanduser("~/Development/git/shexSpec/shexTest/")
 # LOCAL_FILE_LOC = ''
 
 # Do Not Change this - must match manifest

@@ -12,6 +12,7 @@ from ShExJSG.ShExJ import Schema
 from pyjsg.jsglib.jsg import isinstance_
 from rdflib import Graph, BNode, Namespace
 
+from pyshex.parse_tree.parse_node import ParseNode
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import START
 
@@ -132,6 +133,8 @@ class Context:
         if self.schema.shapes is not None:
             for e in self.schema.shapes:
                 self._gen_schema_xref(e)
+
+        self.current_node: ParseNode = None
 
     def _gen_schema_xref(self, expr: Optional[Union[ShExJ.shapeExprLabel, ShExJ.shapeExpr]]) -> None:
         """
@@ -318,3 +321,6 @@ class Context:
         else:
             self.reasons.append(f"{s.id}: Inconsistent recursive shape reference")
             return True, False
+
+    def process_reasons(self) -> List[str]:
+        return self.reasons
