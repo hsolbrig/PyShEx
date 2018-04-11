@@ -20,6 +20,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.5.0 -- First cut at returning fail reasons... some work still needed
 * 0.5.1 -- Update shexc parser to include multi-line comments and bug fixes
 * 0.5.2 -- Issue with installer - missed the parse_tree package
+* 0.5.3 -- make sparql_slurper a dependency
 
 ## Installation
 ```bash
