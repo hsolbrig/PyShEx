@@ -17,7 +17,9 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.4.1 -- Resolves several issues with reactome and disease test cases
 * 0.4.2 -- Fix issues #13 (missing start) and #14 (Inconsistent shape causes loop)
 * 0.4.3 -- Fix issues #16 and #15 and some refactoring
-* 0.5.0 -- First cut at returning fail reasons... some work still needee
+* 0.5.0 -- First cut at returning fail reasons... some work still needed
+* 0.5.1 -- Update shexc parser to include multi-line comments and bug fixes
+* 0.5.2 -- Issue with installer - missed the parse_tree package
 
 ## Installation
 ```bash

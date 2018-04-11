@@ -10,15 +10,15 @@ if sys.version_info < (3, 6):
 
 setup(
     name='PyShEx',
-    version='0.5.0',
+    version='0.5.2',
     packages=['scripts', 'pyshex', 'pyshex.shape_expressions_language', 'pyshex.shapemap_structure_and_language',
-              'pyshex.sparql11_query', 'pyshex.utils'],
+              'pyshex.sparql11_query', 'pyshex.utils', 'pyshex.parse_tree'],
     url="http://github.com/hsolbrig/PyShEx",
     license='Apache 2.0',
     author='Harold Solbrig',
     author_email='solbrig@solbrig-informatics.com',
     description='Python ShEx Implementation',
-    install_requires=['ShExJSG>=0.2.1', 'PyShExC>=0.3.2', 'rdflib>=4.2.2', 'rdflib-jsonld>=0.4.0', 'requests',
+    install_requires=['ShExJSG>=0.2.1', 'PyShExC>=0.3.4', 'rdflib>=4.2.2', 'rdflib-jsonld>=0.4.0', 'requests',
                       'urllib3'],
     tests_require=['PyJSG', 'jsonasobj', 'SPARQLWrapper', 'sparql_slurper'],
     classifiers=[
