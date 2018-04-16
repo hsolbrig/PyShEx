@@ -32,7 +32,6 @@ LOCAL_FILE_LOC = os.path.expanduser("~/Development/git/shexSpec/shexTest/")
 REMOTE_FILE_LOC = "https://raw.githubusercontent.com/shexSpec/shexTest/master/"
 
 # Reasons for skipping things
-AWAIT_FANCY_STUFF = "Too crazy for the first pass"
 USES_IMPORTS = "Uses IMPORTS and no facet saying as much"
 LONG_UCHAR = "Uses multi-byte literals"
 RDFLIB_ISSUE = "RDFLIB single quote parsing error"
@@ -50,8 +49,6 @@ if LOCAL_FILE_LOC:
 # NOTE: A lot of expected failures aren't included in this list, as, at the moment, we just fail and don't say why.
 # skipped test fails json only
 expected_failures = {
-     "1literalPattern_with_ascii_boundaries_pass": AWAIT_FANCY_STUFF,
-     "1literalPattern_with_ascii_boundaries_fail": AWAIT_FANCY_STUFF,
      "1valExprRef-IV1_pass-lit-equal": USES_IMPORTS,
      "1valExprRefbnode-IV1_fail-lit-short": USES_IMPORTS,
      "1valExprRefbnode-IV1_pass-lit-equal": USES_IMPORTS,

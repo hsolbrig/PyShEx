@@ -21,6 +21,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.5.1 -- Update shexc parser to include multi-line comments and bug fixes
 * 0.5.2 -- Issue with installer - missed the parse_tree package
 * 0.5.3 -- make sparql_slurper a dependency
+* 0.5.4 -- Fixed long recursion issue with blood pressure example
 
 ## Installation
 ```bash

@@ -1,9 +1,8 @@
 """ Implementation of `5.5 Shapes and Triple Expressions <http://shex.io/shex-semantics/#shapes-and-TEs>`_"""
 
-from typing import List, Optional, Union, Dict
+from typing import List, Optional, Union
 
 from ShExJSG import ShExJ
-from ShExJSG.ShExJ import IRIREF
 from pyjsg.jsglib.jsg import isinstance_
 from sparql_slurper import SlurpyGraph
 
@@ -11,6 +10,7 @@ from pyshex.shape_expressions_language.p3_terminology import arcsOut
 from pyshex.shape_expressions_language.p5_7_semantic_actions import semActsSatisfied
 from pyshex.shape_expressions_language.p5_context import Context, DebugContext
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import RDFGraph, RDFTriple, Node
+from pyshex.utils.matchesEachOfEvaluator import EachOfEvaluator
 from pyshex.utils.partitions import partition_t, partition_2
 from pyshex.utils.schema_utils import predicates_in_expression, triple_constraints_in_expression, \
     directed_predicates_in_expression
@@ -198,37 +198,34 @@ def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr
     T can be partitioned into k subsets T1, T2,…Tk such that min ≤ k ≤ max and for each Tn,
     matches(Tn, expr, m) by the remaining rules in this list.
     """
-    if isinstance_(expr, ShExJ.tripleExprLabel):
-        return matchesTripleExprRef(cntxt, T, expr)
-    else:
-        # TODO: Cardinality defaults into spec
-        min_ = expr.min.val if expr.min.val is not None else 1
-        max_ = expr.max.val if expr.max.val is not None else 1
+    # TODO: Cardinality defaults into spec
+    min_ = expr.min.val if expr.min.val is not None else 1
+    max_ = expr.max.val if expr.max.val is not None else 1
 
-        cardinality_text = f"{{{min_},{'*' if max_ == -1 else max_}}}"
-        if c.debug:
-            print(f"{cardinality_text} matching {len(T)} triples")
-        if isinstance(expr, ShExJ.TripleConstraint):
-            if len(T) < min_:
-                if len(T) > 0:
-                    cntxt.current_node.fail_reason = f"{len(T)} triples less than {cardinality_text}"
-                else:
-                    cntxt.current_node.fail_reason = f"No matching triples found for predicate " \
-                                                     f"{expr.predicate}"
-                return False
-            elif 0 <= max_ < len(T):
-                cntxt.current_node.fail_reason = f"{len(T)} triples exceeds max {cardinality_text}"
-                return False
+    cardinality_text = f"{{{min_},{'*' if max_ == -1 else max_}}}"
+    if c.debug:
+        print(f"{cardinality_text} matching {len(T)} triples")
+    if isinstance(expr, ShExJ.TripleConstraint):
+        if len(T) < min_:
+            if len(T) > 0:
+                cntxt.current_node.fail_reason = f"{len(T)} triples less than {cardinality_text}"
             else:
-                return all(matchesTripleConstraint(cntxt, t, expr) for t in T)
-        else:
-            for partition in _partitions(T, min_, max_):
-                if all(matchesExpr(cntxt, part, expr) for part in partition):
-                    return True
-            if min_ != 1 or max_ != 1:
-                cntxt.current_node.fail_reason = f"{len(T)} triples cannot be partitioned into " \
-                                                 f"{cardinality_text} passing groups"
+                cntxt.current_node.fail_reason = f"No matching triples found for predicate " \
+                                                 f"{expr.predicate}"
             return False
+        elif 0 <= max_ < len(T):
+            cntxt.current_node.fail_reason = f"{len(T)} triples exceeds max {cardinality_text}"
+            return False
+        else:
+            return all(matchesTripleConstraint(cntxt, t, expr) for t in T)
+    else:
+        for partition in _partitions(T, min_, max_):
+            if all(matchesExpr(cntxt, part, expr) for part in partition):
+                return True
+        if min_ != 1 or max_ != 1:
+            cntxt.current_node.fail_reason = f"{len(T)} triples cannot be partitioned into " \
+                                             f"{cardinality_text} passing groups"
+        return False
 
 
 def _partitions(T: RDFGraph, min_: Optional[int], max_: Optional[int]) -> List[List[RDFGraph]]:
@@ -274,46 +271,7 @@ def matchesEachOf(cntxt: Context, T: RDFGraph, expr: ShExJ.EachOf, _: DebugConte
      expr1, expr2,… in shapeExprs, matches(Tn, exprn, m).
      """
 
-    # Divide the graph up into potential candidates
-    partition_map: Dict[IRIREF, RDFGraph] = {}
-    expression_map: Dict[IRIREF, List[ShExJ.TripleConstraint]] = {}
-
-    complex_expression = False          # True means one or more expression isn't a triple constraint
-
-    for e in expr.expressions:
-        if isinstance(e, ShExJ.TripleConstraint):
-            if e.predicate in expression_map:
-                expression_map[e.predicate].append(e)
-            else:
-                partition_map[e.predicate] = RDFGraph(t for t in T if str(t[1]) == str(e.predicate))
-                expression_map[e.predicate] = [e]
-        else:
-            complex_expression = True
-            break
-
-    if not complex_expression:
-        # We only have triple expressions
-        for predicate, expr_list in expression_map.items():
-            if len(expr_list) == 1:
-                success = matches(cntxt, partition_map[predicate], expr_list[0])
-            else:
-                successful_combination = False
-                for partition in _partitions(partition_map[predicate], len(expr_list), len(expr_list)):
-                    if all(matches(cntxt, t, e) for t, e in zip(partition, expr_list)):
-                        successful_combination = True
-                        break
-                success = successful_combination
-            if not success:
-                return False
-        return True
-    else:
-        # One or more expressions is another shape or the like, we have to do this the hard way
-        successful_combination = False
-        for partition in _partitions(T, len(expr.expressions), len(expr.expressions)):
-            if all(matches(cntxt, t, e) for t, e in zip(partition, expr.expressions)):
-                successful_combination = True
-                break
-        return successful_combination
+    return EachOfEvaluator(cntxt, T, expr).evaluate(cntxt)
 
 
 @trace_matches_tripleconstraint()

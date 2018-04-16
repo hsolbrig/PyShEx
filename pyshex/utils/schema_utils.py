@@ -1,4 +1,4 @@
-from typing import Optional, Union, List, Dict
+from typing import Optional, Union, List, Dict, Set
 
 from ShExJSG import ShExJ
 from ShExJSG.ShExJ import IRIREF
@@ -74,19 +74,6 @@ def predicates_in_expression(expression: ShExJ.shapeExpr, cntxt: Context) -> Lis
     :param cntxt: Context of evaluation
     :return: List of predicates
     """
-    # predicates: List[IRIREF] = []
-    #
-    # def predicate_finder(predicates: List[IRIREF], tc: ShExJ.TripleConstraint, cntxt: Context) -> None:
-    #     if isinstance(tc, ShExJ.TripleConstraint):
-    #         predicates.append(tc.predicate)
-    #
-    # def triple_expr_finder(predicates: List[IRIREF], expr: ShExJ.shapeExpr, cntxt: Context) -> None:
-    #     if isinstance(expr, ShExJ.Shape) and expr.expression is not None:
-    #         cntxt.visit_triple_expressions(expr.expression, predicate_finder, predicates)
-    #
-    # # TODO: follow_inner_shapes as True probably goes too far, but we definitely need to cross shape/triplecons
-    # cntxt.visit_shapes(expression, triple_expr_finder, predicates, follow_inner_shapes=False)
-    # return predicates
     return list(directed_predicates_in_expression(expression, cntxt).keys())
 
 
@@ -123,3 +110,14 @@ def directed_predicates_in_expression(expression: ShExJ.shapeExpr, cntxt: Contex
     # TODO: follow_inner_shapes as True probably goes too far, but we definitely need to cross shape/triplecons
     cntxt.visit_shapes(expression, triple_expr_finder, dir_predicates, follow_inner_shapes=False)
     return dir_predicates
+
+
+def predicates_in_tripleexpr(expression: ShExJ.tripleExpr, cntxt: Context) -> Set[IRIREF]:
+    predicates: Set[IRIREF] = set()
+
+    def triple_expr_visitor(predicates: Set[IRIREF], expr: ShExJ.tripleExpr, cntxt_: Context) -> None:
+        if isinstance(expr, ShExJ.TripleConstraint):
+            predicates.add(expr.predicate)
+
+    cntxt.visit_triple_expressions(expression, triple_expr_visitor, predicates)
+    return predicates
