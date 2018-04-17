@@ -205,6 +205,8 @@ def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr
     cardinality_text = f"{{{min_},{'*' if max_ == -1 else max_}}}"
     if c.debug:
         print(f"{cardinality_text} matching {len(T)} triples")
+    if min_ == 0 and len(T) == 0:
+        return True
     if isinstance(expr, ShExJ.TripleConstraint):
         if len(T) < min_:
             if len(T) > 0:
@@ -231,10 +233,8 @@ def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr
 def _partitions(T: RDFGraph, min_: Optional[int], max_: Optional[int]) -> List[List[RDFGraph]]:
     if max_ == 1:
         yield [T]
-        if min_ == 0:
-            yield []
     else:
-        for k in range(min_, (max(len(T), min_) if max_ == -1 else max_)+1):
+        for k in range(max(min_, 1), (max(len(T), min_) if max_ == -1 else max_)+1):
             for partition in partition_t(T, k):
                 yield partition
 

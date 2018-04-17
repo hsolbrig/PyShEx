@@ -107,7 +107,7 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
 class BPM1HangUnitTest(unittest.TestCase):
     def test_hang(self):
-        results = ShExEvaluator().evaluate(rdf, shex, focus="http://example.org/ex/BPM1", debug=True)
+        results = ShExEvaluator().evaluate(rdf, shex, focus="http://example.org/ex/BPM1", debug=False)
         for r in results:
             if r.result:
                 print("PASS")

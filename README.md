@@ -22,6 +22,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.5.2 -- Issue with installer - missed the parse_tree package
 * 0.5.3 -- make sparql_slurper a dependency
 * 0.5.4 -- Fixed long recursion issue with blood pressure example
+* 0.5.5 -- Fixed zero cardinality issue (#20)
 
 ## Installation
 ```bash
