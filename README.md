@@ -23,6 +23,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.5.3 -- make sparql_slurper a dependency
 * 0.5.4 -- Fixed long recursion issue with blood pressure example
 * 0.5.5 -- Fixed zero cardinality issue (#20)
+* 0.5.6 -- Added CLI entry point and cleaned up error reporting
 
 ## Installation
 ```bash
@@ -35,6 +36,28 @@ pip uninstall rdflib
 pip install git+https://github.com/rdflib/rdflib
 ```
 Unfortunately, however, `rdflib-jsonld` is NOT compatible with the bleeding edge rdflib, so you can't use a json-ld parser in this situation.
+
+## evalshex CLI
+```bash
+> shexeval -h
+usage: shexeval [-h] [-f FORMAT] [-s START] [-fn FOCUS] [-d] rdf shex
+
+positional arguments:
+  rdf                   Input RDF file
+  shex                  ShEx specification
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FORMAT, --format FORMAT
+                        Input RDF Format
+  -s START, --start START
+                        Start shape
+  -fn FOCUS, --focus FOCUS
+                        RDF focus node
+  -d, --debug           Add debug output
+
+```
+
 
 ## General Layout
 The root `pyshex` package is subdivided into:

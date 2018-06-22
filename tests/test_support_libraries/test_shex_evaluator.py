@@ -58,11 +58,12 @@ class ShExEvaluatorTestCase(unittest.TestCase):
         self.assertFalse(results[0].result)
         self.assertEqual(URIRef('http://www.wikidata.org/entity/'), results[0].focus)
         self.assertEqual(URIRef('http://genewiki.shape/cancer'), results[0].start)
-        self.assertEqual('No matching triples found for predicate http://www.wikidata.org/prop/P1748',
+        self.assertEqual('---> Testing http://www.wikidata.org/entity/ against http://genewiki.shape/cancer \n'
+                         '    No matching triples found for predicate http://www.wikidata.org/prop/P1748',
                          results[0].reason)
         self.assertEqual(URIRef('http://www.wikidata.org/entity/'), results[1].focus)
         self.assertEqual(URIRef('http://www.wikidata.org/entity/cancer'), results[1].start)
-        self.assertEqual('Shape: http://www.wikidata.org/entity/cancer not found in Schema',
+        self.assertEqual('  Shape: http://www.wikidata.org/entity/cancer not found in Schema',
                          results[1].reason)
 
 

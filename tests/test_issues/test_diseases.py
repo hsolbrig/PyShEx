@@ -4,6 +4,8 @@ import os
 
 from tests.utils.wikidata_utils import WikiDataTestCase
 
+skip_diseases = False
+
 
 class WikiDiseasesTestCase(WikiDataTestCase):
     """ Test a sample conformance checker for the WikiData disease structure
@@ -12,6 +14,7 @@ class WikiDiseasesTestCase(WikiDataTestCase):
     # This will change over time - expected values for the first 8 results
     expected_results = [True, True, True, False, False, True, False, False]
 
+    @unittest.skipIf(skip_diseases, "This test temporarily disabled")
     def test_diseases(self):
         test_data_base = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data', 'wikidata', 'disease'))
 

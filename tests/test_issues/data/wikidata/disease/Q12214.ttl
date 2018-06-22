@@ -18,7 +18,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 wd:Q12214 p:P1748 <http://www.wikidata.org/entity/statement/Q12214-00BB6306-6589-4E2D-8DA1-AF0EF5A6CA76> ;
-    p:P279 <http://www.wikidata.org/entity/statement/Q12214-8B80A9EB-8074-4307-807C-0E93AE970CC2> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q12214-8B80A9EB-8074-4307-807C-0E93AE970CC2>,
+        <http://www.wikidata.org/entity/statement/Q12214-D540AD4C-4D5F-4AE4-96AF-7774FAE74792> ;
     p:P2888 <http://www.wikidata.org/entity/statement/Q12214-975959CF-D6C3-46C2-AFC0-97D44034A074>,
         <http://www.wikidata.org/entity/statement/Q12214-9B317BA5-7A49-4D7A-BA9C-E6233B469443> ;
     p:P2892 <http://www.wikidata.org/entity/statement/Q12214-30D6A871-D613-41CD-B2E6-E8FFA08817E5> ;
@@ -26,19 +27,19 @@ wd:Q12214 p:P1748 <http://www.wikidata.org/entity/statement/Q12214-00BB6306-6589
     p:P486 <http://www.wikidata.org/entity/statement/Q12214-EA9D3417-B88A-4B07-AC6C-1F631EB42A60> ;
     p:P699 <http://www.wikidata.org/entity/statement/Q12214-6325FDC0-B1F6-429E-B3DF-9C5676B0ABC8> .
 
-<http://www.wikidata.org/entity/statement/Q12214-00BB6306-6589-4E2D-8DA1-AF0EF5A6CA76> prov:wasDerivedFrom <http://www.wikidata.org/reference/983bda8338732d051bbbe560ed02a1baef574a20> ;
+<http://www.wikidata.org/entity/statement/Q12214-00BB6306-6589-4E2D-8DA1-AF0EF5A6CA76> prov:wasDerivedFrom <http://www.wikidata.org/reference/402c8af32e1ce091bd1062c44b9fe91ad4d9aa94> ;
     ps:P1748 "C35027" .
 
-<http://www.wikidata.org/entity/statement/Q12214-30D6A871-D613-41CD-B2E6-E8FFA08817E5> prov:wasDerivedFrom <http://www.wikidata.org/reference/983bda8338732d051bbbe560ed02a1baef574a20> ;
+<http://www.wikidata.org/entity/statement/Q12214-30D6A871-D613-41CD-B2E6-E8FFA08817E5> prov:wasDerivedFrom <http://www.wikidata.org/reference/402c8af32e1ce091bd1062c44b9fe91ad4d9aa94> ;
     ps:P2892 "C0037354" .
 
-<http://www.wikidata.org/entity/statement/Q12214-36330696-CDC7-44C3-B867-1FE88FED0187> prov:wasDerivedFrom <http://www.wikidata.org/reference/983bda8338732d051bbbe560ed02a1baef574a20> ;
+<http://www.wikidata.org/entity/statement/Q12214-36330696-CDC7-44C3-B867-1FE88FED0187> prov:wasDerivedFrom <http://www.wikidata.org/reference/402c8af32e1ce091bd1062c44b9fe91ad4d9aa94> ;
     ps:P31 wd:Q12136 .
 
-<http://www.wikidata.org/entity/statement/Q12214-6325FDC0-B1F6-429E-B3DF-9C5676B0ABC8> prov:wasDerivedFrom <http://www.wikidata.org/reference/983bda8338732d051bbbe560ed02a1baef574a20> ;
+<http://www.wikidata.org/entity/statement/Q12214-6325FDC0-B1F6-429E-B3DF-9C5676B0ABC8> prov:wasDerivedFrom <http://www.wikidata.org/reference/402c8af32e1ce091bd1062c44b9fe91ad4d9aa94> ;
     ps:P699 "DOID:8736" .
 
-<http://www.wikidata.org/entity/statement/Q12214-8B80A9EB-8074-4307-807C-0E93AE970CC2> prov:wasDerivedFrom <http://www.wikidata.org/reference/983bda8338732d051bbbe560ed02a1baef574a20> .
+<http://www.wikidata.org/entity/statement/Q12214-8B80A9EB-8074-4307-807C-0E93AE970CC2> prov:wasDerivedFrom <http://www.wikidata.org/reference/402c8af32e1ce091bd1062c44b9fe91ad4d9aa94> .
 
 <http://www.wikidata.org/entity/statement/Q12214-975959CF-D6C3-46C2-AFC0-97D44034A074> prov:wasDerivedFrom <http://www.wikidata.org/reference/983bda8338732d051bbbe560ed02a1baef574a20> ;
     ps:P2888 <http://purl.obolibrary.org/obo/DOID_8736> .
@@ -46,7 +47,9 @@ wd:Q12214 p:P1748 <http://www.wikidata.org/entity/statement/Q12214-00BB6306-6589
 <http://www.wikidata.org/entity/statement/Q12214-9B317BA5-7A49-4D7A-BA9C-E6233B469443> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
     ps:P2888 <http://identifiers.org/doid/DOID:8736> .
 
-<http://www.wikidata.org/entity/statement/Q12214-EA9D3417-B88A-4B07-AC6C-1F631EB42A60> prov:wasDerivedFrom <http://www.wikidata.org/reference/983bda8338732d051bbbe560ed02a1baef574a20> ;
+<http://www.wikidata.org/entity/statement/Q12214-D540AD4C-4D5F-4AE4-96AF-7774FAE74792> prov:wasDerivedFrom <http://www.wikidata.org/reference/402c8af32e1ce091bd1062c44b9fe91ad4d9aa94> .
+
+<http://www.wikidata.org/entity/statement/Q12214-EA9D3417-B88A-4B07-AC6C-1F631EB42A60> prov:wasDerivedFrom <http://www.wikidata.org/reference/402c8af32e1ce091bd1062c44b9fe91ad4d9aa94> ;
     ps:P486 "D012899" .
 
 <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> pr:P248 wd:Q16335166 ;
@@ -55,4 +58,8 @@ wd:Q12214 p:P1748 <http://www.wikidata.org/entity/statement/Q12214-00BB6306-6589
 <http://www.wikidata.org/reference/983bda8338732d051bbbe560ed02a1baef574a20> pr:P248 wd:Q50349458 ;
     pr:P699 "DOID:8736" ;
     pr:P813 "2018-03-05T00:00:00+00:00"^^xsd:dateTime .
+
+<http://www.wikidata.org/reference/402c8af32e1ce091bd1062c44b9fe91ad4d9aa94> pr:P248 wd:Q55009032 ;
+    pr:P699 "DOID:8736" ;
+    pr:P813 "2018-06-15T00:00:00+00:00"^^xsd:dateTime .
 

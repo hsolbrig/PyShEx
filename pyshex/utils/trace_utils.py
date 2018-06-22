@@ -9,6 +9,7 @@ from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import R
 
 # TODO: factor out common code below.  Differences are minor
 
+
 def trace_satisfies(newline: bool=True, skip_trace: Callable[[jsg.JSGObject], bool]=lambda _: False):
     def e(f: Callable[[Context, Node, jsg.JSGObject, DebugContext], bool]):
         def wrapper(cntxt: Context, n: Node, expr: jsg.JSGObject) -> bool:
@@ -18,12 +19,12 @@ def trace_satisfies(newline: bool=True, skip_trace: Callable[[jsg.JSGObject], bo
             c = cntxt.debug_context
             c.splus()
             if c.debug and not skip_trace(expr):
-                print(c.i(0, f'--> {f.__name__} {c.d()} node: {n}'), end=None if newline else '')
+                c.print(c.i(0, f'--> {f.__name__} {c.d()} node: {n}'), not newline)
             rval = f(cntxt, n, expr, c)
             if c.debug and not skip_trace(expr):
-                print(c.i(0, f'<-- {f.__name__} {c.d()} node: {n}: {rval}'))
+                c.print(c.i(0, f'<-- {f.__name__} {c.d()} node: {n}: {rval}'))
             c.sminus()
-            cntxt.current_node.result = rval
+            cntxt.current_node.set_result(rval)
             cntxt.current_node = parent_parse_node
             return rval
         return wrapper
@@ -39,10 +40,10 @@ def trace_matches(newline: bool=True):
             c = cntxt.debug_context
             c.splus()
             if c.debug:
-                print(c.i(0, f'--> {f.__name__} {c.d()}'), end=None if newline else '')
+                c.print(c.i(0, f'--> {f.__name__} {c.d()}'), not newline)
             rval = f(cntxt, T, expr, c)
             if c.debug:
-                print(c.i(0, f'<-- {f.__name__} {c.d()} {rval}'))
+                c.print(c.i(0, f'<-- {f.__name__} {c.d()} {rval}'))
             c.sminus()
             cntxt.current_node.result = rval
             cntxt.current_node = parent_parse_node
@@ -57,10 +58,10 @@ def trace_matches_tripleconstraint(newline: bool=True):
             c = cntxt.debug_context
             c.splus()
             if c.debug:
-                print(c.i(0, f'--> {f.__name__} {c.d()}'), end=None if newline else '')
+                c.print(c.i(0, f'--> {f.__name__} {c.d()}'), not newline)
             rval = f(cntxt, n, expr, c)
             if c.debug:
-                print(c.i(0, f'<-- {f.__name__} {c.d()} {rval}'))
+                c.print(c.i(0, f'<-- {f.__name__} {c.d()} {rval}'))
             c.sminus()
             return rval
         return wrapper

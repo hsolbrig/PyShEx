@@ -1,17 +1,16 @@
-import re
-from typing import Optional, Union, Tuple, List, NamedTuple, Iterable
+from typing import Optional, Union, Tuple
 
-from ShExJSG import ShExJ, ShExC
+from ShExJSG import ShExJ
 from ShExJSG.ShExJ import IRIREF
+from rdflib import Graph, URIRef
 
 from pyshex.shape_expressions_language.p5_2_validation_definition import isValid
+from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import FixedShapeMap, ShapeAssociation, START
 from pyshex.utils.schema_loader import SchemaLoader
-from pyshex.shape_expressions_language.p5_context import Context
-from rdflib import Graph, URIRef, Namespace
 
 
-def evaluate(g: Graph(),
+def evaluate(g: Graph,
              schema: Union[str, ShExJ.Schema],
              focus: Optional[Union[str, URIRef]],
              start: Optional[Union[str, URIRef]]=None,

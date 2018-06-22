@@ -1,7 +1,10 @@
+import sys
+from argparse import ArgumentParser
 from typing import Optional, Union, List, NamedTuple, Iterable
 
 from ShExJSG import ShExJ, ShExC
 from rdflib import Graph, URIRef, Namespace
+from rdflib.util import guess_format
 
 from pyshex.shape_expressions_language.p5_2_validation_definition import isValid
 from pyshex.shape_expressions_language.p5_context import Context
@@ -187,3 +190,37 @@ class ShExEvaluator:
                 success, fail_reasons = isValid(cntxt, map_)
                 rval.append(EvaluationResult(success, focus, start, '\n'.join(fail_reasons) if not success else ''))
         return rval
+
+
+def genargs() -> ArgumentParser:
+    """
+    Create a command line parser
+    :return: parser
+    """
+    parser = ArgumentParser()
+    parser.add_argument("rdf", help="Input RDF file")
+    parser.add_argument("shex", help="ShEx specification")
+    parser.add_argument("-f", "--format", help="Input RDF Format")
+    parser.add_argument("-s", "--start", help="Start shape")
+    parser.add_argument("-fn", "--focus", help="RDF focus node")
+    parser.add_argument("-d", "--debug", action="store_true", help="Add debug output")
+    return parser
+
+
+def evaluate_cli(argv: Optional[List[str]] = None) -> bool:
+    opts = genargs().parse_args(argv if argv is not None else sys.argv[1:])
+    if not opts.format:
+        opts.format = guess_format(opts.rdf)
+    if not opts.format:
+        print('Cannot determine RDF format from file name - use "--format" option')
+        return False
+    with open(opts.rdf) as rdf_file:
+        rdf = rdf_file.read()
+        with open(opts.shex) as shex_file:
+            shex = shex_file.read()
+    result = ShExEvaluator(rdf, shex, opts.focus, opts.start, rdf_format=opts.format, debug=opts.debug).evaluate()
+    for rslt in result:
+        if not rslt.result:
+            print(f"Error: {rslt.reason}")
+    return all(r.result for r in result)
+

@@ -1,0 +1,16 @@
+usage: _jb_unittest_runner.py [-h] [-f FORMAT] [-s START] [-fn FOCUS] [-d]
+                              rdf shex
+
+positional arguments:
+  rdf                   Input RDF file
+  shex                  ShEx specification
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FORMAT, --format FORMAT
+                        Input RDF Format
+  -s START, --start START
+                        Start shape
+  -fn FOCUS, --focus FOCUS
+                        RDF focus node
+  -d, --debug           Add debug output

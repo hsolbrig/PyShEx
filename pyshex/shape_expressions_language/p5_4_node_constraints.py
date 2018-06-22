@@ -6,6 +6,7 @@ from typing import Union
 from ShExJSG import ShExJ
 from pyjsg.jsglib.jsg import isinstance_
 from rdflib import URIRef, BNode, Literal, XSD, RDF
+from jsonasobj import as_json
 
 from pyshex.shape_expressions_language.p5_context import Context, DebugContext
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node
@@ -205,12 +206,8 @@ def nodeSatisfiesValues(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, _c: D
         if any(_nodeSatisfiesValue(cntxt, n, vsv) for vsv in nc.values):
             return True
         else:
-            crtab = '\n\t'
-            cntxt.current_node.fail_reason = f"Node: {n} not in value set:\n\t {nc._as_json[:60]}..."
+            cntxt.fail_reason(f"Node: {n} not in value set:\n\t {as_json(nc, indent=None)[:60]}...")
             return False
-
-
-
 
 
 def _nodeSatisfiesValue(cntxt: Context, n: Node, vsv: ShExJ.valueSetValue) -> bool:

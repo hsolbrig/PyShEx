@@ -39,41 +39,43 @@ def satisfiesShape(cntxt: Context, n: Node, S: ShExJ.Shape, c: DebugContext) -> 
     # evaluation.  If it returns None, then an initial evaluation is needed
     rslt = cntxt.start_evaluating(n, S)
 
-    predicates = directed_predicates_in_expression(S, cntxt)
-    matchables = RDFGraph()
-
-    # Note: The code below does an "over-slurp" for the sake of expediency.  If you are interested in
-    #       getting EXACTLY the needed triples, set cntxt.over_slurp to false
-    if isinstance(cntxt.graph, SlurpyGraph) and cntxt.over_slurp:
-        with slurper(cntxt, n, S) as g:
-            _ = g.triples((n, None, None))
-
-    for predicate, direction in predicates.items():
-        with slurper(cntxt, n, S) as g:
-            matchables.add_triples(g.triples((n if direction.is_fwd else None,
-                                              iriref_to_uriref(predicate),
-                                              n if direction.is_rev else None)))
-
-    if c.debug:
-        print(c.i(1, "predicates:", sorted(str(p) for p in predicates.keys())))
-        print(c.i(1, "matchables:", sorted(str(m) for m in matchables)))
-        print()
-
-    if S.closed.val:
-        # TODO: Is this working correctly on reverse items?
-        non_matchables = RDFGraph([t for t in arcsOut(cntxt.graph, n) if t not in matchables])
-        if len(non_matchables):
-            cntxt.current_node.fail_reason = "Unmatched triples in CLOSED shape:\n"
-            cntxt.current_node.fail_reason += '\n'.join(f"\t{t}" for t in non_matchables)
-            if c.debug:
-                print(c.i(0,
-                          f"<--- Satisfies shape {c.d()} FAIL - "
-                          f"{len(non_matchables)} non-matching triples on a closed shape"))
-                print(c.i(1, "", list(non_matchables)))
-                print()
-            rslt = False
-
     if rslt is None:
+        cntxt.evaluate_stack.append((n, S.id))
+        predicates = directed_predicates_in_expression(S, cntxt)
+        matchables = RDFGraph()
+
+        # Note: The code below does an "over-slurp" for the sake of expediency.  If you are interested in
+        #       getting EXACTLY the needed triples, set cntxt.over_slurp to false
+        if isinstance(cntxt.graph, SlurpyGraph) and cntxt.over_slurp:
+            with slurper(cntxt, n, S) as g:
+                _ = g.triples((n, None, None))
+
+        for predicate, direction in predicates.items():
+            with slurper(cntxt, n, S) as g:
+                matchables.add_triples(g.triples((n if direction.is_fwd else None,
+                                                  iriref_to_uriref(predicate),
+                                                  n if direction.is_rev else None)))
+
+        if c.debug:
+            print(c.i(1, "predicates:", sorted(str(p) for p in predicates.keys())))
+            print(c.i(1, "matchables:", sorted(str(m) for m in matchables)))
+            print()
+
+        if S.closed.val:
+            # TODO: Is this working correctly on reverse items?
+            non_matchables = RDFGraph([t for t in arcsOut(cntxt.graph, n) if t not in matchables])
+            if len(non_matchables):
+                cntxt.current_node.fail_reason = "Unmatched triples in CLOSED shape:\n"
+                cntxt.current_node.fail_reason += '\n'.join(f"\t{t}" for t in non_matchables)
+                if c.debug:
+                    print(c.i(0,
+                              f"<--- Satisfies shape {c.d()} FAIL - "
+                              f"{len(non_matchables)} non-matching triples on a closed shape"))
+                    print(c.i(1, "", list(non_matchables)))
+                    print()
+                rslt = False
+
+
         # Evaluate the actual expression.  Start assuming everything matches...
         if S.expression:
             if matches(cntxt, matchables, S.expression):
@@ -101,6 +103,7 @@ def satisfiesShape(cntxt: Context, n: Node, S: ShExJ.Shape, c: DebugContext) -> 
             rslt = satisfiesShape(cntxt, n, S)
         rslt = rslt and consistent
 
+        cntxt.evaluate_stack.pop()
     return rslt
 
 
@@ -203,20 +206,19 @@ def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr
     max_ = expr.max.val if expr.max.val is not None else 1
 
     cardinality_text = f"{{{min_},{'*' if max_ == -1 else max_}}}"
-    if c.debug:
+    if c.debug and (min_ != 0 or len(T) != 0):
         print(f"{cardinality_text} matching {len(T)} triples")
     if min_ == 0 and len(T) == 0:
         return True
     if isinstance(expr, ShExJ.TripleConstraint):
         if len(T) < min_:
             if len(T) > 0:
-                cntxt.current_node.fail_reason = f"{len(T)} triples less than {cardinality_text}"
+                cntxt.fail_reason(f"{len(T)} triples less than {cardinality_text}")
             else:
-                cntxt.current_node.fail_reason = f"No matching triples found for predicate " \
-                                                 f"{expr.predicate}"
+                cntxt.fail_reason(f"No matching triples found for predicate {expr.predicate}")
             return False
         elif 0 <= max_ < len(T):
-            cntxt.current_node.fail_reason = f"{len(T)} triples exceeds max {cardinality_text}"
+            cntxt.fail_reason(f"{len(T)} triples exceeds max {cardinality_text}")
             return False
         else:
             return all(matchesTripleConstraint(cntxt, t, expr) for t in T)
@@ -225,8 +227,7 @@ def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr
             if all(matchesExpr(cntxt, part, expr) for part in partition):
                 return True
         if min_ != 1 or max_ != 1:
-            cntxt.current_node.fail_reason = f"{len(T)} triples cannot be partitioned into " \
-                                             f"{cardinality_text} passing groups"
+            cntxt.fail_reason(f"{len(T)} triples cannot be partitioned into {cardinality_text} passing groups")
         return False
 
 

@@ -1,9 +1,11 @@
 import unittest
+from typing import List
 
 from rdflib import URIRef
 
 from pyshex.parse_tree.parse_node import ParseNode
 from pyshex.shape_expressions_language.p5_4_node_constraints import nodeSatisfiesNumericFacet
+from pyshex.shape_expressions_language.p5_context import Context
 from tests.utils.setup_test import EX, gen_rdf, setup_context
 
 shex_1 = """{ "type": "Schema", "shapes": [
@@ -44,6 +46,10 @@ rdf_2 = gen_rdf("""<http://a.example/s1>
 
 
 class NumericFacetTestCase(unittest.TestCase):
+    @staticmethod
+    def fail_reasons(cntxt: Context) -> List[str]:
+        return [e.strip() for e in cntxt.current_node.fail_reasons(cntxt.graph)]
+
     def test_example_1(self):
         cntxt = setup_context(shex_1, rdf_1)
         nc = cntxt.schema.shapes[0].expression.valueExpr
@@ -56,7 +62,7 @@ class NumericFacetTestCase(unittest.TestCase):
         focus = cntxt.graph.value(EX.issue3, EX.confirmations)
         cntxt.current_node = ParseNode(nodeSatisfiesNumericFacet, nc, focus)
         self.assertFalse(nodeSatisfiesNumericFacet(cntxt, focus, nc))
-        self.assertEqual(['Numeric value volation - minimum inclusive: 1 actual: 0'], cntxt.current_node.fail_reasons())
+        self.assertEqual(['Numeric value volation - minimum inclusive: 1 actual: 0'], self.fail_reasons(cntxt))
 
     def test_trailing_zero(self):
         cntxt = setup_context(shex_2, rdf_2)

@@ -1,8 +1,10 @@
 import unittest
+from typing import List
 
 from rdflib.namespace import FOAF
 
 from pyshex.parse_tree.parse_node import ParseNode
+from pyshex.shape_expressions_language.p5_context import Context
 from tests.utils.setup_test import rdf_header, EX, gen_rdf, setup_context
 
 shex_1 = """{ "type": "Schema", "shapes": [
@@ -61,6 +63,10 @@ rdf_3 = gen_rdf("""<issue8> foaf:mbox 123 .
 
 
 class ValuesConstraintTestCase(unittest.TestCase):
+    @staticmethod
+    def fail_reasons(cntxt: Context) -> List[str]:
+        return [e.strip() for e in cntxt.current_node.fail_reasons(cntxt.graph)]
+
     def test_example_1(self):
         from pyshex.shape_expressions_language.p5_4_node_constraints import nodeSatisfiesValues
 
@@ -75,7 +81,7 @@ class ValuesConstraintTestCase(unittest.TestCase):
         self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
         self.assertEqual(['Node: http://schema.example/Unresolved not in value set:\n'
                           '\t {"values": ["http://schema.example/Resolved", "http://schema...'],
-                         cntxt.current_node.fail_reasons())
+                         self.fail_reasons(cntxt))
 
     def test_example_2(self):
         from pyshex.shape_expressions_language.p5_4_node_constraints import nodeSatisfiesValues
@@ -96,14 +102,14 @@ class ValuesConstraintTestCase(unittest.TestCase):
         self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
         self.assertEqual(['Node: missing not in value set:\n'
                          '\t {"values": [{"value": "N/A"}, {"stem": "mailto:engineering-"...'],
-                         cntxt.current_node.fail_reasons())
+                         self.fail_reasons(cntxt))
 
         focus = cntxt.graph.value(EX.issue7, FOAF.mbox)
         cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
         self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
         self.assertEqual(['Node: mailto:sales-contacts-999@a.example not in value set:\n'
                           '\t {"values": [{"value": "N/A"}, {"stem": "mailto:engineering-"...'],
-                         cntxt.current_node.fail_reasons())
+                         self.fail_reasons(cntxt))
 
     def test_example_3(self):
         from pyshex.shape_expressions_language.p5_4_node_constraints import nodeSatisfiesValues
@@ -123,7 +129,7 @@ class ValuesConstraintTestCase(unittest.TestCase):
         self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
         self.assertEqual(['Node: mailto:engineering-2112@a.example not in value set:\n'
                           '\t {"values": [{"stem": {"type": "Wildcard"}, "exclusions": [{"...'],
-                         cntxt.current_node.fail_reasons())
+                         self.fail_reasons(cntxt))
 
 
 if __name__ == '__main__':

@@ -5,12 +5,13 @@ Context for evaluation engine -- carries all of the global variables (schema, gr
 We might fold the various routines inside context and replace "cntxt: Context" with "self", but we will have to see.
 
 """
-from typing import Dict, Any, Callable, Optional, List, Tuple, Union
+from copy import copy
+from typing import Dict, Any, Callable, Optional, List, Tuple, Union, DefaultDict, Set
 
 from ShExJSG import ShExJ
 from ShExJSG.ShExJ import Schema
 from pyjsg.jsglib.jsg import isinstance_
-from rdflib import Graph, BNode, Namespace
+from rdflib import Graph, BNode, Namespace, URIRef
 
 from pyshex.parse_tree.parse_node import ParseNode
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node
@@ -22,6 +23,8 @@ class DebugContext:
         self.debug = False
         self.trace_slurps = False
         self.trace_depth = 0
+        self.held_prints: Dict[int, str] = DefaultDict(str)
+        self.max_print_depth: int = 0
 
     def d(self) -> str:
         """ Return a depth indicator """
@@ -35,7 +38,7 @@ class DebugContext:
 
     @staticmethod
     def s(ndeep) -> str:
-        return '\t' * (ndeep - 1)
+        return ' ' * (ndeep - 1)
 
     @staticmethod
     def rs(ndeep) -> str:
@@ -47,7 +50,27 @@ class DebugContext:
         elif len(txt_list) > 1:
             txt_list.insert(0, '')
         return DebugContext.s(self.trace_depth + bias) + txt + ' ' + \
-               DebugContext.rs(self.trace_depth + bias + 1).join(str(e) for e in txt_list)
+            DebugContext.rs(self.trace_depth + bias + 1).join(str(e) for e in txt_list)
+
+    def print(self, txt: str, hold: bool=False) -> None:
+        """ Conditionally print txt
+
+        :param txt: text to print
+        :param hold: If true, hang on to the text until another print comes through
+        :param hold: If true, drop both print statements if another hasn't intervened
+        :return:
+        """
+        if hold:
+            self.held_prints[self.trace_depth] = txt
+        elif self.held_prints[self.trace_depth]:
+            if self.max_print_depth > self.trace_depth:
+                print(self.held_prints[self.trace_depth])
+                print(txt)
+                self.max_print_depth = self.trace_depth
+            del self.held_prints[self.trace_depth]
+        else:
+            print(txt)
+            self.max_print_depth = self.trace_depth
 
 
 class _VisitorCenter:
@@ -122,8 +145,11 @@ class Context:
         # A list of node selectors/shape expressions that are being evaluated.  If we attempt to evaluate
         # an entry for a second time, we, instead, put the entry into the assumptions table.  We start with 'true'
         # and, if the result is 'true' then we count it as success.  If not, we switch to false and try again
-        self.evaluating: List[Tuple[Node, ShExJ.shapeExpr]] = []
-        self.assumptions: Dict[Tuple[Node, ShExJ.shapeExpr], bool] = {}
+        self.evaluating: Set[Tuple[Node, ShExJ.shapeExprLabel]] = set()
+        self.assumptions: Dict[Tuple[Node, ShExJ.shapeExprLabel], bool] = {}
+
+        # Known results -- a cache of existing evaluation results
+        self.known_results: Dict[Tuple[Node, ShExJ.shapeExprLabel], bool] = {}
 
         # Debugging options
         self.debug_context = DebugContext()
@@ -135,6 +161,7 @@ class Context:
                 self._gen_schema_xref(e)
 
         self.current_node: ParseNode = None
+        self.evaluate_stack: List[Tuple[Union[BNode, URIRef], Optional[str]]] = []  # Node / shape evaluation stack
 
     def _gen_schema_xref(self, expr: Optional[Union[ShExJ.shapeExprLabel, ShExJ.shapeExpr]]) -> None:
         """
@@ -281,17 +308,24 @@ class Context:
             visit_center.f(visit_center.arg_cntxt, shape.expression, self)
 
     def start_evaluating(self, n: Node, s: ShExJ.shapeExpr) -> Optional[bool]:
-        """Indicate that we are beginning to evaluate n in terms of s.
+        """Indicate that we are beginning to evaluate n according to shape expression s.
+        If we are already in the process of evaluating (n,s), as indicated self.evaluating, we return our current
+        guess as to the result.
 
         :param n: Node to be evaluated
         :param s: expression for node evaluation
         :return: Assumed evaluation result.  If None, evaluation must be performed
         """
         if not s.id:
-            s.id = str(BNode())
+            s.id = str(BNode())                 # Random permanant id
         key = (n, s.id)
+
+        # We only evaluate a node once
+        if key in self.known_results:
+            return self.known_results[key]
+
         if key not in self.evaluating:
-            self.evaluating.append(key)
+            self.evaluating.add(key)
             return None
         elif key not in self.assumptions:
             self.assumptions[key] = True
@@ -299,7 +333,8 @@ class Context:
 
     def done_evaluating(self, n: Node, s: ShExJ.shapeExpr, result: bool) -> Tuple[bool, bool]:
         """
-        Indicate that we have completed evaluating n in terms of s.
+        Indicate that we have completed an actual evaluation of (n,s).  This is only called when start_evaluating
+        has returned None as the assumed result
 
         :param n: Node that was evaluated
         :param s: expression for node evaluation
@@ -307,13 +342,17 @@ class Context:
         :return: Tuple - first element is whether we are done, second is whether evaluation was consistent
         """
         key = (n, s.id)
-        self.evaluating.remove(key)
-        if key not in self.assumptions:
+
+        # If we didn't have to assume anything or our assumption was correct, we're done
+        if key not in self.assumptions or self.assumptions[key] == result:
+            if key in self.assumptions:
+                del self.assumptions[key]       # good housekeeping, not strictly necessary
+            self.evaluating.remove(key)
+            self.known_results[key] = result
             return True, True
-        elif self.assumptions[key] == result:
-            del self.assumptions[key]
-            return True, True
+        # If we assumed true and got a false, try assuming false
         elif self.assumptions[key]:
+            self.evaluating.remove(key)         # restart the evaluation from the top
             self.assumptions[key] = False
             return False, True
         else:
@@ -321,4 +360,11 @@ class Context:
             return True, False
 
     def process_reasons(self) -> List[str]:
-        return self.current_node.fail_reasons()
+        return self.current_node.fail_reasons(self.graph)
+
+    def fail_reason(self, reason_text: str) -> None:
+        if self.current_node.fail_reason is None:
+            self.current_node.fail_reason = reason_text
+        else:
+            self.current_node.fail_reason += '\n' + reason_text
+        self.current_node.reason_stack = copy(self.evaluate_stack)

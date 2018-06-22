@@ -1,8 +1,10 @@
 import unittest
+from typing import List
 
 from rdflib import RDFS
 
 from pyshex.parse_tree.parse_node import ParseNode
+from pyshex.shape_expressions_language.p5_context import Context
 from tests.utils.setup_test import rdf_header, EX, setup_context
 
 shex_1 = """{ "type": "Schema", "shapes": [
@@ -40,6 +42,10 @@ rdf_2 = f"""{rdf_header}
 
 class DataTypeTestCase(unittest.TestCase):
 
+    @staticmethod
+    def fail_reasons(cntxt: Context) -> List[str]:
+        return [e.strip() for e in cntxt.current_node.fail_reasons(cntxt.graph)]
+
     def test_example_1(self):
         from pyshex.shape_expressions_language.p5_4_node_constraints import nodeSatisfiesDataType
 
@@ -52,13 +58,13 @@ class DataTypeTestCase(unittest.TestCase):
         cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
         self.assertFalse(nodeSatisfiesDataType(cntxt, focus, nc))
         self.assertEqual(['Datatype mismatch - expected: http://www.w3.org/2001/XMLSchema#dateTime '
-                          'actual: http://www.w3.org/2001/XMLSchema#date'], cntxt.current_node.fail_reasons())
+                          'actual: http://www.w3.org/2001/XMLSchema#date'], self.fail_reasons(cntxt))
 
         focus = cntxt.graph.value(EX.issue3b, EX.submittedOn)
         cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
         self.assertFalse(nodeSatisfiesDataType(cntxt, focus, nc))
         self.assertEqual(['Datatype mismatch - expected: http://www.w3.org/2001/XMLSchema#dateTime '
-                          'actual: http://www.w3.org/2001/XMLSchema#date'], cntxt.current_node.fail_reasons())
+                          'actual: http://www.w3.org/2001/XMLSchema#date'], self.fail_reasons(cntxt))
 
     @unittest.skipIf(True, "needs rdflib date parsing fix")
     def test_example_1a(self):
@@ -87,7 +93,8 @@ class DataTypeTestCase(unittest.TestCase):
         self.assertFalse(nodeSatisfiesDataType(cntxt, focus, nc))
         self.assertEqual(['Datatype mismatch - expected: '
                           'http://www.w3.org/1999/02/22-rdf-syntax-ns#langString actual: '
-                          'http://www.w3.org/2001/XMLSchema#string'], cntxt.current_node.fail_reasons())
+                          'http://www.w3.org/2001/XMLSchema#string'], self.fail_reasons(cntxt))
+
 
 if __name__ == '__main__':
     unittest.main()
