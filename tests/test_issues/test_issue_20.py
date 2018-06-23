@@ -37,6 +37,7 @@ PREFIX : <http://hl7.org/fhir/>
 
 
 class BPM2TestCase(unittest.TestCase):
+    @unittest.expectedFailure
     def test_fail(self):
         pl = PrefixLibrary(rdf)
         results = ShExEvaluator().evaluate(rdf, shex, focus=[pl.EX.BPM1, pl.EX.BPM2], debug=False)
@@ -46,6 +47,7 @@ class BPM2TestCase(unittest.TestCase):
             else:
                 print(f"FAIL: {r.reason}")
         self.assertEqual([False, True], [r.result for r in results])
+        self.assertEqual("A good fail reason", results[0].reason)
 
 
 if __name__ == '__main__':
