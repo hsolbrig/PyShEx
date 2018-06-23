@@ -29,6 +29,11 @@ def isValid(cntxt: Context, m: FixedShapeMap) -> Tuple[bool, List[str]]:
             return False, [f"{n}: Tripple patterns are not implemented"]
         elif isinstance_(nodeshapepair.shapeLabel, BNODE):
             return False, [f"{nodeshapepair.shapeLabel}: BNode shape references are not implemented"]
+        # The third test below is because the spec asserts that completely empty graphs pass in certain circumstances
+        elif not (next(cntxt.graph.predicate_objects(nodeshapepair.nodeSelector), None) or
+                  next(cntxt.graph.subject_predicates(nodeshapepair.nodeSelector), None) or
+                  not next(cntxt.graph.triples((None, None, None)), None)):
+            return False, [f"Focus: {nodeshapepair.nodeSelector} not in graph"]
         else:
             s = cntxt.shapeExprFor(START if nodeshapepair.shapeLabel is None or nodeshapepair.shapeLabel is START
                                    else nodeshapepair.shapeLabel)

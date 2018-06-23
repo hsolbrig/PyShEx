@@ -32,8 +32,9 @@ class ShExManifestEntry:
         self.g = g
         self.entryuri = entryuri
         self.owner = owner
+        # Action appears to have been removed.  If it isn't present, we pull what we need from the root
         action = self.g.value(self.entryuri, MF.action, any=False)
-        assert action, "Invalid action list in entry"
+        assert action, f"{self.entryuri} : Invalid action list in entry"
         self.action_ = {p: o for p, o in g.predicate_objects(action)}
         assert self.action_, "No actions"
 

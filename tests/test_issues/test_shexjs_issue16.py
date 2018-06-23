@@ -25,7 +25,7 @@ class ShexjsIssue16TestCase(unittest.TestCase):
     def test_infinite_loop(self):
         g = Graph()
         g.add((EX.Obs1, FHIR.status, Literal("final")))
-        e = ShExEvaluator(rdf=g, schema=shex, focus=EX.obs1, start=FHIR.ObservationShape, debug=False)
+        e = ShExEvaluator(rdf=g, schema=shex, focus=EX.Obs1, start=FHIR.ObservationShape, debug=False)
         self.assertTrue(e.evaluate()[0].result)
 
 

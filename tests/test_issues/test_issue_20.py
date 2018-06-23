@@ -1,11 +1,6 @@
 import unittest
 
-from ShExJSG import ShExC
-from ShExJSG.ShExJ import IRIREF
-from rdflib import Graph
-
 from pyshex import ShExEvaluator, PrefixLibrary
-from tests.test_issues.test_guardian_issue import schema
 
 shex = """
 BASE <http://example.org/ex/>

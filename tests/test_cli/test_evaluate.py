@@ -10,11 +10,10 @@ update_test_files: bool = False
 
 class ShexEvaluatorTestCase(CLITestCase):
     testdir = "evaluate"
-    testprog = 'evaluate'
+    testprog = 'shexeval'
 
-    @staticmethod
-    def prog_ep(argv: List[str]) -> bool:
-        return evaluate_cli(argv)
+    def prog_ep(self, argv: List[str]) -> bool:
+        return evaluate_cli(argv, prog=self.testprog)
 
     def test_help(self):
         self.do_test("--help", 'help', update_test_file=update_test_files)

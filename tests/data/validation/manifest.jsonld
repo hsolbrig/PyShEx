@@ -217,16 +217,16 @@
           "status": "mf:proposed"
         },
         {
-          "@id": "#1dotNS2Comment_pass-noOthers",
+          "@id": "#1dotNS2SingleComment_pass-noOthers",
           "@type": "sht:ValidationTest",
           "action": {
-            "schema": "../schemas/1dotNS2Comment.shex",
+            "schema": "../schemas/1dotNS2SingleComment.shex",
             "shape": "http://a.example/S1",
             "data": "Is1_Ip1_Io1.ttl",
             "focus": "http://a.example/s1"
           },
           "extensionResults": [],
-          "name": "1dotNS2Comment_pass-noOthers",
+          "name": "1dotNS2SingleComment_pass-noOthers",
           "trait": [
             "TriplePattern"
           ],
@@ -234,16 +234,16 @@
           "status": "mf:proposed"
         },
         {
-          "@id": "#1dotLNexComment_pass-noOthers",
+          "@id": "#1dotLNexSingleComment_pass-noOthers",
           "@type": "sht:ValidationTest",
           "action": {
-            "schema": "../schemas/1dotLNexComment.shex",
+            "schema": "../schemas/1dotLNexSingleComment.shex",
             "shape": "http://a.example/S1",
             "data": "Is1_Ip1_Io1.ttl",
             "focus": "http://a.example/s1"
           },
           "extensionResults": [],
-          "name": "1dotLNexComment_pass-noOthers",
+          "name": "1dotLNexSingleComment_pass-noOthers",
           "trait": [
             "TriplePattern"
           ],
@@ -12481,7 +12481,7 @@
             "Stem",
             "ValueSet"
           ],
-          "comment": "<S> { <p1> [@fr-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr }",
+          "comment": "<S> { <p1> [@fr~-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr }",
           "status": "mf:proposed"
         },
         {
@@ -12499,7 +12499,7 @@
             "Stem",
             "ValueSet"
           ],
-          "comment": "<S> { <p1> [@fr-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-FR }",
+          "comment": "<S> { <p1> [@fr~-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-FR }",
           "status": "mf:proposed"
         },
         {
@@ -12535,7 +12535,7 @@
             "Stem",
             "ValueSet"
           ],
-          "comment": "<S> { <p1> [@fr-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-be }",
+          "comment": "<S> { <p1> [@fr~-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-be }",
           "status": "mf:proposed"
         },
         {
@@ -12571,7 +12571,7 @@
             "Stem",
             "ValueSet"
           ],
-          "comment": "<S> { <p1> [@fr-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-cd }",
+          "comment": "<S> { <p1> [@fr~-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-cd }",
           "status": "mf:proposed"
         },
         {
@@ -12589,7 +12589,7 @@
             "Stem",
             "ValueSet"
           ],
-          "comment": "<S> { <p1> [@fr-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-ch }",
+          "comment": "<S> { <p1> [@fr~-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-ch }",
           "status": "mf:proposed"
         },
         {
@@ -12607,7 +12607,7 @@
             "Stem",
             "ValueSet"
           ],
-          "comment": "<S> { <p1> [@fr-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-be-fbcl }",
+          "comment": "<S> { <p1> [@fr~-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-be-fbcl }",
           "status": "mf:proposed"
         },
         {
@@ -12625,7 +12625,7 @@
             "Stem",
             "ValueSet"
           ],
-          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@fr }",
+          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@fr }",
           "status": "mf:proposed"
         },
         {
@@ -12643,7 +12643,7 @@
             "Stem",
             "ValueSet"
           ],
-          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@frc }",
+          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@frc }",
           "status": "mf:proposed"
         },
         {
@@ -12661,7 +12661,7 @@
             "Stem",
             "ValueSet"
           ],
-          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@fr-FR }",
+          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@fr-FR }",
           "status": "mf:proposed"
         },
         {
@@ -12679,7 +12679,7 @@
             "Stem",
             "ValueSet"
           ],
-          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@fr-be }",
+          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@fr-be }",
           "status": "mf:proposed"
         },
         {
@@ -12697,7 +12697,7 @@
             "Stem",
             "ValueSet"
           ],
-          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@fr-cd }",
+          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@fr-cd }",
           "status": "mf:proposed"
         },
         {
@@ -12715,7 +12715,7 @@
             "Stem",
             "ValueSet"
           ],
-          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@fr-ch }",
+          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@fr-ch }",
           "status": "mf:proposed"
         },
         {
@@ -12733,7 +12733,7 @@
             "Stem",
             "ValueSet"
           ],
-          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@fr-bel }",
+          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@fr-bel }",
           "status": "mf:proposed"
         },
         {
@@ -12751,7 +12751,7 @@
             "Stem",
             "ValueSet"
           ],
-          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@fr-be-fbcl }",
+          "comment": "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@fr-be-fbcl }",
           "status": "mf:proposed"
         },
         {
@@ -18679,7 +18679,8 @@
           "name": "1valExprRef-IV1_fail-lit-short",
           "trait": [
             "ValueReference",
-            "LengthFacet"
+            "LengthFacet",
+            "Import"
           ],
           "comment": "<vc1> = LITERAL MINLENGTH 5 <S1> { <p1> <vc1> } on { <s1> <p1> \"abcd\" }",
           "status": "mf:proposed"
@@ -18697,7 +18698,8 @@
           "name": "1valExprRef-IV1_pass-lit-equal",
           "trait": [
             "ValueReference",
-            "LengthFacet"
+            "LengthFacet",
+            "Import"
           ],
           "comment": "<vc1> = LITERAL MINLENGTH 5 <S1> { <p1> <vc1> } on { <s1> <p1> \"abcde\" }",
           "status": "mf:proposed"
@@ -18715,7 +18717,8 @@
           "name": "1valExprRefbnode-IV1_fail-lit-short",
           "trait": [
             "ValueReference",
-            "LengthFacet"
+            "LengthFacet",
+            "Import"
           ],
           "comment": "_:vc1 = LITERAL MINLENGTH 5 <S1> { <p1> _:vc1 } on { <s1> <p1> \"abcd\" }",
           "status": "mf:proposed"
@@ -18733,7 +18736,8 @@
           "name": "1valExprRefbnode-IV1_pass-lit-equal",
           "trait": [
             "ValueReference",
-            "LengthFacet"
+            "LengthFacet",
+            "Import"
           ],
           "comment": "_:vc1 = LITERAL MINLENGTH 5 <S1> { <p1> _:vc1 } on { <s1> <p1> \"abcde\" }",
           "status": "mf:proposed"
@@ -18751,7 +18755,8 @@
           "name": "2EachInclude1-IS2_pass",
           "trait": [
             "Include",
-            "EachOf"
+            "EachOf",
+            "Import"
           ],
           "comment": "I2 <S1> { &<S2>, <p1> . } on { <n1> <p1> \"X\" ; <p2> \"Y\" }",
           "status": "mf:proposed"

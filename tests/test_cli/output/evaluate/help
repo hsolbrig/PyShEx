@@ -1,5 +1,4 @@
-usage: _jb_unittest_runner.py [-h] [-f FORMAT] [-s START] [-fn FOCUS] [-d]
-                              rdf shex
+usage: shexeval [-h] [-f FORMAT] [-s START] [-fn FOCUS] [-d] rdf shex
 
 positional arguments:
   rdf                   Input RDF file

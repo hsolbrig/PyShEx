@@ -1,0 +1,7 @@
+ShExJSG>=0.2.1
+PyShExC>=0.3.4
+rdflib>=4.2.2
+rdflib-jsonld>=0.4.0
+requests
+urllib3
+sparql_slurper>=0.1.3

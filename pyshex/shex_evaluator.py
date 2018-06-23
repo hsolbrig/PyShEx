@@ -192,12 +192,12 @@ class ShExEvaluator:
         return rval
 
 
-def genargs() -> ArgumentParser:
+def genargs(prog: Optional[str]=None) -> ArgumentParser:
     """
     Create a command line parser
     :return: parser
     """
-    parser = ArgumentParser()
+    parser = ArgumentParser(prog)
     parser.add_argument("rdf", help="Input RDF file")
     parser.add_argument("shex", help="ShEx specification")
     parser.add_argument("-f", "--format", help="Input RDF Format")
@@ -207,8 +207,8 @@ def genargs() -> ArgumentParser:
     return parser
 
 
-def evaluate_cli(argv: Optional[List[str]] = None) -> bool:
-    opts = genargs().parse_args(argv if argv is not None else sys.argv[1:])
+def evaluate_cli(argv: Optional[List[str]] = None, prog: Optional[str]=None) -> bool:
+    opts = genargs(prog).parse_args(argv if argv is not None else sys.argv[1:])
     if not opts.format:
         opts.format = guess_format(opts.rdf)
     if not opts.format:
@@ -223,4 +223,3 @@ def evaluate_cli(argv: Optional[List[str]] = None) -> bool:
         if not rslt.result:
             print(f"Error: {rslt.reason}")
     return all(r.result for r in result)
-

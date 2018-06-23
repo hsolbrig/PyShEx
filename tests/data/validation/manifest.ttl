@@ -58,7 +58,7 @@
         <#1dot-base_fail-empty>
         <#1dot_fail-missing>
         <#1dot-base_fail-missing>
-        <#1dot_pass-noOthers> <#1dot-base_pass-noOthers> <#1dotSemi_pass-noOthers> <#1dotLNex_pass-noOthers> <#1dotNS2_pass-noOthers> <#1dotNS2Comment_pass-noOthers> <#1dotLNexComment_pass-noOthers> <#1dotLNdefault_pass-noOthers> <#1dotNSdefault_pass-noOthers> <#1dotLNex-HYPHEN_MINUS_pass-noOthers>
+        <#1dot_pass-noOthers> <#1dot-base_pass-noOthers> <#1dotSemi_pass-noOthers> <#1dotLNex_pass-noOthers> <#1dotNS2_pass-noOthers> <#1dotNS2SingleComment_pass-noOthers> <#1dotLNexSingleComment_pass-noOthers> <#1dotLNdefault_pass-noOthers> <#1dotNSdefault_pass-noOthers> <#1dotLNex-HYPHEN_MINUS_pass-noOthers>
         <#1dot_pass-others_lexicallyEarlier>
         <#1dot_pass-others_lexicallyLater>
         <#bnode1dot_fail-missing>
@@ -1419,26 +1419,26 @@
     ]
     .
 
-<#1dotNS2Comment_pass-noOthers> a sht:ValidationTest ;
-    mf:name "1dotNS2Comment_pass-noOthers" ;
+<#1dotNS2SingleComment_pass-noOthers> a sht:ValidationTest ;
+    mf:name "1dotNS2SingleComment_pass-noOthers" ;
     sht:trait sht:TriplePattern ;
     rdfs:comment "PREFIX S1: <http://a.example/S1> PREFIX p1: <http://a.example/p1> S1: { p1:/*comment*/ . } on { <s1> <p1> <o1> }" ;
     mf:status mf:proposed ;
     mf:action [
-      sht:schema <../schemas/1dotNS2Comment.shex> ;
+      sht:schema <../schemas/1dotNS2SingleComment.shex> ;
       sht:shape <http://a.example/S1> ;
       sht:data <Is1_Ip1_Io1.ttl> ;
       sht:focus <http://a.example/s1>
     ]
     .
 
-<#1dotLNexComment_pass-noOthers> a sht:ValidationTest ;
-    mf:name "1dotLNexComment_pass-noOthers" ;
+<#1dotLNexSingleComment_pass-noOthers> a sht:ValidationTest ;
+    mf:name "1dotLNexSingleComment_pass-noOthers" ;
     sht:trait sht:TriplePattern ;
     rdfs:comment "PREFIX ex: <http://a.example/> ex:S1 { ex:p1/*comment*/ . } on { <s1> <p1> <o1> }" ;
     mf:status mf:proposed ;
     mf:action [
-      sht:schema <../schemas/1dotLNexComment.shex> ;
+      sht:schema <../schemas/1dotLNexSingleComment.shex> ;
       sht:shape <http://a.example/S1> ;
       sht:data <Is1_Ip1_Io1.ttl> ;
       sht:focus <http://a.example/s1>
@@ -11120,7 +11120,7 @@
 <#1val1languageStemMinuslanguage3_passLAtfr> a sht:ValidationTest ;
     mf:name "1val1languageStemMinuslanguage3_passLAtfr" ;
     sht:trait sht:ValueSet , sht:Stem ;
-    rdfs:comment "<S> { <p1> [@fr-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr }" ;
+    rdfs:comment "<S> { <p1> [@fr~-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr }" ;
     mf:status mf:proposed ;
     mf:action [
       sht:schema <../schemas/1val1languageStemMinuslanguage3.shex> ;
@@ -11133,7 +11133,7 @@
 <#1val1languageStemMinuslanguage3_passLAtfr-FR> a sht:ValidationTest ;
     mf:name "1val1languageStemMinuslanguage3_passLAtfr-FR" ;
     sht:trait sht:ValueSet , sht:Stem ;
-    rdfs:comment "<S> { <p1> [@fr-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-FR }" ;
+    rdfs:comment "<S> { <p1> [@fr~-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-FR }" ;
     mf:status mf:proposed ;
     mf:action [
       sht:schema <../schemas/1val1languageStemMinuslanguage3.shex> ;
@@ -11159,7 +11159,7 @@
 <#1val1languageStemMinuslanguage3_failLAtfr-be> a sht:ValidationFailure ;
     mf:name "1val1languageStemMinuslanguage3_failLAtfr-be" ;
     sht:trait sht:ValueSet , sht:Stem ;
-    rdfs:comment "<S> { <p1> [@fr-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-be }" ;
+    rdfs:comment "<S> { <p1> [@fr~-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-be }" ;
     mf:status mf:proposed ;
     mf:action [
       sht:schema <../schemas/1val1languageStemMinuslanguage3.shex> ;
@@ -11185,7 +11185,7 @@
 <#1val1languageStemMinuslanguage3_failLAtfr-cd> a sht:ValidationFailure ;
     mf:name "1val1languageStemMinuslanguage3_failLAtfr-cd" ;
     sht:trait sht:ValueSet , sht:Stem ;
-    rdfs:comment "<S> { <p1> [@fr-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-cd }" ;
+    rdfs:comment "<S> { <p1> [@fr~-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-cd }" ;
     mf:status mf:proposed ;
     mf:action [
       sht:schema <../schemas/1val1languageStemMinuslanguage3.shex> ;
@@ -11198,7 +11198,7 @@
 <#1val1languageStemMinuslanguage3_failLAtfr-ch> a sht:ValidationFailure ;
     mf:name "1val1languageStemMinuslanguage3_failLAtfr-ch" ;
     sht:trait sht:ValueSet , sht:Stem ;
-    rdfs:comment "<S> { <p1> [@fr-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-ch }" ;
+    rdfs:comment "<S> { <p1> [@fr~-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-ch }" ;
     mf:status mf:proposed ;
     mf:action [
       sht:schema <../schemas/1val1languageStemMinuslanguage3.shex> ;
@@ -11211,7 +11211,7 @@
 <#1val1languageStemMinuslanguage3_passLAtfr-be-fbcl> a sht:ValidationTest ;
     mf:name "1val1languageStemMinuslanguage3_passLAtfr-be-fbcl" ;
     sht:trait sht:ValueSet , sht:Stem ;
-    rdfs:comment "<S> { <p1> [@fr-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-be-fbcl }" ;
+    rdfs:comment "<S> { <p1> [@fr~-@fr-be-@fr-cd-@fr-ch] } on { <s1> <p1> 'septante'@fr-be-fbcl }" ;
     mf:status mf:proposed ;
     mf:action [
       sht:schema <../schemas/1val1languageStemMinuslanguage3.shex> ;
@@ -11224,7 +11224,7 @@
 <#1val1languageStemMinuslanguageStem3_passLAtfr> a sht:ValidationTest ;
     mf:name "1val1languageStemMinuslanguageStem3_passLAtfr" ;
     sht:trait sht:ValueSet , sht:Stem ;
-    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@fr }" ;
+    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@fr }" ;
     mf:status mf:proposed ;
     mf:action [
       sht:schema <../schemas/1val1languageStemMinuslanguageStem3.shex> ;
@@ -11237,7 +11237,7 @@
 <#1val1languageStemMinuslanguageStem3_LAtfrc> a sht:ValidationFailure ;
     mf:name "1val1languageStemMinuslanguageStem3_LAtfrc" ;
     sht:trait sht:ValueSet , sht:Stem ;
-    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@frc }" ;
+    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@frc }" ;
     mf:status mf:proposed ;
     mf:action [
       sht:schema <../schemas/1val1languageStemMinuslanguageStem3.shex> ;
@@ -11250,7 +11250,7 @@
 <#1val1languageStemMinuslanguageStem3_passLAtfr-FR> a sht:ValidationTest ;
     mf:name "1val1languageStemMinuslanguageStem3_passLAtfr-FR" ;
     sht:trait sht:ValueSet , sht:Stem ;
-    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@fr-FR }" ;
+    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@fr-FR }" ;
     mf:status mf:proposed ;
     mf:action [
       sht:schema <../schemas/1val1languageStemMinuslanguageStem3.shex> ;
@@ -11263,7 +11263,7 @@
 <#1val1languageStemMinuslanguageStem3_LAtfr-be> a sht:ValidationFailure ;
     mf:name "1val1languageStemMinuslanguageStem3_LAtfr-be" ;
     sht:trait sht:ValueSet , sht:Stem ;
-    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@fr-be }" ;
+    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@fr-be }" ;
     mf:status mf:proposed ;
     mf:action [
       sht:schema <../schemas/1val1languageStemMinuslanguageStem3.shex> ;
@@ -11276,7 +11276,7 @@
 <#1val1languageStemMinuslanguageStem3_LAtfr-cd> a sht:ValidationFailure ;
     mf:name "1val1languageStemMinuslanguageStem3_LAtfr-cd" ;
     sht:trait sht:ValueSet , sht:Stem ;
-    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@fr-cd }" ;
+    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@fr-cd }" ;
     mf:status mf:proposed ;
     mf:action [
       sht:schema <../schemas/1val1languageStemMinuslanguageStem3.shex> ;
@@ -11289,7 +11289,7 @@
 <#1val1languageStemMinuslanguageStem3_LAtfr-ch> a sht:ValidationFailure ;
     mf:name "1val1languageStemMinuslanguageStem3_LAtfr-ch" ;
     sht:trait sht:ValueSet , sht:Stem ;
-    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@fr-ch }" ;
+    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@fr-ch }" ;
     mf:status mf:proposed ;
     mf:action [
       sht:schema <../schemas/1val1languageStemMinuslanguageStem3.shex> ;
@@ -11302,7 +11302,7 @@
 <#1val1languageStemMinuslanguageStem3_passLAtfr-bel> a sht:ValidationTest ;
     mf:name "1val1languageStemMinuslanguageStem3_passLAtfr-bel" ;
     sht:trait sht:ValueSet , sht:Stem ;
-    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@fr-bel }" ;
+    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@fr-bel }" ;
     mf:status mf:proposed ;
     mf:action [
       sht:schema <../schemas/1val1languageStemMinuslanguageStem3.shex> ;
@@ -11315,7 +11315,7 @@
 <#1val1languageStemMinuslanguageStem3_LAtfr-be-fbcl> a sht:ValidationFailure ;
     mf:name "1val1languageStemMinuslanguageStem3_LAtfr-be-fbcl" ;
     sht:trait sht:ValueSet , sht:Stem ;
-    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch] } on { <s1> <p1> 'septante'@fr-be-fbcl }" ;
+    rdfs:comment "<S> { <p1> [@fr~-@fr-be~-@fr-cd~-@fr-ch~] } on { <s1> <p1> 'septante'@fr-be-fbcl }" ;
     mf:status mf:proposed ;
     mf:action [
       sht:schema <../schemas/1val1languageStemMinuslanguageStem3.shex> ;
@@ -15838,7 +15838,7 @@
 
 <#1valExprRef-IV1_fail-lit-short> a sht:ValidationFailure ;
     mf:name "1valExprRef-IV1_fail-lit-short" ;
-    sht:trait sht:ValueReference , sht:LengthFacet ;
+    sht:trait sht:ValueReference , sht:LengthFacet , sht:Import ;
     rdfs:comment "<vc1> = LITERAL MINLENGTH 5 <S1> { <p1> <vc1> } on { <s1> <p1> \"abcd\" }" ;
     mf:status mf:proposed ;
     mf:action [
@@ -15851,7 +15851,7 @@
 
 <#1valExprRef-IV1_pass-lit-equal> a sht:ValidationTest ;
     mf:name "1valExprRef-IV1_pass-lit-equal" ;
-    sht:trait sht:ValueReference , sht:LengthFacet ;
+    sht:trait sht:ValueReference , sht:LengthFacet , sht:Import ;
     rdfs:comment "<vc1> = LITERAL MINLENGTH 5 <S1> { <p1> <vc1> } on { <s1> <p1> \"abcde\" }" ;
     mf:status mf:proposed ;
     mf:action [
@@ -15864,7 +15864,7 @@
 
 <#1valExprRefbnode-IV1_fail-lit-short> a sht:ValidationFailure ;
     mf:name "1valExprRefbnode-IV1_fail-lit-short" ;
-    sht:trait sht:ValueReference , sht:LengthFacet ;
+    sht:trait sht:ValueReference , sht:LengthFacet , sht:Import ;
     rdfs:comment "_:vc1 = LITERAL MINLENGTH 5 <S1> { <p1> _:vc1 } on { <s1> <p1> \"abcd\" }" ;
     mf:status mf:proposed ;
     mf:action [
@@ -15877,7 +15877,7 @@
 
 <#1valExprRefbnode-IV1_pass-lit-equal> a sht:ValidationTest ;
     mf:name "1valExprRefbnode-IV1_pass-lit-equal" ;
-    sht:trait sht:ValueReference , sht:LengthFacet ;
+    sht:trait sht:ValueReference , sht:LengthFacet , sht:Import ;
     rdfs:comment "_:vc1 = LITERAL MINLENGTH 5 <S1> { <p1> _:vc1 } on { <s1> <p1> \"abcde\" }" ;
     mf:status mf:proposed ;
     mf:action [
@@ -15893,7 +15893,7 @@
 
 <#2EachInclude1-IS2_pass> a sht:ValidationTest ;
     mf:name "2EachInclude1-IS2_pass" ;
-    sht:trait sht:Include , sht:EachOf ;
+    sht:trait sht:Include , sht:EachOf , sht:Import ;
     rdfs:comment "I2 <S1> { &<S2>, <p1> . } on { <n1> <p1> \"X\" ; <p2> \"Y\" }" ;
     mf:status mf:proposed ;
     mf:action [
