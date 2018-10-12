@@ -1,6 +1,6 @@
 import unittest
 
-from ShExJSG import ShExC
+from pyshexc.parser_impl.generate_shexj import parse
 
 shex_schema = """
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -31,8 +31,8 @@ gw:cancer {
 class ShexCommentTestCase(unittest.TestCase):
 
     def test_1(self):
-        shex = ShExC(shex_schema)
-        self.assertTrue(True, "Compiler didn't crap out")
+        parse(shex_schema)
+        self.assertTrue(True, "Parser didn't die")
 
 
 if __name__ == '__main__':

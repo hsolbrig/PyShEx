@@ -2,11 +2,11 @@ import re
 from typing import Tuple, Optional
 
 from ShExJSG import ShExJ
-from pyjsg.jsglib import jsg
+from pyjsg.jsglib import loads
+
 from rdflib import Graph, RDF, RDFS, XSD
 from rdflib.namespace import FOAF
 
-from pyshex.parse_tree.parse_node import ParseNode
 from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.utils.rdf_namespace import RDFNamespace
 
@@ -34,7 +34,7 @@ def setup_context(shex_str: str, rdf_str: Optional[str]) -> Context:
 
 
 def setup_test(shex_str: Optional[str], rdf_str: Optional[str]) -> Tuple[Optional[ShExJ.Schema], Optional[Graph]]:
-    schema: ShExJ.Schema = jsg.loads(shex_str, ShExJ, strict=False) if shex_str else None
+    schema: ShExJ.Schema = loads(shex_str, ShExJ, strict=False) if shex_str else None
     if rdf_str:
         g = Graph()
         g.parse(data=rdf_str, format="turtle")

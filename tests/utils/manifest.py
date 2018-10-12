@@ -15,12 +15,6 @@ from tests.utils.uri_redirector import URIRedirector
 SHT = Namespace("http://www.w3.org/ns/shacl/test-suite#")
 MF = Namespace("http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#")
 
-data_dir = os.path.abspath(os.path.join(os.path.split(__file__)[0], '..', 'data'))
-validation_dir = os.path.join(data_dir, 'validation')
-schemas_dir = os.path.join(data_dir, 'schemas')
-manifest_ttl = os.path.join(validation_dir, 'manifest.ttl')
-manifest_json = os.path.join(validation_dir, 'manifest.jsonld')
-
 
 class ShExManifestEntry:
     def __init__(self, entryuri: URIRef, g: Graph, owner: "ShExManifest") -> None:
@@ -81,7 +75,8 @@ class ShExManifestEntry:
         return self._action_obj(SHT.schema)
 
     def shex_schema(self) -> Optional[ShExJ.Schema]:
-        return self.owner.schema_loader.load(self.schema_uri)
+        redirected_uri = self.owner.schema_uri(self.schema_uri)
+        return self.owner.schema_loader.load(redirected_uri, redirected_uri)
 
     @property
     def shape(self) -> Optional[URIRef]:
@@ -94,11 +89,11 @@ class ShExManifestEntry:
     def data(self) -> Optional[str]:
         if self.data_uri:
             uri = self.owner.data_uri(self.data_uri)
-            if isinstance(uri, URIRef):
+            if '://' in str(uri):
                 return urlopen(str(uri)).read().decode()
             else:
-                with open(uri) as data_file:
-                    return data_file.read()
+                with open(uri, 'rb') as data_file:
+                    return data_file.read().decode()
         return None
 
     @property
@@ -144,8 +139,9 @@ class ShExManifest:
         self.g = ConjunctiveGraph()
         self.g.parse(file_loc, format=manifest_format)
         self.entries: Dict[str, List[ShExManifestEntry]] = {}
-        self.schema_loader = SchemaLoader(shex_format)
+        self.schema_loader = SchemaLoader()
         self.data_redirector: Optional[URIRedirector] = None
+        self.schema_redirector: Optional[URIRedirector] = None
 
         manifest = self.g.value(None, RDF.type, MF.Manifest, any=False)
         for e in Collection(self.g, self.g.value(manifest, MF.entries, any=False)):
@@ -154,3 +150,6 @@ class ShExManifest:
 
     def data_uri(self, uri: URIRef) -> Union[URIRef, str]:
         return self.data_redirector.uri_for(uri) if self.data_redirector else uri
+
+    def schema_uri(self, uri: URIRef) -> Union[URIRef, str]:
+        return self.schema_redirector.uri_for(uri) if self.schema_redirector else uri

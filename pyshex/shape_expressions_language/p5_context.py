@@ -5,12 +5,14 @@ Context for evaluation engine -- carries all of the global variables (schema, gr
 We might fold the various routines inside context and replace "cntxt: Context" with "self", but we will have to see.
 
 """
+from collections import defaultdict
 from copy import copy
-from typing import Dict, Any, Callable, Optional, List, Tuple, Union, DefaultDict, Set
+from typing import Dict, Any, Callable, Optional, List, Tuple, Union, Set
 
 from ShExJSG import ShExJ
 from ShExJSG.ShExJ import Schema
-from pyjsg.jsglib.jsg import isinstance_
+from jsonasobj import JsonObj, as_dict
+from pyjsg.jsglib import isinstance_
 from rdflib import Graph, BNode, Namespace, URIRef
 
 from pyshex.parse_tree.parse_node import ParseNode
@@ -23,7 +25,7 @@ class DebugContext:
         self.debug = False
         self.trace_slurps = False
         self.trace_depth = 0
-        self.held_prints: Dict[int, str] = DefaultDict(str)
+        self.held_prints: Dict[int, str] = defaultdict(str)
         self.max_print_depth: int = 0
 
     def d(self) -> str:
@@ -136,7 +138,8 @@ class Context:
         self.te_id_map: Dict[ShExJ.tripleExprLabel, ShExJ.tripleExpr] = {}
         self.external_shape_for = external_shape_resolver if external_shape_resolver \
             else default_external_shape_resolver
-        self.base_namespace = base_namespace
+        self.base_namespace = base_namespace if isinstance(base_namespace, Namespace) \
+            else Namespace(base_namespace) if base_namespace else None
 
         # For SPARQL API's, true means pull ALL predicate objects for a given subject, false means only the
         # predicates that are needed
@@ -170,10 +173,11 @@ class Context:
         :param expr: root shape expression
         """
         if expr is not None and not isinstance_(expr, ShExJ.shapeExprLabel) and 'id' in expr and expr.id is not None:
-            if expr.id in self.schema_id_map:
+            abs_id = self._resolve_relative_uri(expr.id)
+            if abs_id in self.schema_id_map:
                 return
             else:
-                self.schema_id_map[self._resolve_relative_uri(expr.id)] = expr
+                self.schema_id_map[abs_id] = expr
         if isinstance(expr, (ShExJ.ShapeOr, ShExJ.ShapeAnd)):
             for expr2 in expr.shapeExprs:
                 self._gen_schema_xref(expr2)
@@ -207,7 +211,7 @@ class Context:
 
     def tripleExprFor(self, id_: ShExJ.tripleExprLabel) -> ShExJ.tripleExpr:
         """ Return the triple expression that corresponds to id """
-        return self.te_id_map[id_]
+        return self.te_id_map.get(id_)
 
     def shapeExprFor(self, id_: Union[ShExJ.shapeExprLabel, START]) -> Optional[ShExJ.shapeExpr]:
         """ Return the shape expression that corresponds to id """
@@ -248,7 +252,7 @@ class Context:
                                                   lambda ac, te, cntxt: self._visit_shape_te(te, visit_center),
                                                   arg_cntxt,
                                                   visit_center)
-            elif ShExJ.isinstance_(expr, ShExJ.shapeExprLabel):
+            elif isinstance_(expr, ShExJ.shapeExprLabel):
                 if not visit_center.actively_visiting_shape(str(expr)) and follow_inner_shapes:
                     visit_center.start_visiting_shape(str(expr))
                     self.visit_shapes(self.shapeExprFor(expr), f, arg_cntxt, visit_center)
@@ -260,6 +264,8 @@ class Context:
                                  arg_cntxt: Any, visit_center: _VisitorCenter=None) -> None:
         if visit_center is None:
             visit_center = _VisitorCenter(f, arg_cntxt)
+        if expr is None:
+            return f(arg_cntxt, None, self)
         has_id = 'id' in expr and expr.id is not None
         if not has_id or not visit_center.already_seen_te(expr.id):
 
@@ -278,7 +284,7 @@ class Context:
                                       lambda ac, te, cntxt: self._visit_shape_te(te, visit_center),
                                       arg_cntxt,
                                       visit_center)
-            elif ShExJ.isinstance_(expr, ShExJ.tripleExprLabel):
+            elif isinstance_(expr, ShExJ.tripleExprLabel):
                 if not visit_center.actively_visiting_te(str(expr)):
                     visit_center.start_visiting_te(str(expr))
                     self.visit_triple_expressions(self.tripleExprFor(expr), f, arg_cntxt, visit_center)
@@ -368,3 +374,19 @@ class Context:
         else:
             self.current_node.fail_reason += '\n' + reason_text
         self.current_node.reason_stack = copy(self.evaluate_stack)
+
+    def type_last(self, obj: JsonObj) -> JsonObj:
+        """ Move the type identifiers to the end of the object for print purposes """
+        def _tl_list(v: List) -> List:
+            return [self.type_last(e) if isinstance(e, JsonObj)
+                                   else _tl_list(e) if isinstance(e, list) else e for e in v if e is not None]
+
+        rval = JsonObj()
+        for k in as_dict(obj).keys():
+            v = obj[k]
+            if v is not None and k not in ('type', '_context'):
+                rval[k] = _tl_list(v) if isinstance(v, list) else self.type_last(v) if isinstance(v, JsonObj) else v
+
+        if 'type' in obj and obj.type:
+            rval.type = obj.type
+        return rval

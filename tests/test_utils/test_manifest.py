@@ -3,10 +3,16 @@ import os
 
 import sys
 from ShExJSG import ShExJ
-from pyjsg.jsglib import jsg
+from pyjsg.jsglib import load
 from rdflib import URIRef, Namespace, Graph
 
-from tests.utils.manifest import ShExManifest, manifest_ttl, manifest_json, validation_dir, schemas_dir
+from tests.utils.manifest import ShExManifest
+data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data'))
+validation_dir = os.path.join(data_dir, 'validation')
+schemas_dir = os.path.join(data_dir, 'schemas')
+manifest_ttl = os.path.join(validation_dir, 'manifest.ttl')
+manifest_json = os.path.join(validation_dir, 'manifest.jsonld')
+
 
 SHEX = Namespace("http://www.w3.org/ns/shex#")
 MF = Namespace("http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#")
@@ -99,7 +105,7 @@ class ManifestTestCase(unittest.TestCase):
         self.assertEqual(URIRef('https://raw.githubusercontent.com/shexSpec/shexTest/master/schemas/1Adot.shex'),
                          me.schema_uri)
         with open(os.path.join(schemas_dir, '1Adot.json')) as shex_file:
-            target_shex_file = jsg.load(shex_file, ShExJ)
+            target_shex_file = load(shex_file, ShExJ)
             del target_shex_file['@context']
             self.assertEqual(target_shex_file._as_json, mfst.entries['1Adot_pass'][0].shex_schema()._as_json)
 

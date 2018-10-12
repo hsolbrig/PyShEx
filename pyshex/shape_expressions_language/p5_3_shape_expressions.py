@@ -1,7 +1,7 @@
 """ Implementation of `5.3 Shape Expressions <http://shex.io/shex-semantics/#node-constraint-semantics>`_ """
 
 from ShExJSG import ShExJ
-from pyjsg.jsglib.jsg import isinstance_
+from pyjsg.jsglib import isinstance_
 
 from pyshex.shape_expressions_language.p5_4_node_constraints import satisfiesNodeConstraint
 from pyshex.shape_expressions_language.p5_5_shapes_and_triple_expressions import satisfiesShape

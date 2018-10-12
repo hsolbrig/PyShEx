@@ -2,7 +2,7 @@
 from typing import Tuple, List
 
 from ShExJSG.ShExJ import BNODE
-from pyjsg.jsglib.jsg import isinstance_
+from pyjsg.jsglib import isinstance_
 
 from pyshex.parse_tree.parse_node import ParseNode
 from pyshex.shape_expressions_language.p5_3_shape_expressions import satisfies
@@ -26,7 +26,7 @@ def isValid(cntxt: Context, m: FixedShapeMap) -> Tuple[bool, List[str]]:
     for nodeshapepair in m:
         n = nodeshapepair.nodeSelector
         if not isinstance_(n, Node):
-            return False, [f"{n}: Tripple patterns are not implemented"]
+            return False, [f"{n}: Triple patterns are not implemented"]
         elif isinstance_(nodeshapepair.shapeLabel, BNODE):
             return False, [f"{nodeshapepair.shapeLabel}: BNode shape references are not implemented"]
         # The third test below is because the spec asserts that completely empty graphs pass in certain circumstances

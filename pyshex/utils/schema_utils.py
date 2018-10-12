@@ -101,7 +101,7 @@ def directed_predicates_in_expression(expression: ShExJ.shapeExpr, cntxt: Contex
 
     def predicate_finder(predicates: Dict[IRIREF, PredDirection], tc: ShExJ.TripleConstraint, _: Context) -> None:
         if isinstance(tc, ShExJ.TripleConstraint):
-            predicates.setdefault(tc.predicate, PredDirection()).dir(tc.inverse.val is None or not tc.inverse.val)
+            predicates.setdefault(tc.predicate, PredDirection()).dir(tc.inverse is None or not tc.inverse)
 
     def triple_expr_finder(predicates: Dict[IRIREF, PredDirection], expr: ShExJ.shapeExpr, cntxt_: Context) -> None:
         if isinstance(expr, ShExJ.Shape) and expr.expression is not None:

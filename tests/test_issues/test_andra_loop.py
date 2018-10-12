@@ -44,7 +44,7 @@ def run_shex_manifest():
             sparql_endpoint = case.data.replace("Endpoint: ", "")
             schema = requests.get(case.schemaURL).text
             shex = ShExC(schema).schema
-            print("==== Schema =====")
+            # print("==== Schema =====")
             #print(shex._as_json_dumps())
 
             evaluator = ShExEvaluator(schema=shex, debug=False)

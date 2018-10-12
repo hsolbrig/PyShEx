@@ -4,8 +4,8 @@ import os
 from rdflib import RDF
 
 from pyshex.utils.schema_loader import SchemaLoader
-from tests.utils.manifest import schemas_dir
 
+schemas_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data', 'schemas'))
 
 class SchemaLoaderTestCase(unittest.TestCase):
     def test_loads_shexc(self):

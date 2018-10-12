@@ -62,7 +62,7 @@ class NumericFacetTestCase(unittest.TestCase):
         focus = cntxt.graph.value(EX.issue3, EX.confirmations)
         cntxt.current_node = ParseNode(nodeSatisfiesNumericFacet, nc, focus)
         self.assertFalse(nodeSatisfiesNumericFacet(cntxt, focus, nc))
-        self.assertEqual(['Numeric value volation - minimum inclusive: 1 actual: 0'], self.fail_reasons(cntxt))
+        self.assertEqual(['Numeric value volation - minimum inclusive: 1.0 actual: 0'], self.fail_reasons(cntxt))
 
     def test_trailing_zero(self):
         cntxt = setup_context(shex_2, rdf_2)

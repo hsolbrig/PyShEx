@@ -1,16 +1,16 @@
 from typing import Callable, Optional, List, Union, Tuple
 
-from pyjsg.jsglib import jsg
-from pyjsg.jsglib.jsg import isinstance_
-from rdflib import BNode, URIRef, Graph, Literal
+from pyjsg.jsglib import isinstance_
+from pyjsg.jsglib import JSGObject
+from rdflib import BNode, URIRef, Graph
 
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import RDFGraph, Node
 
 
 class ParseNode:
     def __init__(self,
-                 function: Callable[["Context", Union[RDFGraph, Node], jsg.JSGObject], bool],
-                 expr: jsg.JSGObject,
+                 function: Callable[["Context", Union[RDFGraph, Node], JSGObject], bool],
+                 expr: JSGObject,
                  object: Union[RDFGraph, Node]):
         self.function = function
         self.expr = expr

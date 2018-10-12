@@ -109,9 +109,15 @@ appinfo = Optional[jsonasobj.JsonObj]
 # If the status member is absent, the status is assumed to be "conformant". The reason and appInfo members may
 # also be absent but have no default value.
 class ShapeAssociation(JsonObj):
-    def __init__(self, nodeSelector: nodeSelector, shapeLabel: shapeLabel, status: status=None, reason: reason=None,
+    def __init__(self, nodeSelector: Union[nodeSelector, str], shapeLabel: shapeLabel,
+                 status: status=None, reason: reason=None,
                  appinfo: appinfo=None) -> None:
-        self.nodeSelector = nodeSelector
+        if not isinstance(nodeSelector, (Literal, URIRef)):
+            if '://' not in nodeSelector:
+                nodeSelector = 'file://' + nodeSelector
+            self.nodeSelector = URIRef(nodeSelector)
+        else:
+            self.nodeSelector = nodeSelector
         self.shapeLabel = shapeLabel
         self.status = status if status is not None else conformant,
         self.reason = reason

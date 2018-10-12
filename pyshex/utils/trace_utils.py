@@ -1,7 +1,6 @@
 from typing import Callable
 
-from ShExJSG.ShExJ import NodeConstraint
-from pyjsg.jsglib import jsg
+from pyjsg.jsglib import JSGObject
 
 from pyshex.parse_tree.parse_node import ParseNode
 from pyshex.shape_expressions_language.p5_context import Context, DebugContext
@@ -10,9 +9,9 @@ from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import R
 # TODO: factor out common code below.  Differences are minor
 
 
-def trace_satisfies(newline: bool=True, skip_trace: Callable[[jsg.JSGObject], bool]=lambda _: False):
-    def e(f: Callable[[Context, Node, jsg.JSGObject, DebugContext], bool]):
-        def wrapper(cntxt: Context, n: Node, expr: jsg.JSGObject) -> bool:
+def trace_satisfies(newline: bool=True, skip_trace: Callable[[JSGObject], bool]=lambda _: False):
+    def e(f: Callable[[Context, Node, JSGObject, DebugContext], bool]):
+        def wrapper(cntxt: Context, n: Node, expr: JSGObject) -> bool:
             parent_parse_node = cntxt.current_node
             cntxt.current_node = ParseNode(f, expr, n)
             parent_parse_node.nodes.append(cntxt.current_node)
@@ -32,8 +31,8 @@ def trace_satisfies(newline: bool=True, skip_trace: Callable[[jsg.JSGObject], bo
 
 
 def trace_matches(newline: bool=True):
-    def e(f: Callable[[Context, RDFGraph, jsg.JSGObject, DebugContext], bool]):
-        def wrapper(cntxt: Context, T: RDFGraph, expr: jsg.JSGObject) -> bool:
+    def e(f: Callable[[Context, RDFGraph, JSGObject, DebugContext], bool]):
+        def wrapper(cntxt: Context, T: RDFGraph, expr: JSGObject) -> bool:
             parent_parse_node = cntxt.current_node
             cntxt.current_node = ParseNode(f, expr, T)
             parent_parse_node.nodes.append(cntxt.current_node)
@@ -53,8 +52,8 @@ def trace_matches(newline: bool=True):
 
 
 def trace_matches_tripleconstraint(newline: bool=True):
-    def e(f: Callable[[Context, Node, jsg.JSGObject, DebugContext], bool]):
-        def wrapper(cntxt: Context, n: Node, expr: jsg.JSGObject) -> bool:
+    def e(f: Callable[[Context, Node, JSGObject, DebugContext], bool]):
+        def wrapper(cntxt: Context, n: Node, expr: JSGObject) -> bool:
             c = cntxt.debug_context
             c.splus()
             if c.debug:

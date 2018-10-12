@@ -3,7 +3,7 @@
 from typing import List, Optional, Union
 
 from ShExJSG import ShExJ
-from pyjsg.jsglib.jsg import isinstance_
+from pyjsg.jsglib import isinstance_
 from sparql_slurper import SlurpyGraph
 
 from pyshex.shape_expressions_language.p3_terminology import arcsOut
@@ -61,7 +61,7 @@ def satisfiesShape(cntxt: Context, n: Node, S: ShExJ.Shape, c: DebugContext) -> 
             print(c.i(1, "matchables:", sorted(str(m) for m in matchables)))
             print()
 
-        if S.closed.val:
+        if S.closed:
             # TODO: Is this working correctly on reverse items?
             non_matchables = RDFGraph([t for t in arcsOut(cntxt.graph, n) if t not in matchables])
             if len(non_matchables):
@@ -202,8 +202,8 @@ def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr
     matches(Tn, expr, m) by the remaining rules in this list.
     """
     # TODO: Cardinality defaults into spec
-    min_ = expr.min.val if expr.min.val is not None else 1
-    max_ = expr.max.val if expr.max.val is not None else 1
+    min_ = expr.min if expr.min is not None else 1
+    max_ = expr.max if expr.max is not None else 1
 
     cardinality_text = f"{{{min_},{'*' if max_ == -1 else max_}}}"
     if c.debug and (min_ != 0 or len(T) != 0):
@@ -293,7 +293,7 @@ def matchesTripleConstraint(cntxt: Context, t: RDFTriple, expr: ShExJ.TripleCons
         print(c.i(1, '', expr._as_json_dumps().split('\n')))
 
     if uriref_matches_iriref(t.p, expr.predicate):
-        value = t.s if expr.inverse.val else t.o
+        value = t.s if expr.inverse else t.o
         return expr.valueExpr is None or satisfies(cntxt, value, expr.valueExpr)
     else:
         cntxt.current_node.fail_reason = f"Predicate mismatch: {t.p} ≠ {expr.predicate}"

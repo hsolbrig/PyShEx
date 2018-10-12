@@ -4,7 +4,7 @@ import numbers
 from typing import Union
 
 from ShExJSG import ShExJ
-from pyjsg.jsglib.jsg import isinstance_
+from pyjsg.jsglib import isinstance_
 from rdflib import URIRef, BNode, Literal, XSD, RDF
 from jsonasobj import as_json
 
@@ -82,8 +82,8 @@ def _datatype(n: Literal) -> str:
         str(n.datatype)
 
 
-@trace_satisfies(skip_trace=lambda nc: nc.length.val is None and nc.minlength.val is None and
-                                       nc.maxlength.val is None and nc.pattern.val is None)
+@trace_satisfies(skip_trace=lambda nc: nc.length is None and nc.minlength is None and
+                                       nc.maxlength is None and nc.pattern is None)
 def nodeSatisfiesStringFacet(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, _c: DebugContext) -> bool:
     """ `5.4.5 XML Schema String Facet Constraints <ttp://shex.io/shex-semantics/#xs-string>`_
 
@@ -96,8 +96,8 @@ def nodeSatisfiesStringFacet(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, 
     #  * if the value n is an RDF Literal, the lexical form of the literal (see[rdf11-concepts] section 3.3 Literals).
     #  * if the value n is an IRI, the IRI string (see[rdf11-concepts] section 3.2 IRIs).
     #  * if the value n is a blank node, the blank node identifier (see[rdf11-concepts] section 3.4 Blank Nodes).
-    if nc.length.val is not None or nc.minlength.val is not None or nc.maxlength.val is not None \
-            or nc.pattern.val is not None:
+    if nc.length is not None or nc.minlength is not None or nc.maxlength is not None \
+            or nc.pattern is not None:
         lex = str(n)
         #  Let len = the number of unicode codepoints in lex
         # For a node n and constraint value v, nodeSatisfies(n, v):
@@ -114,19 +114,19 @@ def nodeSatisfiesStringFacet(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, 
 
         # TODO: Figure out whether we need to connect this to the lxml exslt functions
         # TODO: Map flags if not
-        if (nc.length.val is None or len(lex) == nc.length.val) and \
-           (nc.minlength.val is None or len(lex) >= nc.minlength.val) and \
-           (nc.maxlength.val is None or len(lex) <= nc.maxlength.val) and \
-           (nc.pattern.val is None or pattern_match(nc.pattern.val, nc.flags.val, lex)):
+        if (nc.length is None or len(lex) == nc.length) and \
+           (nc.minlength is None or len(lex) >= nc.minlength) and \
+           (nc.maxlength is None or len(lex) <= nc.maxlength) and \
+           (nc.pattern is None or pattern_match(nc.pattern, nc.flags, lex)):
             return True
-        elif nc.length.val is not None and len(lex) != nc.length.val:
-            cntxt.current_node.fail_reason = f"String length mismatch - expected: {nc.length.val} actual: {len(lex)}"
-        elif nc.minlength.val is not None and len(lex) < nc.minlength.val:
-            cntxt.current_node.fail_reason = f"String length violation - minimum: {nc.minlength.val} actual: {len(lex)}"
-        elif nc.maxlength.val is not None and len(lex) > nc.maxlength.val:
-            cntxt.current_node.fail_reason = f"String length violation - maximum: {nc.maxlength.val} actual: {len(lex)}"
-        elif nc.pattern.val is not None and not pattern_match(nc.pattern.val, nc.flags.val, lex):
-            cntxt.current_node.fail_reason = f"Pattern match failure - pattern: {nc.pattern.val} flags:{nc.flags.val}" \
+        elif nc.length is not None and len(lex) != nc.length:
+            cntxt.current_node.fail_reason = f"String length mismatch - expected: {nc.length} actual: {len(lex)}"
+        elif nc.minlength is not None and len(lex) < nc.minlength:
+            cntxt.current_node.fail_reason = f"String length violation - minimum: {nc.minlength} actual: {len(lex)}"
+        elif nc.maxlength is not None and len(lex) > nc.maxlength:
+            cntxt.current_node.fail_reason = f"String length violation - maximum: {nc.maxlength} actual: {len(lex)}"
+        elif nc.pattern is not None and not pattern_match(nc.pattern, nc.flags, lex):
+            cntxt.current_node.fail_reason = f"Pattern match failure - pattern: {nc.pattern} flags:{nc.flags}" \
                                              f" string: {lex}"
         else:
             cntxt.current_node.fail_reason = "Programming error - flame the programmer"
@@ -137,9 +137,9 @@ def nodeSatisfiesStringFacet(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, 
         return True
 
 
-@trace_satisfies(newline=True, skip_trace=lambda nc: nc.mininclusive.val is None and nc.minexclusive.val is None and
-                                                 nc.maxinclusive.val is None and nc.maxexclusive.val is None and
-                                                 nc.totaldigits.val is None and nc.fractiondigits.val is None)
+@trace_satisfies(newline=True, skip_trace=lambda nc: nc.mininclusive is None and nc.minexclusive is None and
+                                                 nc.maxinclusive is None and nc.maxexclusive is None and
+                                                 nc.totaldigits is None and nc.fractiondigits is None)
 def nodeSatisfiesNumericFacet(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, _c: DebugContext) -> bool:
     """ `5.4.5 XML Schema Numeric Facet Constraints <http://shex.io/shex-semantics/#xs-numeric>`_
 
@@ -147,41 +147,41 @@ def nodeSatisfiesNumericFacet(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint,
     Operand Data Types[sparql11-query]. Numeric constraints on non-numeric values fail. totaldigits and
     fractiondigits constraints on values not derived from xsd:decimal fail.
     """
-    if nc.mininclusive.val is not None or nc.minexclusive.val is not None or nc.maxinclusive.val is not None \
-            or nc.maxexclusive.val is not None or nc.totaldigits.val is not None or nc.fractiondigits.val is not None:
+    if nc.mininclusive is not None or nc.minexclusive is not None or nc.maxinclusive is not None \
+            or nc.maxexclusive is not None or nc.totaldigits is not None or nc.fractiondigits is not None:
         if is_numeric(n):
             v = n.value
             if isinstance(v, numbers.Number):
-                if (nc.mininclusive.val is None or v >= nc.mininclusive.val) and \
-                   (nc.minexclusive.val is None or v > nc.minexclusive.val) and \
-                   (nc.maxinclusive.val is None or v <= nc.maxinclusive.val) and \
-                   (nc.maxexclusive.val is None or v < nc.maxexclusive.val) and \
-                   (nc.totaldigits.val is None or (total_digits(n) is not None and
-                                                   total_digits(n) <= nc.totaldigits.val)) and \
-                   (nc.fractiondigits.val is None or (fraction_digits(n) is not None and
-                                                      fraction_digits(n) <= nc.fractiondigits.val)):
+                if (nc.mininclusive is None or v >= nc.mininclusive) and \
+                   (nc.minexclusive is None or v > nc.minexclusive) and \
+                   (nc.maxinclusive is None or v <= nc.maxinclusive) and \
+                   (nc.maxexclusive is None or v < nc.maxexclusive) and \
+                   (nc.totaldigits is None or (total_digits(n) is not None and
+                                                   total_digits(n) <= nc.totaldigits)) and \
+                   (nc.fractiondigits is None or (fraction_digits(n) is not None and
+                                                      fraction_digits(n) <= nc.fractiondigits)):
                     return True
                 else:
-                    if nc.mininclusive.val is not None and v < nc.mininclusive.val:
+                    if nc.mininclusive is not None and v < nc.mininclusive:
                         cntxt.current_node.fail_reason = f"Numeric value volation - minimum inclusive: " \
-                                                         f"{nc.mininclusive.val} actual: {v}"
-                    elif nc.minexclusive.val is not None and v <= nc.minexclusive.val:
+                                                         f"{nc.mininclusive} actual: {v}"
+                    elif nc.minexclusive is not None and v <= nc.minexclusive:
                         cntxt.current_node.fail_reason = f"Numeric value volation - minimum exclusive: " \
-                                                         f"{nc.minexclusive.val} actual: {v}"
-                    elif nc.maxinclusive.val is not None and v > nc.maxinclusive.val:
+                                                         f"{nc.minexclusive} actual: {v}"
+                    elif nc.maxinclusive is not None and v > nc.maxinclusive:
                         cntxt.current_node.fail_reason = f"Numeric value volation - maximum inclusive: " \
-                                                         f"{nc.maxinclusive.val} actual: {v}"
-                    elif nc.maxexclusive.val is not None and v >= nc.maxexclusive.val:
+                                                         f"{nc.maxinclusive} actual: {v}"
+                    elif nc.maxexclusive is not None and v >= nc.maxexclusive:
                         cntxt.current_node.fail_reason = f"Numeric value volation - maximum exclusive: " \
-                                                         f"{nc.maxexclusive.val} actual: {v}"
-                    elif nc.totaldigits.val is not None and (total_digits(n) is None or
-                                                             total_digits(n) > nc.totaldigits.val):
+                                                         f"{nc.maxexclusive} actual: {v}"
+                    elif nc.totaldigits is not None and (total_digits(n) is None or
+                                                             total_digits(n) > nc.totaldigits):
                         cntxt.current_node.fail_reason = f"Numeric value volation - max total digits: " \
-                                                         f"{nc.totaldigits.val} value: {v}"
-                    elif nc.fractiondigits.val is not None and (fraction_digits(n) is None or
-                                                                total_digits(n) > nc.fractiondigits.val):
+                                                         f"{nc.totaldigits} value: {v}"
+                    elif nc.fractiondigits is not None and (fraction_digits(n) is None or
+                                                                total_digits(n) > nc.fractiondigits):
                         cntxt.current_node.fail_reason = f"Numeric value volation - max fractional digits: " \
-                                                         f"{nc.fractiondigits.val} value: {v}"
+                                                         f"{nc.fractiondigits} value: {v}"
                     else:
                         cntxt.current_node.fail_reason = "Impossible error - kick the programmer"
                     return False
@@ -206,7 +206,7 @@ def nodeSatisfiesValues(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, _c: D
         if any(_nodeSatisfiesValue(cntxt, n, vsv) for vsv in nc.values):
             return True
         else:
-            cntxt.fail_reason(f"Node: {n} not in value set:\n\t {as_json(nc, indent=None)[:60]}...")
+            cntxt.fail_reason(f"Node: {n} not in value set:\n\t {as_json(cntxt.type_last(nc), indent=None)[:60]}...")
             return False
 
 

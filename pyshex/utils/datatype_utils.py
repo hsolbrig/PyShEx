@@ -3,7 +3,7 @@ from typing import Optional, Tuple, Union
 
 import jsonasobj
 from ShExJSG import ShExJ
-from pyjsg.jsglib.jsg import JSGString, JSGObject
+from pyjsg.jsglib import JSGString, JSGObject
 from rdflib import Literal
 
 from pyshex.sparql11_query.p17_1_operand_data_types import is_integer, is_numeric
@@ -51,7 +51,10 @@ def reencode_escapes(pattern: str) -> str:
 
 def _subf(matchobj) -> str:
     o = matchobj.group(0)
-    return o if o[1] in ['\\', '^', '$', '?', ','] else '\t' if o[1] == 't' else '\n' if o[1] == 'n' else '\r' if o[1] == 'r' \
+    return o if o[1] in ['\\', '^', '$', '?', ',', '[', ']', '(', ')'] \
+        else '\t' if o[1] == 't' \
+        else '\n' if o[1] == 'n' \
+        else '\r' if o[1] == 'r' \
         else o[1]
 
 
