@@ -83,9 +83,9 @@ class SchemaLoaderTestCase(unittest.TestCase):
     def test_location_rewrite(self):
         loader = SchemaLoader()
         # Note: Deliberately a bad URL to make sure this works
-        loader.base_location = "https://raw.githubusercontent.com/shexSpec/shexTest/2.0/schemasz/"
+        loader.root_location = "https://raw.githubusercontent.com/shexSpec/shexTest/2.0/schemasz/"
         loader.redirect_location = schemas_dir + '/'
-        fileloc = loader.base_location + 'startCode3.shex'
+        fileloc = loader.root_location + 'startCode3.shex'
         schema = loader.load(fileloc)
         self.assertEqual("http://a.example/S1", schema.shapes[0].id)
 

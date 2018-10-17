@@ -1,0 +1,261 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix gw: <http://micel.io/genewiki/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q8285 rdfs:label "Bệnh nhược cơ",
+        "Miaistéine throm",
+        "Miastenia",
+        "Miastenia grave",
+        "Miastenia gravis",
+        "Miastenija gravis",
+        "Miasteniya",
+        "Miastenìa greva",
+        "Myastenia Gravis",
+        "Myasthenia Gravis",
+        "Myasthenia gravis",
+        "Sunkioji miastenija",
+        "miastenia grave",
+        "miastenia gravis",
+        "miastènia greu",
+        "myastenia gravis",
+        "myasthenia gravis",
+        "myasthénie",
+        "Ťažká myasténia",
+        "Μυασθένεια Gravis",
+        "Миастения",
+        "Миастения гравис",
+        "Мијастенија гравис",
+        "Міастенія",
+        "миастения",
+        "миястиния",
+        "מיאסטניה גראביס",
+        "میاستنی گراویس",
+        "وهن عضلي وبيل",
+        "मियासथीनिया ग्रेविस",
+        "ମ୍ୟାସ୍ଥେନିଆ ଗ୍ରାଭିସ",
+        "தசைக் களைப்பு",
+        "మయస్థినియా గ్రావిస్",
+        "മൈസ്തീനിയ",
+        "โรคกล้ามเนื้ออ่อนแรงชนิดร้าย",
+        "მიასთენია",
+        "重症筋無力症",
+        "重症肌無力",
+        "중증 근무력증" ;
+    schema:dateModified "2018-10-02T23:49:24+00:00"^^xsd:dateTime ;
+    schema:description "Human disease",
+        "enfermedad neuromuscular",
+        "maladie neuromusculaire auto-immune",
+        "malattia autoimmune neuromuscolare",
+        "myastenia gravis",
+        "neurologische Autoimmunerkrankung",
+        "аутоимунное нервно-мышечное заболевание",
+        "مَرَضٌ بَشَرِيٌّ",
+        "ଦୀର୍ଘକାଳୀନ ସ୍ନାୟୁ-ମାଂସପେଶୀ ରୋଗ",
+        "アセチルコリンなどの抗体により神経・筋伝達が阻害されるために筋肉の易疲労性や脱力が起こる自己免疫疾患" ;
+    schema:version 756484257 ;
+    ns2:identifiers 35 ;
+    ns2:sitelinks 53 ;
+    ns2:statements 66 ;
+    ns2:timestamp "2018-10-02T23:49:30+00:00"^^xsd:dateTime ;
+    skos:altLabel "Acquired myasthenia",
+        "Astenik Bulbar Falaj",
+        "Astenik bulbar falaj",
+        "Autoimmune myasthenia gravis",
+        "Erb-Goldflam Kasalligi",
+        "Erb-Goldflam kasalligi",
+        "MG",
+        "MYASTHENIA GRAVIS; MG",
+        "Myasthenia Gravis",
+        "Myasthenia gravis pseudoparalytica",
+        "Osserman-Kriterien",
+        "miastenia",
+        "miastenia grave",
+        "miastènia gravis" ;
+    p:P1417 <http://www.wikidata.org/entity/statement/Q8285-B1D877F8-94D4-48D5-A193-85032A453EF2> ;
+    p:P1461 <http://www.wikidata.org/entity/statement/Q8285-9780E747-7079-4648-9599-D2D0BC3C6160> ;
+    p:P1550 <http://www.wikidata.org/entity/statement/Q8285-cab2e7ce-44b0-2e12-971f-65a1c414180f> ;
+    p:P1692 <http://www.wikidata.org/entity/statement/Q8285-2F480C82-5254-4AE0-BD4A-8DEC21BD4AF5>,
+        <http://www.wikidata.org/entity/statement/Q8285-483C6197-23B3-4147-9B54-3434878B4EFD> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q8285-6701A92B-C7D0-4525-9DED-BDA37CD25115>,
+        <http://www.wikidata.org/entity/statement/Q8285-FA12E144-F939-483F-AA6C-0BF3DDB0DD49> ;
+    p:P18 <http://www.wikidata.org/entity/statement/Q8285-5ABBD391-D22F-462C-97AF-8CB3278D6684> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q8285-A4287558-EDEA-4A6C-A6D4-FEBECD289718> ;
+    p:P2176 <http://www.wikidata.org/entity/statement/Q8285-203F4473-4216-4BDF-AF2F-40FC3F94FE1C>,
+        <http://www.wikidata.org/entity/statement/Q8285-2B45D0B7-0D02-4545-8741-E1B380394F0E>,
+        <http://www.wikidata.org/entity/statement/Q8285-2E7744BC-845E-40E0-ACBD-DA5AD6D46D0E>,
+        <http://www.wikidata.org/entity/statement/Q8285-32B0B069-C21F-4934-A01C-B7F863F002F5>,
+        <http://www.wikidata.org/entity/statement/Q8285-4C091FAE-07D6-42B5-B17D-7564093BB0E1>,
+        <http://www.wikidata.org/entity/statement/Q8285-53359D6D-8F5B-45C4-83E0-E948097C6FEB>,
+        <http://www.wikidata.org/entity/statement/Q8285-5EF56591-5DA2-4B88-9C0D-1FA234B6F8F0>,
+        <http://www.wikidata.org/entity/statement/Q8285-66EE9EFB-620D-431D-AC51-36552926C747>,
+        <http://www.wikidata.org/entity/statement/Q8285-71E6F7AE-A7AF-43E4-B33D-7542565D9EF0>,
+        <http://www.wikidata.org/entity/statement/Q8285-9076B5CB-419D-4E81-8160-E4DAFAE82DB9>,
+        <http://www.wikidata.org/entity/statement/Q8285-BB4B0306-527E-4889-82C2-E18F6D5AFEE2> ;
+    p:P227 <http://www.wikidata.org/entity/statement/Q8285-B4947E35-A9B2-42CF-81E3-E586282DB35A> ;
+    p:P2293 <http://www.wikidata.org/entity/statement/Q8285-69C82108-9520-4B2D-8E25-8F3E5953C5CA>,
+        <http://www.wikidata.org/entity/statement/Q8285-d94a335e-4004-aab5-c6be-abacb456abb9> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q8285-4D777AFF-DE62-4354-B842-DA1BD12B7649>,
+        <http://www.wikidata.org/entity/statement/Q8285-5742AEE5-CA88-4BC9-88F1-4BB6A39AFAD8>,
+        <http://www.wikidata.org/entity/statement/Q8285-5B0197F0-BE37-4D76-9B21-2D87D3063A1A>,
+        <http://www.wikidata.org/entity/statement/Q8285-6405713D-4553-49D4-AF8A-A6545C819D18>,
+        <http://www.wikidata.org/entity/statement/Q8285-D080E30F-AFEF-4874-A3EB-76499D195266> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q8285-403F2EBC-943C-492B-9204-020F29470EEC>,
+        <http://www.wikidata.org/entity/statement/Q8285-F2090158-5F6C-492C-BCC7-AB06BBD8B23E> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q8285-02BEA97E-F8BC-415A-95E1-934E608D9A08>,
+        <http://www.wikidata.org/entity/statement/Q8285-47C4A79C-9C58-4D1F-A1F7-E4D839D3F714>,
+        <http://www.wikidata.org/entity/statement/Q8285-B8ECADA4-DF3E-4526-B510-8FA9D2D99169>,
+        <http://www.wikidata.org/entity/statement/Q8285-FE1C1E2C-E1AF-453E-A4F1-611FB3009758> ;
+    p:P2924 <http://www.wikidata.org/entity/statement/Q8285-98CF4B6B-8AF2-41E0-8751-FBCEE9CE72F2> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q8285-2549c140-4574-5eb2-353d-e5229dd7760c>,
+        <http://www.wikidata.org/entity/statement/Q8285-B661E065-8470-4730-813E-FB35FF6FA2B6> ;
+    p:P3417 <http://www.wikidata.org/entity/statement/Q8285-3EA2E583-6910-478B-B144-9EA6BE340F8B> ;
+    p:P3471 <http://www.wikidata.org/entity/statement/Q8285-4A3BF539-637B-406C-9B0D-190E3DC650DC> ;
+    p:P373 <http://www.wikidata.org/entity/statement/Q8285-E276FE9E-B4CA-48CC-BFE6-4B58B31E8D75> ;
+    p:P3827 <http://www.wikidata.org/entity/statement/Q8285-3BD2550D-5243-485F-AB83-CF053632985B> ;
+    p:P4229 <http://www.wikidata.org/entity/statement/Q8285-70DF763A-6F62-4118-B6AE-FEA12363FE95>,
+        <http://www.wikidata.org/entity/statement/Q8285-83A0B16E-8002-4CAB-ABB2-AEEB5077360F> ;
+    p:P4317 <http://www.wikidata.org/entity/statement/Q8285-51245A02-5099-4111-931A-3BDB06AC3746> ;
+    p:P486 <http://www.wikidata.org/entity/statement/Q8285-12D69484-3B63-4F00-977E-E16612BE1871>,
+        <http://www.wikidata.org/entity/statement/Q8285-D84741F3-7D47-49A5-9C69-D59CDEB2B685> ;
+    p:P492 <http://www.wikidata.org/entity/statement/Q8285-390AE83E-DD8F-4A9A-B28D-9DC4D54C4E27>,
+        <http://www.wikidata.org/entity/statement/Q8285-82617AB2-795D-43FF-8EE4-1C6C5EFC7532>,
+        <http://www.wikidata.org/entity/statement/Q8285-F367F9A2-B017-40DB-BB07-71A12094C144>,
+        <http://www.wikidata.org/entity/statement/q8285-3C8807D8-089C-4F2A-BADB-C8C6EF5C1F17> ;
+    p:P508 <http://www.wikidata.org/entity/statement/q8285-4C3241B6-E537-4E7B-BE26-A528FF3A3DB7> ;
+    p:P5082 <http://www.wikidata.org/entity/statement/Q8285-5AB2E73B-812B-44F3-B091-B4B95C88FE7D> ;
+    p:P5270 <http://www.wikidata.org/entity/statement/Q8285-D30137C2-4254-414C-B1D6-C1B5E62267DB> ;
+    p:P557 <http://www.wikidata.org/entity/statement/q8285-E9AA4873-DB4A-4AE2-B4BF-6EF498091506> ;
+    p:P604 <http://www.wikidata.org/entity/statement/q8285-9d9303d0-44db-5320-111d-8c536dda2699> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q8285-87B38E55-5095-42B0-BEF8-EDEE9CED0A26> ;
+    p:P672 <http://www.wikidata.org/entity/statement/Q8285-40BF9B86-D68F-45DE-9CA3-071EFD5A6104>,
+        <http://www.wikidata.org/entity/statement/Q8285-E01F0F33-3278-4AAB-A43E-8E1C9EC10397>,
+        <http://www.wikidata.org/entity/statement/Q8285-EEBB3144-4137-436A-874A-CE0B2F5F3817> ;
+    p:P673 <http://www.wikidata.org/entity/statement/q8285-2E2CCCF3-DB60-4E2C-845F-79395E732669>,
+        <http://www.wikidata.org/entity/statement/q8285-7B7C10CE-4F90-457F-B187-2F690B373E1A>,
+        <http://www.wikidata.org/entity/statement/q8285-A698E454-8B24-425F-97D1-78AE10871B3B>,
+        <http://www.wikidata.org/entity/statement/q8285-B88148F4-EF64-42BA-944A-C5A5B2A312E7> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q8285-7735179B-C005-47F4-A19B-4CA0C081968A>,
+        <http://www.wikidata.org/entity/statement/Q8285-ECFD96DB-F159-496A-AF2B-D52B1EABF2A0> ;
+    p:P910 <http://www.wikidata.org/entity/statement/Q8285-42587E5C-70AD-4FDF-9849-2C179C338A68> ;
+    ns1:P227 <http://d-nb.info/gnd/4075144-2> ;
+    ns1:P486 <http://id.nlm.nih.gov/mesh/D009157> ;
+    ns1:P508 <http://purl.org/bncf/tid/46655> ;
+    ns1:P646 <http://g.co/kg/m/04st8> ;
+    ns1:P672 <https://id.nlm.nih.gov/mesh/C10.114.656>,
+        <https://id.nlm.nih.gov/mesh/C10.668.758.725>,
+        <https://id.nlm.nih.gov/mesh/C20.111.258.500> ;
+    wdt:P1417 "science/myasthenia-gravis" ;
+    wdt:P1461 "myasthenia-gravis-pro" ;
+    wdt:P1550 "589" ;
+    wdt:P1692 "358.0",
+        "358.00" ;
+    wdt:P1748 "C60989" ;
+    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Synapse%20diag3.png> ;
+    wdt:P1995 wd:Q83042 ;
+    wdt:P2176 wd:Q11426176,
+        wd:Q18939,
+        wd:Q367700,
+        wd:Q408524,
+        wd:Q410546,
+        wd:Q411648,
+        wd:Q412323,
+        wd:Q419472,
+        wd:Q421617,
+        wd:Q424972,
+        wd:Q4567614 ;
+    wdt:P227 "4075144-2" ;
+    wdt:P2293 wd:Q18035291,
+        wd:Q24598664 ;
+    wdt:P279 wd:Q18553609,
+        wd:Q18553610,
+        wd:Q3843811,
+        wd:Q55788305,
+        wd:Q7002430 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:437>,
+        <http://purl.obolibrary.org/obo/DOID_437> ;
+    wdt:P2892 "C0026896",
+        "C1260409" ;
+    wdt:P2924 "2211197" ;
+    wdt:P31 wd:Q12136,
+        wd:Q42303753 ;
+    wdt:P3417 "Myasthenia-Gravis" ;
+    wdt:P3471 "21270" ;
+    wdt:P373 "Myasthenia gravis" ;
+    wdt:P3827 "myasthenia-gravis" ;
+    wdt:P4229 "G70.0",
+        "G70.00" ;
+    wdt:P4317 "7122" ;
+    wdt:P486 "D009157" ;
+    wdt:P492 "159400",
+        "254200",
+        "607085" ;
+    wdt:P508 "46655" ;
+    wdt:P5082 "myasthenia_gravis" ;
+    wdt:P5270 "MONDO:0009688" ;
+    wdt:P557 "8460588" ;
+    wdt:P604 "000712" ;
+    wdt:P646 "/m/04st8" ;
+    wdt:P672 "C10.114.656",
+        "C10.668.758.725",
+        "C20.111.258.500" ;
+    wdt:P673 "1171206",
+        "1216417",
+        "261815",
+        "793136" ;
+    wdt:P699 "DOID:437" ;
+    wdt:P910 wd:Q13334582 .
+
+<http://www.wikidata.org/entity/statement/Q8285-2549c140-4574-5eb2-353d-e5229dd7760c> prov:wasDerivedFrom <http://www.wikidata.org/reference/bcfdfe23cf621b57597b4c4d9a611b598ef3364c>,
+        <http://www.wikidata.org/reference/eb56d3ed45419e24ac3aaf6568f568ad30c2baac> ;
+    ps:P31 wd:Q42303753 .
+
+<http://www.wikidata.org/entity/statement/Q8285-403F2EBC-943C-492B-9204-020F29470EEC> prov:wasDerivedFrom <http://www.wikidata.org/reference/9a31d8017f4d6fc85f5ea918a3d2c17d0ee5078a> ;
+    ps:P2888 <http://purl.obolibrary.org/obo/DOID_437> .
+
+<http://www.wikidata.org/entity/statement/Q8285-4D777AFF-DE62-4354-B842-DA1BD12B7649> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081> .
+
+<http://www.wikidata.org/entity/statement/Q8285-5742AEE5-CA88-4BC9-88F1-4BB6A39AFAD8> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081> .
+
+<http://www.wikidata.org/entity/statement/Q8285-5B0197F0-BE37-4D76-9B21-2D87D3063A1A> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081> .
+
+<http://www.wikidata.org/entity/statement/Q8285-6405713D-4553-49D4-AF8A-A6545C819D18> prov:wasDerivedFrom <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> .
+
+<http://www.wikidata.org/entity/statement/Q8285-B661E065-8470-4730-813E-FB35FF6FA2B6> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081> ;
+    ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/entity/statement/Q8285-D080E30F-AFEF-4874-A3EB-76499D195266> prov:wasDerivedFrom <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> .
+
+<http://www.wikidata.org/entity/statement/Q8285-F2090158-5F6C-492C-BCC7-AB06BBD8B23E> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
+    ps:P2888 <http://identifiers.org/doid/DOID:437> .
+
+<http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> pr:P248 wd:Q16335166 ;
+    pr:P854 <http://www.ebi.ac.uk/miriam/main/collections/MIR:00000233> .
+
+<http://www.wikidata.org/reference/9a31d8017f4d6fc85f5ea918a3d2c17d0ee5078a> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:437" ;
+    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+
+<http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> pr:P248 wd:Q55345445 ;
+    pr:P813 "2018-07-28T00:00:00+00:00"^^xsd:dateTime .
+
+<http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:437" ;
+    pr:P813 "2018-07-11T00:00:00+00:00"^^xsd:dateTime .
+

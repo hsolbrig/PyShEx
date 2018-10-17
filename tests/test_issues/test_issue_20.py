@@ -37,7 +37,7 @@ PREFIX : <http://hl7.org/fhir/>
 
 
 class BPM2TestCase(unittest.TestCase):
-    @unittest.expectedFailure
+    @unittest.skipIf(True, "Test not complete")
     def test_fail(self):
         pl = PrefixLibrary(rdf)
         results = ShExEvaluator().evaluate(rdf, shex, focus=[pl.EX.BPM1, pl.EX.BPM2], debug=False)

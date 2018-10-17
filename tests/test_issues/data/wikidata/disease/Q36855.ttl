@@ -2,6 +2,8 @@
 @prefix doio: <http://identifiers.org/doid/> .
 @prefix gw: <http://micel.io/genewiki/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix pr: <http://www.wikidata.org/prop/reference/> .
@@ -17,10 +19,325 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-wd:Q36855 p:P279 <http://www.wikidata.org/entity/statement/Q36855-3d09ccde-42c0-d25c-68a5-a04fce9c5a93> ;
+wd:Q36855 rdfs:label "Cúm lợn",
+        "Cūku gripa",
+        "Domuz gribi",
+        "Donuz qripi",
+        "Ffliw moch",
+        "Fliú na muc",
+        "Flu babi",
+        "Giripu pɔrisini",
+        "Griep di porco",
+        "Grip pòsin",
+        "Gripe porcina",
+        "Gripe suína",
+        "Gripi i derrit",
+        "Hargab Doofaar",
+        "Influentia porcina",
+        "Influenza babi",
+        "Influenza porcin",
+        "Kiauliu grips",
+        "Kiaulių gripas",
+        "Nova gripa",
+        "Porka gripo",
+        "Schweineinfluenza",
+        "Seagripp",
+        "Seifiewer",
+        "Sertésinfluenza",
+        "Svineinfluenza",
+        "Svinjska gripa",
+        "Svínaflensa",
+        "Svínakrím",
+        "Swine influenza",
+        "Ti-liû-kám",
+        "Trangkasong baboy",
+        "Varkgriep",
+        "chrípka ošípaných",
+        "chřipka prasat",
+        "grip porcina",
+        "gripe porcina",
+        "gripe suína",
+        "grippe porcine",
+        "influenza suina",
+        "influwenza tal-majjali",
+        "sikainfluenssa",
+        "svineinfluensa",
+        "svininfluensa",
+        "swine influenza",
+        "varkensgriep",
+        "Ātōnahuiztli Influenza A H1N1",
+        "Świńska grypa",
+        "Γρίπη H1N1",
+        "Гахайн томуу",
+        "Свински грип",
+        "Свинячий грип",
+        "Свіны грып",
+        "Сьвіны грып",
+        "свиной грипп",
+        "свински грип",
+        "свињски грип",
+        "чучка гериппы",
+        "חזיר גריפע",
+        "שפעת החזירים",
+        "آنفلوآنزای خوکی",
+        "إنفلونزا الخنازير",
+        "انفلوانزا الخنازير",
+        "د سرکوزي والګی",
+        "پەرکەمی بەراز",
+        "އޫރު ރޯގާ",
+        "शूकर इन्फ्लूएंजा",
+        "स्वाइन इन्फ्लुएन्झा",
+        "स्वाइन फ्लू",
+        "ছোৱাইন ফ্লু",
+        "সোয়াইন ইনফ্লুয়েঞ্জা",
+        "ਸਵਾਈਨ ਇਨਫ਼ਲੂਐਨਜ਼ਾ",
+        "સ્વાઇન ફ્લ્યુ",
+        "எச்1.என்1 சளிக்காய்ச்சல்",
+        "స్వైన్‌ఫ్లూ",
+        "ಹಂದಿಜ್ವರ",
+        "പന്നിപ്പനി",
+        "සූකර උණ",
+        "ไข้หวัดใหญ่ในสุกร",
+        "ໄຂ້ຫວັດຫມູ",
+        "ဝက်တုပ်ကွေးရောဂါ",
+        "ღორის გრიპი",
+        "猪流感",
+        "豚インフルエンザ",
+        "豬流感",
+        "돼지 인플루엔자" ;
+    schema:dateModified "2018-10-02T23:41:30+00:00"^^xsd:dateTime ;
+    schema:description "akut verlaufende Infektionskrankheit der Atemwege bei Hausschweinen",
+        "enfermedad respiratoria provocada por un virus gripal que infecta a los cerdos",
+        "infection caused by any one of several types of swine influenza viruses",
+        "influenssaviruksen aiheuttama hengitystiesairaus",
+        "influenza provocati da contagio endemica di Orthomyxovirus nei suini",
+        "maladie respiratoire provoquée par un virus grippal infectant les cochons",
+        "условное название заболевания людей и животных, вызываемого штаммами вируса гриппа",
+        "مرض جهاز تنفسي" ;
+    schema:version 756481207 ;
+    ns1:identifiers 10 ;
+    ns1:sitelinks 98 ;
+    ns1:statements 23 ;
+    ns1:timestamp "2018-10-02T23:41:35+00:00"^^xsd:dateTime ;
+    skos:altLabel "2009 H1N1 grip salgını",
+        "A",
+        "A(H1N1)",
+        "A/H1N1",
+        "AH1N1",
+        "Bayrus ng trangkasong pang-baboy",
+        "Bayrus ng trankasong pang-baboy",
+        "Birus ng trangkasong pang-baboy",
+        "Birus ng trankasong pang-baboy",
+        "Bệnh cúm lợn",
+        "Cúm A/H1N1",
+        "Cúm heo",
+        "Febbre suina",
+        "Ffliw'r moch",
+        "Fievre porcine",
+        "Fièvre porcine",
+        "Gripe A",
+        "Gripe Suina",
+        "Gripe de 1976 e 2009",
+        "Gripe mexicana",
+        "Gripe porcina",
+        "Gripe suinas",
+        "Gripi e Derrit",
+        "Grypa A/H1N1",
+        "Grypa meksykańska",
+        "Grypa świń",
+        "Grypy A/H1N1",
+        "H1N1",
+        "H1N1 Flu",
+        "H1N1 Influenza",
+        "H1N1 Virus Infection",
+        "H1N1新型流感",
+        "H1n1",
+        "Influenssa A-virus tyyppiä H1N1",
+        "Influenza A",
+        "Influenza A (H1N1)",
+        "Influenza A (H1N1) Virus Infection",
+        "Influenza H1N1",
+        "Influwenza tal-ħnieżer",
+        "Meksikietiškas gripas",
+        "Meksikon sikainfluenssa",
+        "N1 H1",
+        "Pambaboy na trangkaso",
+        "Pang-baboy na trangkaso",
+        "Pangbaboy na trangkaso",
+        "Pig flu",
+        "Pig influenza",
+        "Porkogripo",
+        "Porzine Influenza",
+        "Prasečí chřipka",
+        "Prašičja gripa",
+        "SIV",
+        "Schweine-Influenza",
+        "Selesema babi",
+        "Sikaflunssa",
+        "Subjenis virus influenza A",
+        "Sus flu",
+        "Suína",
+        "Swine Influenza",
+        "Swine flu",
+        "Swine influenza",
+        "Swine influenza virus",
+        "Trangkaso ng baboy",
+        "Trangkasong ng baboy",
+        "Trangkasong pambaboy",
+        "Trangkasong pang-baboy",
+        "Trankaso ng baboy",
+        "Trankasong baboy",
+        "Trankasong pang-baboy",
+        "Y ffliw moch",
+        "fiebre porcina",
+        "gripe del cerdo",
+        "gripe norteamericana",
+        "hog flu",
+        "influensa A(H1N1)",
+        "influenza porcina",
+        "nueva gripe",
+        "pig flu",
+        "pig influenza",
+        "swine flu",
+        "Ātōnahuiztli Influenza H1N1",
+        "Γρίπη Η1Ν1",
+        "Γρίπη των Χοίρων",
+        "Вирус A/H1N1",
+        "Вирус H1N1",
+        "Грип свинячий",
+        "Каліфорнійський грип",
+        "Свињска грипа",
+        "שוויין פלו",
+        "שפעת חזירים",
+        "آنفلوآنزای خوک",
+        "آنفلوانزای خوکی",
+        "آنفولانزای خوکی",
+        "أنفلونزا الخنازير",
+        "إنفلونزا الخنزير",
+        "ئەنفلەوەنزەی بەراز",
+        "انفلوانزا الخنازير",
+        "انفلوانزای خوک",
+        "انفلوانزای خوکی",
+        "انفلونزا الخنازير",
+        "انفلونزا الخنزير",
+        "انفولانزای خوکی",
+        "اچ 1 ان 1",
+        "اچ یک ان یک",
+        "بیماری آنفلوآنزای خوکی",
+        "بیماری انفلوانزای خوکی",
+        "سرکوزي والګی",
+        "مرض إنفلونزا الخنازير",
+        "نزلة خنزيرية",
+        "एच१एन१",
+        "एन १ एच १",
+        "डुकर्‍या ताप",
+        "डुकर्‍याज्वर",
+        "शूकर इंफ्लुएंजा",
+        "शूकर इन्फ्लुएंजा",
+        "सूकर इंफ्लुएंजा",
+        "स्वाइन इन्फ्लूएन्झा",
+        "स्वाइन फ़्लू",
+        "स्वाइन फ्लू",
+        "स्वाइन फ्ल्यू",
+        "स्वाईन फ्लू",
+        "स्वाईन फ्ल्यू",
+        "स्विस फ्लू",
+        "সোয়াইন ফ্লু",
+        "எச். 1 என். 1",
+        "பன்றி காய்ச்சல்",
+        "பன்றிக் காய்ச்சல்",
+        "ไข้หวัด 2009",
+        "ไข้หวัดหมู",
+        "ไข้หวัดใหญ่สายพันธุ์ใหม่ 2009",
+        "ไข้หวัดใหญ่สุกร",
+        "ไข้หวัดใหญ่เม็กซิโก",
+        "კალიფორნია",
+        "ブタインフルエンザ",
+        "人類豬型流感",
+        "人類豬流感",
+        "墨西哥流感",
+        "墨西哥豬流感",
+        "新流感",
+        "猪流行性感冒",
+        "豚インフル",
+        "豚フル",
+        "豬型感冒",
+        "豬流感",
+        "돼지 독감",
+        "돼지독감" ;
+    p:P1225 <http://www.wikidata.org/entity/statement/Q36855-36EFEEC2-5911-4CC5-A0DA-FACD7D4A8268> ;
+    p:P1296 <http://www.wikidata.org/entity/statement/Q36855-B347E14B-4108-41B4-BC0D-8B5266BF4DC0> ;
+    p:P1417 <http://www.wikidata.org/entity/statement/Q36855-A73E744D-8AE3-4DEB-8C8D-6EC48629977B> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q36855-312EC196-25F3-49CC-95F1-D21A952C34F2> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q36855-A8ADA526-7ADD-43D6-AA1F-F5051DC59DD1>,
+        <http://www.wikidata.org/entity/statement/Q36855-d9e1b159-4ff4-d2b8-b384-e13f30c3c1a1> ;
+    p:P2176 <http://www.wikidata.org/entity/statement/Q36855-18225D22-F23C-4423-A78C-92AF004BBB6C>,
+        <http://www.wikidata.org/entity/statement/Q36855-DD8A5F30-C712-4C2C-9193-ED5FB5917BAD> ;
+    p:P227 <http://www.wikidata.org/entity/statement/Q36855-40012683-B762-4B5F-8B70-A63575BBF6D0> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q36855-3d09ccde-42c0-d25c-68a5-a04fce9c5a93> ;
     p:P2888 <http://www.wikidata.org/entity/statement/Q36855-5A13294E-23E2-4F24-B752-F3C0EA7E03FD>,
         <http://www.wikidata.org/entity/statement/Q36855-CB53DB35-4FBF-43B6-8A44-49F51F50DC65> ;
-    p:P31 <http://www.wikidata.org/entity/statement/Q36855-4407CDA5-D9BF-4C74-AE3B-3648B1F3AFFA> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q36855-294B0FE0-FBF7-4B51-A34A-FEF4D049771B> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q36855-1BF9DB2E-9759-40E3-B5F2-DEE5BF8B2598>,
+        <http://www.wikidata.org/entity/statement/Q36855-4407CDA5-D9BF-4C74-AE3B-3648B1F3AFFA>,
+        <http://www.wikidata.org/entity/statement/Q36855-dc0398bc-45ed-a2eb-eca8-ae10003b58cd> ;
+    p:P373 <http://www.wikidata.org/entity/statement/q36855-F517BF96-FEAE-4331-AB71-64789DE77FE3> ;
     p:P494 <http://www.wikidata.org/entity/statement/Q36855-1fd8dec8-4aa7-6064-acea-ca4f3e50365b> ;
-    p:P699 <http://www.wikidata.org/entity/statement/Q36855-C725609A-6F51-4A2F-B451-897C76F77DCD> .
+    p:P5270 <http://www.wikidata.org/entity/statement/Q36855-498E4672-98BC-4298-8EDF-E9332A255C76> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q36855-7F648886-DE7E-48EF-869D-2EB4A5C67340> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q36855-251AFEFE-9357-4819-9345-8658A5817D72>,
+        <http://www.wikidata.org/entity/statement/Q36855-C725609A-6F51-4A2F-B451-897C76F77DCD> ;
+    p:P910 <http://www.wikidata.org/entity/statement/Q36855-FF9EC242-3136-4C46-8597-0772CDD86794> ;
+    ns2:P227 <http://d-nb.info/gnd/7679861-6> ;
+    ns2:P646 <http://g.co/kg/m/057c6k> ;
+    wdt:P1225 "10644087" ;
+    wdt:P1296 "0517808" ;
+    wdt:P1417 "science/swine-flu" ;
+    wdt:P1748 "C80444" ;
+    wdt:P1995 wd:Q203337,
+        wd:Q788926 ;
+    wdt:P2176 wd:Q146075,
+        wd:Q211509 ;
+    wdt:P227 "7679861-6" ;
+    wdt:P279 wd:Q2840 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:0050211>,
+        <http://purl.obolibrary.org/obo/DOID_0050211> ;
+    wdt:P2892 "C2076600" ;
+    wdt:P31 wd:Q12136,
+        wd:Q18123741,
+        wd:Q54947664 ;
+    wdt:P373 "Swine flu" ;
+    wdt:P494 "J09.X2" ;
+    wdt:P5270 "MONDO:0005460" ;
+    wdt:P646 "/m/057c6k" ;
+    wdt:P699 "DOID:0050211" ;
+    wdt:P910 wd:Q10027720 .
+
+<http://www.wikidata.org/entity/statement/Q36855-1BF9DB2E-9759-40E3-B5F2-DEE5BF8B2598> prov:wasDerivedFrom <http://www.wikidata.org/reference/230e690b622c73b403f64da8531818cd0b5993d6> ;
+    ps:P31 wd:Q18123741 .
+
+<http://www.wikidata.org/entity/statement/Q36855-3d09ccde-42c0-d25c-68a5-a04fce9c5a93> prov:wasDerivedFrom <http://www.wikidata.org/reference/230e690b622c73b403f64da8531818cd0b5993d6>,
+        <http://www.wikidata.org/reference/4013d56051c2d2fdd0e70efb912f53d34e3d1320> .
+
+<http://www.wikidata.org/entity/statement/Q36855-4407CDA5-D9BF-4C74-AE3B-3648B1F3AFFA> prov:wasDerivedFrom <http://www.wikidata.org/reference/4013d56051c2d2fdd0e70efb912f53d34e3d1320> ;
+    ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/entity/statement/Q36855-5A13294E-23E2-4F24-B752-F3C0EA7E03FD> prov:wasDerivedFrom <http://www.wikidata.org/reference/063cc9686384a7b11b150d93ca98e3e0355ccf79> ;
+    ps:P2888 <http://purl.obolibrary.org/obo/DOID_0050211> .
+
+<http://www.wikidata.org/entity/statement/Q36855-CB53DB35-4FBF-43B6-8A44-49F51F50DC65> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
+    ps:P2888 <http://identifiers.org/doid/DOID:0050211> .
+
+<http://www.wikidata.org/entity/statement/Q36855-dc0398bc-45ed-a2eb-eca8-ae10003b58cd> ps:P31 wd:Q54947664 .
+
+<http://www.wikidata.org/reference/063cc9686384a7b11b150d93ca98e3e0355ccf79> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:0050211" ;
+    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+
+<http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> pr:P248 wd:Q16335166 ;
+    pr:P854 <http://www.ebi.ac.uk/miriam/main/collections/MIR:00000233> .
+
+<http://www.wikidata.org/reference/4013d56051c2d2fdd0e70efb912f53d34e3d1320> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:0050211" ;
+    pr:P813 "2018-07-11T00:00:00+00:00"^^xsd:dateTime .
 

@@ -1,91 +1,59 @@
-@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix gw: <http://micel.io/genewiki/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
 @prefix p: <http://www.wikidata.org/prop/> .
-@prefix po: <http://purl.obolibrary.org/obo/PW> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix pr: <http://www.wikidata.org/prop/reference/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
 @prefix ps: <http://www.wikidata.org/prop/statement/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix react: <http://micel.io/reactome/> .
+@prefix ref: <http://www.wikidata.org/reference/> .
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wba: <http://wikiba.se/ontology#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
-@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix wde: <http://www.wikidata.org/entity/statement/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
-@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix wdtn: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-wd:Q34340161 p:P2860 <http://www.wikidata.org/entity/statement/Q34340161-A04EE83F-C069-47BE-9F31-FC76A1D1D31D> ;
-    p:P31 <http://www.wikidata.org/entity/statement/Q34340161-3A070378-12EE-4393-947A-15CB86CAFEB8>,
-        <http://www.wikidata.org/entity/statement/Q34340161-78FF32F7-5A00-4911-9B5C-AE1319FB928E> ;
-    p:P361 <http://www.wikidata.org/entity/statement/Q34340161-6C088C31-FB93-4171-BE9A-510514C32B8E> ;
-    p:P3937 <http://www.wikidata.org/entity/statement/Q34340161-5E5F3EE7-BEFD-4F71-A738-92D1FB6867E2> ;
-    p:P527 <http://www.wikidata.org/entity/statement/Q34340161-333F4999-BBFD-49F2-B2ED-F91597A1F838>,
-        <http://www.wikidata.org/entity/statement/Q34340161-70A81772-4D0C-4B7A-A364-B84E298A6FC3>,
-        <http://www.wikidata.org/entity/statement/Q34340161-738A873A-D6A1-41AD-A83A-7328136EB162>,
-        <http://www.wikidata.org/entity/statement/Q34340161-CEB8FFD6-4140-477C-9A2B-52565E46B07B> ;
-    p:P703 <http://www.wikidata.org/entity/statement/Q34340161-DA012B23-D326-4336-AB08-03367E7EBD61> .
+wd:Q34340161 rdfs:label "Cholesterol biosynthesis via desmosterol" ;
+    schema:dateModified "2018-06-27T17:09:26+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway Cholesterol biosynthesis via desmosterol in Homo sapiens" ;
+    schema:version 703452501 ;
+    wba:identifiers 1 ;
+    wba:sitelinks 0 ;
+    wba:statements 11 ;
+    p:P2860 wde:Q34340161-A04EE83F-C069-47BE-9F31-FC76A1D1D31D ;
+    p:P2888 wde:Q34340161-15CB61A1-6563-40B7-9938-58C0762443AC ;
+    p:P31 wde:Q34340161-3A070378-12EE-4393-947A-15CB86CAFEB8,
+        wde:Q34340161-78FF32F7-5A00-4911-9B5C-AE1319FB928E ;
+    p:P361 wde:Q34340161-6C088C31-FB93-4171-BE9A-510514C32B8E ;
+    p:P3937 wde:Q34340161-5E5F3EE7-BEFD-4F71-A738-92D1FB6867E2 ;
+    p:P527 wde:Q34340161-333F4999-BBFD-49F2-B2ED-F91597A1F838,
+        wde:Q34340161-70A81772-4D0C-4B7A-A364-B84E298A6FC3,
+        wde:Q34340161-738A873A-D6A1-41AD-A83A-7328136EB162,
+        wde:Q34340161-CEB8FFD6-4140-477C-9A2B-52565E46B07B ;
+    p:P703 wde:Q34340161-DA012B23-D326-4336-AB08-03367E7EBD61 ;
+    wdt:P2860 wd:Q28647131 ;
+    wdt:P2888 <https://identifiers.org/reactome:R-HSA-6807047> ;
+    wdt:P31 wd:Q22282936,
+        wd:Q4915012 ;
+    wdt:P361 wd:Q34340150 ;
+    wdt:P3937 "R-HSA-6807047" ;
+    wdt:P527 wd:Q34340165,
+        wd:Q50294094,
+        wd:Q50294095,
+        wd:Q50294096 ;
+    wdt:P703 wd:Q15978631 .
 
-wd:Q22282936 p:P31 <http://www.wikidata.org/entity/statement/Q22282936-318A7892-EEAF-42B6-A6C6-B98D6567CA62> .
-
-wd:Q28647131 p:P698 <http://www.wikidata.org/entity/statement/Q28647131-F9790AED-2278-4693-98BD-698D4042F860> .
-
-wd:Q34340150 p:P3937 <http://www.wikidata.org/entity/statement/Q34340150-972B1D80-2D09-4AA9-A5EB-51A3914C9CC8> .
-
-wd:Q34340165 p:P3937 <http://www.wikidata.org/entity/statement/Q34340165-D36FC8F4-8937-41E6-8B61-D587C4704B48> .
-
-wd:Q50294094 p:P3937 <http://www.wikidata.org/entity/statement/Q50294094-C068AD0F-1394-4543-A941-F0DD93057ADF> .
-
-wd:Q50294095 p:P3937 <http://www.wikidata.org/entity/statement/Q50294095-71A7A074-1C2B-45D1-A4B9-C56B4B9123D0> .
-
-wd:Q50294096 p:P3937 <http://www.wikidata.org/entity/statement/Q50294096-3167B448-485E-4455-9425-984632B1E429> .
-
-<http://www.wikidata.org/entity/statement/Q22282936-318A7892-EEAF-42B6-A6C6-B98D6567CA62> ps:P31 wd:Q2996394 .
-
-<http://www.wikidata.org/entity/statement/Q28647131-F9790AED-2278-4693-98BD-698D4042F860> ps:P698 "26114596" .
-
-<http://www.wikidata.org/entity/statement/Q34340150-972B1D80-2D09-4AA9-A5EB-51A3914C9CC8> ps:P3937 "R-HSA-191273" .
-
-<http://www.wikidata.org/entity/statement/Q34340161-333F4999-BBFD-49F2-B2ED-F91597A1F838> prov:wasDerivedFrom <http://www.wikidata.org/reference/7fbfa2c6472e530dd4adc91fa7abcfa80c8acade> ;
-    ps:P527 wd:Q50294096 .
-
-<http://www.wikidata.org/entity/statement/Q34340161-3A070378-12EE-4393-947A-15CB86CAFEB8> prov:wasDerivedFrom <http://www.wikidata.org/reference/7fbfa2c6472e530dd4adc91fa7abcfa80c8acade> ;
+wde:Q34340161-3A070378-12EE-4393-947A-15CB86CAFEB8 prov:wasDerivedFrom <http://www.wikidata.org/reference/552be8f8030fb67ac901e6dcc1cc82e4b6fc72aa> ;
     ps:P31 wd:Q22282936 .
 
-<http://www.wikidata.org/entity/statement/Q34340161-5E5F3EE7-BEFD-4F71-A738-92D1FB6867E2> ps:P3937 "R-HSA-6807047" .
-
-<http://www.wikidata.org/entity/statement/Q34340161-6C088C31-FB93-4171-BE9A-510514C32B8E> prov:wasDerivedFrom <http://www.wikidata.org/reference/7fbfa2c6472e530dd4adc91fa7abcfa80c8acade> ;
-    ps:P361 wd:Q34340150 .
-
-<http://www.wikidata.org/entity/statement/Q34340161-70A81772-4D0C-4B7A-A364-B84E298A6FC3> prov:wasDerivedFrom <http://www.wikidata.org/reference/7fbfa2c6472e530dd4adc91fa7abcfa80c8acade> ;
-    ps:P527 wd:Q34340165 .
-
-<http://www.wikidata.org/entity/statement/Q34340161-738A873A-D6A1-41AD-A83A-7328136EB162> prov:wasDerivedFrom <http://www.wikidata.org/reference/7fbfa2c6472e530dd4adc91fa7abcfa80c8acade> ;
-    ps:P527 wd:Q50294095 .
-
-<http://www.wikidata.org/entity/statement/Q34340161-78FF32F7-5A00-4911-9B5C-AE1319FB928E> prov:wasDerivedFrom <http://www.wikidata.org/reference/7fbfa2c6472e530dd4adc91fa7abcfa80c8acade> ;
+wde:Q34340161-78FF32F7-5A00-4911-9B5C-AE1319FB928E prov:wasDerivedFrom <http://www.wikidata.org/reference/552be8f8030fb67ac901e6dcc1cc82e4b6fc72aa> ;
     ps:P31 wd:Q4915012 .
-
-<http://www.wikidata.org/entity/statement/Q34340161-A04EE83F-C069-47BE-9F31-FC76A1D1D31D> prov:wasDerivedFrom <http://www.wikidata.org/reference/7fbfa2c6472e530dd4adc91fa7abcfa80c8acade> ;
-    ps:P2860 wd:Q28647131 .
-
-<http://www.wikidata.org/entity/statement/Q34340161-CEB8FFD6-4140-477C-9A2B-52565E46B07B> prov:wasDerivedFrom <http://www.wikidata.org/reference/7fbfa2c6472e530dd4adc91fa7abcfa80c8acade> ;
-    ps:P527 wd:Q50294094 .
-
-<http://www.wikidata.org/entity/statement/Q34340161-DA012B23-D326-4336-AB08-03367E7EBD61> prov:wasDerivedFrom <http://www.wikidata.org/reference/7fbfa2c6472e530dd4adc91fa7abcfa80c8acade> ;
-    ps:P703 wd:Q15978631 .
-
-<http://www.wikidata.org/entity/statement/Q34340165-D36FC8F4-8937-41E6-8B61-D587C4704B48> ps:P3937 "R-HSA-195690" .
-
-<http://www.wikidata.org/entity/statement/Q50294094-C068AD0F-1394-4543-A941-F0DD93057ADF> ps:P3937 "R-HSA-195664" .
-
-<http://www.wikidata.org/entity/statement/Q50294095-71A7A074-1C2B-45D1-A4B9-C56B4B9123D0> ps:P3937 "R-HSA-196402" .
-
-<http://www.wikidata.org/entity/statement/Q50294096-3167B448-485E-4455-9425-984632B1E429> ps:P3937 "R-HSA-196417" .
-
-<http://www.wikidata.org/reference/7fbfa2c6472e530dd4adc91fa7abcfa80c8acade> pr:P248 wd:Q2134522 ;
-    pr:P3937 "R-HSA-6807047" ;
-    pr:P813 "2018-03-02T00:00:00+00:00"^^xsd:dateTime .
 

@@ -5,7 +5,7 @@ from typing import Dict
 
 import sys
 from ShExJSG import ShExJ
-from rdflib import URIRef, Namespace
+from rdflib import URIRef
 
 from pyshex.shape_expressions_language.p5_2_validation_definition import isValid
 from pyshex.shape_expressions_language.p5_context import Context
@@ -17,7 +17,7 @@ from tests.utils.uri_redirector import URIRedirector
 sys.setrecursionlimit(1200)
 
 ENTRY_NAME = ''                          # Individual element to test
-START_AFTER = '1val1STRING_LITERAL1_with_ECHAR_escapes_pass'                         # Element to start at (or after)
+START_AFTER = ''                         # Element to start at (or after)
 
 CONTINUE_ON_FAIL = not(START_AFTER)
 VERBOSE = False
@@ -47,7 +47,7 @@ FOCUS_DATATYPE = "FocusDatatype"
 
 # skip_traits = [SHT.Import, SHT.Include, SHT.BNodeShapeLabel, SHT.ShapeMap, SHT.OutsideBMP,
 #                SHT.ToldBNode, SHT.LexicalBNode]
-skip_traits = [SHT.BNodeShapeLabel, SHT.ToldBNode, SHT.LexicalBNode, SHT.Import, SHT.ShapeMap]
+skip_traits = [SHT.BNodeShapeLabel, SHT.ToldBNode, SHT.LexicalBNode, SHT.ShapeMap, SHT.Import]
 
 # We can't do an effective test on relative files when we're rewriting URI's
 if BASE_FILE_LOC != REMOTE_FILE_LOC:

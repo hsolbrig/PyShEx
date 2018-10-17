@@ -1,0 +1,377 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix gw: <http://micel.io/genewiki/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q12135 rdfs:label "Afiechyd meddwl",
+        "Akıl hastalığı",
+        "Cheng-sîn-pēⁿ",
+        "Diperensya ha panhunahuna",
+        "Duševna bolest",
+        "Duševna motnja",
+        "Enfermedá mental",
+        "Enfermidade mental",
+        "Garīga slimība",
+        "Geestesteuring",
+        "Geðsjúkdómur",
+        "Itaala'aanta maskaxda",
+        "Kaosê Mezgi",
+        "Kpaŋ kʊdɔŋ",
+        "Maladia psicolojial",
+        "Malautiá mentala",
+        "Malautía mental",
+        "Matéria",
+        "Meelehaigus",
+        "Mental disaada",
+        "Morbus mentis",
+        "Neamhoird mheabhracha",
+        "Penyakit kejiwaan",
+        "Penyakit mental",
+        "Psichikos sutrikimas",
+        "Psikėkas sotrėkėms",
+        "Psychiatric Disorders",
+        "Psychische Störung",
+        "Psîkopatî",
+        "Psüühika- ja käitumishäired",
+        "Ruhiy kasallik",
+        "Sakit sa pag-iisip",
+        "Sìng-gĭng-bâng",
+        "Ugonjwa wa akili",
+        "Waq'ayay",
+        "boală mentală",
+        "brægenseocnes",
+        "buruko gaitz",
+        "disturbo mentale",
+        "duševna bolest",
+        "duševná porucha",
+        "duševní porucha",
+        "mental disorder",
+        "mentális zavar",
+        "perturbação mental",
+        "psika malsano",
+        "psychische Störung",
+        "psychische aandoening",
+        "psykisk lidelse",
+        "psykisk liding",
+        "psykisk störning",
+        "psykisk sygdom",
+        "psyykkinen häiriö",
+        "rối loạn tâm thần",
+        "trastorn mental",
+        "trastorno mental",
+        "trouble mental",
+        "zaburzenia psychiczne",
+        "Ψυχική ασθένεια",
+        "Бемориҳои рӯҳӣ",
+        "Психик ҡаҡшау",
+        "Психикалык оорулар",
+        "Психикалық ширығу",
+        "Психично разстройство",
+        "Психічні захворювання",
+        "Псыхічны разлад",
+        "Псіхічны разлад",
+        "душевна болест",
+        "песихик бозылыш",
+        "психическое расстройство",
+        "հոգեկան հիվանդություն",
+        "הפרעה נפשית",
+        "מח-קרענק",
+        "اضطراب عقلی",
+        "اضطراب نفسي",
+        "بیماری روانی",
+        "ذہنی توازن وگڑنا",
+        "پەشێویی دەروونی",
+        "मानसिक रोग",
+        "मानसिक ल्वय्",
+        "मानसिकरोगः",
+        "মানসিক বিসংগতি",
+        "মানসিক রোগ",
+        "ਮਨੋਵਿਕਾਰ",
+        "ମାନସିକ ରୋଗ",
+        "உளப் பிறழ்ச்சி",
+        "మానసిక రుగ్మత",
+        "മാനസികരോഗം",
+        "මානසික අක් රමතා",
+        "ความผิดปกติทางจิต",
+        "ფსიქიკური დაავადება",
+        "រោគ សរសៃ ប្រសាទ",
+        "精神疾患",
+        "精神病",
+        "精神障礙",
+        "정신 질환" ;
+    schema:dateModified "2018-10-02T23:46:06+00:00"^^xsd:dateTime ;
+    schema:description "Anormalidade, sofrimento ou comprometimento da ordem psicológica e/ou mental",
+        "affezione che colpisce il pensiero, i sentimenti o il comportamento di una persona",
+        "alteración de los procesos cognitivos y afectivos del desarrollo",
+        "distressing thought or behavior pattern",
+        "erhebliche krankhafte Abweichung von der Norm im Erleben oder Verhalten",
+        "lidské onemocnění",
+        "označenie pre výrazný odklon od spôsobu vnímania a správania psychicky zdravého jedinca",
+        "psigiese aandoening",
+        "psihološki poremećaj ili anomalija",
+        "psychological pattern or anomaly",
+        "trouble psychologique ou comportemental",
+        "Психик сирҙәр (менталь сирҙәр, психик ауырыу, йән ауырыуы;",
+        "психолошко пореметување",
+        "состояние психики, отличное от приемлемого обществом",
+        "הפרעה נפשית",
+        "同心理、神經有關嘅疾病" ;
+    schema:version 756482984 ;
+    ns2:identifiers 32 ;
+    ns2:sitelinks 101 ;
+    ns2:statements 69 ;
+    ns2:timestamp "2018-10-02T23:46:09+00:00"^^xsd:dateTime ;
+    skos:altLabel "Gemütskrankheit",
+        "Mental Disorder",
+        "Mental Dysfunction",
+        "Psychiatric Disease",
+        "Psychische Erkrankung",
+        "Psychische Erkrankungen",
+        "Psychische Krankheit",
+        "Seelische Behinderung",
+        "Seelische Krankheit",
+        "Seelische Störung",
+        "desorden mental",
+        "disease of mental health",
+        "disorder of mental process",
+        "disordine mentale",
+        "disturbi mentali",
+        "disturbo psichiatrico",
+        "disturbo psichico",
+        "distúrbio mental",
+        "duševní choroba",
+        "duševní nemoc",
+        "enfermedad mental",
+        "enfermedad psiquiatrica",
+        "enfermedad psiquiátrica",
+        "maladie mentale",
+        "maladie psychiatrique",
+        "malaltia mental",
+        "malattia mentale",
+        "malattia psichiatrica",
+        "malattie mentali",
+        "malattie psichiatriche",
+        "mensa malordo",
+        "mensa malsano",
+        "mensa perturbo",
+        "mental illness",
+        "mental liding",
+        "mental or behavioural disorder",
+        "psihička bolest",
+        "psika perturbo",
+        "psychiatric disorder",
+        "psychická choroba",
+        "psychická nemoc",
+        "psychická porucha",
+        "psykiatrisk liding",
+        "transtorno mental",
+        "trastorno psiquiatrico",
+        "trastorno psiquiátrico",
+        "Божевілля",
+        "Күңел сире",
+        "Психічний розлад",
+        "Психічні розлади",
+        "душевно пореметување",
+        "душевно растројство",
+        "душевные заболевания",
+        "душевные расстройства",
+        "ментална болест",
+        "ментално пореметување",
+        "ментално растројство",
+        "психическая болезнь",
+        "психические заболевания",
+        "психические расстройства",
+        "психолошка болест",
+        "اضطراب عقلي",
+        "الأمراض العقلية",
+        "الاضطراب النفسي",
+        "الاضطرابات النفسية",
+        "المرض العقلي",
+        "مرض نفسي",
+        "心理疾病",
+        "心理紊亂",
+        "心理障礙",
+        "精神異常",
+        "精神疾病",
+        "精神紊亂",
+        "精神錯亂" ;
+    p:P1014 <http://www.wikidata.org/entity/statement/Q12135-820B9A9C-13D9-44A5-A802-1A6A372F4F42> ;
+    p:P1051 <http://www.wikidata.org/entity/statement/Q12135-90EF8470-2B5A-47D4-B9C5-C14D32F005A8> ;
+    p:P1296 <http://www.wikidata.org/entity/statement/Q12135-193D4239-E18C-481C-A1C1-9D12FDC61055> ;
+    p:P1343 <http://www.wikidata.org/entity/statement/Q12135-84EDF737-087C-49ED-93E9-A927A63F2FEF> ;
+    p:P1417 <http://www.wikidata.org/entity/statement/Q12135-B8F67DCC-83BD-4DFD-876B-31AA65EF06C6> ;
+    p:P1542 <http://www.wikidata.org/entity/statement/Q12135-cbe8d6b4-487a-340f-b52e-620be0722b7e> ;
+    p:P1692 <http://www.wikidata.org/entity/statement/Q12135-5EA6E026-77BB-4557-A311-D9E9282BE866>,
+        <http://www.wikidata.org/entity/statement/Q12135-68CE0CAC-AFD0-490A-B2F0-C5E352BF74EF>,
+        <http://www.wikidata.org/entity/statement/Q12135-D56ABDBE-76E8-4C54-A339-61CC84BD1B52> ;
+    p:P1709 <http://www.wikidata.org/entity/statement/Q12135-239A7FF8-318C-4148-A931-9AFAFD407A5E>,
+        <http://www.wikidata.org/entity/statement/Q12135-6BDD0C37-93B7-4A24-B941-6B91BA9218BD> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q12135-3A4F4540-6A61-49C3-9E45-0344F16813F9>,
+        <http://www.wikidata.org/entity/statement/Q12135-47AEDAF6-B4A3-4D39-A26C-A832BCD7512A>,
+        <http://www.wikidata.org/entity/statement/Q12135-6FDD474B-C9B8-4643-AE9C-D8F5CFDC289D> ;
+    p:P1889 <http://www.wikidata.org/entity/statement/Q12135-0890a66d-4989-a41d-6c3d-b70bf0528694> ;
+    p:P1963 <http://www.wikidata.org/entity/statement/Q12135-058DCBC4-053F-43C9-B9ED-E2600E1A607D> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q12135-4caeb0b8-45fb-1ff3-ff86-4bbb1dcf9c04>,
+        <http://www.wikidata.org/entity/statement/Q12135-b6059356-417d-536b-217b-19a28273cb88>,
+        <http://www.wikidata.org/entity/statement/Q12135-bb96925a-4732-88c8-1973-997f6338fa9b> ;
+    p:P2176 <http://www.wikidata.org/entity/statement/Q12135-0F23240A-AAC3-419D-A66F-6CDD1C413995>,
+        <http://www.wikidata.org/entity/statement/Q12135-1CB842BF-D748-4C5A-81DB-318E9C0CAE25>,
+        <http://www.wikidata.org/entity/statement/Q12135-5669F4F7-1DF7-461A-8824-05CBAC1549E6>,
+        <http://www.wikidata.org/entity/statement/Q12135-8B0793BD-3897-4D7F-9858-18BD52AA23B5>,
+        <http://www.wikidata.org/entity/statement/Q12135-93E4CB47-243B-42F7-B33E-D21FFBFF8164>,
+        <http://www.wikidata.org/entity/statement/Q12135-9C9CAA57-AC75-47DF-A89E-EB399FEFCF3C>,
+        <http://www.wikidata.org/entity/statement/Q12135-A27CEF89-F375-4D62-BF91-3A917E917D33>,
+        <http://www.wikidata.org/entity/statement/Q12135-A9305E25-2AE7-41DA-9986-FD9EBD458774>,
+        <http://www.wikidata.org/entity/statement/Q12135-B72396BD-0093-405B-BB7B-13997A8594E5>,
+        <http://www.wikidata.org/entity/statement/Q12135-C8794553-EB1C-461E-9065-1DBD59EFFA60>,
+        <http://www.wikidata.org/entity/statement/Q12135-ECE40A7C-0E82-4D76-B2A4-EBDFC6905AE4>,
+        <http://www.wikidata.org/entity/statement/Q12135-FEB19ADE-12E5-4BC0-A8C1-E4789C80AD99> ;
+    p:P227 <http://www.wikidata.org/entity/statement/q12135-4ff989dd-47fa-14e9-1116-018c4bb49202> ;
+    p:P2581 <http://www.wikidata.org/entity/statement/Q12135-FC5BEBE9-8899-4A23-8908-3751BA52A569> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q12135-09ad8697-4e33-3086-adc0-d05ca1725b18> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q12135-2676FDBB-DD4F-420F-9975-0F4B0B7495B8>,
+        <http://www.wikidata.org/entity/statement/Q12135-350F011E-3EDE-47A6-855C-4ACAB9DF90E3>,
+        <http://www.wikidata.org/entity/statement/Q12135-503B67AD-7EEA-4F4B-8C5C-381BE4B76277> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q12135-23C58F61-3722-4011-A59C-C298108F6AA8>,
+        <http://www.wikidata.org/entity/statement/Q12135-7A34FA7C-BD3E-44C3-8413-6A29F4FDD723>,
+        <http://www.wikidata.org/entity/statement/Q12135-8C115F97-7D62-47AD-9480-5CE942D5A098> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q12135-3F9AE78D-F2F1-4DD8-A6B2-B765EDF5D73E> ;
+    p:P3123 <http://www.wikidata.org/entity/statement/Q12135-38735FE0-FB94-44B9-B1CB-B51D0513EDBA> ;
+    p:P3219 <http://www.wikidata.org/entity/statement/Q12135-F1CB2F2E-644B-47FA-A01A-61C979C368E2> ;
+    p:P3221 <http://www.wikidata.org/entity/statement/Q12135-2FD7B2A7-F91A-4266-897C-99889E497D73> ;
+    p:P3417 <http://www.wikidata.org/entity/statement/Q12135-80FDCE11-8B34-4519-96D7-E5837063CD8B> ;
+    p:P373 <http://www.wikidata.org/entity/statement/q12135-76209D5F-6A6F-4258-B16C-7B494893D455> ;
+    p:P3827 <http://www.wikidata.org/entity/statement/Q12135-C2C18C1F-298C-49C9-9818-6E42DCBA1224> ;
+    p:P3916 <http://www.wikidata.org/entity/statement/Q12135-E86DEAE3-EB99-45EB-9807-028F2BA6857E> ;
+    p:P4229 <http://www.wikidata.org/entity/statement/Q12135-651BD972-84A7-4268-8E6F-E4FC39FC5C1C>,
+        <http://www.wikidata.org/entity/statement/Q12135-9995E3A4-BD94-4341-B248-F8562C7C5993>,
+        <http://www.wikidata.org/entity/statement/Q12135-B369266D-FCED-45C8-B6F6-E4A8A662AE8A> ;
+    p:P486 <http://www.wikidata.org/entity/statement/Q12135-29D28508-AF3F-45E6-BD80-4DF89F83043B>,
+        <http://www.wikidata.org/entity/statement/Q12135-40BF8559-7F6C-45FC-B291-8895AC9738D7>,
+        <http://www.wikidata.org/entity/statement/Q12135-85128C43-2BC8-4C60-99DB-26083AF4276E>,
+        <http://www.wikidata.org/entity/statement/Q12135-B39268A6-F273-43CE-BE8A-AEACE1997FB1> ;
+    p:P494 <http://www.wikidata.org/entity/statement/Q12135-f6e17c40-4150-bb03-75f5-b0ed68e2ed23> ;
+    p:P5008 <http://www.wikidata.org/entity/statement/Q12135-131A65B8-4378-4A10-9B6D-6B8C13EC4327> ;
+    p:P508 <http://www.wikidata.org/entity/statement/q12135-8A003DB7-599F-40AD-B2AB-24193B8D1FA8> ;
+    p:P5198 <http://www.wikidata.org/entity/statement/Q12135-8A80FAFB-9875-4E5A-963A-DC221B76913C> ;
+    p:P5270 <http://www.wikidata.org/entity/statement/Q12135-36F84016-3807-41C9-A0DF-9EC8BB75DF76>,
+        <http://www.wikidata.org/entity/statement/Q12135-EE431A6A-05B8-45A6-8C36-14D573CC7876> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q12135-EF11483E-93BF-4C90-86DB-E6B190B1D5DF> ;
+    p:P667 <http://www.wikidata.org/entity/statement/Q12135-2D4D385E-2E60-4785-B6F8-5F45788421CD> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q12135-5008E4C6-B970-4B62-97BB-8859DE94BBB2>,
+        <http://www.wikidata.org/entity/statement/Q12135-5251CD64-15DA-4CF5-8B26-D59859D32C5F>,
+        <http://www.wikidata.org/entity/statement/Q12135-DDD25A09-18BB-4D72-B8D7-092F80C079A8>,
+        <http://www.wikidata.org/entity/statement/Q12135-E689FAB7-C03E-4081-A2D4-B4EC25AC577B> ;
+    p:P910 <http://www.wikidata.org/entity/statement/Q12135-C4E93B0F-B380-4A43-A5DE-AAAA0EE01C23> ;
+    p:P948 <http://www.wikidata.org/entity/statement/Q12135-814DFA56-621E-4461-97F7-ECF483D3249D> ;
+    ns1:P1014 <http://vocab.getty.edu/aat/300055131> ;
+    ns1:P227 <http://d-nb.info/gnd/4047686-8> ;
+    ns1:P2581 <http://babelnet.org/rdf/s00027818n> ;
+    ns1:P3916 <http://vocabularies.unesco.org/thesaurus/concept5463> ;
+    ns1:P486 <http://id.nlm.nih.gov/mesh/D001523>,
+        <http://id.nlm.nih.gov/mesh/D011618> ;
+    ns1:P508 <http://purl.org/bncf/tid/6114> ;
+    ns1:P646 <http://g.co/kg/m/04x4r> ;
+    wdt:P1014 "300055131" ;
+    wdt:P1051 "12879" ;
+    wdt:P1296 "0193785" ;
+    wdt:P1343 wd:Q2657718 ;
+    wdt:P1417 "science/mental-disorder" ;
+    wdt:P1542 wd:Q944142 ;
+    wdt:P1692 "290-299.99",
+        "298.8",
+        "V11.9" ;
+    wdt:P1748 "C2893" ;
+    wdt:P1889 wd:Q7101840 ;
+    wdt:P1963 wd:P663 ;
+    wdt:P1995 wd:Q183257,
+        wd:Q7867,
+        wd:Q9418 ;
+    wdt:P2176 wd:Q201872,
+        wd:Q221361,
+        wd:Q251347,
+        wd:Q407617,
+        wd:Q408535,
+        wd:Q409672,
+        wd:Q410346,
+        wd:Q411188,
+        wd:Q411932,
+        wd:Q412443,
+        wd:Q422244,
+        wd:Q423292 ;
+    wdt:P227 "4047686-8" ;
+    wdt:P2581 "00027818n" ;
+    wdt:P279 wd:Q12136 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:150>,
+        <http://purl.obolibrary.org/obo/DOID_0050329>,
+        <http://purl.obolibrary.org/obo/DOID_150> ;
+    wdt:P2892 "C0004936",
+        "C0029516" ;
+    wdt:P31 wd:Q12136 ;
+    wdt:P3123 "mental-illness" ;
+    wdt:P3219 "maladies-mentales" ;
+    wdt:P3221 "subject/mental-health-and-disorders" ;
+    wdt:P3417 "Mental-Illness" ;
+    wdt:P373 "Mental and behavioural diseases and disorders" ;
+    wdt:P3827 "psychiatric-diagnosis" ;
+    wdt:P3916 "concept5463" ;
+    wdt:P4229 "F00.F99",
+        "F99",
+        "F99-F99" ;
+    wdt:P486 "D001523",
+        "D011618" ;
+    wdt:P494 "F00-F99" ;
+    wdt:P5008 wd:Q5460604 ;
+    wdt:P508 "6114" ;
+    wdt:P5198 "294925260" ;
+    wdt:P5270 "MONDO:0002025",
+        "MONDO:0005084" ;
+    wdt:P646 "/m/04x4r" ;
+    wdt:P667 "P99" ;
+    wdt:P699 "DOID:0050329",
+        "DOID:150" ;
+    wdt:P910 wd:Q6902639 ;
+    wdt:P948 <http://commons.wikimedia.org/wiki/Special:FilePath/Starry%20night%20banner.jpg> .
+
+<http://www.wikidata.org/entity/statement/Q12135-09ad8697-4e33-3086-adc0-d05ca1725b18> prov:wasDerivedFrom <http://www.wikidata.org/reference/2ca2f08bf943e2003a85a1aa7211b21a56faa345> .
+
+<http://www.wikidata.org/entity/statement/Q12135-2676FDBB-DD4F-420F-9975-0F4B0B7495B8> prov:wasDerivedFrom <http://www.wikidata.org/reference/54240871ff28386ac8671126df5f845fa74dfc41> ;
+    ps:P2888 <http://purl.obolibrary.org/obo/DOID_0050329> .
+
+<http://www.wikidata.org/entity/statement/Q12135-350F011E-3EDE-47A6-855C-4ACAB9DF90E3> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
+    ps:P2888 <http://identifiers.org/doid/DOID:150> .
+
+<http://www.wikidata.org/entity/statement/Q12135-3F9AE78D-F2F1-4DD8-A6B2-B765EDF5D73E> prov:wasDerivedFrom <http://www.wikidata.org/reference/2ca2f08bf943e2003a85a1aa7211b21a56faa345> ;
+    ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/entity/statement/Q12135-503B67AD-7EEA-4F4B-8C5C-381BE4B76277> prov:wasDerivedFrom <http://www.wikidata.org/reference/8a9a83c7a4d3db4a7698bddad49317ce5ae11464> ;
+    ps:P2888 <http://purl.obolibrary.org/obo/DOID_150> .
+
+<http://www.wikidata.org/reference/54240871ff28386ac8671126df5f845fa74dfc41> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:0050329" ;
+    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+
+<http://www.wikidata.org/reference/8a9a83c7a4d3db4a7698bddad49317ce5ae11464> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:150" ;
+    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+
+<http://www.wikidata.org/reference/2ca2f08bf943e2003a85a1aa7211b21a56faa345> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:150" ;
+    pr:P813 "2018-07-11T00:00:00+00:00"^^xsd:dateTime .
+

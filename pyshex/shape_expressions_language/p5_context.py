@@ -157,6 +157,10 @@ class Context:
         # Debugging options
         self.debug_context = DebugContext()
 
+        # Process imports
+        if self.schema.imports is not None:
+            print("HERE")
+
         if self.schema.start is not None:
             self._gen_schema_xref(self.schema.start)
         if self.schema.shapes is not None:
