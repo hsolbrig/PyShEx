@@ -53,14 +53,6 @@ skip_traits = [SHT.BNodeShapeLabel, SHT.ToldBNode, SHT.LexicalBNode, SHT.ShapeMa
 if BASE_FILE_LOC != REMOTE_FILE_LOC:
     skip_traits.append(SHT.relativeIRI)
 
-# NOTE: A lot of expected failures aren't included in this list, as, at the moment, we just fail and don't say why.
-# skipped test fails json only
-expected_failures = {
-     # "focusdatatype_pass": FOCUS_DATATYPE,
-     # "focusdatatype_pass-empty": FOCUS_DATATYPE,
-     # "1focusvsORdatatype_pass-dt": FOCUS_DATATYPE,
-}
-
 
 class ManifestEntryTestCase(unittest.TestCase):
     """
@@ -83,6 +75,11 @@ class ManifestEntryTestCase(unittest.TestCase):
         cls.nfailed = 0
         cls.start_skipped = 0
         cls.skip_reasons: Dict[str, int] = {}
+
+    def __init__(self, methodname: str=None, expected_failures: Dict[str, str]=None):
+        super().__init__(methodname)
+        self.expected_failures: Dict[str, str] = {} if expected_failures is None else expected_failures
+
 
     @staticmethod
     def URIname(uri: URIRef) -> str:
@@ -115,11 +112,11 @@ class ManifestEntryTestCase(unittest.TestCase):
                 self.skip_reasons[key] = self.skip_reasons[key] + 1
                 self.nskipped += 1
                 should_skip = True
-            elif me.name in expected_failures:
+            elif me.name in self.expected_failures:
                 if VERBOSE:
                     print(f"Skipping {me.name} ({', '.join([self.URIname(t) for t in me.traits])})"
-                          f" - {expected_failures[me.name]}")
-                key = expected_failures[me.name]
+                          f" - {self.expected_failures[me.name]}")
+                key = self.expected_failures[me.name]
                 if key not in self.skip_reasons:
                     self.skip_reasons[key] = 0
                 self.skip_reasons[key] = self.skip_reasons[key] + 1

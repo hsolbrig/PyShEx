@@ -25,6 +25,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.5.5 -- Fixed zero cardinality issue (#20)
 * 0.5.6 -- Added CLI entry point and cleaned up error reporting
 * 0.5.7 -- Throw an error on an invalid focus node (#23)
+* 0.5.9 -- Candidate for ShEx 2.1
 
 ## Installation
 ```bash

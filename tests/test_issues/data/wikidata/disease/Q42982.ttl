@@ -2,8 +2,8 @@
 @prefix doio: <http://identifiers.org/doid/> .
 @prefix gw: <http://micel.io/genewiki/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
-@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
-@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix pr: <http://www.wikidata.org/prop/reference/> .
@@ -101,10 +101,10 @@ wd:Q42982 rdfs:label "Ailléirge",
         "الأرجية هي مرض مفرط او حساسية مفرطة اتجاه مواد غير ممرضة عادة",
         "বেশির ভাগ মানুষের জন্য সহনীয় পদার্থের বিরুদ্ধে অনাক্রম্যতন্ত্রের প্রতিক্রিয়া" ;
     schema:version 762235836 ;
-    ns2:identifiers 30 ;
-    ns2:sitelinks 98 ;
-    ns2:statements 59 ;
-    ns2:timestamp "2018-10-11T18:14:09+00:00"^^xsd:dateTime ;
+    ns1:identifiers 30 ;
+    ns1:sitelinks 98 ;
+    ns1:statements 59 ;
+    ns1:timestamp "2018-10-11T18:14:07+00:00"^^xsd:dateTime ;
     skos:altLabel "Alergi",
         "Alergias",
         "Alergica",
@@ -275,17 +275,17 @@ wd:Q42982 rdfs:label "Ailléirge",
         <http://www.wikidata.org/entity/statement/Q42982-994C45DA-900A-4860-9A0B-D2FE26851078> ;
     p:P935 <http://www.wikidata.org/entity/statement/Q42982-332B7E35-666C-4256-B088-7483DBD7E858> ;
     p:P950 <http://www.wikidata.org/entity/statement/Q42982-09bff9fe-4f00-454e-0b82-1b54c2f67bf0> ;
-    ns1:P1014 <http://vocab.getty.edu/aat/300255420> ;
-    ns1:P227 <http://d-nb.info/gnd/4001257-8> ;
-    ns1:P244 <http://id.loc.gov/authorities/names/sh85003662> ;
-    ns1:P268 <http://data.bnf.fr/ark:/12148/cb119308689> ;
-    ns1:P269 <http://www.idref.fr/027218864/id> ;
-    ns1:P349 <http://id.ndl.go.jp/auth/ndlna/00560318> ;
-    ns1:P486 <http://id.nlm.nih.gov/mesh/D006967> ;
-    ns1:P508 <http://purl.org/bncf/tid/8963> ;
-    ns1:P646 <http://g.co/kg/m/0fd23> ;
-    ns1:P672 <https://id.nlm.nih.gov/mesh/C20.543> ;
-    ns1:P950 <http://datos.bne.es/resource/XX524903> ;
+    ns2:P1014 <http://vocab.getty.edu/aat/300255420> ;
+    ns2:P227 <http://d-nb.info/gnd/4001257-8> ;
+    ns2:P244 <http://id.loc.gov/authorities/names/sh85003662> ;
+    ns2:P268 <http://data.bnf.fr/ark:/12148/cb119308689> ;
+    ns2:P269 <http://www.idref.fr/027218864/id> ;
+    ns2:P349 <http://id.ndl.go.jp/auth/ndlna/00560318> ;
+    ns2:P486 <http://id.nlm.nih.gov/mesh/D006967> ;
+    ns2:P508 <http://purl.org/bncf/tid/8963> ;
+    ns2:P646 <http://g.co/kg/m/0fd23> ;
+    ns2:P672 <https://id.nlm.nih.gov/mesh/C20.543> ;
+    ns2:P950 <http://datos.bne.es/resource/XX524903> ;
     wdt:P1014 "300255420" ;
     wdt:P1051 "12689" ;
     wdt:P1375 "000180797",

@@ -118,7 +118,7 @@ wd:Q36855 rdfs:label "Cúm lợn",
     ns1:identifiers 10 ;
     ns1:sitelinks 98 ;
     ns1:statements 23 ;
-    ns1:timestamp "2018-10-02T23:41:35+00:00"^^xsd:dateTime ;
+    ns1:timestamp "2018-10-02T23:41:45+00:00"^^xsd:dateTime ;
     skos:altLabel "2009 H1N1 grip salgını",
         "A",
         "A(H1N1)",

@@ -136,7 +136,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     ns2:identifiers 32 ;
     ns2:sitelinks 101 ;
     ns2:statements 69 ;
-    ns2:timestamp "2018-10-02T23:46:09+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2018-10-02T23:46:08+00:00"^^xsd:dateTime ;
     skos:altLabel "Gemütskrankheit",
         "Mental Disorder",
         "Mental Dysfunction",

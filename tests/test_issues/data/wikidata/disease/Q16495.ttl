@@ -91,8 +91,8 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
 
 <http://www.wikidata.org/entity/statement/Q16495-FFC24865-86D9-47D2-A9F2-9A421139952F> prov:wasDerivedFrom <http://www.wikidata.org/reference/843ea8eb15bbe598186d950e8aad64827f766b93> .
 
-<http://www.wikidata.org/reference/af8786d79a71bead6987055cfdd96ca2dffb1070> pr:P699 "DOID:14351" ;
-    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+<http://www.wikidata.org/reference/af8786d79a71bead6987055cfdd96ca2dffb1070> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:14351" .
 
 <http://www.wikidata.org/reference/843ea8eb15bbe598186d950e8aad64827f766b93> pr:P248 wd:Q55451031 ;
     pr:P699 "DOID:14351" ;

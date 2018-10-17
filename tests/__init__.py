@@ -4,3 +4,11 @@ refresh_files = False
 
 # True means skip the disease test
 skip_diseases = False
+
+# Settings for rdflib parsing issue
+
+#         See line 1578 in notation3.py:
+#                 k = 'abfrtvn\\"\''.find(ch)
+#                 if k >= 0:
+#                     uch = '\a\b\f\r\t\v\n\\"\''[k]
+RDFLIB_PARSING_ISSUE_FIXED = False

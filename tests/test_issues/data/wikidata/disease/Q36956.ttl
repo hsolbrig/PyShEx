@@ -484,11 +484,15 @@ wd:Q36956 rdfs:label "Abïl",
 <http://www.wikidata.org/entity/statement/Q36956-15276877-4402-4939-8C76-C576D795F750> prov:wasDerivedFrom <http://www.wikidata.org/reference/9bfbda2746cae479ba8e6657c91fcdb7ce3024d7> ;
     ps:P492 "609888" .
 
+<http://www.wikidata.org/entity/statement/Q36956-1E2367F1-AFF6-4C84-A142-D59EA2C6006A> prov:wasDerivedFrom <http://www.wikidata.org/reference/9bfbda2746cae479ba8e6657c91fcdb7ce3024d7> .
+
 <http://www.wikidata.org/entity/statement/Q36956-2583C4D4-43BC-4CCB-9D54-4D5C06E276A3> prov:wasDerivedFrom <http://www.wikidata.org/reference/9bfbda2746cae479ba8e6657c91fcdb7ce3024d7> ;
     ps:P1550 "548" .
 
 <http://www.wikidata.org/entity/statement/Q36956-2DCCBD38-0D66-4603-8F36-7E04858580B6> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
     ps:P2888 <http://identifiers.org/doid/DOID:1024> .
+
+<http://www.wikidata.org/entity/statement/Q36956-34E90E02-E0DE-47F2-8D8F-C37B9006BA4E> prov:wasDerivedFrom <http://www.wikidata.org/reference/9bfbda2746cae479ba8e6657c91fcdb7ce3024d7> .
 
 <http://www.wikidata.org/entity/statement/Q36956-7AD8E76F-2EC8-43B5-B877-7A256EB89203> prov:wasDerivedFrom <http://www.wikidata.org/reference/9bfbda2746cae479ba8e6657c91fcdb7ce3024d7> ;
     ps:P1748 "C84824" .
@@ -509,6 +513,8 @@ wd:Q36956 rdfs:label "Abïl",
 
 <http://www.wikidata.org/entity/statement/Q36956-C073D103-A691-49D4-AEAA-37CE292B9212> prov:wasDerivedFrom <http://www.wikidata.org/reference/9bfbda2746cae479ba8e6657c91fcdb7ce3024d7> ;
     ps:P699 "DOID:1024" .
+
+<http://www.wikidata.org/entity/statement/Q36956-C2D62B6A-11C7-4DFE-8FC4-224BF090FC16> prov:wasDerivedFrom <http://www.wikidata.org/reference/9bfbda2746cae479ba8e6657c91fcdb7ce3024d7> .
 
 <http://www.wikidata.org/entity/statement/Q36956-C5EAB992-17E1-4E60-A751-222025C73E3D> prov:wasDerivedFrom <http://www.wikidata.org/reference/9bfbda2746cae479ba8e6657c91fcdb7ce3024d7> ;
     ps:P486 "D007918" .
