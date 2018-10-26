@@ -106,7 +106,9 @@ class ShExEvaluator:
 
         :param shex:  Schema
         """
-        self._schema = SchemaLoader().loads(shex) if isinstance(shex, str) else shex
+        self._schema = SchemaLoader().load(shex) if isinstance(shex, str) else shex
+        if self._schema is None:
+            raise ValueError("Unable to parse shex file")
 
     @property
     def focus(self) -> Optional[List[URIRef]]:

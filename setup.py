@@ -8,7 +8,7 @@ if sys.version_info < (3, 6):
 
 setup(
     name='PyShEx',
-    version='0.5.9',
+    version='0.5.10',
     packages = find_packages(exclude=['tests']),
     url="http://github.com/hsolbrig/PyShEx",
     license='Apache 2.0',
@@ -17,7 +17,7 @@ setup(
     description='Python ShEx Implementation',
     install_requires=['ShExJSG>=0.5.1', 'PyShExC>=0.5.0', 'rdflib>=4.2.2', 'rdflib-jsonld>=0.4.0', 'requests',
                       'urllib3', 'sparql_slurper>=0.1.3'],
-    tests_require=['PyJSG>=0.9.0', 'jsonasobj>=1.2.1', 'SPARQLWrapper>=1.8.2'],
+    tests_require=['PyJSG>=0.9.0', 'jsonasobj>=1.2.1', 'SPARQLWrapper>=1.8.2', 'CFGraph>=0.1.0'],
     entry_points={
         'console_scripts': [
             'shexeval = pyshex.shex_evaluator:evaluate_cli'

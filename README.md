@@ -1,7 +1,7 @@
 # Python implementation of ShEx 2.0
 [![Pyversions](https://img.shields.io/pypi/pyversions/PyShEx.svg)](https://pypi.python.org/pypi/PyShEx)
 
-[![PyPi](https://version-image.appspot.com/pypi/?name=PyShEx)](https://pypi.python.org/pypi/PyShEx)
+[![PyPi](https://img.shields.io/pypi/v/PyShEx.svg)](https://pypi.python.org/pypi/PyShEx)
 
 
 [![DOI](https://zenodo.org/badge/116042298.svg)](https://zenodo.org/badge/latestdoi/116042298)
@@ -26,6 +26,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.5.6 -- Added CLI entry point and cleaned up error reporting
 * 0.5.7 -- Throw an error on an invalid focus node (#23)
 * 0.5.9 -- Candidate for ShEx 2.1
+* 0.5.10 -- Fixed evaluator to load files, strings, etc. as ShEx
 
 ## Installation
 ```bash
