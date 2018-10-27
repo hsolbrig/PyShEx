@@ -105,7 +105,7 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "豚インフルエンザ",
         "豬流感",
         "돼지 인플루엔자" ;
-    schema:dateModified "2018-10-02T23:41:30+00:00"^^xsd:dateTime ;
+    schema:dateModified "2018-10-20T19:07:05+00:00"^^xsd:dateTime ;
     schema:description "akut verlaufende Infektionskrankheit der Atemwege bei Hausschweinen",
         "enfermedad respiratoria provocada por un virus gripal que infecta a los cerdos",
         "infection caused by any one of several types of swine influenza viruses",
@@ -114,11 +114,11 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "maladie respiratoire provoquée par un virus grippal infectant les cochons",
         "условное название заболевания людей и животных, вызываемого штаммами вируса гриппа",
         "مرض جهاز تنفسي" ;
-    schema:version 756481207 ;
+    schema:version 768731589 ;
     ns1:identifiers 10 ;
-    ns1:sitelinks 98 ;
+    ns1:sitelinks 99 ;
     ns1:statements 23 ;
-    ns1:timestamp "2018-10-02T23:41:45+00:00"^^xsd:dateTime ;
+    ns1:timestamp "2018-10-20T19:07:21+00:00"^^xsd:dateTime ;
     skos:altLabel "2009 H1N1 grip salgını",
         "A",
         "A(H1N1)",

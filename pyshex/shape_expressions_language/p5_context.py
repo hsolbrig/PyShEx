@@ -118,11 +118,17 @@ def default_external_shape_resolver(_: ShExJ.IRIREF) -> Optional[ShExJ.Shape]:
     return None
 
 
+def default_shape_importer(_: ShExJ.IRIREF, cntxt: "Context") -> Optional[ShExJ.Schema]:
+    """ Resolve an import declaration """
+    return None
+
+
 class Context:
     """ Environment for ShExJ evaluation """
     def __init__(self, g: Optional[Graph], s: Schema,
                  external_shape_resolver: Optional[Callable[[ShExJ.IRIREF], Optional[ShExJ.Shape]]]=None,
-                 base_namespace: Optional[Namespace]=None) -> None:
+                 base_namespace: Optional[Namespace]=None,
+                 shape_importer: Optional[Callable[[ShExJ.IRIREF], Optional[ShExJ.Schema]]]=None) -> None:
         """
         Create a context consisting of an RDF Graph and a ShEx Schema and generate a identifier to
         item map.
@@ -132,6 +138,8 @@ class Context:
         :param external_shape_resolver: External resolution function
         :param base_namespace:
         """
+        self.is_valid: bool = True
+        self.error_list: List[str] = []
         self.graph: Graph = g
         self.schema: ShExJ.Schema = s
         self.schema_id_map: Dict[ShExJ.shapeExprLabel, ShExJ.shapeExpr] = {}
@@ -140,6 +148,7 @@ class Context:
             else default_external_shape_resolver
         self.base_namespace = base_namespace if isinstance(base_namespace, Namespace) \
             else Namespace(base_namespace) if base_namespace else None
+        self.shape_importer = shape_importer if shape_importer else default_shape_importer
 
         # For SPARQL API's, true means pull ALL predicate objects for a given subject, false means only the
         # predicates that are needed
@@ -159,7 +168,12 @@ class Context:
 
         # Process imports
         if self.schema.imports is not None:
-            print("HERE")
+            for uri in self.schema.imports:
+                imp_shape = self.shape_importer(uri, self)
+                if not imp_shape:
+                    # TODO: what to do on import failure
+                    self.is_valid = False
+                    self.error_list.append(f"Import failure on {uri}")
 
         if self.schema.start is not None:
             self._gen_schema_xref(self.schema.start)

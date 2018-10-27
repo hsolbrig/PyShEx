@@ -1,7 +1,9 @@
-usage: shexeval [-h] [-f FORMAT] [-s START] [-fn FOCUS] [-d] rdf shex
+usage: shexeval [-h] [-f FORMAT] [-s START] [-fn FOCUS] [-d] [-ss] [-cf]
+                rdf shex
 
 positional arguments:
-  rdf                   Input RDF file
+  rdf                   Input RDF file or SPARQL endpoint if slurper option
+                        set
   shex                  ShEx specification
 
 optional arguments:
@@ -13,3 +15,5 @@ optional arguments:
   -fn FOCUS, --focus FOCUS
                         RDF focus node
   -d, --debug           Add debug output
+  -ss, --slurper        Use SPARQL slurper graph
+  -cf, --flattener      Use RDF Collections flattener graph

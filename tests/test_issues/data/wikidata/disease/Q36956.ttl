@@ -112,7 +112,7 @@ wd:Q36956 rdfs:label "Abïl",
         "漢生病",
         "麻瘋",
         "한센병" ;
-    schema:dateModified "2018-10-09T02:07:38+00:00"^^xsd:dateTime ;
+    schema:dateModified "2018-10-23T23:47:45+00:00"^^xsd:dateTime ;
     schema:description "Enfermidade causadora de feridas e erosões na pele.",
         "Infektionskrankheit",
         "bệnh",
@@ -128,12 +128,13 @@ wd:Q36956 rdfs:label "Abïl",
         "عدوى مزمنة تنجم عن البكتيريا الفُطْرية الجذامية والفُطْرية الجذامية الورمية.",
         "जीवाणुओं के कारण होने वाली एक दीर्घकालिक बीमारी है",
         "ମାଇକୋବ୍ୟାକ୍ଟେରିଅମ ଲେପ୍ରି  ଓ ମାଇକୋବ୍ୟାକ୍ଟେରିଅମ ଲେପ୍ରୋମାଟୋସିସ ନାମକ ଦୁଇ ପ୍ରକାର ବ୍ୟାକ୍ଟେରିଆ ଦ୍ଵାରା ଏହି ରୋଗ ହୁଏ",
-        "బ్యాక్టీరియా వల్లే పుండ్లను కలిగించే వ్యాధి" ;
-    schema:version 760251036 ;
+        "బ్యాక్టీరియా వల్లే పుండ్లను కలిగించే వ్యాధి",
+        "ᅟinfekta malsano kaŭzata de bakterio" ;
+    schema:version 771570838 ;
     ns2:identifiers 35 ;
     ns2:sitelinks 119 ;
-    ns2:statements 94 ;
-    ns2:timestamp "2018-10-09T02:08:28+00:00"^^xsd:dateTime ;
+    ns2:statements 95 ;
+    ns2:timestamp "2018-10-23T23:48:43+00:00"^^xsd:dateTime ;
     skos:altLabel "Aussatz",
         "Aussätzige",
         "Bélpoklosság",
@@ -328,7 +329,8 @@ wd:Q36956 rdfs:label "Abïl",
     p:P1995 <http://www.wikidata.org/entity/statement/Q36956-7FEABF5E-858D-466E-BF5C-050F4BD9DE80> ;
     p:P2176 <http://www.wikidata.org/entity/statement/Q36956-CC3F677E-9C30-4B22-A974-B2F90609D075>,
         <http://www.wikidata.org/entity/statement/Q36956-DFA3C738-0D14-4A01-9780-DB9E6A2A9794>,
-        <http://www.wikidata.org/entity/statement/Q36956-E19A0BC3-FAB4-40D2-BB7A-1BD6948D1133> ;
+        <http://www.wikidata.org/entity/statement/Q36956-E19A0BC3-FAB4-40D2-BB7A-1BD6948D1133>,
+        <http://www.wikidata.org/entity/statement/Q36956-E53D82E9-F49D-44B5-B734-88C83B8E353E> ;
     p:P227 <http://www.wikidata.org/entity/statement/Q36956-CD370E50-AAAF-4D4D-9CBA-7DB9A88A7FA4> ;
     p:P2293 <http://www.wikidata.org/entity/statement/Q36956-136B6217-B533-4594-BA15-642BD9B85FC1>,
         <http://www.wikidata.org/entity/statement/Q36956-600BFB90-BF27-4EC4-BFAF-00C92D9F9A06>,
@@ -484,20 +486,14 @@ wd:Q36956 rdfs:label "Abïl",
 <http://www.wikidata.org/entity/statement/Q36956-15276877-4402-4939-8C76-C576D795F750> prov:wasDerivedFrom <http://www.wikidata.org/reference/9bfbda2746cae479ba8e6657c91fcdb7ce3024d7> ;
     ps:P492 "609888" .
 
-<http://www.wikidata.org/entity/statement/Q36956-1E2367F1-AFF6-4C84-A142-D59EA2C6006A> prov:wasDerivedFrom <http://www.wikidata.org/reference/9bfbda2746cae479ba8e6657c91fcdb7ce3024d7> .
-
 <http://www.wikidata.org/entity/statement/Q36956-2583C4D4-43BC-4CCB-9D54-4D5C06E276A3> prov:wasDerivedFrom <http://www.wikidata.org/reference/9bfbda2746cae479ba8e6657c91fcdb7ce3024d7> ;
     ps:P1550 "548" .
 
 <http://www.wikidata.org/entity/statement/Q36956-2DCCBD38-0D66-4603-8F36-7E04858580B6> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
     ps:P2888 <http://identifiers.org/doid/DOID:1024> .
 
-<http://www.wikidata.org/entity/statement/Q36956-34E90E02-E0DE-47F2-8D8F-C37B9006BA4E> prov:wasDerivedFrom <http://www.wikidata.org/reference/9bfbda2746cae479ba8e6657c91fcdb7ce3024d7> .
-
 <http://www.wikidata.org/entity/statement/Q36956-7AD8E76F-2EC8-43B5-B877-7A256EB89203> prov:wasDerivedFrom <http://www.wikidata.org/reference/9bfbda2746cae479ba8e6657c91fcdb7ce3024d7> ;
     ps:P1748 "C84824" .
-
-<http://www.wikidata.org/entity/statement/Q36956-95A8F53C-CA5F-4591-892E-66A254D3F493> prov:wasDerivedFrom <http://www.wikidata.org/reference/9bfbda2746cae479ba8e6657c91fcdb7ce3024d7> .
 
 <http://www.wikidata.org/entity/statement/Q36956-A0AF05A8-7A11-46A0-B556-FB7D3D0980F9> prov:wasDerivedFrom <http://www.wikidata.org/reference/ace471fbd2f96472a7252a8952567496129c211f> ;
     ps:P2888 <http://purl.obolibrary.org/obo/DOID_1024> .

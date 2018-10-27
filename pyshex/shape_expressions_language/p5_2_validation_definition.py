@@ -22,6 +22,8 @@ def isValid(cntxt: Context, m: FixedShapeMap) -> Tuple[bool, List[str]]:
     :param m: list of NodeShape pairs to test
     :return: Success/failure indicator and, if fail, a list of failure reasons
     """
+    if not cntxt.is_valid:
+        return False, cntxt.error_list
     parse_nodes = []
     for nodeshapepair in m:
         n = nodeshapepair.nodeSelector

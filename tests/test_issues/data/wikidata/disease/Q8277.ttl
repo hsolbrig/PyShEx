@@ -40,6 +40,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "Scleroză multiplă",
         "Scléaróis iolrach",
         "Sglerosis ymledol",
+        "Sklerosis berbilang",
         "Sklerosisi ya sehemu nyingi",
         "Skleroza enîfireh",
         "Skleróza multiplex",
@@ -84,13 +85,14 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "多発性硬化症",
         "多發性硬化症",
         "다발성 경화증" ;
-    schema:dateModified "2018-10-10T10:04:41+00:00"^^xsd:dateTime ;
+    schema:dateModified "2018-10-24T13:21:15+00:00"^^xsd:dateTime ;
     schema:description "Doença desmielinizante em que são danificadas as bainhas de mielina à volta dos axónios do cérebro e a medula espinal, provocando desmielinização.",
         "Entmarkungserkrankung des zentralen Nervensystems",
         "Sygdom der rammer nervecellerne",
         "autoimunitní onemocnění centrální nervové soustavy",
         "bolest demijelinizacije",
         "chronické ochorenie centrálnej nervovej sústavy",
+        "demyeliniserande sjukdom i sentralnervesystemet",
         "disease that damages the myelin sheaths around nerve axons",
         "enfermedad",
         "maladie auto-immune dégénérative (dérégulation de l'immunité, inflammation et dégénérescence des nerfs)",
@@ -104,11 +106,11 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "एक रोग जिसमें मस्तिष्क तथा सुषुम्ना रज्जु शोथ के चारों ओर वसायुक्त माइलिन के आवरण क्षतिग्रस्त हो जाते हैं, जिससे माइलिन के आवरण नष्ट होने और घाव के निशान होने के साथ-साथ रोग के संकेत और लक्षणों के स्थूल क्रम उत्पन्न होते हैं",
         "একধরনের ডি-মায়েলিনেটিং মানব ব্যাধি যাতে মানব মস্তিষ্কে ও স্নায়ুরজ্জুতে বিদ্যমান স্নায়ুকোষগুলোকে আচ্ছাদনকারী অন্তরক আবরণ ক্ষতিগ্রস্ত হয়ে যায়",
         "뇌와 척수의 축삭 주변의 지방성 말이집을 감싸는 부분이 손상을 입어서 탈수질환과 흉터형성으로 이어지는 염증 질환이다." ;
-    schema:version 761326978 ;
+    schema:version 772012632 ;
     ns2:identifiers 38 ;
     ns2:sitelinks 65 ;
     ns2:statements 151 ;
-    ns2:timestamp "2018-10-10T10:04:48+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2018-10-24T15:18:21+00:00"^^xsd:dateTime ;
     skos:altLabel "ED",
         "EM",
         "Encephalomyelitis disseminata",

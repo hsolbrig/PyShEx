@@ -38,7 +38,8 @@ class CLITestCase(unittest.TestCase):
         os.makedirs(cls.testdir_path, exist_ok=True)
 
     def do_test(self, args: Union[str, List[str]], testfile: Optional[str]="",
-                update_test_file: bool=False, error: type(Exception)=None, tox_wrap_fix: bool=False) -> None:
+                update_test_file: bool=False, error: type(Exception)=None, tox_wrap_fix: bool=False,
+                failexpected: bool=False) -> None:
         """ Execute a cli test
 
         @param args: Argument string or list to command
@@ -47,6 +48,7 @@ class CLITestCase(unittest.TestCase):
         @param error: If present, we expect this error
         @param tox_wrap_fix: tox seems to wrap redirected output at 60 columns.  If true, try wrapping the test
         file before failing
+        @param failexpected: True means we're logging an error
         """
         testfile_path = os.path.join(self.testdir_path, testfile)
 
@@ -59,10 +61,11 @@ class CLITestCase(unittest.TestCase):
 
         with redirect_stdout(outf):
             try:
-                self.prog_ep(arg_list)
+                success = self.prog_ep(arg_list)
             except ArgParseExitException:
-                pass
+                success = False
 
+        self.assertTrue(success or failexpected)
         if testfile and (update_test_file or refresh_files):
             with open(testfile_path, 'w') as f:
                 f.write(outf.getvalue())

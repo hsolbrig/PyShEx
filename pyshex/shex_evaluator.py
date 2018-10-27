@@ -2,9 +2,11 @@ import sys
 from argparse import ArgumentParser
 from typing import Optional, Union, List, NamedTuple, Iterable
 
+from CFGraph import CFGraph
 from ShExJSG import ShExJ, ShExC
 from rdflib import Graph, URIRef, Namespace
 from rdflib.util import guess_format
+from sparql_slurper import SlurpyGraph
 
 from pyshex.shape_expressions_language.p5_2_validation_definition import isValid
 from pyshex.shape_expressions_language.p5_context import Context
@@ -106,9 +108,14 @@ class ShExEvaluator:
 
         :param shex:  Schema
         """
-        self._schema = SchemaLoader().load(shex) if isinstance(shex, str) else shex
-        if self._schema is None:
-            raise ValueError("Unable to parse shex file")
+        if shex is not None:
+            shext = shex.strip()
+            if ('\n' in shex or '\r' in shex) or shext[0] in '#<_: ':
+                self._schema = SchemaLoader().loads(shex)
+            else:
+                self._schema = SchemaLoader().load(shex) if isinstance(shex, str) else shex
+            if self._schema is None:
+                raise ValueError("Unable to parse shex file")
 
     @property
     def focus(self) -> Optional[List[URIRef]]:
@@ -200,27 +207,31 @@ def genargs(prog: Optional[str]=None) -> ArgumentParser:
     :return: parser
     """
     parser = ArgumentParser(prog)
-    parser.add_argument("rdf", help="Input RDF file")
+    parser.add_argument("rdf", help="Input RDF file or SPARQL endpoint if slurper option set")
     parser.add_argument("shex", help="ShEx specification")
-    parser.add_argument("-f", "--format", help="Input RDF Format")
+    parser.add_argument("-f", "--format", help="Input RDF Format", default="turtle")
     parser.add_argument("-s", "--start", help="Start shape")
     parser.add_argument("-fn", "--focus", help="RDF focus node")
     parser.add_argument("-d", "--debug", action="store_true", help="Add debug output")
+    parser.add_argument("-ss", "--slurper", action="store_true", help="Use SPARQL slurper graph")
+    parser.add_argument("-cf", "--flattener", action="store_true", help="Use RDF Collections flattener graph")
     return parser
 
 
 def evaluate_cli(argv: Optional[List[str]] = None, prog: Optional[str]=None) -> bool:
     opts = genargs(prog).parse_args(argv if argv is not None else sys.argv[1:])
+    if opts.slurper and opts.flattener:
+        print("Cannot combine slurper and flattener graphs")
+        return False
     if not opts.format:
         opts.format = guess_format(opts.rdf)
     if not opts.format:
         print('Cannot determine RDF format from file name - use "--format" option')
         return False
-    with open(opts.rdf) as rdf_file:
-        rdf = rdf_file.read()
-        with open(opts.shex) as shex_file:
-            shex = shex_file.read()
-    result = ShExEvaluator(rdf, shex, opts.focus, opts.start, rdf_format=opts.format, debug=opts.debug).evaluate()
+    g = SlurpyGraph(opts.rdf) if opts.slurper else CFGraph() if opts.flattener else Graph()
+    if not opts.slurper:
+        g.load(opts.rdf, format=opts.format)
+    result = ShExEvaluator(g, opts.shex, opts.focus, opts.start, rdf_format=opts.format, debug=opts.debug).evaluate()
     for rslt in result:
         if not rslt.result:
             print(f"Error: {rslt.reason}")

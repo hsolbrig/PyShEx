@@ -11,4 +11,5 @@ skip_diseases = False
 #                 k = 'abfrtvn\\"\''.find(ch)
 #                 if k >= 0:
 #                     uch = '\a\b\f\r\t\v\n\\"\''[k]
-RDFLIB_PARSING_ISSUE_FIXED = False
+from rdflib import __version__ as rdflib_version
+RDFLIB_PARSING_ISSUE_FIXED = rdflib_version >= "5.0.0"

@@ -16,13 +16,25 @@ class ShexEvaluatorTestCase(CLITestCase):
         return evaluate_cli(argv, prog=self.testprog)
 
     def test_help(self):
-        self.do_test("--help", 'help', update_test_file=update_test_files)
+        self.do_test("--help", 'help', update_test_file=update_test_files, failexpected=True)
         self.assertFalse(update_test_files, "Updating test files")
 
     def test_obs(self):
         shex = os.path.join(self.test_input_dir, 'obs.shex')
         rdf = os.path.join(self.test_input_dir, 'obs.ttl')
         self.do_test([rdf, shex, '-fn', 'http://ex.org/Obs1'], 'obs1', update_test_file=update_test_files)
+        self.assertFalse(update_test_files, "Updating test files")
+
+    def test_biolink(self):
+        base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data'))
+        shex = os.path.join(base_dir,'schemas', 'meta.shex')
+        rdf = os.path.join(base_dir, 'validation', 'biolink-model.ttl')
+        self.do_test([rdf, shex, '-fn', 'https://biolink.github.io/biolink-model/ontology/biolink.ttl',
+                      '-s', 'http://bioentity.io/vocab/SchemaDefinition', '-cf'], 'biolinkpass',
+                     update_test_file=update_test_files)
+        self.do_test([rdf, shex, '-fn', 'https://biolink.github.io/biolink-model/ontology/biolink.ttl',
+                      '-s', 'http://bioentity.io/vocab/SchemaDefinition'], 'biolinkfail',
+                     update_test_file=update_test_files, failexpected=True)
         self.assertFalse(update_test_files, "Updating test files")
 
 
