@@ -1,12 +1,13 @@
 import unittest
 
 import os
-from typing import Dict
+from typing import Dict, Optional
 
 import sys
 from ShExJSG import ShExJ
 from rdflib import URIRef
 
+from ancilliary.earlreport import EARLPage
 from pyshex.shape_expressions_language.p5_2_validation_definition import isValid
 from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import ShapeAssociation, FixedShapeMap, START
@@ -83,6 +84,23 @@ class ManifestEntryTestCase(unittest.TestCase):
     def URIname(uri: URIRef) -> str:
         return str(uri).replace(str(SHT), '')
 
+    def add_earl(self, status: str, me_name: str) -> None:
+        if self.earl_report:
+            self.earl_report.add_test_result(me_name, status)
+
+    def skip(self, me_name: str) -> None:
+        self.nskipped += 1
+        # Don't report skips - they show up as red "fails".  Omitting leaves black "untested"
+        # self.add_earl('skipped', me_name)
+
+    def fail(self, me_name: str) -> None:
+        self.nfailed += 1
+        self.add_earl('failed', me_name)
+
+    def pass_(self, me_name: str) -> None:
+        self.npassed += 1
+        self.add_earl('passed', me_name)
+
     def eval_entry(self, entry_name: str) -> bool:
         mes = self.mfst.entries[entry_name]
         for me in mes:                          # There can be more than one entry per name...
@@ -108,7 +126,7 @@ class ManifestEntryTestCase(unittest.TestCase):
                 if key not in self.skip_reasons:
                     self.skip_reasons[key] = 0
                 self.skip_reasons[key] = self.skip_reasons[key] + 1
-                self.nskipped += 1
+                self.skip(me.name)
                 should_skip = True
             elif me.name in self.expected_failures:
                 if VERBOSE:
@@ -118,7 +136,7 @@ class ManifestEntryTestCase(unittest.TestCase):
                 if key not in self.skip_reasons:
                     self.skip_reasons[key] = 0
                 self.skip_reasons[key] = self.skip_reasons[key] + 1
-                self.nskipped += 1
+                self.skip(me.name)
                 should_skip = True
             if should_skip and not TEST_SKIPS_ONLY:
                 return True
@@ -135,12 +153,13 @@ class ManifestEntryTestCase(unittest.TestCase):
             if g is None and me.data_uri:
                 print("\t ERROR: Unable to load data file")
                 print(f"\t TRAITS: ({','.join(me.traits)})")
-                self.nskipped += 1
+                self.skip(me.name)
                 return True
             if not s:
                 print(f"\t ERROR: Unable to load schema {me.schema_uri}")
                 print(f"\t TRAITS: ({','.join(me.traits)})")
                 self.nskipped += 1
+                self.skip(me.name)
                 return False
 
             cntxt = Context(g, s, me.extern_shape_for, base_namespace=BASE_FILE_LOC)
@@ -151,7 +170,7 @@ class ManifestEntryTestCase(unittest.TestCase):
                 print("\t***** FAIL *****")
                 print(f"\tFocus: {me.focus} not in schema")
                 print(f"\t TRAITS: ({','.join(me.traits)})")
-                self.nfailed += 1
+                self.fail(me.name)
                 return False
             # if ':' not in focus:
             #     focus = "file://" + focus
@@ -169,17 +188,18 @@ class ManifestEntryTestCase(unittest.TestCase):
                 print(f"Failed {me.name} ({'P' if me.should_pass else 'F'}): {me.schema_uri} - {me.data_uri}")
                 print(f"\t TRAITS: ({','.join(me.traits)})")
             if test_result:
-                self.npassed += 1
+                self.pass_(me.name)
             else:
                 if VERBOSE:
                     print("\t**** FAIL *****")
                     print(f"\t TRAITS: ({','.join(me.traits)})")
                     for reason in reasons:
                         print(f"\t{reason}")
-                self.nfailed += 1
+                self.fail(me.name)
             return test_result
 
-    def do_test(self):
+    def do_test(self, earl: Optional[EARLPage]=None):
+        self.earl_report = earl
         if ENTRY_NAME:
             rslt = self.eval_entry(ENTRY_NAME)
         else:
