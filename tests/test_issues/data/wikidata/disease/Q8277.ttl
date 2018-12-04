@@ -85,7 +85,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "多発性硬化症",
         "多發性硬化症",
         "다발성 경화증" ;
-    schema:dateModified "2018-10-24T13:21:15+00:00"^^xsd:dateTime ;
+    schema:dateModified "2018-11-20T19:56:01+00:00"^^xsd:dateTime ;
     schema:description "Doença desmielinizante em que são danificadas as bainhas de mielina à volta dos axónios do cérebro e a medula espinal, provocando desmielinização.",
         "Entmarkungserkrankung des zentralen Nervensystems",
         "Sygdom der rammer nervecellerne",
@@ -97,20 +97,21 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "enfermedad",
         "maladie auto-immune dégénérative (dérégulation de l'immunité, inflammation et dégénérescence des nerfs)",
         "malattia cronica autoimmune demielinizzante",
+        "neurologisk sjukdom",
         "przewlekła choroba ośrodkowego układu nerwowego",
         "ziekte van het zenuwstelsel",
         "φλεγμονώδης ασθένεια",
         "Поражение миелиновых оболочек нервных волокон с образованием бляшек",
         "التهاب ينتج عن تلف الغشاء العازل للعصبونات في الدماغ والحبل الشوكي. يُعطّل هذا التلف قدرةَ أجزاءٍ من الجهاز العصبي على التواصل.",
-        "بیماری ام اس",
+        "یک بیماری خودایمنی",
         "एक रोग जिसमें मस्तिष्क तथा सुषुम्ना रज्जु शोथ के चारों ओर वसायुक्त माइलिन के आवरण क्षतिग्रस्त हो जाते हैं, जिससे माइलिन के आवरण नष्ट होने और घाव के निशान होने के साथ-साथ रोग के संकेत और लक्षणों के स्थूल क्रम उत्पन्न होते हैं",
         "একধরনের ডি-মায়েলিনেটিং মানব ব্যাধি যাতে মানব মস্তিষ্কে ও স্নায়ুরজ্জুতে বিদ্যমান স্নায়ুকোষগুলোকে আচ্ছাদনকারী অন্তরক আবরণ ক্ষতিগ্রস্ত হয়ে যায়",
         "뇌와 척수의 축삭 주변의 지방성 말이집을 감싸는 부분이 손상을 입어서 탈수질환과 흉터형성으로 이어지는 염증 질환이다." ;
-    schema:version 772012632 ;
+    schema:version 794757840 ;
     ns2:identifiers 38 ;
     ns2:sitelinks 65 ;
-    ns2:statements 151 ;
-    ns2:timestamp "2018-10-24T15:18:21+00:00"^^xsd:dateTime ;
+    ns2:statements 158 ;
+    ns2:timestamp "2018-11-20T19:56:11+00:00"^^xsd:dateTime ;
     skos:altLabel "ED",
         "EM",
         "Encephalomyelitis disseminata",
@@ -124,6 +125,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "SM",
         "disseminated sclerosis",
         "dissemineret sklerose",
+        "disseminert sklerose",
         "encephalomyelitis disseminata",
         "esclerosi en plaques",
         "esclerosis multiple",
@@ -135,6 +137,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "polisclerosi",
         "sclerosi a placche",
         "sclerosi disseminata",
+        "sclerosis disseminata",
         "σκλήρυνση κατά πλάκας , διάχυτη εγκεφαλομυελίτιδα",
         "التصلب اللويحي",
         "التصلب اللويحي و العلاج الوظيفي",
@@ -160,6 +163,8 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         <http://www.wikidata.org/entity/statement/Q8277-1CD3AA55-D03D-4385-9AE3-69391933DE0F>,
         <http://www.wikidata.org/entity/statement/Q8277-1F2804F3-A2C0-413C-AC64-888713C076AC>,
         <http://www.wikidata.org/entity/statement/Q8277-2551981D-92D1-4A91-97D2-11751CFF6F7D>,
+        <http://www.wikidata.org/entity/statement/Q8277-39AAA176-0833-4B75-9DBE-7351D2F75F11>,
+        <http://www.wikidata.org/entity/statement/Q8277-4C6ECA03-C961-4A7B-9B06-0A21AE8C925D>,
         <http://www.wikidata.org/entity/statement/Q8277-5240AD2D-0DEA-4237-8164-2BB6F547B5DE>,
         <http://www.wikidata.org/entity/statement/Q8277-55E335D2-0BFA-4637-A1C6-FA4F08498695>,
         <http://www.wikidata.org/entity/statement/Q8277-583C6609-04E5-442D-89F7-63C2E90C5F67>,
@@ -167,12 +172,16 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         <http://www.wikidata.org/entity/statement/Q8277-65879F77-824D-4C97-8E6F-A5F06E7EE8B3>,
         <http://www.wikidata.org/entity/statement/Q8277-6A2A490A-7A6D-4228-959A-4309134A3793>,
         <http://www.wikidata.org/entity/statement/Q8277-72FA9AD7-F097-43AE-8A61-42C063FC0B7F>,
+        <http://www.wikidata.org/entity/statement/Q8277-85C463E9-E189-47D0-8DF7-F5E10581E3DE>,
         <http://www.wikidata.org/entity/statement/Q8277-860F9B0D-8721-40CD-BDE2-02561822D1D1>,
+        <http://www.wikidata.org/entity/statement/Q8277-868D7A13-BFF4-497B-9084-896DEE75ABFE>,
+        <http://www.wikidata.org/entity/statement/Q8277-8992C8F2-BA1B-4B41-BDEE-CCFD08C7FE94>,
         <http://www.wikidata.org/entity/statement/Q8277-9BCBD2D4-6B7F-4EB8-AEFD-47D05730E50E>,
         <http://www.wikidata.org/entity/statement/Q8277-A87163D9-41DC-4726-9915-78B753F9A16B>,
         <http://www.wikidata.org/entity/statement/Q8277-AA6FEE1B-5DF2-4D01-BB44-B14859285521>,
         <http://www.wikidata.org/entity/statement/Q8277-B25916C4-DF98-491F-845A-791B788A207A>,
         <http://www.wikidata.org/entity/statement/Q8277-B9DA173B-860E-4DCB-99DF-6E6065CB2E7F>,
+        <http://www.wikidata.org/entity/statement/Q8277-BC062116-03F2-4533-A821-D867C94C6F7E>,
         <http://www.wikidata.org/entity/statement/Q8277-DCA58156-3BB9-4B43-8B8D-C461A32B54D9>,
         <http://www.wikidata.org/entity/statement/Q8277-E232E26C-5D91-48FD-834A-E9F5E0FE2119>,
         <http://www.wikidata.org/entity/statement/Q8277-F4511B6A-B3B4-4980-A071-85129FC148ED>,
@@ -292,6 +301,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         <http://www.wikidata.org/entity/statement/q8277-EEF3C0DE-E8CE-4840-B27A-117052249A1F> ;
     p:P699 <http://www.wikidata.org/entity/statement/Q8277-289E9629-1496-4706-A808-3F25FA02DC8A>,
         <http://www.wikidata.org/entity/statement/Q8277-8FFD0FA3-98F9-4D46-B3F2-E0CAE3C9C0BB> ;
+    p:P780 <http://www.wikidata.org/entity/statement/Q8277-a1877263-49db-3fde-4340-10c6315e2dd8> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q8277-8C11CC7E-192B-4C8A-8C79-F72C124BA1FE> ;
     p:P923 <http://www.wikidata.org/entity/statement/Q8277-2453d25c-4f59-9e07-cb4c-ec89998fb89d>,
         <http://www.wikidata.org/entity/statement/Q8277-9a1a35ab-48e1-b5f2-f718-0da1056b5744>,
@@ -313,10 +323,12 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
     wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/MS%20Demyelinisation%20CD68%2010xv2.jpg> ;
     wdt:P1995 wd:Q83042 ;
     wdt:P2176 wd:Q1851162,
+        wd:Q185690,
         wd:Q18939,
         wd:Q239426,
         wd:Q2450337,
         wd:Q252251,
+        wd:Q27087639,
         wd:Q2858961,
         wd:Q3077133,
         wd:Q372539,
@@ -329,6 +341,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         wd:Q412920,
         wd:Q413717,
         wd:Q414030,
+        wd:Q416132,
         wd:Q417222,
         wd:Q418123,
         wd:Q418913,
@@ -445,6 +458,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "1214270",
         "342254" ;
     wdt:P699 "DOID:2377" ;
+    wdt:P780 wd:Q58490835 ;
     wdt:P910 wd:Q9518131 ;
     wdt:P923 wd:Q161238,
         wd:Q208376,

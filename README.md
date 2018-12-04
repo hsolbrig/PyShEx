@@ -27,7 +27,8 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.5.7 -- Throw an error on an invalid focus node (#23)
 * 0.5.9 -- Candidate for ShEx 2.1
 * 0.5.10 -- Fixed evaluator to load files, strings, etc. as ShEx
-* 0.5.11 -- Added Collections Flattening graph option to evaluator.  
+* 0.5.11 -- Added Collections Flattening graph option to evaluator.
+* 0.5.12 -- Added -A option, catch missing start node early 
 
 ## Installation
 ```bash
@@ -44,7 +45,7 @@ Unfortunately, however, `rdflib-jsonld` is NOT compatible with the bleeding edge
 ## evalshex CLI
 ```bash
 > shexeval -h
-usage: shexeval [-h] [-f FORMAT] [-s START] [-fn FOCUS] [-d] [-ss] [-cf]
+usage: shexeval [-h] [-f FORMAT] [-s START] [-fn FOCUS] [-A] [-d] [-ss] [-cf]
                 rdf shex
 
 positional arguments:
@@ -60,9 +61,11 @@ optional arguments:
                         Start shape
   -fn FOCUS, --focus FOCUS
                         RDF focus node
+  -A, --allsubjects     Evaluate all non-bnode subjects in the graph
   -d, --debug           Add debug output
   -ss, --slurper        Use SPARQL slurper graph
   -cf, --flattener      Use RDF Collections flattener graph
+
 
 ```
 

@@ -1,4 +1,4 @@
-usage: shexeval [-h] [-f FORMAT] [-s START] [-fn FOCUS] [-d] [-ss] [-cf]
+usage: shexeval [-h] [-f FORMAT] [-s START] [-fn FOCUS] [-A] [-d] [-ss] [-cf]
                 rdf shex
 
 positional arguments:
@@ -14,6 +14,7 @@ optional arguments:
                         Start shape
   -fn FOCUS, --focus FOCUS
                         RDF focus node
+  -A, --allsubjects     Evaluate all non-bnode subjects in the graph
   -d, --debug           Add debug output
   -ss, --slurper        Use SPARQL slurper graph
   -cf, --flattener      Use RDF Collections flattener graph

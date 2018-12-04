@@ -1,6 +1,6 @@
 import sys
 from argparse import ArgumentParser
-from typing import Optional, Union, List, NamedTuple, Iterable
+from typing import Optional, Union, List, NamedTuple, Iterable, Type
 
 from CFGraph import CFGraph
 from ShExJSG import ShExJ, ShExC
@@ -147,7 +147,7 @@ class ShExEvaluator:
             self._focus = [f if isinstance(f, URIRef) else URIRef(str(f)) for f in focus]
 
     @property
-    def start(self) -> Optional[List[URIRef]]:
+    def start(self) -> Optional[Union[List[URIRef], Type[START]]]:
         """
 
         :return: The schema start node(s)
@@ -185,6 +185,9 @@ class ShExEvaluator:
         else:
             evaluator = self
 
+        if self.start == [START] and evaluator._schema.start is None:
+            return [EvaluationResult(False, None, None, 'Error: START node is not specified')]
+
         cntxt = Context(evaluator.g, evaluator._schema)
         # TODO: Clean this up
         cntxt.debug_context.debug = debug if debug is not None else self.debug
@@ -212,6 +215,7 @@ def genargs(prog: Optional[str]=None) -> ArgumentParser:
     parser.add_argument("-f", "--format", help="Input RDF Format", default="turtle")
     parser.add_argument("-s", "--start", help="Start shape")
     parser.add_argument("-fn", "--focus", help="RDF focus node")
+    parser.add_argument("-A", "--allsubjects", help="Evaluate all non-bnode subjects in the graph", action="store_true")
     parser.add_argument("-d", "--debug", action="store_true", help="Add debug output")
     parser.add_argument("-ss", "--slurper", action="store_true", help="Use SPARQL slurper graph")
     parser.add_argument("-cf", "--flattener", action="store_true", help="Use RDF Collections flattener graph")
@@ -221,18 +225,21 @@ def genargs(prog: Optional[str]=None) -> ArgumentParser:
 def evaluate_cli(argv: Optional[List[str]] = None, prog: Optional[str]=None) -> bool:
     opts = genargs(prog).parse_args(argv if argv is not None else sys.argv[1:])
     if opts.slurper and opts.flattener:
-        print("Cannot combine slurper and flattener graphs")
+        print("Error: Cannot combine slurper and flattener graphs")
         return False
     if not opts.format:
         opts.format = guess_format(opts.rdf)
     if not opts.format:
-        print('Cannot determine RDF format from file name - use "--format" option')
+        print('Error: Cannot determine RDF format from file name - use "--format" option')
         return False
     g = SlurpyGraph(opts.rdf) if opts.slurper else CFGraph() if opts.flattener else Graph()
     if not opts.slurper:
         g.load(opts.rdf, format=opts.format)
+    if not (opts.focus or opts.allsubjects):
+        print('Error: You must specify one or more graph focus nodes or use the "-A" option')
+        return False
     result = ShExEvaluator(g, opts.shex, opts.focus, opts.start, rdf_format=opts.format, debug=opts.debug).evaluate()
     for rslt in result:
         if not rslt.result:
-            print(f"Error: {rslt.reason}")
+            print(f"{rslt.reason}")
     return all(r.result for r in result)

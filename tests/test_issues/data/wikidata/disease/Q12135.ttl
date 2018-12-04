@@ -2,8 +2,8 @@
 @prefix doio: <http://identifiers.org/doid/> .
 @prefix gw: <http://micel.io/genewiki/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
-@prefix ns1: <http://wikiba.se/ontology#> .
-@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix pr: <http://www.wikidata.org/prop/reference/> .
@@ -115,7 +115,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "精神病",
         "精神障礙",
         "정신 질환" ;
-    schema:dateModified "2018-10-02T23:46:06+00:00"^^xsd:dateTime ;
+    schema:dateModified "2018-11-25T05:11:22+00:00"^^xsd:dateTime ;
     schema:description "Anormalidade, sofrimento ou comprometimento da ordem psicológica e/ou mental",
         "affezione che colpisce il pensiero, i sentimenti o il comportamento di una persona",
         "alteración de los procesos cognitivos y afectivos del desarrollo",
@@ -129,18 +129,15 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "trouble psychologique ou comportemental",
         "Психик сирҙәр (менталь сирҙәр, психик ауырыу, йән ауырыуы;",
         "психолошко пореметување",
-        "состояние психики, отличное от приемлемого обществом",
+        "состояние психики, отличное от преобладающей нормы, включающее симптомы и признаки, которые обычно причиняют страдание и препятствуют личностному функционированию",
         "הפרעה נפשית",
         "同心理、神經有關嘅疾病" ;
-    schema:version 756482984 ;
-    ns1:identifiers 32 ;
-    ns1:sitelinks 101 ;
-    ns1:statements 69 ;
-    ns1:timestamp "2018-10-02T23:46:07+00:00"^^xsd:dateTime ;
+    schema:version 798203240 ;
+    ns2:identifiers 32 ;
+    ns2:sitelinks 102 ;
+    ns2:statements 70 ;
+    ns2:timestamp "2018-11-25T05:12:02+00:00"^^xsd:dateTime ;
     skos:altLabel "Gemütskrankheit",
-        "Mental Disorder",
-        "Mental Dysfunction",
-        "Psychiatric Disease",
         "Psychische Erkrankung",
         "Psychische Erkrankungen",
         "Psychische Krankheit",
@@ -170,11 +167,14 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "mensa malordo",
         "mensa malsano",
         "mensa perturbo",
+        "mental dysfunction",
         "mental illness",
         "mental liding",
         "mental or behavioural disorder",
         "psihička bolest",
         "psika perturbo",
+        "psychiatric condition",
+        "psychiatric disease",
         "psychiatric disorder",
         "psychická choroba",
         "psychická nemoc",
@@ -189,15 +189,19 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "Психічні розлади",
         "душевно пореметување",
         "душевно растројство",
-        "душевные заболевания",
-        "душевные расстройства",
+        "душевное заболевание",
+        "душевное расстройство",
         "ментална болест",
         "ментално пореметување",
         "ментално растројство",
+        "ментальное расстройство",
+        "психиатрическое расстройство",
         "психическая болезнь",
-        "психические заболевания",
-        "психические расстройства",
+        "психическая дисфункция",
+        "психическое заболевание",
+        "психическое или поведенческое расстройство",
         "психолошка болест",
+        "расстройство психики",
         "اضطراب عقلي",
         "الأمراض العقلية",
         "الاضطراب النفسي",
@@ -262,6 +266,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     p:P4229 <http://www.wikidata.org/entity/statement/Q12135-651BD972-84A7-4268-8E6F-E4FC39FC5C1C>,
         <http://www.wikidata.org/entity/statement/Q12135-9995E3A4-BD94-4341-B248-F8562C7C5993>,
         <http://www.wikidata.org/entity/statement/Q12135-B369266D-FCED-45C8-B6F6-E4A8A662AE8A> ;
+    p:P461 <http://www.wikidata.org/entity/statement/Q12135-70d9fa97-4803-e388-3ebd-8944380fd7f3> ;
     p:P486 <http://www.wikidata.org/entity/statement/Q12135-29D28508-AF3F-45E6-BD80-4DF89F83043B>,
         <http://www.wikidata.org/entity/statement/Q12135-40BF8559-7F6C-45FC-B291-8895AC9738D7>,
         <http://www.wikidata.org/entity/statement/Q12135-85128C43-2BC8-4C60-99DB-26083AF4276E>,
@@ -280,14 +285,14 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         <http://www.wikidata.org/entity/statement/Q12135-E689FAB7-C03E-4081-A2D4-B4EC25AC577B> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q12135-C4E93B0F-B380-4A43-A5DE-AAAA0EE01C23> ;
     p:P948 <http://www.wikidata.org/entity/statement/Q12135-814DFA56-621E-4461-97F7-ECF483D3249D> ;
-    ns2:P1014 <http://vocab.getty.edu/aat/300055131> ;
-    ns2:P227 <http://d-nb.info/gnd/4047686-8> ;
-    ns2:P2581 <http://babelnet.org/rdf/s00027818n> ;
-    ns2:P3916 <http://vocabularies.unesco.org/thesaurus/concept5463> ;
-    ns2:P486 <http://id.nlm.nih.gov/mesh/D001523>,
+    ns1:P1014 <http://vocab.getty.edu/aat/300055131> ;
+    ns1:P227 <http://d-nb.info/gnd/4047686-8> ;
+    ns1:P2581 <http://babelnet.org/rdf/s00027818n> ;
+    ns1:P3916 <http://vocabularies.unesco.org/thesaurus/concept5463> ;
+    ns1:P486 <http://id.nlm.nih.gov/mesh/D001523>,
         <http://id.nlm.nih.gov/mesh/D011618> ;
-    ns2:P508 <http://purl.org/bncf/tid/6114> ;
-    ns2:P646 <http://g.co/kg/m/04x4r> ;
+    ns1:P508 <http://purl.org/bncf/tid/6114> ;
+    ns1:P646 <http://g.co/kg/m/04x4r> ;
     wdt:P1014 "300055131" ;
     wdt:P1051 "12879" ;
     wdt:P1296 "0193785" ;
@@ -334,6 +339,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     wdt:P4229 "F00.F99",
         "F99",
         "F99-F99" ;
+    wdt:P461 wd:Q317309 ;
     wdt:P486 "D001523",
         "D011618" ;
     wdt:P494 "F00-F99" ;

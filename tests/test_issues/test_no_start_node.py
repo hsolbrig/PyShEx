@@ -16,7 +16,7 @@ class NoStartNodeTestCase(unittest.TestCase):
         e = ShExEvaluator(rdf=g, schema=shex, focus=EX.x)
         rslt = e.evaluate()[0]
         self.assertFalse(rslt.result)
-        self.assertEqual('START node is not specified or is invalid', rslt.reason.strip())
+        self.assertEqual('Error: START node is not specified', rslt.reason.strip())
 
     def test_bad_start(self):
         g = Graph()
