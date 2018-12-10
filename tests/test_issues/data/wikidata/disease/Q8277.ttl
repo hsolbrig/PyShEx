@@ -85,7 +85,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "多発性硬化症",
         "多發性硬化症",
         "다발성 경화증" ;
-    schema:dateModified "2018-11-20T19:56:01+00:00"^^xsd:dateTime ;
+    schema:dateModified "2018-12-09T23:14:19+00:00"^^xsd:dateTime ;
     schema:description "Doença desmielinizante em que são danificadas as bainhas de mielina à volta dos axónios do cérebro e a medula espinal, provocando desmielinização.",
         "Entmarkungserkrankung des zentralen Nervensystems",
         "Sygdom der rammer nervecellerne",
@@ -102,16 +102,17 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "ziekte van het zenuwstelsel",
         "φλεγμονώδης ασθένεια",
         "Поражение миелиновых оболочек нервных волокон с образованием бляшек",
+        "מחלה",
         "التهاب ينتج عن تلف الغشاء العازل للعصبونات في الدماغ والحبل الشوكي. يُعطّل هذا التلف قدرةَ أجزاءٍ من الجهاز العصبي على التواصل.",
         "یک بیماری خودایمنی",
         "एक रोग जिसमें मस्तिष्क तथा सुषुम्ना रज्जु शोथ के चारों ओर वसायुक्त माइलिन के आवरण क्षतिग्रस्त हो जाते हैं, जिससे माइलिन के आवरण नष्ट होने और घाव के निशान होने के साथ-साथ रोग के संकेत और लक्षणों के स्थूल क्रम उत्पन्न होते हैं",
         "একধরনের ডি-মায়েলিনেটিং মানব ব্যাধি যাতে মানব মস্তিষ্কে ও স্নায়ুরজ্জুতে বিদ্যমান স্নায়ুকোষগুলোকে আচ্ছাদনকারী অন্তরক আবরণ ক্ষতিগ্রস্ত হয়ে যায়",
         "뇌와 척수의 축삭 주변의 지방성 말이집을 감싸는 부분이 손상을 입어서 탈수질환과 흉터형성으로 이어지는 염증 질환이다." ;
-    schema:version 794757840 ;
+    schema:version 808752223 ;
     ns2:identifiers 38 ;
     ns2:sitelinks 65 ;
     ns2:statements 158 ;
-    ns2:timestamp "2018-11-20T19:56:11+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2018-12-09T23:14:26+00:00"^^xsd:dateTime ;
     skos:altLabel "ED",
         "EM",
         "Encephalomyelitis disseminata",
@@ -464,7 +465,8 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         wd:Q208376,
         wd:Q719444 .
 
-<http://www.wikidata.org/entity/statement/Q8277-04A1D4C5-B311-4E55-854A-AEB765CD0B60> ps:P31 wd:Q42303753 .
+<http://www.wikidata.org/entity/statement/Q8277-04A1D4C5-B311-4E55-854A-AEB765CD0B60> prov:wasDerivedFrom <http://www.wikidata.org/reference/4401fb23f92b82c762d72cd29b99c2148bc4ad20> ;
+    ps:P31 wd:Q42303753 .
 
 <http://www.wikidata.org/entity/statement/Q8277-2F929C3B-F64D-4A58-85FF-BDCA7ADABCB1> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a>,
         <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> .

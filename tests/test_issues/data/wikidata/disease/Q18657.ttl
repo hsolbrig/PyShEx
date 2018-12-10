@@ -1,0 +1,171 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix gw: <http://micel.io/genewiki/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q18657 rdfs:label "Anhwylder Hunaniaeth Datgysylltiol",
+        "Benlik ikileşmesi",
+        "Dedublarea personalității",
+        "Disociativna motnja identitete",
+        "Disociativní porucha identity",
+        "Disocijativni poremećaj ličnosti",
+        "Disocijativni poremećaji",
+        "Disocijativni poremećaji osobnosti",
+        "Dissosiatiivinen identiteettihäiriö",
+        "Dissoziativ Perséinlechkeetsstéierung",
+        "Dissoziative Identitätsstören",
+        "Disszociatív személyiség",
+        "Disòrdini di dintitati dissuciata",
+        "Palainan kakobeh",
+        "Pemecahan kepribadian",
+        "Personlighedsspaltning",
+        "Rối loạn đa nhân cách",
+        "Zaburzenie dysocjacyjne tożsamości",
+        "disocia-identeca malsaono",
+        "dissociatieve identiteitsstoornis",
+        "dissociativ identitetsstörning",
+        "dissociative identity disorder",
+        "dissosiativ identitetsforstyrrelse",
+        "dissoziative Identitätsstörung",
+        "disturbo dissociativo dell'identità",
+        "kura runtu mamani quispi ari quepay",
+        "mpd",
+        "transtorno dissociativo de identidade",
+        "trastorn dissociatiu de la identitat",
+        "trastorno de identidad disociativo",
+        "trouble dissociatif de l'identité",
+        "Διασχιστική διαταραχή ταυτότητας",
+        "Множинна особистість",
+        "диссоциативное расстройство идентичности",
+        "кемлекнең диссатсиятив бозылышы",
+        "Անհատականության դիսոցիատիվ խանգարում",
+        "הפרעת זהות דיסוציאטיבית",
+        "اختلال تجزیه هویت",
+        "اضطراب الهوية التفارقي",
+        "تفارقی شناختی اضطراب",
+        "बहुव्यक्तित्व",
+        "ডিসোসিয়েটিভ আইডেন্টিটি ডিসঅর্ডার",
+        "ଡିସୋସିଏଟିଭ ଆଇଡେଣ୍ଟିଟି ଡିଜଅର୍ଡର",
+        "பல்வகை ஆளுமை நோய்",
+        "మల్టిపుల్ పర్సనాలిటీ డిజార్డర్",
+        "იდენტურობის დისოციაციური აშლილობა",
+        "解離性人格疾患",
+        "解離性同一性障害",
+        "해리성 정체 장애" ;
+    schema:dateModified "2018-12-01T13:38:33+00:00"^^xsd:dateTime ;
+    schema:description "Patología consistente en la existencia de dos o más personalidades o identidades en un individuo.",
+        "apara vekthitham",
+        "dissoziative Störung, bei der Wahrnehmung, Erinnerung und das Erleben der Identität betroffen sind",
+        "disturbo psichico di un individuo che possiede due o più personalità",
+        "mental disorder characterized by at least two distinct and relatively enduring identities or dissociated personality states",
+        "trouble mental défini en 1994 dans le DSM par un ensemble de critères diagnostiques comme un type particulier de trouble dissociatif.",
+        "психическое расстройство",
+        "הפרעה נפשית",
+        "ବ‌ହୁବ୍ୟକ୍ତିତ୍ୱ - ଅତି କମ୍‌ରେ ଦୁଇ ପ୍ରକାର ବ୍ୟକ୍ତିତ୍ୱ",
+        "一種心理疾病" ;
+    schema:version 803094637 ;
+    ns1:identifiers 15 ;
+    ns1:sitelinks 48 ;
+    ns1:statements 28 ;
+    ns1:timestamp "2018-12-01T13:38:36+00:00"^^xsd:dateTime ;
+    skos:altLabel "AHD",
+        "DDI",
+        "DID",
+        "Dissociative identity disorder",
+        "Disturbo di personalità multipla",
+        "MPD",
+        "Personalità multipla",
+        "Personalità multiple",
+        "TDI",
+        "Trastorno de personalidad multiple",
+        "Trastorno de personalidad múltiple",
+        "multiple personality disorder",
+        "plurpersoneca malsano",
+        "trouble de la personnalité multiple",
+        "Διαταραχή πολλαπλής προσωπικότητας",
+        "множественная личность",
+        "расстройство множественной личности",
+        "اضطراب تعدد الشخصيات",
+        "ଡିଆଇଡି",
+        "多重人格",
+        "多重人格障害",
+        "多重人格障礙",
+        "解離型認同異常",
+        "解離性身份疾患" ;
+    p:P1417 <http://www.wikidata.org/entity/statement/Q18657-88CEF272-3E57-4D39-BC8A-B7296E87285D> ;
+    p:P1692 <http://www.wikidata.org/entity/statement/Q18657-10283ADF-D2EA-4318-93A2-8DE7F01BB25C> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q18657-6156094A-A1AE-45DF-8F11-9A4DF89577ED>,
+        <http://www.wikidata.org/entity/statement/Q18657-8080BA26-D617-4C17-9057-7171D3AB6D38> ;
+    p:P18 <http://www.wikidata.org/entity/statement/Q18657-55001D50-1408-4969-9AF9-E2F720C6DA9F> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q18657-210FB739-910A-49C3-B67F-80C045104F11>,
+        <http://www.wikidata.org/entity/statement/Q18657-58352f9f-4d55-ffef-7c7a-dc1988d09c6a>,
+        <http://www.wikidata.org/entity/statement/Q18657-af57cbf5-4a00-2707-e706-54255c85e909> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q18657-7A2DD546-043C-4AF1-942E-5E9322C29393> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q18657-0689CD8E-81E4-439C-BCE7-4FF2FBCDF421>,
+        <http://www.wikidata.org/entity/statement/Q18657-785AC500-26B8-4AC0-A4B3-D7E5A72CF974> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q18657-4B769EAE-568B-4DB5-812E-61F124D4C066>,
+        <http://www.wikidata.org/entity/statement/Q18657-DC30F504-7746-49F8-A33D-8B83EEE533B4> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q18657-B5F41C75-2C31-4344-8DBE-E0968526FE27> ;
+    p:P349 <http://www.wikidata.org/entity/statement/Q18657-BC0D4DFD-04FA-4148-A1ED-BC96CD5D3B78> ;
+    p:P3569 <http://www.wikidata.org/entity/statement/Q18657-14A6159C-F737-48A9-9A09-2A25921DEF41> ;
+    p:P373 <http://www.wikidata.org/entity/statement/Q18657-8F100846-EAEC-4299-8583-E35617586869> ;
+    p:P3827 <http://www.wikidata.org/entity/statement/Q18657-BABEFB86-82BB-4BC4-BB9C-637B106F3B2E> ;
+    p:P4229 <http://www.wikidata.org/entity/statement/Q18657-42690C69-A7D1-444F-8A9D-47284B76A32C> ;
+    p:P460 <http://www.wikidata.org/entity/statement/Q18657-de9ad585-4d10-8a90-bdb3-e8c9888e176f> ;
+    p:P486 <http://www.wikidata.org/entity/statement/Q18657-6E882868-B123-4D16-B686-404D6D9883BA>,
+        <http://www.wikidata.org/entity/statement/Q18657-890D445E-44C1-4306-BC28-13444A41EDED> ;
+    p:P508 <http://www.wikidata.org/entity/statement/Q18657-af9932b9-435a-29f6-17f8-e4ee301ce639> ;
+    p:P5270 <http://www.wikidata.org/entity/statement/Q18657-1E385820-41AA-465E-BC1A-062EDE3165F1> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q18657-81507899-A517-43B0-A685-B30CBE272AD6> ;
+    p:P673 <http://www.wikidata.org/entity/statement/q18657-9EB2622D-D047-4676-AC77-EA9E7B819DED> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q18657-3CA4D7DE-ACF4-4EF0-840D-3AA0FBD1B9E7>,
+        <http://www.wikidata.org/entity/statement/Q18657-8BF375E0-09E0-4FD5-A1F3-7CCFF0CDB08E> ;
+    ns2:P349 <http://id.ndl.go.jp/auth/ndlna/00572744> ;
+    ns2:P486 <http://id.nlm.nih.gov/mesh/D009105> ;
+    ns2:P508 <http://purl.org/bncf/tid/55653> ;
+    ns2:P646 <http://g.co/kg/m/09wnd> ;
+    wdt:P1417 "science/dissociative-identity-disorder" ;
+    wdt:P1692 "300.14" ;
+    wdt:P1748 "C94330" ;
+    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Dissociative%20identity%20disorder.jpg> ;
+    wdt:P1995 wd:Q183257,
+        wd:Q7867,
+        wd:Q9418 ;
+    wdt:P279 wd:Q2627467 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:10934>,
+        <http://purl.obolibrary.org/obo/DOID_10934> ;
+    wdt:P2892 "C0026773" ;
+    wdt:P31 wd:Q12136 ;
+    wdt:P349 "00572744" ;
+    wdt:P3569 "levenswetenschappen-en-geneeskunde/dissociatieve-identiteitsstoornis" ;
+    wdt:P373 "Dissociative identity disorder" ;
+    wdt:P3827 "multiple-personality-disorder" ;
+    wdt:P4229 "F44.81" ;
+    wdt:P460 wd:Q41112 ;
+    wdt:P486 "D009105" ;
+    wdt:P508 "55653" ;
+    wdt:P5270 "MONDO:0001159" ;
+    wdt:P646 "/m/09wnd" ;
+    wdt:P673 "916186" ;
+    wdt:P699 "DOID:10934" .
+
+<http://www.wikidata.org/entity/statement/Q18657-B5F41C75-2C31-4344-8DBE-E0968526FE27> prov:wasDerivedFrom <http://www.wikidata.org/reference/3e916edad4a138bec3cb7a8aa837a24d0ffaf824>,
+        <http://www.wikidata.org/reference/79ab3e735f39dcacd49c40b2ee8d333df38c25d5> ;
+    ps:P31 wd:Q12136 .
+

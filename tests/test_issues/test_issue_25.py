@@ -17,18 +17,20 @@ class Issue25TestCase(unittest.TestCase):
         outf = StringIO()
         with(redirect_stdout(outf)):
             evaluate_cli(f"{rdffile} {shexfile} -A".split())
-        self.assertEqual("Error: START node is not specified", outf.getvalue().strip())
+        self.assertEqual("""Errors:
+Error: START node is not specified""", outf.getvalue().strip())
 
     def test_all_nodes(self):
         outf = StringIO()
         with(redirect_stdout(outf)):
             evaluate_cli(f"{rdffile} {shexfile} -s http://example.org/shapes/S".split())
-        self.assertEqual('Error: You must specify one or more graph focus nodes or use the "-A" option',
+        self.assertEqual('''Error: You must specify one or more graph focus nodes or use the "-A" option''',
                          outf.getvalue().strip())
         outf = StringIO()
         with(redirect_stdout(outf)):
             evaluate_cli(f"{rdffile} {shexfile}  -A -s http://example.org/shapes/S".split())
-        self.assertEqual("""---> Testing http://a.example/s1 against http://example.org/shapes/S 
+        self.assertEqual("""Errors:
+---> Testing http://a.example/s1 against http://example.org/shapes/S 
     No matching triples found for predicate http://a.example/s4
 ---> Testing http://a.example/s2 against http://example.org/shapes/S 
     No matching triples found for predicate http://a.example/s4

@@ -6,14 +6,15 @@ from rdflib import Graph, URIRef
 
 from pyshex.shape_expressions_language.p5_2_validation_definition import isValid
 from pyshex.shape_expressions_language.p5_context import Context
-from pyshex.shapemap_structure_and_language.p3_shapemap_structure import FixedShapeMap, ShapeAssociation, START
+from pyshex.shapemap_structure_and_language.p3_shapemap_structure import FixedShapeMap, ShapeAssociation, START, \
+    START_TYPE
 from pyshex.utils.schema_loader import SchemaLoader
 
 
 def evaluate(g: Graph,
              schema: Union[str, ShExJ.Schema],
-             focus: Optional[Union[str, URIRef]],
-             start: Optional[Union[str, URIRef]]=None,
+             focus: Optional[Union[str, URIRef, IRIREF]],
+             start: Optional[Union[str, URIRef, IRIREF, START, START_TYPE]]=None,
              debug_trace: bool = False) -> Tuple[bool, Optional[str]]:
     """ Evaluate focus node `focus` in graph `g` against shape `shape` in ShEx schema `schema`
 
@@ -34,7 +35,7 @@ def evaluate(g: Graph,
         start = str(schema.start) if schema.start else None
     if start is None:
         return False, "No starting shape"
-    if not isinstance(start, URIRef) and start is not START:
+    if not isinstance(start, IRIREF) and start is not START and start is not START_TYPE:
         start = IRIREF(str(start))
     cntxt = Context(g, schema)
     cntxt.debug_context.debug = debug_trace

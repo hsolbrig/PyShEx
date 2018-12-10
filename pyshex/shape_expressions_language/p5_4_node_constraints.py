@@ -66,7 +66,8 @@ def nodeSatisfiesDataType(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, c: 
     if c.debug:
         print(f" Datatype: {nc.datatype}")
     if not isinstance(n, Literal):
-        cntxt.current_node.fail_reason = f"Datatype constraint ({nc.datatype}) on {type(n).__name__} node"
+        nodeid = f" URI {n}" if not isinstance(n, BNode) else ''
+        cntxt.current_node.fail_reason = f"Datatype constraint ({nc.datatype}) on {type(n).__name__}{nodeid}"
         return False
     actual_datatype = _datatype(n)
     if actual_datatype == str(nc.datatype) or \

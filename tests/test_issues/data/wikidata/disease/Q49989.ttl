@@ -75,7 +75,7 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
     ns2:identifiers 25 ;
     ns2:sitelinks 44 ;
     ns2:statements 41 ;
-    ns2:timestamp "2018-11-20T19:52:57+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2018-11-20T19:53:01+00:00"^^xsd:dateTime ;
     skos:altLabel "CJD",
         "CJD (Creutzfeldt Jakob disease)",
         "CJK",

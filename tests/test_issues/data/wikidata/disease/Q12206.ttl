@@ -1,0 +1,341 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix gw: <http://micel.io/genewiki/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q12206 rdfs:label "Asikyire yadee",
+        "Cukrinis diabetas",
+        "Diabet",
+        "Diabete",
+        "Diabete Mellìo",
+        "Diabetes",
+        "Diabetes mellitus",
+        "Diabetis mellitus",
+        "Diabétes mélitus",
+        "Diabétis Mellitus",
+        "Diaibéiteas",
+        "Dijabetes",
+        "Diyabet",
+        "Kencing Manis",
+        "Kisukari",
+        "Misk'i unquy",
+        "Nexweşiya şekir",
+        "Okugwamu amazzi",
+        "Penyakit kencing manis",
+        "Qandli diabet",
+        "Sladkorna bolezen",
+        "Sokorow",
+        "Sokraus diabets",
+        "Suhkurtõbi",
+        "Suikersiekte",
+        "Sukursjúka",
+        "Sykursýki",
+        "Sókkergekrenkdje",
+        "Süýjülik",
+        "Thn̂g-jiō-pēⁿ",
+        "Tiểu đường",
+        "Tuguyasuka",
+        "Zockerkrankheet",
+        "cukorbetegség",
+        "cukrzyca",
+        "cukura diabēts",
+        "dayabiitis",
+        "diabet zaharat",
+        "diabete mellito",
+        "diabetes",
+        "diabetes mellitus",
+        "diabetis mellitus",
+        "diabeto",
+        "diabèta sucrat",
+        "diabète sucré",
+        "isifo sikashukela",
+        "iswekile yemellitus",
+        "sukkersyge",
+        "sukru",
+        "Şəkərli diabet",
+        "šećerna bolest",
+        "σακχαρώδης διαβήτης",
+        "Диабет",
+        "Диабети қанд",
+        "Захарен диабет",
+        "Кант диабети",
+        "Сæкæрниз",
+        "Саахарай диабет",
+        "Сахăрлă диабет",
+        "Цукрёвый діабет",
+        "Чихрийн шижин",
+        "Шекердин диабет",
+        "Шеќерна болест",
+        "Шикәр авыруы",
+        "Шәкәр диабеты",
+        "сахарный диабет",
+        "цукровий діабет",
+        "цукровы дыябет",
+        "цукровы дыябэт",
+        "шећерна болест",
+        "Қант диабеті",
+        "Շաքարային դիաբետ",
+        "סוכרת",
+        "צוקערקרענק",
+        "السكري",
+        "دیابت",
+        "ذیابیطس",
+        "شوگر",
+        "شەکرە",
+        "مرض السكر",
+        "مرض قند",
+        "ډايبېټېز مېلېټوز",
+        "ڊيابطس",
+        "ހަކުރު ބަލި",
+        "मधुमेह",
+        "मधुमेहः",
+        "ডায়াবেটিস",
+        "বহুমুত্ৰ ৰোগ",
+        "বহুমূত্র রোগ",
+        "ਸ਼ੱਕਰ ਰੋਗ",
+        "મધુપ્રમેહ",
+        "ମଧୁମେହ",
+        "நீரிழிவு நோய்",
+        "మధుమేహం",
+        "ಮಧುಮೇಹ",
+        "പ്രമേഹം",
+        "දියවැඩියාව",
+        "เบาหวาน",
+        "ဆီးချိုရောဂါ",
+        "შანქარიშ დიაბეტი",
+        "შაქრის დიაბეტი",
+        "ስኳር በሽታ",
+        "ជំងឺទឹកនោមផ្អែម",
+        "糖尿",
+        "糖尿病",
+        "당뇨병" ;
+    schema:dateModified "2018-12-04T23:53:39+00:00"^^xsd:dateTime ;
+    schema:description "Gruppe von Stoffwechselkrankheiten",
+        "a glükóz feldolgozási zavara, aminek oka a hasnyálmirigy által termelt inzulin nevű hormon hiánya, vagy a szervezet inzulinnal szembeni érzéketlensége",
+        "boală endocrină",
+        "conjunto de trastornos metabólicos",
+        "conxunto de trastornos metabólicos",
+        "gaixotasun edo sindrome metabolikoa da, zehazki azukrearen metabolismoarekin lotuta dagoena.",
+        "glucose metabolism disease characterized  by chronic hyperglycaemia with disturbances of carbohydrate, fat and protein metabolism resulting from defects in insulin secretin, insulin action, or both.",
+        "grupo dagiti metaboliko a sakit ti tao",
+        "gruppo di disturbi metabolici accomunati dal fatto di presentare una persistente instabilità del livello glicemico del sangue",
+        "maladie de la régulation de la glycémie",
+        "skupina metaboličkih bolesti",
+        "sokeriaineenvaihdunnan sairaus",
+        "stoffskiftesjukdom",
+        "stofskiftesygdom",
+        "Η αυξημένη συγκέντρωση γλυκόζης στο αίμα.",
+        "група ендокринних захворювань, що розвиваються внаслідок абсолютної чи відносної недостатності гормону інсуліну",
+        "эндокринное заболевание",
+        "مرض يصيب البشر",
+        "ডায়াবেটিস বা বহুমূত্র রোগ একটি দীর্ঘস্থায়ী বিপাকীয় ব্যাধি যা ইনসুলিনের অভাব বা ইনসুলিন প্রতিরোধ বা উভয় কারণে স্থির হাইপারগ্লাইমেমিয়া দ্বারা চিহ্নিত করা হয়",
+        "হৰম’নজনিত ৰোগ",
+        "ମଧୁମେହ  ମେଟାବୋଲିକ ରୋଗମାନଙ୍କ ଏକ ଦଳକୁ ନିର୍ଦ୍ଦେଶ କରାଏ ଯେଉଁଥିରେ ରକ୍ତଶର୍କରା ସ୍ତର ଉଚ୍ଚ ଥାଏ ଅନେକ ଦିନ ପର୍ଯ୍ୟନ୍ତ",
+        "疾病",
+        "血糖値が病的に高い状態をさす病名" ;
+    schema:version 805122556 ;
+    ns2:identifiers 38 ;
+    ns2:sitelinks 139 ;
+    ns2:statements 66 ;
+    ns2:timestamp "2018-12-04T23:53:55+00:00"^^xsd:dateTime ;
+    skos:altLabel "Blutzuckerkrankheit",
+        "Clefyd melys",
+        "Clefyd y siwgr",
+        "DM",
+        "Diabetes mellitus",
+        "Zuckererkrankung",
+        "Zuckerkrankheit",
+        "diabet",
+        "diabete",
+        "diabetes",
+        "diabetes mellitus",
+        "diabète",
+        "diabétesz",
+        "dijabetes",
+        "pissing evil",
+        "shuga",
+        "sokeritauti",
+        "suikerziekte",
+        "sukera diabeto",
+        "sukkersjuke",
+        "диабет",
+        "діабет",
+        "مرض السكري",
+        "ডায়াবেটিস",
+        "প্রমেহ",
+        "糖尿" ;
+    p:P1051 <http://www.wikidata.org/entity/statement/Q12206-0B2A3546-30B6-4888-8404-BF4560C5B16C> ;
+    p:P1343 <http://www.wikidata.org/entity/statement/Q12206-84836FFA-46CA-4A48-9510-BFEC11D4F953> ;
+    p:P1375 <http://www.wikidata.org/entity/statement/Q12206-1d4c8acc-4410-bf07-b734-7dafc9f6be44> ;
+    p:P1417 <http://www.wikidata.org/entity/statement/Q12206-5c9b0d8a-4f59-642b-d1c8-054d9a0d320b>,
+        <http://www.wikidata.org/entity/statement/Q12206-E8B8016A-9548-4416-9B4D-308BEEB27C6D> ;
+    p:P1424 <http://www.wikidata.org/entity/statement/Q12206-C5B1D74F-7453-4BD9-A649-14AA2A5A68E2> ;
+    p:P1461 <http://www.wikidata.org/entity/statement/Q12206-45C98BAD-63C2-4F92-B27A-90089A45E4FC> ;
+    p:P1542 <http://www.wikidata.org/entity/statement/Q12206-160b3d45-4eca-f348-d39b-c690140d8d5e>,
+        <http://www.wikidata.org/entity/statement/Q12206-18fd317d-4bc9-baff-1892-4faa5e49ec4e>,
+        <http://www.wikidata.org/entity/statement/Q12206-63144aab-422e-5726-f63d-1dcd307633a6>,
+        <http://www.wikidata.org/entity/statement/Q12206-CFAA579E-E831-42E6-8D39-9102D8F0AEA7> ;
+    p:P1550 <http://www.wikidata.org/entity/statement/Q12206-e0a0dfd0-48dc-49c8-0962-b14a237eac2d> ;
+    p:P1692 <http://www.wikidata.org/entity/statement/Q12206-2E9DB3D9-7DA1-4FF4-952B-4475385EDA48> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q12206-2E95D5AE-1E7C-493B-9426-B7D09927297C>,
+        <http://www.wikidata.org/entity/statement/Q12206-833C352A-4237-4DD2-B398-4FBB27971A87> ;
+    p:P18 <http://www.wikidata.org/entity/statement/Q12206-87242EDC-D0A0-4D0E-B59C-1612702E1AE9> ;
+    p:P1889 <http://www.wikidata.org/entity/statement/Q12206-420d75d3-4a21-800e-fdf5-dba9d81624a1> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q12206-00123EE4-C8AF-49B0-B5B1-DA6B61430980> ;
+    p:P2176 <http://www.wikidata.org/entity/statement/Q12206-4D8F0526-CBCA-42DF-A697-8D37FEB890F2>,
+        <http://www.wikidata.org/entity/statement/Q12206-629BFB94-86C5-45A2-A1C2-CE8274FA0CF9>,
+        <http://www.wikidata.org/entity/statement/Q12206-CE7334AC-2AD7-49D5-B7E8-213394766B8B> ;
+    p:P227 <http://www.wikidata.org/entity/statement/q12206-da1f9222-4a17-b200-8abf-1bf60e241a84> ;
+    p:P2581 <http://www.wikidata.org/entity/statement/Q12206-08E0CB28-A413-431D-95E0-68B5997F1E7F> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q12206-87DF6A00-5815-4C33-BCB7-6B9AD42CE6EE> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q12206-0D9BA136-40CF-4D0C-8FF2-B636393B0307>,
+        <http://www.wikidata.org/entity/statement/Q12206-2FBAB73B-2FB7-4DD5-BED9-571F24FE4295>,
+        <http://www.wikidata.org/entity/statement/Q12206-56A68B5F-D22C-4F98-9D77-F0C44B25221A> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q12206-39F956BC-F983-4627-BAA3-B647F99A1281>,
+        <http://www.wikidata.org/entity/statement/Q12206-D638E0B4-ED9A-43DE-A377-C5410DECB8AC> ;
+    p:P2959 <http://www.wikidata.org/entity/statement/Q12206-226470AC-FF24-4E2B-B261-0BA95B2E1891> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q12206-87EBB20B-2A16-4D75-965B-E729D3FBCCEB> ;
+    p:P3219 <http://www.wikidata.org/entity/statement/Q12206-A15632B8-6C25-405F-84F0-7BB2A662D556> ;
+    p:P3291 <http://www.wikidata.org/entity/statement/Q12206-fd420a09-48c6-c8f9-51c5-7bc4981c5bc3> ;
+    p:P3292 <http://www.wikidata.org/entity/statement/Q12206-63dd3dc8-4dfd-f95b-b53e-870d4ad44abd> ;
+    p:P3417 <http://www.wikidata.org/entity/statement/Q12206-D2568FC8-5E87-4726-A75E-81942D1D2A13> ;
+    p:P3471 <http://www.wikidata.org/entity/statement/Q12206-CB46D435-D808-4F67-9547-C889EA07BD6B> ;
+    p:P349 <http://www.wikidata.org/entity/statement/Q12206-AD272EE2-BF4F-409C-A944-610010F8E3BC> ;
+    p:P3569 <http://www.wikidata.org/entity/statement/Q12206-D5F714A6-ECC1-42FF-896D-4172E0EFAB38> ;
+    p:P373 <http://www.wikidata.org/entity/statement/q12206-18F17B34-492C-47BF-B528-55F7328E7274> ;
+    p:P3827 <http://www.wikidata.org/entity/statement/Q12206-4C1D3DE2-4AC0-4725-B40A-1E188318FE4E> ;
+    p:P3841 <http://www.wikidata.org/entity/statement/Q12206-F3DAC21A-9BF9-465C-A932-C2ED271DEBEE> ;
+    p:P4229 <http://www.wikidata.org/entity/statement/Q12206-40EF0EF1-ABAD-4107-99FC-C3D216401AFB>,
+        <http://www.wikidata.org/entity/statement/Q12206-AF4AA887-96FD-4DBC-BC84-A6531AAACFF3>,
+        <http://www.wikidata.org/entity/statement/Q12206-C7A10C27-F410-4378-85A3-7878752AFA17> ;
+    p:P486 <http://www.wikidata.org/entity/statement/Q12206-013E85EC-7783-4182-A9A1-68ECD07DB564>,
+        <http://www.wikidata.org/entity/statement/Q12206-1F4BB8D5-5186-49E2-A709-A43D3B0D324D> ;
+    p:P492 <http://www.wikidata.org/entity/statement/Q12206-723F69FB-FB97-4617-AD61-5AE231CD6661> ;
+    p:P5008 <http://www.wikidata.org/entity/statement/Q12206-D4898058-E6B3-433F-9C22-CA62879A0136> ;
+    p:P508 <http://www.wikidata.org/entity/statement/q12206-AF1E64A5-D983-46C6-A284-356C09752063> ;
+    p:P5085 <http://www.wikidata.org/entity/statement/Q12206-a30310c1-42b7-8f2a-b4a3-f8a56cf11057> ;
+    p:P5125 <http://www.wikidata.org/entity/statement/Q12206-85ae597b-4a3d-e563-73d9-160b0fba1fed> ;
+    p:P5198 <http://www.wikidata.org/entity/statement/Q12206-48ADD5EF-29D2-4030-A041-6C9AF539CBCF> ;
+    p:P5250 <http://www.wikidata.org/entity/statement/Q12206-2B09987D-03DF-4BF6-B5CF-32BB5A1F1A51> ;
+    p:P5270 <http://www.wikidata.org/entity/statement/Q12206-9FC2F4DD-25B4-4AE3-960C-CECE534E7DA6> ;
+    p:P5642 <http://www.wikidata.org/entity/statement/Q12206-AAD75AEB-9078-49E2-9368-02001FD9205F> ;
+    p:P604 <http://www.wikidata.org/entity/statement/q12206-901C4C93-8008-4C2B-B434-762B2173BB25> ;
+    p:P6081 <http://www.wikidata.org/entity/statement/Q12206-084d2c16-47bf-0c81-d171-9cb10d1f95f1> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q12206-1A71100D-B31F-4238-99EA-672A96A6C8FC> ;
+    p:P672 <http://www.wikidata.org/entity/statement/Q12206-64F2C5B4-9574-4B4D-B893-EEF04929C9C0>,
+        <http://www.wikidata.org/entity/statement/Q12206-DAA8099E-034F-49F7-8921-0BE5688DDDF5> ;
+    p:P673 <http://www.wikidata.org/entity/statement/q12206-85DE1A0F-CECD-4456-8A25-F71C93E7EB6B>,
+        <http://www.wikidata.org/entity/statement/q12206-A20E4116-579F-4430-9757-227C6B3EAAC6> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q12206-AEFD888E-5635-42D0-80EB-2C0C2E9A9FE2>,
+        <http://www.wikidata.org/entity/statement/Q12206-B3E91716-AA36-4398-9829-CC702CBDAC98> ;
+    p:P910 <http://www.wikidata.org/entity/statement/Q12206-615276bd-44a1-e081-1799-9f6bbffad2f2> ;
+    p:P935 <http://www.wikidata.org/entity/statement/Q12206-FDE9793B-B2BC-4D04-B916-47766C31424B> ;
+    ns1:P227 <http://d-nb.info/gnd/4070446-4> ;
+    ns1:P2581 <http://babelnet.org/rdf/s00026790n> ;
+    ns1:P349 <http://id.ndl.go.jp/auth/ndlna/00573283> ;
+    ns1:P486 <http://id.nlm.nih.gov/mesh/D003920> ;
+    ns1:P508 <http://purl.org/bncf/tid/5524> ;
+    ns1:P646 <http://g.co/kg/m/0c58k> ;
+    ns1:P672 <https://id.nlm.nih.gov/mesh/C18.452.394.750>,
+        <https://id.nlm.nih.gov/mesh/C19.246> ;
+    wdt:P1051 "12683" ;
+    wdt:P1343 wd:Q2657718 ;
+    wdt:P1375 "000226166" ;
+    wdt:P1417 "science/diabetes",
+        "science/diabetes-mellitus" ;
+    wdt:P1424 wd:Q18517643 ;
+    wdt:P1461 "management-of-type-1-diabetes" ;
+    wdt:P1542 wd:Q1129105,
+        wd:Q127724,
+        wd:Q631361,
+        wd:Q945238 ;
+    wdt:P1550 "101952" ;
+    wdt:P1692 "250" ;
+    wdt:P1748 "C2985" ;
+    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Blue%20circle%20for%20diabetes.svg> ;
+    wdt:P1889 wd:Q220551 ;
+    wdt:P1995 wd:Q1207969 ;
+    wdt:P2176 wd:Q2329715,
+        wd:Q3492616,
+        wd:Q7939403 ;
+    wdt:P227 "4070446-4" ;
+    wdt:P2581 "00026790n" ;
+    wdt:P279 wd:Q18556224 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:9351>,
+        <http://purl.obolibrary.org/obo/DOID_9351>,
+        <http://purl.obolibrary.org/obo/HP_0000819> ;
+    wdt:P2892 "C0011849" ;
+    wdt:P2959 wd:Q27885525 ;
+    wdt:P31 wd:Q12136 ;
+    wdt:P3219 "diabete" ;
+    wdt:P3291 "Diabetes_mellitus" ;
+    wdt:P3292 "Diabetes_mellitus" ;
+    wdt:P3417 "Diabetes" ;
+    wdt:P3471 "801" ;
+    wdt:P349 "00573283" ;
+    wdt:P3569 "levenswetenschappen-en-geneeskunde/suikerziekte" ;
+    wdt:P373 "Diabetes mellitus" ;
+    wdt:P3827 "diabetes-mellitus" ;
+    wdt:P3841 "HP:0000819" ;
+    wdt:P4229 "E08-E13",
+        "E10.E14",
+        "E11" ;
+    wdt:P486 "D003920" ;
+    wdt:P492 "612227" ;
+    wdt:P5008 wd:Q5460604 ;
+    wdt:P508 "5524" ;
+    wdt:P5085 "Diabetes mellitus" ;
+    wdt:P5125 wd:Q7112608 ;
+    wdt:P5198 "294907750" ;
+    wdt:P5250 "317" ;
+    wdt:P5270 "MONDO:0005015" ;
+    wdt:P5642 wd:Q56196009 ;
+    wdt:P604 "001214" ;
+    wdt:P6081 "55620766" ;
+    wdt:P646 "/m/0c58k" ;
+    wdt:P672 "C18.452.394.750",
+        "C19.246" ;
+    wdt:P673 "117739",
+        "117853" ;
+    wdt:P699 "DOID:9351" ;
+    wdt:P910 wd:Q7214357 ;
+    wdt:P935 "Diabetes mellitus" .
+
+<http://www.wikidata.org/entity/statement/Q12206-0D9BA136-40CF-4D0C-8FF2-B636393B0307> prov:wasDerivedFrom <http://www.wikidata.org/reference/3902f9662e1070f1518024ff8c54aeadd87b131a> ;
+    ps:P2888 <http://purl.obolibrary.org/obo/HP_0000819> .
+
+<http://www.wikidata.org/entity/statement/Q12206-2FBAB73B-2FB7-4DD5-BED9-571F24FE4295> prov:wasDerivedFrom <http://www.wikidata.org/reference/354a209cfe9fa38f16ad075871121a9b1efd7126> ;
+    ps:P2888 <http://purl.obolibrary.org/obo/DOID_9351> .
+
+<http://www.wikidata.org/entity/statement/Q12206-56A68B5F-D22C-4F98-9D77-F0C44B25221A> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
+    ps:P2888 <http://identifiers.org/doid/DOID:9351> .
+
+<http://www.wikidata.org/entity/statement/Q12206-87DF6A00-5815-4C33-BCB7-6B9AD42CE6EE> prov:wasDerivedFrom <http://www.wikidata.org/reference/344ec4f5ad69bf3e1bd69a3c454002fb9724a6de> .
+
+<http://www.wikidata.org/entity/statement/Q12206-87EBB20B-2A16-4D75-965B-E729D3FBCCEB> prov:wasDerivedFrom <http://www.wikidata.org/reference/344ec4f5ad69bf3e1bd69a3c454002fb9724a6de> ;
+    ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/reference/354a209cfe9fa38f16ad075871121a9b1efd7126> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:9351" ;
+    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+
+<http://www.wikidata.org/reference/344ec4f5ad69bf3e1bd69a3c454002fb9724a6de> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:9351" ;
+    pr:P813 "2018-07-11T00:00:00+00:00"^^xsd:dateTime .
+

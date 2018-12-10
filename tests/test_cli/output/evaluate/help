@@ -1,4 +1,5 @@
-usage: shexeval [-h] [-f FORMAT] [-s START] [-fn FOCUS] [-A] [-d] [-ss] [-cf]
+usage: shexeval [-h] [-f FORMAT] [-s START] [-ut] [-sp STARTPREDICATE]
+                [-fn FOCUS] [-A] [-d] [-ss] [-cf]
                 rdf shex
 
 positional arguments:
@@ -11,7 +12,10 @@ optional arguments:
   -f FORMAT, --format FORMAT
                         Input RDF Format
   -s START, --start START
-                        Start shape
+                        Start shape. If absent use ShEx start node.
+  -ut, --usetype        Start shape is rdf:type of focus
+  -sp STARTPREDICATE, --startpredicate STARTPREDICATE
+                        Start shape is object of this predicate
   -fn FOCUS, --focus FOCUS
                         RDF focus node
   -A, --allsubjects     Evaluate all non-bnode subjects in the graph
