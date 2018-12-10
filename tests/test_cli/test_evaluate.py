@@ -37,6 +37,25 @@ class ShexEvaluatorTestCase(CLITestCase):
                      update_test_file=update_test_files, failexpected=True)
         self.assertFalse(update_test_files, "Updating test files")
 
+    def test_start_type(self):
+        """ This tests four subjects, two having one RDF type, one having two and one having none """
+        base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data'))
+        shex = os.path.join(base_dir, 'schemas', 'biolink-modelnc.shex')
+        rdf = os.path.join(base_dir, 'validation', 'type-samples.ttl')
+        self.do_test([rdf, shex, '-A', '-ut', '-cf'], 'type-samples', update_test_file=update_test_files,
+                     failexpected=True)
+        self.assertFalse(update_test_files, "Updating test files")
+
+    def test_start_predicate(self):
+        """ This tests four subjects, two having one RDF type, one having two and one having none """
+        base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data'))
+        shex = os.path.join(base_dir, 'schemas', 'biolink-modelnc.shex')
+        rdf = os.path.join(base_dir, 'validation', 'type-samples.ttl')
+        self.do_test([rdf, shex, '-A', '-sp', 'http://w3id.org/biolink/vocab/type', '-cf'], 'pred-samples',
+                     update_test_file=update_test_files,
+                     failexpected=True)
+        self.assertFalse(update_test_files, "Updating test files")
+
 
 if __name__ == '__main__':
     unittest.main()

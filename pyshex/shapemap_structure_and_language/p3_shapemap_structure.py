@@ -78,7 +78,7 @@ class START(StringToken):
     pass
 
 
-class START_TYPE(StringToken):
+class START_TYPE:
     def __init__(self, start_predicate: str) -> None:
         self.start_predicate = URIRef(start_predicate)
 

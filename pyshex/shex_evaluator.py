@@ -44,6 +44,7 @@ def normalize_uriparm(p: URIPARM) -> List[URIRef]:
     return normalize_urilist(p) if isinstance(p, List) else \
         normalize_urilist([p]) if isinstance(p, (str, URIRef)) else p
 
+
 def normalize_startparm(p: STARTPARM) -> List[Union[type(START), START_TYPE, URIRef]]:
     """ Return the startspec for p """
     if not isinstance(p, list):
@@ -184,7 +185,7 @@ class ShExEvaluator:
                  debug: Optional[bool] = None,
                  debug_slurps: Optional[bool] = None,
                  over_slurp: Optional[bool] = None) -> List[EvaluationResult]:
-        if rdf or shex or focus or start:
+        if rdf is not None or shex is not None or focus is not None or start is not None:
             evaluator = ShExEvaluator(rdf if rdf is not None else self.g,
                                       shex if shex is not None else self._schema,
                                       focus if focus is not None else self.focus,
@@ -194,7 +195,7 @@ class ShExEvaluator:
             evaluator = self
 
         if START in self.start and evaluator._schema.start is None:
-            return [EvaluationResult(False, None, None, 'Error: START node is not specified')]
+            return [EvaluationResult(False, None, None, 'START node is not specified')]
 
         cntxt = Context(evaluator.g, evaluator._schema)
         cntxt.debug_context.debug = debug if debug is not None else self.debug
@@ -202,21 +203,24 @@ class ShExEvaluator:
         cntxt.over_slurp = self.over_slurp if over_slurp is not None else self.over_slurp
 
         rval = []
-        for start in evaluator.start:
-            for focus in evaluator.foci:
-                start_list: List[Union[URIRef, START]] = []
+        for focus in evaluator.foci:
+            start_list: List[Union[URIRef, START]] = []
+            for start in evaluator.start:
                 if start is START:
                     start_list.append(evaluator._schema.start)
                 elif isinstance(start, START_TYPE):
-                    start_list = list(evaluator.g.objects(focus, start.start_predicate))
+                    start_list += list(evaluator.g.objects(focus, start.start_predicate))
                 else:
-                    start_list = [start]
+                    start_list.append(start)
+            if start_list:
                 for start_node in start_list:
                     map_ = FixedShapeMap()
                     map_.add(ShapeAssociation(focus, start_node))
                     success, fail_reasons = isValid(cntxt, map_)
                     rval.append(EvaluationResult(success, focus, start_node,
                                                  '\n'.join(fail_reasons) if not success else ''))
+            else:
+                rval.append(EvaluationResult(False, focus, None, "No start node located"))
         return rval
 
 
@@ -273,5 +277,8 @@ def evaluate_cli(argv: Optional[List[str]] = None, prog: Optional[str]=None) -> 
         print("Errors:")
         for rslt in result:
             if not rslt.result:
-                print(str(rslt.reason))
+                print(f"""  Focus: {rslt.focus}
+  Start: {rslt.start}
+  Reason: {str(rslt.reason).strip()}
+""")
     return success

@@ -1,2 +1,4 @@
 Errors:
-  Datatype constraint (http://www.w3.org/2001/XMLSchema#string) on BNode
+  Focus: https://biolink.github.io/biolink-model/ontology/biolink.ttl
+  Start: http://bioentity.io/vocab/SchemaDefinition
+  Reason: Datatype constraint (http://www.w3.org/2001/XMLSchema#string) on BNode
