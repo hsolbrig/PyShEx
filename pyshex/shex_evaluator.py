@@ -244,7 +244,9 @@ def genargs(prog: Optional[str]=None) -> ArgumentParser:
     return parser
 
 
-def evaluate_cli(argv: Optional[List[str]] = None, prog: Optional[str]=None) -> bool:
+def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[str]=None) -> bool:
+    if isinstance(argv, str):
+        argv = argv.split()
     opts = genargs(prog).parse_args(argv if argv is not None else sys.argv[1:])
     if opts.slurper and opts.flattener:
         print("Error: Cannot combine slurper and flattener graphs")
