@@ -1,0 +1,3 @@
+BASE <http://a.example/base/>
+PREFIX : <http://a.example/>
+:s1 :p :o1 .
