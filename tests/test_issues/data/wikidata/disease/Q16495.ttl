@@ -1,6 +1,5 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix gw: <http://micel.io/genewiki/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
 @prefix ns1: <http://wikiba.se/ontology#> .
 @prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
@@ -29,18 +28,18 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
         "Ридел тириядиты",
         "Тиреоидит Риделя",
         "التهاب الدرقية المنسوب لريدل" ;
-    schema:dateModified "2018-11-15T14:10:05+00:00"^^xsd:dateTime ;
+    schema:dateModified "2018-12-28T17:43:55+00:00"^^xsd:dateTime ;
     schema:description "Schilddrüsenentzündung",
         "enfermedad de las tiroides",
         "maladie rare",
         "malattia infiammatoria cronica della tiroide, presumibilmente di origine autoimmune",
         "thyroid disease",
         "болезнь" ;
-    schema:version 790556251 ;
+    schema:version 821820560 ;
     ns1:identifiers 11 ;
     ns1:sitelinks 7 ;
     ns1:statements 18 ;
-    ns1:timestamp "2018-11-15T14:10:27+00:00"^^xsd:dateTime ;
+    ns1:timestamp "2018-12-28T17:43:56+00:00"^^xsd:dateTime ;
     skos:altLabel "Eisenharte Struma",
         "Riedel disease",
         "Riedel fibrosing thyroiditis",
@@ -83,24 +82,31 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
     wdt:P673 "125243" ;
     wdt:P699 "DOID:14351" .
 
-<http://www.wikidata.org/entity/statement/Q16495-1B32DEC1-CCB5-4CDC-8F34-DBAFE407E96F> prov:wasDerivedFrom <http://www.wikidata.org/reference/843ea8eb15bbe598186d950e8aad64827f766b93> ;
+<http://www.wikidata.org/entity/statement/Q16495-18BC875D-6F6A-4717-AFCD-63BC19789657> prov:wasDerivedFrom <http://www.wikidata.org/reference/689e8b7f01a56e608ce2c7d695d694815726a33f> ;
+    ps:P1550 "64744" .
+
+<http://www.wikidata.org/entity/statement/Q16495-1B32DEC1-CCB5-4CDC-8F34-DBAFE407E96F> prov:wasDerivedFrom <http://www.wikidata.org/reference/225ee46a997c988aec287bd7a4f9b02e91276770> ;
     ps:P31 wd:Q12136 .
 
-<http://www.wikidata.org/entity/statement/Q16495-43D786B3-3536-4344-B3A8-6B8477E7973A> ps:P2888 <http://www.orpha.net/ORDO/Orphanet_64744> .
+<http://www.wikidata.org/entity/statement/Q16495-357A07B7-0DEB-4193-9E16-BC2EBB0E8534> prov:wasDerivedFrom <http://www.wikidata.org/reference/225ee46a997c988aec287bd7a4f9b02e91276770>,
+        <http://www.wikidata.org/reference/689e8b7f01a56e608ce2c7d695d694815726a33f> ;
+    ps:P4229 "E06.5" .
 
-<http://www.wikidata.org/entity/statement/Q16495-745656D7-C770-4B56-9B39-1989749261F5> prov:wasDerivedFrom <http://www.wikidata.org/reference/af8786d79a71bead6987055cfdd96ca2dffb1070> ;
-    ps:P2888 <http://purl.obolibrary.org/obo/DOID_14351> .
+<http://www.wikidata.org/entity/statement/Q16495-45F8B743-6C6E-41AF-A964-FBE7827E28A3> prov:wasDerivedFrom <http://www.wikidata.org/reference/689e8b7f01a56e608ce2c7d695d694815726a33f> ;
+    ps:P2892 "C0154162" .
 
-<http://www.wikidata.org/entity/statement/Q16495-CDA1E5F6-763A-4B90-9B47-58600178E0BB> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
-    ps:P2888 <http://identifiers.org/doid/DOID:14351> .
+<http://www.wikidata.org/entity/statement/Q16495-6A205BEC-7D57-4693-95DC-024C51EFE84B> prov:wasDerivedFrom <http://www.wikidata.org/reference/225ee46a997c988aec287bd7a4f9b02e91276770> ;
+    ps:P1748 "C35827" .
 
-<http://www.wikidata.org/entity/statement/Q16495-FFC24865-86D9-47D2-A9F2-9A421139952F> prov:wasDerivedFrom <http://www.wikidata.org/reference/843ea8eb15bbe598186d950e8aad64827f766b93> .
+<http://www.wikidata.org/entity/statement/Q16495-A40D0BF5-8EE0-48EF-A699-70DFB5A7ECC3> prov:wasDerivedFrom <http://www.wikidata.org/reference/225ee46a997c988aec287bd7a4f9b02e91276770> ;
+    ps:P699 "DOID:14351" .
 
-<http://www.wikidata.org/reference/af8786d79a71bead6987055cfdd96ca2dffb1070> pr:P248 wd:Q55451031 ;
-    pr:P699 "DOID:14351" ;
-    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+<http://www.wikidata.org/entity/statement/Q16495-A56E4FB2-1D84-4FF7-BB7F-61509083F087> prov:wasDerivedFrom <http://www.wikidata.org/reference/225ee46a997c988aec287bd7a4f9b02e91276770> ;
+    ps:P2892 "C0154162" .
 
-<http://www.wikidata.org/reference/843ea8eb15bbe598186d950e8aad64827f766b93> pr:P248 wd:Q55451031 ;
-    pr:P699 "DOID:14351" ;
-    pr:P813 "2018-07-11T00:00:00+00:00"^^xsd:dateTime .
+<http://www.wikidata.org/entity/statement/Q16495-FFC24865-86D9-47D2-A9F2-9A421139952F> prov:wasDerivedFrom <http://www.wikidata.org/reference/225ee46a997c988aec287bd7a4f9b02e91276770> ;
+    ps:P279 wd:Q11835644 .
+
+<http://www.wikidata.org/entity/statement/q16495-4E477F82-7542-491C-896C-DCD876DF3FC2> prov:wasDerivedFrom <http://www.wikidata.org/reference/fa278ebfc458360e5aed63d5058cca83c46134f1> ;
+    ps:P493 "245.3" .
 

@@ -11,7 +11,7 @@ class WikiDiseasesTestCase(WikiDataTestCase):
 
     """
     # This will change over time - expected values for the first 8 results
-    expected_results = [False, False, False, False, False, True, False, False]
+    expected_results = [True, True, True, True, True, True, True, True]
 
     @unittest.skipIf(skip_diseases, "Wikidata disease test disabled")
     def test_diseases(self):

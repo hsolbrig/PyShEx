@@ -1,6 +1,5 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix gw: <http://micel.io/genewiki/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
 @prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix ns2: <http://wikiba.se/ontology#> .
@@ -116,7 +115,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "精神病",
         "精神障礙",
         "정신 질환" ;
-    schema:dateModified "2018-12-04T07:54:27+00:00"^^xsd:dateTime ;
+    schema:dateModified "2019-01-07T16:40:58+00:00"^^xsd:dateTime ;
     schema:description "Anormalidade, sofrimento ou comprometimento da ordem psicológica e/ou mental",
         "affezione che colpisce il pensiero, i sentimenti o il comportamento di una persona",
         "alteración de los procesos cognitivos y afectivos del desarrollo",
@@ -133,11 +132,11 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "состояние психики, отличное от преобладающей нормы, включающее симптомы и признаки, которые обычно причиняют страдание и препятствуют личностному функционированию",
         "הפרעה נפשית",
         "同心理、神經有關嘅疾病" ;
-    schema:version 804681453 ;
+    schema:version 829571964 ;
     ns2:identifiers 32 ;
     ns2:sitelinks 102 ;
     ns2:statements 70 ;
-    ns2:timestamp "2018-12-04T07:54:35+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2019-01-07T16:41:40+00:00"^^xsd:dateTime ;
     skos:altLabel "Gemütskrankheit",
         "Psychische Erkrankung",
         "Psychische Erkrankungen",
@@ -356,29 +355,69 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     wdt:P910 wd:Q6902639 ;
     wdt:P948 <http://commons.wikimedia.org/wiki/Special:FilePath/Starry%20night%20banner.jpg> .
 
-<http://www.wikidata.org/entity/statement/Q12135-09ad8697-4e33-3086-adc0-d05ca1725b18> prov:wasDerivedFrom <http://www.wikidata.org/reference/2ca2f08bf943e2003a85a1aa7211b21a56faa345> .
+<http://www.wikidata.org/entity/statement/Q12135-09ad8697-4e33-3086-adc0-d05ca1725b18> prov:wasDerivedFrom <http://www.wikidata.org/reference/cb5740d2ef5bd33c2e0ae364d9cd7e294b9b362e> ;
+    ps:P279 wd:Q12136 .
 
-<http://www.wikidata.org/entity/statement/Q12135-2676FDBB-DD4F-420F-9975-0F4B0B7495B8> prov:wasDerivedFrom <http://www.wikidata.org/reference/54240871ff28386ac8671126df5f845fa74dfc41> ;
-    ps:P2888 <http://purl.obolibrary.org/obo/DOID_0050329> .
+<http://www.wikidata.org/entity/statement/Q12135-23C58F61-3722-4011-A59C-C298108F6AA8> prov:wasDerivedFrom <http://www.wikidata.org/reference/2ca2f08bf943e2003a85a1aa7211b21a56faa345>,
+        <http://www.wikidata.org/reference/d2fb62272bb3ab747b816e7d005fa9fc30e65640> ;
+    ps:P2892 "C0004936" .
 
-<http://www.wikidata.org/entity/statement/Q12135-350F011E-3EDE-47A6-855C-4ACAB9DF90E3> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
-    ps:P2888 <http://identifiers.org/doid/DOID:150> .
+<http://www.wikidata.org/entity/statement/Q12135-29D28508-AF3F-45E6-BD80-4DF89F83043B> prov:wasDerivedFrom <http://www.wikidata.org/reference/fbe2d59b22f826370439637ef29c4e9b454cf42b> ;
+    pq:P4390 wd:Q39894595 ;
+    ps:P486 "D001523" .
 
-<http://www.wikidata.org/entity/statement/Q12135-3F9AE78D-F2F1-4DD8-A6B2-B765EDF5D73E> prov:wasDerivedFrom <http://www.wikidata.org/reference/2ca2f08bf943e2003a85a1aa7211b21a56faa345> ;
+<http://www.wikidata.org/entity/statement/Q12135-3A4F4540-6A61-49C3-9E45-0344F16813F9> prov:wasDerivedFrom <http://www.wikidata.org/reference/fbe2d59b22f826370439637ef29c4e9b454cf42b> ;
+    ps:P1748 "C2893" .
+
+<http://www.wikidata.org/entity/statement/Q12135-3F9AE78D-F2F1-4DD8-A6B2-B765EDF5D73E> prov:wasDerivedFrom <http://www.wikidata.org/reference/cb5740d2ef5bd33c2e0ae364d9cd7e294b9b362e> ;
     ps:P31 wd:Q12136 .
 
-<http://www.wikidata.org/entity/statement/Q12135-503B67AD-7EEA-4F4B-8C5C-381BE4B76277> prov:wasDerivedFrom <http://www.wikidata.org/reference/8a9a83c7a4d3db4a7698bddad49317ce5ae11464> ;
-    ps:P2888 <http://purl.obolibrary.org/obo/DOID_150> .
+<http://www.wikidata.org/entity/statement/Q12135-40BF8559-7F6C-45FC-B291-8895AC9738D7> prov:wasDerivedFrom <http://www.wikidata.org/reference/2ca2f08bf943e2003a85a1aa7211b21a56faa345>,
+        <http://www.wikidata.org/reference/d2fb62272bb3ab747b816e7d005fa9fc30e65640> ;
+    pq:P4390 wd:Q39893449 ;
+    ps:P486 "D001523" .
 
-<http://www.wikidata.org/reference/54240871ff28386ac8671126df5f845fa74dfc41> pr:P248 wd:Q55451031 ;
-    pr:P699 "DOID:0050329" ;
-    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+<http://www.wikidata.org/entity/statement/Q12135-47AEDAF6-B4A3-4D39-A26C-A832BCD7512A> prov:wasDerivedFrom <http://www.wikidata.org/reference/cb5740d2ef5bd33c2e0ae364d9cd7e294b9b362e> ;
+    ps:P1748 "C2893" .
 
-<http://www.wikidata.org/reference/8a9a83c7a4d3db4a7698bddad49317ce5ae11464> pr:P248 wd:Q55451031 ;
-    pr:P699 "DOID:150" ;
-    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+<http://www.wikidata.org/entity/statement/Q12135-5008E4C6-B970-4B62-97BB-8859DE94BBB2> prov:wasDerivedFrom <http://www.wikidata.org/reference/2ca2f08bf943e2003a85a1aa7211b21a56faa345>,
+        <http://www.wikidata.org/reference/d2fb62272bb3ab747b816e7d005fa9fc30e65640> ;
+    ps:P699 "DOID:150" .
 
-<http://www.wikidata.org/reference/2ca2f08bf943e2003a85a1aa7211b21a56faa345> pr:P248 wd:Q55451031 ;
-    pr:P699 "DOID:150" ;
-    pr:P813 "2018-07-11T00:00:00+00:00"^^xsd:dateTime .
+<http://www.wikidata.org/entity/statement/Q12135-5251CD64-15DA-4CF5-8B26-D59859D32C5F> prov:wasDerivedFrom <http://www.wikidata.org/reference/cb5740d2ef5bd33c2e0ae364d9cd7e294b9b362e> ;
+    ps:P699 "DOID:150" .
+
+<http://www.wikidata.org/entity/statement/Q12135-651BD972-84A7-4268-8E6F-E4FC39FC5C1C> prov:wasDerivedFrom <http://www.wikidata.org/reference/cb5740d2ef5bd33c2e0ae364d9cd7e294b9b362e>,
+        <http://www.wikidata.org/reference/d2fb62272bb3ab747b816e7d005fa9fc30e65640> ;
+    ps:P4229 "F99" .
+
+<http://www.wikidata.org/entity/statement/Q12135-6FDD474B-C9B8-4643-AE9C-D8F5CFDC289D> prov:wasDerivedFrom <http://www.wikidata.org/reference/2ca2f08bf943e2003a85a1aa7211b21a56faa345>,
+        <http://www.wikidata.org/reference/d2fb62272bb3ab747b816e7d005fa9fc30e65640> ;
+    ps:P1748 "C2893" .
+
+<http://www.wikidata.org/entity/statement/Q12135-7A34FA7C-BD3E-44C3-8413-6A29F4FDD723> prov:wasDerivedFrom <http://www.wikidata.org/reference/fbe2d59b22f826370439637ef29c4e9b454cf42b> ;
+    ps:P2892 "C0029516" .
+
+<http://www.wikidata.org/entity/statement/Q12135-85128C43-2BC8-4C60-99DB-26083AF4276E> prov:wasDerivedFrom <http://www.wikidata.org/reference/fbe2d59b22f826370439637ef29c4e9b454cf42b> ;
+    pq:P4390 wd:Q39893184 ;
+    ps:P486 "D011618" .
+
+<http://www.wikidata.org/entity/statement/Q12135-8C115F97-7D62-47AD-9480-5CE942D5A098> prov:wasDerivedFrom <http://www.wikidata.org/reference/cb5740d2ef5bd33c2e0ae364d9cd7e294b9b362e> ;
+    ps:P2892 "C0004936" .
+
+<http://www.wikidata.org/entity/statement/Q12135-9995E3A4-BD94-4341-B248-F8562C7C5993> prov:wasDerivedFrom <http://www.wikidata.org/reference/fbe2d59b22f826370439637ef29c4e9b454cf42b> ;
+    ps:P4229 "F00.F99" .
+
+<http://www.wikidata.org/entity/statement/Q12135-B369266D-FCED-45C8-B6F6-E4A8A662AE8A> prov:wasDerivedFrom <http://www.wikidata.org/reference/cb5740d2ef5bd33c2e0ae364d9cd7e294b9b362e>,
+        <http://www.wikidata.org/reference/d2fb62272bb3ab747b816e7d005fa9fc30e65640> ;
+    ps:P4229 "F99-F99" .
+
+<http://www.wikidata.org/entity/statement/Q12135-B39268A6-F273-43CE-BE8A-AEACE1997FB1> prov:wasDerivedFrom <http://www.wikidata.org/reference/cb5740d2ef5bd33c2e0ae364d9cd7e294b9b362e> ;
+    ps:P486 "D001523" .
+
+<http://www.wikidata.org/entity/statement/Q12135-DDD25A09-18BB-4D72-B8D7-092F80C079A8> prov:wasDerivedFrom <http://www.wikidata.org/reference/3361cb1aa15b5e63ca8e2721c57779b8024fbec4> ;
+    ps:P699 "DOID:0050329" .
+
+<http://www.wikidata.org/entity/statement/Q12135-E689FAB7-C03E-4081-A2D4-B4EC25AC577B> prov:wasDerivedFrom <http://www.wikidata.org/reference/fbe2d59b22f826370439637ef29c4e9b454cf42b> ;
+    ps:P699 "DOID:150" .
 

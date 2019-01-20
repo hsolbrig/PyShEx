@@ -1,6 +1,5 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix gw: <http://micel.io/genewiki/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
 @prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix ns2: <http://wikiba.se/ontology#> .
@@ -45,6 +44,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         "Міастенія",
         "миастения",
         "миястиния",
+        "Միասթենիա գրավիս",
         "מיאסטניה גראביס",
         "میاستنی گراویس",
         "وهن عضلي وبيل",
@@ -58,7 +58,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         "重症筋無力症",
         "重症肌無力",
         "중증 근무력증" ;
-    schema:dateModified "2018-12-06T15:23:55+00:00"^^xsd:dateTime ;
+    schema:dateModified "2018-12-31T08:02:32+00:00"^^xsd:dateTime ;
     schema:description "Human disease",
         "enfermedad neuromuscular",
         "maladie neuromusculaire auto-immune",
@@ -69,11 +69,11 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         "مَرَضٌ بَشَرِيٌّ",
         "ଦୀର୍ଘକାଳୀନ ସ୍ନାୟୁ-ମାଂସପେଶୀ ରୋଗ",
         "アセチルコリンなどの抗体により神経・筋伝達が阻害されるために筋肉の易疲労性や脱力が起こる自己免疫疾患" ;
-    schema:version 806164313 ;
+    schema:version 823738857 ;
     ns2:identifiers 35 ;
-    ns2:sitelinks 53 ;
+    ns2:sitelinks 54 ;
     ns2:statements 69 ;
-    ns2:timestamp "2018-12-06T15:23:57+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2018-12-31T08:02:44+00:00"^^xsd:dateTime ;
     skos:altLabel "Acquired myasthenia",
         "Astenik Bulbar Falaj",
         "Astenik bulbar falaj",
@@ -113,8 +113,8 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
     p:P227 <http://www.wikidata.org/entity/statement/Q8285-B4947E35-A9B2-42CF-81E3-E586282DB35A> ;
     p:P2293 <http://www.wikidata.org/entity/statement/Q8285-69C82108-9520-4B2D-8E25-8F3E5953C5CA>,
         <http://www.wikidata.org/entity/statement/Q8285-d94a335e-4004-aab5-c6be-abacb456abb9> ;
-    p:P279 <http://www.wikidata.org/entity/statement/Q8285-4D777AFF-DE62-4354-B842-DA1BD12B7649>,
-        <http://www.wikidata.org/entity/statement/Q8285-5742AEE5-CA88-4BC9-88F1-4BB6A39AFAD8>,
+    p:P279 <http://www.wikidata.org/entity/statement/Q8285-232AFF6E-D988-4229-9316-B2B8C1F4E4B9>,
+        <http://www.wikidata.org/entity/statement/Q8285-4D777AFF-DE62-4354-B842-DA1BD12B7649>,
         <http://www.wikidata.org/entity/statement/Q8285-5B0197F0-BE37-4D76-9B21-2D87D3063A1A>,
         <http://www.wikidata.org/entity/statement/Q8285-6405713D-4553-49D4-AF8A-A6545C819D18>,
         <http://www.wikidata.org/entity/statement/Q8285-D080E30F-AFEF-4874-A3EB-76499D195266> ;
@@ -188,7 +188,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
     wdt:P2293 wd:Q18035291,
         wd:Q24598664 ;
     wdt:P279 wd:Q18553609,
-        wd:Q18553610,
+        wd:Q18556300,
         wd:Q3843811,
         wd:Q55788305,
         wd:Q7002430 ;
@@ -227,39 +227,65 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
     wdt:P699 "DOID:437" ;
     wdt:P910 wd:Q13334582 .
 
-<http://www.wikidata.org/entity/statement/Q8285-2315A94E-59E4-4F83-9092-9894D09E25EE> ps:P2888 <http://www.orpha.net/ORDO/Orphanet_589> .
+<http://www.wikidata.org/entity/statement/Q8285-02BEA97E-F8BC-415A-95E1-934E608D9A08> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081>,
+        <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
+    ps:P2892 "C1260409" .
 
-<http://www.wikidata.org/entity/statement/Q8285-403F2EBC-943C-492B-9204-020F29470EEC> prov:wasDerivedFrom <http://www.wikidata.org/reference/9a31d8017f4d6fc85f5ea918a3d2c17d0ee5078a> ;
-    ps:P2888 <http://purl.obolibrary.org/obo/DOID_437> .
+<http://www.wikidata.org/entity/statement/Q8285-12D69484-3B63-4F00-977E-E16612BE1871> prov:wasDerivedFrom <http://www.wikidata.org/reference/2493d0662bbc4c5ffdc5ac0cf882daf542a81ca9> ;
+    ps:P486 "D009157" .
 
-<http://www.wikidata.org/entity/statement/Q8285-4D777AFF-DE62-4354-B842-DA1BD12B7649> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081> .
+<http://www.wikidata.org/entity/statement/Q8285-47C4A79C-9C58-4D1F-A1F7-E4D839D3F714> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081>,
+        <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
+    ps:P2892 "C0026896" .
 
-<http://www.wikidata.org/entity/statement/Q8285-5742AEE5-CA88-4BC9-88F1-4BB6A39AFAD8> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081> .
+<http://www.wikidata.org/entity/statement/Q8285-6701A92B-C7D0-4525-9DED-BDA37CD25115> prov:wasDerivedFrom <http://www.wikidata.org/reference/2493d0662bbc4c5ffdc5ac0cf882daf542a81ca9> ;
+    ps:P1748 "C60989" .
 
-<http://www.wikidata.org/entity/statement/Q8285-5B0197F0-BE37-4D76-9B21-2D87D3063A1A> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081> .
+<http://www.wikidata.org/entity/statement/Q8285-70DF763A-6F62-4118-B6AE-FEA12363FE95> prov:wasDerivedFrom <http://www.wikidata.org/reference/2493d0662bbc4c5ffdc5ac0cf882daf542a81ca9>,
+        <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
+    ps:P4229 "G70.0" .
 
-<http://www.wikidata.org/entity/statement/Q8285-6405713D-4553-49D4-AF8A-A6545C819D18> prov:wasDerivedFrom <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> .
+<http://www.wikidata.org/entity/statement/Q8285-7735179B-C005-47F4-A19B-4CA0C081968A> prov:wasDerivedFrom <http://www.wikidata.org/reference/2493d0662bbc4c5ffdc5ac0cf882daf542a81ca9> ;
+    ps:P699 "DOID:437" .
 
-<http://www.wikidata.org/entity/statement/Q8285-B661E065-8470-4730-813E-FB35FF6FA2B6> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081> ;
+<http://www.wikidata.org/entity/statement/Q8285-83A0B16E-8002-4CAB-ABB2-AEEB5077360F> prov:wasDerivedFrom <http://www.wikidata.org/reference/2493d0662bbc4c5ffdc5ac0cf882daf542a81ca9>,
+        <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
+    ps:P4229 "G70.00" .
+
+<http://www.wikidata.org/entity/statement/Q8285-B661E065-8470-4730-813E-FB35FF6FA2B6> prov:wasDerivedFrom <http://www.wikidata.org/reference/2493d0662bbc4c5ffdc5ac0cf882daf542a81ca9> ;
     ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/entity/statement/Q8285-B8ECADA4-DF3E-4526-B510-8FA9D2D99169> prov:wasDerivedFrom <http://www.wikidata.org/reference/2493d0662bbc4c5ffdc5ac0cf882daf542a81ca9> ;
+    ps:P2892 "C1260409" .
 
 <http://www.wikidata.org/entity/statement/Q8285-C171765D-B54C-44BA-9F1A-92401A255140> prov:wasDerivedFrom <http://www.wikidata.org/reference/16ed5d93833f10dd153347f992d98a32ac6b443a>,
         <http://www.wikidata.org/reference/c1898be4ea67095fa65352a57b656520726de306> ;
     ps:P31 wd:Q42303753 .
 
-<http://www.wikidata.org/entity/statement/Q8285-D080E30F-AFEF-4874-A3EB-76499D195266> prov:wasDerivedFrom <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> .
+<http://www.wikidata.org/entity/statement/Q8285-D080E30F-AFEF-4874-A3EB-76499D195266> prov:wasDerivedFrom <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
+    ps:P279 wd:Q3843811 .
 
-<http://www.wikidata.org/entity/statement/Q8285-F2090158-5F6C-492C-BCC7-AB06BBD8B23E> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
-    ps:P2888 <http://identifiers.org/doid/DOID:437> .
+<http://www.wikidata.org/entity/statement/Q8285-D84741F3-7D47-49A5-9C69-D59CDEB2B685> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081>,
+        <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
+    pq:P4390 wd:Q39893449 ;
+    ps:P486 "D009157" .
 
-<http://www.wikidata.org/reference/9a31d8017f4d6fc85f5ea918a3d2c17d0ee5078a> pr:P248 wd:Q55451031 ;
-    pr:P699 "DOID:437" ;
-    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+<http://www.wikidata.org/entity/statement/Q8285-ECFD96DB-F159-496A-AF2B-D52B1EABF2A0> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081>,
+        <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
+    ps:P699 "DOID:437" .
 
-<http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> pr:P248 wd:Q55345445 ;
-    pr:P813 "2018-07-28T00:00:00+00:00"^^xsd:dateTime .
+<http://www.wikidata.org/entity/statement/Q8285-FA12E144-F939-483F-AA6C-0BF3DDB0DD49> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081>,
+        <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
+    ps:P1748 "C60989" .
 
-<http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081> pr:P248 wd:Q55451031 ;
-    pr:P699 "DOID:437" ;
-    pr:P813 "2018-07-11T00:00:00+00:00"^^xsd:dateTime .
+<http://www.wikidata.org/entity/statement/Q8285-FE1C1E2C-E1AF-453E-A4F1-611FB3009758> prov:wasDerivedFrom <http://www.wikidata.org/reference/2493d0662bbc4c5ffdc5ac0cf882daf542a81ca9> ;
+    ps:P2892 "C0026896" .
+
+<http://www.wikidata.org/entity/statement/Q8285-cab2e7ce-44b0-2e12-971f-65a1c414180f> prov:wasDerivedFrom <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
+    ps:P1550 "589" .
+
+<http://www.wikidata.org/entity/statement/q8285-3C8807D8-089C-4F2A-BADB-C8C6EF5C1F17> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081>,
+        <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
+    pq:P4390 wd:Q39893449 ;
+    ps:P492 "254200" .
 

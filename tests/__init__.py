@@ -3,7 +3,7 @@
 refresh_files = False
 
 # True means skip the disease test
-skip_diseases = True
+skip_diseases = False
 
 # Settings for rdflib parsing issue
 
