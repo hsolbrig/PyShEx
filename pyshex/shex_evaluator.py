@@ -1,6 +1,6 @@
 import sys
 from argparse import ArgumentParser
-from typing import Optional, Union, List, NamedTuple, Type
+from typing import Optional, Union, List, NamedTuple, Type, Iterator
 
 from CFGraph import CFGraph
 from ShExJSG import ShExJ, ShExC
@@ -13,6 +13,7 @@ from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import FixedShapeMap, ShapeAssociation, START, \
     START_TYPE
 from pyshex.utils.schema_loader import SchemaLoader
+from pyshex.utils.sparql_query import SPARQLQuery
 
 
 class EvaluationResult(NamedTuple):
@@ -24,7 +25,7 @@ class EvaluationResult(NamedTuple):
 
 # Handy types
 URI = Union[str, URIRef]        # URI as an argument
-URILIST = List[URI]             # List of URI's as an argument
+URILIST = Iterator[URI]             # List of URI's as an argument
 URIPARM = Union[URI, URILIST]       # Choice of URI or list
 STARTPARM = [Union[Type[START], START_TYPE, URILIST]]
 
@@ -230,7 +231,7 @@ def genargs(prog: Optional[str]=None) -> ArgumentParser:
     :return: parser
     """
     parser = ArgumentParser(prog)
-    parser.add_argument("rdf", help="Input RDF file or SPARQL endpoint if slurper option set")
+    parser.add_argument("rdf", help="Input RDF file or SPARQL endpoint if slurper or sparql options")
     parser.add_argument("shex", help="ShEx specification")
     parser.add_argument("-f", "--format", help="Input RDF Format", default="turtle")
     parser.add_argument("-s", "--start", help="Start shape. If absent use ShEx start node.")
@@ -241,6 +242,7 @@ def genargs(prog: Optional[str]=None) -> ArgumentParser:
     parser.add_argument("-d", "--debug", action="store_true", help="Add debug output")
     parser.add_argument("-ss", "--slurper", action="store_true", help="Use SPARQL slurper graph")
     parser.add_argument("-cf", "--flattener", action="store_true", help="Use RDF Collections flattener graph")
+    parser.add_argument("-sq", "--sparql", help="SPARQL query to generate focus nodes")
     return parser
 
 
@@ -248,6 +250,8 @@ def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[st
     if isinstance(argv, str):
         argv = argv.split()
     opts = genargs(prog).parse_args(argv if argv is not None else sys.argv[1:])
+    if opts.sparql:
+        opts.slurper = True
     if opts.slurper and opts.flattener:
         print("Error: Cannot combine slurper and flattener graphs")
         return False
@@ -259,8 +263,8 @@ def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[st
     g = SlurpyGraph(opts.rdf) if opts.slurper else CFGraph() if opts.flattener else Graph()
     if not opts.slurper:
         g.load(opts.rdf, format=opts.format)
-    if not (opts.focus or opts.allsubjects):
-        print('Error: You must specify one or more graph focus nodes or use the "-A" option')
+    if not (opts.focus or opts.allsubjects or opts.sparql):
+        print('Error: You must specify one or more graph focus nodes, supply a SPARQL query, or use the "-A" option')
         return False
 
     start = []
@@ -272,6 +276,13 @@ def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[st
         start.append(START_TYPE(opts.startpredicate))
     if not start:
         start.append(START)
+    if opts.sparql:
+        # TODO: switch to a generator idiom all the way through
+        if opts.focus is None:
+            opts.focus = []
+        elif not isinstance(opts.focus, list):
+            opts.focus = [opts.focus]
+        opts.focus += list(SPARQLQuery(opts.rdf, opts.sparql, ).focus_nodes())
 
     result = ShExEvaluator(g, opts.shex, opts.focus, start, rdf_format=opts.format, debug=opts.debug).evaluate()
     success = all(r.result for r in result)

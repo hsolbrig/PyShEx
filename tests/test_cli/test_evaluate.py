@@ -3,6 +3,7 @@ import unittest
 from typing import List
 
 from pyshex.shex_evaluator import evaluate_cli
+from tests import datadir
 from tests.test_cli.clitests import CLITestCase
 
 update_test_files: bool = False
@@ -26,9 +27,8 @@ class ShexEvaluatorTestCase(CLITestCase):
         self.assertFalse(update_test_files, "Updating test files")
 
     def test_biolink(self):
-        base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data'))
-        shex = os.path.join(base_dir,'schemas', 'meta.shex')
-        rdf = os.path.join(base_dir, 'validation', 'biolink-model.ttl')
+        shex = os.path.join(datadir,'schemas', 'meta.shex')
+        rdf = os.path.join(datadir, 'validation', 'biolink-model.ttl')
         self.do_test([rdf, shex, '-fn', 'https://biolink.github.io/biolink-model/ontology/biolink.ttl',
                       '-s', 'http://bioentity.io/vocab/SchemaDefinition', '-cf'], 'biolinkpass',
                      update_test_file=update_test_files)
@@ -38,23 +38,28 @@ class ShexEvaluatorTestCase(CLITestCase):
         self.assertFalse(update_test_files, "Updating test files")
 
     def test_start_type(self):
-        """ This tests four subjects, two having one RDF type, one having two and one having none """
-        base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data'))
-        shex = os.path.join(base_dir, 'schemas', 'biolink-modelnc.shex')
-        rdf = os.path.join(base_dir, 'validation', 'type-samples.ttl')
+        """ Test four subjects, two having one RDF type, one having two and one having none """
+        shex = os.path.join(datadir, 'schemas', 'biolink-modelnc.shex')
+        rdf = os.path.join(datadir, 'validation', 'type-samples.ttl')
         self.do_test([rdf, shex, '-A', '-ut', '-cf'], 'type-samples', update_test_file=update_test_files,
                      failexpected=True)
         self.assertFalse(update_test_files, "Updating test files")
 
     def test_start_predicate(self):
-        """ This tests four subjects, two having one RDF type, one having two and one having none """
-        base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data'))
-        shex = os.path.join(base_dir, 'schemas', 'biolink-modelnc.shex')
-        rdf = os.path.join(base_dir, 'validation', 'type-samples.ttl')
+        """ Test four subjects, two having one RDF type, one having two and one having none """
+        shex = os.path.join(datadir, 'schemas', 'biolink-modelnc.shex')
+        rdf = os.path.join(datadir, 'validation', 'type-samples.ttl')
         self.do_test([rdf, shex, '-A', '-sp', 'http://w3id.org/biolink/vocab/type', '-cf'], 'pred-samples',
                      update_test_file=update_test_files,
                      failexpected=True)
         self.assertFalse(update_test_files, "Updating test files")
+
+    def test_sparql_query(self):
+        """ Test a sample DrugBank sparql query """
+        shex = os.path.join(datadir, 't1.shex')
+        sparql = os.path.join(datadir, 't1.sparql')
+        rdf = 'http://wifo5-04.informatik.uni-mannheim.de/drugbank/sparql'
+        self.do_test([rdf, shex, '-sq', sparql], 't1', update_test_file=update_test_files)
 
 
 if __name__ == '__main__':

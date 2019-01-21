@@ -1,0 +1,7 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX vocabClass: <http://wifo5-04.informatik.uni-mannheim.de/drugbank/vocab/resource/class/>
+
+SELECT DISTINCT ?item WHERE {
+  ?item rdf:type vocabClass:Offer
+}
+LIMIT 10

@@ -26,7 +26,8 @@ class Issue25TestCase(unittest.TestCase):
         outf = StringIO()
         with(redirect_stdout(outf)):
             evaluate_cli(f"{rdffile} {shexfile} -s http://example.org/shapes/S".split())
-        self.assertEqual('''Error: You must specify one or more graph focus nodes or use the "-A" option''',
+        self.assertEqual('Error: You must specify one or more graph focus nodes, supply a SPARQL query, '
+                         'or use the "-A" option',
                          outf.getvalue().strip())
         outf = StringIO()
         with(redirect_stdout(outf)):

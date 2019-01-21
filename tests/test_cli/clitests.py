@@ -79,8 +79,6 @@ class CLITestCase(unittest.TestCase):
                 if old_txt != new_txt and tox_wrap_fix:
                     old_txt = textwrap.fill(old_txt, 60)
                     new_txt = textwrap.fill(new_txt, 60)
-                if old_txt != new_txt:
-                    print("HERE")
                 self.assertEqual(old_txt, new_txt)
         else:
             print("Directory comparison needs to be added", file=sys.stderr)

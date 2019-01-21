@@ -496,17 +496,11 @@ wd:Q36956 rdfs:label "Abïl",
 <http://www.wikidata.org/entity/statement/Q36956-2583C4D4-43BC-4CCB-9D54-4D5C06E276A3> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
     ps:P1550 "548" .
 
-<http://www.wikidata.org/entity/statement/Q36956-34E90E02-E0DE-47F2-8D8F-C37B9006BA4E> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
-    ps:P279 wd:Q7705854 .
-
 <http://www.wikidata.org/entity/statement/Q36956-49073C43-1C8C-4735-90F6-CC427B4F010F> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
     ps:P4229 "A30.9" .
 
 <http://www.wikidata.org/entity/statement/Q36956-7AD8E76F-2EC8-43B5-B877-7A256EB89203> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
     ps:P1748 "C84824" .
-
-<http://www.wikidata.org/entity/statement/Q36956-95A8F53C-CA5F-4591-892E-66A254D3F493> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
-    ps:P279 wd:Q18553247 .
 
 <http://www.wikidata.org/entity/statement/Q36956-B7FDF963-38AF-4C3D-ACE5-3E8DD6FB2F98> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
     ps:P31 wd:Q12136 .

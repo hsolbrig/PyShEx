@@ -87,7 +87,7 @@ wd:Q42982 rdfs:label "Ailléirge",
         "敏感",
         "过敏",
         "알레르기" ;
-    schema:dateModified "2019-01-14T14:18:18+00:00"^^xsd:dateTime ;
+    schema:dateModified "2019-01-21T10:31:09+00:00"^^xsd:dateTime ;
     schema:description "Alergi tgl:06-10-2017",
         "Krankheit",
         "enfermedad del sistema inmunitario",
@@ -101,11 +101,11 @@ wd:Q42982 rdfs:label "Ailléirge",
         "prehnaná, neprimeraná reakcia imunitného systému organizmu na látky, s ktorými sa bežne stretávame v našom prostredí",
         "الأرجية هي مرض مفرط او حساسية مفرطة اتجاه مواد غير ممرضة عادة",
         "বেশির ভাগ মানুষের জন্য সহনীয় পদার্থের বিরুদ্ধে অনাক্রম্যতন্ত্রের প্রতিক্রিয়া" ;
-    schema:version 834283183 ;
+    schema:version 838768299 ;
     ns2:identifiers 30 ;
     ns2:sitelinks 98 ;
-    ns2:statements 60 ;
-    ns2:timestamp "2019-01-14T14:18:22+00:00"^^xsd:dateTime ;
+    ns2:statements 61 ;
+    ns2:timestamp "2019-01-21T10:31:20+00:00"^^xsd:dateTime ;
     skos:altLabel "Alergi",
         "Alergias",
         "Alergica",
@@ -225,6 +225,7 @@ wd:Q42982 rdfs:label "Ailléirge",
     p:P1542 <http://www.wikidata.org/entity/statement/Q42982-E8349AD8-90F7-46C0-9F39-6E2D2ADEAAAA> ;
     p:P1748 <http://www.wikidata.org/entity/statement/Q42982-644FC133-E4FA-44F1-8CC3-38C48516FAAF> ;
     p:P18 <http://www.wikidata.org/entity/statement/Q42982-6a18d13f-4af6-8a62-bd25-90f38358224d> ;
+    p:P1889 <http://www.wikidata.org/entity/statement/Q42982-b425053a-4935-6a8d-da2f-1f74ad255d3f> ;
     p:P1995 <http://www.wikidata.org/entity/statement/Q42982-84C3CDE2-6CDA-4DC9-B98C-A83076903C16> ;
     p:P2176 <http://www.wikidata.org/entity/statement/Q42982-24DF4080-F113-4258-B196-120715FC76EE>,
         <http://www.wikidata.org/entity/statement/Q42982-425F3472-A440-4C6F-A4AF-613B1C77E601>,
@@ -296,6 +297,7 @@ wd:Q42982 rdfs:label "Ailléirge",
     wdt:P1542 wd:Q1115038 ;
     wdt:P1748 "C3114" ;
     wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Allergy%20degranulation%20processes%2001.svg> ;
+    wdt:P1889 wd:Q1195509 ;
     wdt:P1995 wd:Q101929 ;
     wdt:P2176 wd:Q1074056,
         wd:Q11426176,

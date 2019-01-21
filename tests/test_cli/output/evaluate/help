@@ -1,10 +1,10 @@
 usage: shexeval [-h] [-f FORMAT] [-s START] [-ut] [-sp STARTPREDICATE]
-                [-fn FOCUS] [-A] [-d] [-ss] [-cf]
+                [-fn FOCUS] [-A] [-d] [-ss] [-cf] [-sq SPARQL]
                 rdf shex
 
 positional arguments:
-  rdf                   Input RDF file or SPARQL endpoint if slurper option
-                        set
+  rdf                   Input RDF file or SPARQL endpoint if slurper or sparql
+                        options
   shex                  ShEx specification
 
 optional arguments:
@@ -22,3 +22,5 @@ optional arguments:
   -d, --debug           Add debug output
   -ss, --slurper        Use SPARQL slurper graph
   -cf, --flattener      Use RDF Collections flattener graph
+  -sq SPARQL, --sparql SPARQL
+                        SPARQL query to generate focus nodes

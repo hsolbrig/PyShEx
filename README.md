@@ -29,7 +29,8 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.5.10 -- Fixed evaluator to load files, strings, etc. as ShEx
 * 0.5.11 -- Added Collections Flattening graph option to evaluator.
 * 0.5.12 -- Added -A option, catch missing start node early
-* 0.6.0 -- Added the -ut and -sp options to allow start nodes to be specified by rdf:type or an arbitrary predicate 
+* 0.6.0 -- Added the -ut and -sp options to allow start nodes to be specified by rdf:type or an arbitrary predicate
+* 0.6.1 -- Added the ability to supply a SPARQL Query (-sq option) 
 
 ## Installation
 ```bash
