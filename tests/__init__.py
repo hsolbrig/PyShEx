@@ -1,9 +1,13 @@
 
 # True means refresh all test files (only partially implemented at the moment)
+import os
+
 refresh_files = False
 
 # True means skip the disease test
 skip_diseases = False
+
+datadir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data'))
 
 # Settings for rdflib parsing issue
 

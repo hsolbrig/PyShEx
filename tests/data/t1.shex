@@ -1,0 +1,10 @@
+PREFIX drugbank: <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugbank/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <http://example.org/t1/>
+
+START=@:S1
+
+:S1 {foaf:page IRI+ ;
+     drugbank:limsDrugId xsd:string
+}

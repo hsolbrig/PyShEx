@@ -1,0 +1,44 @@
+@prefix biolink: <http://w3id.org/biolink/vocab/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data2services/model/association/carrier/01abe93fdc07dc6c94e9c43941af796f> a biolink:ChemicalToGeneAssociation ;
+    biolink:type biolink:ChemicalToGeneAssociation;
+    biolink:affects "Human" ;
+    rdf:object <http://identifiers.org/drugbank/BE0000530> ;
+    biolink:publications <http://identifiers.org/pubmed/29042751> ;
+    rdf:predicate biolink:affects_transport_of ;
+    rdf:subject <http://identifiers.org/drugbank/DB11827> .
+
+<http://data2services/model/association/carrier/08a1b683d4c1c1d97545fbfae62adc1b> a biolink:GeneToGeneProductRelationship,
+                                                                                    biolink:SequenceFeatureRelationship;
+    biolink:type biolink:SequenceFeatureRelationship;
+    biolink:affects "Human" ;
+    rdf:object <http://identifiers.org/drugbank/BE0000209> ;
+    biolink:publications <http://identifiers.org/pubmed/11752352>,
+        <http://identifiers.org/pubmed/17016423>,
+        <http://identifiers.org/pubmed/17139284> ;
+    rdf:predicate biolink:affects_transport_of ;
+    rdf:subject <http://identifiers.org/drugbank/DB01384> .
+
+<http://data2services/model/association/carrier/08b0f41254f99fe99092848ca0acd921>;
+    biolink:type biolink:ChemicalToGeneAssociation;
+    biolink:affects "Human" ;
+    rdf:object <http://identifiers.org/drugbank/BE0000438> ;
+    biolink:publications <http://identifiers.org/pubmed/10652246> ;
+    rdf:predicate biolink:affects_transport_of ;
+    rdf:subject <http://identifiers.org/drugbank/DB13751> .
+
+<http://data2services/model/association/carrier/0d329fcdcfe5555eec7c1a5d3bbdd735> a biolink:ChemicalToGeneAssociation ;
+    biolink:affects "Human" ;
+    rdf:object <http://identifiers.org/drugbank/BE0000209> ;
+    biolink:publications <http://identifiers.org/pubmed/11752352>,
+        <http://identifiers.org/pubmed/17016423>,
+        <http://identifiers.org/pubmed/17139284>,
+        <http://identifiers.org/pubmed/563315>,
+        <http://identifiers.org/pubmed/6800390>,
+        <http://identifiers.org/pubmed/7667198> ;
+    rdf:predicate biolink:affects_transport_of ;
+    rdf:subject <http://identifiers.org/drugbank/DB00860> .

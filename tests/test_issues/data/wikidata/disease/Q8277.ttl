@@ -1,6 +1,5 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix gw: <http://micel.io/genewiki/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
 @prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix ns2: <http://wikiba.se/ontology#> .
@@ -85,7 +84,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "多発性硬化症",
         "多發性硬化症",
         "다발성 경화증" ;
-    schema:dateModified "2018-10-24T13:21:15+00:00"^^xsd:dateTime ;
+    schema:dateModified "2018-12-28T19:35:56+00:00"^^xsd:dateTime ;
     schema:description "Doença desmielinizante em que são danificadas as bainhas de mielina à volta dos axónios do cérebro e a medula espinal, provocando desmielinização.",
         "Entmarkungserkrankung des zentralen Nervensystems",
         "Sygdom der rammer nervecellerne",
@@ -97,20 +96,22 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "enfermedad",
         "maladie auto-immune dégénérative (dérégulation de l'immunité, inflammation et dégénérescence des nerfs)",
         "malattia cronica autoimmune demielinizzante",
+        "neurologisk sjukdom",
         "przewlekła choroba ośrodkowego układu nerwowego",
         "ziekte van het zenuwstelsel",
         "φλεγμονώδης ασθένεια",
         "Поражение миелиновых оболочек нервных волокон с образованием бляшек",
+        "מחלה",
         "التهاب ينتج عن تلف الغشاء العازل للعصبونات في الدماغ والحبل الشوكي. يُعطّل هذا التلف قدرةَ أجزاءٍ من الجهاز العصبي على التواصل.",
-        "بیماری ام اس",
+        "یک بیماری خودایمنی",
         "एक रोग जिसमें मस्तिष्क तथा सुषुम्ना रज्जु शोथ के चारों ओर वसायुक्त माइलिन के आवरण क्षतिग्रस्त हो जाते हैं, जिससे माइलिन के आवरण नष्ट होने और घाव के निशान होने के साथ-साथ रोग के संकेत और लक्षणों के स्थूल क्रम उत्पन्न होते हैं",
         "একধরনের ডি-মায়েলিনেটিং মানব ব্যাধি যাতে মানব মস্তিষ্কে ও স্নায়ুরজ্জুতে বিদ্যমান স্নায়ুকোষগুলোকে আচ্ছাদনকারী অন্তরক আবরণ ক্ষতিগ্রস্ত হয়ে যায়",
         "뇌와 척수의 축삭 주변의 지방성 말이집을 감싸는 부분이 손상을 입어서 탈수질환과 흉터형성으로 이어지는 염증 질환이다." ;
-    schema:version 772012632 ;
-    ns2:identifiers 38 ;
+    schema:version 821862378 ;
+    ns2:identifiers 39 ;
     ns2:sitelinks 65 ;
-    ns2:statements 151 ;
-    ns2:timestamp "2018-10-24T15:18:21+00:00"^^xsd:dateTime ;
+    ns2:statements 159 ;
+    ns2:timestamp "2018-12-28T19:36:01+00:00"^^xsd:dateTime ;
     skos:altLabel "ED",
         "EM",
         "Encephalomyelitis disseminata",
@@ -124,6 +125,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "SM",
         "disseminated sclerosis",
         "dissemineret sklerose",
+        "disseminert sklerose",
         "encephalomyelitis disseminata",
         "esclerosi en plaques",
         "esclerosis multiple",
@@ -135,6 +137,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "polisclerosi",
         "sclerosi a placche",
         "sclerosi disseminata",
+        "sclerosis disseminata",
         "σκλήρυνση κατά πλάκας , διάχυτη εγκεφαλομυελίτιδα",
         "التصلب اللويحي",
         "التصلب اللويحي و العلاج الوظيفي",
@@ -160,6 +163,8 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         <http://www.wikidata.org/entity/statement/Q8277-1CD3AA55-D03D-4385-9AE3-69391933DE0F>,
         <http://www.wikidata.org/entity/statement/Q8277-1F2804F3-A2C0-413C-AC64-888713C076AC>,
         <http://www.wikidata.org/entity/statement/Q8277-2551981D-92D1-4A91-97D2-11751CFF6F7D>,
+        <http://www.wikidata.org/entity/statement/Q8277-39AAA176-0833-4B75-9DBE-7351D2F75F11>,
+        <http://www.wikidata.org/entity/statement/Q8277-4C6ECA03-C961-4A7B-9B06-0A21AE8C925D>,
         <http://www.wikidata.org/entity/statement/Q8277-5240AD2D-0DEA-4237-8164-2BB6F547B5DE>,
         <http://www.wikidata.org/entity/statement/Q8277-55E335D2-0BFA-4637-A1C6-FA4F08498695>,
         <http://www.wikidata.org/entity/statement/Q8277-583C6609-04E5-442D-89F7-63C2E90C5F67>,
@@ -167,12 +172,16 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         <http://www.wikidata.org/entity/statement/Q8277-65879F77-824D-4C97-8E6F-A5F06E7EE8B3>,
         <http://www.wikidata.org/entity/statement/Q8277-6A2A490A-7A6D-4228-959A-4309134A3793>,
         <http://www.wikidata.org/entity/statement/Q8277-72FA9AD7-F097-43AE-8A61-42C063FC0B7F>,
+        <http://www.wikidata.org/entity/statement/Q8277-85C463E9-E189-47D0-8DF7-F5E10581E3DE>,
         <http://www.wikidata.org/entity/statement/Q8277-860F9B0D-8721-40CD-BDE2-02561822D1D1>,
+        <http://www.wikidata.org/entity/statement/Q8277-868D7A13-BFF4-497B-9084-896DEE75ABFE>,
+        <http://www.wikidata.org/entity/statement/Q8277-8992C8F2-BA1B-4B41-BDEE-CCFD08C7FE94>,
         <http://www.wikidata.org/entity/statement/Q8277-9BCBD2D4-6B7F-4EB8-AEFD-47D05730E50E>,
         <http://www.wikidata.org/entity/statement/Q8277-A87163D9-41DC-4726-9915-78B753F9A16B>,
         <http://www.wikidata.org/entity/statement/Q8277-AA6FEE1B-5DF2-4D01-BB44-B14859285521>,
         <http://www.wikidata.org/entity/statement/Q8277-B25916C4-DF98-491F-845A-791B788A207A>,
         <http://www.wikidata.org/entity/statement/Q8277-B9DA173B-860E-4DCB-99DF-6E6065CB2E7F>,
+        <http://www.wikidata.org/entity/statement/Q8277-BC062116-03F2-4533-A821-D867C94C6F7E>,
         <http://www.wikidata.org/entity/statement/Q8277-DCA58156-3BB9-4B43-8B8D-C461A32B54D9>,
         <http://www.wikidata.org/entity/statement/Q8277-E232E26C-5D91-48FD-834A-E9F5E0FE2119>,
         <http://www.wikidata.org/entity/statement/Q8277-F4511B6A-B3B4-4980-A071-85129FC148ED>,
@@ -257,6 +266,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
     p:P31 <http://www.wikidata.org/entity/statement/Q8277-04A1D4C5-B311-4E55-854A-AEB765CD0B60>,
         <http://www.wikidata.org/entity/statement/Q8277-433E2373-6439-48C2-A370-0A26DCDBD288> ;
     p:P3219 <http://www.wikidata.org/entity/statement/Q8277-20553ce2-4799-7cac-cc97-eeaf70d1a395> ;
+    p:P3222 <http://www.wikidata.org/entity/statement/Q8277-9D25DBCE-B66A-44EF-9E7F-6AD51454F066> ;
     p:P3417 <http://www.wikidata.org/entity/statement/Q8277-2F02A7C9-3FB8-4BCD-A289-70F7A6F460A7> ;
     p:P3471 <http://www.wikidata.org/entity/statement/Q8277-2180F4CB-5C74-4681-ACCE-B7349EE03F66> ;
     p:P349 <http://www.wikidata.org/entity/statement/Q8277-9D861C08-4543-4528-9888-FEF41F8D9218> ;
@@ -292,6 +302,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         <http://www.wikidata.org/entity/statement/q8277-EEF3C0DE-E8CE-4840-B27A-117052249A1F> ;
     p:P699 <http://www.wikidata.org/entity/statement/Q8277-289E9629-1496-4706-A808-3F25FA02DC8A>,
         <http://www.wikidata.org/entity/statement/Q8277-8FFD0FA3-98F9-4D46-B3F2-E0CAE3C9C0BB> ;
+    p:P780 <http://www.wikidata.org/entity/statement/Q8277-a1877263-49db-3fde-4340-10c6315e2dd8> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q8277-8C11CC7E-192B-4C8A-8C79-F72C124BA1FE> ;
     p:P923 <http://www.wikidata.org/entity/statement/Q8277-2453d25c-4f59-9e07-cb4c-ec89998fb89d>,
         <http://www.wikidata.org/entity/statement/Q8277-9a1a35ab-48e1-b5f2-f718-0da1056b5744>,
@@ -313,10 +324,12 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
     wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/MS%20Demyelinisation%20CD68%2010xv2.jpg> ;
     wdt:P1995 wd:Q83042 ;
     wdt:P2176 wd:Q1851162,
+        wd:Q185690,
         wd:Q18939,
         wd:Q239426,
         wd:Q2450337,
         wd:Q252251,
+        wd:Q27087639,
         wd:Q2858961,
         wd:Q3077133,
         wd:Q372539,
@@ -329,6 +342,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         wd:Q412920,
         wd:Q413717,
         wd:Q414030,
+        wd:Q416132,
         wd:Q417222,
         wd:Q418123,
         wd:Q418913,
@@ -415,6 +429,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
     wdt:P31 wd:Q12136,
         wd:Q42303753 ;
     wdt:P3219 "sclerose-en-plaques" ;
+    wdt:P3222 "multipel-skleros" ;
     wdt:P3417 "Multiple-Sclerosis" ;
     wdt:P3471 "1953" ;
     wdt:P349 "00572494" ;
@@ -445,35 +460,81 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "1214270",
         "342254" ;
     wdt:P699 "DOID:2377" ;
+    wdt:P780 wd:Q58490835 ;
     wdt:P910 wd:Q9518131 ;
     wdt:P923 wd:Q161238,
         wd:Q208376,
         wd:Q719444 .
 
-<http://www.wikidata.org/entity/statement/Q8277-04A1D4C5-B311-4E55-854A-AEB765CD0B60> ps:P31 wd:Q42303753 .
+<http://www.wikidata.org/entity/statement/Q8277-008B577F-4126-41A2-A06F-BF72B72C6378> prov:wasDerivedFrom <http://www.wikidata.org/reference/c36bb3bf55ced0fb3e9487b9b54e155334f048cd> ;
+    ps:P2892 "C0026769" .
+
+<http://www.wikidata.org/entity/statement/Q8277-04A1D4C5-B311-4E55-854A-AEB765CD0B60> prov:wasDerivedFrom <http://www.wikidata.org/reference/4401fb23f92b82c762d72cd29b99c2148bc4ad20> ;
+    ps:P31 wd:Q42303753 .
+
+<http://www.wikidata.org/entity/statement/Q8277-289E9629-1496-4706-A808-3F25FA02DC8A> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a>,
+        <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> ;
+    ps:P699 "DOID:2377" .
+
+<http://www.wikidata.org/entity/statement/Q8277-2C25089F-76DC-4A84-81E5-2F827A45AEA6> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a>,
+        <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> ;
+    ps:P1748 "C3243" .
 
 <http://www.wikidata.org/entity/statement/Q8277-2F929C3B-F64D-4A58-85FF-BDCA7ADABCB1> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a>,
-        <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> .
+        <http://www.wikidata.org/reference/c36bb3bf55ced0fb3e9487b9b54e155334f048cd> ;
+    ps:P279 wd:Q1186703 .
 
-<http://www.wikidata.org/entity/statement/Q8277-433E2373-6439-48C2-A370-0A26DCDBD288> prov:wasDerivedFrom <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> ;
+<http://www.wikidata.org/entity/statement/Q8277-322D2AD3-14D6-4C86-868B-1A69379934BB> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a>,
+        <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> ;
+    pq:P4390 wd:Q39893967 ;
+    ps:P492 "612595" .
+
+<http://www.wikidata.org/entity/statement/Q8277-345a1dd1-4665-1986-7bac-409f9d9991a9> ps:P279 wd:Q19000726 .
+
+<http://www.wikidata.org/entity/statement/Q8277-34D1D8A0-AAC0-4309-BD0B-BC356D20A8C2> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a>,
+        <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> ;
+    pq:P4390 wd:Q39893967 ;
+    ps:P492 "612594" .
+
+<http://www.wikidata.org/entity/statement/Q8277-351A9828-AED9-4EC1-A079-2655EEB53676> prov:wasDerivedFrom <http://www.wikidata.org/reference/c36bb3bf55ced0fb3e9487b9b54e155334f048cd> ;
+    ps:P492 "612596" .
+
+<http://www.wikidata.org/entity/statement/Q8277-3BCB8D55-94EE-43E6-B68C-2CDF5C2EB978> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a> ;
+    pq:P4390 wd:Q39893967 ;
+    ps:P492 "614810" .
+
+<http://www.wikidata.org/entity/statement/Q8277-3E60EF48-E0FA-4EAD-9B4F-8ED39E9FDA0A> prov:wasDerivedFrom <http://www.wikidata.org/reference/c36bb3bf55ced0fb3e9487b9b54e155334f048cd> ;
+    ps:P492 "612595" .
+
+<http://www.wikidata.org/entity/statement/Q8277-433E2373-6439-48C2-A370-0A26DCDBD288> prov:wasDerivedFrom <http://www.wikidata.org/reference/c36bb3bf55ced0fb3e9487b9b54e155334f048cd> ;
     ps:P31 wd:Q12136 .
 
-<http://www.wikidata.org/entity/statement/Q8277-5DF65E3F-A99A-42A9-B6C4-94E2794CF480> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
-    ps:P2888 <http://identifiers.org/doid/DOID:2377> .
+<http://www.wikidata.org/entity/statement/Q8277-4827042B-62C8-4CF0-B700-14BFA0B2499B> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a>,
+        <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> ;
+    pq:P4390 wd:Q39893449 ;
+    ps:P486 "D009103" .
 
-<http://www.wikidata.org/entity/statement/Q8277-B90FD873-2590-4F53-ABE5-C16761151125> prov:wasDerivedFrom <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> .
+<http://www.wikidata.org/entity/statement/Q8277-62643617-F18F-4838-96B6-2051FA41FB44> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a>,
+        <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> ;
+    ps:P2892 "C0026769" .
 
-<http://www.wikidata.org/entity/statement/Q8277-F72B1D4B-192E-4A6A-BD98-3D7DCDA3852C> prov:wasDerivedFrom <http://www.wikidata.org/reference/cbfca0f44f7a87d31820a1dc5c4010d758454582> ;
-    ps:P2888 <http://purl.obolibrary.org/obo/DOID_2377> .
+<http://www.wikidata.org/entity/statement/Q8277-62CF6D20-E7C0-4894-ADAC-899B829D1351> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a> ;
+    pq:P4390 wd:Q39893967 ;
+    ps:P492 "126200" .
 
-<http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> pr:P248 wd:Q16335166 ;
-    pr:P854 <http://www.ebi.ac.uk/miriam/main/collections/MIR:00000233> .
+<http://www.wikidata.org/entity/statement/Q8277-67494F45-5FCF-4BFC-9E26-D223DCDB6868> prov:wasDerivedFrom <http://www.wikidata.org/reference/c36bb3bf55ced0fb3e9487b9b54e155334f048cd> ;
+    ps:P492 "612594" .
 
-<http://www.wikidata.org/reference/cbfca0f44f7a87d31820a1dc5c4010d758454582> pr:P248 wd:Q55451031 ;
-    pr:P699 "DOID:2377" ;
-    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+<http://www.wikidata.org/entity/statement/Q8277-745BA194-2E62-4125-A301-658ADB852872> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a>,
+        <http://www.wikidata.org/reference/c36bb3bf55ced0fb3e9487b9b54e155334f048cd> ;
+    ps:P4229 "G35" .
 
-<http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> pr:P248 wd:Q55451031 ;
-    pr:P699 "DOID:2377" ;
-    pr:P813 "2018-07-11T00:00:00+00:00"^^xsd:dateTime .
+<http://www.wikidata.org/entity/statement/Q8277-8FFD0FA3-98F9-4D46-B3F2-E0CAE3C9C0BB> prov:wasDerivedFrom <http://www.wikidata.org/reference/c36bb3bf55ced0fb3e9487b9b54e155334f048cd> ;
+    ps:P699 "DOID:2377" .
+
+<http://www.wikidata.org/entity/statement/Q8277-D25E63CC-87F3-4B69-BA5C-8210DB0AF516> prov:wasDerivedFrom <http://www.wikidata.org/reference/c36bb3bf55ced0fb3e9487b9b54e155334f048cd> ;
+    ps:P486 "D009103" .
+
+<http://www.wikidata.org/entity/statement/Q8277-FDE0912A-3785-4638-9B3E-E0677E4FB765> prov:wasDerivedFrom <http://www.wikidata.org/reference/c36bb3bf55ced0fb3e9487b9b54e155334f048cd> ;
+    ps:P1748 "C3243" .
 

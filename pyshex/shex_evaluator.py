@@ -1,34 +1,56 @@
 import sys
 from argparse import ArgumentParser
-from typing import Optional, Union, List, NamedTuple, Iterable
+from typing import Optional, Union, List, NamedTuple, Type, Iterator
 
 from CFGraph import CFGraph
 from ShExJSG import ShExJ, ShExC
-from rdflib import Graph, URIRef, Namespace
+from rdflib import Graph, URIRef, RDF
 from rdflib.util import guess_format
 from sparql_slurper import SlurpyGraph
 
 from pyshex.shape_expressions_language.p5_2_validation_definition import isValid
 from pyshex.shape_expressions_language.p5_context import Context
-from pyshex.shapemap_structure_and_language.p3_shapemap_structure import FixedShapeMap, ShapeAssociation, START
+from pyshex.shapemap_structure_and_language.p3_shapemap_structure import FixedShapeMap, ShapeAssociation, START, \
+    START_TYPE
 from pyshex.utils.schema_loader import SchemaLoader
+from pyshex.utils.sparql_query import SPARQLQuery
 
 
 class EvaluationResult(NamedTuple):
     result: bool
-    focus: URIRef
-    start: URIRef
+    focus: Optional[URIRef]
+    start: Optional[URIRef]
     reason: Optional[str]
 
 
 # Handy types
-URI = Union[str, URIRef]
-URILIST = List[URI]
-URIPARM = Union[str, URIRef, URILIST]
+URI = Union[str, URIRef]        # URI as an argument
+URILIST = Iterator[URI]             # List of URI's as an argument
+URIPARM = Union[URI, URILIST]       # Choice of URI or list
+STARTPARM = [Union[Type[START], START_TYPE, URILIST]]
 
 
-def normalize_uriparm(p: Optional[URIPARM]) -> Optional[List[URIRef]]:
-    return [URIRef(p)] if isinstance(p, str) else [p] if isinstance(p, URIRef) else p
+def normalize_uri(u: URI) -> URIRef:
+    """ Return a URIRef for a str or URIRef """
+    return u if isinstance(u, URIRef) else URIRef(str(u))
+
+
+def normalize_urilist(ul: URILIST) -> List[URIRef]:
+    """ Return a list of URIRefs for ul """
+    return [normalize_uri(u) for u in ul]
+
+
+def normalize_uriparm(p: URIPARM) -> List[URIRef]:
+    """ Return an optional list of URIRefs for p"""
+    return normalize_urilist(p) if isinstance(p, List) else \
+        normalize_urilist([p]) if isinstance(p, (str, URIRef)) else p
+
+
+def normalize_startparm(p: STARTPARM) -> List[Union[type(START), START_TYPE, URIRef]]:
+    """ Return the startspec for p """
+    if not isinstance(p, list):
+        p = [p]
+    return [normalize_uri(e) if isinstance(e, str) and e is not START else e for e in p]
 
 
 class ShExEvaluator:
@@ -38,7 +60,7 @@ class ShExEvaluator:
                  rdf: Optional[Union[str, Graph]] = None,
                  schema: Optional[Union[str, ShExJ.Schema]] = None,
                  focus: Optional[URIPARM] = None,
-                 start: Optional[URIPARM] = None,
+                 start: STARTPARM = None,
                  rdf_format: str = "turtle",
                  debug: bool = False,
                  debug_slurps: bool = False,
@@ -60,9 +82,8 @@ class ShExEvaluator:
         self._schema = None
         self.schema = schema
         self._focus = None
-        self.focus = normalize_uriparm(focus)
-        self._start = None
-        self.start = normalize_uriparm(start)
+        self.focus = focus
+        self.start = start
         self.debug = debug
         self.debug_slurps = debug_slurps
         self.over_slurp = over_slurp
@@ -109,13 +130,16 @@ class ShExEvaluator:
         :param shex:  Schema
         """
         if shex is not None:
-            shext = shex.strip()
-            if ('\n' in shex or '\r' in shex) or shext[0] in '#<_: ':
-                self._schema = SchemaLoader().loads(shex)
+            if isinstance(shex, ShExJ.Schema):
+                self._schema = shex
             else:
-                self._schema = SchemaLoader().load(shex) if isinstance(shex, str) else shex
-            if self._schema is None:
-                raise ValueError("Unable to parse shex file")
+                shext = shex.strip()
+                if ('\n' in shex or '\r' in shex) or shext[0] in '#<_: ':
+                    self._schema = SchemaLoader().loads(shex)
+                else:
+                    self._schema = SchemaLoader().load(shex) if isinstance(shex, str) else shex
+                if self._schema is None:
+                    raise ValueError("Unable to parse shex file")
 
     @property
     def focus(self) -> Optional[List[URIRef]]:
@@ -139,15 +163,10 @@ class ShExEvaluator:
 
         :param focus: None if focus should be all URIRefs in the graph otherwise a URI or list of URI's
         """
-        if focus is None:
-            self._focus = None
-        else:
-            if not isinstance(focus, Iterable) or isinstance(focus, (Namespace, URIRef)):
-                focus = [focus]
-            self._focus = [f if isinstance(f, URIRef) else URIRef(str(f)) for f in focus]
+        self._focus = normalize_uriparm(focus) if focus else None
 
     @property
-    def start(self) -> Optional[List[URIRef]]:
+    def start(self) -> STARTPARM:
         """
 
         :return: The schema start node(s)
@@ -155,49 +174,54 @@ class ShExEvaluator:
         return self._start
 
     @start.setter
-    def start(self, start: Optional[URIPARM]) -> None:
-        if start is None:
-            self._start = [START]
-        else:
-            if not isinstance(start, Iterable) or isinstance(start, (Namespace, URIRef)):
-                start = [start]
-            self._start = [s if isinstance(s, URIRef) else URIRef(str(s)) for s in start]
+    def start(self, start: STARTPARM) -> None:
+        self._start = normalize_startparm(start) if start else [START]
 
     def evaluate(self,
                  rdf: Optional[Union[str, Graph]] = None,
                  shex: Optional[Union[str, ShExJ.Schema]] = None,
                  focus: Optional[URIPARM] = None,
-                 start: Optional[URIPARM] = None,
+                 start: STARTPARM = None,
                  rdf_format: Optional[str] = None,
                  debug: Optional[bool] = None,
                  debug_slurps: Optional[bool] = None,
                  over_slurp: Optional[bool] = None) -> List[EvaluationResult]:
-        if rdf or shex or focus or start:
-            if not rdf_format:
-                rdf_format = self.rdf_format
-            evaluator = ShExEvaluator(rdf, shex, focus, start, rdf_format)
-            if rdf is None:
-                evaluator.g = self.g
-            if not shex:
-                evaluator._schema = self._schema
-            evaluator._focus = normalize_uriparm(focus) if focus else self._focus
-            evaluator._start = normalize_uriparm(start) if start else self._start
+        if rdf is not None or shex is not None or focus is not None or start is not None:
+            evaluator = ShExEvaluator(rdf if rdf is not None else self.g,
+                                      shex if shex is not None else self._schema,
+                                      focus if focus is not None else self.focus,
+                                      start if start is not None else self.start if self.start else START,
+                                      rdf_format if rdf_format is not None else self.rdf_format)
         else:
             evaluator = self
 
+        if START in self.start and evaluator._schema.start is None:
+            return [EvaluationResult(False, None, None, 'START node is not specified')]
+
         cntxt = Context(evaluator.g, evaluator._schema)
-        # TODO: Clean this up
         cntxt.debug_context.debug = debug if debug is not None else self.debug
         cntxt.debug_context.trace_slurps = debug_slurps if debug_slurps is not None else self.debug_slurps
         cntxt.over_slurp = self.over_slurp if over_slurp is not None else self.over_slurp
 
         rval = []
-        for start in evaluator.start:
-            for focus in evaluator.foci:
-                map_ = FixedShapeMap()
-                map_.add(ShapeAssociation(focus, start))
-                success, fail_reasons = isValid(cntxt, map_)
-                rval.append(EvaluationResult(success, focus, start, '\n'.join(fail_reasons) if not success else ''))
+        for focus in evaluator.foci:
+            start_list: List[Union[URIRef, START]] = []
+            for start in evaluator.start:
+                if start is START:
+                    start_list.append(evaluator._schema.start)
+                elif isinstance(start, START_TYPE):
+                    start_list += list(evaluator.g.objects(focus, start.start_predicate))
+                else:
+                    start_list.append(start)
+            if start_list:
+                for start_node in start_list:
+                    map_ = FixedShapeMap()
+                    map_.add(ShapeAssociation(focus, start_node))
+                    success, fail_reasons = isValid(cntxt, map_)
+                    rval.append(EvaluationResult(success, focus, start_node,
+                                                 '\n'.join(fail_reasons) if not success else ''))
+            else:
+                rval.append(EvaluationResult(False, focus, None, "No start node located"))
         return rval
 
 
@@ -207,32 +231,67 @@ def genargs(prog: Optional[str]=None) -> ArgumentParser:
     :return: parser
     """
     parser = ArgumentParser(prog)
-    parser.add_argument("rdf", help="Input RDF file or SPARQL endpoint if slurper option set")
+    parser.add_argument("rdf", help="Input RDF file or SPARQL endpoint if slurper or sparql options")
     parser.add_argument("shex", help="ShEx specification")
     parser.add_argument("-f", "--format", help="Input RDF Format", default="turtle")
-    parser.add_argument("-s", "--start", help="Start shape")
+    parser.add_argument("-s", "--start", help="Start shape. If absent use ShEx start node.")
+    parser.add_argument("-ut", "--usetype", help="Start shape is rdf:type of focus", action="store_true")
+    parser.add_argument("-sp", "--startpredicate", help="Start shape is object of this predicate")
     parser.add_argument("-fn", "--focus", help="RDF focus node")
+    parser.add_argument("-A", "--allsubjects", help="Evaluate all non-bnode subjects in the graph", action="store_true")
     parser.add_argument("-d", "--debug", action="store_true", help="Add debug output")
     parser.add_argument("-ss", "--slurper", action="store_true", help="Use SPARQL slurper graph")
     parser.add_argument("-cf", "--flattener", action="store_true", help="Use RDF Collections flattener graph")
+    parser.add_argument("-sq", "--sparql", help="SPARQL query to generate focus nodes")
     return parser
 
 
-def evaluate_cli(argv: Optional[List[str]] = None, prog: Optional[str]=None) -> bool:
+def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[str]=None) -> bool:
+    if isinstance(argv, str):
+        argv = argv.split()
     opts = genargs(prog).parse_args(argv if argv is not None else sys.argv[1:])
+    if opts.sparql:
+        opts.slurper = True
     if opts.slurper and opts.flattener:
-        print("Cannot combine slurper and flattener graphs")
+        print("Error: Cannot combine slurper and flattener graphs")
         return False
     if not opts.format:
         opts.format = guess_format(opts.rdf)
     if not opts.format:
-        print('Cannot determine RDF format from file name - use "--format" option')
+        print('Error: Cannot determine RDF format from file name - use "--format" option')
         return False
     g = SlurpyGraph(opts.rdf) if opts.slurper else CFGraph() if opts.flattener else Graph()
     if not opts.slurper:
         g.load(opts.rdf, format=opts.format)
-    result = ShExEvaluator(g, opts.shex, opts.focus, opts.start, rdf_format=opts.format, debug=opts.debug).evaluate()
-    for rslt in result:
-        if not rslt.result:
-            print(f"Error: {rslt.reason}")
-    return all(r.result for r in result)
+    if not (opts.focus or opts.allsubjects or opts.sparql):
+        print('Error: You must specify one or more graph focus nodes, supply a SPARQL query, or use the "-A" option')
+        return False
+
+    start = []
+    if opts.start:
+        start.append(opts.start)
+    if opts.usetype:
+        start.append(START_TYPE(RDF.type))
+    if opts.startpredicate:
+        start.append(START_TYPE(opts.startpredicate))
+    if not start:
+        start.append(START)
+    if opts.sparql:
+        # TODO: switch to a generator idiom all the way through
+        if opts.focus is None:
+            opts.focus = []
+        elif not isinstance(opts.focus, list):
+            opts.focus = [opts.focus]
+        opts.focus += list(SPARQLQuery(opts.rdf, opts.sparql, ).focus_nodes())
+
+    result = ShExEvaluator(g, opts.shex, opts.focus, start, rdf_format=opts.format, debug=opts.debug).evaluate()
+    success = all(r.result for r in result)
+    if not success:
+        print("Errors:")
+        for rslt in result:
+            if not rslt.result:
+                print(f"""  Focus: {rslt.focus}
+  Start: {rslt.start}
+  Reason: {str(rslt.reason).strip()}
+""")
+    return success

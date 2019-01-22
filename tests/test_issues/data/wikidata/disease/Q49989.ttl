@@ -1,6 +1,5 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix gw: <http://micel.io/genewiki/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
 @prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix ns2: <http://wikiba.se/ontology#> .
@@ -60,7 +59,7 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "クロイツフェルト・ヤコブ病",
         "克雅二氏病",
         "크로이츠펠트-야코프병" ;
-    schema:dateModified "2018-09-23T05:25:44+00:00"^^xsd:dateTime ;
+    schema:dateModified "2019-01-04T16:42:14+00:00"^^xsd:dateTime ;
     schema:description "Enfermedad neurológica priónica",
         "Gizakietan agertzen den entzefalopatia espongiformearen aldaeretako bat. Eragin txikia du, kasu bat milioi biztanleko eta urteko; oro har, 60 urtetik gorako pertsonei eragiten die",
         "beim Menschen tödlich verlaufende, durch Prionen übertragbare spongiforme Enzephalopathie",
@@ -71,11 +70,11 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "εκφυλιστική νευρολογική διαταραχή",
         "Наиболее распространенная прионная болезнь",
         "退行性神經系統疾病" ;
-    schema:version 751028024 ;
+    schema:version 827320622 ;
     ns2:identifiers 25 ;
-    ns2:sitelinks 43 ;
+    ns2:sitelinks 44 ;
     ns2:statements 41 ;
-    ns2:timestamp "2018-09-23T05:25:49+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2019-01-04T16:42:22+00:00"^^xsd:dateTime ;
     skos:altLabel "CJD",
         "CJD (Creutzfeldt Jakob disease)",
         "CJK",
@@ -175,25 +174,49 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
     wdt:P673 "1169688" ;
     wdt:P699 "DOID:11949" .
 
-<http://www.wikidata.org/entity/statement/Q49989-14687acd-4b55-e079-896f-8a41907883d8> prov:wasDerivedFrom <http://www.wikidata.org/reference/234b3e93b8bd40efdd1052cf059bc58456fd7702> .
+<http://www.wikidata.org/entity/statement/Q49989-14687acd-4b55-e079-896f-8a41907883d8> prov:wasDerivedFrom <http://www.wikidata.org/reference/d708c09d38f3df2c1216947cff1ccea7823cbbf1> ;
+    ps:P279 wd:Q703961 .
 
-<http://www.wikidata.org/entity/statement/Q49989-1E031876-26DF-4C59-911C-A659C330E9D6> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
-    ps:P2888 <http://identifiers.org/doid/DOID:11949> .
+<http://www.wikidata.org/entity/statement/Q49989-153AE8EB-C885-4CE9-A5A0-A7ADD6F10E11> prov:wasDerivedFrom <http://www.wikidata.org/reference/0eb3e54bf3498ae498be9e8de6c5f496033f3b41> ;
+    ps:P1748 "C26802" .
 
-<http://www.wikidata.org/entity/statement/Q49989-449BC356-5698-413F-82BC-CD107A248F6E> prov:wasDerivedFrom <http://www.wikidata.org/reference/234b3e93b8bd40efdd1052cf059bc58456fd7702> ;
+<http://www.wikidata.org/entity/statement/Q49989-161C34D8-88A3-4C6C-A153-02ED13E38DCF> prov:wasDerivedFrom <http://www.wikidata.org/reference/d708c09d38f3df2c1216947cff1ccea7823cbbf1> ;
+    ps:P699 "DOID:11949" .
+
+<http://www.wikidata.org/entity/statement/Q49989-295D9F3C-7C0F-46AC-B4CB-0150863FDFB3> prov:wasDerivedFrom <http://www.wikidata.org/reference/0eb3e54bf3498ae498be9e8de6c5f496033f3b41>,
+        <http://www.wikidata.org/reference/d708c09d38f3df2c1216947cff1ccea7823cbbf1> ;
+    ps:P4229 "A81.0" .
+
+<http://www.wikidata.org/entity/statement/Q49989-449BC356-5698-413F-82BC-CD107A248F6E> prov:wasDerivedFrom <http://www.wikidata.org/reference/d708c09d38f3df2c1216947cff1ccea7823cbbf1> ;
     ps:P31 wd:Q12136 .
 
-<http://www.wikidata.org/entity/statement/Q49989-96530A31-7E73-44BF-A941-27D006989943> prov:wasDerivedFrom <http://www.wikidata.org/reference/6c27c36c7f32470afb8fa4a59c9209604d176a22> ;
-    ps:P2888 <http://purl.obolibrary.org/obo/DOID_11949> .
+<http://www.wikidata.org/entity/statement/Q49989-4F8FF5BB-7AA7-4F09-A2E0-AAA3881BAF6B> prov:wasDerivedFrom <http://www.wikidata.org/reference/0eb3e54bf3498ae498be9e8de6c5f496033f3b41> ;
+    pq:P4390 wd:Q39893449 ;
+    ps:P486 "D007562" .
 
-<http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> pr:P248 wd:Q16335166 ;
-    pr:P854 <http://www.ebi.ac.uk/miriam/main/collections/MIR:00000233> .
+<http://www.wikidata.org/entity/statement/Q49989-73ADA3ED-AFFA-47C6-A69B-E1B30871914D> prov:wasDerivedFrom <http://www.wikidata.org/reference/d708c09d38f3df2c1216947cff1ccea7823cbbf1> ;
+    ps:P2892 "C0022336" .
 
-<http://www.wikidata.org/reference/6c27c36c7f32470afb8fa4a59c9209604d176a22> pr:P248 wd:Q55451031 ;
-    pr:P699 "DOID:11949" ;
-    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+<http://www.wikidata.org/entity/statement/Q49989-97809079-DD8E-4510-B93A-E706C1CFEC88> prov:wasDerivedFrom <http://www.wikidata.org/reference/0eb3e54bf3498ae498be9e8de6c5f496033f3b41> ;
+    pq:P4390 wd:Q39893967 ;
+    ps:P492 "123400" .
 
-<http://www.wikidata.org/reference/234b3e93b8bd40efdd1052cf059bc58456fd7702> pr:P248 wd:Q55451031 ;
-    pr:P699 "DOID:11949" ;
-    pr:P813 "2018-07-11T00:00:00+00:00"^^xsd:dateTime .
+<http://www.wikidata.org/entity/statement/Q49989-A12F8288-BD19-4A74-BACC-FCF0C8155824> prov:wasDerivedFrom <http://www.wikidata.org/reference/d708c09d38f3df2c1216947cff1ccea7823cbbf1> ;
+    ps:P486 "D007562" .
+
+<http://www.wikidata.org/entity/statement/Q49989-CE87CC4F-DE58-45D1-A89E-CEEB867ACB55> prov:wasDerivedFrom <http://www.wikidata.org/reference/0eb3e54bf3498ae498be9e8de6c5f496033f3b41> ;
+    ps:P2892 "C0022336" .
+
+<http://www.wikidata.org/entity/statement/Q49989-DD691227-8D8E-4836-8D6A-3FCDECAB8F62> prov:wasDerivedFrom <http://www.wikidata.org/reference/0eb3e54bf3498ae498be9e8de6c5f496033f3b41> ;
+    ps:P699 "DOID:11949" .
+
+<http://www.wikidata.org/entity/statement/Q49989-E70DE665-FDD4-4405-87F8-3620EE279F1A> prov:wasDerivedFrom <http://www.wikidata.org/reference/0eb3e54bf3498ae498be9e8de6c5f496033f3b41>,
+        <http://www.wikidata.org/reference/d708c09d38f3df2c1216947cff1ccea7823cbbf1> ;
+    ps:P4229 "A81.00" .
+
+<http://www.wikidata.org/entity/statement/Q49989-FD15AC23-9FC7-41F3-B5C0-FA1EA492AB7B> prov:wasDerivedFrom <http://www.wikidata.org/reference/d708c09d38f3df2c1216947cff1ccea7823cbbf1> ;
+    ps:P1748 "C26802" .
+
+<http://www.wikidata.org/entity/statement/q49989-59A0CD73-C93E-4AA7-90BF-84634675383C> prov:wasDerivedFrom <http://www.wikidata.org/reference/d708c09d38f3df2c1216947cff1ccea7823cbbf1> ;
+    ps:P492 "123400" .
 

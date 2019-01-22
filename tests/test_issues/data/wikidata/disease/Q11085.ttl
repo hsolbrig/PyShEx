@@ -1,0 +1,437 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix gw: <http://micel.io/genewiki/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q11085 rdfs:label "Buyuten",
+        "Bệnh Parkinson",
+        "Clefyd Parkinson",
+        "Enfermedá de Parkinson",
+        "Galar Parkinson",
+        "Karamdaman ni Parkinson",
+        "Maladia de Parkinson",
+        "Malatìa di Parkinson",
+        "Morbus Parkinson",
+        "Nexweşiya parkinsonê",
+        "Paakinsn diziiz",
+        "Parkinson disease",
+        "Parkinson hastalığı",
+        "Parkinson se siekte",
+        "Parkinson xəstəliyi",
+        "Parkinson ê pēⁿ",
+        "Parkinson's disease",
+        "Parkinson-Chranket",
+        "Parkinson-Krankheet",
+        "Parkinson-Krankheit",
+        "Parkinson-kór",
+        "Parkinsona malsano",
+        "Parkinsonan taudi",
+        "Parkinsonen gaixotasun",
+        "Parkinsoni tõbi",
+        "Parkinsonin tauti",
+        "Parkinsono liga",
+        "Parkinsonova bolest",
+        "Parkinsonova bolezen",
+        "Parkinsonova choroba",
+        "Parkinsonova nemoc",
+        "Parkinsons sjukdom",
+        "Parkinsons sygdom",
+        "Parkinsons sykdom",
+        "Parkinsonsveiki",
+        "Penyakit Parkinson",
+        "Pàrkinson",
+        "Párkinson",
+        "Pārkinsona slimība",
+        "Sakit Parkinson",
+        "Ugonjwa wa Parkinson",
+        "boala Parkinson",
+        "choroba Parkinsona",
+        "doença de Parkinson",
+        "enfermedad de Parkinson",
+        "maladie de Parkinson",
+        "malaltia de Parkinson",
+        "malattia di Parkinson",
+        "parkinsons disease",
+        "tinneas Parkinson",
+        "ziekte van Parkinson",
+        "Àrùn Parkinson",
+        "Νόσος του Πάρκινσον",
+        "Болест на Паркинсон",
+        "Паркинсон авыруы",
+        "Паркинсон ауруы",
+        "Паркинсонова болест",
+        "Паркинсоны өвчин",
+        "Хвароба Паркінсона",
+        "болезнь Паркинсона",
+        "хвороба Паркінсона",
+        "Պարկինսոնյան հիվանդություն",
+        "מחלת פרקינסון",
+        "פארקינסאן קרענק",
+        "د پارکېنسون ناروغي",
+        "مرض باركنسون",
+        "پارکنسن کی بیماری",
+        "پارکینسون",
+        "پارکینسۆن",
+        "ތުރުތުރުއަޅާ ބަލި",
+        "पार्किंसन रोग",
+        "पार्किनसन",
+        "পারকিনসন রোগ",
+        "ਪਾਰਕਿੰਸਨ ਰੋਗ",
+        "ପାର୍କିନ୍‌ସନ୍ ରୋଗ",
+        "நடுக்குவாதம்",
+        "പാർക്കിൻസൺസ് രോഗം",
+        "පාර්කින්සන් රෝගය",
+        "โรคพาร์กินสัน",
+        "პარკინსონის დაავადება",
+        "Ọrià Parkinson",
+        "パーキンソン病",
+        "帕金森氏症",
+        "帕金森病",
+        "柏金遜症",
+        "파킨슨병" ;
+    schema:dateModified "2018-12-04T19:50:05+00:00"^^xsd:dateTime ;
+    schema:description "Neurologisk sygdom",
+        "long-term degenerative neurological disorder that mainly affects movement",
+        "maladie neurologique chronique dégénérative",
+        "malaltia neurodegenerativa d'origen desconegut que sol aparèixer en persones d'edat avançada",
+        "malattia degenerativa del sistema nervoso centrale",
+        "neurologische Erkrankung",
+        "neurologische ziekte",
+        "nevrologisk lidelse med rystelser i kroppen",
+        "nieuleczalna choroba neurodegeneracyjna",
+        "parantumaton ja etenevä neurologinen sairaus",
+        "progressiv neurologisk sjukdom",
+        "trastorno neurodegenerativo crónico  (TNC)",
+        "хроническое заболевание мозга и центральной нервной системы",
+        "хронічне захворювання мозку й центральної нервової системи, яке в основному впливає на рухову систему",
+        "يحدث نتيجة لنقص موصل عصبي يدعي التوبالين",
+        "人类疾病",
+        "人類疾病" ;
+    schema:version 805015012 ;
+    ns1:identifiers 45 ;
+    ns1:sitelinks 88 ;
+    ns1:statements 130 ;
+    ns1:timestamp "2018-12-04T19:50:40+00:00"^^xsd:dateTime ;
+    skos:altLabel "Morbus Parkinson",
+        "Paralysis agitans",
+        "Parkinson",
+        "Parkinson disease",
+        "Parkinson's disease",
+        "Parkinson'sche Krankheit",
+        "Parkinson-Syndrom",
+        "Parkinsonintauti",
+        "Parkinsonismus",
+        "Parkinsonkrankheit",
+        "Parkinsons",
+        "Parkinsonsche Krankheit",
+        "Parkinson’sche Krankheit",
+        "Schüttelkrankheit",
+        "Schüttellähmung",
+        "Zitterlähmung",
+        "hypokinetisch rigide syndroom",
+        "mal de Parkinson",
+        "morbo di Parkinson",
+        "paralisi agitante",
+        "paralisia agitante",
+        "paralysis agitans",
+        "parkinson",
+        "parkinsonisme",
+        "parkinsonismo idiopatico",
+        "parkinsonismo primario",
+        "parkinsonismus idiopathicus",
+        "parkinsonsjukdom",
+        "sindrome ipocinetica rigida",
+        "тремтливий параліч" ;
+    p:P1051 <http://www.wikidata.org/entity/statement/Q11085-400C5D42-2EF9-4551-92FD-939FC3319137> ;
+    p:P1225 <http://www.wikidata.org/entity/statement/Q11085-255636F5-33A0-4949-90F5-32C0F51C4FA8> ;
+    p:P1296 <http://www.wikidata.org/entity/statement/Q11085-772C6BDE-F915-45E0-981B-8A74305ACDDF> ;
+    p:P1343 <http://www.wikidata.org/entity/statement/Q11085-117636C2-BFF3-48D3-97A7-F3BE2671572C>,
+        <http://www.wikidata.org/entity/statement/Q11085-456A4938-2F3E-4C4E-ADCF-8C570265546C> ;
+    p:P1375 <http://www.wikidata.org/entity/statement/Q11085-19b7df6a-4f3b-4c8a-f514-63c2c3962cfe> ;
+    p:P138 <http://www.wikidata.org/entity/statement/q11085-92114B5A-67EF-44B4-ABFC-ED59DAE48BF4> ;
+    p:P1417 <http://www.wikidata.org/entity/statement/Q11085-24C926BE-E19E-418A-AA90-CD2682777A64> ;
+    p:P1550 <http://www.wikidata.org/entity/statement/Q11085-579C1ADA-448E-4B4B-8A19-897C1343EF54>,
+        <http://www.wikidata.org/entity/statement/Q11085-F8FE4889-680E-4414-933C-9E32BA5B009D> ;
+    p:P1692 <http://www.wikidata.org/entity/statement/Q11085-325FF1BD-435E-4A57-A90D-81A9075214D9>,
+        <http://www.wikidata.org/entity/statement/Q11085-A573DB89-CBEC-4720-BCAE-0FB8065EDB90> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q11085-099B86E7-683F-48C9-9822-7D9D00964AC1>,
+        <http://www.wikidata.org/entity/statement/Q11085-48BF614D-A6EB-4949-922F-A932C14A798F> ;
+    p:P18 <http://www.wikidata.org/entity/statement/Q11085-29A75846-BD2A-4990-9614-F13209FD1ADE> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q11085-F9FB98C6-DC54-4419-87B6-EC8FE19FB9BE> ;
+    p:P2176 <http://www.wikidata.org/entity/statement/Q11085-095CE38A-6E03-489E-B66E-29B57A7D0DD4>,
+        <http://www.wikidata.org/entity/statement/Q11085-09BE5CA2-AC54-4B34-A589-82E34DE19432>,
+        <http://www.wikidata.org/entity/statement/Q11085-0A46A7EF-C1B6-4320-B64C-F3E925DF1D62>,
+        <http://www.wikidata.org/entity/statement/Q11085-0E579AAD-7C61-4F99-B6BF-E66A27AF0F14>,
+        <http://www.wikidata.org/entity/statement/Q11085-111308F6-0646-4075-B4B4-441C10726C8E>,
+        <http://www.wikidata.org/entity/statement/Q11085-125A0364-D65A-4BFA-AA10-8AA599937CAB>,
+        <http://www.wikidata.org/entity/statement/Q11085-1dcccffd-4694-3527-1696-b84c9c6a50be>,
+        <http://www.wikidata.org/entity/statement/Q11085-23FD4DFC-0AAC-46EF-97E6-63B899997BAC>,
+        <http://www.wikidata.org/entity/statement/Q11085-2D0C4840-A727-4069-8DF6-194FE359AAC1>,
+        <http://www.wikidata.org/entity/statement/Q11085-32953999-72FD-4A10-A3AE-F1446750C0F5>,
+        <http://www.wikidata.org/entity/statement/Q11085-3B577A13-3A9F-4616-8249-6DAEC55A6A6C>,
+        <http://www.wikidata.org/entity/statement/Q11085-3DCBA143-3969-4506-AFD9-2C7FB364B2F8>,
+        <http://www.wikidata.org/entity/statement/Q11085-404F223D-66CF-4679-99E8-058E94086932>,
+        <http://www.wikidata.org/entity/statement/Q11085-4180D56C-C989-4B96-ADD5-DB34830AFFC7>,
+        <http://www.wikidata.org/entity/statement/Q11085-45B1EDA7-9318-41FE-8198-CDD057896AE2>,
+        <http://www.wikidata.org/entity/statement/Q11085-46B27E0A-E325-4D07-860B-519059583F95>,
+        <http://www.wikidata.org/entity/statement/Q11085-558A5EA0-4EBF-44FE-A1F7-9354EEA5BB79>,
+        <http://www.wikidata.org/entity/statement/Q11085-59F75345-D9FC-43E0-A95F-96E3514C8CBF>,
+        <http://www.wikidata.org/entity/statement/Q11085-6D1B0888-1A3B-4054-B316-944C2FB033D7>,
+        <http://www.wikidata.org/entity/statement/Q11085-89AB662C-1446-47D0-8017-16AA8C932C2F>,
+        <http://www.wikidata.org/entity/statement/Q11085-8CA8370C-C750-42E0-AD54-72F8BD97E448>,
+        <http://www.wikidata.org/entity/statement/Q11085-A00594B6-B324-40C1-BF5A-20EED2116961>,
+        <http://www.wikidata.org/entity/statement/Q11085-AFCBDB56-6AA9-4A9A-9313-7A615065C084>,
+        <http://www.wikidata.org/entity/statement/Q11085-C1712EFA-5FEE-49D1-B9C0-E5735374997A>,
+        <http://www.wikidata.org/entity/statement/Q11085-CDD5CD0E-D4FF-4B43-A88B-D46EEE15C67F>,
+        <http://www.wikidata.org/entity/statement/Q11085-DFF7CF8B-138C-4368-835B-BE5B5A237E08>,
+        <http://www.wikidata.org/entity/statement/Q11085-E08F8500-E15E-4E4D-909C-E72EA0631F8C>,
+        <http://www.wikidata.org/entity/statement/Q11085-E1252E03-3EC1-4CD2-8F83-1E66AA5A393E>,
+        <http://www.wikidata.org/entity/statement/Q11085-E4D59A52-8D9C-4739-A751-54A08E8A7C47>,
+        <http://www.wikidata.org/entity/statement/Q11085-E7231A70-5ACF-48E7-B28B-8A2DA46A5AC0>,
+        <http://www.wikidata.org/entity/statement/Q11085-EC7B07A3-35BC-41EC-B895-D9197DB5BF53>,
+        <http://www.wikidata.org/entity/statement/Q11085-c562d92b-41d0-61ee-d6ee-92babd9b1618> ;
+    p:P227 <http://www.wikidata.org/entity/statement/q11085-80ef6b94-494b-d2a4-cf28-d81c1a695c39> ;
+    p:P2293 <http://www.wikidata.org/entity/statement/Q11085-08D69582-6505-44B5-8EF7-307F8AC8E41B>,
+        <http://www.wikidata.org/entity/statement/Q11085-0F16B9DE-F65F-4805-945D-84958520C235>,
+        <http://www.wikidata.org/entity/statement/Q11085-11120C46-8D90-415B-AE88-7E242A5BF862>,
+        <http://www.wikidata.org/entity/statement/Q11085-1F9A837B-62E4-4264-9AD7-D9E1D8633B22>,
+        <http://www.wikidata.org/entity/statement/Q11085-24598D2B-796B-4A35-B0BD-126D2E59D98C>,
+        <http://www.wikidata.org/entity/statement/Q11085-427C2471-9774-45DC-9081-21E29F51A139>,
+        <http://www.wikidata.org/entity/statement/Q11085-46FEF1FA-6399-45DB-B9F6-9199D02B6730>,
+        <http://www.wikidata.org/entity/statement/Q11085-64FC9DBD-BA2B-49BF-BE64-6B34051568B4>,
+        <http://www.wikidata.org/entity/statement/Q11085-75DFC24B-B8EE-4156-9A86-C400B2CBCD45>,
+        <http://www.wikidata.org/entity/statement/Q11085-79FC767B-0470-4CD2-9E8E-6733F1E8CAE3>,
+        <http://www.wikidata.org/entity/statement/Q11085-888D6ABD-076A-424A-A357-05C5B45674DF>,
+        <http://www.wikidata.org/entity/statement/Q11085-91AD5CCC-76A7-4175-9736-A8D2ADFE8868>,
+        <http://www.wikidata.org/entity/statement/Q11085-9729884D-EB41-42D8-8E5D-EE257D1CD526>,
+        <http://www.wikidata.org/entity/statement/Q11085-980C8968-FEDA-4C75-BA48-FE5C8B8200A3>,
+        <http://www.wikidata.org/entity/statement/Q11085-9FEB8583-79FD-44E2-87DA-0823E1CA2248>,
+        <http://www.wikidata.org/entity/statement/Q11085-A849C44F-B574-4C3E-A4A6-F14D79A6B4D2>,
+        <http://www.wikidata.org/entity/statement/Q11085-ABF24778-A8CE-4724-99AF-AAE8F2904BEF>,
+        <http://www.wikidata.org/entity/statement/Q11085-ADDA637B-6443-428F-B4A1-4406D0E8A26F>,
+        <http://www.wikidata.org/entity/statement/Q11085-B163592F-6E19-4F4D-BBCB-219964D08969>,
+        <http://www.wikidata.org/entity/statement/Q11085-B33B3B15-375B-492F-9479-C8A388D8BE05>,
+        <http://www.wikidata.org/entity/statement/Q11085-B3A0CEA6-AE90-4B62-8474-0EFB17F5D2EB>,
+        <http://www.wikidata.org/entity/statement/Q11085-C3A5EE90-94A1-4AB4-8194-3D410E722D6A>,
+        <http://www.wikidata.org/entity/statement/Q11085-CA5374A0-0090-435B-A410-40481E83A058>,
+        <http://www.wikidata.org/entity/statement/Q11085-D8C80402-ACB7-4F65-A181-24D5646DC587>,
+        <http://www.wikidata.org/entity/statement/Q11085-DAE6586A-EF01-45DA-945F-3A10205990E4>,
+        <http://www.wikidata.org/entity/statement/Q11085-DCBC216A-7858-480E-9C7A-7470E170CD74> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q11085-BE137008-EE2E-45D3-BA4D-596684817107> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q11085-3640A407-5E73-4679-B052-9A23A2D950C2>,
+        <http://www.wikidata.org/entity/statement/Q11085-39C72CFB-354D-49A2-936D-CF26330F6463>,
+        <http://www.wikidata.org/entity/statement/Q11085-7F2034F0-CCE9-4C70-BE7D-914FBE4F02B1> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q11085-2B158C8B-0AC9-4FB4-B61F-3BBCEB1300EF>,
+        <http://www.wikidata.org/entity/statement/Q11085-FC12E609-73EF-48A5-B124-42B830E880E3> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q11085-334CC030-17E6-4E80-898F-7A7E0189E596>,
+        <http://www.wikidata.org/entity/statement/Q11085-9e70fa40-47bf-e344-c23e-23e9e5043a39> ;
+    p:P3417 <http://www.wikidata.org/entity/statement/Q11085-C8F72EAA-BF87-4545-B5C4-76EABB68F932> ;
+    p:P349 <http://www.wikidata.org/entity/statement/Q11085-B32BDD11-8091-4180-A72B-9240DED8D0B4> ;
+    p:P3569 <http://www.wikidata.org/entity/statement/Q11085-E25D6D02-438C-4D26-BA36-0BE7B31164FF> ;
+    p:P373 <http://www.wikidata.org/entity/statement/q11085-4B0DF762-3555-462C-A9E7-E0053150FA7F> ;
+    p:P3827 <http://www.wikidata.org/entity/statement/Q11085-59B3EAF7-30D8-4B25-BB44-2E9A10282D17> ;
+    p:P4229 <http://www.wikidata.org/entity/statement/Q11085-8E19D8BC-8ACC-4971-BDBF-CCC01454D6C1>,
+        <http://www.wikidata.org/entity/statement/Q11085-b3fd49b3-4727-318e-ad14-bec00e73a0ee> ;
+    p:P4317 <http://www.wikidata.org/entity/statement/Q11085-DAE5A17C-B1C2-4B1E-A1A7-67B4F8C4ABC5> ;
+    p:P486 <http://www.wikidata.org/entity/statement/Q11085-8F112043-4429-4A81-957B-21DE01E69ABB>,
+        <http://www.wikidata.org/entity/statement/Q11085-E953CA38-2771-4864-8DD3-11BADFFB8A6E> ;
+    p:P492 <http://www.wikidata.org/entity/statement/Q11085-0CBD40D0-8DF1-4FB4-BE62-BEB37EEA4CDC>,
+        <http://www.wikidata.org/entity/statement/Q11085-1EE23565-3C61-4637-8CF0-6E9DFD34C042>,
+        <http://www.wikidata.org/entity/statement/Q11085-27FEB6E2-71FC-47C4-9BCD-98C59C35B050>,
+        <http://www.wikidata.org/entity/statement/Q11085-33C15FB0-FF98-4216-AEEE-4BF39DF917CD>,
+        <http://www.wikidata.org/entity/statement/Q11085-3EEB723D-70BE-4D04-8BD1-355783D91EF0>,
+        <http://www.wikidata.org/entity/statement/Q11085-4301B187-4490-4CBC-8871-ED82C320E32C>,
+        <http://www.wikidata.org/entity/statement/Q11085-5D309620-9E8C-4706-9878-92AA5D6B9F6D>,
+        <http://www.wikidata.org/entity/statement/Q11085-6DB60F7E-4CF8-43A6-A87C-9BBCA09CBE50>,
+        <http://www.wikidata.org/entity/statement/Q11085-7A0DFE1A-0E5B-4D81-A53A-360E34EC520E>,
+        <http://www.wikidata.org/entity/statement/Q11085-85E13AC3-DEC0-4680-89E7-636C30DB3402>,
+        <http://www.wikidata.org/entity/statement/Q11085-A66EB39A-0E19-494B-A118-9DD0BDF757D6>,
+        <http://www.wikidata.org/entity/statement/Q11085-B5DFD19E-8C77-4CAE-B233-2715ABCC5D03>,
+        <http://www.wikidata.org/entity/statement/Q11085-BA3DC6C2-C03C-42ED-A0E5-E38D0267027C>,
+        <http://www.wikidata.org/entity/statement/Q11085-BBE6CA89-0B6F-4711-BFD7-4FCD9A3F2F9F> ;
+    p:P508 <http://www.wikidata.org/entity/statement/q11085-DA6EDF46-FED2-4DE8-A412-AE8CB42380C5> ;
+    p:P5270 <http://www.wikidata.org/entity/statement/Q11085-C514FD5B-29A3-4DAB-89A6-7E25F584E985> ;
+    p:P557 <http://www.wikidata.org/entity/statement/q11085-0A934E72-E7A9-4650-9CC9-B36AEE6F47D5> ;
+    p:P604 <http://www.wikidata.org/entity/statement/q11085-563547DE-9B52-46A4-ACAC-EF7DC61EB48E> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q11085-5E114BF3-31BA-44CA-9AE4-17A3B2E140E1> ;
+    p:P667 <http://www.wikidata.org/entity/statement/Q11085-110EA884-C9EE-492E-B212-F75CDA3B4C47> ;
+    p:P668 <http://www.wikidata.org/entity/statement/q11085-24DBA1BF-301D-4277-8406-A96D05B8754B> ;
+    p:P672 <http://www.wikidata.org/entity/statement/Q11085-37E1498F-5754-420A-A1AF-D52143ADCC1F>,
+        <http://www.wikidata.org/entity/statement/Q11085-85D44D84-A847-44C5-8C01-EE6BCBC013DA>,
+        <http://www.wikidata.org/entity/statement/Q11085-8C1D7979-6B52-41C0-A2E3-6978AC8CFE89> ;
+    p:P673 <http://www.wikidata.org/entity/statement/q11085-9A04680F-5BC8-4E96-9426-00AEB2B90ED7> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q11085-7E81271A-8F0B-44BA-9B54-25AD5BF2DF71>,
+        <http://www.wikidata.org/entity/statement/Q11085-BE7C1AA0-053A-46AE-B409-85F660A8699E> ;
+    p:P780 <http://www.wikidata.org/entity/statement/Q11085-4da60db1-475c-5174-6c58-eb1dee5a868f>,
+        <http://www.wikidata.org/entity/statement/Q11085-4f31d98a-4694-d245-3ad7-0e7415e6a346>,
+        <http://www.wikidata.org/entity/statement/Q11085-5f06138a-4a91-81c1-83a1-708861f55d2f>,
+        <http://www.wikidata.org/entity/statement/Q11085-6a094cd9-47c2-3c14-2d61-b1c3319a64d0> ;
+    p:P910 <http://www.wikidata.org/entity/statement/Q11085-7B36883E-ECD5-4C64-B536-B882FE537F13> ;
+    p:P923 <http://www.wikidata.org/entity/statement/Q11085-26cbd487-4d8b-16c8-80f1-7fd713b58589>,
+        <http://www.wikidata.org/entity/statement/Q11085-b92f0fa8-466f-04a9-dc2f-5189dad8e8ea>,
+        <http://www.wikidata.org/entity/statement/Q11085-cacc60f1-49fd-1141-1aa9-e0ff685304ff> ;
+    p:P924 <http://www.wikidata.org/entity/statement/Q11085-025d47ab-4043-e37b-1488-b9e416ddb69b>,
+        <http://www.wikidata.org/entity/statement/Q11085-8c632179-4a76-7ea4-7a51-e61b2133872a> ;
+    ns2:P227 <http://d-nb.info/gnd/4044683-9> ;
+    ns2:P349 <http://id.ndl.go.jp/auth/ndlna/00571142> ;
+    ns2:P486 <http://id.nlm.nih.gov/mesh/D010300> ;
+    ns2:P508 <http://purl.org/bncf/tid/17148> ;
+    ns2:P646 <http://g.co/kg/m/0g02vk> ;
+    ns2:P672 <https://id.nlm.nih.gov/mesh/C10.228.140.079.862.500>,
+        <https://id.nlm.nih.gov/mesh/C10.228.662.600.400>,
+        <https://id.nlm.nih.gov/mesh/C10.574.812> ;
+    wdt:P1051 "13843" ;
+    wdt:P1225 "10647691" ;
+    wdt:P1296 "0049086" ;
+    wdt:P1343 wd:Q2041543,
+        wd:Q2657718 ;
+    wdt:P1375 "000175745" ;
+    wdt:P138 wd:Q336489 ;
+    wdt:P1417 "science/Parkinson-disease" ;
+    wdt:P1550 "2828" ;
+    wdt:P1692 "332",
+        "332.0" ;
+    wdt:P1748 "C26845" ;
+    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Sir%20William%20Richard%20Gowers%20Parkinson%20Disease%20sketch%201886.svg> ;
+    wdt:P1995 wd:Q83042 ;
+    wdt:P2176 wd:Q219957,
+        wd:Q2211523,
+        wd:Q221361,
+        wd:Q269111,
+        wd:Q28128,
+        wd:Q2991856,
+        wd:Q300989,
+        wd:Q402633,
+        wd:Q409761,
+        wd:Q411887,
+        wd:Q411985,
+        wd:Q413581,
+        wd:Q413840,
+        wd:Q413976,
+        wd:Q414225,
+        wd:Q414914,
+        wd:Q415752,
+        wd:Q416444,
+        wd:Q420590,
+        wd:Q420685,
+        wd:Q421304,
+        wd:Q423308,
+        wd:Q5037862,
+        wd:Q7194603,
+        wd:Q907853 ;
+    wdt:P227 "4044683-9" ;
+    wdt:P2293 wd:Q14860336,
+        wd:Q14862268,
+        wd:Q14865307,
+        wd:Q14904874,
+        wd:Q15331136,
+        wd:Q17853626,
+        wd:Q17912742,
+        wd:Q17914010,
+        wd:Q18031133,
+        wd:Q18031477,
+        wd:Q18032360,
+        wd:Q18033064,
+        wd:Q18033776,
+        wd:Q18035435,
+        wd:Q18036533,
+        wd:Q18036598,
+        wd:Q18045528,
+        wd:Q18046343,
+        wd:Q18048952,
+        wd:Q18049353,
+        wd:Q18052210,
+        wd:Q18052256,
+        wd:Q18053750,
+        wd:Q18297975,
+        wd:Q3011469,
+        wd:Q5145896 ;
+    wdt:P279 wd:Q16963368 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:14330>,
+        <http://purl.obolibrary.org/obo/DOID_14330>,
+        <http://www.orpha.net/ORDO/Orphanet_2828> ;
+    wdt:P2892 "C0030567" ;
+    wdt:P31 wd:Q12136,
+        wd:Q42303753 ;
+    wdt:P3417 "Parkinsons-Disease" ;
+    wdt:P349 "00571142" ;
+    wdt:P3569 "levenswetenschappen-en-geneeskunde/ziekte-van-parkinson" ;
+    wdt:P373 "Parkinson's disease" ;
+    wdt:P3827 "parkinson-disease" ;
+    wdt:P4229 "F02.3",
+        "G20" ;
+    wdt:P4317 "10251" ;
+    wdt:P486 "D010300" ;
+    wdt:P492 "168600",
+        "300557",
+        "556500",
+        "602404",
+        "606852",
+        "613164",
+        "616361",
+        "616710" ;
+    wdt:P508 "17148" ;
+    wdt:P5270 "MONDO:0005180" ;
+    wdt:P557 "9651" ;
+    wdt:P604 "000755" ;
+    wdt:P646 "/m/0g02vk" ;
+    wdt:P667 "N87" ;
+    wdt:P668 "NBK1223" ;
+    wdt:P672 "C10.228.140.079.862.500",
+        "C10.228.662.600.400",
+        "C10.574.812" ;
+    wdt:P673 "1831191" ;
+    wdt:P699 "DOID:14330" ;
+    wdt:P780 wd:Q117060,
+        wd:Q1641350,
+        wd:Q223907,
+        wd:Q827017 ;
+    wdt:P910 wd:Q8715619 ;
+    wdt:P923 wd:Q161238,
+        wd:Q208376,
+        wd:Q849737 ;
+    wdt:P924 wd:Q12140,
+        wd:Q40821 .
+
+<http://www.wikidata.org/entity/statement/Q11085-334CC030-17E6-4E80-898F-7A7E0189E596> prov:wasDerivedFrom <http://www.wikidata.org/reference/75e50a6dd14190f26173c98337cd0d94deacd585> ;
+    ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/entity/statement/Q11085-3640A407-5E73-4679-B052-9A23A2D950C2> ps:P2888 <http://www.orpha.net/ORDO/Orphanet_2828> .
+
+<http://www.wikidata.org/entity/statement/Q11085-39C72CFB-354D-49A2-936D-CF26330F6463> prov:wasDerivedFrom <http://www.wikidata.org/reference/210278dd3d24abdc0b0c89d3fc564d99a2de2e6e> ;
+    ps:P2888 <http://purl.obolibrary.org/obo/DOID_14330> .
+
+<http://www.wikidata.org/entity/statement/Q11085-7F2034F0-CCE9-4C70-BE7D-914FBE4F02B1> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
+    ps:P2888 <http://identifiers.org/doid/DOID:14330> .
+
+<http://www.wikidata.org/entity/statement/Q11085-9e70fa40-47bf-e344-c23e-23e9e5043a39> prov:wasDerivedFrom <http://www.wikidata.org/reference/bcfdfe23cf621b57597b4c4d9a611b598ef3364c>,
+        <http://www.wikidata.org/reference/da8ef301107ffdf9e85948e1870d1e0b1a3237ec> ;
+    ps:P31 wd:Q42303753 .
+
+<http://www.wikidata.org/entity/statement/Q11085-BE137008-EE2E-45D3-BA4D-596684817107> prov:wasDerivedFrom <http://www.wikidata.org/reference/501d220e0a97346b8b8ae078c4f9dbcdfc7a173a>,
+        <http://www.wikidata.org/reference/75e50a6dd14190f26173c98337cd0d94deacd585> .
+
+<http://www.wikidata.org/reference/210278dd3d24abdc0b0c89d3fc564d99a2de2e6e> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:14330" ;
+    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+
+<http://www.wikidata.org/reference/75e50a6dd14190f26173c98337cd0d94deacd585> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:14330" ;
+    pr:P813 "2018-07-11T00:00:00+00:00"^^xsd:dateTime .
+

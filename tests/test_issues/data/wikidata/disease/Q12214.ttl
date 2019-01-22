@@ -1,0 +1,434 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix gw: <http://micel.io/genewiki/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q12214 rdfs:label "Baztanga",
+        "Boginje",
+        "Bolgach",
+        "Breac",
+        "Brec'h",
+        "Brech wen",
+        "Bulutong",
+        "Bólusótt",
+        "Cacar",
+        "Chechak",
+        "Chuqu usu",
+        "Hernetõbi",
+        "Kiahne",
+        "Kopper",
+        "Mbiru'a",
+        "Muru unquy",
+        "Mātlālzahuatl",
+        "Ndui",
+        "Noerès plokes",
+        "Pandok",
+        "Picueta",
+        "Pocken",
+        "Pokke",
+        "Pooken",
+        "Pouken",
+        "Raupai",
+        "Raupā",
+        "Smallpox",
+        "Sumaalpax",
+        "Thian-hoa",
+        "Thiên-fâ",
+        "Tiĕng-huă",
+        "Təbii çiçək",
+        "Vaiolu",
+        "Vairòle",
+        "Variola",
+        "Varíola",
+        "Varōl",
+        "Veròla",
+        "Viruela",
+        "bakas",
+        "burtong",
+        "feketehimlő",
+        "isorokko",
+        "jedri",
+        "koppar",
+        "kopper",
+        "ospa prawdziwa",
+        "pokken",
+        "pravé neštovice",
+        "rõuged",
+        "smallpox",
+        "smittkoppor",
+        "vaiolo",
+        "variola",
+        "variole",
+        "variolo",
+        "variolă",
+        "varíola",
+        "verola",
+        "viruela",
+        "Çiçek hastalığı",
+        "Črne koze",
+        "Đậu mùa",
+        "Łóódtsoh",
+        "Ɛsɔ kʊdɔŋ",
+        "Ευλογιά",
+        "Едра шарка",
+        "Сипаници",
+        "Уоспа",
+        "Хæбуз",
+        "ЦIегьер",
+        "Чечек",
+        "Чәчәк",
+        "богиње",
+        "натуральна віспа",
+        "натуральная воспа",
+        "натуральная оспа",
+        "Қара шешек",
+        "Ҡара сәсәк",
+        "Բնական ծաղիկ",
+        "אבעבועות שחורות",
+        "פאקן",
+        "آبله",
+        "جدرى",
+        "جدري",
+        "چیچک",
+        "ھاوڵە",
+        "ކަށި ވިދުރި",
+        "चेचक",
+        "देवी (रोग)",
+        "मसूरिका",
+        "গুটিবসন্ত",
+        "বৰআই",
+        "ਚੇਚਕ",
+        "ବସନ୍ତ",
+        "பெரியம்மை",
+        "మశూచి",
+        "വസൂരി",
+        "ฝีดาษ",
+        "ကျောက်ကြီးရောဂါ",
+        "ᎤᏃᏔᏩᎸᏯᎩ",
+        "ᱵᱚᱥᱚᱱ",
+        "天然痘",
+        "天花",
+        "천연두" ;
+    schema:dateModified "2018-11-20T19:58:08+00:00"^^xsd:dateTime ;
+    schema:description "Infektionskrankheit",
+        "Infektiounskrankheet",
+        "choroba wirusowa",
+        "doença humana infecciosa",
+        "doença infecciosa",
+        "emberi fertőző betegség",
+        "enfermedad infecciosa",
+        "gaixotasun kutsakorra",
+        "human disease",
+        "infekcijas slimība, kuru izraisīja divi vīrusi: Variola major un Variola minor",
+        "infektionssjukdom",
+        "infekční onemocnění",
+        "makaalis a sakit",
+        "maladie infectieuse d'origine virale",
+        "malattia infettiva causata da due varianti del virus Variola",
+        "morbus",
+        "nakkushaigus",
+        "virusziekte",
+        "vysoko nákazlivá smrteľná choroba, ktorá je spôsobovaná vírusmi",
+        "yleisvaarallinen, vuonna 1980 luonnosta hävitetyksi julistettu, virusperäinen tartuntatauti",
+        "инфекционная болезнь",
+        "людська інфекційна хвороба з епідемічним перебігом",
+        "מחלה קטלנית שהוכחדה",
+        "مَرَضٌ بَشَرِيٌّ",
+        "एक मानवीय रोग, जिसे बड़ी माता के नाम से भी जाना जाता है।",
+        "ଏକ ମାନବ ରୋଗ",
+        "മനുഷ്യനെ ബാധിക്കുന്ന രോഗം",
+        "感染症" ;
+    schema:version 794759047 ;
+    ns2:identifiers 26 ;
+    ns2:sitelinks 114 ;
+    ns2:statements 108 ;
+    ns2:timestamp "2018-11-20T19:58:37+00:00"^^xsd:dateTime ;
+    skos:altLabel "Blattern",
+        "Variola",
+        "Variola vera",
+        "czarna ospa",
+        "ordinary smallpox",
+        "petite vérole",
+        "variola",
+        "variola vera",
+        "černé neštovice",
+        "алястрим",
+        "варіолоїд",
+        "велика віспа",
+        "оспа",
+        "черная оспа",
+        "чорна віспа",
+        "чёрная оспа",
+        "الجدري",
+        "مرض الجدري",
+        "स्मालपोक्स",
+        "疱瘡",
+        "痘瘡" ;
+    p:P1225 <http://www.wikidata.org/entity/statement/Q12214-65A7BB54-1058-44E5-80A6-DD0B538D1A11> ;
+    p:P1343 <http://www.wikidata.org/entity/statement/Q12214-0DA86344-B62C-4EEE-9AA5-69AF266B8E06> ;
+    p:P1417 <http://www.wikidata.org/entity/statement/Q12214-A21C12FC-1352-4D9A-A545-0807B68CF36A> ;
+    p:P1461 <http://www.wikidata.org/entity/statement/Q12214-80E6BD14-599E-4DBC-97EA-CFBA35F87E6E> ;
+    p:P1692 <http://www.wikidata.org/entity/statement/Q12214-2E1980A3-4F6D-4765-8CD0-C30BAF874347>,
+        <http://www.wikidata.org/entity/statement/Q12214-4BAC7BB4-C885-4311-92EB-B35E39FFDAFE> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q12214-00BB6306-6589-4E2D-8DA1-AF0EF5A6CA76> ;
+    p:P18 <http://www.wikidata.org/entity/statement/Q12214-8a592ec9-425a-0714-7248-d92440736892>,
+        <http://www.wikidata.org/entity/statement/Q12214-A1C98DA2-0682-4D71-991F-8BD656ABF041>,
+        <http://www.wikidata.org/entity/statement/q12214-2B892E95-C176-4D7F-BC48-667F018F2C3B> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q12214-8BB6BB00-640A-46A6-884D-E79F20D5FE9D> ;
+    p:P227 <http://www.wikidata.org/entity/statement/q12214-a29ea800-4299-7812-4e79-198d561965d9> ;
+    p:P2293 <http://www.wikidata.org/entity/statement/Q12214-08B0BD25-AD38-4952-960B-655F52FCB630>,
+        <http://www.wikidata.org/entity/statement/Q12214-08D2B413-3311-4CBB-B085-144F21184E41>,
+        <http://www.wikidata.org/entity/statement/Q12214-0DB5455F-1E27-43C5-9B0C-C903A52ED98C>,
+        <http://www.wikidata.org/entity/statement/Q12214-105B636B-AB22-4F1F-A543-305780221F87>,
+        <http://www.wikidata.org/entity/statement/Q12214-189F1194-73FB-4225-8881-0BAC67B57649>,
+        <http://www.wikidata.org/entity/statement/Q12214-1B87F2F5-FEB7-408C-B07B-589F59F25491>,
+        <http://www.wikidata.org/entity/statement/Q12214-1E39BB3F-9F0E-4206-AB58-77E642D7D926>,
+        <http://www.wikidata.org/entity/statement/Q12214-1F65FAB7-6BC7-45C5-ABB0-891BF67606AF>,
+        <http://www.wikidata.org/entity/statement/Q12214-1F9E170F-158C-40C7-8958-E402773910EF>,
+        <http://www.wikidata.org/entity/statement/Q12214-296D42AF-80B1-4736-87A9-1E9CDA8E387A>,
+        <http://www.wikidata.org/entity/statement/Q12214-2CFB7B15-682C-483B-9C8F-4460217A4094>,
+        <http://www.wikidata.org/entity/statement/Q12214-2DF33122-825D-4245-81C2-B5A7ED0FD748>,
+        <http://www.wikidata.org/entity/statement/Q12214-3B72B229-2005-44EB-93BA-BADCBC92AF0A>,
+        <http://www.wikidata.org/entity/statement/Q12214-43D37EE5-55CE-4DB1-A8AA-0457F6C41BD9>,
+        <http://www.wikidata.org/entity/statement/Q12214-49AFDDAF-715F-4666-9241-971E6D112AB7>,
+        <http://www.wikidata.org/entity/statement/Q12214-4C25B98E-D597-463F-82B7-2479178DA19D>,
+        <http://www.wikidata.org/entity/statement/Q12214-5608E8A6-0ABD-4115-9D0D-F0058F68238C>,
+        <http://www.wikidata.org/entity/statement/Q12214-590520E9-5A76-4339-8431-B8F5EC034111>,
+        <http://www.wikidata.org/entity/statement/Q12214-59C9AE9F-10D1-44A4-8D07-069F569DC9AC>,
+        <http://www.wikidata.org/entity/statement/Q12214-69678501-6C31-4DE9-A342-225344DCE509>,
+        <http://www.wikidata.org/entity/statement/Q12214-6AD8DC24-DD22-4E7F-8B5A-3EDEB7987615>,
+        <http://www.wikidata.org/entity/statement/Q12214-6FCAE90D-339A-4251-8002-0A93E0E0B223>,
+        <http://www.wikidata.org/entity/statement/Q12214-7648A539-F70B-4F09-A681-4D093BB447B9>,
+        <http://www.wikidata.org/entity/statement/Q12214-77986BDA-7852-497D-B726-45B9835C77DC>,
+        <http://www.wikidata.org/entity/statement/Q12214-7B7D2C39-45B7-4151-A0A0-51D52BEDFCD7>,
+        <http://www.wikidata.org/entity/statement/Q12214-824AF780-54DC-4EA2-B5FF-C0B711A4EE56>,
+        <http://www.wikidata.org/entity/statement/Q12214-838F9BCF-5831-46F9-934E-116A08C4CFC6>,
+        <http://www.wikidata.org/entity/statement/Q12214-86F4C500-11AD-49BA-A667-8F5254B82A55>,
+        <http://www.wikidata.org/entity/statement/Q12214-93724867-F82D-4FF2-9C00-F5EEE05A1E28>,
+        <http://www.wikidata.org/entity/statement/Q12214-99BE1C5E-817C-4AE7-ADF5-56CE28302653>,
+        <http://www.wikidata.org/entity/statement/Q12214-9B8DF5C4-8B39-41A1-92CA-F36977484C76>,
+        <http://www.wikidata.org/entity/statement/Q12214-A5343E7E-C0F3-47A9-8CC1-E0EBDF63AAFA>,
+        <http://www.wikidata.org/entity/statement/Q12214-A6CF7510-AE29-46F0-8B17-15BC0C147467>,
+        <http://www.wikidata.org/entity/statement/Q12214-A76837FE-B46C-4949-B6ED-6FE054965587>,
+        <http://www.wikidata.org/entity/statement/Q12214-A7B90221-9447-40BD-8AFE-9F6EC56F6FAC>,
+        <http://www.wikidata.org/entity/statement/Q12214-ABD9B921-0958-4E1C-BC4C-885E6A93DF3C>,
+        <http://www.wikidata.org/entity/statement/Q12214-B032BA41-159B-4EE6-8C38-F5EEB37676ED>,
+        <http://www.wikidata.org/entity/statement/Q12214-B57FA6D8-E2AF-4B91-AC36-28DA2514987F>,
+        <http://www.wikidata.org/entity/statement/Q12214-B5D634E3-4C5E-4F4A-93C2-C061255FC3DC>,
+        <http://www.wikidata.org/entity/statement/Q12214-B682CB0A-2967-4614-83B2-98A01C47D453>,
+        <http://www.wikidata.org/entity/statement/Q12214-B8CD5196-E027-4D5A-81A0-B0513D7F7156>,
+        <http://www.wikidata.org/entity/statement/Q12214-C15D43F5-28BD-4457-AD59-4869590FAA47>,
+        <http://www.wikidata.org/entity/statement/Q12214-C275702A-B11D-4118-A11A-19A6201F4101>,
+        <http://www.wikidata.org/entity/statement/Q12214-C3806802-8047-4816-A7F6-58B676FF6057>,
+        <http://www.wikidata.org/entity/statement/Q12214-CB50FEEB-6F5C-4D42-BA73-1085DE1F850F>,
+        <http://www.wikidata.org/entity/statement/Q12214-CBFA1294-2323-47D7-A8E0-48A05CC794C7>,
+        <http://www.wikidata.org/entity/statement/Q12214-CF6F802C-8432-43A1-9833-CC5911B41F82>,
+        <http://www.wikidata.org/entity/statement/Q12214-DA15981A-12C9-4AEF-8B99-4B00D44F5D98>,
+        <http://www.wikidata.org/entity/statement/Q12214-DC9C7D0F-9367-4999-9D42-869769860D65>,
+        <http://www.wikidata.org/entity/statement/Q12214-E1D3E14B-9A6D-4788-A778-D1D3DE405007>,
+        <http://www.wikidata.org/entity/statement/Q12214-EC5EB7DA-AC69-4D3F-B147-B86B01BFB238>,
+        <http://www.wikidata.org/entity/statement/Q12214-EE033A55-DDA5-4FE4-AA3B-F3DF0822389C>,
+        <http://www.wikidata.org/entity/statement/Q12214-EEDE3443-61D4-4AED-B431-CB349E7357FE>,
+        <http://www.wikidata.org/entity/statement/Q12214-F168C4C2-B167-4AD4-99E4-2B6743B4FF4B>,
+        <http://www.wikidata.org/entity/statement/Q12214-F342F26E-218C-4897-BF5C-61338B866ED1>,
+        <http://www.wikidata.org/entity/statement/Q12214-FF038C4A-7408-4878-9128-678A7E69054E> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q12214-4c344909-4d5b-8467-2eb9-cb47ee6bdd0b>,
+        <http://www.wikidata.org/entity/statement/Q12214-8B80A9EB-8074-4307-807C-0E93AE970CC2>,
+        <http://www.wikidata.org/entity/statement/Q12214-D540AD4C-4D5F-4AE4-96AF-7774FAE74792> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q12214-975959CF-D6C3-46C2-AFC0-97D44034A074>,
+        <http://www.wikidata.org/entity/statement/Q12214-9B317BA5-7A49-4D7A-BA9C-E6233B469443> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q12214-30D6A871-D613-41CD-B2E6-E8FFA08817E5> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q12214-36330696-CDC7-44C3-B867-1FE88FED0187> ;
+    p:P3219 <http://www.wikidata.org/entity/statement/Q12214-70569A9A-A248-4250-840B-CCBE2BC40081> ;
+    p:P3417 <http://www.wikidata.org/entity/statement/Q12214-A9205BAC-DB9B-48CC-8D7B-8373BB5AF5DB> ;
+    p:P3471 <http://www.wikidata.org/entity/statement/Q12214-3c537372-4928-f6b0-58c0-64157bfee965> ;
+    p:P3487 <http://www.wikidata.org/entity/statement/Q12214-53742cd0-40a4-8df0-6489-b083a7958845>,
+        <http://www.wikidata.org/entity/statement/Q12214-f4333061-404e-02e0-0884-153cc50fbe4f> ;
+    p:P3488 <http://www.wikidata.org/entity/statement/Q12214-1f11a5d3-4929-565f-a29a-219ceaab8d42>,
+        <http://www.wikidata.org/entity/statement/Q12214-fd7410ca-48b1-f485-a02c-aeaa8259e740> ;
+    p:P349 <http://www.wikidata.org/entity/statement/Q12214-1E8FA7E5-84EF-4D23-B29B-46CDDD797EE5> ;
+    p:P3569 <http://www.wikidata.org/entity/statement/Q12214-E0DCF1EC-680F-451A-A973-5553229DF0BD> ;
+    p:P373 <http://www.wikidata.org/entity/statement/q12214-AF817EBC-676E-4EC5-A52E-E5FC265612BB> ;
+    p:P3827 <http://www.wikidata.org/entity/statement/Q12214-DAE50667-1862-4CF1-95B4-F65D63553F37> ;
+    p:P4229 <http://www.wikidata.org/entity/statement/Q12214-823B4FFC-359D-45C6-B192-1431EAFF4AC5> ;
+    p:P4254 <http://www.wikidata.org/entity/statement/Q12214-5854771D-7C1C-4C94-B9C9-C90B58C357C7> ;
+    p:P4317 <http://www.wikidata.org/entity/statement/Q12214-EA2D65C1-506A-467B-B353-8B0DA05F635A> ;
+    p:P4527 <http://www.wikidata.org/entity/statement/Q12214-122D870A-BC9F-480F-BDF7-FD14158014B1> ;
+    p:P486 <http://www.wikidata.org/entity/statement/Q12214-98B06B0C-11FF-4A20-8191-6148A8E5E7B5> ;
+    p:P4903 <http://www.wikidata.org/entity/statement/Q12214-252C0E4F-09AC-482F-91EC-C5BB0799C8E4> ;
+    p:P5008 <http://www.wikidata.org/entity/statement/Q12214-8AF27FE0-20CC-4CF5-9EC7-F6CE5076F1A7> ;
+    p:P508 <http://www.wikidata.org/entity/statement/q12214-461ADBC1-21D1-4B83-A8FE-4C4A524BA80F> ;
+    p:P5085 <http://www.wikidata.org/entity/statement/Q12214-f4e3e5e5-4c8a-50c8-7c33-2f058736f72b> ;
+    p:P5198 <http://www.wikidata.org/entity/statement/Q12214-29E37D03-8F98-4C49-AB5F-0C3FC38FDA3D> ;
+    p:P5395 <http://www.wikidata.org/entity/statement/Q12214-CED47C09-3D9D-4239-9301-31944E50A0FC> ;
+    p:P557 <http://www.wikidata.org/entity/statement/q12214-23B29238-F6D6-4833-B574-BFCFFE78AB92> ;
+    p:P604 <http://www.wikidata.org/entity/statement/q12214-5DCCB892-0EB3-409C-859F-0F7FFA6B6E36> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q12214-50D52127-8B60-49CB-9F44-691AA432540C> ;
+    p:P667 <http://www.wikidata.org/entity/statement/Q12214-5ADC4765-02D5-4D2E-B646-E302067A0700> ;
+    p:P672 <http://www.wikidata.org/entity/statement/Q12214-4900BFAE-98BA-48AC-8194-48BF3313CEE9> ;
+    p:P673 <http://www.wikidata.org/entity/statement/q12214-28F745EF-400F-424C-958B-98F96746E325> ;
+    p:P689 <http://www.wikidata.org/entity/statement/Q12214-1d34a002-436e-c3c3-5131-9126a0094ae1> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q12214-6325FDC0-B1F6-429E-B3DF-9C5676B0ABC8> ;
+    p:P828 <http://www.wikidata.org/entity/statement/Q12214-1f3902e5-4aaa-1003-f20a-ea1e437bc7e7> ;
+    p:P910 <http://www.wikidata.org/entity/statement/Q12214-23C30413-C67D-42C2-92CB-9222B0844336> ;
+    p:P927 <http://www.wikidata.org/entity/statement/Q12214-0EDA639B-34AC-4763-8D2A-500BF731302A> ;
+    ns1:P227 <http://d-nb.info/gnd/4135714-0> ;
+    ns1:P349 <http://id.ndl.go.jp/auth/ndlna/00573369> ;
+    ns1:P486 <http://id.nlm.nih.gov/mesh/D012899> ;
+    ns1:P508 <http://purl.org/bncf/tid/43162> ;
+    ns1:P646 <http://g.co/kg/m/06vr2> ;
+    ns1:P672 <https://id.nlm.nih.gov/mesh/C02.256.743.826> ;
+    wdt:P1225 "10643938" ;
+    wdt:P1343 wd:Q2657718 ;
+    wdt:P1417 "science/smallpox" ;
+    wdt:P1461 "Smallpox" ;
+    wdt:P1692 "050",
+        "050.9" ;
+    wdt:P1748 "C35027" ;
+    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Child%20with%20Smallpox%20Bangladesh.jpg>,
+        <http://commons.wikimedia.org/wiki/Special:FilePath/Smallpox%20virus%20virions%20TEM%20PHIL%201849.JPG> ;
+    wdt:P1995 wd:Q788926 ;
+    wdt:P227 "4135714-0" ;
+    wdt:P2293 wd:Q14913440,
+        wd:Q14916190,
+        wd:Q14916487,
+        wd:Q15317046,
+        wd:Q15320451,
+        wd:Q17848770,
+        wd:Q17854281,
+        wd:Q17907898,
+        wd:Q17912763,
+        wd:Q18025811,
+        wd:Q18026519,
+        wd:Q18027833,
+        wd:Q18028156,
+        wd:Q18028644,
+        wd:Q18028692,
+        wd:Q18029227,
+        wd:Q18030409,
+        wd:Q18030780,
+        wd:Q18031469,
+        wd:Q18031564,
+        wd:Q18032255,
+        wd:Q18033532,
+        wd:Q18034286,
+        wd:Q18035351,
+        wd:Q18035921,
+        wd:Q18036562,
+        wd:Q18036632,
+        wd:Q18040213,
+        wd:Q18040224,
+        wd:Q18040387,
+        wd:Q18040393,
+        wd:Q18040744,
+        wd:Q18041212,
+        wd:Q18041263,
+        wd:Q18041288,
+        wd:Q18041864,
+        wd:Q18042064,
+        wd:Q18042575,
+        wd:Q18044722,
+        wd:Q18045649,
+        wd:Q18045682,
+        wd:Q18046242,
+        wd:Q18046382,
+        wd:Q18047303,
+        wd:Q18048572,
+        wd:Q18049058,
+        wd:Q18049201,
+        wd:Q18050771,
+        wd:Q18052189,
+        wd:Q18054056,
+        wd:Q18055395,
+        wd:Q18058371,
+        wd:Q18058473,
+        wd:Q18292821,
+        wd:Q20763585,
+        wd:Q248215 ;
+    wdt:P279 wd:Q18975241,
+        wd:Q1928978,
+        wd:Q949302 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:8736>,
+        <http://purl.obolibrary.org/obo/DOID_8736> ;
+    wdt:P2892 "C0037354" ;
+    wdt:P31 wd:Q12136 ;
+    wdt:P3219 "variole" ;
+    wdt:P3417 "Smallpox" ;
+    wdt:P3471 "20899" ;
+    wdt:P3487 17.0 ;
+    wdt:P3488 7.0 ;
+    wdt:P349 "00573369" ;
+    wdt:P3569 "levenswetenschappen-en-geneeskunde/pokken" ;
+    wdt:P373 "Smallpox" ;
+    wdt:P3827 "variola-virus" ;
+    wdt:P4229 "B03" ;
+    wdt:P4254 "গুটিবসন্ত" ;
+    wdt:P4317 "7444" ;
+    wdt:P4527 "12852" ;
+    wdt:P486 "D012899" ;
+    wdt:P4903 "science-medicine/smallpox" ;
+    wdt:P5008 wd:Q5460604 ;
+    wdt:P508 "43162" ;
+    wdt:P5085 "Variola" ;
+    wdt:P5198 "294937706" ;
+    wdt:P5395 "smallpox" ;
+    wdt:P557 "12219" ;
+    wdt:P604 "001356" ;
+    wdt:P646 "/m/06vr2" ;
+    wdt:P667 "A76" ;
+    wdt:P672 "C02.256.743.826" ;
+    wdt:P673 "830328" ;
+    wdt:P689 wd:Q5 ;
+    wdt:P699 "DOID:8736" ;
+    wdt:P828 wd:Q11877169 ;
+    wdt:P910 wd:Q8754940 ;
+    wdt:P927 wd:Q30029801 .
+
+<http://www.wikidata.org/entity/statement/Q12214-00BB6306-6589-4E2D-8DA1-AF0EF5A6CA76> prov:wasDerivedFrom <http://www.wikidata.org/reference/c85a798b6b677d299c4f79c0ec0adc7fdc96025f> ;
+    ps:P1748 "C35027" .
+
+<http://www.wikidata.org/entity/statement/Q12214-30D6A871-D613-41CD-B2E6-E8FFA08817E5> prov:wasDerivedFrom <http://www.wikidata.org/reference/c85a798b6b677d299c4f79c0ec0adc7fdc96025f> ;
+    ps:P2892 "C0037354" .
+
+<http://www.wikidata.org/entity/statement/Q12214-36330696-CDC7-44C3-B867-1FE88FED0187> prov:wasDerivedFrom <http://www.wikidata.org/reference/c85a798b6b677d299c4f79c0ec0adc7fdc96025f> ;
+    ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/entity/statement/Q12214-6325FDC0-B1F6-429E-B3DF-9C5676B0ABC8> prov:wasDerivedFrom <http://www.wikidata.org/reference/c85a798b6b677d299c4f79c0ec0adc7fdc96025f> ;
+    ps:P699 "DOID:8736" .
+
+<http://www.wikidata.org/entity/statement/Q12214-975959CF-D6C3-46C2-AFC0-97D44034A074> prov:wasDerivedFrom <http://www.wikidata.org/reference/fb4854e1db42d63da3f09d8f400e4579c189c538> ;
+    ps:P2888 <http://purl.obolibrary.org/obo/DOID_8736> .
+
+<http://www.wikidata.org/entity/statement/Q12214-98B06B0C-11FF-4A20-8191-6148A8E5E7B5> prov:wasDerivedFrom <http://www.wikidata.org/reference/c85a798b6b677d299c4f79c0ec0adc7fdc96025f> ;
+    ps:P486 "D012899" .
+
+<http://www.wikidata.org/entity/statement/Q12214-9B317BA5-7A49-4D7A-BA9C-E6233B469443> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
+    ps:P2888 <http://identifiers.org/doid/DOID:8736> .
+
+<http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> pr:P248 wd:Q16335166 ;
+    pr:P854 <http://www.ebi.ac.uk/miriam/main/collections/MIR:00000233> .
+
+<http://www.wikidata.org/reference/fb4854e1db42d63da3f09d8f400e4579c189c538> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:8736" ;
+    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+
+<http://www.wikidata.org/reference/c85a798b6b677d299c4f79c0ec0adc7fdc96025f> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:8736" ;
+    pr:P813 "2018-07-11T00:00:00+00:00"^^xsd:dateTime .
+

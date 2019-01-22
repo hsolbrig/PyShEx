@@ -1,0 +1,395 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix gw: <http://micel.io/genewiki/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q38404 rdfs:label "Aatizam",
+        "Aotism",
+        "Autism",
+        "Autisma",
+        "Autisme",
+        "Autismi",
+        "Autismo",
+        "Autisms",
+        "Autismu",
+        "Autismus",
+        "Autizam",
+        "Autizm",
+        "Autizmas",
+        "Autizmi",
+        "Autizmus",
+        "Autyzm dziecięcy",
+        "Autėzmos",
+        "Avtizem",
+        "Awtistiaeth",
+        "Chū-pì-chèng",
+        "Einhverfa",
+        "I-Autism",
+        "Otismo",
+        "Otisse",
+        "Otîzm",
+        "Outisme",
+        "Tự kỷ",
+        "Uathachas",
+        "autism",
+        "autisme",
+        "autismo",
+        "autismus",
+        "autizam",
+        "autizmus",
+        "aŭtismo",
+        "classic autism",
+        "ka sezga'o",
+        "otizm",
+        "Αυτισμός",
+        "Аутизам",
+        "Аутизм",
+        "Аутизъм",
+        "Аўтызм",
+        "Дархудмондагӣ",
+        "аутизам",
+        "аутизем",
+        "аутизм",
+        "Աուտիզմ",
+        "אוטיזם קלאסי",
+        "آوتیزم",
+        "توحد",
+        "درخودماندگی",
+        "އޯޓިޒަމް",
+        "अटिज्म",
+        "आत्मविमोह",
+        "ऑटिझम",
+        "আত্মসংবৃতি",
+        "ଅଟିଜିମ୍‌",
+        "மதியிறுக்கம்",
+        "ഓട്ടിസം",
+        "โรคออทิซึม",
+        "აუტიზმი",
+        "自閉症",
+        "자폐증" ;
+    schema:dateModified "2018-11-30T03:31:40+00:00"^^xsd:dateTime ;
+    schema:description "Desorde do desenvolvemento neural",
+        "desorden del desarrollo neural, tipo de trastorno mental",
+        "disturbo neuro-psichiatrico",
+        "neurodevelopmental condition",
+        "neurorazvojni poremećaj",
+        "nevrologisk utviklingsforstyrring",
+        "smegenų vystymosi nukrypimas",
+        "tiefgreifende Entwicklungsstörung",
+        "trastorn generalitzat del desenvolupament",
+        "trouble du développement humain caractérisé par une interaction sociale et une communication anormale",
+        "общее расстройство психического развития",
+        "զարգացման խանգարում",
+        "التوحد هو مرض عقلي وعضوي إلى حد ما، حيث أن الأعراض تكون نفسية وجسدية،",
+        "ସ୍ନାୟୁବିକାଶଗତ ବିକୃତି" ;
+    schema:version 802136603 ;
+    ns2:identifiers 43 ;
+    ns2:sitelinks 100 ;
+    ns2:statements 70 ;
+    ns2:timestamp "2018-11-30T03:32:27+00:00"^^xsd:dateTime ;
+    skos:altLabel "ASD",
+        "Autis",
+        "Autism",
+        "Autisme au Maroc",
+        "Autisme awal kanak-kanak",
+        "Autisme intellectuel",
+        "Autist",
+        "Autista",
+        "Autistas",
+        "Autiste",
+        "Autistes",
+        "Autisti",
+        "Autistic",
+        "Autistico",
+        "Autistik",
+        "Autistika",
+        "Autistiko",
+        "Autistinen",
+        "Autistique",
+        "Autistisk",
+        "Autistiskt syndrom",
+        "Autististiskt syndrom",
+        "Autistisuus",
+        "Autyzm głęboki",
+        "Autyzm wczesnodziecięcy",
+        "Awtismo",
+        "Awtistiko",
+        "Aŭtisma spektro",
+        "Biological psychology",
+        "Contactstoornis",
+        "Dimanche pour l'Autisme",
+        "Endassesulgumus",
+        "Enfant autistique",
+        "Fragilis x szindróma",
+        "Infantil autism",
+        "Infantil autisme",
+        "Itseensävajonneisuus",
+        "Kanerio sindromas",
+        "Kanner's syndrome",
+        "Kanners syndrom",
+        "Klassisk autism",
+        "LFA",
+        "Lapsuusiän autismi",
+        "Otismo",
+        "Otistik",
+        "Otizim",
+        "Otîstîzm",
+        "Outismo",
+        "Owtismo",
+        "Sindrome di Kanner",
+        "Syndrome autistique",
+        "TEA",
+        "Transtorno do espectro autista",
+        "Transtorno do espectro autístico",
+        "Transtorno do espectro do autismo",
+        "Tự kỉ",
+        "Zespół Kannera",
+        "autism",
+        "autisme infantil",
+        "autist",
+        "autista",
+        "autistic disorder",
+        "autistic disorder of childhood onset",
+        "autistisch",
+        "autistische Störung",
+        "autistisk forstyrring i barndomen",
+        "autizmus",
+        "barneautisme",
+        "childhood autism",
+        "dječji autizam",
+        "early childhood autism",
+        "early infantile autism",
+        "infantil autisme",
+        "infantile autism",
+        "síndrome de Kanner",
+        "trastorn d'espectre autista",
+        "Аутизм",
+        "Аутисм",
+        "аутизм Каннера",
+        "детский аутизм",
+        "инфантильный аутизм",
+        "ранний детский аутизм",
+        "ранний инфантильный аутизм",
+        "синдром Каннера",
+        "תסמונת קנר",
+        "آتیسم",
+        "آوتیسم",
+        "اتیسم",
+        "التوحد",
+        "التوحد و العلاج الوظيفي",
+        "الذاتوية",
+        "اوتیسم",
+        "توحّد",
+        "در خود ماندگی",
+        "درخودمانی",
+        "ذاتوية",
+        "مرض التوحد",
+        "مرض التوحد لذوي الإحتياجات الخاصة",
+        "ऑटिज़्म",
+        "ऑटिज्म",
+        "অটিজম",
+        "மதி இறுக்கம்",
+        "ออทิซึม",
+        "ออทิสติก",
+        "カナータイプ",
+        "カナータイプ自閉症",
+        "カナー症候群",
+        "低機能自閉症",
+        "孤獨症",
+        "小児自閉症",
+        "自閉性障害",
+        "自闭",
+        "고기능 자폐증",
+        "자폐",
+        "자폐 스펙트럼 장애" ;
+    p:P1296 <http://www.wikidata.org/entity/statement/Q38404-52948644-FA6C-460F-A67E-EDB60BC0795A> ;
+    p:P1343 <http://www.wikidata.org/entity/statement/Q38404-5BB304C3-0F6B-4AC9-B232-BE68AF9C0D8A>,
+        <http://www.wikidata.org/entity/statement/Q38404-E6AEDC5C-5B97-4588-A5C0-69F0EC72BDA8> ;
+    p:P1375 <http://www.wikidata.org/entity/statement/Q38404-ed0ec123-4ad1-b843-d6d2-7ae0775a7654>,
+        <http://www.wikidata.org/entity/statement/Q38404-ff99852a-4b07-e469-d34d-b18ca7bb5c0a> ;
+    p:P1417 <http://www.wikidata.org/entity/statement/Q38404-c28ebcb8-4953-1678-a652-d17a24de1247> ;
+    p:P1461 <http://www.wikidata.org/entity/statement/Q38404-33E990EB-2734-4AC8-9EAF-750A513FD8AB> ;
+    p:P1550 <http://www.wikidata.org/entity/statement/Q38404-9C1FA37B-59C9-49F0-B89E-1889F81BA2D7> ;
+    p:P1617 <http://www.wikidata.org/entity/statement/Q38404-526B4840-EC9D-4985-A00A-FBFB3B844522> ;
+    p:P1692 <http://www.wikidata.org/entity/statement/Q38404-630D84BB-2AC3-4535-B040-305435DF389F> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q38404-45A65CCD-DDBB-4F8F-902C-376BE3906028> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q38404-FAECF25B-04EE-4E2F-A4E7-F238FEE32548> ;
+    p:P2176 <http://www.wikidata.org/entity/statement/Q38404-373E523F-A375-48A5-BE64-54AB15E2741D>,
+        <http://www.wikidata.org/entity/statement/Q38404-3F51169C-0C18-417E-BC11-D9555C406B93>,
+        <http://www.wikidata.org/entity/statement/Q38404-5B7BE8D7-C968-461E-B5FB-EC40FE666898>,
+        <http://www.wikidata.org/entity/statement/Q38404-C39A4B06-1E2A-4DE0-9BD3-40F2B83A9149>,
+        <http://www.wikidata.org/entity/statement/Q38404-CE9BE347-586E-4E0B-AF35-4A3B30A0AE82> ;
+    p:P227 <http://www.wikidata.org/entity/statement/Q38404-94601E9B-0106-4113-AB81-FF497624C92D> ;
+    p:P2293 <http://www.wikidata.org/entity/statement/Q38404-037FF7A5-B0F2-4946-82FE-AFBC27BAB0E5>,
+        <http://www.wikidata.org/entity/statement/Q38404-484F34E9-7B7E-474F-A6FB-FDA4B4320718>,
+        <http://www.wikidata.org/entity/statement/Q38404-98067C23-E299-4B23-B879-11E9FFCF3157>,
+        <http://www.wikidata.org/entity/statement/Q38404-A77348A8-BA38-42B3-A5F5-E6D7D4975E2A> ;
+    p:P2581 <http://www.wikidata.org/entity/statement/Q38404-256B5684-DD4F-404E-9439-23F62FC08D93> ;
+    p:P268 <http://www.wikidata.org/entity/statement/Q38404-3c4390c1-4e8b-64e5-7c11-c60b8cff6537> ;
+    p:P269 <http://www.wikidata.org/entity/statement/Q38404-66297F2F-627A-421F-A6E1-F0529260C2E7> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q38404-02431F12-F941-4FC8-86F2-D1EEE120D32B> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q38404-0EA623BA-1E68-4F09-A906-CDD238DC66B8>,
+        <http://www.wikidata.org/entity/statement/Q38404-88FA67F8-D672-4BD3-A2A2-07CFA117E17B>,
+        <http://www.wikidata.org/entity/statement/Q38404-8BACB1BA-8555-4149-8E1B-358896E23CAD>,
+        <http://www.wikidata.org/entity/statement/Q38404-C43F6AA8-C37E-4A85-BDAF-98F69ACDB68A> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q38404-D9627DAF-4C07-4C1C-9444-44C18E105542> ;
+    p:P2924 <http://www.wikidata.org/entity/statement/Q38404-a8237c10-4c4a-d161-7d8e-13facdc5407b> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q38404-3C4BB3F9-C236-4EC3-A224-653D1E6DA189>,
+        <http://www.wikidata.org/entity/statement/Q38404-b5f8ad9f-4957-885b-1ce6-634e4b0dbed5> ;
+    p:P3219 <http://www.wikidata.org/entity/statement/Q38404-50A98450-12D4-416B-B5F4-BD6700594C4E> ;
+    p:P3365 <http://www.wikidata.org/entity/statement/Q38404-810F85E0-10AA-4DC6-90CE-C912B09D2AF3> ;
+    p:P3417 <http://www.wikidata.org/entity/statement/Q38404-7490875B-CEA9-4632-A2A9-09708919EC66> ;
+    p:P3471 <http://www.wikidata.org/entity/statement/Q38404-9E7DC02C-B35D-4B25-B8CA-D9ACDDB0A8CA> ;
+    p:P349 <http://www.wikidata.org/entity/statement/Q38404-54C9FFD6-A27A-4EE4-AF99-543F2AAB7EF8> ;
+    p:P373 <http://www.wikidata.org/entity/statement/q38404-811142DC-0EBB-4435-A505-593C4443F37B> ;
+    p:P3827 <http://www.wikidata.org/entity/statement/Q38404-198D9DE4-9EEC-4ADB-B40D-A65BED485F06> ;
+    p:P3841 <http://www.wikidata.org/entity/statement/Q38404-8BE23E74-4DCA-4035-BBA5-A09AA99AACAA> ;
+    p:P4229 <http://www.wikidata.org/entity/statement/Q38404-40795548-4485-e7b5-392e-13f1bc6eb2d7>,
+        <http://www.wikidata.org/entity/statement/Q38404-75054A7E-14D7-4342-91BA-FD437ABE4BED> ;
+    p:P4254 <http://www.wikidata.org/entity/statement/Q38404-21DB24A2-6F2A-47F5-9B7A-73B0E6888A01> ;
+    p:P486 <http://www.wikidata.org/entity/statement/Q38404-E76684F5-05B7-4334-9035-0BC5CE417727> ;
+    p:P492 <http://www.wikidata.org/entity/statement/Q38404-118CC740-25F9-44B8-AB38-E29C678370DB>,
+        <http://www.wikidata.org/entity/statement/Q38404-1898DA86-80D6-4FEE-9138-0479C9C79280>,
+        <http://www.wikidata.org/entity/statement/Q38404-4BA4E119-E636-4A04-ACC7-1BAAE6ED5C80>,
+        <http://www.wikidata.org/entity/statement/Q38404-5C144248-D446-4BD8-97B5-499E41860761>,
+        <http://www.wikidata.org/entity/statement/Q38404-65EB23E8-6FFE-4C88-A219-D407544091B9>,
+        <http://www.wikidata.org/entity/statement/Q38404-80EA62EB-927E-4CA4-8936-E2352F080612>,
+        <http://www.wikidata.org/entity/statement/Q38404-8761B635-B7DE-4A23-A62E-E7A6A6B377E5>,
+        <http://www.wikidata.org/entity/statement/Q38404-C4DA603C-67BD-47D6-98A1-5F02BF8D83AD>,
+        <http://www.wikidata.org/entity/statement/Q38404-F260A8BA-5137-417A-A5B8-C5D1E9AAB9C4>,
+        <http://www.wikidata.org/entity/statement/Q38404-F7D7C449-0771-4CF5-A704-7315C1148262>,
+        <http://www.wikidata.org/entity/statement/q38404-2E0A6C43-148C-4154-A0A0-206DBD5B6E8B> ;
+    p:P494 <http://www.wikidata.org/entity/statement/Q38404-3416ce48-4e9f-9833-d753-26b32f19c4a2> ;
+    p:P5008 <http://www.wikidata.org/entity/statement/Q38404-36753B5A-84FC-4D26-98F9-FADA199D18D0> ;
+    p:P508 <http://www.wikidata.org/entity/statement/q38404-39C3A60A-E968-48D5-BE8A-C0A9E2486640> ;
+    p:P5088 <http://www.wikidata.org/entity/statement/Q38404-4E88B591-0B96-495A-9965-B9B908EFB2EE> ;
+    p:P5125 <http://www.wikidata.org/entity/statement/Q38404-D2578E78-C092-4580-9A00-895E479D20B0> ;
+    p:P557 <http://www.wikidata.org/entity/statement/q38404-C903689F-9E65-4E2F-8258-8885A09F5CFA> ;
+    p:P604 <http://www.wikidata.org/entity/statement/q38404-FC4C58E8-B6CC-400A-BB75-E8FEE4D4EEBF> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q38404-82328768-866E-402E-988B-792A385FDF87> ;
+    p:P668 <http://www.wikidata.org/entity/statement/q38404-FCA4F70C-98C4-421F-8497-C94750621D1C> ;
+    p:P673 <http://www.wikidata.org/entity/statement/q38404-5DA22B0E-CE78-49DE-AF51-FBEC1DB5173B> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q38404-827FB147-89D3-4884-B26C-4BA79ADE43E8> ;
+    p:P910 <http://www.wikidata.org/entity/statement/Q38404-64F59555-9267-44A9-A1FC-D3F3C9C7ED31> ;
+    p:P935 <http://www.wikidata.org/entity/statement/Q38404-515FDEFD-B7C8-4A6B-9E3D-A7B69EB57025> ;
+    ns1:P1617 <http://www.bbc.co.uk/things/5f2d9eba-0c20-48a1-a75e-6d37c01d9d9a#id> ;
+    ns1:P227 <http://d-nb.info/gnd/4003932-8> ;
+    ns1:P2581 <http://babelnet.org/rdf/s00007308n> ;
+    ns1:P268 <http://data.bnf.fr/ark:/12148/cb119309913> ;
+    ns1:P269 <http://www.idref.fr/027220451/id> ;
+    ns1:P349 <http://id.ndl.go.jp/auth/ndlna/00574713> ;
+    ns1:P486 <http://id.nlm.nih.gov/mesh/D001321> ;
+    ns1:P508 <http://purl.org/bncf/tid/4856> ;
+    ns1:P646 <http://g.co/kg/m/0gwj> ;
+    wdt:P1296 "0082011" ;
+    wdt:P1343 wd:Q20078554,
+        wd:Q234535 ;
+    wdt:P1375 "000102608",
+        "000102609" ;
+    wdt:P1417 "science/autism" ;
+    wdt:P1461 "autism" ;
+    wdt:P1550 "106" ;
+    wdt:P1617 "5f2d9eba-0c20-48a1-a75e-6d37c01d9d9a" ;
+    wdt:P1692 "299.0" ;
+    wdt:P1748 "C97161" ;
+    wdt:P1995 wd:Q7867 ;
+    wdt:P2176 wd:Q408535,
+        wd:Q412443,
+        wd:Q418928,
+        wd:Q898407 ;
+    wdt:P227 "4003932-8" ;
+    wdt:P2293 wd:Q18030727,
+        wd:Q18033732,
+        wd:Q18049302,
+        wd:Q18050946 ;
+    wdt:P2581 "00007308n" ;
+    wdt:P268 "119309913" ;
+    wdt:P269 "027220451" ;
+    wdt:P279 wd:Q1436063 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:12849>,
+        <http://purl.obolibrary.org/obo/DOID_12849>,
+        <http://purl.obolibrary.org/obo/HP_0000717>,
+        <http://www.orpha.net/ORDO/Orphanet_106> ;
+    wdt:P2892 "C0004352" ;
+    wdt:P2924 "1840315" ;
+    wdt:P31 wd:Q12131 ;
+    wdt:P3219 "autisme" ;
+    wdt:P3365 "autismo" ;
+    wdt:P3417 "Autism" ;
+    wdt:P3471 "19694" ;
+    wdt:P349 "00574713" ;
+    wdt:P373 "Autism" ;
+    wdt:P3827 "autistic-disorder" ;
+    wdt:P3841 "HP:0000717" ;
+    wdt:P4229 "F84.0",
+        "icd10" ;
+    wdt:P4254 "অটিজম" ;
+    wdt:P486 "D001321" ;
+    wdt:P492 "209850",
+        "607373",
+        "608049",
+        "608636",
+        "609378",
+        "610676",
+        "610836",
+        "610908",
+        "611015",
+        "611016",
+        "611913" ;
+    wdt:P494 "F84.0" ;
+    wdt:P5008 wd:Q54439832 ;
+    wdt:P508 "4856" ;
+    wdt:P5088 "autism" ;
+    wdt:P5125 wd:Q16254644 ;
+    wdt:P557 "1142" ;
+    wdt:P604 "001526" ;
+    wdt:P646 "/m/0gwj" ;
+    wdt:P668 "NBK1442" ;
+    wdt:P673 "912781" ;
+    wdt:P699 "DOID:12849" ;
+    wdt:P910 wd:Q6430907 ;
+    wdt:P935 "Autism" .
+
+<http://www.wikidata.org/entity/statement/Q38404-02431F12-F941-4FC8-86F2-D1EEE120D32B> prov:wasDerivedFrom <http://www.wikidata.org/reference/f21e843ae11f70d455441d37de8c0dbdb98908bf> .
+
+<http://www.wikidata.org/entity/statement/Q38404-0EA623BA-1E68-4F09-A906-CDD238DC66B8> ps:P2888 <http://www.orpha.net/ORDO/Orphanet_106> .
+
+<http://www.wikidata.org/entity/statement/Q38404-3C4BB3F9-C236-4EC3-A224-653D1E6DA189> prov:wasDerivedFrom <http://www.wikidata.org/reference/f21e843ae11f70d455441d37de8c0dbdb98908bf> ;
+    ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/entity/statement/Q38404-88FA67F8-D672-4BD3-A2A2-07CFA117E17B> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
+    ps:P2888 <http://identifiers.org/doid/DOID:12849> .
+
+<http://www.wikidata.org/entity/statement/Q38404-8BACB1BA-8555-4149-8E1B-358896E23CAD> prov:wasDerivedFrom <http://www.wikidata.org/reference/f363e4b24ef1107a55752abd6958fcde04d9ac10> ;
+    ps:P2888 <http://purl.obolibrary.org/obo/DOID_12849> .
+
+<http://www.wikidata.org/entity/statement/Q38404-C43F6AA8-C37E-4A85-BDAF-98F69ACDB68A> prov:wasDerivedFrom <http://www.wikidata.org/reference/b95c113ef4cb0c6c73c97af40258f76f5629d3e4> ;
+    ps:P2888 <http://purl.obolibrary.org/obo/HP_0000717> .
+
+<http://www.wikidata.org/entity/statement/Q38404-b5f8ad9f-4957-885b-1ce6-634e4b0dbed5> prov:wasDerivedFrom <http://www.wikidata.org/reference/9eb9ebacd76d30d56e14784fcbe05fdd457065d6> ;
+    ps:P31 wd:Q12131 .
+
+<http://www.wikidata.org/reference/f363e4b24ef1107a55752abd6958fcde04d9ac10> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:12849" ;
+    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+
+<http://www.wikidata.org/reference/f21e843ae11f70d455441d37de8c0dbdb98908bf> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:12849" ;
+    pr:P813 "2018-07-11T00:00:00+00:00"^^xsd:dateTime .
+

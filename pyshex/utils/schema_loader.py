@@ -6,6 +6,7 @@ from urllib.request import urlopen
 from ShExJSG import ShExJ
 from pyjsg.jsglib import loads
 from pyshexc.parser_impl import generate_shexj
+from pyshexc.parser_impl.generate_shexj import load_shex_file
 
 
 class SchemaLoader:
@@ -29,22 +30,18 @@ class SchemaLoader:
         :return: ShEx Schema represented by schema_location
         """
         if isinstance(schema_file, str):
-            real_schema_location = self.location_rewrite(schema_file)
-            if ':' in real_schema_location:
-                schema_txt = urlopen(real_schema_location).read().decode()
-            else:
-                with open(real_schema_location, 'rb') as schema_file:
-                    schema_txt = schema_file.read().decode()
+            schema_file = self.location_rewrite(schema_file)
+            schema_text = load_shex_file(schema_file)
         else:
-            schema_txt = schema_file.read()
+            schema_text = schema_file.read()
+
         if self.base_location:
             self.root_location = self.base_location
         elif schema_location:
             self.root_location = os.path.dirname(schema_location) + '/'
         else:
             self.root_location = None
-
-        return self.loads(schema_txt)
+        return self.loads(schema_text)
 
     def loads(self, schema_txt: str) -> ShExJ.Schema:
         """ Parse and return schema as a ShExJ Schema

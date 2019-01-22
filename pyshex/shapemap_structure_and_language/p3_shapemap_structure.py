@@ -74,8 +74,13 @@ TriplePattern = Union[SubjectFocusPattern, ObjectFocusPattern]
 
 
 class START(StringToken):
+    """ Use the start node specified in the ShEx """
     pass
 
+
+class START_TYPE:
+    def __init__(self, start_predicate: str) -> None:
+        self.start_predicate = URIRef(start_predicate)
 
 class conformant(StringToken):
     pass

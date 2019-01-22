@@ -27,7 +27,10 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.5.7 -- Throw an error on an invalid focus node (#23)
 * 0.5.9 -- Candidate for ShEx 2.1
 * 0.5.10 -- Fixed evaluator to load files, strings, etc. as ShEx
-* 0.5.11 -- Added Collections Flattening graph option to evaluator.  
+* 0.5.11 -- Added Collections Flattening graph option to evaluator.
+* 0.5.12 -- Added -A option, catch missing start node early
+* 0.6.0 -- Added the -ut and -sp options to allow start nodes to be specified by rdf:type or an arbitrary predicate
+* 0.6.1 -- Added the ability to supply a SPARQL Query (-sq option) 
 
 ## Installation
 ```bash
@@ -44,7 +47,8 @@ Unfortunately, however, `rdflib-jsonld` is NOT compatible with the bleeding edge
 ## evalshex CLI
 ```bash
 > shexeval -h
-usage: shexeval [-h] [-f FORMAT] [-s START] [-fn FOCUS] [-d] [-ss] [-cf]
+usage: shexeval [-h] [-f FORMAT] [-s START] [-ut] [-sp STARTPREDICATE]
+                [-fn FOCUS] [-A] [-d] [-ss] [-cf]
                 rdf shex
 
 positional arguments:
@@ -57,14 +61,21 @@ optional arguments:
   -f FORMAT, --format FORMAT
                         Input RDF Format
   -s START, --start START
-                        Start shape
+                        Start shape. If absent use ShEx start node.
+  -ut, --usetype        Start shape is rdf:type of focus
+  -sp STARTPREDICATE, --startpredicate STARTPREDICATE
+                        Start shape is object of this predicate
   -fn FOCUS, --focus FOCUS
                         RDF focus node
+  -A, --allsubjects     Evaluate all non-bnode subjects in the graph
   -d, --debug           Add debug output
   -ss, --slurper        Use SPARQL slurper graph
   -cf, --flattener      Use RDF Collections flattener graph
 
 ```
+
+## Documentation
+See: [examples](notebooks) Jupyter notebooks for sample uses
 
 
 ## General Layout
@@ -97,35 +108,19 @@ This package is built using:
 * The python [ShExC](https://github.com/shexSpec/grammar/tree/master/parsers/python) compiler -- which transforms the [Shape Expressions Language](http://shex.io/shex-semantics/index.html) into ShExJSG images.
 * [rdflib](https://rdflib.readthedocs.io/en/stable/) 
 
-## Current status
-Performance has been improved, but our current implementation of the `sparql_slurper` is entirely too fine-grained. Our
-next steps include:
-1) Get non-conformance reasons into the responses
-2) Improve diagnostic and debugging tools
-3) Add a time-out to catch really long evaluations
-4) Adjust the slurper to pull larget chunks as needed and then refine on the retrieval end
+
+## Conformance
 
 This implementation passes all of the tests in the master branch of [validation/manifest.ttl](https://raw.githubusercontent.com/shexSpec/shexTest/master/validation/manifest.ttl) with the following exceptions:
 
-At the moment, there are 1077 tests, of which:
+At the moment, there are 1088 tests, of which:
 
-* 970 pass
-* 107 are skipped - reasons:
-1) (52) sht:toldBNode, sht:LexicalBNode and sht:BNodeShapeLabel test non-blank blank nodes (`rdflib` does not preserve bnode "identity")
-2) (24) sht:OutsideBMP -- test uses multi byte unicode (two aren't tagged)
-3) (16) Uses ShEx 2.1 IMPORT feature -- not yet implemented (three aren't tagged)
-5) (3) Focus is a Literal  -- not yet implemented
-6) (5) Uses ShEx 2.1 INCLUDE feature -- not yet implemented
-7) (3) Uses manifest shapemap feature -- not yet implemented
-8) (2) sht:relativeIRI -- this isn't a real problem, but we havent taken time to deal with this in the test harness
-9) (2) `rdflib` has a parsing error when escaping single quotes. (Issue submitted, awaiting release)
+* 1007 pass
+* 81 are skipped - reasons:
+1) (52) sht:LexicalBNode, sht:ToldBNode and sht:BNodeShapeLabel test non-blank blank nodes (`rdflib` does not preserve bnode "identity")
+2) (18) sht:Import Uses ShEx 2.1 IMPORT feature -- not yet implemented (three aren't tagged)
+3) (3) Uses manifest shapemap feature -- not yet implemented
+4) (2) sht:relativeIRI -- this isn't a real problem, but we havent taken time to deal with this in the test harness
+5) (6) `rdflib` has a parsing error when escaping single quotes. (Issue submitted, awaiting release)
 
 As mentioned above, at the moment this is as literal an implementation of the specification as was sensible.  This means, in particular, that we are less than clever when it comes to partition management.
-
-
-
-## Notes
-[manifest_tester.py](tests/utils/manifest_tester.py) is the current testing tool.  Once we get through the complete set of tests we'll create a command line tool and a UI
-
-Note: At the moment we're just returning pass/fail.  We need to find documentation about what the return document should look like before we start returning detailed reports.
-

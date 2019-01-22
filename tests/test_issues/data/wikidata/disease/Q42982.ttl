@@ -1,6 +1,5 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix gw: <http://micel.io/genewiki/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
 @prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix ns2: <http://wikiba.se/ontology#> .
@@ -39,7 +38,6 @@ wd:Q42982 rdfs:label "Ailléirge",
         "Alèji",
         "Alèrgi",
         "Ałergia",
-        "Dị ứng",
         "Ko-men",
         "Riman",
         "alergedd",
@@ -53,6 +51,8 @@ wd:Q42982 rdfs:label "Ailléirge",
         "allergia",
         "allergie",
         "al·lèrgia",
+        "dị ứng",
+        "preobčutljivost tipa I",
         "type I hypersensitivity",
         "Üleherküs",
         "Αλλεργία",
@@ -87,7 +87,7 @@ wd:Q42982 rdfs:label "Ailléirge",
         "敏感",
         "过敏",
         "알레르기" ;
-    schema:dateModified "2018-10-23T23:48:32+00:00"^^xsd:dateTime ;
+    schema:dateModified "2019-01-21T10:31:09+00:00"^^xsd:dateTime ;
     schema:description "Alergi tgl:06-10-2017",
         "Krankheit",
         "enfermedad del sistema inmunitario",
@@ -96,20 +96,22 @@ wd:Q42982 rdfs:label "Ailléirge",
         "malattia del sistema immunitario",
         "medische stoornis",
         "nepřiměřená reakce imunitního systému organismu",
+        "odziv imunskega sistema na snov, katero večina ljudi dobro prenaša",
         "poremećaj preosjetljivosti imunosnog sustava",
         "prehnaná, neprimeraná reakcia imunitného systému organizmu na látky, s ktorými sa bežne stretávame v našom prostredí",
         "الأرجية هي مرض مفرط او حساسية مفرطة اتجاه مواد غير ممرضة عادة",
         "বেশির ভাগ মানুষের জন্য সহনীয় পদার্থের বিরুদ্ধে অনাক্রম্যতন্ত্রের প্রতিক্রিয়া" ;
-    schema:version 771571343 ;
+    schema:version 838768299 ;
     ns2:identifiers 30 ;
     ns2:sitelinks 98 ;
-    ns2:statements 59 ;
-    ns2:timestamp "2018-10-23T23:48:55+00:00"^^xsd:dateTime ;
+    ns2:statements 61 ;
+    ns2:timestamp "2019-01-21T10:31:20+00:00"^^xsd:dateTime ;
     skos:altLabel "Alergi",
         "Alergias",
         "Alergica",
         "Alergico",
         "Alergie",
+        "Alergija",
         "Alerginė reakcija",
         "Alergoloxía",
         "Alerjik",
@@ -152,7 +154,6 @@ wd:Q42982 rdfs:label "Ailléirge",
         "Réactions allergiques",
         "Réponses allergiques",
         "Sensibilisation",
-        "Sốc phản vệ",
         "Tierhaarallergie",
         "Type III allergische reactie",
         "Uczulenie",
@@ -180,6 +181,7 @@ wd:Q42982 rdfs:label "Ailléirge",
         "reacció al·lèrgica",
         "reazione allergica",
         "reazioni allergiche",
+        "sốc phản vệ",
         "type 1-allergi",
         "type I-allergi",
         "Überempfindlichkeitsreaktion",
@@ -222,16 +224,18 @@ wd:Q42982 rdfs:label "Ailléirge",
         <http://www.wikidata.org/entity/statement/Q42982-354696c2-436f-befc-bab8-2dcb643dd2e0> ;
     p:P1542 <http://www.wikidata.org/entity/statement/Q42982-E8349AD8-90F7-46C0-9F39-6E2D2ADEAAAA> ;
     p:P1748 <http://www.wikidata.org/entity/statement/Q42982-644FC133-E4FA-44F1-8CC3-38C48516FAAF> ;
+    p:P18 <http://www.wikidata.org/entity/statement/Q42982-6a18d13f-4af6-8a62-bd25-90f38358224d> ;
+    p:P1889 <http://www.wikidata.org/entity/statement/Q42982-b425053a-4935-6a8d-da2f-1f74ad255d3f> ;
     p:P1995 <http://www.wikidata.org/entity/statement/Q42982-84C3CDE2-6CDA-4DC9-B98C-A83076903C16> ;
     p:P2176 <http://www.wikidata.org/entity/statement/Q42982-24DF4080-F113-4258-B196-120715FC76EE>,
         <http://www.wikidata.org/entity/statement/Q42982-425F3472-A440-4C6F-A4AF-613B1C77E601>,
         <http://www.wikidata.org/entity/statement/Q42982-53D60033-69BB-42DC-BB2A-611F6E550009>,
         <http://www.wikidata.org/entity/statement/Q42982-56738A6B-981F-4C19-9E14-151B31A9B2DB>,
+        <http://www.wikidata.org/entity/statement/Q42982-59B2E2A2-6C6B-495F-850C-D5232B1E2A0A>,
         <http://www.wikidata.org/entity/statement/Q42982-637C4B63-489D-43D3-ACAD-BB2A9D88A321>,
         <http://www.wikidata.org/entity/statement/Q42982-680BCE93-FA98-4AFC-8A7F-24889D73510E>,
         <http://www.wikidata.org/entity/statement/Q42982-8756C682-E7AC-46BE-8132-217963B03B80>,
         <http://www.wikidata.org/entity/statement/Q42982-8A4AC573-B01E-4106-97FC-0D6A38C5B3F5>,
-        <http://www.wikidata.org/entity/statement/Q42982-8B036B8E-6E63-4F71-9941-822E194CFE12>,
         <http://www.wikidata.org/entity/statement/Q42982-F6ECF1EB-F85A-42FC-96B9-75AEA7291755> ;
     p:P227 <http://www.wikidata.org/entity/statement/Q42982-3f17f024-47fb-7112-8463-30e94c923f5d> ;
     p:P2293 <http://www.wikidata.org/entity/statement/Q42982-34FC27D3-07EC-4C47-93B5-665795F4641E>,
@@ -292,6 +296,8 @@ wd:Q42982 rdfs:label "Ailléirge",
         "000181384" ;
     wdt:P1542 wd:Q1115038 ;
     wdt:P1748 "C3114" ;
+    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Allergy%20degranulation%20processes%2001.svg> ;
+    wdt:P1889 wd:Q1195509 ;
     wdt:P1995 wd:Q101929 ;
     wdt:P2176 wd:Q1074056,
         wd:Q11426176,
@@ -346,31 +352,30 @@ wd:Q42982 rdfs:label "Ailléirge",
     wdt:P935 "Allergy" ;
     wdt:P950 "XX524903" .
 
-<http://www.wikidata.org/entity/statement/Q42982-03AEDED6-13BE-45F5-A2E3-6A0FE8C735DC> prov:wasDerivedFrom <http://www.wikidata.org/reference/88183a7f2a889c300ca99059f7f48f0f12e744c2>,
-        <http://www.wikidata.org/reference/a1f063755ceb86c14a943f5e6e060e9114508276> .
+<http://www.wikidata.org/entity/statement/Q42982-0A4ECE7C-E39D-4071-B533-DF1BC017BD11> prov:wasDerivedFrom <http://www.wikidata.org/reference/9e743cfbe3ddf19c1edced7b54948f67a2df7ffe> ;
+    ps:P2892 "C0020517" .
 
-<http://www.wikidata.org/entity/statement/Q42982-47087F65-297F-4868-91CA-68500A472FC4> prov:wasDerivedFrom <http://www.wikidata.org/reference/88183a7f2a889c300ca99059f7f48f0f12e744c2> .
+<http://www.wikidata.org/entity/statement/Q42982-1B66DBA2-8509-4BD1-89C4-963069EBF7B2> prov:wasDerivedFrom <http://www.wikidata.org/reference/9e743cfbe3ddf19c1edced7b54948f67a2df7ffe> ;
+    ps:P699 "DOID:1205" .
 
-<http://www.wikidata.org/entity/statement/Q42982-618A89A2-4933-4AB5-9F96-B8B183F890F1> prov:wasDerivedFrom <http://www.wikidata.org/reference/077824d4c6b651b8f1bf70ce2ba3ab282fa7fde0> ;
-    ps:P2888 <http://purl.obolibrary.org/obo/DOID_1205> .
+<http://www.wikidata.org/entity/statement/Q42982-3B25CB0D-A02F-43E3-80F7-1E91CBA6F45A> prov:wasDerivedFrom <http://www.wikidata.org/reference/9e743cfbe3ddf19c1edced7b54948f67a2df7ffe> ;
+    ps:P4229 "T78.40" .
 
-<http://www.wikidata.org/entity/statement/Q42982-B9169ACB-75FC-4E16-ADDF-CDDB29718527> prov:wasDerivedFrom <http://www.wikidata.org/reference/1190549b5e925dec17ae4b8fba800be0cb272589> ;
-    ps:P2888 <http://purl.obolibrary.org/obo/GO_0016068> .
+<http://www.wikidata.org/entity/statement/Q42982-47087F65-297F-4868-91CA-68500A472FC4> prov:wasDerivedFrom <http://www.wikidata.org/reference/5d34c79f5ee0e0be276af4dbea43bb8b4b014095> ;
+    ps:P279 wd:Q14905917 .
 
-<http://www.wikidata.org/entity/statement/Q42982-CA43A46D-E3A3-404F-8A3B-5BE70FCA2B07> prov:wasDerivedFrom <http://www.wikidata.org/reference/a1f063755ceb86c14a943f5e6e060e9114508276> ;
+<http://www.wikidata.org/entity/statement/Q42982-644FC133-E4FA-44F1-8CC3-38C48516FAAF> prov:wasDerivedFrom <http://www.wikidata.org/reference/9e743cfbe3ddf19c1edced7b54948f67a2df7ffe> ;
+    ps:P1748 "C3114" .
+
+<http://www.wikidata.org/entity/statement/Q42982-CA43A46D-E3A3-404F-8A3B-5BE70FCA2B07> prov:wasDerivedFrom <http://www.wikidata.org/reference/9e743cfbe3ddf19c1edced7b54948f67a2df7ffe> ;
     ps:P31 wd:Q12136 .
 
-<http://www.wikidata.org/entity/statement/Q42982-D2F0B15D-D93B-4DA1-9B63-C1F681653ECE> prov:wasDerivedFrom <http://www.wikidata.org/reference/88183a7f2a889c300ca99059f7f48f0f12e744c2> ;
+<http://www.wikidata.org/entity/statement/Q42982-D0845272-70A7-4F5E-BEB9-2A01DFB011EB> prov:wasDerivedFrom <http://www.wikidata.org/reference/9e743cfbe3ddf19c1edced7b54948f67a2df7ffe> ;
+    ps:P486 "D006967" .
+
+<http://www.wikidata.org/entity/statement/Q42982-D2F0B15D-D93B-4DA1-9B63-C1F681653ECE> prov:wasDerivedFrom <http://www.wikidata.org/reference/5d34c79f5ee0e0be276af4dbea43bb8b4b014095> ;
     ps:P31 wd:Q2996394 .
 
-<http://www.wikidata.org/reference/077824d4c6b651b8f1bf70ce2ba3ab282fa7fde0> pr:P248 wd:Q55451031 ;
-    pr:P699 "DOID:1205" ;
-    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
-
-<http://www.wikidata.org/reference/a1f063755ceb86c14a943f5e6e060e9114508276> pr:P248 wd:Q55451031 ;
-    pr:P699 "DOID:1205" ;
-    pr:P813 "2018-07-11T00:00:00+00:00"^^xsd:dateTime .
-
-<http://www.wikidata.org/reference/88183a7f2a889c300ca99059f7f48f0f12e744c2> pr:P248 wd:Q56579215 ;
-    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+<http://www.wikidata.org/entity/statement/q42982-6F21026F-B5E0-4B44-9459-5DBDDB4D81A3> prov:wasDerivedFrom <http://www.wikidata.org/reference/fa278ebfc458360e5aed63d5058cca83c46134f1> ;
+    ps:P493 "995.3" .
 

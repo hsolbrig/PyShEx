@@ -1,9 +1,10 @@
-usage: shexeval [-h] [-f FORMAT] [-s START] [-fn FOCUS] [-d] [-ss] [-cf]
+usage: shexeval [-h] [-f FORMAT] [-s START] [-ut] [-sp STARTPREDICATE]
+                [-fn FOCUS] [-A] [-d] [-ss] [-cf] [-sq SPARQL]
                 rdf shex
 
 positional arguments:
-  rdf                   Input RDF file or SPARQL endpoint if slurper option
-                        set
+  rdf                   Input RDF file or SPARQL endpoint if slurper or sparql
+                        options
   shex                  ShEx specification
 
 optional arguments:
@@ -11,9 +12,15 @@ optional arguments:
   -f FORMAT, --format FORMAT
                         Input RDF Format
   -s START, --start START
-                        Start shape
+                        Start shape. If absent use ShEx start node.
+  -ut, --usetype        Start shape is rdf:type of focus
+  -sp STARTPREDICATE, --startpredicate STARTPREDICATE
+                        Start shape is object of this predicate
   -fn FOCUS, --focus FOCUS
                         RDF focus node
+  -A, --allsubjects     Evaluate all non-bnode subjects in the graph
   -d, --debug           Add debug output
   -ss, --slurper        Use SPARQL slurper graph
   -cf, --flattener      Use RDF Collections flattener graph
+  -sq SPARQL, --sparql SPARQL
+                        SPARQL query to generate focus nodes

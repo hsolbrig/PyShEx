@@ -1,0 +1,170 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix gw: <http://micel.io/genewiki/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q40301 rdfs:label "carcinoma paratiroideo",
+        "carcinome parathyroïdien",
+        "parathyroid carcinoma",
+        "paratiroida karcinomo",
+        "Рак паращитовидной железы",
+        "Рак паращитоподібної залози",
+        "калкансыман яны бизе рагы",
+        "سرطانة الغدة الجار درقية",
+        "副甲状腺癌",
+        "副甲狀腺癌" ;
+    schema:dateModified "2018-09-12T19:38:14+00:00"^^xsd:dateTime ;
+    schema:description "Krankheit",
+        "endocrine disease" ;
+    schema:version 745201318 ;
+    ns2:identifiers 19 ;
+    ns2:sitelinks 3 ;
+    ns2:statements 33 ;
+    ns2:timestamp "2018-12-05T20:49:13+00:00"^^xsd:dateTime ;
+    skos:altLabel "Malignant Neoplasm of Parathyroid",
+        "Malignant Neoplasm of the Parathyroid Gland",
+        "Malignant Parathyroid Gland Tumor",
+        "Malignant Parathyroid Neoplasm",
+        "Malignant Parathyroid Tumor",
+        "Malignant Tumor of Parathyroid",
+        "Malignant Tumor of the Parathyroid",
+        "Malignant Tumor of the Parathyroid Gland",
+        "Parathyroid gland neoplasm",
+        "cancer de la glandula paratiroides",
+        "cancer of parathyroid gland",
+        "carcinoma de la paratiroides",
+        "carcinoma of Parathyroid gland",
+        "cáncer de la glándula paratiroides",
+        "malignant neoplasm of parathyroid gland",
+        "malignant neoplasm of the Parathyroid",
+        "malignant parathyroid gland neoplasm",
+        "malignant tumor of parathyroid gland",
+        "malignant tumor of parathyroid gland (disorder)",
+        "neoplasm of parathyroid gland",
+        "parathyroid gland adenocarcinoma",
+        "parathyroid gland cancer",
+        "parathyroid neoplasm" ;
+    p:P1550 <http://www.wikidata.org/entity/statement/Q40301-A214ED02-8426-4617-8188-243AC3CD9447> ;
+    p:P1692 <http://www.wikidata.org/entity/statement/Q40301-5C54912B-8C08-4BC7-9B8D-77806AD2E21A> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q40301-093D2C77-5B0F-4B57-8B58-A5347391CBAD>,
+        <http://www.wikidata.org/entity/statement/Q40301-5243BB7D-2CDA-4447-B9A7-F2310CF04EFB>,
+        <http://www.wikidata.org/entity/statement/Q40301-6B52BFBA-C3F9-406C-8B49-8B773A1CE09A>,
+        <http://www.wikidata.org/entity/statement/Q40301-C0C9EABF-358C-44B8-AFF5-E3340BE8B2D7> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q40301-ABA21D40-11B6-49BD-9423-38E7D208676A> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q40301-177809BA-0CCF-4F16-9014-60CBB3C03ED4>,
+        <http://www.wikidata.org/entity/statement/Q40301-23A48631-D9A1-4C39-BC8D-FE4D5805DEDD>,
+        <http://www.wikidata.org/entity/statement/Q40301-783b6f0b-40c1-8ccd-b0df-0070ada65ba1>,
+        <http://www.wikidata.org/entity/statement/Q40301-980AC7AD-5A78-406A-94CD-CD3B5770FBE1> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q40301-45FC939E-0B94-455C-90F1-CF262781577A>,
+        <http://www.wikidata.org/entity/statement/Q40301-875F2EAF-6493-438B-9E1F-809996B83772> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q40301-3318EFCA-2351-485F-84FB-C30EB3CE63A7>,
+        <http://www.wikidata.org/entity/statement/Q40301-86F232DA-6B6A-4BAD-9455-BCE28C98AA91>,
+        <http://www.wikidata.org/entity/statement/Q40301-D120A113-4CAA-4EF8-AB42-40030E7E4C78>,
+        <http://www.wikidata.org/entity/statement/Q40301-EFB784C1-87C7-42B0-AF34-809D45003593> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q40301-0D9E0A3B-87AA-4224-A2EE-69F02D28C89A> ;
+    p:P4229 <http://www.wikidata.org/entity/statement/Q40301-7B031D82-4753-4CC3-93EC-5AD50310CAC7> ;
+    p:P4317 <http://www.wikidata.org/entity/statement/Q40301-3D846A6B-F2ED-4E1A-AC29-E51E74D041CB> ;
+    p:P486 <http://www.wikidata.org/entity/statement/Q40301-90B4831E-A68D-4AB4-990E-8D3A226347B6> ;
+    p:P492 <http://www.wikidata.org/entity/statement/Q40301-99A076AD-6D28-45B7-9204-E9D61142F0DE> ;
+    p:P5270 <http://www.wikidata.org/entity/statement/Q40301-5FE006CC-D927-4A5A-B864-2133C8FD2DF6> ;
+    p:P557 <http://www.wikidata.org/entity/statement/q40301-9EE212F1-A40F-41E6-9845-7F9E965342BC> ;
+    p:P604 <http://www.wikidata.org/entity/statement/q40301-CBD60A46-BA1B-46B8-8F45-3D27D958D17A> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q40301-74BE41BE-F528-4A8C-BC8B-0B859A0939AD> ;
+    p:P672 <http://www.wikidata.org/entity/statement/Q40301-0924B1E5-ED1C-406E-BD47-C9CCBA5FF602>,
+        <http://www.wikidata.org/entity/statement/Q40301-9247E130-AE54-437F-A955-5D1B69C36C03>,
+        <http://www.wikidata.org/entity/statement/Q40301-995FD4C1-E696-43EE-A838-ADCFB98B7E34>,
+        <http://www.wikidata.org/entity/statement/Q40301-B7542662-2956-45DE-9CD3-EE8D271D6EFC> ;
+    p:P673 <http://www.wikidata.org/entity/statement/q40301-858D2A56-F894-4A5F-8D8E-2E4A23589526> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q40301-CB685662-757B-4E84-8EB8-BDD1FA49AC03> ;
+    p:P927 <http://www.wikidata.org/entity/statement/Q40301-4C9A535D-5304-47FF-9F6F-83FC9CC03753> ;
+    ns1:P486 <http://id.nlm.nih.gov/mesh/D010282> ;
+    ns1:P646 <http://g.co/kg/m/04gvjs5> ;
+    ns1:P672 <https://id.nlm.nih.gov/mesh/C04.588.322.525>,
+        <https://id.nlm.nih.gov/mesh/C04.588.443.680>,
+        <https://id.nlm.nih.gov/mesh/C19.344.525>,
+        <https://id.nlm.nih.gov/mesh/C19.642.713> ;
+    wdt:P1550 "143" ;
+    wdt:P1692 "194.1" ;
+    wdt:P1748 "C3313",
+        "C4906",
+        "C9322" ;
+    wdt:P1995 wd:Q162555 ;
+    wdt:P279 wd:Q18554878,
+        wd:Q33525,
+        wd:Q7136145,
+        wd:Q7136148 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:1540>,
+        <http://purl.obolibrary.org/obo/DOID_1540> ;
+    wdt:P2892 "C0030521",
+        "C0153653",
+        "C0687150" ;
+    wdt:P31 wd:Q12136 ;
+    wdt:P4229 "C75.0" ;
+    wdt:P4317 "7329" ;
+    wdt:P486 "D010282" ;
+    wdt:P492 "608266" ;
+    wdt:P5270 "MONDO:0021311" ;
+    wdt:P557 "9628" ;
+    wdt:P604 "007264" ;
+    wdt:P646 "/m/04gvjs5" ;
+    wdt:P672 "C04.588.322.525",
+        "C04.588.443.680",
+        "C19.344.525",
+        "C19.642.713" ;
+    wdt:P673 "280908" ;
+    wdt:P699 "DOID:1540" ;
+    wdt:P927 wd:Q650401 .
+
+<http://www.wikidata.org/entity/statement/Q40301-0D9E0A3B-87AA-4224-A2EE-69F02D28C89A> prov:wasDerivedFrom <http://www.wikidata.org/reference/5338ef49d683bbef465d05b2c4b2ac1470967e27> ;
+    ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/entity/statement/Q40301-177809BA-0CCF-4F16-9014-60CBB3C03ED4> prov:wasDerivedFrom <http://www.wikidata.org/reference/5338ef49d683bbef465d05b2c4b2ac1470967e27> .
+
+<http://www.wikidata.org/entity/statement/Q40301-23A48631-D9A1-4C39-BC8D-FE4D5805DEDD> prov:wasDerivedFrom <http://www.wikidata.org/reference/5338ef49d683bbef465d05b2c4b2ac1470967e27> .
+
+<http://www.wikidata.org/entity/statement/Q40301-45FC939E-0B94-455C-90F1-CF262781577A> prov:wasDerivedFrom <http://www.wikidata.org/reference/105272af5c47bd36ce923bfd8bf57015b7b136cf> ;
+    ps:P2888 <http://purl.obolibrary.org/obo/DOID_1540> .
+
+<http://www.wikidata.org/entity/statement/Q40301-875F2EAF-6493-438B-9E1F-809996B83772> prov:wasDerivedFrom <http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> ;
+    ps:P2888 <http://identifiers.org/doid/DOID:1540> .
+
+<http://www.wikidata.org/entity/statement/Q40301-90B4831E-A68D-4AB4-990E-8D3A226347B6> prov:wasDerivedFrom <http://www.wikidata.org/reference/5338ef49d683bbef465d05b2c4b2ac1470967e27> ;
+    ps:P486 "D010282" .
+
+<http://www.wikidata.org/entity/statement/Q40301-980AC7AD-5A78-406A-94CD-CD3B5770FBE1> prov:wasDerivedFrom <http://www.wikidata.org/reference/5338ef49d683bbef465d05b2c4b2ac1470967e27> .
+
+<http://www.wikidata.org/entity/statement/Q40301-99A076AD-6D28-45B7-9204-E9D61142F0DE> prov:wasDerivedFrom <http://www.wikidata.org/reference/5338ef49d683bbef465d05b2c4b2ac1470967e27> ;
+    ps:P492 "608266" .
+
+<http://www.wikidata.org/entity/statement/Q40301-A214ED02-8426-4617-8188-243AC3CD9447> ps:P1550 "143" .
+
+<http://www.wikidata.org/entity/statement/Q40301-CB685662-757B-4E84-8EB8-BDD1FA49AC03> prov:wasDerivedFrom <http://www.wikidata.org/reference/5338ef49d683bbef465d05b2c4b2ac1470967e27> ;
+    ps:P699 "DOID:1540" .
+
+<http://www.wikidata.org/reference/105272af5c47bd36ce923bfd8bf57015b7b136cf> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:1540" ;
+    pr:P813 "2018-09-12T00:00:00+00:00"^^xsd:dateTime .
+
+<http://www.wikidata.org/reference/60bb74f27bdb5e4d44a6b7008bfc67e8de886334> pr:P248 wd:Q16335166 ;
+    pr:P854 <http://www.ebi.ac.uk/miriam/main/collections/MIR:00000233> .
+
+<http://www.wikidata.org/reference/5338ef49d683bbef465d05b2c4b2ac1470967e27> pr:P248 wd:Q55451031 ;
+    pr:P699 "DOID:1540" ;
+    pr:P813 "2018-07-11T00:00:00+00:00"^^xsd:dateTime .
+
