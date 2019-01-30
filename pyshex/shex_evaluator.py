@@ -217,6 +217,7 @@ class ShExEvaluator:
                 for start_node in start_list:
                     map_ = FixedShapeMap()
                     map_.add(ShapeAssociation(focus, start_node))
+                    cntxt.reset()
                     success, fail_reasons = isValid(cntxt, map_)
                     rval.append(EvaluationResult(success, focus, start_node,
                                                  '\n'.join(fail_reasons) if not success else ''))

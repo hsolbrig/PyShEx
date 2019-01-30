@@ -1,0 +1,2 @@
+select ?item where{?item a <http://w3id.org/biolink/vocab/Protein>}
+LIMIT 10
