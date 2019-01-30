@@ -13,7 +13,7 @@ class SPARQLQuery:
         :param sparql_endpoint: URL of sparql endpoint
         :param sparql_file_uri_or_text: URI, filename or SPARQL text
         """
-        if '\n' in sparql_file_uri_or_text or '\r' in sparql_file_uri_or_text:
+        if '\n' in sparql_file_uri_or_text or '\r' in sparql_file_uri_or_text or ' ' in sparql_file_uri_or_text:
             self.query = sparql_file_uri_or_text
         elif ':/' in sparql_file_uri_or_text:
             req = requests.get(sparql_file_uri_or_text)
