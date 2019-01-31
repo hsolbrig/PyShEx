@@ -61,7 +61,7 @@ class CLITestCase(unittest.TestCase):
 
         with redirect_stdout(outf):
             try:
-                success = self.prog_ep(arg_list)
+                success = not self.prog_ep(arg_list)
             except ArgParseExitException:
                 success = False
 

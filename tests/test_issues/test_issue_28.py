@@ -12,6 +12,7 @@ data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data'))
 # not too distant future
 class InlineSPARQLIssue(unittest.TestCase):
 
+    @unittest.skipIf(True, "Fragile endpoint - has BNODES at the moment")
     def test_inline_rdf(self):
         """ Issue #28. Make sure inline SPARQL with no carriage return works """
         shex = os.path.join(data_dir, 'biolink-model.shex')
@@ -22,6 +23,7 @@ class InlineSPARQLIssue(unittest.TestCase):
         with redirect_stdout(messages):
             evaluate_cli((['-ss', '-sq', sparql, 'http://graphdb.dumontierlab.com/repositories/ncats-red-kg',
                            shex, '-ut']))
+        print(messages.getvalue())
 
 
 if __name__ == '__main__':

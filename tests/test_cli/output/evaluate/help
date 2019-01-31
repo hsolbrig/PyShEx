@@ -1,5 +1,6 @@
 usage: shexeval [-h] [-f FORMAT] [-s START] [-ut] [-sp STARTPREDICATE]
-                [-fn FOCUS] [-A] [-d] [-ss] [-cf] [-sq SPARQL]
+                [-fn FOCUS] [-A] [-d] [-ss] [-cf] [-sq SPARQL] [-se]
+                [--stopafter STOPAFTER]
                 rdf shex
 
 positional arguments:
@@ -24,3 +25,6 @@ optional arguments:
   -cf, --flattener      Use RDF Collections flattener graph
   -sq SPARQL, --sparql SPARQL
                         SPARQL query to generate focus nodes
+  -se, --stoponerror    Stop on an error
+  --stopafter STOPAFTER
+                        Stop after N nodes

@@ -12,7 +12,8 @@ class ErrorReportingIssue(unittest.TestCase):
     """ Test Issue #30.  Note that this unit test is reasonably fragile, as it counts on an External SPARQL
     endpoint.
     """
-    @unittest.skipIf(False, "Fragile test - we need local data to consistently reproduce")
+
+    @unittest.skipIf(True, "Fragile test - we need local data to consistently reproduce")
     def test_messages(self):
         """ Test failures with no reasons supplied """
         shex = os.path.join(data_dir, 'biolink-model.shex')

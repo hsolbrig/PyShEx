@@ -1,6 +1,6 @@
 import sys
 from argparse import ArgumentParser
-from typing import Optional, Union, List, NamedTuple, Type, Iterator
+from typing import Optional, Union, List, NamedTuple, Type, Iterator, Callable
 
 from CFGraph import CFGraph
 from ShExJSG import ShExJ, ShExC
@@ -64,7 +64,8 @@ class ShExEvaluator:
                  rdf_format: str = "turtle",
                  debug: bool = False,
                  debug_slurps: bool = False,
-                 over_slurp: bool = None) -> None:
+                 over_slurp: bool = None,
+                 output_sink: Optional[Callable[[EvaluationResult], bool]] = None) -> None:
         """ Evaluator constructor.  All of the parameters below can be set in the constructor or at runtime
 
         :param rdf: RDF string, file name, URL or Graph for evaluation.
@@ -75,6 +76,7 @@ class ShExEvaluator:
         :param debug: emit semi-helpful debug information
         :param debug: debug graph fetch calls
         :param over_slurp: Controls whether SPARQL slurper does exact or over slurps
+        :param output_sink: Function for accepting evaluation results and returns whether to keep evaluating
         """
         self.rdf_format = rdf_format
         self.g = None
@@ -87,6 +89,9 @@ class ShExEvaluator:
         self.debug = debug
         self.debug_slurps = debug_slurps
         self.over_slurp = over_slurp
+        self.output_sink = output_sink
+        self.nerrors = 0
+        self.nnodes = 0
 
     @property
     def rdf(self) -> str:
@@ -185,26 +190,40 @@ class ShExEvaluator:
                  rdf_format: Optional[str] = None,
                  debug: Optional[bool] = None,
                  debug_slurps: Optional[bool] = None,
-                 over_slurp: Optional[bool] = None) -> List[EvaluationResult]:
+                 over_slurp: Optional[bool] = None,
+                 output_sink: Optional[Callable[[EvaluationResult], bool]] = None) -> List[EvaluationResult]:
         if rdf is not None or shex is not None or focus is not None or start is not None:
-            evaluator = ShExEvaluator(rdf if rdf is not None else self.g,
-                                      shex if shex is not None else self._schema,
-                                      focus if focus is not None else self.focus,
-                                      start if start is not None else self.start if self.start else START,
-                                      rdf_format if rdf_format is not None else self.rdf_format)
+            evaluator = ShExEvaluator(rdf=rdf if rdf is not None else self.g,
+                                      schema=shex if shex is not None else self._schema,
+                                      focus=focus if focus is not None else self.focus,
+                                      start=start if start is not None else self.start if self.start else START,
+                                      rdf_format=rdf_format if rdf_format is not None else self.rdf_format,
+                                      output_sink=output_sink if output_sink is not None else self.output_sink)
         else:
             evaluator = self
 
+        rval = []
+        if evaluator.output_sink is None:
+            def sink(e: EvaluationResult) -> bool:
+                rval.append(e)
+                return True
+            evaluator.output_sink = sink
+
+        processing = True
+        self.nerrors = 0
+        self.nnodes = 0
         if START in self.start and evaluator._schema.start is None:
-            return [EvaluationResult(False, None, None, 'START node is not specified')]
+            self.nerrors += 1
+            evaluator.output_sink(EvaluationResult(False, None, None, 'START node is not specified'))
+            return rval
 
         cntxt = Context(evaluator.g, evaluator._schema)
         cntxt.debug_context.debug = debug if debug is not None else self.debug
         cntxt.debug_context.trace_slurps = debug_slurps if debug_slurps is not None else self.debug_slurps
         cntxt.over_slurp = self.over_slurp if over_slurp is not None else self.over_slurp
 
-        rval = []
         for focus in evaluator.foci:
+            self.nnodes += 1
             start_list: List[Union[URIRef, START]] = []
             for start in evaluator.start:
                 if start is START:
@@ -219,14 +238,21 @@ class ShExEvaluator:
                     map_.add(ShapeAssociation(focus, start_node))
                     cntxt.reset()
                     success, fail_reasons = isValid(cntxt, map_)
-                    rval.append(EvaluationResult(success, focus, start_node,
-                                                 '\n'.join(fail_reasons) if not success else ''))
+                    if not success:
+                        self.nerrors += 1
+                    if not evaluator.output_sink(EvaluationResult(success, focus, start_node,
+                                                                  '\n'.join(fail_reasons) if not success else '')):
+                        processing = False
+                        break
             else:
-                rval.append(EvaluationResult(False, focus, None, "No start node located"))
+                self.nerrors += 1
+                evaluator.output_sink(EvaluationResult(False, focus, None, "No start node located"))
+            if not processing:
+                break
         return rval
 
 
-def genargs(prog: Optional[str]=None) -> ArgumentParser:
+def genargs(prog: Optional[str] = None) -> ArgumentParser:
     """
     Create a command line parser
     :return: parser
@@ -244,10 +270,12 @@ def genargs(prog: Optional[str]=None) -> ArgumentParser:
     parser.add_argument("-ss", "--slurper", action="store_true", help="Use SPARQL slurper graph")
     parser.add_argument("-cf", "--flattener", action="store_true", help="Use RDF Collections flattener graph")
     parser.add_argument("-sq", "--sparql", help="SPARQL query to generate focus nodes")
+    parser.add_argument("-se", "--stoponerror", help="Stop on an error", action="store_true")
+    parser.add_argument("--stopafter", help="Stop after N nodes", type=int)
     return parser
 
 
-def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[str]=None) -> bool:
+def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[str] = None) -> int:
     if isinstance(argv, str):
         argv = argv.split()
     opts = genargs(prog).parse_args(argv if argv is not None else sys.argv[1:])
@@ -255,18 +283,21 @@ def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[st
         opts.slurper = True
     if opts.slurper and opts.flattener:
         print("Error: Cannot combine slurper and flattener graphs")
-        return False
+        return 2
     if not opts.format:
         opts.format = guess_format(opts.rdf)
     if not opts.format:
         print('Error: Cannot determine RDF format from file name - use "--format" option')
-        return False
+        return 3
     g = SlurpyGraph(opts.rdf) if opts.slurper else CFGraph() if opts.flattener else Graph()
     if not opts.slurper:
-        g.load(opts.rdf, format=opts.format)
+        if '\n' in opts.rdf or '\r' in opts.rdf:
+            g.parse(data=opts.rdf, format=opts.format)
+        else:
+            g.load(opts.rdf, format=opts.format)
     if not (opts.focus or opts.allsubjects or opts.sparql):
         print('Error: You must specify one or more graph focus nodes, supply a SPARQL query, or use the "-A" option')
-        return False
+        return 4
 
     start = []
     if opts.start:
@@ -285,14 +316,17 @@ def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[st
             opts.focus = [opts.focus]
         opts.focus += list(SPARQLQuery(opts.rdf, opts.sparql, ).focus_nodes())
 
-    result = ShExEvaluator(g, opts.shex, opts.focus, start, rdf_format=opts.format, debug=opts.debug).evaluate()
-    success = all(r.result for r in result)
-    if not success:
-        print("Errors:")
-        for rslt in result:
-            if not rslt.result:
-                print(f"""  Focus: {rslt.focus}
-  Start: {rslt.start}
-  Reason: {str(rslt.reason).strip()}
-""")
-    return success
+    def result_sink(rslt: EvaluationResult) -> bool:
+        if not rslt.result:
+            if evaluator.nerrors == 1:
+                print("Errors:")
+            else:
+                print()
+            print(f"  Focus: {rslt.focus}\n  Start: {rslt.start}\n  Reason: {str(rslt.reason)}")
+            return not opts.stoponerror and (not opts.stopafter or evaluator.nnodes < opts.stopafter)
+        return not opts.stopafter or evaluator.nnodes < opts.stopafter
+
+    evaluator = ShExEvaluator(g, opts.shex, opts.focus, start, rdf_format=opts.format, debug=opts.debug,
+                              output_sink=result_sink)
+    evaluator.evaluate()
+    return 1 if evaluator.nerrors else 0
