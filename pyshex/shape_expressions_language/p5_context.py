@@ -176,7 +176,17 @@ class Context:
                     self.error_list.append(f"Import failure on {uri}")
 
         if self.schema.start is not None:
+            if not isinstance_(self.schema.start, ShExJ.shapeExprLabel) and\
+                    'id' in self.schema.start and self.schema.start.id is None:
+                self.schema.start.id = BNode()
             self._gen_schema_xref(self.schema.start)
+            # TODO: The logic below really belongs in the parser.  We shouldn't be messing with the schema here...
+            if not isinstance_(self.schema.start, ShExJ.shapeExprLabel):
+                if self.schema.shapes is None:
+                    self.schema.shapes = [self.schema.start]
+                else:
+                    self.schema.shapes.append(self.schema.start)
+                self.schema.start = self.schema.start.id
         if self.schema.shapes is not None:
             for e in self.schema.shapes:
                 self._gen_schema_xref(e)
@@ -202,20 +212,18 @@ class Context:
         """
         if expr is not None and not isinstance_(expr, ShExJ.shapeExprLabel) and 'id' in expr and expr.id is not None:
             abs_id = self._resolve_relative_uri(expr.id)
-            if abs_id in self.schema_id_map:
-                return
-            else:
+            if abs_id not in self.schema_id_map:
                 self.schema_id_map[abs_id] = expr
-        if isinstance(expr, (ShExJ.ShapeOr, ShExJ.ShapeAnd)):
-            for expr2 in expr.shapeExprs:
-                self._gen_schema_xref(expr2)
-        elif isinstance(expr, ShExJ.ShapeNot):
-            self._gen_schema_xref(expr.shapeExpr)
-        elif isinstance(expr, ShExJ.Shape):
-            if expr.expression is not None:
-                self._gen_te_xref(expr.expression)
+                if isinstance(expr, (ShExJ.ShapeOr, ShExJ.ShapeAnd)):
+                    for expr2 in expr.shapeExprs:
+                        self._gen_schema_xref(expr2)
+                elif isinstance(expr, ShExJ.ShapeNot):
+                    self._gen_schema_xref(expr.shapeExpr)
+                elif isinstance(expr, ShExJ.Shape):
+                    if expr.expression is not None:
+                        self._gen_te_xref(expr.expression)
 
-    def _resolve_relative_uri(self, ref: ShExJ.shapeExprLabel) -> ShExJ.shapeExprLabel:
+    def _resolve_relative_uri(self, ref: Union[URIRef, BNode, ShExJ.shapeExprLabel]) -> ShExJ.shapeExprLabel:
         return ShExJ.IRIREF(str(self.base_namespace[str(ref)])) if ':' not in str(ref) and self.base_namespace else ref
 
     def _gen_te_xref(self, expr: Union[ShExJ.tripleExpr, ShExJ.tripleExprLabel]) -> None:

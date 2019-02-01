@@ -13,9 +13,9 @@ shexfile = os.path.join(validation_dir, 'anon_start.shex')
 
 class Issue26TestCase(unittest.TestCase):
 
-    @unittest.skipIf(True, "Issue 26 needs to be fixed")
+    @unittest.skipIf(False, "Issue 26 needs to be fixed")
     def test_anon_start(self):
-        self.assertTrue(evaluate_cli(f"{rdffile} {shexfile} -A"))
+        self.assertEqual(0, evaluate_cli(f"{rdffile} {shexfile} -A"))
 
 
 

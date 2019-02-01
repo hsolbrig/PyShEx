@@ -32,6 +32,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.6.0 -- Added the -ut and -sp options to allow start nodes to be specified by rdf:type or an arbitrary predicate
 * 0.6.1 -- Added the ability to supply a SPARQL Query (-sq option) 
 * 0.7.0 -- Fixes for issues 28, 29 and 30 
+* 0.7.1 -- Fix issue 26
 
 ## Installation
 ```bash
