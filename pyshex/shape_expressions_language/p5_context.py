@@ -184,6 +184,16 @@ class Context:
         self.current_node: ParseNode = None
         self.evaluate_stack: List[Tuple[Union[BNode, URIRef], Optional[str]]] = []  # Node / shape evaluation stack
 
+    def reset(self) -> None:
+        """
+        Reset the context preceeding an evaluation
+        """
+        self.evaluating = set()
+        self.assumptions = {}
+        self.known_results = {}
+        self.current_node = None
+        self.evaluate_stack = []
+
     def _gen_schema_xref(self, expr: Optional[Union[ShExJ.shapeExprLabel, ShExJ.shapeExpr]]) -> None:
         """
         Generate the schema_id_map
