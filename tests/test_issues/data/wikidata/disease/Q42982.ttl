@@ -1,8 +1,8 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
-@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
-@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix pr: <http://www.wikidata.org/prop/reference/> .
@@ -87,7 +87,7 @@ wd:Q42982 rdfs:label "Ailléirge",
         "敏感",
         "过敏",
         "알레르기" ;
-    schema:dateModified "2019-01-21T10:31:09+00:00"^^xsd:dateTime ;
+    schema:dateModified "2019-01-24T02:02:17+00:00"^^xsd:dateTime ;
     schema:description "Alergi tgl:06-10-2017",
         "Krankheit",
         "enfermedad del sistema inmunitario",
@@ -101,11 +101,11 @@ wd:Q42982 rdfs:label "Ailléirge",
         "prehnaná, neprimeraná reakcia imunitného systému organizmu na látky, s ktorými sa bežne stretávame v našom prostredí",
         "الأرجية هي مرض مفرط او حساسية مفرطة اتجاه مواد غير ممرضة عادة",
         "বেশির ভাগ মানুষের জন্য সহনীয় পদার্থের বিরুদ্ধে অনাক্রম্যতন্ত্রের প্রতিক্রিয়া" ;
-    schema:version 838768299 ;
-    ns2:identifiers 30 ;
-    ns2:sitelinks 98 ;
-    ns2:statements 61 ;
-    ns2:timestamp "2019-01-21T10:31:20+00:00"^^xsd:dateTime ;
+    schema:version 841246875 ;
+    ns1:identifiers 31 ;
+    ns1:sitelinks 98 ;
+    ns1:statements 62 ;
+    ns1:timestamp "2019-01-24T02:02:22+00:00"^^xsd:dateTime ;
     skos:altLabel "Alergi",
         "Alergias",
         "Alergica",
@@ -222,6 +222,7 @@ wd:Q42982 rdfs:label "Ailléirge",
     p:P1051 <http://www.wikidata.org/entity/statement/Q42982-C5D0A661-7E97-4E14-BDFE-302357F73444> ;
     p:P1375 <http://www.wikidata.org/entity/statement/Q42982-3458f200-4556-b3ec-c79a-20f9630a9781>,
         <http://www.wikidata.org/entity/statement/Q42982-354696c2-436f-befc-bab8-2dcb643dd2e0> ;
+    p:P1417 <http://www.wikidata.org/entity/statement/Q42982-3028B287-F3B7-4809-87AD-B93A48F869F5> ;
     p:P1542 <http://www.wikidata.org/entity/statement/Q42982-E8349AD8-90F7-46C0-9F39-6E2D2ADEAAAA> ;
     p:P1748 <http://www.wikidata.org/entity/statement/Q42982-644FC133-E4FA-44F1-8CC3-38C48516FAAF> ;
     p:P18 <http://www.wikidata.org/entity/statement/Q42982-6a18d13f-4af6-8a62-bd25-90f38358224d> ;
@@ -279,21 +280,22 @@ wd:Q42982 rdfs:label "Ailléirge",
     p:P910 <http://www.wikidata.org/entity/statement/Q42982-994C45DA-900A-4860-9A0B-D2FE26851078> ;
     p:P935 <http://www.wikidata.org/entity/statement/Q42982-332B7E35-666C-4256-B088-7483DBD7E858> ;
     p:P950 <http://www.wikidata.org/entity/statement/Q42982-09bff9fe-4f00-454e-0b82-1b54c2f67bf0> ;
-    ns1:P1014 <http://vocab.getty.edu/aat/300255420> ;
-    ns1:P227 <http://d-nb.info/gnd/4001257-8> ;
-    ns1:P244 <http://id.loc.gov/authorities/names/sh85003662> ;
-    ns1:P268 <http://data.bnf.fr/ark:/12148/cb119308689> ;
-    ns1:P269 <http://www.idref.fr/027218864/id> ;
-    ns1:P349 <http://id.ndl.go.jp/auth/ndlna/00560318> ;
-    ns1:P486 <http://id.nlm.nih.gov/mesh/D006967> ;
-    ns1:P508 <http://purl.org/bncf/tid/8963> ;
-    ns1:P646 <http://g.co/kg/m/0fd23> ;
-    ns1:P672 <https://id.nlm.nih.gov/mesh/C20.543> ;
-    ns1:P950 <http://datos.bne.es/resource/XX524903> ;
+    ns2:P1014 <http://vocab.getty.edu/aat/300255420> ;
+    ns2:P227 <http://d-nb.info/gnd/4001257-8> ;
+    ns2:P244 <http://id.loc.gov/authorities/names/sh85003662> ;
+    ns2:P268 <http://data.bnf.fr/ark:/12148/cb119308689> ;
+    ns2:P269 <http://www.idref.fr/027218864/id> ;
+    ns2:P349 <http://id.ndl.go.jp/auth/ndlna/00560318> ;
+    ns2:P486 <http://id.nlm.nih.gov/mesh/D006967> ;
+    ns2:P508 <http://purl.org/bncf/tid/8963> ;
+    ns2:P646 <http://g.co/kg/m/0fd23> ;
+    ns2:P672 <https://id.nlm.nih.gov/mesh/C20.543> ;
+    ns2:P950 <http://datos.bne.es/resource/XX524903> ;
     wdt:P1014 "300255420" ;
     wdt:P1051 "12689" ;
     wdt:P1375 "000180797",
         "000181384" ;
+    wdt:P1417 "science/allergy" ;
     wdt:P1542 wd:Q1115038 ;
     wdt:P1748 "C3114" ;
     wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Allergy%20degranulation%20processes%2001.svg> ;

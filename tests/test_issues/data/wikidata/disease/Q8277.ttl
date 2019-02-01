@@ -1,8 +1,8 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
-@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
-@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix pr: <http://www.wikidata.org/prop/reference/> .
@@ -84,7 +84,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "多発性硬化症",
         "多發性硬化症",
         "다발성 경화증" ;
-    schema:dateModified "2018-12-28T19:35:56+00:00"^^xsd:dateTime ;
+    schema:dateModified "2019-01-28T13:07:04+00:00"^^xsd:dateTime ;
     schema:description "Doença desmielinizante em que são danificadas as bainhas de mielina à volta dos axónios do cérebro e a medula espinal, provocando desmielinização.",
         "Entmarkungserkrankung des zentralen Nervensystems",
         "Sygdom der rammer nervecellerne",
@@ -107,11 +107,11 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "एक रोग जिसमें मस्तिष्क तथा सुषुम्ना रज्जु शोथ के चारों ओर वसायुक्त माइलिन के आवरण क्षतिग्रस्त हो जाते हैं, जिससे माइलिन के आवरण नष्ट होने और घाव के निशान होने के साथ-साथ रोग के संकेत और लक्षणों के स्थूल क्रम उत्पन्न होते हैं",
         "একধরনের ডি-মায়েলিনেটিং মানব ব্যাধি যাতে মানব মস্তিষ্কে ও স্নায়ুরজ্জুতে বিদ্যমান স্নায়ুকোষগুলোকে আচ্ছাদনকারী অন্তরক আবরণ ক্ষতিগ্রস্ত হয়ে যায়",
         "뇌와 척수의 축삭 주변의 지방성 말이집을 감싸는 부분이 손상을 입어서 탈수질환과 흉터형성으로 이어지는 염증 질환이다." ;
-    schema:version 821862378 ;
-    ns2:identifiers 39 ;
-    ns2:sitelinks 65 ;
-    ns2:statements 159 ;
-    ns2:timestamp "2018-12-28T19:36:01+00:00"^^xsd:dateTime ;
+    schema:version 844868252 ;
+    ns1:identifiers 38 ;
+    ns1:sitelinks 65 ;
+    ns1:statements 158 ;
+    ns1:timestamp "2019-01-28T13:07:08+00:00"^^xsd:dateTime ;
     skos:altLabel "ED",
         "EM",
         "Encephalomyelitis disseminata",
@@ -261,8 +261,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         <http://www.wikidata.org/entity/statement/Q8277-B90FD873-2590-4F53-ABE5-C16761151125> ;
     p:P2888 <http://www.wikidata.org/entity/statement/Q8277-5DF65E3F-A99A-42A9-B6C4-94E2794CF480>,
         <http://www.wikidata.org/entity/statement/Q8277-F72B1D4B-192E-4A6A-BD98-3D7DCDA3852C> ;
-    p:P2892 <http://www.wikidata.org/entity/statement/Q8277-008B577F-4126-41A2-A06F-BF72B72C6378>,
-        <http://www.wikidata.org/entity/statement/Q8277-62643617-F18F-4838-96B6-2051FA41FB44> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q8277-62643617-F18F-4838-96B6-2051FA41FB44> ;
     p:P31 <http://www.wikidata.org/entity/statement/Q8277-04A1D4C5-B311-4E55-854A-AEB765CD0B60>,
         <http://www.wikidata.org/entity/statement/Q8277-433E2373-6439-48C2-A370-0A26DCDBD288> ;
     p:P3219 <http://www.wikidata.org/entity/statement/Q8277-20553ce2-4799-7cac-cc97-eeaf70d1a395> ;
@@ -307,13 +306,13 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
     p:P923 <http://www.wikidata.org/entity/statement/Q8277-2453d25c-4f59-9e07-cb4c-ec89998fb89d>,
         <http://www.wikidata.org/entity/statement/Q8277-9a1a35ab-48e1-b5f2-f718-0da1056b5744>,
         <http://www.wikidata.org/entity/statement/Q8277-f8b594bd-473f-8539-1564-48387991eec4> ;
-    ns1:P227 <http://d-nb.info/gnd/4040693-3> ;
-    ns1:P268 <http://data.bnf.fr/ark:/12148/cb119384088> ;
-    ns1:P349 <http://id.ndl.go.jp/auth/ndlna/00572494> ;
-    ns1:P486 <http://id.nlm.nih.gov/mesh/D009103> ;
-    ns1:P508 <http://purl.org/bncf/tid/25174> ;
-    ns1:P646 <http://g.co/kg/m/0dcqh> ;
-    ns1:P672 <https://id.nlm.nih.gov/mesh/C10.114.375.500>,
+    ns2:P227 <http://d-nb.info/gnd/4040693-3> ;
+    ns2:P268 <http://data.bnf.fr/ark:/12148/cb119384088> ;
+    ns2:P349 <http://id.ndl.go.jp/auth/ndlna/00572494> ;
+    ns2:P486 <http://id.nlm.nih.gov/mesh/D009103> ;
+    ns2:P508 <http://purl.org/bncf/tid/25174> ;
+    ns2:P646 <http://g.co/kg/m/0dcqh> ;
+    ns2:P672 <https://id.nlm.nih.gov/mesh/C10.114.375.500>,
         <https://id.nlm.nih.gov/mesh/C10.314.350.500>,
         <https://id.nlm.nih.gov/mesh/C20.111.258.250.500> ;
     wdt:P1051 "13793" ;
@@ -465,9 +464,6 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
     wdt:P923 wd:Q161238,
         wd:Q208376,
         wd:Q719444 .
-
-<http://www.wikidata.org/entity/statement/Q8277-008B577F-4126-41A2-A06F-BF72B72C6378> prov:wasDerivedFrom <http://www.wikidata.org/reference/c36bb3bf55ced0fb3e9487b9b54e155334f048cd> ;
-    ps:P2892 "C0026769" .
 
 <http://www.wikidata.org/entity/statement/Q8277-04A1D4C5-B311-4E55-854A-AEB765CD0B60> prov:wasDerivedFrom <http://www.wikidata.org/reference/4401fb23f92b82c762d72cd29b99c2148bc4ad20> ;
     ps:P31 wd:Q42303753 .

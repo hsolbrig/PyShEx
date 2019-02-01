@@ -31,6 +31,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.5.12 -- Added -A option, catch missing start node early
 * 0.6.0 -- Added the -ut and -sp options to allow start nodes to be specified by rdf:type or an arbitrary predicate
 * 0.6.1 -- Added the ability to supply a SPARQL Query (-sq option) 
+* 0.7.0 -- Fixes for issues 28, 29 and 30 
 
 ## Installation
 ```bash
@@ -44,16 +45,17 @@ pip install git+https://github.com/rdflib/rdflib
 ```
 Unfortunately, however, `rdflib-jsonld` is NOT compatible with the bleeding edge rdflib, so you can't use a json-ld parser in this situation.
 
-## evalshex CLI
+## shexeval CLI
 ```bash
 > shexeval -h
 usage: shexeval [-h] [-f FORMAT] [-s START] [-ut] [-sp STARTPREDICATE]
-                [-fn FOCUS] [-A] [-d] [-ss] [-cf]
+                [-fn FOCUS] [-A] [-d] [-ss] [-cf] [-sq SPARQL] [-se]
+                [--stopafter STOPAFTER]
                 rdf shex
 
 positional arguments:
-  rdf                   Input RDF file or SPARQL endpoint if slurper option
-                        set
+  rdf                   Input RDF file or SPARQL endpoint if slurper or sparql
+                        options
   shex                  ShEx specification
 
 optional arguments:
@@ -71,7 +73,11 @@ optional arguments:
   -d, --debug           Add debug output
   -ss, --slurper        Use SPARQL slurper graph
   -cf, --flattener      Use RDF Collections flattener graph
-
+  -sq SPARQL, --sparql SPARQL
+                        SPARQL query to generate focus nodes
+  -se, --stoponerror    Stop on an error
+  --stopafter STOPAFTER
+                        Stop after N nodes
 ```
 
 ## Documentation

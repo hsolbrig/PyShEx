@@ -112,7 +112,7 @@ wd:Q36956 rdfs:label "Abïl",
         "漢生病",
         "麻瘋",
         "한센병" ;
-    schema:dateModified "2019-01-16T18:17:35+00:00"^^xsd:dateTime ;
+    schema:dateModified "2019-01-31T04:19:10+00:00"^^xsd:dateTime ;
     schema:description "Enfermidade causadora de feridas e erosões na pele.",
         "Infektionskrankheit",
         "bệnh",
@@ -132,11 +132,11 @@ wd:Q36956 rdfs:label "Abïl",
         "బ్యాక్టీరియా వల్లే పుండ్లను కలిగించే వ్యాధి",
         "ᅟinfekta malsano kaŭzata de bakterio",
         "らい菌の感染によって起こる病気" ;
-    schema:version 835548071 ;
+    schema:version 847095264 ;
     ns2:identifiers 36 ;
-    ns2:sitelinks 120 ;
+    ns2:sitelinks 121 ;
     ns2:statements 97 ;
-    ns2:timestamp "2019-01-16T18:17:38+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2019-01-31T04:19:14+00:00"^^xsd:dateTime ;
     skos:altLabel "Aussatz",
         "Aussätzige",
         "Bélpoklosság",
@@ -493,6 +493,14 @@ wd:Q36956 rdfs:label "Abïl",
 
 <http://www.wikidata.org/entity/statement/Q36956-0af3472d-4859-61d3-e292-a234640d759a> ps:P279 wd:Q4293079 .
 
+<http://www.wikidata.org/entity/statement/Q36956-145bcda4-4512-a5b4-0934-4e940d512730> ps:P279 wd:Q929451 .
+
+<http://www.wikidata.org/entity/statement/Q36956-1D3F6BDB-83D6-48A7-BE2D-CAD8BDF89494> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
+    ps:P279 wd:Q3041498 .
+
+<http://www.wikidata.org/entity/statement/Q36956-1E2367F1-AFF6-4C84-A142-D59EA2C6006A> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
+    ps:P279 wd:Q18556979 .
+
 <http://www.wikidata.org/entity/statement/Q36956-2583C4D4-43BC-4CCB-9D54-4D5C06E276A3> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
     ps:P1550 "548" .
 
@@ -501,6 +509,9 @@ wd:Q36956 rdfs:label "Abïl",
 
 <http://www.wikidata.org/entity/statement/Q36956-7AD8E76F-2EC8-43B5-B877-7A256EB89203> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
     ps:P1748 "C84824" .
+
+<http://www.wikidata.org/entity/statement/Q36956-95A8F53C-CA5F-4591-892E-66A254D3F493> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
+    ps:P279 wd:Q18553247 .
 
 <http://www.wikidata.org/entity/statement/Q36956-B7FDF963-38AF-4C3D-ACE5-3E8DD6FB2F98> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
     ps:P31 wd:Q12136 .

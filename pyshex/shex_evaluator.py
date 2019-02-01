@@ -330,3 +330,7 @@ def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[st
                               output_sink=result_sink)
     evaluator.evaluate()
     return 1 if evaluator.nerrors else 0
+
+
+if __name__ == '__main__':
+    evaluate_cli(sys.argv[1:])
