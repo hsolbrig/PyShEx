@@ -29,7 +29,6 @@ def setup_context(shex_str: str, rdf_str: Optional[str]) -> Context:
     if g is None:
         g = Graph()
         g.parse(rdf_header)
-    cntxt = Context(g, schema)
     return Context(g, schema)
 
 
