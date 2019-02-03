@@ -24,7 +24,9 @@ class IllFoundedTestCase(unittest.TestCase):
         e = ShExEvaluator(rdf=g, schema=shex, focus=EX.x, start=EX.S, debug=False)
         rslt = e.evaluate()
         self.assertFalse(rslt[0].result)
-        self.assertEqual("http://a.example/S: Inconsistent recursive shape reference", rslt[0].reason.strip())
+        self.assertEqual("""Testing <http://a.example/x> against shape http://a.example/S
+    Testing <http://a.example/x> against shape http://a.example/S
+      http://a.example/S: Inconsistent recursive shape reference""", rslt[0].reason.strip())
 
 
 if __name__ == '__main__':

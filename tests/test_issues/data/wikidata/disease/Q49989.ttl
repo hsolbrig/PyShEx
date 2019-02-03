@@ -1,8 +1,8 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
-@prefix ns1: <http://wikiba.se/ontology#> .
-@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix pr: <http://www.wikidata.org/prop/reference/> .
@@ -71,10 +71,10 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "Наиболее распространенная прионная болезнь",
         "退行性神經系統疾病" ;
     schema:version 827320622 ;
-    ns1:identifiers 25 ;
-    ns1:sitelinks 44 ;
-    ns1:statements 41 ;
-    ns1:timestamp "2019-01-04T16:42:21+00:00"^^xsd:dateTime ;
+    ns2:identifiers 25 ;
+    ns2:sitelinks 44 ;
+    ns2:statements 41 ;
+    ns2:timestamp "2019-01-04T16:42:21+00:00"^^xsd:dateTime ;
     skos:altLabel "CJD",
         "CJD (Creutzfeldt Jakob disease)",
         "CJK",
@@ -131,11 +131,11 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
     p:P673 <http://www.wikidata.org/entity/statement/q49989-E83E1327-5C13-4B3F-BB49-1DF65926A1EA> ;
     p:P699 <http://www.wikidata.org/entity/statement/Q49989-161C34D8-88A3-4C6C-A153-02ED13E38DCF>,
         <http://www.wikidata.org/entity/statement/Q49989-DD691227-8D8E-4836-8D6A-3FCDECAB8F62> ;
-    ns2:P349 <http://id.ndl.go.jp/auth/ndlna/00575235> ;
-    ns2:P486 <http://id.nlm.nih.gov/mesh/D007562> ;
-    ns2:P508 <http://purl.org/bncf/tid/54342> ;
-    ns2:P646 <http://g.co/kg/m/01ptn> ;
-    ns2:P672 <https://id.nlm.nih.gov/mesh/C10.228.140.380.165>,
+    ns1:P349 <http://id.ndl.go.jp/auth/ndlna/00575235> ;
+    ns1:P486 <http://id.nlm.nih.gov/mesh/D007562> ;
+    ns1:P508 <http://purl.org/bncf/tid/54342> ;
+    ns1:P646 <http://g.co/kg/m/01ptn> ;
+    ns1:P672 <https://id.nlm.nih.gov/mesh/C10.228.140.380.165>,
         <https://id.nlm.nih.gov/mesh/C10.228.228.800.230> ;
     wdt:P1296 "0262750" ;
     wdt:P138 wd:Q62474,

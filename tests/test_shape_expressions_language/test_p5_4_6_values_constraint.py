@@ -73,11 +73,11 @@ class ValuesConstraintTestCase(unittest.TestCase):
         cntxt = setup_context(shex_1, rdf_1)
         nc = cntxt.schema.shapes[0].expression.valueExpr
         focus = cntxt.graph.value(EX.issue1, EX.state)
-        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus, cntxt)
         self.assertTrue(nodeSatisfiesValues(cntxt, focus, nc))
 
         focus = cntxt.graph.value(EX.issue2, EX.state)
-        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
         self.assertEqual(['Node: http://schema.example/Unresolved not in value set:\n'
                           '\t {"values": ["http://schema.example/Resolved", "http://schema...'],
@@ -90,22 +90,22 @@ class ValuesConstraintTestCase(unittest.TestCase):
         nc = cntxt.schema.shapes[0].expression.valueExpr
 
         focus = cntxt.graph.value(EX.issue3, FOAF.mbox)
-        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus, cntxt)
         self.assertTrue(nodeSatisfiesValues(cntxt, focus, nc))
 
         focus = cntxt.graph.value(EX.issue4, FOAF.mbox)
-        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus, cntxt)
         self.assertTrue(nodeSatisfiesValues(cntxt, focus, nc))
 
         focus = cntxt.graph.value(EX.issue6, FOAF.mbox)
-        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
         self.assertEqual(['Node: missing not in value set:\n'
                          '\t {"values": [{"value": "N/A"}, {"stem": "mailto:engineering-"...'],
                          self.fail_reasons(cntxt))
 
         focus = cntxt.graph.value(EX.issue7, FOAF.mbox)
-        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
         self.assertEqual(['Node: mailto:sales-contacts-999@a.example not in value set:\n'
                           '\t {"values": [{"value": "N/A"}, {"stem": "mailto:engineering-"...'],
@@ -117,15 +117,15 @@ class ValuesConstraintTestCase(unittest.TestCase):
         cntxt = setup_context(shex_3, rdf_3)
         nc = cntxt.schema.shapes[0].expression.valueExpr
         focus = cntxt.graph.value(EX.issue8, FOAF.mbox)
-        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus, cntxt)
         self.assertTrue(nodeSatisfiesValues(cntxt, focus, nc))
 
         focus = cntxt.graph.value(EX.issue9, FOAF.mbox)
-        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus, cntxt)
         self.assertTrue(nodeSatisfiesValues(cntxt, focus, nc))
 
         focus = cntxt.graph.value(EX.issue10, FOAF.mbox)
-        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
         self.assertEqual(['Node: mailto:engineering-2112@a.example not in value set:\n'
                           '\t {"values": [{"stem": {"type": "Wildcard"}, "exclusions": [{"...'],

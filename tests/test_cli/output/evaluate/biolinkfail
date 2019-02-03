@@ -1,4 +1,12 @@
 Errors:
   Focus: https://biolink.github.io/biolink-model/ontology/biolink.ttl
   Start: http://bioentity.io/vocab/SchemaDefinition
-  Reason:   Datatype constraint (http://www.w3.org/2001/XMLSchema#string) on BNode
+  Reason:   Testing <https://biolink.github.io/biolink-model/ontology/biolink.ttl> against shape http://bioentity.io/vocab/Element
+    Datatype constraint (http://www.w3.org/2001/XMLSchema#string) does not match BNode _:b1
+    _:b1 context:
+        ("rdf"
+         "rdfs"
+         "xsd"
+         "skos"
+         "OIO"
+        )

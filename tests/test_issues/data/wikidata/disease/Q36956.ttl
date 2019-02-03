@@ -1,8 +1,8 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
-@prefix ns1: <http://wikiba.se/ontology#> .
-@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix pr: <http://www.wikidata.org/prop/reference/> .
@@ -133,10 +133,10 @@ wd:Q36956 rdfs:label "Abïl",
         "ᅟinfekta malsano kaŭzata de bakterio",
         "らい菌の感染によって起こる病気" ;
     schema:version 847095264 ;
-    ns1:identifiers 36 ;
-    ns1:sitelinks 121 ;
-    ns1:statements 97 ;
-    ns1:timestamp "2019-01-31T04:19:14+00:00"^^xsd:dateTime ;
+    ns2:identifiers 36 ;
+    ns2:sitelinks 121 ;
+    ns2:statements 97 ;
+    ns2:timestamp "2019-01-31T04:19:12+00:00"^^xsd:dateTime ;
     skos:altLabel "Aussatz",
         "Aussätzige",
         "Bélpoklosság",
@@ -387,14 +387,14 @@ wd:Q36956 rdfs:label "Abïl",
     p:P902 <http://www.wikidata.org/entity/statement/Q36956-227BA989-0DB8-4851-9FA9-8D0B9A5C2CCC> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q36956-3CA8A7C7-D284-43C0-BF0F-FE7F4C5D4D1D> ;
     p:P935 <http://www.wikidata.org/entity/statement/Q36956-FC3919F8-A2D9-4660-AD53-A3E555AAEF18> ;
-    ns2:P1256 <http://iconclass.org/31A4622> ;
-    ns2:P227 <http://d-nb.info/gnd/4035392-8> ;
-    ns2:P2581 <http://babelnet.org/rdf/s00042889n> ;
-    ns2:P349 <http://id.ndl.go.jp/auth/ndlna/00569249> ;
-    ns2:P486 <http://id.nlm.nih.gov/mesh/D007918> ;
-    ns2:P508 <http://purl.org/bncf/tid/14932> ;
-    ns2:P646 <http://g.co/kg/m/0c5f7> ;
-    ns2:P672 <https://id.nlm.nih.gov/mesh/C01.252.410.040.552.386> ;
+    ns1:P1256 <http://iconclass.org/31A4622> ;
+    ns1:P227 <http://d-nb.info/gnd/4035392-8> ;
+    ns1:P2581 <http://babelnet.org/rdf/s00042889n> ;
+    ns1:P349 <http://id.ndl.go.jp/auth/ndlna/00569249> ;
+    ns1:P486 <http://id.nlm.nih.gov/mesh/D007918> ;
+    ns1:P508 <http://purl.org/bncf/tid/14932> ;
+    ns1:P646 <http://g.co/kg/m/0c5f7> ;
+    ns1:P672 <https://id.nlm.nih.gov/mesh/C01.252.410.040.552.386> ;
     wdt:P1051 "12585" ;
     wdt:P1060 wd:Q15304512 ;
     wdt:P1193 1.0,

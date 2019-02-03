@@ -31,11 +31,11 @@ class NodeKindConstraintTest(unittest.TestCase):
         nc = cntxt.schema.shapes[0].expression.valueExpr
 
         focus = cntxt.graph.value(EX.issue1, EX.state)
-        cntxt.current_node = ParseNode(nodeSatisfiesNodeKind, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesNodeKind, nc, focus, cntxt)
         self.assertTrue(nodeSatisfiesNodeKind(cntxt, focus, nc))
 
         focus = cntxt.graph.value(EX.issue3, EX.state)
-        cntxt.current_node = ParseNode(nodeSatisfiesNodeKind, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesNodeKind, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesNodeKind(cntxt, focus, nc))
         self.assertEqual(['Node kind mismatch have: Literal expected: iri'], self.fail_reasons(cntxt))
 

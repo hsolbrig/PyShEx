@@ -212,7 +212,7 @@ class ShExEvaluator:
         processing = True
         self.nerrors = 0
         self.nnodes = 0
-        if START in self.start and evaluator._schema.start is None:
+        if START in evaluator.start and evaluator._schema.start is None:
             self.nerrors += 1
             evaluator.output_sink(EvaluationResult(False, None, None, 'START node is not specified'))
             return rval

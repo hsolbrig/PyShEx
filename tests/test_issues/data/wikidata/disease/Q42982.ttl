@@ -87,7 +87,7 @@ wd:Q42982 rdfs:label "Ailléirge",
         "敏感",
         "过敏",
         "알레르기" ;
-    schema:dateModified "2019-01-24T02:02:17+00:00"^^xsd:dateTime ;
+    schema:dateModified "2019-02-03T16:00:33+00:00"^^xsd:dateTime ;
     schema:description "Alergi tgl:06-10-2017",
         "Krankheit",
         "enfermedad del sistema inmunitario",
@@ -101,11 +101,11 @@ wd:Q42982 rdfs:label "Ailléirge",
         "prehnaná, neprimeraná reakcia imunitného systému organizmu na látky, s ktorými sa bežne stretávame v našom prostredí",
         "الأرجية هي مرض مفرط او حساسية مفرطة اتجاه مواد غير ممرضة عادة",
         "বেশির ভাগ মানুষের জন্য সহনীয় পদার্থের বিরুদ্ধে অনাক্রম্যতন্ত্রের প্রতিক্রিয়া" ;
-    schema:version 841246875 ;
+    schema:version 850160300 ;
     ns2:identifiers 31 ;
-    ns2:sitelinks 98 ;
+    ns2:sitelinks 99 ;
     ns2:statements 62 ;
-    ns2:timestamp "2019-01-24T02:02:22+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2019-02-03T16:02:56+00:00"^^xsd:dateTime ;
     skos:altLabel "Alergi",
         "Alergias",
         "Alergica",

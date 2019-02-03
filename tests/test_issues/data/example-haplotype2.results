@@ -1,0 +1,24 @@
+Errors:
+  Focus: http://hl7.org/fhir/Observation/example-haplotype2
+  Start: _:start
+  Reason:   Testing <http://hl7.org/fhir/Observation/example-haplotype2> against shape http://hl7.org/fhir/shape/Observation
+    Testing _:b2 against shape http://hl7.org/fhir/shape/Extension
+    _:b2 context:
+      <http://hl7.org/fhir/Observation/example-haplotype2> fhir:DomainResource.extension _:b2 .
+         _:b2 fhir:Extension.url _:b1 .
+           _:b1 fhir:value "http://hl7.org/fhir/StructureDefinition/observation-geneticsGene" .
+         _:b2 fhir:Extension.valueCodeableConcept _:b3 .
+           _:b3 fhir:CodeableConcept.coding _:b4 .
+             _:b4 fhir:Coding.code _:b5 .
+               _:b5 fhir:value "2623" .
+             _:b4 fhir:Coding.display _:b6 .
+               _:b6 fhir:value "CYP2C9" .
+             _:b4 fhir:Coding.system _:b7 .
+               _:b7 fhir:value "http://www.genenames.org" .
+             _:b4 fhir:index "0"^^xsd:integer .
+         _:b2 fhir:index "0"^^xsd:integer .
+
+      Datatype constraint (http://www.w3.org/2001/XMLSchema#string) does not match BNode _:b1
+    _:b1 context:
+          _:b2 fhir:Extension.url _:b1 .
+             _:b1 fhir:value "http://hl7.org/fhir/StructureDefinition/observation-geneticsGene" .
