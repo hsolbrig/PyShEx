@@ -33,6 +33,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.6.1 -- Added the ability to supply a SPARQL Query (-sq option) 
 * 0.7.0 -- Fixes for issues 28, 29 and 30 
 * 0.7.1 -- Fix issue 26
+* 0.7.2 -- Upgrade error reporting
 
 ## Installation
 ```bash

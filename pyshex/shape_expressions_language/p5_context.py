@@ -13,11 +13,12 @@ from ShExJSG import ShExJ
 from ShExJSG.ShExJ import Schema
 from jsonasobj import JsonObj, as_dict
 from pyjsg.jsglib import isinstance_
-from rdflib import Graph, BNode, Namespace, URIRef
+from rdflib import Graph, BNode, Namespace, URIRef, Literal
 
 from pyshex.parse_tree.parse_node import ParseNode
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import START
+from pyshex.utils.n3_mapper import N3Mapper
 
 
 class DebugContext:
@@ -141,6 +142,7 @@ class Context:
         self.is_valid: bool = True
         self.error_list: List[str] = []
         self.graph: Graph = g
+        self.n3_mapper = N3Mapper(g)
         self.schema: ShExJ.Schema = s
         self.schema_id_map: Dict[ShExJ.shapeExprLabel, ShExJ.shapeExpr] = {}
         self.te_id_map: Dict[ShExJ.tripleExprLabel, ShExJ.tripleExpr] = {}
@@ -178,7 +180,7 @@ class Context:
         if self.schema.start is not None:
             if not isinstance_(self.schema.start, ShExJ.shapeExprLabel) and\
                     'id' in self.schema.start and self.schema.start.id is None:
-                self.schema.start.id = BNode()
+                self.schema.start.id = "_:start"
             self._gen_schema_xref(self.schema.start)
             # TODO: The logic below really belongs in the parser.  We shouldn't be messing with the schema here...
             if not isinstance_(self.schema.start, ShExJ.shapeExprLabel):
@@ -192,7 +194,8 @@ class Context:
                 self._gen_schema_xref(e)
 
         self.current_node: ParseNode = None
-        self.evaluate_stack: List[Tuple[Union[BNode, URIRef], Optional[str]]] = []  # Node / shape evaluation stack
+        self.evaluate_stack: List[Tuple[Union[BNode, URIRef], Optional[str]]] = []  # Node / shape evaluation stacks
+        self.bnode_map: Dict[BNode, str] = {}       # Map for prettifying bnodes
 
     def reset(self) -> None:
         """
@@ -203,6 +206,7 @@ class Context:
         self.known_results = {}
         self.current_node = None
         self.evaluate_stack = []
+        self.bnode_map = {}
 
     def _gen_schema_xref(self, expr: Optional[Union[ShExJ.shapeExprLabel, ShExJ.shapeExpr]]) -> None:
         """
@@ -398,18 +402,30 @@ class Context:
             self.assumptions[key] = False
             return False, True
         else:
-            self.current_node.fail_reason = f"{s.id}: Inconsistent recursive shape reference"
+            self.fail_reason = f"{s.id}: Inconsistent recursive shape reference"
             return True, False
 
     def process_reasons(self) -> List[str]:
         return self.current_node.fail_reasons(self.graph)
 
+
+    @property
+    def fail_reason(self) -> str:
+        return self.current_node._fail_reason
+
+    @fail_reason.setter
     def fail_reason(self, reason_text: str) -> None:
-        if self.current_node.fail_reason is None:
-            self.current_node.fail_reason = reason_text
+        if self.current_node._fail_reason is None:
+            self.current_node._fail_reason = reason_text
         else:
-            self.current_node.fail_reason += '\n' + reason_text
+            self.current_node._fail_reason += '\n' + reason_text
         self.current_node.reason_stack = copy(self.evaluate_stack)
+
+    def dump_bnode(self, n: Union[URIRef, BNode, Literal]) -> None:
+        if isinstance(n, BNode):
+            self.fail_reason = f"    {self.n3_mapper.n3(n)} context:"
+            for entry in self.current_node.dump_bnodes(self.graph, n, '      '):
+                self.fail_reason = entry
 
     def type_last(self, obj: JsonObj) -> JsonObj:
         """ Move the type identifiers to the end of the object for print purposes """

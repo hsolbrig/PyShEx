@@ -65,8 +65,8 @@ def satisfiesShape(cntxt: Context, n: Node, S: ShExJ.Shape, c: DebugContext) -> 
             # TODO: Is this working correctly on reverse items?
             non_matchables = RDFGraph([t for t in arcsOut(cntxt.graph, n) if t not in matchables])
             if len(non_matchables):
-                cntxt.current_node.fail_reason = "Unmatched triples in CLOSED shape:\n"
-                cntxt.current_node.fail_reason += '\n'.join(f"\t{t}" for t in non_matchables)
+                cntxt.fail_reason = "Unmatched triples in CLOSED shape:"
+                cntxt.fail_reason = '\n'.join(f"\t{t}" for t in non_matchables)
                 if c.debug:
                     print(c.i(0,
                               f"<--- Satisfies shape {c.d()} FAIL - "
@@ -188,7 +188,7 @@ def matchesTripleExprLabel(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExprLa
     te = cntxt.tripleExprFor(expr)
     if te:
         return matchesCardinality(cntxt, T, te)
-    cntxt.current_node.fail_reason = f"{expr}: Labeled triple expression not found"
+    cntxt.fail_reason = f"{expr}: Labeled triple expression not found"
     return False
 
 
@@ -213,12 +213,12 @@ def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr
     if isinstance(expr, ShExJ.TripleConstraint):
         if len(T) < min_:
             if len(T) > 0:
-                cntxt.fail_reason(f"{len(T)} triples less than {cardinality_text}")
+                cntxt.fail_reason = f"{len(T)} triples less than {cardinality_text}"
             else:
-                cntxt.fail_reason(f"No matching triples found for predicate {expr.predicate}")
+                cntxt.fail_reason = f"No matching triples found for predicate {expr.predicate}"
             return False
         elif 0 <= max_ < len(T):
-            cntxt.fail_reason(f"{len(T)} triples exceeds max {cardinality_text}")
+            cntxt.fail_reason = f"{len(T)} triples exceeds max {cardinality_text}"
             return False
         else:
             return all(matchesTripleConstraint(cntxt, t, expr) for t in T)
@@ -227,7 +227,7 @@ def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr
             if all(matchesExpr(cntxt, part, expr) for part in partition):
                 return True
         if min_ != 1 or max_ != 1:
-            cntxt.fail_reason(f"{len(T)} triples cannot be partitioned into {cardinality_text} passing groups")
+            cntxt.fail_reason = f"{len(T)} triples cannot be partitioned into {cardinality_text} passing groups"
         return False
 
 
@@ -296,7 +296,7 @@ def matchesTripleConstraint(cntxt: Context, t: RDFTriple, expr: ShExJ.TripleCons
         value = t.s if expr.inverse else t.o
         return expr.valueExpr is None or satisfies(cntxt, value, expr.valueExpr)
     else:
-        cntxt.current_node.fail_reason = f"Predicate mismatch: {t.p} ≠ {expr.predicate}"
+        cntxt.fail_reason = f"Predicate mismatch: {t.p} ≠ {expr.predicate}"
         return False
 
 
@@ -308,6 +308,6 @@ def matchesTripleExprRef(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExprLabe
     """
     expr = cntxt.tripleExprFor(expr)
     if expr is None:
-        cntxt.current_node.fail_reason = "{expr}: Reference not found"
+        cntxt.fail_reason = "{expr}: Reference not found"
         return False
     return all(matchesTripleConstraint(cntxt, t, expr) for t in T)

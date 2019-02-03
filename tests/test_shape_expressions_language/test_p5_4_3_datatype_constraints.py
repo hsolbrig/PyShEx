@@ -52,16 +52,16 @@ class DataTypeTestCase(unittest.TestCase):
         cntxt = setup_context(shex_1, rdf_1)
         nc = cntxt.schema.shapes[0].expression.valueExpr
         focus = cntxt.graph.value(EX.issue1, EX.submittedOn)
-        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus, cntxt)
         self.assertTrue(nodeSatisfiesDataType(cntxt, focus, nc))
         focus = cntxt.graph.value(EX.issue2, EX.submittedOn)
-        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesDataType(cntxt, focus, nc))
         self.assertEqual(['Datatype mismatch - expected: http://www.w3.org/2001/XMLSchema#dateTime '
                           'actual: http://www.w3.org/2001/XMLSchema#date'], self.fail_reasons(cntxt))
 
         focus = cntxt.graph.value(EX.issue3b, EX.submittedOn)
-        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesDataType(cntxt, focus, nc))
         self.assertEqual(['Datatype mismatch - expected: http://www.w3.org/2001/XMLSchema#dateTime '
                           'actual: http://www.w3.org/2001/XMLSchema#date'], self.fail_reasons(cntxt))
@@ -73,10 +73,10 @@ class DataTypeTestCase(unittest.TestCase):
         cntxt = setup_context(shex_1, rdf_1)
         nc = cntxt.schema.shapes[0].expression.valueExpr
         focus = cntxt.graph.value(EX.issue3, EX.submittedOn)
-        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesDataType(cntxt, focus, nc))
         focus = cntxt.graph.value(EX.issue3a, EX.submittedOn)
-        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesDataType(cntxt, focus, nc))
 
     def test_example_2(self):
@@ -85,11 +85,11 @@ class DataTypeTestCase(unittest.TestCase):
         cntxt = setup_context(shex_2, rdf_2)
         nc = cntxt.schema.shapes[0].expression.valueExpr
         focus = cntxt.graph.value(EX.issue3, RDFS.label)
-        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus, cntxt)
         self.assertTrue(nodeSatisfiesDataType(cntxt, focus, nc))
 
         focus = cntxt.graph.value(EX.issue4, RDFS.label)
-        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesDataType, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesDataType(cntxt, focus, nc))
         self.assertEqual(['Datatype mismatch - expected: '
                           'http://www.w3.org/1999/02/22-rdf-syntax-ns#langString actual: '

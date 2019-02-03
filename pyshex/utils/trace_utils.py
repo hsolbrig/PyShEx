@@ -13,7 +13,7 @@ def trace_satisfies(newline: bool=True, skip_trace: Callable[[JSGObject], bool]=
     def e(f: Callable[[Context, Node, JSGObject, DebugContext], bool]):
         def wrapper(cntxt: Context, n: Node, expr: JSGObject) -> bool:
             parent_parse_node = cntxt.current_node
-            cntxt.current_node = ParseNode(f, expr, n)
+            cntxt.current_node = ParseNode(f, expr, n, cntxt)
             parent_parse_node.nodes.append(cntxt.current_node)
             c = cntxt.debug_context
             c.splus()
@@ -34,7 +34,7 @@ def trace_matches(newline: bool=True):
     def e(f: Callable[[Context, RDFGraph, JSGObject, DebugContext], bool]):
         def wrapper(cntxt: Context, T: RDFGraph, expr: JSGObject) -> bool:
             parent_parse_node = cntxt.current_node
-            cntxt.current_node = ParseNode(f, expr, T)
+            cntxt.current_node = ParseNode(f, expr, T, cntxt)
             parent_parse_node.nodes.append(cntxt.current_node)
             c = cntxt.debug_context
             c.splus()

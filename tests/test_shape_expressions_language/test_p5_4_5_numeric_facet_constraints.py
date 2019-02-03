@@ -54,13 +54,13 @@ class NumericFacetTestCase(unittest.TestCase):
         cntxt = setup_context(shex_1, rdf_1)
         nc = cntxt.schema.shapes[0].expression.valueExpr
         focus = cntxt.graph.value(EX.issue1, EX.confirmations)
-        cntxt.current_node = ParseNode(nodeSatisfiesNumericFacet, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesNumericFacet, nc, focus, cntxt)
         self.assertTrue(nodeSatisfiesNumericFacet(cntxt, focus, nc))
         focus = cntxt.graph.value(EX.issue2, EX.confirmations)
-        cntxt.current_node = ParseNode(nodeSatisfiesNumericFacet, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesNumericFacet, nc, focus, cntxt)
         self.assertTrue(nodeSatisfiesNumericFacet(cntxt, focus, nc))
         focus = cntxt.graph.value(EX.issue3, EX.confirmations)
-        cntxt.current_node = ParseNode(nodeSatisfiesNumericFacet, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesNumericFacet, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesNumericFacet(cntxt, focus, nc))
         self.assertEqual(['Numeric value volation - minimum inclusive: 1.0 actual: 0'], self.fail_reasons(cntxt))
 
@@ -68,7 +68,7 @@ class NumericFacetTestCase(unittest.TestCase):
         cntxt = setup_context(shex_2, rdf_2)
         nc = cntxt.schema.shapes[0].expression.valueExpr
         focus = cntxt.graph.value(URIRef("http://a.example/s1"), URIRef("http://a.example/p1"))
-        cntxt.current_node = ParseNode(nodeSatisfiesNumericFacet, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesNumericFacet, nc, focus, cntxt)
         self.assertTrue(nodeSatisfiesNumericFacet(cntxt, focus, nc))
 
 

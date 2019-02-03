@@ -1,58 +1,66 @@
 from typing import Callable, Optional, List, Union, Tuple
 
-from pyjsg.jsglib import isinstance_
 from pyjsg.jsglib import JSGObject
+from pyjsg.jsglib import isinstance_
 from rdflib import BNode, URIRef, Graph
 
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import RDFGraph, Node
+from pyshex.utils.collection_utils import format_collection
+from pyshex.utils.n3_mapper import N3Mapper
 
 
 class ParseNode:
     def __init__(self,
                  function: Callable[["Context", Union[RDFGraph, Node], JSGObject], bool],
                  expr: JSGObject,
-                 object: Union[RDFGraph, Node]):
+                 obj: Union[RDFGraph, Node],
+                 cntxt: "Context"):
         self.function = function
         self.expr = expr
-        self.graph = object if isinstance(object, RDFGraph) else None
-        self.node = object if isinstance_(object, Node) else None
+        self.graph = obj if isinstance(obj, RDFGraph) else None
+        self.node = obj if isinstance_(obj, Node) else None
         self.result: bool = None
-        self.fail_reason: Optional[str] = None
+        self._fail_reason: Optional[str] = None
         self.reason_stack: List[Tuple[Union[BNode, URIRef], Optional[str]]] = []
         self.nodes: List[ParseNode] = []
+        self.n3m = cntxt.n3_mapper
 
-    def dump_bnodes(self, g: Graph, node: BNode, indent: str, top: bool=True) -> List[str]:
+    def dump_bnodes(self, g: Graph, node: BNode, indent: str, top: bool = True) -> List[str]:
         indent = indent + "  "
+        collection = format_collection(g, node, 6)
+        if collection is not None:
+            return [indent + c for c in collection]
         rval = []
         if top:
             for s, p in g.subject_predicates(node):
-                rval.append(f"{indent}  {s} - {p} - []")
+                rval.append(f"{indent}  {self.n3m.n3(s)} {self.n3m.n3(p)} {self.n3m.n3(node)} .")
         for p, o in sorted(g.predicate_objects(node)):
-            rval += [f"{indent}  [] {p} - {o}"]
+            rval += [f"{indent}     {self.n3m.n3(node)} {self.n3m.n3(p)} {self.n3m.n3(o)} ."]
             if isinstance(o, BNode):
                 rval += self.dump_bnodes(g, o, indent, top=False)
         return rval
 
-    def fail_reasons(self, g: Graph, depth: int=0) -> List[str]:
+    def fail_reasons(self, g: Graph, depth: int = 0) -> List[str]:
         def follow_reasons(d: int) -> List[str]:
             fr = []
-            if self.fail_reason:
-                fr.append(d * "  " + f"  {self.fail_reason}")
+            if self._fail_reason:
+                fr.append(d * "  " + f"  {self._fail_reason}")
                 d += 1
-            for node in self.nodes:
-                fr += node.fail_reasons(g, d)
+            for n in self.nodes:
+                fr += n.fail_reasons(g, d)
             return fr
 
         rval = []
         for i in range(0, len(self.reason_stack)):
             node, shape_name = self.reason_stack[i]
             if not shape_name:
-                shape_name = '(inner shape)'
+                shape_name = '(unnamed shape)'
             indent = (i+depth)*"  "
-            rval.append(f"{indent}---> Testing {node} against {shape_name} ")
+            rval.append(f"{indent}  Testing {self.n3m.n3(node)} against shape {shape_name}")
             if isinstance(node, BNode):
-                rval += [f"{indent}     BNODE:"]
-                rval += self.dump_bnodes(g, node, indent + ' ')
+                rval += [f"{indent}  {self.n3m.n3(node)} context:"]
+                rval += self.dump_bnodes(g, node, indent)
+                rval[-1] = rval[-1] + '\n'
         rval += follow_reasons(depth + len(self.reason_stack))
         return rval
 

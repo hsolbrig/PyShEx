@@ -62,10 +62,10 @@ class StringFacetTestCase(unittest.TestCase):
         nc = cntxt.schema.shapes[0].expression.valueExpr
 
         focus = cntxt.graph.value(EX.issue1, EX.submittedBy)
-        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus, cntxt)
         self.assertTrue(nodeSatisfiesStringFacet(cntxt, focus, nc))
         focus = cntxt.graph.value(EX.issue2, EX.submittedBy)
-        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesStringFacet(cntxt, focus, nc))
         self.assertEqual(['String length violation - minimum: 10 actual: 4'], self.fail_reasons(cntxt))
 
@@ -74,10 +74,10 @@ class StringFacetTestCase(unittest.TestCase):
         nc = cntxt.schema.shapes[0].expression.valueExpr
 
         focus = cntxt.graph.value(EX.issue6, EX.submittedBy)
-        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus, cntxt)
         self.assertTrue(nodeSatisfiesStringFacet(cntxt, focus, nc))
         focus = cntxt.graph.value(EX.issue7, EX.submittedBy)
-        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesStringFacet(cntxt, focus, nc))
         self.assertEqual(['Pattern match failure - pattern: genuser[0-9]+ flags:i string: '
                           'http://schema.example/genContact817'], self.fail_reasons(cntxt))
@@ -86,13 +86,13 @@ class StringFacetTestCase(unittest.TestCase):
         cntxt = setup_context(shex_3, rdf_3)
         nc = cntxt.schema.shapes[0].expression.valueExpr
         focus = cntxt.graph.value(EX.product6, EX.trademark)
-        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus, cntxt)
         self.assertTrue(nodeSatisfiesStringFacet(cntxt, focus, nc))
         focus = cntxt.graph.value(EX.product7, EX.trademark)
-        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus, cntxt)
         self.assertTrue(nodeSatisfiesStringFacet(cntxt, focus, nc))
         focus = cntxt.graph.value(EX.product8, EX.trademark)
-        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus)
+        cntxt.current_node = ParseNode(nodeSatisfiesStringFacet, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesStringFacet(cntxt, focus, nc))
         self.assertEqual(['Pattern match failure - pattern: ^\\t\\\\𝒸\\?$ flags:None string: \t'
                           '\\\\U0001D4B8?'], self.fail_reasons(cntxt))
