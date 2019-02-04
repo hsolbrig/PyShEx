@@ -208,7 +208,8 @@ def nodeSatisfiesValues(cntxt: Context, n: Node, nc: ShExJ.NodeConstraint, _c: D
         if any(_nodeSatisfiesValue(cntxt, n, vsv) for vsv in nc.values):
             return True
         else:
-            cntxt.fail_reason = f"Node: {n} not in value set:\n\t {as_json(cntxt.type_last(nc), indent=None)[:60]}..."
+            cntxt.fail_reason = f"Node: {cntxt.n3_mapper.n3(n)} not in value set:\n\t " \
+                f"{as_json(cntxt.type_last(nc), indent=None)[:60]}..."
             return False
 
 

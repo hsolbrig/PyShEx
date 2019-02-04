@@ -73,7 +73,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
     ns2:identifiers 35 ;
     ns2:sitelinks 54 ;
     ns2:statements 69 ;
-    ns2:timestamp "2018-12-31T08:03:10+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2018-12-31T08:03:04+00:00"^^xsd:dateTime ;
     skos:altLabel "Acquired myasthenia",
         "Astenik Bulbar Falaj",
         "Astenik bulbar falaj",

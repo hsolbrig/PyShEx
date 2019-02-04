@@ -495,8 +495,8 @@ wd:Q36956 rdfs:label "Abïl",
 
 <http://www.wikidata.org/entity/statement/Q36956-145bcda4-4512-a5b4-0934-4e940d512730> ps:P279 wd:Q929451 .
 
-<http://www.wikidata.org/entity/statement/Q36956-1D3F6BDB-83D6-48A7-BE2D-CAD8BDF89494> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
-    ps:P279 wd:Q3041498 .
+<http://www.wikidata.org/entity/statement/Q36956-1E2367F1-AFF6-4C84-A142-D59EA2C6006A> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
+    ps:P279 wd:Q18556979 .
 
 <http://www.wikidata.org/entity/statement/Q36956-2583C4D4-43BC-4CCB-9D54-4D5C06E276A3> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
     ps:P1550 "548" .

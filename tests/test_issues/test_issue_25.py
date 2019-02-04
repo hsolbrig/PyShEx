@@ -36,17 +36,17 @@ class Issue25TestCase(unittest.TestCase):
   Focus: http://a.example/s1
   Start: http://example.org/shapes/S
   Reason:   Testing :s1 against shape http://example.org/shapes/S
-    No matching triples found for predicate http://a.example/s4
+       No matching triples found for predicate http://a.example/s4
 
   Focus: http://a.example/s2
   Start: http://example.org/shapes/S
   Reason:   Testing :s2 against shape http://example.org/shapes/S
-    No matching triples found for predicate http://a.example/s4
+       No matching triples found for predicate http://a.example/s4
 
   Focus: http://a.example/s3
   Start: http://example.org/shapes/S
   Reason:   Testing :s3 against shape http://example.org/shapes/S
-    No matching triples found for predicate http://a.example/s4""", outf.getvalue().strip())
+       No matching triples found for predicate http://a.example/s4""", outf.getvalue().strip())
 
 
 

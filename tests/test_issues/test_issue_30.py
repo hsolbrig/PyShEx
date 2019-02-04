@@ -13,7 +13,7 @@ class ErrorReportingIssue(unittest.TestCase):
     endpoint.
     """
 
-    @unittest.skipIf(True, "Fragile test - we need local data to consistently reproduce")
+    @unittest.skipIf(False, "Fragile test - we need local data to consistently reproduce")
     def test_messages(self):
         """ Test failures with no reasons supplied """
         shex = os.path.join(data_dir, 'biolink-model.shex')

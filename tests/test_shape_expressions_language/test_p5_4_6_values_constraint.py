@@ -79,7 +79,7 @@ class ValuesConstraintTestCase(unittest.TestCase):
         focus = cntxt.graph.value(EX.issue2, EX.state)
         cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
-        self.assertEqual(['Node: http://schema.example/Unresolved not in value set:\n'
+        self.assertEqual(['Node: :Unresolved not in value set:\n'
                           '\t {"values": ["http://schema.example/Resolved", "http://schema...'],
                          self.fail_reasons(cntxt))
 
@@ -100,14 +100,14 @@ class ValuesConstraintTestCase(unittest.TestCase):
         focus = cntxt.graph.value(EX.issue6, FOAF.mbox)
         cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
-        self.assertEqual(['Node: missing not in value set:\n'
+        self.assertEqual(['Node: "missing" not in value set:\n'
                          '\t {"values": [{"value": "N/A"}, {"stem": "mailto:engineering-"...'],
                          self.fail_reasons(cntxt))
 
         focus = cntxt.graph.value(EX.issue7, FOAF.mbox)
         cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
-        self.assertEqual(['Node: mailto:sales-contacts-999@a.example not in value set:\n'
+        self.assertEqual(['Node: <mailto:sales-contacts-999@a.example> not in value set:\n'
                           '\t {"values": [{"value": "N/A"}, {"stem": "mailto:engineering-"...'],
                          self.fail_reasons(cntxt))
 
@@ -127,7 +127,7 @@ class ValuesConstraintTestCase(unittest.TestCase):
         focus = cntxt.graph.value(EX.issue10, FOAF.mbox)
         cntxt.current_node = ParseNode(nodeSatisfiesValues, nc, focus, cntxt)
         self.assertFalse(nodeSatisfiesValues(cntxt, focus, nc))
-        self.assertEqual(['Node: mailto:engineering-2112@a.example not in value set:\n'
+        self.assertEqual(['Node: <mailto:engineering-2112@a.example> not in value set:\n'
                           '\t {"values": [{"stem": {"type": "Wildcard"}, "exclusions": [{"...'],
                          self.fail_reasons(cntxt))
 

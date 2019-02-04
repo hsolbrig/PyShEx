@@ -1,0 +1,101 @@
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix po: <http://purl.obolibrary.org/obo/PW> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix react: <http://micel.io/reactome/> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q45316906 rdfs:label "ADP signalling through P2Y purinoceptor 12" ;
+    schema:dateModified "2018-06-27T16:56:01+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway ADP signalling through P2Y purinoceptor 12 in Homo sapiens" ;
+    schema:version 703448435 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 10 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q45316906-A18D0C9D-931B-4DE5-8EBD-EB8147CF3451> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q45316906-FB0B2A76-787E-494E-BCAA-C55CAFC20DA8> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q45316906-8F5009FF-ECD3-422B-A7D9-5013B3590EE8> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q45316906-9E7689B0-7578-4831-9F22-4729DBEF625C> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q45316906-B92A5ABD-8184-462D-8192-716E385575CC> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q45316906-04D86154-CACE-41FB-B670-E12FE8574158>,
+        <http://www.wikidata.org/entity/statement/Q45316906-416ACDAE-D02B-4CBB-BCB6-EC2136DBA59D>,
+        <http://www.wikidata.org/entity/statement/Q45316906-9AA9A4C0-BDEC-4259-AFBC-AF61B1D20F40>,
+        <http://www.wikidata.org/entity/statement/Q45316906-BBF85BF1-F6C3-4017-8C55-F3692157CF59> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q45316906-76F5C160-13A5-4CD2-8F76-197AD43FE4ED> ;
+    wdt:P2860 wd:Q24290845 ;
+    wdt:P2888 <https://identifiers.org/reactome:R-HSA-392170> ;
+    wdt:P31 wd:Q4915012 ;
+    wdt:P361 wd:Q45316905 ;
+    wdt:P3937 "R-HSA-392170" ;
+    wdt:P527 wd:Q50291048,
+        wd:Q50291051,
+        wd:Q50291053,
+        wd:Q50291054 ;
+    wdt:P703 wd:Q15978631 .
+
+<http://www.wikidata.org/entity/statement/Q24290845-A6F285B8-74B8-4E49-AF44-560A63FDA0AF> ps:P698 "11196645" .
+
+<http://www.wikidata.org/entity/statement/Q45316905-12209911-9D0B-41CF-8E9F-ABE8470B4426> ps:P3937 "R-HSA-392518" .
+
+<http://www.wikidata.org/entity/statement/Q45316906-04D86154-CACE-41FB-B670-E12FE8574158> prov:wasDerivedFrom wdref:a267b92eda60ff9971a838c29230b52d1b9db92a ;
+    ps:P527 wd:Q50291053 .
+
+<http://www.wikidata.org/entity/statement/Q45316906-416ACDAE-D02B-4CBB-BCB6-EC2136DBA59D> prov:wasDerivedFrom wdref:a267b92eda60ff9971a838c29230b52d1b9db92a ;
+    ps:P527 wd:Q50291048 .
+
+<http://www.wikidata.org/entity/statement/Q45316906-76F5C160-13A5-4CD2-8F76-197AD43FE4ED> prov:wasDerivedFrom wdref:a267b92eda60ff9971a838c29230b52d1b9db92a ;
+    ps:P703 wd:Q15978631 .
+
+<http://www.wikidata.org/entity/statement/Q45316906-8F5009FF-ECD3-422B-A7D9-5013B3590EE8> prov:wasDerivedFrom wdref:a267b92eda60ff9971a838c29230b52d1b9db92a ;
+    ps:P31 wd:Q4915012 .
+
+<http://www.wikidata.org/entity/statement/Q45316906-9AA9A4C0-BDEC-4259-AFBC-AF61B1D20F40> prov:wasDerivedFrom wdref:a267b92eda60ff9971a838c29230b52d1b9db92a ;
+    ps:P527 wd:Q50291051 .
+
+<http://www.wikidata.org/entity/statement/Q45316906-9E7689B0-7578-4831-9F22-4729DBEF625C> prov:wasDerivedFrom wdref:a267b92eda60ff9971a838c29230b52d1b9db92a ;
+    ps:P361 wd:Q45316905 .
+
+<http://www.wikidata.org/entity/statement/Q45316906-A18D0C9D-931B-4DE5-8EBD-EB8147CF3451> prov:wasDerivedFrom wdref:a267b92eda60ff9971a838c29230b52d1b9db92a ;
+    ps:P2860 wd:Q24290845 .
+
+<http://www.wikidata.org/entity/statement/Q45316906-B92A5ABD-8184-462D-8192-716E385575CC> ps:P3937 "R-HSA-392170" .
+
+<http://www.wikidata.org/entity/statement/Q45316906-BBF85BF1-F6C3-4017-8C55-F3692157CF59> prov:wasDerivedFrom wdref:a267b92eda60ff9971a838c29230b52d1b9db92a ;
+    ps:P527 wd:Q50291054 .
+
+<http://www.wikidata.org/entity/statement/Q50291048-AB33ED49-D099-43CB-8537-3FA191123F0C> ps:P3937 "R-HSA-417829" .
+
+<http://www.wikidata.org/entity/statement/Q50291051-DB3BA127-7994-4E57-A660-2354A87F1590> ps:P3937 "R-HSA-392187" .
+
+<http://www.wikidata.org/entity/statement/Q50291053-9436F63E-359F-4B4A-8518-3AAF953A2FC1> ps:P3937 "R-HSA-392195" .
+
+<http://www.wikidata.org/entity/statement/Q50291054-2BD0C791-05CA-4CEC-978E-821AA01E2B62> ps:P3937 "R-HSA-392202" .
+
+wd:Q24290845 p:P698 <http://www.wikidata.org/entity/statement/Q24290845-A6F285B8-74B8-4E49-AF44-560A63FDA0AF> .
+
+wd:Q45316905 p:P3937 <http://www.wikidata.org/entity/statement/Q45316905-12209911-9D0B-41CF-8E9F-ABE8470B4426> .
+
+wd:Q50291048 p:P3937 <http://www.wikidata.org/entity/statement/Q50291048-AB33ED49-D099-43CB-8537-3FA191123F0C> .
+
+wd:Q50291051 p:P3937 <http://www.wikidata.org/entity/statement/Q50291051-DB3BA127-7994-4E57-A660-2354A87F1590> .
+
+wd:Q50291053 p:P3937 <http://www.wikidata.org/entity/statement/Q50291053-9436F63E-359F-4B4A-8518-3AAF953A2FC1> .
+
+wd:Q50291054 p:P3937 <http://www.wikidata.org/entity/statement/Q50291054-2BD0C791-05CA-4CEC-978E-821AA01E2B62> .
+
+wdref:a267b92eda60ff9971a838c29230b52d1b9db92a pr:P248 wd:Q2134522 ;
+    pr:P3937 "R-HSA-392170" ;
+    pr:P813 "2018-06-27T00:00:00+00:00"^^xsd:dateTime .
+

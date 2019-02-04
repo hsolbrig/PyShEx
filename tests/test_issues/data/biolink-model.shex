@@ -1,3 +1,5 @@
+PREFIX biolink: <http://w3id.org/biolink/vocab/>
+PREFIX uniprot: <http://identifiers.org/uniprot/>
 
 <http://w3id.org/biolink/vocab/meta/Builtins> [ <http://www.w3.org/2001/XMLSchema#>~ ]
 
