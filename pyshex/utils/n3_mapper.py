@@ -1,7 +1,7 @@
 from typing import Dict, Union
 
 from pyjsg.jsglib import isinstance_
-from rdflib import BNode, Namespace, URIRef, Literal, Graph
+from rdflib import BNode, URIRef, Literal, Graph
 from rdflib.namespace import NamespaceManager
 
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Triple
@@ -19,7 +19,7 @@ class N3Mapper:
         self._cur_bnode_number += 1
         return f'_:b{self._cur_bnode_number}'
 
-    def n3(self, node: Union[URIRef, BNode, Literal, Triple]) -> str:
+    def n3(self, node: Union[URIRef, BNode, Literal, Triple, str]) -> str:
         if isinstance_(node, Triple):
             return f"{self.n3(node[0])} {self.n3(node[1])} {self.n3(node[2])} ."
         elif isinstance(node, BNode):
@@ -27,6 +27,8 @@ class N3Mapper:
                 self._bnode_map[node] = self._next_bnode
             return self._bnode_map[node]
         else:
+            if not isinstance(node, (URIRef, Literal)):
+                node = URIRef(str(node))
             return node.n3(self.namespace_manager)
 
 

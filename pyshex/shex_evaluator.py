@@ -8,6 +8,7 @@ from rdflib import Graph, URIRef, RDF
 from rdflib.util import guess_format
 from sparql_slurper import SlurpyGraph
 
+from pyshex import PrefixLibrary
 from pyshex.shape_expressions_language.p5_2_validation_definition import isValid
 from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import FixedShapeMap, ShapeAssociation, START, \
@@ -78,6 +79,7 @@ class ShExEvaluator:
         :param over_slurp: Controls whether SPARQL slurper does exact or over slurps
         :param output_sink: Function for accepting evaluation results and returns whether to keep evaluating
         """
+        self.pfx: PrefixLibrary = None
         self.rdf_format = rdf_format
         self.g = None
         self.rdf = rdf
@@ -134,17 +136,20 @@ class ShExEvaluator:
 
         :param shex:  Schema
         """
+        self.pfx = None
         if shex is not None:
             if isinstance(shex, ShExJ.Schema):
                 self._schema = shex
             else:
                 shext = shex.strip()
+                loader = SchemaLoader()
                 if ('\n' in shex or '\r' in shex) or shext[0] in '#<_: ':
-                    self._schema = SchemaLoader().loads(shex)
+                    self._schema = loader.loads(shex)
                 else:
-                    self._schema = SchemaLoader().load(shex) if isinstance(shex, str) else shex
+                    self._schema = loader.load(shex) if isinstance(shex, str) else shex
                 if self._schema is None:
                     raise ValueError("Unable to parse shex file")
+                self.pfx = PrefixLibrary(loader.schema_text)
 
     @property
     def focus(self) -> Optional[List[URIRef]]:
@@ -216,6 +221,10 @@ class ShExEvaluator:
             self.nerrors += 1
             evaluator.output_sink(EvaluationResult(False, None, None, 'START node is not specified'))
             return rval
+
+        # Experimental -- xfer all ShEx namespaces to g
+        if self.pfx and evaluator.g is not None:
+            self.pfx.add_bindings(evaluator.g)
 
         cntxt = Context(evaluator.g, evaluator._schema)
         cntxt.debug_context.debug = debug if debug is not None else self.debug
@@ -289,12 +298,16 @@ def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[st
     if not opts.format:
         print('Error: Cannot determine RDF format from file name - use "--format" option')
         return 3
-    g = SlurpyGraph(opts.rdf) if opts.slurper else CFGraph() if opts.flattener else Graph()
-    if not opts.slurper:
+    if opts.slurper:
+        g = SlurpyGraph(opts.rdf)
+        g.persistent_bnodes = True
+    else:
+        g = CFGraph() if opts.flattener else Graph()
         if '\n' in opts.rdf or '\r' in opts.rdf:
             g.parse(data=opts.rdf, format=opts.format)
         else:
             g.load(opts.rdf, format=opts.format)
+
     if not (opts.focus or opts.allsubjects or opts.sparql):
         print('Error: You must specify one or more graph focus nodes, supply a SPARQL query, or use the "-A" option')
         return 4

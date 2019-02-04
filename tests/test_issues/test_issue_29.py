@@ -39,16 +39,16 @@ START=@<S>
 
 expected = [(URIRef('http://example.org/test/zrror1'),
              '  Testing ex:zrror1 against shape http://example.org/test/S\n'
-             '    No matching triples found for predicate http://example.org/test/foo'),
+             '       No matching triples found for predicate http://example.org/test/foo'),
             (URIRef('http://example.org/test/zrror2'),
              '  Testing ex:zrror2 against shape http://example.org/test/S\n'
-             '    No matching triples found for predicate http://example.org/test/foo'),
+             '       No matching triples found for predicate http://example.org/test/foo'),
             (URIRef('http://example.org/test/zrror3'),
              '  Testing ex:zrror3 against shape http://example.org/test/S\n'
-             '    No matching triples found for predicate http://example.org/test/foo'),
+             '       No matching triples found for predicate http://example.org/test/foo'),
             (URIRef('http://example.org/test/zrror4'),
              '  Testing ex:zrror4 against shape http://example.org/test/S\n'
-             '    No matching triples found for predicate http://example.org/test/foo')]
+             '       No matching triples found for predicate http://example.org/test/foo')]
 
 
 class ErrorReportingUnitTest(unittest.TestCase):
@@ -108,31 +108,22 @@ class ErrorReportingUnitTest(unittest.TestCase):
   Focus: http://example.org/test/zrror1
   Start: http://example.org/test/S
   Reason:   Testing ex:zrror1 against shape http://example.org/test/S
-    No matching triples found for predicate http://example.org/test/foo
+       No matching triples found for predicate http://example.org/test/foo
 
   Focus: http://example.org/test/zrror2
   Start: http://example.org/test/S
   Reason:   Testing ex:zrror2 against shape http://example.org/test/S
-    No matching triples found for predicate http://example.org/test/foo
+       No matching triples found for predicate http://example.org/test/foo
 
   Focus: http://example.org/test/zrror3
   Start: http://example.org/test/S
   Reason:   Testing ex:zrror3 against shape http://example.org/test/S
-    No matching triples found for predicate http://example.org/test/foo
+       No matching triples found for predicate http://example.org/test/foo
 
   Focus: http://example.org/test/zrror4
   Start: http://example.org/test/S
   Reason:   Testing ex:zrror4 against shape http://example.org/test/S
-    No matching triples found for predicate http://example.org/test/foo""", messages.getvalue().strip())
-
-        messages = StringIO()
-        with redirect_stdout(messages):
-            self.assertEqual(1, evaluate_cli([rdf, shex, '-A', '-ut', '-se']))
-        self.assertEqual("""Errors:
-  Focus: http://example.org/test/zrror1
-  Start: http://example.org/test/S
-  Reason:   Testing ex:zrror1 against shape http://example.org/test/S
-    No matching triples found for predicate http://example.org/test/foo""", messages.getvalue().strip())
+       No matching triples found for predicate http://example.org/test/foo""", messages.getvalue().strip())
 
     def test_cli_stopafter(self):
         """
@@ -155,7 +146,7 @@ class ErrorReportingUnitTest(unittest.TestCase):
   Focus: http://example.org/test/zrror1
   Start: http://example.org/test/S
   Reason:   Testing ex:zrror1 against shape http://example.org/test/S
-    No matching triples found for predicate http://example.org/test/foo""", messages.getvalue().strip())
+       No matching triples found for predicate http://example.org/test/foo""", messages.getvalue().strip())
         
 
 if __name__ == '__main__':

@@ -34,6 +34,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.7.0 -- Fixes for issues 28, 29 and 30 
 * 0.7.1 -- Fix issue 26
 * 0.7.2 -- Upgrade error reporting
+* 0.7.3 -- Report using namespaces, enhance PrefixLib to inject into a module
 
 ## Installation
 ```bash

@@ -57,8 +57,8 @@ def satisfiesShape(cntxt: Context, n: Node, S: ShExJ.Shape, c: DebugContext) -> 
                                                   n if direction.is_rev else None)))
 
         if c.debug:
-            print(c.i(1, "predicates:", sorted(str(p) for p in predicates.keys())))
-            print(c.i(1, "matchables:", sorted(str(m) for m in matchables)))
+            print(c.i(1, "predicates:", sorted(cntxt.n3_mapper.n3(p) for p in predicates.keys())))
+            print(c.i(1, "matchables:", sorted(cntxt.n3_mapper.n3(m) for m in matchables)))
             print()
 
         if S.closed:
@@ -213,12 +213,14 @@ def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr
     if isinstance(expr, ShExJ.TripleConstraint):
         if len(T) < min_:
             if len(T) > 0:
-                cntxt.fail_reason = f"{len(T)} triples less than {cardinality_text}"
+                _fail_triples(cntxt, T)
+                cntxt.fail_reason = f"   {len(T)} triples less than {cardinality_text}"
             else:
-                cntxt.fail_reason = f"No matching triples found for predicate {expr.predicate}"
+                cntxt.fail_reason = f"   No matching triples found for predicate {expr.predicate}"
             return False
         elif 0 <= max_ < len(T):
-            cntxt.fail_reason = f"{len(T)} triples exceeds max {cardinality_text}"
+            _fail_triples(cntxt, T)
+            cntxt.fail_reason = f"   {len(T)} triples exceeds max {cardinality_text}"
             return False
         else:
             return all(matchesTripleConstraint(cntxt, t, expr) for t in T)
@@ -227,8 +229,19 @@ def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr
             if all(matchesExpr(cntxt, part, expr) for part in partition):
                 return True
         if min_ != 1 or max_ != 1:
-            cntxt.fail_reason = f"{len(T)} triples cannot be partitioned into {cardinality_text} passing groups"
+            _fail_triples(cntxt, T)
+            cntxt.fail_reason = f"   {len(T)} triples cannot be partitioned into {cardinality_text} passing groups"
         return False
+
+
+def _fail_triples(cntxt: Context, T: RDFGraph) -> None:
+    tlist = list(T)
+    if len(tlist):
+        cntxt.fail_reason = "Triples:"
+        for t in tlist:
+            cntxt.fail_reason = f"      {cntxt.n3_mapper.n3(t)}"
+        if len(tlist) > 5:
+            cntxt.fail_reason = "      ...   "
 
 
 def _partitions(T: RDFGraph, min_: Optional[int], max_: Optional[int]) -> List[List[RDFGraph]]:

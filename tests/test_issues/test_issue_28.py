@@ -22,7 +22,7 @@ class InlineSPARQLIssue(unittest.TestCase):
         messages = StringIO()
         with redirect_stdout(messages):
             evaluate_cli((['-ss', '-sq', sparql, 'http://graphdb.dumontierlab.com/repositories/ncats-red-kg',
-                           shex, '-ut']))
+                           shex, '-s', 'http://w3id.org/biolink/vocab/NamedThing']))
         print(messages.getvalue())
 
 

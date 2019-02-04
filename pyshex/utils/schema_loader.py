@@ -21,6 +21,7 @@ class SchemaLoader:
         self.redirect_location = redirect_location
         self.schema_format = schema_type_suffix
         self.root_location = None
+        self.schema_text = None
 
     def load(self, schema_file: Union[str, TextIO], schema_location: Optional[str]=None) -> ShExJ.Schema:
         """ Load a ShEx Schema from schema_location
@@ -31,9 +32,9 @@ class SchemaLoader:
         """
         if isinstance(schema_file, str):
             schema_file = self.location_rewrite(schema_file)
-            schema_text = load_shex_file(schema_file)
+            self.schema_text = load_shex_file(schema_file)
         else:
-            schema_text = schema_file.read()
+            self.schema_text = schema_file.read()
 
         if self.base_location:
             self.root_location = self.base_location
@@ -41,7 +42,7 @@ class SchemaLoader:
             self.root_location = os.path.dirname(schema_location) + '/'
         else:
             self.root_location = None
-        return self.loads(schema_text)
+        return self.loads(self.schema_text)
 
     def loads(self, schema_txt: str) -> ShExJ.Schema:
         """ Parse and return schema as a ShExJ Schema
@@ -49,6 +50,7 @@ class SchemaLoader:
         :param schema_txt: ShExC or ShExJ representation of a ShEx Schema
         :return: ShEx Schema representation of schema
         """
+        self.schema_text = schema_txt
         if schema_txt.strip()[0] == '{':
             # TODO: figure out how to propagate self.base_location into this parse
             return cast(ShExJ.Schema, loads(schema_txt, ShExJ))

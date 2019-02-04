@@ -1,8 +1,8 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
-@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
-@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix pr: <http://www.wikidata.org/prop/reference/> .
@@ -116,10 +116,10 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "مرض جهاز تنفسي",
         "സൂക്ഷ്മാണുവിനാൽ ആതിഥേയജീവിയിൽ ഉണ്ടാവുന്ന രോഗബാധ" ;
     schema:version 838154439 ;
-    ns2:identifiers 10 ;
-    ns2:sitelinks 99 ;
-    ns2:statements 23 ;
-    ns2:timestamp "2019-01-20T12:47:56+00:00"^^xsd:dateTime ;
+    ns1:identifiers 10 ;
+    ns1:sitelinks 99 ;
+    ns1:statements 23 ;
+    ns1:timestamp "2019-01-20T12:47:55+00:00"^^xsd:dateTime ;
     skos:altLabel "2009 H1N1 grip salgını",
         "A",
         "A(H1N1)",
@@ -289,8 +289,8 @@ wd:Q36855 rdfs:label "Cúm lợn",
     p:P699 <http://www.wikidata.org/entity/statement/Q36855-251AFEFE-9357-4819-9345-8658A5817D72>,
         <http://www.wikidata.org/entity/statement/Q36855-C725609A-6F51-4A2F-B451-897C76F77DCD> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q36855-FF9EC242-3136-4C46-8597-0772CDD86794> ;
-    ns1:P227 <http://d-nb.info/gnd/7679861-6> ;
-    ns1:P646 <http://g.co/kg/m/057c6k> ;
+    ns2:P227 <http://d-nb.info/gnd/7679861-6> ;
+    ns2:P646 <http://g.co/kg/m/057c6k> ;
     wdt:P1225 "10644087" ;
     wdt:P1296 "0517808" ;
     wdt:P1417 "science/swine-flu" ;
