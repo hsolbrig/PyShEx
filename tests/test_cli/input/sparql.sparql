@@ -1,0 +1,5 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbgraph: <https://w3id.org/data2services/graph/biolink/drugbank>
+PREFIX drugbank: <http://identifiers.org/drugbank:>
+
+SELECT ?g ?s ?p ?o {graph dbgraph: {?s rdf:type ?o}}
