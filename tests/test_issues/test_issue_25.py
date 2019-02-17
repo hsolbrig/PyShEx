@@ -1,6 +1,6 @@
 import os
 import unittest
-from contextlib import redirect_stdout
+from contextlib import redirect_stdout, redirect_stderr
 from io import StringIO
 
 from pyshex.shex_evaluator import evaluate_cli
@@ -24,7 +24,7 @@ class Issue25TestCase(unittest.TestCase):
 
     def test_all_nodes(self):
         outf = StringIO()
-        with(redirect_stdout(outf)):
+        with(redirect_stderr(outf)):
             evaluate_cli(f"{rdffile} {shexfile} -s http://example.org/shapes/S".split())
         self.assertEqual('Error: You must specify one or more graph focus nodes, supply a SPARQL query, '
                          'or use the "-A" option',
@@ -36,17 +36,17 @@ class Issue25TestCase(unittest.TestCase):
   Focus: http://a.example/s1
   Start: http://example.org/shapes/S
   Reason:   Testing :s1 against shape http://example.org/shapes/S
-       No matching triples found for predicate http://a.example/s4
+       No matching triples found for predicate :s4
 
   Focus: http://a.example/s2
   Start: http://example.org/shapes/S
   Reason:   Testing :s2 against shape http://example.org/shapes/S
-       No matching triples found for predicate http://a.example/s4
+       No matching triples found for predicate :s4
 
   Focus: http://a.example/s3
   Start: http://example.org/shapes/S
   Reason:   Testing :s3 against shape http://example.org/shapes/S
-       No matching triples found for predicate http://a.example/s4""", outf.getvalue().strip())
+       No matching triples found for predicate :s4""", outf.getvalue().strip())
 
 
 

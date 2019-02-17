@@ -39,16 +39,16 @@ START=@<S>
 
 expected = [(URIRef('http://example.org/test/zrror1'),
              '  Testing ex:zrror1 against shape http://example.org/test/S\n'
-             '       No matching triples found for predicate http://example.org/test/foo'),
+             '       No matching triples found for predicate ex:foo'),
             (URIRef('http://example.org/test/zrror2'),
              '  Testing ex:zrror2 against shape http://example.org/test/S\n'
-             '       No matching triples found for predicate http://example.org/test/foo'),
+             '       No matching triples found for predicate ex:foo'),
             (URIRef('http://example.org/test/zrror3'),
              '  Testing ex:zrror3 against shape http://example.org/test/S\n'
-             '       No matching triples found for predicate http://example.org/test/foo'),
+             '       No matching triples found for predicate ex:foo'),
             (URIRef('http://example.org/test/zrror4'),
              '  Testing ex:zrror4 against shape http://example.org/test/S\n'
-             '       No matching triples found for predicate http://example.org/test/foo')]
+             '       No matching triples found for predicate ex:foo')]
 
 
 class ErrorReportingUnitTest(unittest.TestCase):
@@ -108,22 +108,22 @@ class ErrorReportingUnitTest(unittest.TestCase):
   Focus: http://example.org/test/zrror1
   Start: http://example.org/test/S
   Reason:   Testing ex:zrror1 against shape http://example.org/test/S
-       No matching triples found for predicate http://example.org/test/foo
+       No matching triples found for predicate ex:foo
 
   Focus: http://example.org/test/zrror2
   Start: http://example.org/test/S
   Reason:   Testing ex:zrror2 against shape http://example.org/test/S
-       No matching triples found for predicate http://example.org/test/foo
+       No matching triples found for predicate ex:foo
 
   Focus: http://example.org/test/zrror3
   Start: http://example.org/test/S
   Reason:   Testing ex:zrror3 against shape http://example.org/test/S
-       No matching triples found for predicate http://example.org/test/foo
+       No matching triples found for predicate ex:foo
 
   Focus: http://example.org/test/zrror4
   Start: http://example.org/test/S
   Reason:   Testing ex:zrror4 against shape http://example.org/test/S
-       No matching triples found for predicate http://example.org/test/foo""", messages.getvalue().strip())
+       No matching triples found for predicate ex:foo""", messages.getvalue().strip())
 
     def test_cli_stopafter(self):
         """
@@ -146,7 +146,7 @@ class ErrorReportingUnitTest(unittest.TestCase):
   Focus: http://example.org/test/zrror1
   Start: http://example.org/test/S
   Reason:   Testing ex:zrror1 against shape http://example.org/test/S
-       No matching triples found for predicate http://example.org/test/foo""", messages.getvalue().strip())
+       No matching triples found for predicate ex:foo""", messages.getvalue().strip())
         
 
 if __name__ == '__main__':

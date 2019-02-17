@@ -1,0 +1,91 @@
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00001
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00002
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00003
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00004
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00005
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00006
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00007
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00008
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00009
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00010
+
+
+SPARQL: (SELECT ?s ?p ?o {<http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00001> ?p ?o}) (0.63 secs) - 75 triples
+RESULTS:
+	<http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00001> a drugbank:drugs,
+	        <http://wifo5-04.informatik.uni-mannheim.de/drugbank/vocab/resource/class/Offer> ;
+	    rdfs:label "Lepirudin" ;
+	    drugbank:absorption "Bioavailability is 100% following injection." ;
+	    drugbank:affectedOrganism "Humans and other mammals" ;
+	    drugbank:ahfsCode "20:12.04.12" ;
+	    drugbank:atcCode "B01AE02" ;
+	    drugbank:biotransformation "Lepirudin is thought to be metabolized by release of amino acids via catabolic hydrolysis of the parent drug. However, con-clusive data are not available. About 48% of the administration dose is excreted in the urine which consists of unchanged drug (35%) and other fragments of the parent drug." ;
+	    drugbank:brandName "Refludan (Berlex Labs)" ;
+	    drugbank:brandedDrug <http://wifo5-04.informatik.uni-mannheim.de/dailymed/resource/drugs/1681> ;
+	    drugbank:casRegistryNumber <http://bio2rdf.org/cas:120993-53-5> ;
+	    drugbank:chemicalFormula "C287H440N80O110S6" ;
+	    drugbank:chemicalIupacName "(4S)-4-[[(2S)-1-[(2S,3S)-2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[(2S)-2-[[2-[[(2S)-2-[[(2S)-4-amino-2-[[(2S)-2-[[(2S)-2-[[(2S)-5-amino-2-[[(2S)-1-[(2S)-6-amino-2-[[(2S)-1-[(2S,3R)-2-[[2-[[(2S)-2-[[2-[[(2S,3R)-2-[[(2S)-2-[[(2R)-2-[[(2S)-5-amino-2-[[(2S)-4-amino-2-[[(2S)-6-amino-2-[[(2S)-2-[[2-[[(2S)-2-[[(2S)-2-[[2-[[(2S)-2-[[(2S,3S)-2-[[(2R)-2-[[(2S)-6-amino-2-[[(2S)-4-amino-2-[[2-[[(2S)-5-amino-2-[[2-[[(2R)-2-[[(2S)-2-[[(2S)-4-amino-2-[[(2S)-2-[[2-[[(2S)-2-[[(2R)-2-[[(2S)-2-[[(2R)-2-[[(2S)-2-[[(2S)-4-amino-2-[[(2S)-5-amino-2-[[2-[[(2S)-2-[[(2S)-2-[[(2S,3R)-2-[[(2R)-2-[[(2S)-2-[[(2S,3R)-2-[[(2S)-2-[[(2S,3R)-2-[[(2S)-2-amino-4-methylpentanoyl]amino]-3-hydroxybutanoyl]amino]-3-(4-hydroxyphenyl)propanoyl]amino]-3-hydroxybutanoyl]amino]-4-hydroxy-4-oxobutanoyl]amino]-3-sulfanylpropanoyl]amino]-3-hydroxybutanoyl]amino]-5-hydroxy-5-oxopentanoyl]amino]-3-hydroxypropanoyl]amino]acetyl]amino]-5-oxopentanoyl]amino]-4-oxobutanoyl]amino]-4-methylpentanoyl]amino]-3-sulfanylpropanoyl]amino]-4-methylpentanoyl]amino]-3-sulfanylpropanoyl]amino]-5-hydroxy-5-oxopentanoyl]amino]acetyl]amino]-3-hydroxypropanoyl]amino]-4-oxobutanoyl]amino]-3-methylbutanoyl]amino]-3-sulfanylpropanoyl]amino]acetyl]amino]-5-oxopentanoyl]amino]acetyl]amino]-4-oxobutanoyl]amino]hexanoyl]amino]-3-sulfanylpropanoyl]amino]-3-methylpentanoyl]amino]-4-methylpentanoyl]amino]acetyl]amino]-3-hydroxypropanoyl]amino]-4-hydroxy-4-oxobutanoyl]amino]acetyl]amino]-5-hydroxy-5-oxopentanoyl]amino]hexanoyl]amino]-4-oxobutanoyl]amino]-5-oxopentanoyl]amino]-3-sulfanylpropanoyl]amino]-3-methylbutanoyl]amino]-3-hydroxybutanoyl]amino]acetyl]amino]-5-hydroxy-5-oxopentanoyl]amino]acetyl]amino]-3-hydroxybutanoyl]pyrrolidine-2-carbonyl]amino]hexanoyl]pyrrolidine-2-carbonyl]amino]-5-oxopentanoyl]amino]-3-hydroxypropanoyl]amino]-3-(3H-imidazol-4-yl)propanoyl]amino]-4-oxobutanoyl]amino]-4-hydroxy-4-oxobutanoyl]amino]acetyl]amino]-4-hydroxy-4-oxobutanoyl]amino]-3-cyclohexylpropanoyl]amino]-5-hydroxy-5-oxopentanoyl]amino]-5-hydroxy-5-oxopentanoyl]amino]-3-methylpentanoyl]pyrrolidine-2-carbonyl]amino]-5-[[(2S)-1-[[(2S)-1-[[(2S)-1-[[(2S)-5-amino-1-hydroxy-1,5-dioxopentan-2-yl]amino]-4-methyl-1-oxopentan-2-yl]amino]-3-(4-hydroxyphenyl)-1-oxopropan-2-yl]amino]-5-hydroxy-1,5-dioxopentan-2-yl]amino]-5-oxopentanoic acid" ;
+	    drugbank:chemicalStructure """>DB00001 sequence
+	LVYTDCTESGQNLCLCEGSNVCGQGNKCILGSDGEKNQCVTGEGTPKPQSHNDGDFEEIP
+	EEYLQ""" ;
+	    drugbank:contraindicationInsert <http://129.128.185.122/drugbank2/drugs/DB00001/inserts/1430/full> ;
+	    drugbank:creationDate "2005-06-13 13:24:05 UTC" ;
+	    drugbank:description "Lepirudin is identical to natural hirudin except for substitution of leucine for isoleucine at the N-terminal end of the molecule and the absence of a sulfate group on the tyrosine at position 63. It is produced via yeast cells." ;
+	    drugbank:dosageForm <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/dosageforms/powderForSolutionIntravenous> ;
+	    drugbank:dpdDrugIdNumber "02240996" ;
+	    drugbank:drugCategory <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugcategory/anticoagulants>,
+	        <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugcategory/antithromboticAgents>,
+	        <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugcategory/fibrinolyticAgents> ;
+	    drugbank:drugIdNumberPage <http://205.193.93.51/dpdonline/searchRequest.do?din=02240996> ;
+	    drugbank:drugType <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugtype/approved>,
+	        <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugtype/biotech> ;
+	    drugbank:experimentalLogpHydrophobicity "-0.777" ;
+	    drugbank:fdaLabelFiles "1997-09-01	/drugs/1/fda_labels/402" ;
+	    drugbank:genericName "Lepirudin" ;
+	    drugbank:halfLife "Approximately 1.3 hours" ;
+	    drugbank:inchiIdentifier "InChI=1/C287H440N80O110S6/c1-25-133(19)226-281(470)345-161(87-125(3)4)235(424)306-111-208(395)320-180(116-370)266(455)344-175(101-219(415)416)237(426)307-105-202(389)316-151(62-75-212(401)402)242(431)321-145(41-30-33-81-288)240(429)339-170(96-197(297)384)258(447)326-152(57-70-193(293)380)249(438)351-185(121-481-478-118-182-239(428)310-107-201(388)313-147(55-68-191(291)378)232(421)303-108-205(392)317-169(95-196(296)383)257(446)322-146(42-31-34-82-289)241(430)350-186(271(460)360-226)122-482-479-119-183(268(457)323-149(61-74-211(399)400)234(423)304-110-207(394)319-179(115-369)265(454)342-173(99-200(300)387)264(453)357-223(130(13)14)279(468)355-182)352-253(442)164(90-128(9)10)335-269(458)184-120-480-483-123-187(354-262(451)177(103-221(419)420)347-283(472)230(137(23)374)362-263(452)167(93-141-49-53-144(377)54-50-141)346-278(467)224(131(15)16)359-276(465)222(301)129(11)12)272(461)363-229(136(22)373)282(471)330-157(66-79-216(409)410)248(437)348-178(114-368)238(427)309-106-203(390)315-150(56-69-192(292)379)243(432)340-171(97-198(298)385)259(448)334-163(89-127(7)8)252(441)353-184)270(459)358-225(132(17)18)280(469)364-228(135(21)372)277(466)311-112-204(391)314-148(60-73-210(397)398)233(422)305-113-209(396)356-231(138(24)375)286(475)367-86-38-46-190(367)275(464)331-159(43-32-35-83-290)284(473)365-84-36-44-188(365)273(462)328-153(58-71-194(294)381)247(436)349-181(117-371)267(456)338-168(94-142-104-302-124-312-142)256(445)341-172(98-199(299)386)260(449)343-174(100-218(413)414)236(425)308-109-206(393)318-176(102-220(417)418)261(450)337-165(91-139-39-28-27-29-40-139)254(443)327-154(63-76-213(403)404)244(433)325-158(67-80-217(411)412)250(439)361-227(134(20)26-2)285(474)366-85-37-45-189(366)274(463)329-156(65-78-215(407)408)245(434)324-155(64-77-214(405)406)246(435)336-166(92-140-47-51-143(376)52-48-140)255(444)333-162(88-126(5)6)251(440)332-160(287(476)477)59-72-195(295)382/h27-29,39-40,47-54,104,124-138,145-190,222-231,368-377H,25-26,30-38,41-46,55-103,105-123,288-290,301H2,1-24H3,(H2,291,378)(H2,292,379)(H2,293,380)(H2,294,381)(H2,295,382)(H2,296,383)(H2,297,384)(H2,298,385)(H2,299,386)(H2,300,387)(H,302,312)(H,303,421)(H,304,423)(H,305,422)(H,306,424)(H,307,426)(H,308,425)(H,309,427)(H,310,428)(H,311,466)(H,313,388)(H,314,391)(H,315,390)(H,316,389)(H,317,392)(H,318,393)(H,319,394)(H,320,395)(H,321,431)(H,322,446)(H,323,457)(H,324,434)(H,325,433)(H,326,447)(H,327,443)(H,328,462)(H,329,463)(H,330,471)(H,331,464)(H,332,440)(H,333,444)(H,334,448)(H,335,458)(H,336,435)(H,337,450)(H,338,456)(H,339,429)(H,340,432)(H,341,445)(H,342,454)(H,343,449)(H,344,455)(H,345,470)(H,346,467)(H,347,472)(H,348,437)(H,349,436)(H,350,430)(H,351,438)(H,352,442)(H,353,441)(H,354,451)(H,355,468)(H,356,396)(H,357,453)(H,358,459)(H,359,465)(H,360,460)(H,361,439)(H,362,452)(H,363,461)(H,364,469)(H,397,398)(H,399,400)(H,401,402)(H,403,404)(H,405,406)(H,407,408)(H,409,410)(H,411,412)(H,413,414)(H,415,416)(H,417,418)(H,419,420)(H,476,477)/t133-,134-,135+,136+,137+,138+,145-,146-,147-,148-,149-,150-,151-,152-,153-,154-,155-,156-,157-,158-,159-,160-,161-,162-,163-,164-,165-,166-,167-,168-,169-,170-,171-,172-,173-,174-,175-,176-,177-,178-,179-,180-,181-,182-,183-,184-,185-,186-,187-,188-,189-,190-,222-,223-,224-,225-,226-,227-,228-,229-,230-,231-/m0/s1/f/h303-364,397,399,401,403,405,407,409,411,413,415,417,419,476H,291-300H2" ;
+	    drugbank:inchiKey "XYWBJDRHGNULKG-JWTJQKDBDD" ;
+	    drugbank:indication "For the treatment of heparin-induced thrombocytopenia" ;
+	    drugbank:interactionInsert <http://129.128.185.122/drugbank2/drugs/DB00001/inserts/2428/full> ;
+	    drugbank:limsDrugId "1" ;
+	    drugbank:massSpecFile "0" ;
+	    drugbank:mechanismOfAction "Lepirudin forms a stable non-covalent complex with alpha-thrombin, thereby abolishing its ability to cleave fibrinogen and initiate the clotting cascade." ;
+	    drugbank:meltingPoint "65 oC (Otto, A. & Seckler, R. Eur. J. Biochem. 202:67-73 (1991))" ;
+	    drugbank:molecularWeightAverage "6963.425" ;
+	    drugbank:molecularWeightMono "6958.962" ;
+	    drugbank:patientInformationInsert "http://129.128.185.122/drugbank2/drugs/DB00001/inserts/501/full" ;
+	    drugbank:pdbExperimentalId "5HIR" ;
+	    drugbank:pharmacology "Lepirudin is used to break up clots and to reduce thrombocytopenia. It binds to thrombin and prevents thrombus or clot formation. It is a highly potent, selective, and essentially irreversible inhibitor of thrombin and clot-bond thrombin. Lepirudin requires no cofactor for its anticoagulant action." ;
+	    drugbank:pharmgkbId "PA450195" ;
+	    drugbank:pkaIsoelectricPoint "4.04" ;
+	    drugbank:possibleDiseaseTarget <http://wifo5-04.informatik.uni-mannheim.de/diseasome/resource/diseases/2210>,
+	        <http://wifo5-04.informatik.uni-mannheim.de/diseasome/resource/diseases/2695>,
+	        <http://wifo5-04.informatik.uni-mannheim.de/diseasome/resource/diseases/2760>,
+	        <http://wifo5-04.informatik.uni-mannheim.de/diseasome/resource/diseases/345>,
+	        <http://wifo5-04.informatik.uni-mannheim.de/diseasome/resource/diseases/560>,
+	        <http://wifo5-04.informatik.uni-mannheim.de/diseasome/resource/diseases/592> ;
+	    drugbank:primaryAccessionNo "DB00001" ;
+	    drugbank:pubchemCompoundId "16132441" ;
+	    drugbank:pubchemSubstanceId "14818038" ;
+	    drugbank:reference "" ;
+	    drugbank:rxlistLink <http://www.rxlist.com/cgi/generic/lepirudin.htm> ;
+	    drugbank:secondaryAccessionNumber "biod00024",
+	        "btd00024" ;
+	    drugbank:smilesStringCanonical "CCC(C)C1NC(=O)C2CSSCC(NC(=O)C(CC(C)C)NC(=O)C3CSSCC(NC(=O)C(CC(O)=O)NC(=O)C(NC(=O)C(CC4=CC=C(O)C=C4)NC(=O)C(NC(=O)C(N)C(C)C)C(C)C)C(C)O)C(=O)NC(C(C)O)C(=O)NC(CCC(O)=O)C(=O)NC(CO)C(=O)NCC(=O)NC(CCC(N)=O)C(=O)NC(CC(N)=O)C(=O)NC(CC(C)C)C(=O)N3)C(=O)NC(CCC(O)=O)C(=O)NCC(=O)NC(CO)C(=O)NC(CC(N)=O)C(=O)NC(C(C)C)C(=O)NC(CSSCC(NC(=O)C(CCC(N)=O)NC(=O)C(CC(N)=O)NC(=O)C(CCCCN)NC(=O)C(CCC(O)=O)NC(=O)CNC(=O)C(CC(O)=O)NC(=O)C(CO)NC(=O)CNC(=O)C(CC(C)C)NC1=O)C(=O)NC(C(C)C)C(=O)NC(C(C)O)C(=O)NCC(=O)NC(CCC(O)=O)C(=O)NCC(=O)NC(C(C)O)C(=O)N1CCCC1C(=O)NC(CCCCN)C(=O)N1CCCC1C(=O)NC(CCC(N)=O)C(=O)NC(CO)C(=O)NC(CC1=CN=CN1)C(=O)NC(CC(N)=O)C(=O)NC(CC(O)=O)C(=O)NCC(=O)NC(CC(O)=O)C(=O)NC(CC1=CC=CC=C1)C(=O)NC(CCC(O)=O)C(=O)NC(CCC(O)=O)C(=O)NC(C(C)CC)C(=O)N1CCCC1C(=O)NC(CCC(O)=O)C(=O)NC(CCC(O)=O)C(=O)NC(CC1=CC=C(O)C=C1)C(=O)NC(CC(C)C)C(=O)NC(CCC(N)=O)C(O)=O)C(=O)NCC(=O)NC(CCC(N)=O)C(=O)NCC(=O)NC(CC(N)=O)C(=O)NC(CCCCN)C(=O)N2" ;
+	    drugbank:smilesStringIsomeric "CC[C@H](C)[C@@H]1NC(=O)[C@@H]2CSSC[C@H](NC(=O)[C@H](CC(C)C)NC(=O)[C@@H]3CSSC[C@H](NC(=O)[C@H](CC(O)=O)NC(=O)[C@@H](NC(=O)[C@H](CC4=CC=C(O)C=C4)NC(=O)[C@@H](NC(=O)[C@@H](N)C(C)C)C(C)C)[C@@H](C)O)C(=O)N[C@@H]([C@@H](C)O)C(=O)N[C@@H](CCC(O)=O)C(=O)N[C@@H](CO)C(=O)NCC(=O)N[C@@H](CCC(N)=O)C(=O)N[C@@H](CC(N)=O)C(=O)N[C@@H](CC(C)C)C(=O)N3)C(=O)N[C@@H](CCC(O)=O)C(=O)NCC(=O)N[C@@H](CO)C(=O)N[C@@H](CC(N)=O)C(=O)N[C@@H](C(C)C)C(=O)N[C@@H](CSSC[C@H](NC(=O)[C@H](CCC(N)=O)NC(=O)[C@H](CC(N)=O)NC(=O)[C@H](CCCCN)NC(=O)[C@H](CCC(O)=O)NC(=O)CNC(=O)[C@H](CC(O)=O)NC(=O)[C@H](CO)NC(=O)CNC(=O)[C@H](CC(C)C)NC1=O)C(=O)N[C@@H](C(C)C)C(=O)N[C@@H]([C@@H](C)O)C(=O)NCC(=O)N[C@@H](CCC(O)=O)C(=O)NCC(=O)N[C@@H]([C@@H](C)O)C(=O)N1CCC[C@H]1C(=O)N[C@@H](CCCCN)C(=O)N1CCC[C@H]1C(=O)N[C@@H](CCC(N)=O)C(=O)N[C@@H](CO)C(=O)N[C@@H](CC1=CN=CN1)C(=O)N[C@@H](CC(N)=O)C(=O)N[C@@H](CC(O)=O)C(=O)NCC(=O)N[C@@H](CC(O)=O)C(=O)N[C@@H](CC1=CC=CC=C1)C(=O)N[C@@H](CCC(O)=O)C(=O)N[C@@H](CCC(O)=O)C(=O)N[C@@H]([C@@H](C)CC)C(=O)N1CCC[C@H]1C(=O)N[C@@H](CCC(O)=O)C(=O)N[C@@H](CCC(O)=O)C(=O)N[C@@H](CC1=CC=C(O)C=C1)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CCC(N)=O)C(O)=O)C(=O)NCC(=O)N[C@@H](CCC(N)=O)C(=O)NCC(=O)N[C@@H](CC(N)=O)C(=O)N[C@@H](CCCCN)C(=O)N2" ;
+	    drugbank:state "Liquid" ;
+	    drugbank:structure "1" ;
+	    drugbank:swissprotId <http://bio2rdf.org/uniprot:P01050> ;
+	    drugbank:swissprotName "ITH1_HIRME" ;
+	    drugbank:swissprotPage <http://www.uniprot.org/uniprot/P01050> ;
+	    drugbank:synonym "Hirudin variant-1" ;
+	    drugbank:target <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/targets/54> ;
+	    drugbank:toxicity "In case of overdose (eg, suggested by excessively high aPTT values) the risk of bleeding is increased." ;
+	    drugbank:updateDate "2008-08-26 20:56:02 UTC" ;
+	    ns1:sameAs <http://data.linkedct.org/resource/intervention/18464>,
+	        <http://data.linkedct.org/resource/intervention/8242>,
+	        <http://dbpedia.org/resource/Lepirudin>,
+	        <http://www.dbpedia.org/resource/Lepirudin> ;
+	    foaf:page <http://dbpedia.org/page/Lepirudin>,
+	        <http://en.wikipedia.org/wiki/Lepirudin>,
+	        <http://www.drugbank.ca/drugs/DB00001> .

@@ -6,7 +6,7 @@ from CFGraph import CFGraph
 from ShExJSG import ShExJ, ShExC
 from rdflib import Graph, URIRef, RDF
 from rdflib.util import guess_format
-from sparql_slurper import SlurpyGraph
+from sparql_slurper import SlurpyGraph, QueryResultPrinter
 
 from pyshex import PrefixLibrary
 from pyshex.shape_expressions_language.p5_2_validation_definition import isValid
@@ -281,6 +281,11 @@ def genargs(prog: Optional[str] = None) -> ArgumentParser:
     parser.add_argument("-sq", "--sparql", help="SPARQL query to generate focus nodes")
     parser.add_argument("-se", "--stoponerror", help="Stop on an error", action="store_true")
     parser.add_argument("--stopafter", help="Stop after N nodes", type=int)
+    parser.add_argument("-ps", "--printsparql", help="Print SPARQL queries as they are executed", action="store_true")
+    parser.add_argument("-pr", "--printsparqlresults", help="Print SPARQL query and results", action="store_true")
+    parser.add_argument("-gn", "--graphname", help="Specific SPARQL graph to query - use '' for any named graph")
+    parser.add_argument("-pb", "--persistbnodes", help="Treat BNodes as persistent in SPARQL endpoint",
+                        action="store_true")
     return parser
 
 
@@ -291,16 +296,28 @@ def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[st
     if opts.sparql:
         opts.slurper = True
     if opts.slurper and opts.flattener:
-        print("Error: Cannot combine slurper and flattener graphs")
+        print("Error: Cannot combine slurper and flattener graphs", file=sys.stderr)
         return 2
+    if not opts.sparql and not opts.slurper and \
+            (opts.printsparql or opts.printsparqlresults or opts.graphname is not None or opts.persistbnodes):
+        print("Error: printsparql, pringsparqlresults, graphname and persistbnodes are SPQARQL only",
+              file=sys.stderr)
     if not opts.format:
         opts.format = guess_format(opts.rdf)
     if not opts.format:
-        print('Error: Cannot determine RDF format from file name - use "--format" option')
+        print('Error: Cannot determine RDF format from file name - use "--format" option', file=sys.stderr)
         return 3
     if opts.slurper:
         g = SlurpyGraph(opts.rdf)
-        g.persistent_bnodes = True
+        if opts.printsparql:
+            g.debug_slurps = True
+        if opts.printsparqlresults:
+            g.debug_slurps = True
+            g.add_result_hook(QueryResultPrinter)
+        if opts.graphname is not None:
+            g.graph_name = opts.graphname
+        if opts.persistbnodes:
+            g.persistent_bnodes = True
     else:
         g = CFGraph() if opts.flattener else Graph()
         if '\n' in opts.rdf or '\r' in opts.rdf:
@@ -309,7 +326,8 @@ def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[st
             g.load(opts.rdf, format=opts.format)
 
     if not (opts.focus or opts.allsubjects or opts.sparql):
-        print('Error: You must specify one or more graph focus nodes, supply a SPARQL query, or use the "-A" option')
+        print('Error: You must specify one or more graph focus nodes, supply a SPARQL query, or use the "-A" option',
+              file=sys.stderr)
         return 4
 
     start = []
@@ -327,7 +345,8 @@ def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[st
             opts.focus = []
         elif not isinstance(opts.focus, list):
             opts.focus = [opts.focus]
-        opts.focus += list(SPARQLQuery(opts.rdf, opts.sparql, ).focus_nodes())
+        opts.focus += list(SPARQLQuery(opts.rdf, opts.sparql, print_query=opts.printsparql,
+                                       print_results=opts.printsparqlresults).focus_nodes())
 
     def result_sink(rslt: EvaluationResult) -> bool:
         if not rslt.result:

@@ -216,7 +216,7 @@ def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr
                 _fail_triples(cntxt, T)
                 cntxt.fail_reason = f"   {len(T)} triples less than {cardinality_text}"
             else:
-                cntxt.fail_reason = f"   No matching triples found for predicate {expr.predicate}"
+                cntxt.fail_reason = f"   No matching triples found for predicate {cntxt.n3_mapper.n3(expr.predicate)}"
             return False
         elif 0 <= max_ < len(T):
             _fail_triples(cntxt, T)
@@ -238,7 +238,7 @@ def _fail_triples(cntxt: Context, T: RDFGraph) -> None:
     tlist = list(T)
     if len(tlist):
         cntxt.fail_reason = "Triples:"
-        for t in tlist:
+        for t in sorted(tlist):
             cntxt.fail_reason = f"      {cntxt.n3_mapper.n3(t)}"
         if len(tlist) > 5:
             cntxt.fail_reason = "      ...   "

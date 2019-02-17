@@ -1,8 +1,8 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
-@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
-@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix pr: <http://www.wikidata.org/prop/reference/> .
@@ -90,6 +90,7 @@ wd:Q36956 rdfs:label "Abïl",
         "جذام",
         "جوزام",
         "ڪوڙهه",
+        "گولی",
         "ޖުޒާމު ބަލި",
         "कुष्ठ",
         "कुष्ठम्",
@@ -112,7 +113,7 @@ wd:Q36956 rdfs:label "Abïl",
         "漢生病",
         "麻瘋",
         "한센병" ;
-    schema:dateModified "2019-01-31T04:19:10+00:00"^^xsd:dateTime ;
+    schema:dateModified "2019-02-11T22:10:48+00:00"^^xsd:dateTime ;
     schema:description "Enfermidade causadora de feridas e erosões na pele.",
         "Infektionskrankheit",
         "bệnh",
@@ -132,11 +133,11 @@ wd:Q36956 rdfs:label "Abïl",
         "బ్యాక్టీరియా వల్లే పుండ్లను కలిగించే వ్యాధి",
         "ᅟinfekta malsano kaŭzata de bakterio",
         "らい菌の感染によって起こる病気" ;
-    schema:version 847095264 ;
-    ns2:identifiers 36 ;
-    ns2:sitelinks 121 ;
-    ns2:statements 97 ;
-    ns2:timestamp "2019-01-31T04:19:12+00:00"^^xsd:dateTime ;
+    schema:version 856153650 ;
+    ns1:identifiers 36 ;
+    ns1:sitelinks 121 ;
+    ns1:statements 96 ;
+    ns1:timestamp "2019-02-11T22:10:55+00:00"^^xsd:dateTime ;
     skos:altLabel "Aussatz",
         "Aussätzige",
         "Bélpoklosság",
@@ -331,7 +332,6 @@ wd:Q36956 rdfs:label "Abïl",
         <http://www.wikidata.org/entity/statement/Q36956-D1581824-E269-4916-BB7D-BEB885C44A11> ;
     p:P1748 <http://www.wikidata.org/entity/statement/Q36956-7AD8E76F-2EC8-43B5-B877-7A256EB89203> ;
     p:P18 <http://www.wikidata.org/entity/statement/Q36956-6A49C1FE-5C86-4847-BC5A-4462BB4A2D1B> ;
-    p:P1995 <http://www.wikidata.org/entity/statement/Q36956-7FEABF5E-858D-466E-BF5C-050F4BD9DE80> ;
     p:P2176 <http://www.wikidata.org/entity/statement/Q36956-1E8888B8-87CE-41C9-A3C3-B0B9824AB639>,
         <http://www.wikidata.org/entity/statement/Q36956-CC3F677E-9C30-4B22-A974-B2F90609D075>,
         <http://www.wikidata.org/entity/statement/Q36956-DFA3C738-0D14-4A01-9780-DB9E6A2A9794>,
@@ -387,14 +387,14 @@ wd:Q36956 rdfs:label "Abïl",
     p:P902 <http://www.wikidata.org/entity/statement/Q36956-227BA989-0DB8-4851-9FA9-8D0B9A5C2CCC> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q36956-3CA8A7C7-D284-43C0-BF0F-FE7F4C5D4D1D> ;
     p:P935 <http://www.wikidata.org/entity/statement/Q36956-FC3919F8-A2D9-4660-AD53-A3E555AAEF18> ;
-    ns1:P1256 <http://iconclass.org/31A4622> ;
-    ns1:P227 <http://d-nb.info/gnd/4035392-8> ;
-    ns1:P2581 <http://babelnet.org/rdf/s00042889n> ;
-    ns1:P349 <http://id.ndl.go.jp/auth/ndlna/00569249> ;
-    ns1:P486 <http://id.nlm.nih.gov/mesh/D007918> ;
-    ns1:P508 <http://purl.org/bncf/tid/14932> ;
-    ns1:P646 <http://g.co/kg/m/0c5f7> ;
-    ns1:P672 <https://id.nlm.nih.gov/mesh/C01.252.410.040.552.386> ;
+    ns2:P1256 <http://iconclass.org/31A4622> ;
+    ns2:P227 <http://d-nb.info/gnd/4035392-8> ;
+    ns2:P2581 <http://babelnet.org/rdf/s00042889n> ;
+    ns2:P349 <http://id.ndl.go.jp/auth/ndlna/00569249> ;
+    ns2:P486 <http://id.nlm.nih.gov/mesh/D007918> ;
+    ns2:P508 <http://purl.org/bncf/tid/14932> ;
+    ns2:P646 <http://g.co/kg/m/0c5f7> ;
+    ns2:P672 <https://id.nlm.nih.gov/mesh/C01.252.410.040.552.386> ;
     wdt:P1051 "12585" ;
     wdt:P1060 wd:Q15304512 ;
     wdt:P1193 1.0,
@@ -435,7 +435,6 @@ wd:Q36956 rdfs:label "Abïl",
         "030.9" ;
     wdt:P1748 "C84824" ;
     wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Lepre713.jpg> ;
-    wdt:P1995 wd:Q788926 ;
     wdt:P2176 wd:Q203174,
         wd:Q418611,
         wd:Q422226 ;
@@ -495,8 +494,8 @@ wd:Q36956 rdfs:label "Abïl",
 
 <http://www.wikidata.org/entity/statement/Q36956-145bcda4-4512-a5b4-0934-4e940d512730> ps:P279 wd:Q929451 .
 
-<http://www.wikidata.org/entity/statement/Q36956-1E2367F1-AFF6-4C84-A142-D59EA2C6006A> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
-    ps:P279 wd:Q18556979 .
+<http://www.wikidata.org/entity/statement/Q36956-1D3F6BDB-83D6-48A7-BE2D-CAD8BDF89494> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
+    ps:P279 wd:Q3041498 .
 
 <http://www.wikidata.org/entity/statement/Q36956-2583C4D4-43BC-4CCB-9D54-4D5C06E276A3> prov:wasDerivedFrom <http://www.wikidata.org/reference/557ea321a4d4a5ee6ffff781bbbdd07ce0a5f12b> ;
     ps:P1550 "548" .

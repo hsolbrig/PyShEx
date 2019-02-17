@@ -59,7 +59,7 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "クロイツフェルト・ヤコブ病",
         "克雅二氏病",
         "크로이츠펠트-야코프병" ;
-    schema:dateModified "2019-01-04T16:42:14+00:00"^^xsd:dateTime ;
+    schema:dateModified "2019-02-05T20:46:21+00:00"^^xsd:dateTime ;
     schema:description "Enfermedad neurológica priónica",
         "Gizakietan agertzen den entzefalopatia espongiformearen aldaeretako bat. Eragin txikia du, kasu bat milioi biztanleko eta urteko; oro har, 60 urtetik gorako pertsonei eragiten die",
         "beim Menschen tödlich verlaufende, durch Prionen übertragbare spongiforme Enzephalopathie",
@@ -70,11 +70,11 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "εκφυλιστική νευρολογική διαταραχή",
         "Наиболее распространенная прионная болезнь",
         "退行性神經系統疾病" ;
-    schema:version 827320622 ;
+    schema:version 851698859 ;
     ns1:identifiers 25 ;
-    ns1:sitelinks 44 ;
+    ns1:sitelinks 45 ;
     ns1:statements 41 ;
-    ns1:timestamp "2019-01-04T16:42:26+00:00"^^xsd:dateTime ;
+    ns1:timestamp "2019-02-05T20:46:37+00:00"^^xsd:dateTime ;
     skos:altLabel "CJD",
         "CJD (Creutzfeldt Jakob disease)",
         "CJK",

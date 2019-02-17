@@ -1,0 +1,53 @@
+Errors:
+  Focus: http://example.org/ex/BPM1
+  Start: http://example.org/ex/BloodPressureMeasurementShape
+  Reason:   Testing ex:BPM1 against shape http://example.org/ex/BloodPressureMeasurementShape
+    Triples:
+      ex:BPM1 :hasLocation ex:BPMLocation1 .
+      ex:BPM1 :hasMethod ex:invasive .
+   2 triples cannot be partitioned into {0,1} passing groups
+      Testing ex:BPM1 against shape http://example.org/ex/BloodPressureMeasurementShape
+        Triples:
+      ex:BPM1 :hasLocation ex:BPMLocation1 .
+   1 triples exceeds max {0,0}
+  Testing ex:BPM1 against shape http://example.org/ex/BloodPressureMeasurementShape
+    Triples:
+      ex:BPM1 :hasLocation ex:BPMLocation1 .
+      ex:BPM1 :hasMethod ex:invasive .
+   2 triples cannot be partitioned into {0,*} passing groups
+      Testing ex:BPM1 against shape http://example.org/ex/BloodPressureMeasurementShape
+        Triples:
+      ex:BPM1 :hasLocation ex:BPMLocation1 .
+      ex:BPM1 :hasMethod ex:invasive .
+   2 triples exceeds max {1,1}
+      Testing ex:BPM1 against shape http://example.org/ex/BloodPressureMeasurementShape
+        Triples:
+      ex:BPM1 :hasLocation ex:BPMLocation1 .
+      ex:BPM1 :hasMethod ex:invasive .
+   2 triples exceeds max {1,1}
+      Testing ex:BPM1 against shape http://example.org/ex/BloodPressureMeasurementShape
+        Predicate mismatch: http://hl7.org/fhir/hasLocation ≠ http://hl7.org/fhir/hasMethod
+      Testing ex:BPM1 against shape http://example.org/ex/BloodPressureMeasurementShape
+        Node: ex:invasive not in value set:
+	 {"values": ["http://example.org/ex/non-invasive"], "type": "...
+      Testing ex:BPM1 against shape http://example.org/ex/BloodPressureMeasurementShape
+        Predicate mismatch: http://hl7.org/fhir/hasMethod ≠ http://hl7.org/fhir/hasLocation
+      Testing ex:BPM1 against shape http://example.org/ex/BloodPressureMeasurementShape
+        Node: ex:invasive not in value set:
+	 {"values": ["http://example.org/ex/non-invasive"], "type": "...
+      Testing ex:BPM1 against shape http://example.org/ex/BloodPressureMeasurementShape
+        Predicate mismatch: http://hl7.org/fhir/hasMethod ≠ http://hl7.org/fhir/hasLocation
+      Testing ex:BPM1 against shape http://example.org/ex/BloodPressureMeasurementShape
+        Triples:
+      ex:BPM1 :hasLocation ex:BPMLocation1 .
+      ex:BPM1 :hasMethod ex:invasive .
+   2 triples exceeds max {1,1}
+      Testing ex:BPM1 against shape http://example.org/ex/BloodPressureMeasurementShape
+        Triples:
+      ex:BPM1 :hasLocation ex:BPMLocation1 .
+      ex:BPM1 :hasMethod ex:invasive .
+   2 triples exceeds max {1,1}
+      Testing ex:BPM1 against shape http://example.org/ex/BloodPressureMeasurementShape
+           No matching triples found for predicate :hasMethod
+      Testing ex:BPM1 against shape http://example.org/ex/BloodPressureMeasurementShape
+           No matching triples found for predicate :hasLocation

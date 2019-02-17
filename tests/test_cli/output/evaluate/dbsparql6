@@ -1,0 +1,384 @@
+SPARQL:
+select ?item where{?item a <http://w3id.org/biolink/vocab/Protein>} LIMIT 20
+	http://identifiers.org/uniprot/P00734
+	http://identifiers.org/uniprot/P00533
+	http://identifiers.org/uniprot/O75015
+	http://identifiers.org/uniprot/P00736
+	http://identifiers.org/uniprot/P02745
+	http://identifiers.org/uniprot/P02746
+	http://identifiers.org/uniprot/P02747
+	http://identifiers.org/uniprot/P08637
+	http://identifiers.org/uniprot/P09871
+	http://identifiers.org/uniprot/P12314
+
+	     ...
+
+
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00734> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 3 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P00734> a <http://w3id.org/biolink/vocab/Protein> .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00734> ?p ?o}}) (0.25 secs) - 42 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P00734> a ns1:Protein ;
+	    ns1:id <http://identifiers.org/uniprot/P00734>,
+	        "P00734" ;
+	    ns1:name "10xCbxE-F2(25-622)",
+	        "10xCbxE-F2(44-327)",
+	        "10xCbxE-F2(44-622)",
+	        "F2(25-622)",
+	        "prothrombin (factor II) propeptide",
+	        "thrombin heavy chain",
+	        "thrombin light chain" ;
+	    ns1:part_of <http://identifiers.org/wikipathways/WP1818_r101320>,
+	        <http://identifiers.org/wikipathways/WP1884_r101399>,
+	        <http://identifiers.org/wikipathways/WP1929_r101361>,
+	        <http://identifiers.org/wikipathways/WP2762_r101409>,
+	        <http://identifiers.org/wikipathways/WP4419_r101720>,
+	        <http://rdf.wikipathways.org/Pathway/WP1818_r101320/Complex/a6d12>,
+	        <http://rdf.wikipathways.org/Pathway/WP1818_r101320/Complex/b607a>,
+	        <http://rdf.wikipathways.org/Pathway/WP1818_r101320/Complex/b9727>,
+	        <http://rdf.wikipathways.org/Pathway/WP1818_r101320/Complex/d6bb0>,
+	        <http://rdf.wikipathways.org/Pathway/WP1818_r101320/Complex/da774>,
+	        <http://rdf.wikipathways.org/Pathway/WP1818_r101320/Complex/e0f44>,
+	        <http://rdf.wikipathways.org/Pathway/WP1818_r101320/Complex/e7688>,
+	        <http://rdf.wikipathways.org/Pathway/WP1818_r101320/Complex/eddd5>,
+	        <http://rdf.wikipathways.org/Pathway/WP1818_r101320/Complex/f0c44>,
+	        <http://rdf.wikipathways.org/Pathway/WP1818_r101320/Complex/f7a7d>,
+	        <http://rdf.wikipathways.org/Pathway/WP1818_r101320/WP/Interaction/ccf28>,
+	        <http://rdf.wikipathways.org/Pathway/WP1818_r101320/WP/Interaction/f8e40>,
+	        <http://rdf.wikipathways.org/Pathway/WP1884_r101399/Complex/a8341>,
+	        <http://rdf.wikipathways.org/Pathway/WP1884_r101399/Complex/e1e8e>,
+	        <http://rdf.wikipathways.org/Pathway/WP1929_r101361/Complex/eb678>,
+	        <http://rdf.wikipathways.org/Pathway/WP2762_r101409/WP/Interaction/b538d>,
+	        <http://rdf.wikipathways.org/Pathway/WP2762_r101409/WP/Interaction/da6fc>,
+	        <http://rdf.wikipathways.org/Pathway/WP2762_r101409/WP/Interaction/fc444>,
+	        <http://rdf.wikipathways.org/Pathway/WP4419_r101720/Complex/d0cd7>,
+	        <http://rdf.wikipathways.org/Pathway/WP4419_r101720/Complex/f1433> ;
+	    ns1:same_as <http://identifiers.org/ncbigene/2147>,
+	        <http://identifiers.org/uniprot/C9JV37>,
+	        <http://identifiers.org/uniprot/E9PIT3>,
+	        <http://identifiers.org/uniprot/P00734> ;
+	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/F2> .
+Errors:
+  Focus: http://identifiers.org/uniprot/P00734
+  Start: http://w3id.org/biolink/vocab/Protein
+  Reason:   Testing <http://identifiers.org/uniprot/P00734> against shape http://w3id.org/biolink/vocab/NamedThing
+    Triples:
+      <http://identifiers.org/uniprot/P00734> ns1:id <http://identifiers.org/uniprot/P00734> .
+      <http://identifiers.org/uniprot/P00734> ns1:id "P00734" .
+   2 triples exceeds max {0,1}
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00533> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 3 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P00533> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00533> ?p ?o}}) (0.25 secs) - 25 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P00533> a ns1:Protein ;
+	    ns1:id <http://identifiers.org/uniprot/P00533>,
+	        "P00533" ;
+	    ns1:name "EGFR",
+	        "p-6Y-EGFR" ;
+	    ns1:part_of <http://identifiers.org/wikipathways/WP2735_r101333>,
+	        <http://identifiers.org/wikipathways/WP2781_r101606>,
+	        <http://identifiers.org/wikipathways/WP2840_r97324>,
+	        <http://identifiers.org/wikipathways/WP4437_r101698>,
+	        <http://rdf.wikipathways.org/Pathway/WP2781_r101606/Complex/a0ea6>,
+	        <http://rdf.wikipathways.org/Pathway/WP2781_r101606/Complex/ad791>,
+	        <http://rdf.wikipathways.org/Pathway/WP4437_r101698/Complex/bb0c2>,
+	        <http://rdf.wikipathways.org/Pathway/WP4437_r101698/Complex/d163f>,
+	        <http://rdf.wikipathways.org/Pathway/WP4437_r101698/Complex/da411>,
+	        <http://rdf.wikipathways.org/Pathway/WP4437_r101698/Complex/e0b26>,
+	        <http://rdf.wikipathways.org/Pathway/WP4437_r101698/Complex/ebeb7> ;
+	    ns1:same_as <http://identifiers.org/ncbigene/1956>,
+	        <http://identifiers.org/uniprot/A0A1W2PRR9>,
+	        <http://identifiers.org/uniprot/C9JYS6>,
+	        <http://identifiers.org/uniprot/E9PFD7>,
+	        <http://identifiers.org/uniprot/P00533>,
+	        <http://identifiers.org/uniprot/Q504U8> ;
+	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/EGFR> .
+
+  Focus: http://identifiers.org/uniprot/P00533
+  Start: http://w3id.org/biolink/vocab/Protein
+  Reason:   Testing <http://identifiers.org/uniprot/P00533> against shape http://w3id.org/biolink/vocab/NamedThing
+    Triples:
+      <http://identifiers.org/uniprot/P00533> ns1:id <http://identifiers.org/uniprot/P00533> .
+      <http://identifiers.org/uniprot/P00533> ns1:id "P00533" .
+   2 triples exceeds max {0,1}
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/O75015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/O75015> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/O75015> ?p ?o}}) (0.25 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/O75015> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00736> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 2 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P00736> a ns1:GeneProduct,
+	        ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00736> ?p ?o}}) (0.25 secs) - 18 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P00736> a ns1:GeneProduct,
+	        ns1:Protein ;
+	    ns1:id <http://identifiers.org/uniprot/P00736> ;
+	    ns1:name "C1r" ;
+	    ns1:part_of <http://identifiers.org/wikipathways/WP2806_r97328>,
+	        <http://rdf.wikipathways.org/Pathway/WP2806_r97328/WP/Interaction/ide953068c_1>,
+	        <http://rdf.wikipathways.org/Pathway/WP2806_r97328/WP/Interaction/ide953068c_2> ;
+	    ns1:same_as <http://identifiers.org/ncbigene/715>,
+	        <http://identifiers.org/uniprot/B4DPQ0>,
+	        <http://identifiers.org/uniprot/F5GWL0>,
+	        <http://identifiers.org/uniprot/F5H1N6>,
+	        <http://identifiers.org/uniprot/F5H1V0>,
+	        <http://identifiers.org/uniprot/F5H2D0>,
+	        <http://identifiers.org/uniprot/F5H3A3>,
+	        <http://identifiers.org/uniprot/F5H3N3>,
+	        <http://identifiers.org/uniprot/F5H6Y3>,
+	        <http://identifiers.org/uniprot/P00736> ;
+	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/C1R> .
+
+  Focus: http://identifiers.org/uniprot/P00736
+  Start: http://w3id.org/biolink/vocab/Protein
+  Reason:   Testing <http://identifiers.org/uniprot/P00736> against shape http://w3id.org/biolink/vocab/NamedThing
+    Datatype constraint (http://www.w3.org/2001/XMLSchema#string) does not match URIRef <http://identifiers.org/hgnc.symbol/C1R>
+
+  Focus: http://identifiers.org/uniprot/P00736
+  Start: http://w3id.org/biolink/vocab/GeneProduct
+  Reason:   Testing <http://identifiers.org/uniprot/P00736> against shape http://w3id.org/biolink/vocab/NamedThing
+    Datatype constraint (http://www.w3.org/2001/XMLSchema#string) does not match URIRef <http://identifiers.org/hgnc.symbol/C1R>
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02745> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P02745> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02745> ?p ?o}}) (0.25 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P02745> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02746> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P02746> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02746> ?p ?o}}) (0.24 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P02746> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02747> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P02747> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02747> ?p ?o}}) (0.24 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P02747> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P08637> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P08637> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P08637> ?p ?o}}) (0.25 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P08637> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P09871> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P09871> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P09871> ?p ?o}}) (0.25 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P09871> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P12314> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 3 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P12314> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P12314> ?p ?o}}) (0.25 secs) - 11 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P12314> a ns1:Protein ;
+	    ns1:id <http://identifiers.org/uniprot/P12314>,
+	        "P12314" ;
+	    ns1:name "FCGR1A" ;
+	    ns1:part_of <http://identifiers.org/wikipathways/WP1836_r101649> ;
+	    ns1:same_as <http://identifiers.org/ncbigene/2209>,
+	        <http://identifiers.org/uniprot/C9JSN8>,
+	        <http://identifiers.org/uniprot/P12314> ;
+	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/FCGR1A> .
+
+  Focus: http://identifiers.org/uniprot/P12314
+  Start: http://w3id.org/biolink/vocab/Protein
+  Reason:   Testing <http://identifiers.org/uniprot/P12314> against shape http://w3id.org/biolink/vocab/NamedThing
+    Triples:
+      <http://identifiers.org/uniprot/P12314> ns1:id <http://identifiers.org/uniprot/P12314> .
+      <http://identifiers.org/uniprot/P12314> ns1:id "P12314" .
+   2 triples exceeds max {0,1}
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P12318> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P12318> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P12318> ?p ?o}}) (0.25 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P12318> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31994> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.26 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P31994> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31994> ?p ?o}}) (0.25 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P31994> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31995> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P31995> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31995> ?p ?o}}) (0.24 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P31995> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01589> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 2 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P01589> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01589> ?p ?o}}) (0.25 secs) - 16 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P01589> a ns1:Protein ;
+	    ns1:id <http://identifiers.org/uniprot/P01589> ;
+	    ns1:name "IL2RA" ;
+	    ns1:part_of <http://identifiers.org/wikipathways/WP1840_r101318>,
+	        <http://identifiers.org/wikipathways/WP2735_r101333>,
+	        <http://rdf.wikipathways.org/Pathway/WP1840_r101318/Complex/c1140>,
+	        <http://rdf.wikipathways.org/Pathway/WP1840_r101318/Complex/e86c7>,
+	        <http://rdf.wikipathways.org/Pathway/WP1840_r101318/Complex/ef234>,
+	        <http://rdf.wikipathways.org/Pathway/WP1840_r101318/Complex/fd52d> ;
+	    ns1:same_as <http://identifiers.org/ncbigene/3559>,
+	        <http://identifiers.org/uniprot/H0Y5Z0>,
+	        <http://identifiers.org/uniprot/P01589>,
+	        <http://identifiers.org/uniprot/Q5W005>,
+	        <http://identifiers.org/uniprot/Q5W006> ;
+	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/IL2RA> .
+
+  Focus: http://identifiers.org/uniprot/P01589
+  Start: http://w3id.org/biolink/vocab/Protein
+  Reason:   Testing <http://identifiers.org/uniprot/P01589> against shape http://w3id.org/biolink/vocab/NamedThing
+    Datatype constraint (http://www.w3.org/2001/XMLSchema#string) does not match URIRef <http://identifiers.org/hgnc.symbol/IL2RA>
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31785> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 2 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P31785> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31785> ?p ?o}}) (0.25 secs) - 37 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P31785> a ns1:Protein ;
+	    ns1:id <http://identifiers.org/uniprot/P31785> ;
+	    ns1:name "IL2RG",
+	        "p-Y-IL2RG" ;
+	    ns1:part_of <http://identifiers.org/wikipathways/WP1840_r101318>,
+	        <http://identifiers.org/wikipathways/WP2673_r101404>,
+	        <http://identifiers.org/wikipathways/WP2735_r101333>,
+	        <http://identifiers.org/wikipathways/WP4066_r101615>,
+	        <http://rdf.wikipathways.org/Pathway/WP1840_r101318/Complex/c1140>,
+	        <http://rdf.wikipathways.org/Pathway/WP1840_r101318/Complex/e86c7>,
+	        <http://rdf.wikipathways.org/Pathway/WP1840_r101318/Complex/ef234>,
+	        <http://rdf.wikipathways.org/Pathway/WP1840_r101318/Complex/fd52d>,
+	        <http://rdf.wikipathways.org/Pathway/WP2673_r101404/Complex/a9d7a>,
+	        <http://rdf.wikipathways.org/Pathway/WP2673_r101404/Complex/aa7fa>,
+	        <http://rdf.wikipathways.org/Pathway/WP2673_r101404/Complex/b51d2>,
+	        <http://rdf.wikipathways.org/Pathway/WP2673_r101404/Complex/c4900>,
+	        <http://rdf.wikipathways.org/Pathway/WP2673_r101404/Complex/e3c71>,
+	        <http://rdf.wikipathways.org/Pathway/WP2673_r101404/Complex/e63dc>,
+	        <http://rdf.wikipathways.org/Pathway/WP2673_r101404/Complex/ef8f2>,
+	        <http://rdf.wikipathways.org/Pathway/WP2673_r101404/Complex/fe9ac>,
+	        <http://rdf.wikipathways.org/Pathway/WP2673_r101404/WP/Interaction/bb78c>,
+	        <http://rdf.wikipathways.org/Pathway/WP4066_r101615/Complex/a7fb0>,
+	        <http://rdf.wikipathways.org/Pathway/WP4066_r101615/Complex/c4a1e>,
+	        <http://rdf.wikipathways.org/Pathway/WP4066_r101615/Complex/cd4a4>,
+	        <http://rdf.wikipathways.org/Pathway/WP4066_r101615/Complex/cf260>,
+	        <http://rdf.wikipathways.org/Pathway/WP4066_r101615/Complex/f7a2c>,
+	        <http://rdf.wikipathways.org/Pathway/WP4066_r101615/Complex/f7cfe>,
+	        <http://rdf.wikipathways.org/Pathway/WP4066_r101615/WP/Interaction/b8102> ;
+	    ns1:same_as <http://identifiers.org/ncbigene/3561>,
+	        <http://identifiers.org/uniprot/D6R964>,
+	        <http://identifiers.org/uniprot/D6RBW5>,
+	        <http://identifiers.org/uniprot/D6RDW9>,
+	        <http://identifiers.org/uniprot/H0Y8J6>,
+	        <http://identifiers.org/uniprot/P31785>,
+	        <http://identifiers.org/uniprot/Q5FC10> ;
+	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/IL2RG> .
+
+  Focus: http://identifiers.org/uniprot/P31785
+  Start: http://w3id.org/biolink/vocab/Protein
+  Reason:   Testing <http://identifiers.org/uniprot/P31785> against shape http://w3id.org/biolink/vocab/NamedThing
+    Datatype constraint (http://www.w3.org/2001/XMLSchema#string) does not match URIRef <http://identifiers.org/hgnc.symbol/IL2RG>
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01375> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 3 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P01375> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01375> ?p ?o}}) (0.25 secs) - 35 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P01375> a ns1:Protein ;
+	    ns1:id <http://identifiers.org/uniprot/P01375>,
+	        "P01375" ;
+	    ns1:name "TNF(1-233)",
+	        "TNF(1-34)",
+	        "TNF(1-76)",
+	        "TNF(52-76)",
+	        "TNF(77-233)" ;
+	    ns1:part_of <http://identifiers.org/wikipathways/WP2751_r101450>,
+	        <http://identifiers.org/wikipathways/WP3380_r101505>,
+	        <http://identifiers.org/wikipathways/WP4066_r101615>,
+	        <http://rdf.wikipathways.org/Pathway/WP2751_r101450/WP/Interaction/bde87>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/a119c>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/a5118>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/ad0fc>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/b0262>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/b6f98>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/bf385>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/ca8fc>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/cf715>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/d8b30>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/d9dab>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/dc9bd>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/e224b>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/e37aa>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/e45be>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/f1a8a>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/f691c>,
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/WP/Interaction/ab12f> ;
+	    ns1:same_as <http://identifiers.org/ncbigene/7124>,
+	        <http://identifiers.org/uniprot/P01375>,
+	        <http://identifiers.org/uniprot/Q5STB3> ;
+	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/TNF> .
+
+  Focus: http://identifiers.org/uniprot/P01375
+  Start: http://w3id.org/biolink/vocab/Protein
+  Reason:   Testing <http://identifiers.org/uniprot/P01375> against shape http://w3id.org/biolink/vocab/NamedThing
+    Triples:
+      <http://identifiers.org/uniprot/P01375> ns1:id <http://identifiers.org/uniprot/P01375> .
+      <http://identifiers.org/uniprot/P01375> ns1:id "P01375" .
+   2 triples exceeds max {0,1}
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P20333> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 2 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P20333> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P20333> ?p ?o}}) (0.25 secs) - 9 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P20333> a ns1:Protein ;
+	    ns1:id <http://identifiers.org/uniprot/P20333> ;
+	    ns1:name "TNFRSF1B" ;
+	    ns1:part_of <http://identifiers.org/wikipathways/WP4066_r101615> ;
+	    ns1:same_as <http://identifiers.org/ncbigene/7133>,
+	        <http://identifiers.org/uniprot/B5A977>,
+	        <http://identifiers.org/uniprot/P20333> ;
+	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/TNFRSF1B> .
+
+  Focus: http://identifiers.org/uniprot/P20333
+  Start: http://w3id.org/biolink/vocab/Protein
+  Reason:   Testing <http://identifiers.org/uniprot/P20333> against shape http://w3id.org/biolink/vocab/NamedThing
+    Datatype constraint (http://www.w3.org/2001/XMLSchema#string) does not match URIRef <http://identifiers.org/hgnc.symbol/TNFRSF1B>
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01374> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.27 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P01374> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01374> ?p ?o}}) (0.24 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P01374> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P30968> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 4 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P30968> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P30968> ?p ?o}}) (0.25 secs) - 12 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P30968> a ns1:Protein ;
+	    ns1:id <http://identifiers.org/uniprot/P30968>,
+	        "P30968" ;
+	    ns1:name "GNRHR" ;
+	    ns1:part_of <http://identifiers.org/wikipathways/WP4419_r101720>,
+	        <http://rdf.wikipathways.org/Pathway/WP4419_r101720/Complex/ee0f4> ;
+	    ns1:same_as <http://identifiers.org/ncbigene/2798>,
+	        <http://identifiers.org/uniprot/P30968> ;
+	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/GNRHR> .
+
+  Focus: http://identifiers.org/uniprot/P30968
+  Start: http://w3id.org/biolink/vocab/Protein
+  Reason:   Testing <http://identifiers.org/uniprot/P30968> against shape http://w3id.org/biolink/vocab/NamedThing
+    Triples:
+      <http://identifiers.org/uniprot/P30968> ns1:id <http://identifiers.org/uniprot/P30968> .
+      <http://identifiers.org/uniprot/P30968> ns1:id "P30968" .
+   2 triples exceeds max {0,1}
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P48551> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P48551> a ns1:Protein .
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P48551> ?p ?o}}) (0.24 secs) - 1 triples
+RESULTS:
+	<http://identifiers.org/uniprot/P48551> a ns1:Protein .

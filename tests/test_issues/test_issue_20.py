@@ -1,54 +1,36 @@
+import os
 import unittest
+from contextlib import redirect_stdout
+from io import StringIO
 
-from pyshex import ShExEvaluator, PrefixLibrary
-
-shex = """
-BASE <http://example.org/ex/>
-PREFIX ex: <example.org/ex/>
-PREFIX : <http://hl7.org/fhir/>
-
-start = @<BloodPressureMeasurementShape>
-
-<BloodPressureMeasurementShape>  {
-    (
-        (:hasMethod [<invasive>] ;
-         :hasLocation IRI{0})?
-    |
-        (:hasMethod [<non-invasive>]  ;
-        | :hasLocation IRI)*
-    )
-} 
-
-"""
-
-rdf = """
-BASE <http://example.org/ex/>
-PREFIX ex: <http://example.org/ex/>
-PREFIX : <http://hl7.org/fhir/>
-
-<BPM1>
-  :hasMethod <invasive> ;
-  :hasLocation <BPMLocation1> .
-  
-<BPM2>
-  :hasMethod <non-invasive> ;
-  :hasLocation <BPMLocation2> .
-"""
+from pyshex import PrefixLibrary
+from pyshex.shex_evaluator import evaluate_cli
 
 
 class BPM2TestCase(unittest.TestCase):
-    @unittest.skipIf(True, "Test not complete")
-    def test_fail(self):
-        pl = PrefixLibrary(rdf)
-        results = ShExEvaluator().evaluate(rdf, shex, focus=[pl.EX.BPM1, pl.EX.BPM2], debug=False)
-        for r in results:
-            if r.result:
-                print("PASS")
-            else:
-                print(f"FAIL: {r.reason}")
-        self.assertEqual([False, True], [r.result for r in results])
-        self.assertEqual("A good fail reason", results[0].reason)
 
+    def test_fail(self):
+        """ Test max cardinality of 0 AND error reporting """
+        datadir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data'))
+        shexpath = os.path.join(datadir, 'issue_20.shex')
+        rdfpath = os.path.join(datadir, 'issue_20.ttl')
+        expectedpath = os.path.join(datadir, 'issue_20.errors')
+
+        pl = PrefixLibrary(rdfpath)
+        output = StringIO()
+        with redirect_stdout(output):
+            evaluate_cli(f"{rdfpath} {shexpath} -fn {pl.EX.BPM1}")
+            evaluate_cli(f"{rdfpath} {shexpath} -fn {pl.EX.BPM2}")
+
+        if not os.path.exists(expectedpath):
+            with open(expectedpath, 'w') as f:
+                f.write(output.getvalue())
+            self.assertTrue(False, "Output created, rerun")
+        with open(expectedpath) as f:
+            expected = f.read()
+
+        self.maxDiff = None
+        self.assertEqual(expected, output.getvalue())
 
 if __name__ == '__main__':
     unittest.main()

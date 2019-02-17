@@ -20,7 +20,7 @@ class ErrorReportingIssue(unittest.TestCase):
         sparql = os.path.join(data_dir, 'biolink_model.sparql')
         messages = StringIO()
         with redirect_stdout(messages):
-            evaluate_cli(f'-ss -sq {sparql}  http://graphdb.dumontierlab.com/repositories/ncats-red-kg {shex} -ut')
+            evaluate_cli(f'-ss -sq {sparql}  http://graphdb.dumontierlab.com/repositories/ncats-red-kg {shex} -ut -pb')
         for line in messages.getvalue().split('\n'):
             self.assertFalse(line.strip().endswith('Reason:'))
 

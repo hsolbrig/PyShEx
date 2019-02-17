@@ -35,6 +35,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.7.1 -- Fix issue 26
 * 0.7.2 -- Upgrade error reporting
 * 0.7.3 -- Report using namespaces, enhance PrefixLib to inject into a module
+* 0.7.4 -- Added '-ps', '-pr', '-gn', '-pb' options to CLI
 
 ## Installation
 ```bash
@@ -53,7 +54,7 @@ Unfortunately, however, `rdflib-jsonld` is NOT compatible with the bleeding edge
 > shexeval -h
 usage: shexeval [-h] [-f FORMAT] [-s START] [-ut] [-sp STARTPREDICATE]
                 [-fn FOCUS] [-A] [-d] [-ss] [-cf] [-sq SPARQL] [-se]
-                [--stopafter STOPAFTER]
+                [--stopafter STOPAFTER] [-ps] [-pr] [-gn GRAPHNAME] [-pb]
                 rdf shex
 
 positional arguments:
@@ -81,6 +82,13 @@ optional arguments:
   -se, --stoponerror    Stop on an error
   --stopafter STOPAFTER
                         Stop after N nodes
+  -ps, --printsparql    Print SPARQL queries as they are executed
+  -pr, --printsparqlresults
+                        Print SPARQL query and results
+  -gn GRAPHNAME, --graphname GRAPHNAME
+                        Specific SPARQL graph to query - use '' for any named
+                        graph
+  -pb, --persistbnodes  Treat BNodes as persistent in SPARQL endpoint
 ```
 
 ## Documentation

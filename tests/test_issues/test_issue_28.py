@@ -12,17 +12,17 @@ data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data'))
 # not too distant future
 class InlineSPARQLIssue(unittest.TestCase):
 
-    @unittest.skipIf(False, "Fragile endpoint - has BNODES at the moment")
+    @unittest.skipIf(True, "Fragile endpoint - has BNODES at the moment")
     def test_inline_rdf(self):
         """ Issue #28. Make sure inline SPARQL with no carriage return works """
         shex = os.path.join(data_dir, 'biolink-model.shex')
-        sparql = 'select ?item where{?item a <http://w3id.org/biolink/vocab/Protein>} LIMIT 1'
+        sparql = 'select ?item where{graph ?g {?item a <http://w3id.org/biolink/vocab/Protein>}}'
 
         # This raises an InvalidSchema error
         messages = StringIO()
         with redirect_stdout(messages):
             evaluate_cli((['-ss', '-sq', sparql, 'http://graphdb.dumontierlab.com/repositories/ncats-red-kg',
-                           shex, '-s', 'http://w3id.org/biolink/vocab/NamedThing']))
+                           shex, '-ut', '-pb']))
         print(messages.getvalue())
 
 

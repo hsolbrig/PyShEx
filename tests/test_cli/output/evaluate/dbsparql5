@@ -1,0 +1,130 @@
+SPARQL:
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX vocabClass: <http://wifo5-04.informatik.uni-mannheim.de/drugbank/vocab/resource/class/>
+
+SELECT DISTINCT ?item WHERE {
+  ?item rdf:type vocabClass:Offer
+}
+LIMIT 10
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00001
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00002
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00003
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00004
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00005
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00006
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00007
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00008
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00009
+	http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00010
+
+
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {<http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00001> ?p ?o}}) (0.46 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {?s ?p <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00001>}}) (0.36 secs) - 0 triples
+RESULTS:
+	
+Errors:
+  Focus: http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00001
+  Start: http://example.org/t1/S1
+  Reason:   Testing <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00001> against shape http://example.org/t1/S1
+       No matching triples found for predicate foaf:page
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {<http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00002> ?p ?o}}) (0.36 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {?s ?p <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00002>}}) (0.34 secs) - 0 triples
+RESULTS:
+	
+
+  Focus: http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00002
+  Start: http://example.org/t1/S1
+  Reason:   Testing <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00002> against shape http://example.org/t1/S1
+       No matching triples found for predicate foaf:page
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {<http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00003> ?p ?o}}) (0.36 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {?s ?p <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00003>}}) (0.52 secs) - 0 triples
+RESULTS:
+	
+
+  Focus: http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00003
+  Start: http://example.org/t1/S1
+  Reason:   Testing <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00003> against shape http://example.org/t1/S1
+       No matching triples found for predicate foaf:page
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {<http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00004> ?p ?o}}) (0.36 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {?s ?p <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00004>}}) (0.36 secs) - 0 triples
+RESULTS:
+	
+
+  Focus: http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00004
+  Start: http://example.org/t1/S1
+  Reason:   Testing <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00004> against shape http://example.org/t1/S1
+       No matching triples found for predicate foaf:page
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {<http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00005> ?p ?o}}) (0.34 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {?s ?p <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00005>}}) (0.33 secs) - 0 triples
+RESULTS:
+	
+
+  Focus: http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00005
+  Start: http://example.org/t1/S1
+  Reason:   Testing <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00005> against shape http://example.org/t1/S1
+       No matching triples found for predicate foaf:page
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {<http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00006> ?p ?o}}) (0.3 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {?s ?p <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00006>}}) (0.29 secs) - 0 triples
+RESULTS:
+	
+
+  Focus: http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00006
+  Start: http://example.org/t1/S1
+  Reason:   Testing <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00006> against shape http://example.org/t1/S1
+       No matching triples found for predicate foaf:page
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {<http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00007> ?p ?o}}) (0.33 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {?s ?p <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00007>}}) (0.33 secs) - 0 triples
+RESULTS:
+	
+
+  Focus: http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00007
+  Start: http://example.org/t1/S1
+  Reason:   Testing <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00007> against shape http://example.org/t1/S1
+       No matching triples found for predicate foaf:page
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {<http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00008> ?p ?o}}) (0.34 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {?s ?p <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00008>}}) (0.3 secs) - 0 triples
+RESULTS:
+	
+
+  Focus: http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00008
+  Start: http://example.org/t1/S1
+  Reason:   Testing <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00008> against shape http://example.org/t1/S1
+       No matching triples found for predicate foaf:page
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {<http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00009> ?p ?o}}) (0.31 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {?s ?p <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00009>}}) (0.3 secs) - 0 triples
+RESULTS:
+	
+
+  Focus: http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00009
+  Start: http://example.org/t1/S1
+  Reason:   Testing <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00009> against shape http://example.org/t1/S1
+       No matching triples found for predicate foaf:page
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {<http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00010> ?p ?o}}) (0.3 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o {graph <http://identifiers.org/drugbank:> {?s ?p <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00010>}}) (0.31 secs) - 0 triples
+RESULTS:
+	
+
+  Focus: http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00010
+  Start: http://example.org/t1/S1
+  Reason:   Testing <http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugs/DB00010> against shape http://example.org/t1/S1
+       No matching triples found for predicate foaf:page

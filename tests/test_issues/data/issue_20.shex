@@ -1,0 +1,15 @@
+BASE <http://example.org/ex/>
+PREFIX ex: <example.org/ex/>
+PREFIX : <http://hl7.org/fhir/>
+
+start = @<BloodPressureMeasurementShape>
+
+<BloodPressureMeasurementShape>  {
+    (
+        (:hasMethod [<invasive>] ;
+         :hasLocation IRI{0})?
+    |
+        (:hasMethod [<non-invasive>]  ;
+        | :hasLocation IRI)*
+    )
+}

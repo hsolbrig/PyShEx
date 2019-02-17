@@ -1,0 +1,11 @@
+BASE <http://example.org/ex/>
+PREFIX ex: <http://example.org/ex/>
+PREFIX : <http://hl7.org/fhir/>
+
+<BPM1>
+  :hasMethod <invasive> ;
+  :hasLocation <BPMLocation1> .
+
+<BPM2>
+  :hasMethod <non-invasive> ;
+  :hasLocation <BPMLocation2> .

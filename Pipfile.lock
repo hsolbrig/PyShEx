@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "fda09aafc477f05c9db6df8e363704c4b01f8aff7772181ea4001e6189b188e6"
+            "sha256": "dba22ee494dc0d1d2e03d82f8432ccaef91daa28cec377a0cb0e9c8950017cbe"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -122,10 +122,10 @@
         },
         "sparql-slurper": {
             "hashes": [
-                "sha256:6c6c83170d6055bf145a75960682e048d72d0a735eea651baf3bdbd2c30149ae"
+                "sha256:32ebe214b6acfe48acfef5c1e2afb1cf26595015d18256fa73781cf2a1f62470"
             ],
             "index": "pypi",
-            "version": "==0.2.0"
+            "version": "==0.2.1"
         },
         "sparqlwrapper": {
             "hashes": [
