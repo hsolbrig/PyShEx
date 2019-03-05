@@ -1,0 +1,132 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q883850 rdfs:label "Blepharophimose",
+        "Blepharophimosis",
+        "blefarofimose",
+        "blefarofimosi",
+        "blepharophimosis",
+        "blépharophimosis",
+        "Блефарофимоз",
+        "تضيق الاجفان",
+        "先天性家族性瞼口狹小症" ;
+    schema:dateModified "2019-03-04T23:44:01+00:00"^^xsd:dateTime ;
+    schema:description "Human disease",
+        "Krankheit",
+        "réduction de la fente des paupières",
+        "مرض يصيب الإنسان" ;
+    schema:version 874531182 ;
+    ns2:identifiers 14 ;
+    ns2:sitelinks 7 ;
+    ns2:statements 22 ;
+    ns2:timestamp "2019-03-04T23:57:36+00:00"^^xsd:dateTime ;
+    skos:altLabel "BPES",
+        "Blepharophimose-Epikanthus inversus-Ptose-Syndrom",
+        "Blepharophimose-Ptosis-Epicanthus-inversus-Syndrom",
+        "Blepharophimose-Syndrom",
+        "Wrodzone zwężenie szpary powiekowej",
+        "blepharophimosis",
+        "الحوص",
+        "تضيق الأجفان",
+        "حوص" ;
+    p:P1692 <http://www.wikidata.org/entity/statement/Q883850-180E37D7-E001-4B0B-BCED-1A287A71B1D7> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q883850-6D3CDFDD-23BE-4B26-8504-4AA99E1DE256> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q883850-724141E5-030D-4BE8-BD8B-A29491427D80>,
+        <http://www.wikidata.org/entity/statement/Q883850-c25b9fab-492f-7be9-1c8b-67d1c9a8b2bf> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q883850-259E820A-83CC-4D27-B627-732896E26492>,
+        <http://www.wikidata.org/entity/statement/Q883850-B6A482A1-2186-4F30-8651-E90A1EFA727F>,
+        <http://www.wikidata.org/entity/statement/Q883850-F0DFC75C-9F26-496C-A1E8-A399C7A85A89> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q883850-7801DB60-3EAE-4F66-8611-ACF7D3744F49>,
+        <http://www.wikidata.org/entity/statement/Q883850-927DEE74-3BEA-45ED-859C-AF35924F9FFB> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q883850-3A46EECB-256E-4A9A-BA3D-5C9B58BDA9A9> ;
+    p:P3841 <http://www.wikidata.org/entity/statement/Q883850-315E673A-9877-4E68-83B8-CAAD32A06621> ;
+    p:P4229 <http://www.wikidata.org/entity/statement/Q883850-0F768EC2-5AD0-4C66-B3F0-7A14E6268871> ;
+    p:P4317 <http://www.wikidata.org/entity/statement/Q883850-4B3C0287-8552-409C-A717-3FCD6009C15B> ;
+    p:P486 <http://www.wikidata.org/entity/statement/Q883850-BC94F9BA-B0B4-4153-A125-317E561F094B>,
+        <http://www.wikidata.org/entity/statement/Q883850-E6FA97DE-5403-4DDA-962B-7C41357A6032> ;
+    p:P5270 <http://www.wikidata.org/entity/statement/Q883850-9F594A35-1A09-4838-A73D-56A4F09C0F04> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q883850-7ABF7C06-389E-488D-B3AE-C5AC0E41500A> ;
+    p:P672 <http://www.wikidata.org/entity/statement/Q883850-663F0F33-4034-4253-9204-872F10B56D8B>,
+        <http://www.wikidata.org/entity/statement/Q883850-83ED7BF7-4BD3-4ADC-89A5-0855E1E37B6F>,
+        <http://www.wikidata.org/entity/statement/Q883850-A8067EA6-AE96-470E-B5F7-524C0432CBC6> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q883850-1675B5AD-54A3-49FD-861C-5ED20DB97305>,
+        <http://www.wikidata.org/entity/statement/Q883850-54BC6D88-1298-44A7-9CE9-34B6A7AAD842> ;
+    ns1:P486 <http://id.nlm.nih.gov/mesh/D016569> ;
+    ns1:P646 <http://g.co/kg/m/01xn0s0> ;
+    ns1:P672 <https://id.nlm.nih.gov/mesh/C11.250.090>,
+        <https://id.nlm.nih.gov/mesh/C11.338.190>,
+        <https://id.nlm.nih.gov/mesh/C16.131.384.190> ;
+    wdt:P1692 "374.46" ;
+    wdt:P1995 wd:Q1071953 ;
+    wdt:P279 wd:Q18556729,
+        wd:Q3281904 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:10348>,
+        <http://purl.obolibrary.org/obo/DOID_10348>,
+        <http://purl.obolibrary.org/obo/HP_0000581> ;
+    wdt:P2892 "C0005744" ;
+    wdt:P31 wd:Q12136 ;
+    wdt:P3841 "HP:0000581" ;
+    wdt:P4229 "H02.52" ;
+    wdt:P4317 "5932" ;
+    wdt:P486 "D016569" ;
+    wdt:P5270 "MONDO:0001008" ;
+    wdt:P646 "/m/01xn0s0" ;
+    wdt:P672 "C11.250.090",
+        "C11.338.190",
+        "C16.131.384.190" ;
+    wdt:P699 "DOID:10348" .
+
+<http://www.wikidata.org/entity/statement/Q883850-0F768EC2-5AD0-4C66-B3F0-7A14E6268871> prov:wasDerivedFrom <http://www.wikidata.org/reference/31d38bde634618fede3bf1a07ba0438e5f3d20e3>,
+        <http://www.wikidata.org/reference/f662a25888cefdf24d53fb2d6b20ff0a423d2eca> ;
+    ps:P4229 "H02.52" .
+
+<http://www.wikidata.org/entity/statement/Q883850-1675B5AD-54A3-49FD-861C-5ED20DB97305> prov:wasDerivedFrom <http://www.wikidata.org/reference/0008b0e4b0d47c8f30308aff15ce3f3ab067d81d>,
+        <http://www.wikidata.org/reference/31d38bde634618fede3bf1a07ba0438e5f3d20e3> ;
+    ps:P699 "DOID:10348" .
+
+<http://www.wikidata.org/entity/statement/Q883850-3A46EECB-256E-4A9A-BA3D-5C9B58BDA9A9> prov:wasDerivedFrom <http://www.wikidata.org/reference/31d38bde634618fede3bf1a07ba0438e5f3d20e3>,
+        <http://www.wikidata.org/reference/f662a25888cefdf24d53fb2d6b20ff0a423d2eca> ;
+    ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/entity/statement/Q883850-54BC6D88-1298-44A7-9CE9-34B6A7AAD842> prov:wasDerivedFrom <http://www.wikidata.org/reference/f662a25888cefdf24d53fb2d6b20ff0a423d2eca> ;
+    ps:P699 "DOID:10348" .
+
+<http://www.wikidata.org/entity/statement/Q883850-724141E5-030D-4BE8-BD8B-A29491427D80> prov:wasDerivedFrom <http://www.wikidata.org/reference/f662a25888cefdf24d53fb2d6b20ff0a423d2eca> ;
+    ps:P279 wd:Q18556729 .
+
+<http://www.wikidata.org/entity/statement/Q883850-7801DB60-3EAE-4F66-8611-ACF7D3744F49> prov:wasDerivedFrom <http://www.wikidata.org/reference/a861105a5ddfe376708acd92aba6ebf10e2a5362>,
+        <http://www.wikidata.org/reference/f662a25888cefdf24d53fb2d6b20ff0a423d2eca> ;
+    ps:P2892 "C0005744" .
+
+<http://www.wikidata.org/entity/statement/Q883850-927DEE74-3BEA-45ED-859C-AF35924F9FFB> prov:wasDerivedFrom <http://www.wikidata.org/reference/0008b0e4b0d47c8f30308aff15ce3f3ab067d81d>,
+        <http://www.wikidata.org/reference/31d38bde634618fede3bf1a07ba0438e5f3d20e3> ;
+    ps:P2892 "C0005744" .
+
+<http://www.wikidata.org/entity/statement/Q883850-BC94F9BA-B0B4-4153-A125-317E561F094B> prov:wasDerivedFrom <http://www.wikidata.org/reference/0008b0e4b0d47c8f30308aff15ce3f3ab067d81d>,
+        <http://www.wikidata.org/reference/31d38bde634618fede3bf1a07ba0438e5f3d20e3> ;
+    pq:P4390 wd:Q39893449 ;
+    ps:P486 "D016569" .
+
+<http://www.wikidata.org/entity/statement/Q883850-E6FA97DE-5403-4DDA-962B-7C41357A6032> prov:wasDerivedFrom <http://www.wikidata.org/reference/a861105a5ddfe376708acd92aba6ebf10e2a5362>,
+        <http://www.wikidata.org/reference/f662a25888cefdf24d53fb2d6b20ff0a423d2eca> ;
+    ps:P486 "D016569" .
+
+<http://www.wikidata.org/entity/statement/Q883850-c25b9fab-492f-7be9-1c8b-67d1c9a8b2bf> ps:P279 wd:Q3281904 .
+

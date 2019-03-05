@@ -6,6 +6,7 @@
 
 [![DOI](https://zenodo.org/badge/116042298.svg)](https://zenodo.org/badge/latestdoi/116042298)
 
+https://mybinder.org/v2/gh/hsolbrig/pyshex/master
 
 
 This package is a reasonably literal implementation of the [Shape Expressions Language 2.0](http://shex.io/shex-semantics/).  It can parse and "execute" ShExC and ShExJ source.
@@ -36,6 +37,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.7.2 -- Upgrade error reporting
 * 0.7.3 -- Report using namespaces, enhance PrefixLib to inject into a module
 * 0.7.4 -- Added '-ps', '-pr', '-gn', '-pb' options to CLI
+* 0.7.5 -- Fix CLOSED issue in evaluate call (issue 41)
 
 ## Installation
 ```bash

@@ -73,7 +73,7 @@ def satisfiesShape(cntxt: Context, n: Node, S: ShExJ.Shape, c: DebugContext) -> 
                               f"{len(non_matchables)} non-matching triples on a closed shape"))
                     print(c.i(1, "", list(non_matchables)))
                     print()
-                rslt = False
+                return False
 
 
         # Evaluate the actual expression.  Start assuming everything matches...

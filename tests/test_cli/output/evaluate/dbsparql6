@@ -14,14 +14,14 @@ select ?item where{?item a <http://w3id.org/biolink/vocab/Protein>} LIMIT 20
 	     ...
 
 
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00734> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 3 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00734> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.28 secs) - 4 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P00734> a <http://w3id.org/biolink/vocab/Protein> .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00734> ?p ?o}}) (0.25 secs) - 42 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00734> ?p ?o}}) (0.29 secs) - 38 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P00734> a ns1:Protein ;
-	    ns1:id <http://identifiers.org/uniprot/P00734>,
-	        "P00734" ;
+	    ns2:identifier <http://identifiers.org/uniprot/P00734> ;
+	    ns1:id "http://identifiers.org/uniprot/P00734" ;
 	    ns1:name "10xCbxE-F2(25-622)",
 	        "10xCbxE-F2(44-327)",
 	        "10xCbxE-F2(44-622)",
@@ -53,28 +53,20 @@ RESULTS:
 	        <http://rdf.wikipathways.org/Pathway/WP2762_r101409/WP/Interaction/da6fc>,
 	        <http://rdf.wikipathways.org/Pathway/WP2762_r101409/WP/Interaction/fc444>,
 	        <http://rdf.wikipathways.org/Pathway/WP4419_r101720/Complex/d0cd7>,
-	        <http://rdf.wikipathways.org/Pathway/WP4419_r101720/Complex/f1433> ;
-	    ns1:same_as <http://identifiers.org/ncbigene/2147>,
-	        <http://identifiers.org/uniprot/C9JV37>,
-	        <http://identifiers.org/uniprot/E9PIT3>,
-	        <http://identifiers.org/uniprot/P00734> ;
-	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/F2> .
+	        <http://rdf.wikipathways.org/Pathway/WP4419_r101720/Complex/f1433> .
 Errors:
   Focus: http://identifiers.org/uniprot/P00734
   Start: http://w3id.org/biolink/vocab/Protein
   Reason:   Testing <http://identifiers.org/uniprot/P00734> against shape http://w3id.org/biolink/vocab/NamedThing
-    Triples:
-      <http://identifiers.org/uniprot/P00734> ns1:id <http://identifiers.org/uniprot/P00734> .
-      <http://identifiers.org/uniprot/P00734> ns1:id "P00734" .
-   2 triples exceeds max {0,1}
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00533> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 3 triples
+    Node kind mismatch have: Literal expected: nonliteral
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00533> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.28 secs) - 4 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P00533> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00533> ?p ?o}}) (0.25 secs) - 25 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00533> ?p ?o}}) (0.29 secs) - 19 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P00533> a ns1:Protein ;
-	    ns1:id <http://identifiers.org/uniprot/P00533>,
-	        "P00533" ;
+	    ns2:identifier <http://identifiers.org/uniprot/P00533> ;
+	    ns1:id "http://identifiers.org/uniprot/P00533" ;
 	    ns1:name "EGFR",
 	        "p-6Y-EGFR" ;
 	    ns1:part_of <http://identifiers.org/wikipathways/WP2735_r101333>,
@@ -87,164 +79,133 @@ RESULTS:
 	        <http://rdf.wikipathways.org/Pathway/WP4437_r101698/Complex/d163f>,
 	        <http://rdf.wikipathways.org/Pathway/WP4437_r101698/Complex/da411>,
 	        <http://rdf.wikipathways.org/Pathway/WP4437_r101698/Complex/e0b26>,
-	        <http://rdf.wikipathways.org/Pathway/WP4437_r101698/Complex/ebeb7> ;
-	    ns1:same_as <http://identifiers.org/ncbigene/1956>,
-	        <http://identifiers.org/uniprot/A0A1W2PRR9>,
-	        <http://identifiers.org/uniprot/C9JYS6>,
-	        <http://identifiers.org/uniprot/E9PFD7>,
-	        <http://identifiers.org/uniprot/P00533>,
-	        <http://identifiers.org/uniprot/Q504U8> ;
-	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/EGFR> .
+	        <http://rdf.wikipathways.org/Pathway/WP4437_r101698/Complex/ebeb7> .
 
   Focus: http://identifiers.org/uniprot/P00533
   Start: http://w3id.org/biolink/vocab/Protein
   Reason:   Testing <http://identifiers.org/uniprot/P00533> against shape http://w3id.org/biolink/vocab/NamedThing
-    Triples:
-      <http://identifiers.org/uniprot/P00533> ns1:id <http://identifiers.org/uniprot/P00533> .
-      <http://identifiers.org/uniprot/P00533> ns1:id "P00533" .
-   2 triples exceeds max {0,1}
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/O75015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 1 triples
+    Node kind mismatch have: Literal expected: nonliteral
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/O75015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.28 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/O75015> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/O75015> ?p ?o}}) (0.25 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/O75015> ?p ?o}}) (0.28 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/O75015> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00736> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 2 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00736> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.27 secs) - 3 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P00736> a ns1:GeneProduct,
 	        ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00736> ?p ?o}}) (0.25 secs) - 18 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P00736> ?p ?o}}) (0.28 secs) - 9 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P00736> a ns1:GeneProduct,
 	        ns1:Protein ;
-	    ns1:id <http://identifiers.org/uniprot/P00736> ;
+	    ns2:identifier <http://identifiers.org/uniprot/P00736> ;
+	    ns1:id "http://identifiers.org/uniprot/P00736" ;
 	    ns1:name "C1r" ;
 	    ns1:part_of <http://identifiers.org/wikipathways/WP2806_r97328>,
 	        <http://rdf.wikipathways.org/Pathway/WP2806_r97328/WP/Interaction/ide953068c_1>,
-	        <http://rdf.wikipathways.org/Pathway/WP2806_r97328/WP/Interaction/ide953068c_2> ;
-	    ns1:same_as <http://identifiers.org/ncbigene/715>,
-	        <http://identifiers.org/uniprot/B4DPQ0>,
-	        <http://identifiers.org/uniprot/F5GWL0>,
-	        <http://identifiers.org/uniprot/F5H1N6>,
-	        <http://identifiers.org/uniprot/F5H1V0>,
-	        <http://identifiers.org/uniprot/F5H2D0>,
-	        <http://identifiers.org/uniprot/F5H3A3>,
-	        <http://identifiers.org/uniprot/F5H3N3>,
-	        <http://identifiers.org/uniprot/F5H6Y3>,
-	        <http://identifiers.org/uniprot/P00736> ;
-	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/C1R> .
-
-  Focus: http://identifiers.org/uniprot/P00736
-  Start: http://w3id.org/biolink/vocab/Protein
-  Reason:   Testing <http://identifiers.org/uniprot/P00736> against shape http://w3id.org/biolink/vocab/NamedThing
-    Datatype constraint (http://www.w3.org/2001/XMLSchema#string) does not match URIRef <http://identifiers.org/hgnc.symbol/C1R>
+	        <http://rdf.wikipathways.org/Pathway/WP2806_r97328/WP/Interaction/ide953068c_2> .
 
   Focus: http://identifiers.org/uniprot/P00736
   Start: http://w3id.org/biolink/vocab/GeneProduct
   Reason:   Testing <http://identifiers.org/uniprot/P00736> against shape http://w3id.org/biolink/vocab/NamedThing
-    Datatype constraint (http://www.w3.org/2001/XMLSchema#string) does not match URIRef <http://identifiers.org/hgnc.symbol/C1R>
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02745> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 1 triples
+    Node kind mismatch have: Literal expected: nonliteral
+
+  Focus: http://identifiers.org/uniprot/P00736
+  Start: http://w3id.org/biolink/vocab/Protein
+  Reason:   Testing <http://identifiers.org/uniprot/P00736> against shape http://w3id.org/biolink/vocab/NamedThing
+    Node kind mismatch have: Literal expected: nonliteral
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02745> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (1.88 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P02745> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02745> ?p ?o}}) (0.25 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02745> ?p ?o}}) (0.27 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P02745> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02746> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02746> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.28 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P02746> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02746> ?p ?o}}) (0.24 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02746> ?p ?o}}) (0.28 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P02746> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02747> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02747> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.28 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P02747> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02747> ?p ?o}}) (0.24 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P02747> ?p ?o}}) (0.28 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P02747> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P08637> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P08637> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.27 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P08637> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P08637> ?p ?o}}) (0.25 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P08637> ?p ?o}}) (0.29 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P08637> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P09871> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P09871> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.28 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P09871> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P09871> ?p ?o}}) (0.25 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P09871> ?p ?o}}) (0.28 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P09871> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P12314> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 3 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P12314> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.28 secs) - 4 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P12314> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P12314> ?p ?o}}) (0.25 secs) - 11 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P12314> ?p ?o}}) (0.28 secs) - 8 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P12314> a ns1:Protein ;
-	    ns1:id <http://identifiers.org/uniprot/P12314>,
-	        "P12314" ;
+	    ns2:identifier <http://identifiers.org/uniprot/P12314> ;
+	    ns1:id "http://identifiers.org/uniprot/P12314" ;
 	    ns1:name "FCGR1A" ;
-	    ns1:part_of <http://identifiers.org/wikipathways/WP1836_r101649> ;
-	    ns1:same_as <http://identifiers.org/ncbigene/2209>,
-	        <http://identifiers.org/uniprot/C9JSN8>,
-	        <http://identifiers.org/uniprot/P12314> ;
-	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/FCGR1A> .
+	    ns1:part_of <http://identifiers.org/wikipathways/WP1836_r101649> .
 
   Focus: http://identifiers.org/uniprot/P12314
   Start: http://w3id.org/biolink/vocab/Protein
   Reason:   Testing <http://identifiers.org/uniprot/P12314> against shape http://w3id.org/biolink/vocab/NamedThing
-    Triples:
-      <http://identifiers.org/uniprot/P12314> ns1:id <http://identifiers.org/uniprot/P12314> .
-      <http://identifiers.org/uniprot/P12314> ns1:id "P12314" .
-   2 triples exceeds max {0,1}
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P12318> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 1 triples
+    Node kind mismatch have: Literal expected: nonliteral
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P12318> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.27 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P12318> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P12318> ?p ?o}}) (0.25 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P12318> ?p ?o}}) (0.27 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P12318> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31994> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.26 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31994> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.28 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P31994> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31994> ?p ?o}}) (0.25 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31994> ?p ?o}}) (0.28 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P31994> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31995> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31995> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.27 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P31995> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31995> ?p ?o}}) (0.24 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31995> ?p ?o}}) (0.33 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P31995> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01589> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 2 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01589> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.41 secs) - 3 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P01589> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01589> ?p ?o}}) (0.25 secs) - 16 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01589> ?p ?o}}) (0.27 secs) - 12 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P01589> a ns1:Protein ;
-	    ns1:id <http://identifiers.org/uniprot/P01589> ;
+	    ns2:identifier <http://identifiers.org/uniprot/P01589> ;
+	    ns1:id "http://identifiers.org/uniprot/P01589" ;
 	    ns1:name "IL2RA" ;
 	    ns1:part_of <http://identifiers.org/wikipathways/WP1840_r101318>,
 	        <http://identifiers.org/wikipathways/WP2735_r101333>,
 	        <http://rdf.wikipathways.org/Pathway/WP1840_r101318/Complex/c1140>,
 	        <http://rdf.wikipathways.org/Pathway/WP1840_r101318/Complex/e86c7>,
 	        <http://rdf.wikipathways.org/Pathway/WP1840_r101318/Complex/ef234>,
-	        <http://rdf.wikipathways.org/Pathway/WP1840_r101318/Complex/fd52d> ;
-	    ns1:same_as <http://identifiers.org/ncbigene/3559>,
-	        <http://identifiers.org/uniprot/H0Y5Z0>,
-	        <http://identifiers.org/uniprot/P01589>,
-	        <http://identifiers.org/uniprot/Q5W005>,
-	        <http://identifiers.org/uniprot/Q5W006> ;
-	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/IL2RA> .
+	        <http://rdf.wikipathways.org/Pathway/WP1840_r101318/Complex/fd52d> .
 
   Focus: http://identifiers.org/uniprot/P01589
   Start: http://w3id.org/biolink/vocab/Protein
   Reason:   Testing <http://identifiers.org/uniprot/P01589> against shape http://w3id.org/biolink/vocab/NamedThing
-    Datatype constraint (http://www.w3.org/2001/XMLSchema#string) does not match URIRef <http://identifiers.org/hgnc.symbol/IL2RA>
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31785> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 2 triples
+    Node kind mismatch have: Literal expected: nonliteral
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31785> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.29 secs) - 3 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P31785> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31785> ?p ?o}}) (0.25 secs) - 37 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P31785> ?p ?o}}) (0.28 secs) - 31 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P31785> a ns1:Protein ;
-	    ns1:id <http://identifiers.org/uniprot/P31785> ;
+	    ns2:identifier <http://identifiers.org/uniprot/P31785> ;
+	    ns1:id "http://identifiers.org/uniprot/P31785" ;
 	    ns1:name "IL2RG",
 	        "p-Y-IL2RG" ;
 	    ns1:part_of <http://identifiers.org/wikipathways/WP1840_r101318>,
@@ -270,28 +231,20 @@ RESULTS:
 	        <http://rdf.wikipathways.org/Pathway/WP4066_r101615/Complex/cf260>,
 	        <http://rdf.wikipathways.org/Pathway/WP4066_r101615/Complex/f7a2c>,
 	        <http://rdf.wikipathways.org/Pathway/WP4066_r101615/Complex/f7cfe>,
-	        <http://rdf.wikipathways.org/Pathway/WP4066_r101615/WP/Interaction/b8102> ;
-	    ns1:same_as <http://identifiers.org/ncbigene/3561>,
-	        <http://identifiers.org/uniprot/D6R964>,
-	        <http://identifiers.org/uniprot/D6RBW5>,
-	        <http://identifiers.org/uniprot/D6RDW9>,
-	        <http://identifiers.org/uniprot/H0Y8J6>,
-	        <http://identifiers.org/uniprot/P31785>,
-	        <http://identifiers.org/uniprot/Q5FC10> ;
-	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/IL2RG> .
+	        <http://rdf.wikipathways.org/Pathway/WP4066_r101615/WP/Interaction/b8102> .
 
   Focus: http://identifiers.org/uniprot/P31785
   Start: http://w3id.org/biolink/vocab/Protein
   Reason:   Testing <http://identifiers.org/uniprot/P31785> against shape http://w3id.org/biolink/vocab/NamedThing
-    Datatype constraint (http://www.w3.org/2001/XMLSchema#string) does not match URIRef <http://identifiers.org/hgnc.symbol/IL2RG>
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01375> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 3 triples
+    Node kind mismatch have: Literal expected: nonliteral
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01375> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.27 secs) - 4 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P01375> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01375> ?p ?o}}) (0.25 secs) - 35 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01375> ?p ?o}}) (0.28 secs) - 32 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P01375> a ns1:Protein ;
-	    ns1:id <http://identifiers.org/uniprot/P01375>,
-	        "P01375" ;
+	    ns2:identifier <http://identifiers.org/uniprot/P01375> ;
+	    ns1:id "http://identifiers.org/uniprot/P01375" ;
 	    ns1:name "TNF(1-233)",
 	        "TNF(1-34)",
 	        "TNF(1-76)",
@@ -317,68 +270,52 @@ RESULTS:
 	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/e45be>,
 	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/f1a8a>,
 	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/Complex/f691c>,
-	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/WP/Interaction/ab12f> ;
-	    ns1:same_as <http://identifiers.org/ncbigene/7124>,
-	        <http://identifiers.org/uniprot/P01375>,
-	        <http://identifiers.org/uniprot/Q5STB3> ;
-	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/TNF> .
+	        <http://rdf.wikipathways.org/Pathway/WP3380_r101505/WP/Interaction/ab12f> .
 
   Focus: http://identifiers.org/uniprot/P01375
   Start: http://w3id.org/biolink/vocab/Protein
   Reason:   Testing <http://identifiers.org/uniprot/P01375> against shape http://w3id.org/biolink/vocab/NamedThing
-    Triples:
-      <http://identifiers.org/uniprot/P01375> ns1:id <http://identifiers.org/uniprot/P01375> .
-      <http://identifiers.org/uniprot/P01375> ns1:id "P01375" .
-   2 triples exceeds max {0,1}
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P20333> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 2 triples
+    Node kind mismatch have: Literal expected: nonliteral
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P20333> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.29 secs) - 3 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P20333> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P20333> ?p ?o}}) (0.25 secs) - 9 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P20333> ?p ?o}}) (0.29 secs) - 7 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P20333> a ns1:Protein ;
-	    ns1:id <http://identifiers.org/uniprot/P20333> ;
+	    ns2:identifier <http://identifiers.org/uniprot/P20333> ;
+	    ns1:id "http://identifiers.org/uniprot/P20333" ;
 	    ns1:name "TNFRSF1B" ;
-	    ns1:part_of <http://identifiers.org/wikipathways/WP4066_r101615> ;
-	    ns1:same_as <http://identifiers.org/ncbigene/7133>,
-	        <http://identifiers.org/uniprot/B5A977>,
-	        <http://identifiers.org/uniprot/P20333> ;
-	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/TNFRSF1B> .
+	    ns1:part_of <http://identifiers.org/wikipathways/WP4066_r101615> .
 
   Focus: http://identifiers.org/uniprot/P20333
   Start: http://w3id.org/biolink/vocab/Protein
   Reason:   Testing <http://identifiers.org/uniprot/P20333> against shape http://w3id.org/biolink/vocab/NamedThing
-    Datatype constraint (http://www.w3.org/2001/XMLSchema#string) does not match URIRef <http://identifiers.org/hgnc.symbol/TNFRSF1B>
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01374> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.27 secs) - 1 triples
+    Node kind mismatch have: Literal expected: nonliteral
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01374> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.29 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P01374> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01374> ?p ?o}}) (0.24 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P01374> ?p ?o}}) (0.29 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P01374> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P30968> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.25 secs) - 4 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P30968> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.28 secs) - 5 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P30968> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P30968> ?p ?o}}) (0.25 secs) - 12 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P30968> ?p ?o}}) (0.27 secs) - 10 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P30968> a ns1:Protein ;
-	    ns1:id <http://identifiers.org/uniprot/P30968>,
-	        "P30968" ;
+	    ns2:identifier <http://identifiers.org/uniprot/P30968> ;
+	    ns1:id "http://identifiers.org/uniprot/P30968" ;
 	    ns1:name "GNRHR" ;
 	    ns1:part_of <http://identifiers.org/wikipathways/WP4419_r101720>,
-	        <http://rdf.wikipathways.org/Pathway/WP4419_r101720/Complex/ee0f4> ;
-	    ns1:same_as <http://identifiers.org/ncbigene/2798>,
-	        <http://identifiers.org/uniprot/P30968> ;
-	    ns1:systematic_synonym <http://identifiers.org/hgnc.symbol/GNRHR> .
+	        <http://rdf.wikipathways.org/Pathway/WP4419_r101720/Complex/ee0f4> .
 
   Focus: http://identifiers.org/uniprot/P30968
   Start: http://w3id.org/biolink/vocab/Protein
   Reason:   Testing <http://identifiers.org/uniprot/P30968> against shape http://w3id.org/biolink/vocab/NamedThing
-    Triples:
-      <http://identifiers.org/uniprot/P30968> ns1:id <http://identifiers.org/uniprot/P30968> .
-      <http://identifiers.org/uniprot/P30968> ns1:id "P30968" .
-   2 triples exceeds max {0,1}
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P48551> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.24 secs) - 1 triples
+    Node kind mismatch have: Literal expected: nonliteral
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P48551> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o}}) (0.27 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P48551> a ns1:Protein .
-SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P48551> ?p ?o}}) (0.24 secs) - 1 triples
+SPARQL: (SELECT ?s ?p ?o {graph ?g {<http://identifiers.org/uniprot/P48551> ?p ?o}}) (0.28 secs) - 2 triples
 RESULTS:
 	<http://identifiers.org/uniprot/P48551> a ns1:Protein .

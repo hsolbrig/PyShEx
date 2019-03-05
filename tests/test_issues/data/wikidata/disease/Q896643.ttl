@@ -1,0 +1,140 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q896643 rdfs:label "Brachydaktylia",
+        "Brachydaktylie",
+        "Braquidactília",
+        "brachidattilia",
+        "brachydactylie",
+        "brachydactyly",
+        "braquidactilia",
+        "hammartumme",
+        "Брахидактилия",
+        "Брахидактилија",
+        "Брахідактилія",
+        "ברכידקטיליה",
+        "قصر الأصابع",
+        "短指症",
+        "단지증" ;
+    schema:dateModified "2019-03-04T23:01:57+00:00"^^xsd:dateTime ;
+    schema:description "Krankheit",
+        "bone development disease characterized by short fingers and toes",
+        "malformación genética" ;
+    schema:version 874507065 ;
+    ns2:identifiers 19 ;
+    ns2:sitelinks 17 ;
+    ns2:statements 28 ;
+    ns2:timestamp "2019-03-04T23:02:11+00:00"^^xsd:dateTime ;
+    skos:altLabel "Brachidactilia",
+        "Krótkopalczastość",
+        "Kurzfingrigkeit",
+        "brachydactyly",
+        "isolated brachydactyly",
+        "nonsyndromic brachydactyly",
+        "Краткопрстост",
+        "ברכידקטילי",
+        "الكزم",
+        "先天性第四蹠骨短小症",
+        "短趾症",
+        "짧은가락증" ;
+    p:P1550 <http://www.wikidata.org/entity/statement/Q896643-187CB364-0829-4E53-9D89-38A300FB35BF>,
+        <http://www.wikidata.org/entity/statement/Q896643-2A462309-2DE4-464A-AF91-3BEB22AACC8E>,
+        <http://www.wikidata.org/entity/statement/Q896643-2a7378bf-454e-7d2f-c4a1-5a8948056add> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q896643-73001F56-32A3-4329-9FE0-FEF23B90C1A2> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q896643-18fbc5f8-4125-d246-1e94-8fd64c441196>,
+        <http://www.wikidata.org/entity/statement/Q896643-D1AF7144-A09F-48C4-9F63-25713B78172A> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q896643-0FD24213-E275-4899-8561-FA796415B5E5>,
+        <http://www.wikidata.org/entity/statement/Q896643-19EECFC1-263A-47CE-8E30-4E70E86E83F3>,
+        <http://www.wikidata.org/entity/statement/Q896643-66EBC05E-17C0-43B4-ACAE-6802E195251E>,
+        <http://www.wikidata.org/entity/statement/Q896643-766BCD8F-4C97-446A-9408-F24C31C1B1E2> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q896643-4EB462D1-16A0-4A5D-BD5B-862132A57DF6>,
+        <http://www.wikidata.org/entity/statement/Q896643-68D22C78-81F9-4E99-B240-574F9F8B7D8D> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q896643-0F0DDB43-FD00-4DF9-948C-CEAD3BF25736> ;
+    p:P3827 <http://www.wikidata.org/entity/statement/Q896643-D854251D-76C6-4183-B69D-E03EC820E59A> ;
+    p:P3841 <http://www.wikidata.org/entity/statement/Q896643-B6923C8E-749F-4D47-9C26-EFB60A41B825> ;
+    p:P4317 <http://www.wikidata.org/entity/statement/Q896643-B4B0B769-7FA2-42CE-BA73-710FCB565AE4> ;
+    p:P486 <http://www.wikidata.org/entity/statement/Q896643-8A62F4B7-E4C2-4FC1-98AF-B0E91CCB9385> ;
+    p:P493 <http://www.wikidata.org/entity/statement/q896643-38313821-259B-46C1-BC49-3E04E3CE2FC9>,
+        <http://www.wikidata.org/entity/statement/q896643-89074457-67F7-4276-B3DF-36886A86C012>,
+        <http://www.wikidata.org/entity/statement/q896643-FE17423E-8693-44B5-A3D0-9ACCF8AD1EB3> ;
+    p:P494 <http://www.wikidata.org/entity/statement/q896643-25DD802A-E225-4E6B-A4D3-694D79188AE8> ;
+    p:P5270 <http://www.wikidata.org/entity/statement/Q896643-229C5670-42B4-4813-93E2-CFDECBBD5AF7> ;
+    p:P557 <http://www.wikidata.org/entity/statement/q896643-40E7764C-9056-4A1A-B99A-A57410456C24> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q896643-6BC6474E-EDC9-4E37-88C8-A932628CB203> ;
+    p:P667 <http://www.wikidata.org/entity/statement/Q896643-EC8FB522-A3FD-4FF9-BB2E-D87FA715D768> ;
+    p:P672 <http://www.wikidata.org/entity/statement/Q896643-01EC4317-E0DA-4533-9458-1E9B463F1059>,
+        <http://www.wikidata.org/entity/statement/Q896643-69CEAD25-713F-4616-AAED-0F14120BEEE7> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q896643-1BE1A4E4-AB40-40BB-836C-A7C9BB0FD773> ;
+    ns1:P486 <http://id.nlm.nih.gov/mesh/D059327> ;
+    ns1:P646 <http://g.co/kg/m/0mdcl> ;
+    ns1:P672 <https://id.nlm.nih.gov/mesh/C05.660.585.262>,
+        <https://id.nlm.nih.gov/mesh/C16.131.621.585.262> ;
+    wdt:P1550 "294937",
+        "69028" ;
+    wdt:P1995 wd:Q1071953 ;
+    wdt:P279 wd:Q1269307,
+        wd:Q54943715 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:0050581>,
+        <http://purl.obolibrary.org/obo/DOID_0050581>,
+        <http://purl.obolibrary.org/obo/HP_0001156>,
+        <http://www.orpha.net/ORDO/Orphanet_294937> ;
+    wdt:P2892 "C0221357" ;
+    wdt:P31 wd:Q12136 ;
+    wdt:P3827 "brachydactyly" ;
+    wdt:P3841 "HP:0001156" ;
+    wdt:P4317 "11913" ;
+    wdt:P486 "D059327" ;
+    wdt:P493 "755.2",
+        "755.3",
+        "755.4" ;
+    wdt:P494 "Q68.1" ;
+    wdt:P5270 "MONDO:0017424" ;
+    wdt:P557 "29782" ;
+    wdt:P646 "/m/0mdcl" ;
+    wdt:P667 "L82" ;
+    wdt:P672 "C05.660.585.262",
+        "C16.131.621.585.262" ;
+    wdt:P699 "DOID:0050581" .
+
+<http://www.wikidata.org/entity/statement/Q896643-0F0DDB43-FD00-4DF9-948C-CEAD3BF25736> prov:wasDerivedFrom <http://www.wikidata.org/reference/3e9b22c37a28ff8bcfe7e395e59f3420eef96d86> ;
+    ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/entity/statement/Q896643-18fbc5f8-4125-d246-1e94-8fd64c441196> ps:P279 wd:Q54943715 .
+
+<http://www.wikidata.org/entity/statement/Q896643-1BE1A4E4-AB40-40BB-836C-A7C9BB0FD773> prov:wasDerivedFrom <http://www.wikidata.org/reference/3e9b22c37a28ff8bcfe7e395e59f3420eef96d86> ;
+    ps:P699 "DOID:0050581" .
+
+<http://www.wikidata.org/entity/statement/Q896643-2a7378bf-454e-7d2f-c4a1-5a8948056add> ps:P1550 "69028" .
+
+<http://www.wikidata.org/entity/statement/Q896643-8A62F4B7-E4C2-4FC1-98AF-B0E91CCB9385> prov:wasDerivedFrom <http://www.wikidata.org/reference/30254309a9c7ad97490c0750a95f4cc98b364d3b> ;
+    ps:P486 "D059327" .
+
+<http://www.wikidata.org/entity/statement/Q896643-D1AF7144-A09F-48C4-9F63-25713B78172A> prov:wasDerivedFrom <http://www.wikidata.org/reference/3e9b22c37a28ff8bcfe7e395e59f3420eef96d86> ;
+    ps:P279 wd:Q1269307 .
+
+<http://www.wikidata.org/entity/statement/q896643-38313821-259B-46C1-BC49-3E04E3CE2FC9> prov:wasDerivedFrom <http://www.wikidata.org/reference/fa278ebfc458360e5aed63d5058cca83c46134f1> ;
+    ps:P493 "755.3" .
+
+<http://www.wikidata.org/entity/statement/q896643-89074457-67F7-4276-B3DF-36886A86C012> prov:wasDerivedFrom <http://www.wikidata.org/reference/fa278ebfc458360e5aed63d5058cca83c46134f1> ;
+    ps:P493 "755.2" .
+
+<http://www.wikidata.org/entity/statement/q896643-FE17423E-8693-44B5-A3D0-9ACCF8AD1EB3> prov:wasDerivedFrom <http://www.wikidata.org/reference/fa278ebfc458360e5aed63d5058cca83c46134f1> ;
+    ps:P493 "755.4" .
+

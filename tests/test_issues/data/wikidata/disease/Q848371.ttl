@@ -1,0 +1,131 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q848371 rdfs:label "Lichen planus",
+        "Lichen ruber planus",
+        "Liszaj płaski",
+        "Plakanā mezgliņēde",
+        "Punajäkälä",
+        "lichen plan",
+        "lichen planus",
+        "licher ruber",
+        "liquen pla",
+        "liquen plano",
+        "líquen plano",
+        "Кызыл жалпак чакалай",
+        "Плоский лишай",
+        "ילפת שטוחה",
+        "حزاز مسطح",
+        "لیکن پلان",
+        "لیکێن پلانوس",
+        "扁平苔癬",
+        "扁平苔藓" ;
+    schema:dateModified "2019-03-05T02:57:33+00:00"^^xsd:dateTime ;
+    schema:description "Krankheit",
+        "enfermedad inflamatoria poco común que afecta la piel y la mucosa oral",
+        "lichen disease that is located in skin, located in tongue or located in oral mucosa, which presents itself in the form of papules, lesions or rashes",
+        "lichen planus",
+        "maladie inflammatoire touchant la peau, la muqueuse de la bouche, ou parfois les deux",
+        "ילפת שטוחה",
+        "بیماری پوستی" ;
+    schema:version 874629648 ;
+    ns2:identifiers 19 ;
+    ns2:sitelinks 22 ;
+    ns2:statements 30 ;
+    ns2:timestamp "2019-03-05T02:57:34+00:00"^^xsd:dateTime ;
+    skos:altLabel "Flache Knötchenflechte",
+        "Knötchenflechte",
+        "Lichen",
+        "Lichen Planus",
+        "Lichen planus",
+        "Lichen planus (disorder)",
+        "Lichen planus NOS (disorder)",
+        "Lichen ruber planus",
+        "Lichen, ruber planus",
+        "Lichens plan",
+        "Liszaj czerwony",
+        "Lupus erythematosus–lichen planus overlap syndrome",
+        "Peno-gingival syndrome",
+        "lichen ruber planus",
+        "ruber planus",
+        "Червоний плоский лишай" ;
+    p:P1417 <http://www.wikidata.org/entity/statement/Q848371-4648099C-DB86-4A54-8C7E-718FA1D352EE> ;
+    p:P1461 <http://www.wikidata.org/entity/statement/Q848371-7DFD046B-902F-4FE2-A0B8-D9C3ED769DFD> ;
+    p:P1550 <http://www.wikidata.org/entity/statement/Q848371-B35145BA-2EF8-4CB7-83C7-E3CACC9E9311> ;
+    p:P1692 <http://www.wikidata.org/entity/statement/Q848371-8A3E2DC0-BFAB-4589-AA09-32178DA8CDD4> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q848371-6607D01F-8F80-4B40-9D52-FD2CC692C892>,
+        <http://www.wikidata.org/entity/statement/Q848371-7E835C0A-064C-4845-9724-7450DE87A1AB> ;
+    p:P18 <http://www.wikidata.org/entity/statement/Q848371-E941D3AC-E390-4F9D-A182-AFAA0A27C1D5> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q848371-4C91285A-FB73-4EE4-BEB5-052F540905D6> ;
+    p:P2176 <http://www.wikidata.org/entity/statement/Q848371-45B3C829-1CA0-4605-A25B-2B4B7E526EC9> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q848371-431C709A-BB67-4A6E-B457-060993151C88>,
+        <http://www.wikidata.org/entity/statement/Q848371-8C36E683-7FAC-49B1-B834-CB47B7C9C86C> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q848371-41E2B8FA-F367-48A9-B0BD-DECFCE25BF7B>,
+        <http://www.wikidata.org/entity/statement/Q848371-B04FC526-A5A3-4F8F-8E5E-2EDE81CE3729> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q848371-0BDB5750-0D66-4116-BC57-6EEB18EBC6BF> ;
+    p:P3471 <http://www.wikidata.org/entity/statement/Q848371-3C935F9A-C3C8-4A3D-BBBD-6BA2E332C910> ;
+    p:P373 <http://www.wikidata.org/entity/statement/q848371-1C65FAA3-0B55-4B87-9890-893EA1D9DA3D> ;
+    p:P3827 <http://www.wikidata.org/entity/statement/Q848371-F14C0B81-3668-484E-8086-DE9362D082F0> ;
+    p:P4229 <http://www.wikidata.org/entity/statement/Q848371-9345B97A-5236-46CF-A681-EE2610FD8ABB>,
+        <http://www.wikidata.org/entity/statement/Q848371-A4DC4411-5821-4D01-AD3B-B44522631AC2> ;
+    p:P4317 <http://www.wikidata.org/entity/statement/Q848371-B7061588-E4A2-40C5-AB54-753A750B5E14> ;
+    p:P486 <http://www.wikidata.org/entity/statement/Q848371-650ED250-61FF-4430-91F2-A33D6122F066>,
+        <http://www.wikidata.org/entity/statement/Q848371-9EBECBDF-5CFE-4F3E-80A6-48364512B924> ;
+    p:P5270 <http://www.wikidata.org/entity/statement/Q848371-E6B8FD4D-AA26-46E8-AFFB-B850B31CFBD0> ;
+    p:P557 <http://www.wikidata.org/entity/statement/q848371-471F6363-B8B6-45EC-9402-D41FB3A77BC2> ;
+    p:P604 <http://www.wikidata.org/entity/statement/q848371-89785E9E-4F2B-4AEF-B190-2D2F7BA62063> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q848371-4ACCF712-8778-406B-9D73-2077785B1C39> ;
+    p:P672 <http://www.wikidata.org/entity/statement/Q848371-09F5A1D3-90B7-4C16-873C-4E9C1E4DF610> ;
+    p:P673 <http://www.wikidata.org/entity/statement/q848371-EFF10D66-A6E4-4019-8C9A-CF52A540C004> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q848371-1BE98BB1-F80B-4C6A-8592-924F7B9F3D41>,
+        <http://www.wikidata.org/entity/statement/Q848371-B012A4BD-3E63-47D0-8E97-ED731AE69E02> ;
+    ns1:P486 <http://id.nlm.nih.gov/mesh/D008010> ;
+    ns1:P646 <http://g.co/kg/m/03nfsv> ;
+    ns1:P672 <https://id.nlm.nih.gov/mesh/C17.800.859.475.560> ;
+    wdt:P1417 "science/lichen-planus" ;
+    wdt:P1461 "lichen-planus-pro" ;
+    wdt:P1550 "254367" ;
+    wdt:P1692 "697.0" ;
+    wdt:P1748 "C3189" ;
+    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Lichen%20planus%20lip.jpg> ;
+    wdt:P1995 wd:Q171171 ;
+    wdt:P2176 wd:Q411648 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:9201>,
+        <http://purl.obolibrary.org/obo/DOID_9201> ;
+    wdt:P2892 "C0023646" ;
+    wdt:P31 wd:Q12136 ;
+    wdt:P3471 "10342" ;
+    wdt:P373 "Lichen planus" ;
+    wdt:P3827 "lichen-planus" ;
+    wdt:P4229 "L43",
+        "L43.9" ;
+    wdt:P4317 "12344" ;
+    wdt:P486 "D008010" ;
+    wdt:P5270 "MONDO:0006572" ;
+    wdt:P557 "7452" ;
+    wdt:P604 "000867" ;
+    wdt:P646 "/m/03nfsv" ;
+    wdt:P672 "C17.800.859.475.560" ;
+    wdt:P673 "1123213" ;
+    wdt:P699 "DOID:9201" .
+
+<http://www.wikidata.org/entity/statement/Q848371-0BDB5750-0D66-4116-BC57-6EEB18EBC6BF> prov:wasDerivedFrom <http://www.wikidata.org/reference/9d398d3e77fa2e689497c9e654e838b473eec325> ;
+    ps:P31 wd:Q12136 .
+
