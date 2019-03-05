@@ -38,6 +38,7 @@ This package is a reasonably literal implementation of the [Shape Expressions La
 * 0.7.3 -- Report using namespaces, enhance PrefixLib to inject into a module
 * 0.7.4 -- Added '-ps', '-pr', '-gn', '-pb' options to CLI
 * 0.7.5 -- Fix CLOSED issue in evaluate call (issue 41)
+* 0.7.6 -- bump version due to build error
 
 ## Installation
 ```bash
