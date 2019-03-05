@@ -1,0 +1,144 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q829150 rdfs:label "Choroba Andersen",
+        "Morbus Andersen",
+        "enfermedad de Andersen",
+        "glycogen storage disease IV",
+        "glycogénose type 4",
+        "malaltia d'Andersen",
+        "malattia da deposito di glicogeno, tipo 4",
+        "Болезнь Андерсена",
+        "Хвороба Андерсен",
+        "گلیکوژنوز نوع چهار" ;
+    schema:dateModified "2019-03-05T00:15:35+00:00"^^xsd:dateTime ;
+    schema:description "Krankheit",
+        "human disease",
+        "malattia genetica",
+        "مرض يصيب الإنسان" ;
+    schema:version 874547910 ;
+    ns1:identifiers 15 ;
+    ns1:sitelinks 10 ;
+    ns1:statements 27 ;
+    ns1:timestamp "2019-03-05T00:29:53+00:00"^^xsd:dateTime ;
+    skos:altLabel "Amylopectinosis",
+        "Amylopektinose",
+        "Amylopektynoza",
+        "Andersen-Glykogenose",
+        "Andersen-Krankheit",
+        "Andersen-Syndrom",
+        "Branching-transferase deficiency glycogenosis",
+        "Branching-transferase deficiency glycogenosis (disorder)",
+        "Choroba Andersena",
+        "GSD IV",
+        "Glikogenoza typu IV",
+        "Glycogen storage disease, type IV",
+        "Glycogen storage disease, type IV (disorder)",
+        "Glykogenose Typ IV",
+        "Maladie d'Andersen",
+        "brancher deficiency glycogenosis",
+        "deficiency of 1,4-alpha-glucan branching enzyme",
+        "glucogenosis tipo IV" ;
+    p:P1296 <http://www.wikidata.org/entity/statement/Q829150-50D2AD96-BAD7-4D45-96C8-F9D0ED702B41> ;
+    p:P138 <http://www.wikidata.org/entity/statement/Q829150-aba050da-44c4-fdd1-88aa-d9b9099d12a1> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q829150-6BEDEEA2-965C-4A79-83C2-729E96F84C65> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q829150-1a827b69-4c22-04ad-e908-40786b57e550>,
+        <http://www.wikidata.org/entity/statement/Q829150-3957A94E-0516-40A1-A780-18FC2AAF08FA>,
+        <http://www.wikidata.org/entity/statement/Q829150-543dc381-4a71-1620-9634-3979d5d8d979> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q829150-e3b57fa5-4886-0d48-e0a5-87386150dbc8> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q829150-E638C36B-97DC-4733-B1F2-30B2A8D1368C>,
+        <http://www.wikidata.org/entity/statement/Q829150-E8352FEC-166C-4CB5-9769-7A3C4A23A408> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q829150-5CCCA495-07DC-476C-BFC3-5E7D664CFDDB> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q829150-8C9E68BF-65C9-4B03-A681-984316224CA9> ;
+    p:P3219 <http://www.wikidata.org/entity/statement/Q829150-B073BF44-9D0C-420E-A915-1459E41EEDB0> ;
+    p:P3720 <http://www.wikidata.org/entity/statement/Q829150-3F59DEE4-C502-4DE6-A5FD-5B758E35A734> ;
+    p:P373 <http://www.wikidata.org/entity/statement/Q829150-8bf0d681-44c9-532a-ce12-d0b68d1be239> ;
+    p:P4229 <http://www.wikidata.org/entity/statement/Q829150-CAC26E05-EDCB-41CB-A998-242C39881E25> ;
+    p:P4317 <http://www.wikidata.org/entity/statement/Q829150-B36F139A-FC51-4D83-A529-FA71284200EE> ;
+    p:P486 <http://www.wikidata.org/entity/statement/Q829150-C450EDCE-9F93-4DE2-9D69-DD4E30DF825D> ;
+    p:P492 <http://www.wikidata.org/entity/statement/q829150-729E25E0-3FB9-4335-9405-D59B3F5B8A11> ;
+    p:P493 <http://www.wikidata.org/entity/statement/q829150-2E511164-6FA3-4C9E-B634-9DD5E56E4E72> ;
+    p:P557 <http://www.wikidata.org/entity/statement/q829150-2AF91C9C-DC2C-4849-9974-AF15486B6440> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q829150-2EE842E7-E618-40D7-A76D-86A86518FABC> ;
+    p:P667 <http://www.wikidata.org/entity/statement/Q829150-B48A704A-45D9-4606-BB9B-ADCAE461B340> ;
+    p:P672 <http://www.wikidata.org/entity/statement/Q829150-97CA9910-96F6-47FB-815A-52121D29CEF3>,
+        <http://www.wikidata.org/entity/statement/Q829150-BE4977B0-9376-44AE-B506-7B33233BACD9> ;
+    p:P673 <http://www.wikidata.org/entity/statement/q829150-1B679C17-811D-4168-8E04-248B711693F1> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q829150-A11DCBC4-7C9F-4316-980D-699FC037394E> ;
+    p:P828 <http://www.wikidata.org/entity/statement/Q829150-3fb429ef-44cd-5c9d-0dc7-ee1e5e230ec3> ;
+    ns2:P486 <http://id.nlm.nih.gov/mesh/D006011> ;
+    ns2:P646 <http://g.co/kg/m/08h3t_> ;
+    ns2:P672 <https://id.nlm.nih.gov/mesh/C16.320.565.202.449.540>,
+        <https://id.nlm.nih.gov/mesh/C18.452.648.202.449.540> ;
+    wdt:P1296 "0247152" ;
+    wdt:P138 wd:Q469231 ;
+    wdt:P1748 "C84737" ;
+    wdt:P1995 wd:Q1071953,
+        wd:Q162606,
+        wd:Q668064 ;
+    wdt:P279 wd:Q1421738 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:2750>,
+        <http://purl.obolibrary.org/obo/DOID_2750> ;
+    wdt:P2892 "C0017923" ;
+    wdt:P31 wd:Q12136 ;
+    wdt:P3219 "maladie-d-andersen" ;
+    wdt:P3720 "697958448" ;
+    wdt:P373 "Glycogen storage disease type IV" ;
+    wdt:P4229 "E74.09" ;
+    wdt:P4317 "2520" ;
+    wdt:P486 "D006011" ;
+    wdt:P492 "232500" ;
+    wdt:P493 "271.0" ;
+    wdt:P557 "5303" ;
+    wdt:P646 "/m/08h3t_" ;
+    wdt:P667 "T99" ;
+    wdt:P672 "C16.320.565.202.449.540",
+        "C18.452.648.202.449.540" ;
+    wdt:P673 "941632" ;
+    wdt:P699 "DOID:2750" ;
+    wdt:P828 wd:Q42918 .
+
+<http://www.wikidata.org/entity/statement/Q829150-5CCCA495-07DC-476C-BFC3-5E7D664CFDDB> prov:wasDerivedFrom <http://www.wikidata.org/reference/3602037d0792b65f25a17eedab83ef2e3330664f> ;
+    ps:P2892 "C0017923" .
+
+<http://www.wikidata.org/entity/statement/Q829150-6BEDEEA2-965C-4A79-83C2-729E96F84C65> prov:wasDerivedFrom <http://www.wikidata.org/reference/3602037d0792b65f25a17eedab83ef2e3330664f> ;
+    ps:P1748 "C84737" .
+
+<http://www.wikidata.org/entity/statement/Q829150-8C9E68BF-65C9-4B03-A681-984316224CA9> prov:wasDerivedFrom <http://www.wikidata.org/reference/dd9a62c043aace390ef55e03b1e703b4812f3c54> ;
+    ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/entity/statement/Q829150-A11DCBC4-7C9F-4316-980D-699FC037394E> prov:wasDerivedFrom <http://www.wikidata.org/reference/3602037d0792b65f25a17eedab83ef2e3330664f> ;
+    ps:P699 "DOID:2750" .
+
+<http://www.wikidata.org/entity/statement/Q829150-C450EDCE-9F93-4DE2-9D69-DD4E30DF825D> prov:wasDerivedFrom <http://www.wikidata.org/reference/3602037d0792b65f25a17eedab83ef2e3330664f> ;
+    ps:P486 "D006011" .
+
+<http://www.wikidata.org/entity/statement/Q829150-CAC26E05-EDCB-41CB-A998-242C39881E25> prov:wasDerivedFrom <http://www.wikidata.org/reference/3602037d0792b65f25a17eedab83ef2e3330664f> ;
+    ps:P4229 "E74.09" .
+
+<http://www.wikidata.org/entity/statement/Q829150-e3b57fa5-4886-0d48-e0a5-87386150dbc8> prov:wasDerivedFrom <http://www.wikidata.org/reference/dd9a62c043aace390ef55e03b1e703b4812f3c54> ;
+    ps:P279 wd:Q1421738 .
+
+<http://www.wikidata.org/entity/statement/q829150-2E511164-6FA3-4C9E-B634-9DD5E56E4E72> prov:wasDerivedFrom <http://www.wikidata.org/reference/fa278ebfc458360e5aed63d5058cca83c46134f1> ;
+    ps:P493 "271.0" .
+
+<http://www.wikidata.org/entity/statement/q829150-729E25E0-3FB9-4335-9405-D59B3F5B8A11> prov:wasDerivedFrom <http://www.wikidata.org/reference/3602037d0792b65f25a17eedab83ef2e3330664f> ;
+    ps:P492 "232500" .
+

@@ -1,0 +1,174 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q842169 rdfs:label "Sparganose",
+        "esparganosis",
+        "sparganose",
+        "sparganosis",
+        "Спарганоз",
+        "داء المكفنات",
+        "孤虫症",
+        "裂頭絛蟲症",
+        "스파르가눔증" ;
+    schema:dateModified "2019-03-05T01:48:22+00:00"^^xsd:dateTime ;
+    schema:description "Helminthiasis",
+        "Parasitose durch das Sparganum von Spirometra erinaceieuropaei",
+        "parasitose",
+        "гельмінтоз з групи цестодозів" ;
+    schema:version 874597649 ;
+    ns2:identifiers 13 ;
+    ns2:sitelinks 8 ;
+    ns2:statements 36 ;
+    ns2:timestamp "2019-03-05T01:48:24+00:00"^^xsd:dateTime ;
+    skos:altLabel "Infection by Sparganum",
+        "Sparganosis",
+        "Sparganosis [larval diphyllobothriasis]",
+        "스파르가눔" ;
+    p:P1060 <http://www.wikidata.org/entity/statement/Q842169-85773d0b-47e2-906e-9287-4f5d50886589>,
+        <http://www.wikidata.org/entity/statement/Q842169-facb8db0-4508-b146-984c-bd500f128503> ;
+    p:P1417 <http://www.wikidata.org/entity/statement/Q842169-5250465C-B79E-46BA-A6C3-F46B682D7131> ;
+    p:P1692 <http://www.wikidata.org/entity/statement/Q842169-FEDAA431-BBAA-4F40-80F0-6B5C9F84C87A> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q842169-056B23F0-5505-4EC0-87B2-5F477AAD8763>,
+        <http://www.wikidata.org/entity/statement/Q842169-B2CBB222-0BFF-4057-8C9F-56C9DDA19582> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q842169-95BF9ED4-E110-4190-9EF8-4D8BDB0E2DAC> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q842169-01BF910E-B192-4CE0-A2A5-6EE410187B9E>,
+        <http://www.wikidata.org/entity/statement/Q842169-179EA7E9-3EC8-40E6-B191-C398E3E54AC2>,
+        <http://www.wikidata.org/entity/statement/Q842169-2EBAD511-F0E1-4E86-8DDA-8F751AAC79E9>,
+        <http://www.wikidata.org/entity/statement/Q842169-6F9304CD-0744-4522-BB53-E1E125EDACB7>,
+        <http://www.wikidata.org/entity/statement/Q842169-7711c1c9-44e1-a00a-1d45-026f08de7d0e>,
+        <http://www.wikidata.org/entity/statement/Q842169-930A0100-EA29-4DAD-903A-35E9761974CA>,
+        <http://www.wikidata.org/entity/statement/Q842169-cfde7332-4399-6a56-96f0-f129cd325972> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q842169-EC399A82-1DED-49D1-B72F-3CBD1DDA2CD8>,
+        <http://www.wikidata.org/entity/statement/Q842169-F158004C-13D0-4AB6-82D8-36F568E6FB42> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q842169-4649C5F7-97FA-4676-B7A3-6C80D318C101>,
+        <http://www.wikidata.org/entity/statement/Q842169-DF8F8A54-4A03-418C-9E34-BA0F315F77D0> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q842169-B9540076-F310-4EAD-B680-22E0160EF6A3>,
+        <http://www.wikidata.org/entity/statement/Q842169-DE329577-9AFD-458A-AF04-229A72BE75C3>,
+        <http://www.wikidata.org/entity/statement/Q842169-E23CA109-FB6C-4B3F-AAF3-72378DF03FB3> ;
+    p:P3827 <http://www.wikidata.org/entity/statement/Q842169-D322DBDC-2F2B-4176-9D43-031918443160> ;
+    p:P4229 <http://www.wikidata.org/entity/statement/Q842169-40BDD4F2-A0F5-46B1-8999-A46F2D403C6E> ;
+    p:P486 <http://www.wikidata.org/entity/statement/Q842169-0D455210-51EB-4E42-83E1-601A8C4F5D76>,
+        <http://www.wikidata.org/entity/statement/Q842169-10B51329-693E-44FF-85AE-0A355E15FD96> ;
+    p:P5270 <http://www.wikidata.org/entity/statement/Q842169-9E7983EE-5EA4-4521-8DEF-8937076FBD31> ;
+    p:P557 <http://www.wikidata.org/entity/statement/q842169-D031C5AE-9255-4AB5-87BD-57660EAB4BF4> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q842169-2DC77259-7425-4C75-BD75-8B61B7B4BE77> ;
+    p:P672 <http://www.wikidata.org/entity/statement/Q842169-222BE5F6-03C9-4CE9-BF0D-FB91D3FB0723> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q842169-BE830647-FF8A-4603-B981-BFE0CF1750D6>,
+        <http://www.wikidata.org/entity/statement/Q842169-F1CEB65B-2A82-4764-B57C-E295AE9B44BE> ;
+    p:P828 <http://www.wikidata.org/entity/statement/Q842169-7e8721dd-4899-448b-aaa7-33cf05295c14>,
+        <http://www.wikidata.org/entity/statement/Q842169-86f25c97-4187-6801-d4a5-c3d0ba104efe>,
+        <http://www.wikidata.org/entity/statement/Q842169-908683ca-452f-b53a-1367-6d2fdd158742> ;
+    p:P924 <http://www.wikidata.org/entity/statement/Q842169-73d8b202-4827-37b0-5d8f-faa869e2c622>,
+        <http://www.wikidata.org/entity/statement/Q842169-7429456c-4f90-e863-6f12-b7524d0ef4eb> ;
+    ns1:P486 <http://id.nlm.nih.gov/mesh/D013031> ;
+    ns1:P646 <http://g.co/kg/m/05c5zh8> ;
+    ns1:P672 <https://id.nlm.nih.gov/mesh/C03.335.190.304.780> ;
+    wdt:P1060 wd:Q15304512,
+        wd:Q2272069 ;
+    wdt:P1417 "science/sparganosis" ;
+    wdt:P1692 "123.5" ;
+    wdt:P1748 "C35030" ;
+    wdt:P1995 wd:Q788926 ;
+    wdt:P279 wd:Q182672,
+        wd:Q18555242,
+        wd:Q3392853,
+        wd:Q4505372,
+        wd:Q4959796,
+        wd:Q578994,
+        wd:Q7900883 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:10080>,
+        <http://purl.obolibrary.org/obo/DOID_10080> ;
+    wdt:P2892 "C0037753" ;
+    wdt:P31 wd:Q12136,
+        wd:Q18123741,
+        wd:Q2084422 ;
+    wdt:P3827 "sparganosis" ;
+    wdt:P4229 "B70.1" ;
+    wdt:P486 "D013031" ;
+    wdt:P5270 "MONDO:0005963" ;
+    wdt:P557 "32210" ;
+    wdt:P646 "/m/05c5zh8" ;
+    wdt:P672 "C03.335.190.304.780" ;
+    wdt:P699 "DOID:10080" ;
+    wdt:P828 wd:Q141837,
+        wd:Q166231,
+        wd:Q2307189 ;
+    wdt:P924 wd:Q424145,
+        wd:Q600236 .
+
+<http://www.wikidata.org/entity/statement/Q842169-01BF910E-B192-4CE0-A2A5-6EE410187B9E> prov:wasDerivedFrom <http://www.wikidata.org/reference/8ad3ff36b42af0765d7384059df65763796461ea> ;
+    ps:P279 wd:Q3392853 .
+
+<http://www.wikidata.org/entity/statement/Q842169-056B23F0-5505-4EC0-87B2-5F477AAD8763> prov:wasDerivedFrom <http://www.wikidata.org/reference/8ad3ff36b42af0765d7384059df65763796461ea> ;
+    ps:P1748 "C35030" .
+
+<http://www.wikidata.org/entity/statement/Q842169-0D455210-51EB-4E42-83E1-601A8C4F5D76> prov:wasDerivedFrom <http://www.wikidata.org/reference/8ad3ff36b42af0765d7384059df65763796461ea> ;
+    ps:P486 "D013031" .
+
+<http://www.wikidata.org/entity/statement/Q842169-10B51329-693E-44FF-85AE-0A355E15FD96> prov:wasDerivedFrom <http://www.wikidata.org/reference/50639a0efd9aaf18ad00d26d95d89e6f60400fb2>,
+        <http://www.wikidata.org/reference/afaed60e5dc47a37c7e8156e2151ca609d842ae1> ;
+    pq:P4390 wd:Q39893449 ;
+    ps:P486 "D013031" .
+
+<http://www.wikidata.org/entity/statement/Q842169-179EA7E9-3EC8-40E6-B191-C398E3E54AC2> prov:wasDerivedFrom <http://www.wikidata.org/reference/8ad3ff36b42af0765d7384059df65763796461ea> ;
+    ps:P279 wd:Q4959796 .
+
+<http://www.wikidata.org/entity/statement/Q842169-2EBAD511-F0E1-4E86-8DDA-8F751AAC79E9> prov:wasDerivedFrom <http://www.wikidata.org/reference/8ad3ff36b42af0765d7384059df65763796461ea> ;
+    ps:P279 wd:Q18555242 .
+
+<http://www.wikidata.org/entity/statement/Q842169-40BDD4F2-A0F5-46B1-8999-A46F2D403C6E> prov:wasDerivedFrom <http://www.wikidata.org/reference/8ad3ff36b42af0765d7384059df65763796461ea>,
+        <http://www.wikidata.org/reference/afaed60e5dc47a37c7e8156e2151ca609d842ae1> ;
+    ps:P4229 "B70.1" .
+
+<http://www.wikidata.org/entity/statement/Q842169-4649C5F7-97FA-4676-B7A3-6C80D318C101> prov:wasDerivedFrom <http://www.wikidata.org/reference/8ad3ff36b42af0765d7384059df65763796461ea> ;
+    ps:P2892 "C0037753" .
+
+<http://www.wikidata.org/entity/statement/Q842169-6F9304CD-0744-4522-BB53-E1E125EDACB7> prov:wasDerivedFrom <http://www.wikidata.org/reference/8ad3ff36b42af0765d7384059df65763796461ea>,
+        <http://www.wikidata.org/reference/afaed60e5dc47a37c7e8156e2151ca609d842ae1> ;
+    ps:P279 wd:Q578994 .
+
+<http://www.wikidata.org/entity/statement/Q842169-7711c1c9-44e1-a00a-1d45-026f08de7d0e> ps:P279 wd:Q182672 .
+
+<http://www.wikidata.org/entity/statement/Q842169-930A0100-EA29-4DAD-903A-35E9761974CA> prov:wasDerivedFrom <http://www.wikidata.org/reference/8ad3ff36b42af0765d7384059df65763796461ea> ;
+    ps:P279 wd:Q7900883 .
+
+<http://www.wikidata.org/entity/statement/Q842169-B2CBB222-0BFF-4057-8C9F-56C9DDA19582> prov:wasDerivedFrom <http://www.wikidata.org/reference/50639a0efd9aaf18ad00d26d95d89e6f60400fb2>,
+        <http://www.wikidata.org/reference/afaed60e5dc47a37c7e8156e2151ca609d842ae1> ;
+    ps:P1748 "C35030" .
+
+<http://www.wikidata.org/entity/statement/Q842169-B9540076-F310-4EAD-B680-22E0160EF6A3> ps:P31 wd:Q2084422 .
+
+<http://www.wikidata.org/entity/statement/Q842169-BE830647-FF8A-4603-B981-BFE0CF1750D6> prov:wasDerivedFrom <http://www.wikidata.org/reference/50639a0efd9aaf18ad00d26d95d89e6f60400fb2>,
+        <http://www.wikidata.org/reference/afaed60e5dc47a37c7e8156e2151ca609d842ae1> ;
+    ps:P699 "DOID:10080" .
+
+<http://www.wikidata.org/entity/statement/Q842169-DE329577-9AFD-458A-AF04-229A72BE75C3> prov:wasDerivedFrom <http://www.wikidata.org/reference/8ad3ff36b42af0765d7384059df65763796461ea> ;
+    ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/entity/statement/Q842169-DF8F8A54-4A03-418C-9E34-BA0F315F77D0> prov:wasDerivedFrom <http://www.wikidata.org/reference/50639a0efd9aaf18ad00d26d95d89e6f60400fb2>,
+        <http://www.wikidata.org/reference/afaed60e5dc47a37c7e8156e2151ca609d842ae1> ;
+    ps:P2892 "C0037753" .
+
+<http://www.wikidata.org/entity/statement/Q842169-E23CA109-FB6C-4B3F-AAF3-72378DF03FB3> prov:wasDerivedFrom <http://www.wikidata.org/reference/afaed60e5dc47a37c7e8156e2151ca609d842ae1> ;
+    ps:P31 wd:Q18123741 .
+
+<http://www.wikidata.org/entity/statement/Q842169-F1CEB65B-2A82-4764-B57C-E295AE9B44BE> prov:wasDerivedFrom <http://www.wikidata.org/reference/8ad3ff36b42af0765d7384059df65763796461ea> ;
+    ps:P699 "DOID:10080" .
+

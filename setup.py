@@ -8,7 +8,7 @@ if sys.version_info < (3, 6):
 
 setup(
     name='PyShEx',
-    version='0.7.4',
+    version='0.7.6',
     packages = find_packages(exclude=['tests']),
     url="http://github.com/hsolbrig/PyShEx",
     license='Apache 2.0',

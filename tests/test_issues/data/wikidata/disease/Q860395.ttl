@@ -1,0 +1,185 @@
+@prefix do: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix doio: <http://identifiers.org/doid/> .
+@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q860395 rdfs:label "Oistéamalaice",
+        "Osteomalacia",
+        "Osteomalacie",
+        "Osteomalacija",
+        "Osteomalacja",
+        "Osteomalasia",
+        "Osteomalazi",
+        "Osteomalazie",
+        "Osteomaliacija",
+        "Osteomalyacïya",
+        "benvävsuppmjukning",
+        "osteomalacia",
+        "osteomalacie",
+        "osteomalasi",
+        "osteomalazia",
+        "osteomalàcia",
+        "ostéomalacie",
+        "Остеомаляция",
+        "Остеомаляція",
+        "Ոսկրակակղանք",
+        "تلين العظام",
+        "نرم‌استخوانی",
+        "نەرمیی ئێسک",
+        "وستەومالياتسىييا",
+        "अस्थिमृदुता",
+        "軟骨病",
+        "骨軟化症",
+        "골연화증" ;
+    schema:dateModified "2019-03-05T01:50:23+00:00"^^xsd:dateTime ;
+    schema:description "Deskaltzifikazioa eta odoleko kaltzio- eta fosforo-kontzentrazioa gutxiagotzea ezaugarritzat dituen gaixotasuna. D bitamina hartuz sendatzen da",
+        "Krankheit",
+        "bone remodeling disease that has material basis in a vitamin D deficiency which results in softening located in bone",
+        "choroba" ;
+    schema:version 874598686 ;
+    ns1:identifiers 22 ;
+    ns1:sitelinks 30 ;
+    ns1:statements 35 ;
+    ns1:timestamp "2019-03-05T01:50:24+00:00"^^xsd:dateTime ;
+    skos:altLabel "Esmolecemento",
+        "Looser-Umbauzone",
+        "Looser-Zone",
+        "Osteomalaci",
+        "Osteomalacie",
+        "Osteomalácia",
+        "Raquitismo",
+        "osteomalacia",
+        "remolliment dels ossos",
+        "استئومالاسی",
+        "تلين العظم",
+        "لين العظام",
+        "لين العظم",
+        "لين عظام",
+        "نرم استخوانی",
+        "ओस्टीयोमलेशिया",
+        "뼈연화증" ;
+    p:P1343 <http://www.wikidata.org/entity/statement/Q860395-1AED107D-3F69-4160-8446-0FFF0C47C063> ;
+    p:P1417 <http://www.wikidata.org/entity/statement/Q860395-4DDB9724-0B3F-4329-AE52-DD2C53685FC8> ;
+    p:P1461 <http://www.wikidata.org/entity/statement/Q860395-D7FE3AC0-98C1-4F32-9D64-930480BE520D> ;
+    p:P1692 <http://www.wikidata.org/entity/statement/Q860395-604521EE-3521-41F3-95B9-95DBDF79BDE0> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q860395-3C0167EB-283E-4E32-BA3F-57AFB5992C88>,
+        <http://www.wikidata.org/entity/statement/Q860395-B6BA04B3-8E0C-4258-9EF6-FAF5120C9112> ;
+    p:P18 <http://www.wikidata.org/entity/statement/Q860395-e673dba9-46c5-9cc4-05a5-9da39ed5e9c5> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q860395-C43A8C2E-83DB-40CD-8AAF-3AC888173335> ;
+    p:P2176 <http://www.wikidata.org/entity/statement/Q860395-B27030D8-9F78-4A72-BBBE-986520D32FBB> ;
+    p:P279 <http://www.wikidata.org/entity/statement/Q860395-9FE199CE-6A82-4EC9-8B67-52C8A67BD66D> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q860395-55A79EA2-3890-491D-832F-C5D249F8565F>,
+        <http://www.wikidata.org/entity/statement/Q860395-56F9DC3D-0567-4B76-AA02-613418BAF225>,
+        <http://www.wikidata.org/entity/statement/Q860395-E4826842-3922-4E7D-B826-306E88EC2C58> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q860395-43CAB09C-8C77-41C7-B159-B3D96E6FE96B>,
+        <http://www.wikidata.org/entity/statement/Q860395-582BD7A3-2FA2-452D-8882-4C668851C997> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q860395-C2F5365F-9E86-4F9E-84D0-C72290A0EDDD> ;
+    p:P3827 <http://www.wikidata.org/entity/statement/Q860395-0807FD61-F31B-4BD7-95F5-D6883118C4B1> ;
+    p:P3841 <http://www.wikidata.org/entity/statement/Q860395-54018A2C-3A48-4092-A1DA-C141132966C5> ;
+    p:P4317 <http://www.wikidata.org/entity/statement/Q860395-95F31FD8-A3DE-43BD-A379-521329D76A65> ;
+    p:P4746 <http://www.wikidata.org/entity/statement/Q860395-1DFA94C5-2C7E-4EF7-9DEA-162E338BF9A3> ;
+    p:P486 <http://www.wikidata.org/entity/statement/Q860395-07067B20-E7F5-483D-881F-3DB6F7A51104>,
+        <http://www.wikidata.org/entity/statement/Q860395-765829B1-C844-43E4-9CE5-CE54F3EEB71C> ;
+    p:P494 <http://www.wikidata.org/entity/statement/q860395-709B572B-A1F5-4F5A-B397-DD0DD7CA048D> ;
+    p:P5270 <http://www.wikidata.org/entity/statement/Q860395-CAD48D1F-310A-483D-9F47-0EBC8F6239D6> ;
+    p:P557 <http://www.wikidata.org/entity/statement/q860395-450DA92C-0258-4427-8184-E57290C7BBE8> ;
+    p:P604 <http://www.wikidata.org/entity/statement/q860395-202FA641-8FA2-42A7-BBBC-532B75A07259> ;
+    p:P646 <http://www.wikidata.org/entity/statement/Q860395-6876B29A-8B0D-4734-9B7E-FD4B20653C6B> ;
+    p:P672 <http://www.wikidata.org/entity/statement/Q860395-13812C8F-9ACF-40B5-8FDB-B0A49F6B3FDF>,
+        <http://www.wikidata.org/entity/statement/Q860395-858CE025-EB69-46D0-B44E-87C193043FEB>,
+        <http://www.wikidata.org/entity/statement/Q860395-E7C6BCD3-482B-486B-B13C-AA9DB89E6936>,
+        <http://www.wikidata.org/entity/statement/Q860395-F00FB9B7-A39E-4DBC-91EF-7FFDEBE760CD> ;
+    p:P673 <http://www.wikidata.org/entity/statement/q860395-12E17F23-21EB-4475-9AA1-3F475CC30867>,
+        <http://www.wikidata.org/entity/statement/q860395-5A119865-218D-4E8C-9CFB-C13E8699535C> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q860395-93310DC8-F3F8-48A0-91CC-98CBF90147AF>,
+        <http://www.wikidata.org/entity/statement/Q860395-D5C66933-D510-4C6E-A74E-74813A1E90E6> ;
+    ns2:P486 <http://id.nlm.nih.gov/mesh/D010018> ;
+    ns2:P646 <http://g.co/kg/m/02npcz> ;
+    ns2:P672 <https://id.nlm.nih.gov/mesh/C05.116.198.816.640>,
+        <https://id.nlm.nih.gov/mesh/C18.452.104.816.640>,
+        <https://id.nlm.nih.gov/mesh/C18.452.174.845.640>,
+        <https://id.nlm.nih.gov/mesh/C18.654.521.500.133.770.734.640> ;
+    wdt:P1343 wd:Q2657718 ;
+    wdt:P1417 "science/osteomalacia" ;
+    wdt:P1461 "vitamin-d-deficiency-including-osteomalacia-and-rickets" ;
+    wdt:P1692 "268.2" ;
+    wdt:P1748 "C26838" ;
+    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Calcitriol.svg> ;
+    wdt:P1995 wd:Q327657 ;
+    wdt:P2176 wd:Q408283 ;
+    wdt:P279 wd:Q18553736 ;
+    wdt:P2888 <http://identifiers.org/doid/DOID:10573>,
+        <http://purl.obolibrary.org/obo/DOID_10573>,
+        <http://purl.obolibrary.org/obo/HP_0002749> ;
+    wdt:P2892 "C0029442" ;
+    wdt:P31 wd:Q12136 ;
+    wdt:P3827 "osteomalacia" ;
+    wdt:P3841 "HP:0002749" ;
+    wdt:P4317 "7285" ;
+    wdt:P4746 "029104" ;
+    wdt:P486 "D010018" ;
+    wdt:P494 "M83" ;
+    wdt:P5270 "MONDO:0001068" ;
+    wdt:P557 "9351" ;
+    wdt:P604 "000376" ;
+    wdt:P646 "/m/02npcz" ;
+    wdt:P672 "C05.116.198.816.640",
+        "C18.452.104.816.640",
+        "C18.452.174.845.640",
+        "C18.654.521.500.133.770.734.640" ;
+    wdt:P673 "412862",
+        "985510" ;
+    wdt:P699 "DOID:10573" .
+
+<http://www.wikidata.org/entity/statement/Q860395-07067B20-E7F5-483D-881F-3DB6F7A51104> prov:wasDerivedFrom <http://www.wikidata.org/reference/92726220408299323ce1795a132ed02fdb9bb1bc> ;
+    pq:P4390 wd:Q39893449 ;
+    ps:P486 "D010018" .
+
+<http://www.wikidata.org/entity/statement/Q860395-3C0167EB-283E-4E32-BA3F-57AFB5992C88> prov:wasDerivedFrom <http://www.wikidata.org/reference/3b364ecce8083915c428d671f9c0a89d66df667a>,
+        <http://www.wikidata.org/reference/92726220408299323ce1795a132ed02fdb9bb1bc> ;
+    ps:P1748 "C26838" .
+
+<http://www.wikidata.org/entity/statement/Q860395-43CAB09C-8C77-41C7-B159-B3D96E6FE96B> prov:wasDerivedFrom <http://www.wikidata.org/reference/3b364ecce8083915c428d671f9c0a89d66df667a>,
+        <http://www.wikidata.org/reference/92726220408299323ce1795a132ed02fdb9bb1bc> ;
+    ps:P2892 "C0029442" .
+
+<http://www.wikidata.org/entity/statement/Q860395-582BD7A3-2FA2-452D-8882-4C668851C997> prov:wasDerivedFrom <http://www.wikidata.org/reference/05900fe8bbe5dd5c93f059a482d96db9b632b67e>,
+        <http://www.wikidata.org/reference/d6cd35039e2b642b51ab02f8457c384c673026e9> ;
+    ps:P2892 "C0029442" .
+
+<http://www.wikidata.org/entity/statement/Q860395-765829B1-C844-43E4-9CE5-CE54F3EEB71C> prov:wasDerivedFrom <http://www.wikidata.org/reference/d6cd35039e2b642b51ab02f8457c384c673026e9> ;
+    ps:P486 "D010018" .
+
+<http://www.wikidata.org/entity/statement/Q860395-93310DC8-F3F8-48A0-91CC-98CBF90147AF> prov:wasDerivedFrom <http://www.wikidata.org/reference/d6cd35039e2b642b51ab02f8457c384c673026e9> ;
+    ps:P699 "DOID:10573" .
+
+<http://www.wikidata.org/entity/statement/Q860395-9FE199CE-6A82-4EC9-8B67-52C8A67BD66D> prov:wasDerivedFrom <http://www.wikidata.org/reference/92726220408299323ce1795a132ed02fdb9bb1bc>,
+        <http://www.wikidata.org/reference/d6cd35039e2b642b51ab02f8457c384c673026e9> ;
+    ps:P279 wd:Q18553736 .
+
+<http://www.wikidata.org/entity/statement/Q860395-B6BA04B3-8E0C-4258-9EF6-FAF5120C9112> prov:wasDerivedFrom <http://www.wikidata.org/reference/d6cd35039e2b642b51ab02f8457c384c673026e9> ;
+    ps:P1748 "C26838" .
+
+<http://www.wikidata.org/entity/statement/Q860395-C2F5365F-9E86-4F9E-84D0-C72290A0EDDD> prov:wasDerivedFrom <http://www.wikidata.org/reference/92726220408299323ce1795a132ed02fdb9bb1bc>,
+        <http://www.wikidata.org/reference/d6cd35039e2b642b51ab02f8457c384c673026e9> ;
+    ps:P31 wd:Q12136 .
+
+<http://www.wikidata.org/entity/statement/Q860395-D5C66933-D510-4C6E-A74E-74813A1E90E6> prov:wasDerivedFrom <http://www.wikidata.org/reference/3b364ecce8083915c428d671f9c0a89d66df667a>,
+        <http://www.wikidata.org/reference/92726220408299323ce1795a132ed02fdb9bb1bc> ;
+    ps:P699 "DOID:10573" .
+

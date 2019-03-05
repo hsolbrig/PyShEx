@@ -55,6 +55,7 @@ class SparqlQueryTestCase(CLITestCase):
         self.do_test([rdf, shex, '-sq', sparql, '-ps', '-gn', graphid, "-pr"], 'dbsparql5', failexpected=True,
                      text_filter=elapsed_filter)
 
+    @unittest.skipIf(True, "Volatile query")
     def test_named_graph_types(self):
         """ Test a Drugbank query with named graph in the query """
         shex = os.path.join(datadir, 'schemas', 'biolink-modelnc.shex')
