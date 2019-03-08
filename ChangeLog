@@ -1,10 +1,18 @@
 CHANGES
 =======
 
+v0.7.9
+------
+
+* Fix issue #47.  Make TE names work
+* tagged and bdist\_wheel
+
 v0.7.8
 ------
 
 * Switch to pbr and unlock requirements.txt
+* update docker to 3.7, put the dockerfile in separated dir, add default -h if no args passed, add build and run command to readme
+* add Dockerfile for PyShEx, using pip install pyshex
 
 v0.4.3
 ------
