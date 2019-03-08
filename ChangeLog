@@ -1,0 +1,97 @@
+CHANGES
+=======
+
+v0.7.8
+------
+
+* Switch to pbr and unlock requirements.txt
+
+v0.4.3
+------
+
+* Bump version to fix issue w/ twine upload
+* Update tox file w/ whitelist
+* Fix for issue #41 -- don't ignore CLOSED error
+* Small typo
+* Add named graphs to SPARQL interface.  Add SPARQL diagnostics
+* Add named graphs to SPARQL interface.  Add SPARQL diagnostics
+* PrefixLib enhancements, error reporting improvements
+* Fix issue #35
+* Fix issue #26
+* Update to version 0.7.0
+* Fix for Issue #29
+* Fix for issue #28
+* Fix for Issue #30
+* Removed predicate as an option
+* Add SPARQL Query option
+* Adds test for issue 26, which is not yet fixed
+* WikiData disease test now works (ShEx definition and data updated externally)
+* evaluate\_cli now splits a whole string for simplicity
+* Schema loader now uses PyShExC loader which deals with (some) exotic encodings
+* Fix tox test issue
+* Unit tests for new features
+* Added usetype ("-ut") and startpredicate ("-sp") options
+* Fix Issue #25
+* Add EARL report
+* Added CFGraph option
+* ShExEvaluator now loads file names
+* Updated all notebooks
+* Candidate for ShEx 2.1
+* First cut at ShEx 2.1
+* Checkpoint before adding import functionality
+* Tweaked test\_issue\_20.py to show that it isn't resolved
+* Fix for issue #23
+* Simplify trace output, enhance fail reason diagnostics and add CLI
+* Fix issue #20
+* Update jupyter bloodpressure example to show failing case
+* Fix hang reported by University of Amsterdam
+* Example rdflib SVG output
+* Make sparql\_slurper package a dependency
+* First cut at reason codes
+* First cut at reason codes
+* Fix typo in install instruction
+* Refactor isValid as first step or returning parse tree
+* Two samples with the bibframe resource
+* Fix README.md
+* Simplify debug trace API
+* Fixes issues #10 and #11
+* Add zenodo DOI badge
+
+v0.4.2
+------
+
+* Example for ISWC paper
+* Update notebook
+* Updated non-conforming test code
+* Add test for "ill founded" shapes (Issue #14)
+* Add no start shape reason code.  Fixes issue #13
+* Remove note about entry #9
+* Backed disease tests off to 8
+* Major checkpoint for GeneWiki diagnostics
+* Add license.txt
+* Stable checkpoint. Everything passes except reactome performance issue is back
+* Fix error in debug statement when shape reference is not found
+* Version 0.3.0
+* Test and data for issue #4
+* Allow \`start\` and \`focus\` to be a \`string\`, \`URIRef\` or \`URIREF\`
+* Removes trace\_matches from default debug setting
+* Performance improvements, improved debug
+* Improves debug output
+* Add some additional debugging functions to DebugContext
+* Fixes issue #1 and issue #2.  Removes several more tests - see issues 5, 6, 7 and 8
+* Added UI methods to simplify gene wiki examples
+* Add simple\_shex jupyter example
+* First Jupyter example
+* Works with both ShExJ and ShExC input
+* Adds SchemaLoader
+* Alpha release
+* Checkpoint
+* Checkpoint - typing overhaul
+* Update readme
+* Adds a readme
+* Checkpoint
+* Checkpoint
+* Checkpoint
+* Adding gitignore
+* Adding gitignore
+* Initial commit
