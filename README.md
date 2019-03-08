@@ -111,7 +111,7 @@ The ShEx schema definitions for this package come from [ShExJSG](https://github.
 We are trying to keep the python as close as possible to the (semi-)formal specification.  As an example, the statement:
 ```text
 Se is a ShapeAnd and for every shape expression se2 in shapeExprs, satisfies(n, se2, G, m)
-``` 
+```
 is implemented in Python as:
 ```python
         ...
@@ -144,3 +144,18 @@ At the moment, there are 1088 tests, of which:
 5) (6) `rdflib` has a parsing error when escaping single quotes. (Issue submitted, awaiting release)
 
 As mentioned above, at the moment this is as literal an implementation of the specification as was sensible.  This means, in particular, that we are less than clever when it comes to partition management.
+
+## Docker
+
+### Build
+
+```shell
+docker build -t pyshex docker
+```
+
+### Run
+
+```shell
+docker run --rm -it pyshex -gn '' -ss -ut -pr -sq 'select distinct ?item where{?item a <http://w3id.org/biolink/vocab/Gene>} LIMIT 1' http://graphdb.dumontierlab.com/repositories/ncats-red-kg https://github.com/biolink/biolink-model/raw/master/shex/biolink-modelnc.shex
+```
+
