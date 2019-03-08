@@ -176,7 +176,7 @@ def matches(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExpr) -> bool:
             * or `satisfies(value, valueExpr, G, m).
     """
     if isinstance_(expr, ShExJ.tripleExprLabel):
-        return matchesTripleExprRef(cntxt, T, expr)
+        return matchesExpr(cntxt, T, expr)
     else:
         return matchesCardinality(cntxt, T, expr) and (expr.semActs is None or semActsSatisfied(expr.semActs, cntxt))
 
@@ -265,7 +265,7 @@ def matchesExpr(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExpr, _: DebugCon
         return matchesEachOf(cntxt, T, expr)
     elif isinstance(expr, ShExJ.TripleConstraint):
         return matchesCardinality(cntxt, T, expr)
-    elif isinstance(expr, ShExJ.tripleExprLabel):
+    elif isinstance_(expr, ShExJ.tripleExprLabel):
         return matchesTripleExprRef(cntxt, T, expr)
     else:
         raise Exception("Unknown expression")
@@ -323,4 +323,4 @@ def matchesTripleExprRef(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExprLabe
     if expr is None:
         cntxt.fail_reason = "{expr}: Reference not found"
         return False
-    return all(matchesTripleConstraint(cntxt, t, expr) for t in T)
+    return matchesExpr(cntxt, T, expr)
