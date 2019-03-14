@@ -306,7 +306,7 @@ class Context:
             visit_center = _VisitorCenter(f, arg_cntxt)
         if expr is None:
             return f(arg_cntxt, None, self)
-        has_id = 'id' in expr and expr.id is not None
+        has_id = not isinstance_(expr, ShExJ.tripleExprLabel) and 'id' in expr and expr.id is not None
         if not has_id or not visit_center.already_seen_te(expr.id):
 
             # Visit the root expression
