@@ -319,8 +319,8 @@ def matchesTripleExprRef(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExprLabe
     expr is an tripleExprRef and satisfies(value, tripleExprWithId(tripleExprRef), G, m).
     The tripleExprWithId function is defined in Triple Expression Reference Requirement below.
     """
-    expr = cntxt.tripleExprFor(expr)
-    if expr is None:
-        cntxt.fail_reason = "{expr}: Reference not found"
+    tefor_expr = cntxt.tripleExprFor(expr)
+    if tefor_expr is None:
+        cntxt.fail_reason = f"{expr}: Reference not found"
         return False
-    return matchesExpr(cntxt, T, expr)
+    return matchesExpr(cntxt, T, tefor_expr)

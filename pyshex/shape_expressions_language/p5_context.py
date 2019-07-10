@@ -218,14 +218,14 @@ class Context:
             abs_id = self._resolve_relative_uri(expr.id)
             if abs_id not in self.schema_id_map:
                 self.schema_id_map[abs_id] = expr
-                if isinstance(expr, (ShExJ.ShapeOr, ShExJ.ShapeAnd)):
-                    for expr2 in expr.shapeExprs:
-                        self._gen_schema_xref(expr2)
-                elif isinstance(expr, ShExJ.ShapeNot):
-                    self._gen_schema_xref(expr.shapeExpr)
-                elif isinstance(expr, ShExJ.Shape):
-                    if expr.expression is not None:
-                        self._gen_te_xref(expr.expression)
+        if isinstance(expr, (ShExJ.ShapeOr, ShExJ.ShapeAnd)):
+            for expr2 in expr.shapeExprs:
+                self._gen_schema_xref(expr2)
+        elif isinstance(expr, ShExJ.ShapeNot):
+            self._gen_schema_xref(expr.shapeExpr)
+        elif isinstance(expr, ShExJ.Shape):
+            if expr.expression is not None:
+                self._gen_te_xref(expr.expression)
 
     def _resolve_relative_uri(self, ref: Union[URIRef, BNode, ShExJ.shapeExprLabel]) -> ShExJ.shapeExprLabel:
         return ShExJ.IRIREF(str(self.base_namespace[str(ref)])) if ':' not in str(ref) and self.base_namespace else ref
