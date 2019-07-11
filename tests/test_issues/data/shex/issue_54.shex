@@ -1,0 +1,1713 @@
+BASE <https://w3id.org/biolink/vocab/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX OBAN: <http://purl.org/oban/>
+PREFIX OBO: <http://purl.obolibrary.org/obo/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX pav: <http://purl.org/pav/>
+PREFIX SEMMEDDB: <http://example.org/UNKNOWN/SEMMEDDB/>
+PREFIX WD: <http://example.org/UNKNOWN/WD/>
+
+
+<ChemicalFormulaValue> xsd:string
+
+<IdentifierType> IRI
+
+<IriType> IRI
+
+<LabelType> xsd:string
+
+<NarrativeText> xsd:string
+
+<SymbolType> xsd:string
+
+<Frequency> OBO:UO_0000105
+
+<PerecentageFrequencyValue> OBO:UO_0000187
+
+<Quotient> OBO:UO_0010006
+
+<Unit> OBO:UO_0000000
+
+<TimeType> xsd:dateTime
+
+<BiologicalSequence> xsd:string
+
+<String> xsd:string
+
+<Integer> xsd:integer
+
+<Boolean> xsd:boolean
+
+<Float> xsd:float
+
+<Double> xsd:double
+
+<Time> xsd:dateTime
+
+<Date> xsd:date
+
+<Datetime> xsd:dateTime
+
+<Uriorcurie> IRI
+
+<Uri> IRI
+
+<Ncname> xsd:string
+
+<ActivityAndBehavior> CLOSED {
+    (  $<ActivityAndBehavior_tes> (  &<Occurrent_tes> ;
+          rdf:type [ OBO:BFO_0000003 ] ?
+       ) ;
+       rdf:type [ <ActivityAndBehavior> ]
+    )
+}
+
+<AdministrativeEntity>  (
+    {
+       (  $<AdministrativeEntity_tes> (  &<NamedThing_tes> ;
+             rdf:type [ WD:Q35120 ] ?
+          ) ;
+          rdf:type [ <AdministrativeEntity> ]
+       )
+    } OR @<Provider>
+)
+
+<AnatomicalEntity>  (
+    CLOSED {
+       (  $<AnatomicalEntity_tes> (  &<OrganismalEntity_tes> ;
+             rdf:type [ WD:Q7239 ] ? ;
+             &<ThingWithTaxon_tes> ;
+             rdf:type [ <ThingWithTaxon> ] ? ;
+             OBO:RO_0002292 @<GeneOrGeneProduct> * ;
+             OBO:RO_0002162 @<OrganismTaxon> *
+          ) ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_010046> ]
+       )
+    } OR @<Cell> OR @<CellularComponent> OR @<GrossAnatomicalStructure>
+)
+
+<AnatomicalEntityToAnatomicalEntityAssociation>  (
+    CLOSED {
+       (  $<AnatomicalEntityToAnatomicalEntityAssociation_tes> (  &<Association_tes> ;
+             rdf:type [ OBAN:association ] ? ;
+             <subject> @<AnatomicalEntity> ;
+             <object> @<AnatomicalEntity>
+          ) ;
+          rdf:type [ <AnatomicalEntityToAnatomicalEntityAssociation> ]
+       )
+    } OR @<AnatomicalEntityToAnatomicalEntityOntogenicAssociation> OR @<AnatomicalEntityToAnatomicalEntityPartOfAssociation>
+)
+
+<AnatomicalEntityToAnatomicalEntityOntogenicAssociation> CLOSED {
+    (  $<AnatomicalEntityToAnatomicalEntityOntogenicAssociation_tes> (  &<AnatomicalEntityToAnatomicalEntityAssociation_tes> ;
+          rdf:type [ <AnatomicalEntityToAnatomicalEntityAssociation> ] ? ;
+          <subject> @<AnatomicalEntity> ;
+          <relation> @<Uriorcurie> ;
+          <object> @<AnatomicalEntity>
+       ) ;
+       rdf:type [ <AnatomicalEntityToAnatomicalEntityOntogenicAssociation> ]
+    )
+}
+
+<AnatomicalEntityToAnatomicalEntityPartOfAssociation> CLOSED {
+    (  $<AnatomicalEntityToAnatomicalEntityPartOfAssociation_tes> (  &<AnatomicalEntityToAnatomicalEntityAssociation_tes> ;
+          rdf:type [ <AnatomicalEntityToAnatomicalEntityAssociation> ] ? ;
+          <subject> @<AnatomicalEntity> ;
+          <relation> @<Uriorcurie> ;
+          <object> @<AnatomicalEntity>
+       ) ;
+       rdf:type [ <AnatomicalEntityToAnatomicalEntityPartOfAssociation> ]
+    )
+}
+
+<Association>  (
+    CLOSED {
+       (  $<Association_tes> (  rdf:subject @<NamedThing> ;
+             rdf:predicate @<Uriorcurie> ;
+             rdf:object @<NamedThing> ;
+             <negated> @<Boolean> ? ;
+             rdf:type @<OntologyClass> ? ;
+             <qualifiers> @<OntologyClass> * ;
+             <publications> @<Publication> * ;
+             pav:providedBy @<Provider> ? ;
+             <edge_label> @<LabelType> ;
+             <has_confidence_level> @<ConfidenceLevel> ? ;
+             OBO:RO_0002558 @<EvidenceType> ? ;
+             <clinical_modifier_qualifier> @<ClinicalModifier> ?
+          ) ;
+          rdf:type [ OBAN:association ]
+       )
+    } OR @<AnatomicalEntityToAnatomicalEntityAssociation> OR @<BiosampleToDiseaseOrPhenotypicFeatureAssociation> OR
+    @<BiosampleToThingAssociation> OR @<CaseToPhenotypicFeatureAssociation> OR @<CaseToThingAssociation> OR
+    @<CellLineToDiseaseOrPhenotypicFeatureAssociation> OR @<CellLineToThingAssociation> OR
+    @<ChemicalToDiseaseOrPhenotypicFeatureAssociation> OR @<ChemicalToGeneAssociation> OR @<ChemicalToPathwayAssociation> OR
+    @<ChemicalToThingAssociation> OR @<DiseaseOrPhenotypicFeatureAssociationToThingAssociation> OR
+    @<DiseaseToPhenotypicFeatureAssociation> OR @<DiseaseToThingAssociation> OR @<EntityToPhenotypicFeatureAssociation> OR
+    @<EnvironmentToPhenotypicFeatureAssociation> OR @<FunctionalAssociation> OR @<GeneRegulatoryRelationship> OR
+    @<GeneToDiseaseAssociation> OR @<GeneToExpressionSiteAssociation> OR @<GeneToGeneAssociation> OR
+    @<GeneToPhenotypicFeatureAssociation> OR @<GeneToThingAssociation> OR @<GenomicSequenceLocalization> OR
+    @<GenotypeToGeneAssociation> OR @<GenotypeToGenotypePartAssociation> OR @<GenotypeToPhenotypicFeatureAssociation> OR
+    @<GenotypeToThingAssociation> OR @<GenotypeToVariantAssociation> OR @<PairwiseInteractionAssociation> OR
+    @<PopulationToPopulationAssociation> OR @<SequenceFeatureRelationship> OR @<SequenceVariantModulatesTreatmentAssociation> OR
+    @<ThingToDiseaseOrPhenotypicFeatureAssociation> OR @<VariantToDiseaseAssociation> OR @<VariantToPhenotypicFeatureAssociation>
+    OR @<VariantToPopulationAssociation> OR @<VariantToThingAssociation>
+)
+
+<Attribute>  (
+    CLOSED {
+       (  $<Attribute_tes> (  &<OntologyClass_tes> ;
+             rdf:type [ <OntologyClass> ] ? ;
+             rdfs:label @<LabelType> ;
+             rdfs:subClassOf @<IriType> + ;
+             owl:ObjectProperty @<NamedThing> * ;
+             OBO:RO_0002434 @<NamedThing> * ;
+             <node_property> @<String> ? ;
+             <iri> @<IriType> ? ;
+             <synonym> @<LabelType> * ;
+             <full_name> @<LabelType> ? ;
+             dcterms:description @<NarrativeText> ? ;
+             <systematic_synonym> @<LabelType> * ;
+             rdfs:subClassOf @<IriType> *
+          ) ;
+          rdf:type [ <Attribute> ]
+       )
+    } OR @<BiologicalSex> OR @<ClinicalModifier> OR @<FrequencyValue> OR @<Onset> OR @<SeverityValue> OR @<Zygosity>
+)
+
+<BiologicalEntity>  (
+    @<BiologicalProcessOrActivity> OR @<DiseaseOrPhenotypicFeature> OR @<Environment> OR @<MolecularEntity> OR @<OrganismalEntity>
+)
+
+<BiologicalEntity_struct> {
+    (  $<BiologicalEntity_tes> (  &<NamedThing_tes> ;
+          rdf:type [ WD:Q35120 ] ? ;
+          OBO:RO_0002200 @<PhenotypicFeature> *
+       ) ;
+       rdf:type [ WD:Q28845870 ]
+    )
+}
+
+<BiologicalProcess>  (
+    CLOSED {
+       (  $<BiologicalProcess_tes> (  &<BiologicalProcessOrActivity_tes> ;
+             rdf:type [ <BiologicalProcessOrActivity> ] ? ;
+             &<Occurrent_tes> ;
+             rdf:type [ OBO:BFO_0000003 ] ? ;
+             OBO:RO_0002211 @<Occurrent> * ;
+             OBO:RO_0000057 @<NamedThing> * ;
+             OBO:RO_0002233 @<NamedThing> * ;
+             OBO:BFO_0000063 @<Occurrent> *
+          ) ;
+          rdf:type [ OBO:GO_0008150 ]
+       )
+    } OR @<Pathway> OR @<PhysiologicalProcess>
+)
+
+<BiologicalProcessOrActivity>  (
+    CLOSED {
+       (  $<BiologicalProcessOrActivity_tes> (  &<BiologicalEntity_tes> ;
+             rdf:type [ WD:Q28845870 ] ?
+          ) ;
+          rdf:type [ <BiologicalProcessOrActivity> ]
+       )
+    } OR @<BiologicalProcess> OR @<MolecularActivity>
+)
+
+<BiologicalSex>  (
+    CLOSED {
+       (  $<BiologicalSex_tes> (  &<Attribute_tes> ;
+             rdf:type [ <Attribute> ] ?
+          ) ;
+          rdf:type [ <BiologicalSex> ]
+       )
+    } OR @<GenotypicSex> OR @<PhenotypicSex>
+)
+
+<Biosample>  (
+    CLOSED {
+       (  $<Biosample_tes> (  &<OrganismalEntity_tes> ;
+             rdf:type [ WD:Q7239 ] ? ;
+             &<ThingWithTaxon_tes> ;
+             rdf:type [ <ThingWithTaxon> ] ? ;
+             OBO:RO_0002162 @<OrganismTaxon> *
+          ) ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_001050> ]
+       )
+    } OR @<CellLine>
+)
+
+<BiosampleToDiseaseOrPhenotypicFeatureAssociation> CLOSED {
+    (  $<BiosampleToDiseaseOrPhenotypicFeatureAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          &<BiosampleToThingAssociation_tes> ;
+          rdf:type [ <BiosampleToThingAssociation> ] ? ;
+          &<ThingToDiseaseOrPhenotypicFeatureAssociation_tes> ;
+          rdf:type [ <ThingToDiseaseOrPhenotypicFeatureAssociation> ] ?
+       ) ;
+       rdf:type [ <BiosampleToDiseaseOrPhenotypicFeatureAssociation> ]
+    )
+}
+
+<BiosampleToThingAssociation> {
+    (  $<BiosampleToThingAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<Biosample>
+       ) ;
+       rdf:type [ <BiosampleToThingAssociation> ]
+    )
+}
+
+<Carbohydrate> CLOSED {
+    (  $<Carbohydrate_tes> (  &<ChemicalSubstance_tes> ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_010004> ] ?
+       ) ;
+       rdf:type [ <Carbohydrate> ]
+    )
+}
+
+<Case> CLOSED {
+    (  $<Case_tes> (  &<IndividualOrganism_tes> ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_010000> ] ?
+       ) ;
+       rdf:type [ <Case> ]
+    )
+}
+
+<CaseToPhenotypicFeatureAssociation> CLOSED {
+    (  $<CaseToPhenotypicFeatureAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          &<EntityToPhenotypicFeatureAssociation_tes> ;
+          rdf:type [ <EntityToPhenotypicFeatureAssociation> ] ? ;
+          &<CaseToThingAssociation_tes> ;
+          rdf:type [ <CaseToThingAssociation> ] ? ;
+          <sex_qualifier> @<BiologicalSex> ? ;
+          <frequency_qualifier> @<FrequencyValue> ? ;
+          <severity_qualifier> @<SeverityValue> ? ;
+          <onset_qualifier> @<Onset> ?
+       ) ;
+       rdf:type [ <CaseToPhenotypicFeatureAssociation> ]
+    )
+}
+
+<CaseToThingAssociation> {
+    (  $<CaseToThingAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<Case>
+       ) ;
+       rdf:type [ <CaseToThingAssociation> ]
+    )
+}
+
+<Cell> CLOSED {
+    (  $<Cell_tes> (  &<AnatomicalEntity_tes> ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_010046> ] ?
+       ) ;
+       rdf:type [ OBO:GO_0005623 ]
+    )
+}
+
+<CellLine> CLOSED {
+    (  $<CellLine_tes> (  &<Biosample_tes> ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_001050> ] ?
+       ) ;
+       rdf:type [ OBO:CLO_0000031 ]
+    )
+}
+
+<CellLineToDiseaseOrPhenotypicFeatureAssociation> CLOSED {
+    (  $<CellLineToDiseaseOrPhenotypicFeatureAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          &<CellLineToThingAssociation_tes> ;
+          rdf:type [ <CellLineToThingAssociation> ] ? ;
+          &<ThingToDiseaseOrPhenotypicFeatureAssociation_tes> ;
+          rdf:type [ <ThingToDiseaseOrPhenotypicFeatureAssociation> ] ? ;
+          <subject> @<DiseaseOrPhenotypicFeature>
+       ) ;
+       rdf:type [ <CellLineToDiseaseOrPhenotypicFeatureAssociation> ]
+    )
+}
+
+<CellLineToThingAssociation> {
+    (  $<CellLineToThingAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<CellLine>
+       ) ;
+       rdf:type [ <CellLineToThingAssociation> ]
+    )
+}
+
+<CellularComponent> CLOSED {
+    (  $<CellularComponent_tes> (  &<AnatomicalEntity_tes> ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_010046> ] ?
+       ) ;
+       rdf:type [ OBO:GO_0005575 ]
+    )
+}
+
+<ChemicalSubstance>  (
+    CLOSED {
+       (  $<ChemicalSubstance_tes> (  &<MolecularEntity_tes> ;
+             rdf:type [ <http://semanticscience.org/resource/SIO_010004> ] ?
+          ) ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_010004> ]
+       )
+    } OR @<Carbohydrate> OR @<Drug> OR @<Metabolite>
+)
+
+<ChemicalToDiseaseOrPhenotypicFeatureAssociation> CLOSED {
+    (  $<ChemicalToDiseaseOrPhenotypicFeatureAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          &<ChemicalToThingAssociation_tes> ;
+          rdf:type [ <ChemicalToThingAssociation> ] ? ;
+          &<ThingToDiseaseOrPhenotypicFeatureAssociation_tes> ;
+          rdf:type [ <ThingToDiseaseOrPhenotypicFeatureAssociation> ] ? ;
+          <object> @<DiseaseOrPhenotypicFeature>
+       ) ;
+       rdf:type [ <http://semanticscience.org/resource/SIO_000993> ]
+    )
+}
+
+<ChemicalToGeneAssociation> CLOSED {
+    (  $<ChemicalToGeneAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          &<ChemicalToThingAssociation_tes> ;
+          rdf:type [ <ChemicalToThingAssociation> ] ? ;
+          <object> @<GeneOrGeneProduct>
+       ) ;
+       rdf:type [ <http://semanticscience.org/resource/SIO_001257> ]
+    )
+}
+
+<ChemicalToPathwayAssociation> CLOSED {
+    (  $<ChemicalToPathwayAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          &<ChemicalToThingAssociation_tes> ;
+          rdf:type [ <ChemicalToThingAssociation> ] ? ;
+          <object> @<Pathway>
+       ) ;
+       rdf:type [ <http://semanticscience.org/resource/SIO_001250> ]
+    )
+}
+
+<ChemicalToThingAssociation> {
+    (  $<ChemicalToThingAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<ChemicalSubstance>
+       ) ;
+       rdf:type [ <ChemicalToThingAssociation> ]
+    )
+}
+
+<ClinicalEntity>  (
+    CLOSED {
+       (  $<ClinicalEntity_tes> (  &<NamedThing_tes> ;
+             rdf:type [ WD:Q35120 ] ?
+          ) ;
+          rdf:type [ <ClinicalEntity> ]
+       )
+    } OR @<ClinicalIntervention> OR @<ClinicalTrial>
+)
+
+<ClinicalIntervention> CLOSED {
+    (  $<ClinicalIntervention_tes> (  &<ClinicalEntity_tes> ;
+          rdf:type [ <ClinicalEntity> ] ?
+       ) ;
+       rdf:type [ <ClinicalIntervention> ]
+    )
+}
+
+<ClinicalModifier> CLOSED {
+    (  $<ClinicalModifier_tes> (  &<Attribute_tes> ;
+          rdf:type [ <Attribute> ] ?
+       ) ;
+       rdf:type [ <ClinicalModifier> ]
+    )
+}
+
+<ClinicalTrial> CLOSED {
+    (  $<ClinicalTrial_tes> (  &<ClinicalEntity_tes> ;
+          rdf:type [ <ClinicalEntity> ] ?
+       ) ;
+       rdf:type [ <ClinicalTrial> ]
+    )
+}
+
+<CodingSequence> CLOSED {
+    (  $<CodingSequence_tes> (  &<GenomicEntity_tes> ;
+          rdf:type [ OBO:SO_0000110 ] ?
+       ) ;
+       rdf:type [ OBO:SO_0000316 ]
+    )
+}
+
+<ConfidenceLevel> CLOSED {
+    (  $<ConfidenceLevel_tes> (  &<InformationContentEntity_tes> ;
+          rdf:type [ OBO:IAO_0000030 ] ?
+       ) ;
+       rdf:type [ OBO:CIO_0000028 ]
+    )
+}
+
+<Device> CLOSED {
+    (  $<Device_tes> (  &<NamedThing_tes> ;
+          rdf:type [ WD:Q35120 ] ?
+       ) ;
+       rdf:type [ <Device> ]
+    )
+}
+
+<Disease> CLOSED {
+    (  $<Disease_tes> (  &<DiseaseOrPhenotypicFeature_tes> ;
+          rdf:type [ <DiseaseOrPhenotypicFeature> ] ?
+       ) ;
+       rdf:type [ OBO:MONDO_0000001 ]
+    )
+}
+
+<DiseaseOrPhenotypicFeature>  (
+    CLOSED {
+       (  $<DiseaseOrPhenotypicFeature_tes> (  &<BiologicalEntity_tes> ;
+             rdf:type [ WD:Q28845870 ] ? ;
+             &<ThingWithTaxon_tes> ;
+             rdf:type [ <ThingWithTaxon> ] ? ;
+             OBO:RO_0002610 @<MolecularEntity> * ;
+             <has_biomarker> @<MolecularEntity> * ;
+             OBO:RO_0002302 @<NamedThing> * ;
+             OBO:RO_0002162 @<OrganismTaxon> *
+          ) ;
+          rdf:type [ <DiseaseOrPhenotypicFeature> ]
+       )
+    } OR @<Disease> OR @<PhenotypicFeature>
+)
+
+<DiseaseOrPhenotypicFeatureAssociationToLocationAssociation> CLOSED {
+    (  $<DiseaseOrPhenotypicFeatureAssociationToLocationAssociation_tes> (
+          &<DiseaseOrPhenotypicFeatureAssociationToThingAssociation_tes> ;
+          rdf:type [ <DiseaseOrPhenotypicFeatureAssociationToThingAssociation> ] ? ;
+          <object> @<AnatomicalEntity>
+       ) ;
+       rdf:type [ OBO:NCIT_R100 ]
+    )
+}
+
+<DiseaseOrPhenotypicFeatureAssociationToThingAssociation>  (
+    {
+       (  $<DiseaseOrPhenotypicFeatureAssociationToThingAssociation_tes> (  &<Association_tes> ;
+             rdf:type [ OBAN:association ] ? ;
+             <subject> @<DiseaseOrPhenotypicFeature>
+          ) ;
+          rdf:type [ <DiseaseOrPhenotypicFeatureAssociationToThingAssociation> ]
+       )
+    } OR @<DiseaseOrPhenotypicFeatureAssociationToLocationAssociation>
+)
+
+<DiseaseToPhenotypicFeatureAssociation> CLOSED {
+    (  $<DiseaseToPhenotypicFeatureAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          &<EntityToPhenotypicFeatureAssociation_tes> ;
+          rdf:type [ <EntityToPhenotypicFeatureAssociation> ] ? ;
+          &<DiseaseToThingAssociation_tes> ;
+          rdf:type [ <DiseaseToThingAssociation> ] ? ;
+          <sex_qualifier> @<BiologicalSex> ? ;
+          <frequency_qualifier> @<FrequencyValue> ? ;
+          <severity_qualifier> @<SeverityValue> ? ;
+          <onset_qualifier> @<Onset> ?
+       ) ;
+       rdf:type [ <DiseaseToPhenotypicFeatureAssociation> ]
+    )
+}
+
+<DiseaseToThingAssociation> {
+    (  $<DiseaseToThingAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<Disease>
+       ) ;
+       rdf:type [ <DiseaseToThingAssociation> ]
+    )
+}
+
+<Drug> CLOSED {
+    (  $<Drug_tes> (  &<ChemicalSubstance_tes> ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_010004> ] ?
+       ) ;
+       rdf:type [ WD:Q12140 ]
+    )
+}
+
+<DrugExposure> CLOSED {
+    (  $<DrugExposure_tes> (  &<Environment_tes> ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_000955> ] ? ;
+          <drug> @<ChemicalSubstance> +
+       ) ;
+       rdf:type [ <http://example.org/UNKNOWN/ECTO/0000509> ]
+    )
+}
+
+<EntityToDiseaseAssociation> {
+    (  $<EntityToDiseaseAssociation_tes> (  &<EntityToFeatureOrDiseaseQualifiers_tes> ;
+          rdf:type [ <EntityToFeatureOrDiseaseQualifiers> ] ? ;
+          <object> @<Disease>
+       ) ;
+       rdf:type [ <EntityToDiseaseAssociation> ]
+    )
+}
+
+<EntityToFeatureOrDiseaseQualifiers>  (
+    {
+       (  $<EntityToFeatureOrDiseaseQualifiers_tes> (  &<FrequencyQualifierMixin_tes> ;
+             rdf:type [ <FrequencyQualifierMixin> ] ? ;
+             <severity_qualifier> @<SeverityValue> ? ;
+             <onset_qualifier> @<Onset> ?
+          ) ;
+          rdf:type [ <EntityToFeatureOrDiseaseQualifiers> ]
+       )
+    } OR @<EntityToDiseaseAssociation>
+)
+
+<EntityToPhenotypicFeatureAssociation> {
+    (  $<EntityToPhenotypicFeatureAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          &<EntityToFeatureOrDiseaseQualifiers_tes> ;
+          rdf:type [ <EntityToFeatureOrDiseaseQualifiers> ] ? ;
+          <object> @<PhenotypicFeature> ;
+          <sex_qualifier> @<BiologicalSex> ? ;
+          <frequency_qualifier> @<FrequencyValue> ? ;
+          <severity_qualifier> @<SeverityValue> ? ;
+          <onset_qualifier> @<Onset> ? ;
+          <description> @<NarrativeText> ?
+       ) ;
+       rdf:type [ <EntityToPhenotypicFeatureAssociation> ]
+    )
+}
+
+<Environment>  (
+    CLOSED {
+       (  $<Environment_tes> (  &<BiologicalEntity_tes> ;
+             rdf:type [ WD:Q28845870 ] ?
+          ) ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_000955> ]
+       )
+    } OR @<DrugExposure> OR @<Treatment>
+)
+
+<EnvironmentToPhenotypicFeatureAssociation> CLOSED {
+    (  $<EnvironmentToPhenotypicFeatureAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          &<EntityToPhenotypicFeatureAssociation_tes> ;
+          rdf:type [ <EntityToPhenotypicFeatureAssociation> ] ? ;
+          <subject> @<Environment> ;
+          <sex_qualifier> @<BiologicalSex> ? ;
+          <frequency_qualifier> @<FrequencyValue> ? ;
+          <severity_qualifier> @<SeverityValue> ? ;
+          <onset_qualifier> @<Onset> ?
+       ) ;
+       rdf:type [ <EnvironmentToPhenotypicFeatureAssociation> ]
+    )
+}
+
+<EnvironmentalFeature> CLOSED {
+    (  $<EnvironmentalFeature_tes> (  &<PlanetaryEntity_tes> ;
+          rdf:type [ <PlanetaryEntity> ] ?
+       ) ;
+       rdf:type [ <EnvironmentalFeature> ]
+    )
+}
+
+<EnvironmentalProcess> CLOSED {
+    (  $<EnvironmentalProcess_tes> (  &<PlanetaryEntity_tes> ;
+          rdf:type [ <PlanetaryEntity> ] ? ;
+          &<Occurrent_tes> ;
+          rdf:type [ OBO:BFO_0000003 ] ? ;
+          OBO:RO_0002211 @<Occurrent> * ;
+          OBO:RO_0000057 @<NamedThing> * ;
+          OBO:RO_0002233 @<NamedThing> * ;
+          OBO:BFO_0000063 @<Occurrent> *
+       ) ;
+       rdf:type [ <EnvironmentalProcess> ]
+    )
+}
+
+<EvidenceType> CLOSED {
+    (  $<EvidenceType_tes> (  &<InformationContentEntity_tes> ;
+          rdf:type [ OBO:IAO_0000030 ] ?
+       ) ;
+       rdf:type [ OBO:ECO_0000000 ]
+    )
+}
+
+<Exon> CLOSED {
+    (  $<Exon_tes> (  &<GenomicEntity_tes> ;
+          rdf:type [ OBO:SO_0000110 ] ?
+       ) ;
+       rdf:type [ OBO:SO_0000147 ]
+    )
+}
+
+<ExonToTranscriptRelationship> CLOSED {
+    (  $<ExonToTranscriptRelationship_tes> (  &<SequenceFeatureRelationship_tes> ;
+          rdf:type [ <SequenceFeatureRelationship> ] ? ;
+          <subject> @<Exon> ;
+          <object> @<Transcript>
+       ) ;
+       rdf:type [ <ExonToTranscriptRelationship> ]
+    )
+}
+
+<FrequencyQualifierMixin>  (
+    {
+       (  $<FrequencyQualifierMixin_tes> <frequency_qualifier> @<FrequencyValue> ? ;
+          rdf:type [ <FrequencyQualifierMixin> ]
+       )
+    } OR @<EntityToFeatureOrDiseaseQualifiers>
+)
+
+<FrequencyQuantifier> {
+    (  $<FrequencyQuantifier_tes> (  &<RelationshipQuantifier_tes> ;
+          rdf:type [ <RelationshipQuantifier> ] ? ;
+          <has_count> @<Integer> ? ;
+          <has_total> @<Integer> ? ;
+          <has_quotient> @<Double> ? ;
+          <has_percentage> @<Double> ?
+       ) ;
+       rdf:type [ <FrequencyQuantifier> ]
+    )
+}
+
+<FrequencyValue> CLOSED {
+    (  $<FrequencyValue_tes> (  &<Attribute_tes> ;
+          rdf:type [ <Attribute> ] ?
+       ) ;
+       rdf:type [ <FrequencyValue> ]
+    )
+}
+
+<FunctionalAssociation>  (
+    CLOSED {
+       (  $<FunctionalAssociation_tes> (  &<Association_tes> ;
+             rdf:type [ OBAN:association ] ? ;
+             <subject> @<MacromolecularMachine> ;
+             <object> @<GeneOntologyClass>
+          ) ;
+          rdf:type [ <FunctionalAssociation> ]
+       )
+    } OR @<GeneToGoTermAssociation> OR @<MacromolecularMachineToBiologicalProcessAssociation> OR
+    @<MacromolecularMachineToCellularComponentAssociation> OR @<MacromolecularMachineToMolecularActivityAssociation>
+)
+
+<Gene> CLOSED {
+    (  $<Gene_tes> (  &<GeneOrGeneProduct_tes> ;
+          rdf:type [ <GeneOrGeneProduct> ] ? ;
+          OBO:RO_0002435 @<Gene> * ;
+          OBO:RO_0002205 @<GeneProduct> * ;
+          WD:P2293 @<DiseaseOrPhenotypicFeature> *
+       ) ;
+       rdf:type [ OBO:SO_0000704 ]
+    )
+}
+
+<GeneAsAModelOfDiseaseAssociation> CLOSED {
+    (  $<GeneAsAModelOfDiseaseAssociation_tes> (  &<GeneToDiseaseAssociation_tes> ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_000983> ] ? ;
+          &<ModelToDiseaseMixin_tes> ;
+          rdf:type [ <ModelToDiseaseMixin> ] ? ;
+          &<EntityToDiseaseAssociation_tes> ;
+          rdf:type [ <EntityToDiseaseAssociation> ] ? ;
+          <subject> @<GeneOrGeneProduct>
+       ) ;
+       rdf:type [ <GeneAsAModelOfDiseaseAssociation> ]
+    )
+}
+
+<GeneFamily> CLOSED {
+    (  $<GeneFamily_tes> (  &<MolecularEntity_tes> ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_010004> ] ? ;
+          &<GeneGrouping_tes> ;
+          rdf:type [ <GeneGrouping> ] ?
+       ) ;
+       rdf:type [ <http://semanticscience.org/resource/SIO_001380> ]
+    )
+}
+
+<GeneGrouping> {
+    (  $<GeneGrouping_tes> rdf:type . * ;
+       rdf:type [ <GeneGrouping> ]
+    )
+}
+
+<GeneHasVariantThatContributesToDiseaseAssociation> CLOSED {
+    (  $<GeneHasVariantThatContributesToDiseaseAssociation_tes> (  &<GeneToDiseaseAssociation_tes> ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_000983> ] ? ;
+          <subject> @<GeneOrGeneProduct> ;
+          <sequence_variant_qualifier> @<SequenceVariant> ?
+       ) ;
+       rdf:type [ <GeneHasVariantThatContributesToDiseaseAssociation> ]
+    )
+}
+
+<GeneOntologyClass> CLOSED {
+    (  $<GeneOntologyClass_tes> (  &<OntologyClass_tes> ;
+          rdf:type [ <OntologyClass> ] ?
+       ) ;
+       rdf:type [ <GeneOntologyClass> ]
+    )
+}
+
+<GeneOrGeneProduct>  (
+    CLOSED {
+       (  $<GeneOrGeneProduct_tes> (  &<MacromolecularMachine_tes> ;
+             rdf:type [ <MacromolecularMachine> ] ? ;
+             <in_pathway_with> @<GeneOrGeneProduct> * ;
+             <in_complex_with> @<GeneOrGeneProduct> * ;
+             <in_cell_population_with> @<GeneOrGeneProduct> * ;
+             OBO:RO_0002206 @<AnatomicalEntity> *
+          ) ;
+          rdf:type [ <GeneOrGeneProduct> ]
+       )
+    } OR @<Gene> OR @<GeneProduct>
+)
+
+<GeneProduct>  (
+    CLOSED {
+       (  $<GeneProduct_tes> (  &<GeneOrGeneProduct_tes> ;
+             rdf:type [ <GeneOrGeneProduct> ] ?
+          ) ;
+          rdf:type [ WD:Q424689 ]
+       )
+    } OR @<RNAProduct> OR @<GeneProductIsoform> OR @<Protein>
+)
+
+<GeneProductIsoform> {
+    (  $<GeneProductIsoform_tes> (  &<GeneProduct_tes> ;
+          rdf:type [ WD:Q424689 ] ?
+       ) ;
+       rdf:type [ <GeneProductIsoform> ]
+    )
+}
+
+<GeneRegulatoryRelationship> CLOSED {
+    (  $<GeneRegulatoryRelationship_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<GeneOrGeneProduct> ;
+          <relation> @<Uriorcurie> ;
+          <object> @<GeneOrGeneProduct>
+       ) ;
+       rdf:type [ <GeneRegulatoryRelationship> ]
+    )
+}
+
+<GeneToDiseaseAssociation>  (
+    CLOSED {
+       (  $<GeneToDiseaseAssociation_tes> (  &<Association_tes> ;
+             rdf:type [ OBAN:association ] ? ;
+             &<EntityToDiseaseAssociation_tes> ;
+             rdf:type [ <EntityToDiseaseAssociation> ] ? ;
+             &<GeneToThingAssociation_tes> ;
+             rdf:type [ <GeneToThingAssociation> ] ? ;
+             <subject> @<GeneOrGeneProduct> ;
+             <frequency_qualifier> @<FrequencyValue> ? ;
+             <severity_qualifier> @<SeverityValue> ? ;
+             <onset_qualifier> @<Onset> ?
+          ) ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_000983> ]
+       )
+    } OR @<GeneAsAModelOfDiseaseAssociation> OR @<GeneHasVariantThatContributesToDiseaseAssociation>
+)
+
+<GeneToExpressionSiteAssociation> CLOSED {
+    (  $<GeneToExpressionSiteAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<GeneOrGeneProduct> ;
+          <relation> @<Uriorcurie> ;
+          <object> @<AnatomicalEntity> ;
+          <stage_qualifier> @<LifeStage> ? ;
+          <quantifier_qualifier> @<OntologyClass> ?
+       ) ;
+       rdf:type [ <GeneToExpressionSiteAssociation> ]
+    )
+}
+
+<GeneToGeneAssociation>  (
+    @<GeneToGeneHomologyAssociation> OR @<PairwiseGeneToGeneInteraction>
+)
+
+<GeneToGeneAssociation_struct> {
+    (  $<GeneToGeneAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<GeneOrGeneProduct> ;
+          <object> @<GeneOrGeneProduct>
+       ) ;
+       rdf:type [ <GeneToGeneAssociation> ]
+    )
+}
+
+<GeneToGeneHomologyAssociation> CLOSED {
+    (  $<GeneToGeneHomologyAssociation_tes> (  &<GeneToGeneAssociation_tes> ;
+          rdf:type [ <GeneToGeneAssociation> ] ? ;
+          <relation> @<Uriorcurie>
+       ) ;
+       rdf:type [ <GeneToGeneHomologyAssociation> ]
+    )
+}
+
+<GeneToGeneProductRelationship> CLOSED {
+    (  $<GeneToGeneProductRelationship_tes> (  &<SequenceFeatureRelationship_tes> ;
+          rdf:type [ <SequenceFeatureRelationship> ] ? ;
+          <subject> @<Gene> ;
+          <relation> @<Uriorcurie> ;
+          <object> @<GeneProduct>
+       ) ;
+       rdf:type [ <GeneToGeneProductRelationship> ]
+    )
+}
+
+<GeneToGoTermAssociation> CLOSED {
+    (  $<GeneToGoTermAssociation_tes> (  &<FunctionalAssociation_tes> ;
+          rdf:type [ <FunctionalAssociation> ] ? ;
+          <subject> @<MolecularEntity> ;
+          <object> @<GeneOntologyClass>
+       ) ;
+       rdf:type [ <http://bio2rdf.org/wormbase_vocabulary:Gene-GO-Association> ]
+    )
+}
+
+<GeneToPhenotypicFeatureAssociation> CLOSED {
+    (  $<GeneToPhenotypicFeatureAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          &<EntityToPhenotypicFeatureAssociation_tes> ;
+          rdf:type [ <EntityToPhenotypicFeatureAssociation> ] ? ;
+          &<GeneToThingAssociation_tes> ;
+          rdf:type [ <GeneToThingAssociation> ] ? ;
+          <subject> @<GeneOrGeneProduct> ;
+          <sex_qualifier> @<BiologicalSex> ? ;
+          <frequency_qualifier> @<FrequencyValue> ? ;
+          <severity_qualifier> @<SeverityValue> ? ;
+          <onset_qualifier> @<Onset> ?
+       ) ;
+       rdf:type [ <http://bio2rdf.org/wormbase_vocabulary:Gene-Phenotype-Association> ]
+    )
+}
+
+<GeneToThingAssociation> {
+    (  $<GeneToThingAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<GeneOrGeneProduct>
+       ) ;
+       rdf:type [ <GeneToThingAssociation> ]
+    )
+}
+
+<Genome> CLOSED {
+    (  $<Genome_tes> (  &<GenomicEntity_tes> ;
+          rdf:type [ OBO:SO_0000110 ] ?
+       ) ;
+       rdf:type [ OBO:SO_0001026 ]
+    )
+}
+
+<GenomicEntity>  (
+    CLOSED {
+       (  $<GenomicEntity_tes> (  &<MolecularEntity_tes> ;
+             rdf:type [ <http://semanticscience.org/resource/SIO_010004> ] ? ;
+             <has_biological_sequence> @<BiologicalSequence> ?
+          ) ;
+          rdf:type [ OBO:SO_0000110 ]
+       )
+    } OR @<CodingSequence> OR @<Exon> OR @<Genome> OR @<Genotype> OR @<Haplotype> OR @<MacromolecularMachine> OR @<SequenceVariant>
+    OR @<Transcript>
+)
+
+<GenomicSequenceLocalization> CLOSED {
+    (  $<GenomicSequenceLocalization_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<GenomicEntity> ;
+          <object> @<GenomicEntity> ;
+          <start_interbase_coordinate> @<String> ? ;
+          <end_interbase_coordinate> @<String> ? ;
+          <genome_build> @<String> ? ;
+          <phase> @<String> ?
+       ) ;
+       rdf:type [ faldo:location ]
+    )
+}
+
+<Genotype> CLOSED {
+    (  $<Genotype_tes> (  &<GenomicEntity_tes> ;
+          rdf:type [ OBO:SO_0000110 ] ? ;
+          <has_zygosity> @<Zygosity> ?
+       ) ;
+       rdf:type [ OBO:GENO_0000536 ]
+    )
+}
+
+<GenotypeToGeneAssociation> CLOSED {
+    (  $<GenotypeToGeneAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<Genotype> ;
+          <relation> @<Uriorcurie> ;
+          <object> @<Gene>
+       ) ;
+       rdf:type [ <GenotypeToGeneAssociation> ]
+    )
+}
+
+<GenotypeToGenotypePartAssociation> CLOSED {
+    (  $<GenotypeToGenotypePartAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<Genotype> ;
+          <relation> @<Uriorcurie> ;
+          <object> @<Genotype>
+       ) ;
+       rdf:type [ <GenotypeToGenotypePartAssociation> ]
+    )
+}
+
+<GenotypeToPhenotypicFeatureAssociation> CLOSED {
+    (  $<GenotypeToPhenotypicFeatureAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          &<EntityToPhenotypicFeatureAssociation_tes> ;
+          rdf:type [ <EntityToPhenotypicFeatureAssociation> ] ? ;
+          &<GenotypeToThingAssociation_tes> ;
+          rdf:type [ <GenotypeToThingAssociation> ] ? ;
+          <subject> @<Genotype> ;
+          <relation> @<Uriorcurie> ;
+          <sex_qualifier> @<BiologicalSex> ? ;
+          <frequency_qualifier> @<FrequencyValue> ? ;
+          <severity_qualifier> @<SeverityValue> ? ;
+          <onset_qualifier> @<Onset> ?
+       ) ;
+       rdf:type [ <GenotypeToPhenotypicFeatureAssociation> ]
+    )
+}
+
+<GenotypeToThingAssociation> {
+    (  $<GenotypeToThingAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<Genotype>
+       ) ;
+       rdf:type [ <GenotypeToThingAssociation> ]
+    )
+}
+
+<GenotypeToVariantAssociation> CLOSED {
+    (  $<GenotypeToVariantAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<Genotype> ;
+          <relation> @<Uriorcurie> ;
+          <object> @<SequenceVariant>
+       ) ;
+       rdf:type [ <GenotypeToVariantAssociation> ]
+    )
+}
+
+<GenotypicSex> CLOSED {
+    (  $<GenotypicSex_tes> (  &<BiologicalSex_tes> ;
+          rdf:type [ <BiologicalSex> ] ?
+       ) ;
+       rdf:type [ <GenotypicSex> ]
+    )
+}
+
+<GeographicLocation>  (
+    CLOSED {
+       (  $<GeographicLocation_tes> (  &<PlanetaryEntity_tes> ;
+             rdf:type [ <PlanetaryEntity> ] ? ;
+             <http://www.w3.org/2003/01/geo/wgs84_poslat> @<Float> ? ;
+             <http://www.w3.org/2003/01/geo/wgs84_poslong> @<Float> ?
+          ) ;
+          rdf:type [ <GeographicLocation> ]
+       )
+    } OR @<GeographicLocationAtTime>
+)
+
+<GeographicLocationAtTime> CLOSED {
+    (  $<GeographicLocationAtTime_tes> (  &<GeographicLocation_tes> ;
+          rdf:type [ <GeographicLocation> ] ? ;
+          <timepoint> @<TimeType> ?
+       ) ;
+       rdf:type [ <GeographicLocationAtTime> ]
+    )
+}
+
+<GrossAnatomicalStructure> CLOSED {
+    (  $<GrossAnatomicalStructure_tes> (  &<AnatomicalEntity_tes> ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_010046> ] ?
+       ) ;
+       rdf:type [ OBO:UBERON_0010000 ]
+    )
+}
+
+<Haplotype> CLOSED {
+    (  $<Haplotype_tes> (  &<GenomicEntity_tes> ;
+          rdf:type [ OBO:SO_0000110 ] ?
+       ) ;
+       rdf:type [ OBO:GENO_0000871 ]
+    )
+}
+
+<IndividualOrganism>  (
+    CLOSED {
+       (  $<IndividualOrganism_tes> (  &<OrganismalEntity_tes> ;
+             rdf:type [ WD:Q7239 ] ? ;
+             &<ThingWithTaxon_tes> ;
+             rdf:type [ <ThingWithTaxon> ] ? ;
+             OBO:RO_0002162 @<OrganismTaxon> *
+          ) ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_010000> ]
+       )
+    } OR @<Case>
+)
+
+<InformationContentEntity>  (
+    @<ConfidenceLevel> OR @<EvidenceType> OR @<Publication>
+)
+
+<InformationContentEntity_struct> {
+    (  $<InformationContentEntity_tes> (  &<NamedThing_tes> ;
+          rdf:type [ WD:Q35120 ] ?
+       ) ;
+       rdf:type [ OBO:IAO_0000030 ]
+    )
+}
+
+<LifeStage> CLOSED {
+    (  $<LifeStage_tes> (  &<OrganismalEntity_tes> ;
+          rdf:type [ WD:Q7239 ] ? ;
+          &<ThingWithTaxon_tes> ;
+          rdf:type [ <ThingWithTaxon> ] ? ;
+          OBO:RO_0002162 @<OrganismTaxon> *
+       ) ;
+       rdf:type [ <LifeStage> ]
+    )
+}
+
+<MacromolecularComplex> CLOSED {
+    (  $<MacromolecularComplex_tes> (  &<MacromolecularMachine_tes> ;
+          rdf:type [ <MacromolecularMachine> ] ?
+       ) ;
+       rdf:type [ <http://semanticscience.org/resource/SIO_010046> ]
+    )
+}
+
+<MacromolecularMachine>  (
+    CLOSED {
+       (  $<MacromolecularMachine_tes> (  &<GenomicEntity_tes> ;
+             rdf:type [ OBO:SO_0000110 ] ? ;
+             <name> @<SymbolType>
+          ) ;
+          rdf:type [ <MacromolecularMachine> ]
+       )
+    } OR @<GeneOrGeneProduct> OR @<MacromolecularComplex>
+)
+
+<MacromolecularMachineToBiologicalProcessAssociation> CLOSED {
+    (  $<MacromolecularMachineToBiologicalProcessAssociation_tes> (  &<FunctionalAssociation_tes> ;
+          rdf:type [ <FunctionalAssociation> ] ? ;
+          <object> @<BiologicalProcess>
+       ) ;
+       rdf:type [ <MacromolecularMachineToBiologicalProcessAssociation> ]
+    )
+}
+
+<MacromolecularMachineToCellularComponentAssociation> CLOSED {
+    (  $<MacromolecularMachineToCellularComponentAssociation_tes> (  &<FunctionalAssociation_tes> ;
+          rdf:type [ <FunctionalAssociation> ] ? ;
+          <object> @<CellularComponent>
+       ) ;
+       rdf:type [ <MacromolecularMachineToCellularComponentAssociation> ]
+    )
+}
+
+<MacromolecularMachineToMolecularActivityAssociation> CLOSED {
+    (  $<MacromolecularMachineToMolecularActivityAssociation_tes> (  &<FunctionalAssociation_tes> ;
+          rdf:type [ <FunctionalAssociation> ] ? ;
+          <object> @<MolecularActivity>
+       ) ;
+       rdf:type [ <MacromolecularMachineToMolecularActivityAssociation> ]
+    )
+}
+
+<Metabolite> CLOSED {
+    (  $<Metabolite_tes> (  &<ChemicalSubstance_tes> ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_010004> ] ?
+       ) ;
+       rdf:type [ OBO:CHEBI_25212 ]
+    )
+}
+
+<MicroRNA> CLOSED {
+    (  $<MicroRNA_tes> (  &<NoncodingRNAProduct_tes> ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_001235> ] ?
+       ) ;
+       rdf:type [ <http://semanticscience.org/resource/SIO_001397> ]
+    )
+}
+
+<ModelToDiseaseMixin> {
+    (  $<ModelToDiseaseMixin_tes> (  <subject> @<NamedThing> ;
+          <relation> @<Uriorcurie>
+       ) ;
+       rdf:type [ <ModelToDiseaseMixin> ]
+    )
+}
+
+<MolecularActivity> CLOSED {
+    (  $<MolecularActivity_tes> (  &<BiologicalProcessOrActivity_tes> ;
+          rdf:type [ <BiologicalProcessOrActivity> ] ? ;
+          &<Occurrent_tes> ;
+          rdf:type [ OBO:BFO_0000003 ] ? ;
+          OBO:RO_0002211 @<Occurrent> * ;
+          OBO:RO_0000057 @<NamedThing> * ;
+          OBO:RO_0002233 @<NamedThing> * ;
+          OBO:BFO_0000063 @<Occurrent> *
+       ) ;
+       rdf:type [ OBO:GO_0003674 ]
+    )
+}
+
+<MolecularEntity>  (
+    CLOSED {
+       (  $<MolecularEntity_tes> (  &<BiologicalEntity_tes> ;
+             rdf:type [ WD:Q28845870 ] ? ;
+             &<ThingWithTaxon_tes> ;
+             rdf:type [ <ThingWithTaxon> ] ? ;
+             OBO:RO_0002436 @<MolecularEntity> * ;
+             <affects_abundance_of> @<MolecularEntity> * ;
+             <increases_abundance_of> @<MolecularEntity> * ;
+             <decreases_abundance_of> @<MolecularEntity> * ;
+             <affects_activity_of> @<MolecularEntity> * ;
+             <increases_activity_of> @<MolecularEntity> * ;
+             <decreases_activity_of> @<MolecularEntity> * ;
+             <affects_expression_of> @<GenomicEntity> * ;
+             <increases_expression_of> @<GenomicEntity> * ;
+             <decreases_expression_of> @<GenomicEntity> * ;
+             <affects_folding_of> @<MolecularEntity> * ;
+             <increases_folding_of> @<MolecularEntity> * ;
+             <decreases_folding_of> @<MolecularEntity> * ;
+             <affects_localization_of> @<MolecularEntity> * ;
+             <increases_localization_of> @<MolecularEntity> * ;
+             <decreases_localization_of> @<MolecularEntity> * ;
+             <affects_metabolic_processing_of> @<MolecularEntity> * ;
+             <increases_metabolic_processing_of> @<MolecularEntity> * ;
+             <decreases_metabolic_processing_of> @<MolecularEntity> * ;
+             <affects_molecular_modification_of> @<MolecularEntity> * ;
+             <increases_molecular_modification_of> @<MolecularEntity> * ;
+             <decreases_molecular_modification_of> @<MolecularEntity> * ;
+             <affects_synthesis_of> @<MolecularEntity> * ;
+             <increases_synthesis_of> @<MolecularEntity> * ;
+             <decreases_synthesis_of> @<MolecularEntity> * ;
+             <affects_degradation_of> @<MolecularEntity> * ;
+             <increases_degradation_of> @<MolecularEntity> * ;
+             <decreases_degradation_of> @<MolecularEntity> * ;
+             <affects_mutation_rate_of> @<GenomicEntity> * ;
+             <increases_mutation_rate_of> @<GenomicEntity> * ;
+             <decreases_mutation_rate_of> @<GenomicEntity> * ;
+             <affects_response_to> @<MolecularEntity> * ;
+             <increases_response_to> @<MolecularEntity> * ;
+             <decreases_response_to> @<MolecularEntity> * ;
+             <affects_splicing_of> @<Transcript> * ;
+             <increases_splicing_of> @<Transcript> * ;
+             <decreases_splicing_of> @<Transcript> * ;
+             <affects_stability_of> @<MolecularEntity> * ;
+             <increases_stability_of> @<MolecularEntity> * ;
+             <decreases_stability_of> @<MolecularEntity> * ;
+             <affects_transport_of> @<MolecularEntity> * ;
+             <increases_transport_of> @<MolecularEntity> * ;
+             <decreases_transport_of> @<MolecularEntity> * ;
+             <affects_secretion_of> @<MolecularEntity> * ;
+             <increases_secretion_of> @<MolecularEntity> * ;
+             <decreases_secretion_of> @<MolecularEntity> * ;
+             <affects_uptake_of> @<MolecularEntity> * ;
+             <increases_uptake_of> @<MolecularEntity> * ;
+             <decreases_uptake_of> @<MolecularEntity> * ;
+             OBO:RO_0002448 @<MolecularEntity> * ;
+             OBO:RO_0002607 @<DiseaseOrPhenotypicFeature> * ;
+             OBO:RO_0002162 @<OrganismTaxon> * ;
+             OBO:RO_0002450 @<MolecularEntity> * ;
+             OBO:RO_0002449 @<MolecularEntity> *
+          ) ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_010004> ]
+       )
+    } OR @<ChemicalSubstance> OR @<GeneFamily> OR @<GenomicEntity>
+)
+
+<NamedThing>  (
+    CLOSED {
+       (  $<NamedThing_tes> (  rdfs:label @<LabelType> ;
+             rdfs:subClassOf @<IriType> + ;
+             owl:ObjectProperty @<NamedThing> * ;
+             OBO:RO_0002434 @<NamedThing> * ;
+             <node_property> @<String> ? ;
+             <iri> @<IriType> ? ;
+             <synonym> @<LabelType> * ;
+             <full_name> @<LabelType> ? ;
+             dcterms:description @<NarrativeText> ? ;
+             <systematic_synonym> @<LabelType> * ;
+             WD:P129 @<NamedThing> * ;
+             SEMMEDDB:AFFECTS @<NamedThing> * ;
+             SEMMEDDB:DISRUPTS @<NamedThing> * ;
+             OBO:RO_HOM0000001 @<NamedThing> * ;
+             OBO:RO_HOM0000011 @<NamedThing> * ;
+             OBO:RO_HOM0000017 @<NamedThing> * ;
+             OBO:RO_HOM0000018 @<NamedThing> * ;
+             SEMMEDDB:COEXISTS_WITH @<NamedThing> * ;
+             OBO:RO_00002325 @<NamedThing> * ;
+             <affects_risk_for> @<NamedThing> * ;
+             SEMMEDDB:PREDISPOSES @<NamedThing> * ;
+             OBO:RO_0002326 @<NamedThing> * ;
+             OBO:RO_0002410 @<NamedThing> * ;
+             OBO:RO_0002599 @<NamedThing> * ;
+             OBO:BFO_0000066 @<NamedThing> * ;
+             OBO:RO_0001025 @<NamedThing> * ;
+             OBO:RO_0001015 @<NamedThing> * ;
+             OBO:RO_0003301 @<NamedThing> * ;
+             OBO:RO_0002131 @<NamedThing> * ;
+             OBO:BFO_0000051 @<NamedThing> * ;
+             OBO:BFO_0000050 @<NamedThing> * ;
+             OBO:RO_0000056 @<Occurrent> * ;
+             OBO:RO_0002331 @<Occurrent> * ;
+             OBO:RO_0002215 @<Occurrent> * ;
+             OBO:RO_0001001 @<NamedThing> * ;
+             OBO:RO_0001000 @<NamedThing> * ;
+             SEMMEDDB:MANIFESTATION_OF @<Disease> * ;
+             OBO:RO_0003000 @<NamedThing> * ;
+             owl:equivalentClass @<NamedThing> * ;
+             dcterms:created @<Date> ? ;
+             <update_date> @<Date> ? ;
+             WD:P274 @<ChemicalFormulaValue> ? ;
+             <has_molecular_consequence> @<OntologyClass> * ;
+             <filler> @<NamedThing> ? ;
+             <interbase_coordinate> @<String> ?
+          ) ;
+          rdf:type [ WD:Q35120 ]
+       )
+    } OR @<AdministrativeEntity> OR @<BiologicalEntity> OR @<ClinicalEntity> OR @<Device> OR @<InformationContentEntity> OR
+    @<Occurrent> OR @<OntologyClass> OR @<PlanetaryEntity>
+)
+
+<NoncodingRNAProduct>  (
+    CLOSED {
+       (  $<NoncodingRNAProduct_tes> (  &<RNAProduct_tes> ;
+             rdf:type [ OBO:CHEBI_33697 ] ?
+          ) ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_001235> ]
+       )
+    } OR @<MicroRNA>
+)
+
+<Occurrent>  (
+    CLOSED {
+       (  $<Occurrent_tes> (  &<NamedThing_tes> ;
+             rdf:type [ WD:Q35120 ] ? ;
+             OBO:RO_0002211 @<Occurrent> * ;
+             OBO:RO_0000057 @<NamedThing> * ;
+             OBO:RO_0002233 @<NamedThing> * ;
+             OBO:BFO_0000063 @<Occurrent> * ;
+             OBO:RO_0002213 @<Occurrent> * ;
+             OBO:RO_0002212 @<Occurrent> *
+          ) ;
+          rdf:type [ OBO:BFO_0000003 ]
+       )
+    } OR @<ActivityAndBehavior> OR @<Phenomenon> OR @<Procedure>
+)
+
+<Onset> CLOSED {
+    (  $<Onset_tes> (  &<Attribute_tes> ;
+          rdf:type [ <Attribute> ] ?
+       ) ;
+       rdf:type [ OBO:HP_0003674 ]
+    )
+}
+
+<OntologyClass>  (
+    CLOSED {
+       (  $<OntologyClass_tes> (  &<NamedThing_tes> ;
+             rdf:type [ WD:Q35120 ] ? ;
+             rdfs:subClassOf @<IriType> *
+          ) ;
+          rdf:type [ <OntologyClass> ]
+       )
+    } OR @<GeneOntologyClass> OR @<OrganismTaxon> OR @<RelationshipType>
+)
+
+<OrganismTaxon> CLOSED {
+    (  $<OrganismTaxon_tes> (  &<OntologyClass_tes> ;
+          rdf:type [ <OntologyClass> ] ?
+       ) ;
+       rdf:type [ WD:Q16521 ]
+    )
+}
+
+<OrganismalEntity>  (
+    @<AnatomicalEntity> OR @<Biosample> OR @<IndividualOrganism> OR @<LifeStage> OR @<PopulationOfIndividualOrganisms>
+)
+
+<OrganismalEntity_struct> {
+    (  $<OrganismalEntity_tes> (  &<BiologicalEntity_tes> ;
+          rdf:type [ WD:Q28845870 ] ?
+       ) ;
+       rdf:type [ WD:Q7239 ]
+    )
+}
+
+<PairwiseGeneToGeneInteraction> CLOSED {
+    (  $<PairwiseGeneToGeneInteraction_tes> (  &<GeneToGeneAssociation_tes> ;
+          rdf:type [ <GeneToGeneAssociation> ] ? ;
+          &<PairwiseInteractionAssociation_tes> ;
+          rdf:type [ <PairwiseInteractionAssociation> ] ? ;
+          <relation> @<Uriorcurie>
+       ) ;
+       rdf:type [ <PairwiseGeneToGeneInteraction> ]
+    )
+}
+
+<PairwiseInteractionAssociation> {
+    (  $<PairwiseInteractionAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<MolecularEntity> ;
+          <relation> @<Uriorcurie> ;
+          <object> @<MolecularEntity> ;
+          <interacting_molecules_category> @<OntologyClass> ?
+       ) ;
+       rdf:type [ <PairwiseInteractionAssociation> ]
+    )
+}
+
+<PathognomonicityQuantifier> {
+    (  $<PathognomonicityQuantifier_tes> (  &<SpecificityQuantifier_tes> ;
+          rdf:type [ <SpecificityQuantifier> ] ?
+       ) ;
+       rdf:type [ <PathognomonicityQuantifier> ]
+    )
+}
+
+<Pathway> CLOSED {
+    (  $<Pathway_tes> (  &<BiologicalProcess_tes> ;
+          rdf:type [ OBO:GO_0008150 ] ?
+       ) ;
+       rdf:type [ OBO:GO_0007165 ]
+    )
+}
+
+<Phenomenon> CLOSED {
+    (  $<Phenomenon_tes> (  &<Occurrent_tes> ;
+          rdf:type [ OBO:BFO_0000003 ] ?
+       ) ;
+       rdf:type [ <Phenomenon> ]
+    )
+}
+
+<PhenotypicFeature> CLOSED {
+    (  $<PhenotypicFeature_tes> (  &<DiseaseOrPhenotypicFeature_tes> ;
+          rdf:type [ <DiseaseOrPhenotypicFeature> ] ?
+       ) ;
+       rdf:type [ OBO:UPHENO_0001001 ]
+    )
+}
+
+<PhenotypicSex> CLOSED {
+    (  $<PhenotypicSex_tes> (  &<BiologicalSex_tes> ;
+          rdf:type [ <BiologicalSex> ] ?
+       ) ;
+       rdf:type [ <PhenotypicSex> ]
+    )
+}
+
+<PhysiologicalProcess> CLOSED {
+    (  $<PhysiologicalProcess_tes> (  &<BiologicalProcess_tes> ;
+          rdf:type [ OBO:GO_0008150 ] ?
+       ) ;
+       rdf:type [ <PhysiologicalProcess> ]
+    )
+}
+
+<PlanetaryEntity>  (
+    CLOSED {
+       (  $<PlanetaryEntity_tes> (  &<NamedThing_tes> ;
+             rdf:type [ WD:Q35120 ] ?
+          ) ;
+          rdf:type [ <PlanetaryEntity> ]
+       )
+    } OR @<EnvironmentalFeature> OR @<EnvironmentalProcess> OR @<GeographicLocation>
+)
+
+<PopulationOfIndividualOrganisms> CLOSED {
+    (  $<PopulationOfIndividualOrganisms_tes> (  &<OrganismalEntity_tes> ;
+          rdf:type [ WD:Q7239 ] ? ;
+          &<ThingWithTaxon_tes> ;
+          rdf:type [ <ThingWithTaxon> ] ? ;
+          OBO:RO_0002162 @<OrganismTaxon> *
+       ) ;
+       rdf:type [ <http://semanticscience.org/resource/SIO_001061> ]
+    )
+}
+
+<PopulationToPopulationAssociation> CLOSED {
+    (  $<PopulationToPopulationAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<PopulationOfIndividualOrganisms> ;
+          <relation> @<Uriorcurie> ;
+          <object> @<PopulationOfIndividualOrganisms>
+       ) ;
+       rdf:type [ <PopulationToPopulationAssociation> ]
+    )
+}
+
+<Procedure> CLOSED {
+    (  $<Procedure_tes> (  &<Occurrent_tes> ;
+          rdf:type [ OBO:BFO_0000003 ] ?
+       ) ;
+       rdf:type [ <Procedure> ]
+    )
+}
+
+<Protein>  (
+    CLOSED {
+       (  $<Protein_tes> (  &<GeneProduct_tes> ;
+             rdf:type [ WD:Q424689 ] ?
+          ) ;
+          rdf:type [ OBO:PR_000000001 ]
+       )
+    } OR @<ProteinIsoform>
+)
+
+<ProteinIsoform> CLOSED {
+    (  $<ProteinIsoform_tes> (  &<Protein_tes> ;
+          rdf:type [ OBO:PR_000000001 ] ? ;
+          &<GeneProductIsoform_tes> ;
+          rdf:type [ <GeneProductIsoform> ] ?
+       ) ;
+       rdf:type [ <ProteinIsoform> ]
+    )
+}
+
+<Provider> CLOSED {
+    (  $<Provider_tes> (  &<AdministrativeEntity_tes> ;
+          rdf:type [ <AdministrativeEntity> ] ?
+       ) ;
+       rdf:type [ <Provider> ]
+    )
+}
+
+<Publication> CLOSED {
+    (  $<Publication_tes> (  &<InformationContentEntity_tes> ;
+          rdf:type [ OBO:IAO_0000030 ] ?
+       ) ;
+       rdf:type [ OBO:IAO_0000311 ]
+    )
+}
+
+<RelationshipQuantifier>  (
+    @<FrequencyQuantifier> OR @<SensitivityQuantifier> OR @<SpecificityQuantifier>
+)
+
+<RelationshipQuantifier_struct> {
+    (  $<RelationshipQuantifier_tes> rdf:type . * ;
+       rdf:type [ <RelationshipQuantifier> ]
+    )
+}
+
+<RelationshipType> CLOSED {
+    (  $<RelationshipType_tes> (  &<OntologyClass_tes> ;
+          rdf:type [ <OntologyClass> ] ?
+       ) ;
+       rdf:type [ <RelationshipType> ]
+    )
+}
+
+<RNAProduct>  (
+    CLOSED {
+       (  $<RNAProduct_tes> (  &<GeneProduct_tes> ;
+             rdf:type [ WD:Q424689 ] ?
+          ) ;
+          rdf:type [ OBO:CHEBI_33697 ]
+       )
+    } OR @<RNAProductIsoform> OR @<NoncodingRNAProduct>
+)
+
+<RNAProductIsoform> CLOSED {
+    (  $<RNAProductIsoform_tes> (  &<RNAProduct_tes> ;
+          rdf:type [ OBO:CHEBI_33697 ] ? ;
+          &<GeneProductIsoform_tes> ;
+          rdf:type [ <GeneProductIsoform> ] ?
+       ) ;
+       rdf:type [ <RNAProductIsoform> ]
+    )
+}
+
+<SensitivityQuantifier> {
+    (  $<SensitivityQuantifier_tes> (  &<RelationshipQuantifier_tes> ;
+          rdf:type [ <RelationshipQuantifier> ] ?
+       ) ;
+       rdf:type [ <SensitivityQuantifier> ]
+    )
+}
+
+<SequenceFeatureRelationship>  (
+    CLOSED {
+       (  $<SequenceFeatureRelationship_tes> (  &<Association_tes> ;
+             rdf:type [ OBAN:association ] ? ;
+             <subject> @<GenomicEntity> ;
+             <object> @<GenomicEntity>
+          ) ;
+          rdf:type [ <SequenceFeatureRelationship> ]
+       )
+    } OR @<ExonToTranscriptRelationship> OR @<GeneToGeneProductRelationship> OR @<TranscriptToGeneRelationship>
+)
+
+<SequenceVariant> CLOSED {
+    (  $<SequenceVariant_tes> (  &<GenomicEntity_tes> ;
+          rdf:type [ OBO:SO_0000110 ] ? ;
+          <has_biological_sequence> @<BiologicalSequence> ? ;
+          <has_gene> @<Gene> *
+       ) ;
+       rdf:type [ OBO:GENO_0000002 ]
+    )
+}
+
+<SequenceVariantModulatesTreatmentAssociation> {
+    (  $<SequenceVariantModulatesTreatmentAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<SequenceVariant> ;
+          <object> @<Treatment>
+       ) ;
+       rdf:type [ <SequenceVariantModulatesTreatmentAssociation> ]
+    )
+}
+
+<SeverityValue> CLOSED {
+    (  $<SeverityValue_tes> (  &<Attribute_tes> ;
+          rdf:type [ <Attribute> ] ?
+       ) ;
+       rdf:type [ <SeverityValue> ]
+    )
+}
+
+<SpecificityQuantifier>  (
+    {
+       (  $<SpecificityQuantifier_tes> (  &<RelationshipQuantifier_tes> ;
+             rdf:type [ <RelationshipQuantifier> ] ?
+          ) ;
+          rdf:type [ <SpecificityQuantifier> ]
+       )
+    } OR @<PathognomonicityQuantifier>
+)
+
+<ThingToDiseaseOrPhenotypicFeatureAssociation> {
+    (  $<ThingToDiseaseOrPhenotypicFeatureAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <object> @<DiseaseOrPhenotypicFeature>
+       ) ;
+       rdf:type [ <ThingToDiseaseOrPhenotypicFeatureAssociation> ]
+    )
+}
+
+<ThingWithTaxon> {
+    (  $<ThingWithTaxon_tes> OBO:RO_0002162 @<OrganismTaxon> * ;
+       rdf:type [ <ThingWithTaxon> ]
+    )
+}
+
+<Transcript> CLOSED {
+    (  $<Transcript_tes> (  &<GenomicEntity_tes> ;
+          rdf:type [ OBO:SO_0000110 ] ?
+       ) ;
+       rdf:type [ OBO:SO_0000673 ]
+    )
+}
+
+<TranscriptToGeneRelationship> CLOSED {
+    (  $<TranscriptToGeneRelationship_tes> (  &<SequenceFeatureRelationship_tes> ;
+          rdf:type [ <SequenceFeatureRelationship> ] ? ;
+          <subject> @<Transcript> ;
+          <object> @<Gene>
+       ) ;
+       rdf:type [ <TranscriptToGeneRelationship> ]
+    )
+}
+
+<Treatment> CLOSED {
+    (  $<Treatment_tes> (  &<Environment_tes> ;
+          rdf:type [ <http://semanticscience.org/resource/SIO_000955> ] ? ;
+          OBO:RO_0002606 @<DiseaseOrPhenotypicFeature> + ;
+          <has_exposure_parts> @<DrugExposure> +
+       ) ;
+       rdf:type [ OBO:OGMS_0000090 ]
+    )
+}
+
+<VariantToDiseaseAssociation> CLOSED {
+    (  $<VariantToDiseaseAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          &<VariantToThingAssociation_tes> ;
+          rdf:type [ <VariantToThingAssociation> ] ? ;
+          &<EntityToDiseaseAssociation_tes> ;
+          rdf:type [ <EntityToDiseaseAssociation> ] ? ;
+          <subject> @<NamedThing> ;
+          <relation> @<Uriorcurie> ;
+          <object> @<NamedThing> ;
+          <frequency_qualifier> @<FrequencyValue> ? ;
+          <severity_qualifier> @<SeverityValue> ? ;
+          <onset_qualifier> @<Onset> ?
+       ) ;
+       rdf:type [ <VariantToDiseaseAssociation> ]
+    )
+}
+
+<VariantToPhenotypicFeatureAssociation> CLOSED {
+    (  $<VariantToPhenotypicFeatureAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          &<VariantToThingAssociation_tes> ;
+          rdf:type [ <VariantToThingAssociation> ] ? ;
+          &<EntityToPhenotypicFeatureAssociation_tes> ;
+          rdf:type [ <EntityToPhenotypicFeatureAssociation> ] ? ;
+          <subject> @<SequenceVariant> ;
+          <sex_qualifier> @<BiologicalSex> ? ;
+          <frequency_qualifier> @<FrequencyValue> ? ;
+          <severity_qualifier> @<SeverityValue> ? ;
+          <onset_qualifier> @<Onset> ?
+       ) ;
+       rdf:type [ <VariantToPhenotypicFeatureAssociation> ]
+    )
+}
+
+<VariantToPopulationAssociation> CLOSED {
+    (  $<VariantToPopulationAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          &<VariantToThingAssociation_tes> ;
+          rdf:type [ <VariantToThingAssociation> ] ? ;
+          &<FrequencyQuantifier_tes> ;
+          rdf:type [ <FrequencyQuantifier> ] ? ;
+          &<FrequencyQualifierMixin_tes> ;
+          rdf:type [ <FrequencyQualifierMixin> ] ? ;
+          <subject> @<SequenceVariant> ;
+          <object> @<PopulationOfIndividualOrganisms> ;
+          <has_count> @<Integer> ? ;
+          <has_total> @<Integer> ? ;
+          <has_quotient> @<Double> ? ;
+          <has_percentage> @<Double> ? ;
+          <frequency_qualifier> @<FrequencyValue> ?
+       ) ;
+       rdf:type [ <VariantToPopulationAssociation> ]
+    )
+}
+
+<VariantToThingAssociation> {
+    (  $<VariantToThingAssociation_tes> (  &<Association_tes> ;
+          rdf:type [ OBAN:association ] ? ;
+          <subject> @<SequenceVariant>
+       ) ;
+       rdf:type [ <VariantToThingAssociation> ]
+    )
+}
+
+<Zygosity> CLOSED {
+    (  $<Zygosity_tes> (  &<Attribute_tes> ;
+          rdf:type [ <Attribute> ] ?
+       ) ;
+       rdf:type [ OBO:GENO_0000133 ]
+    )
+}

@@ -66,33 +66,30 @@ class EachOfEvaluator:
         for expr_num in range(0, len(self.expression_num_predicates)):
             predicates = self.expression_num_predicates[expr_num]
             if len(predicates) > 1:
-                if all(len(self.predicate_to_expression_nums[p]) == 1 for p in predicates):
-                    # Case 3: Expression matches multiple predicates but each predicate referenced only once
-                    # Build a composite graph of all triples and evaluate it
-                    target = RDFGraph()
-                    for p in predicates:
-                        target.update(self.predicate_graph[p])
-                    if not matches(cntxt, target, self.expressions[expr_num]):
-                        return False
-                else:
-                    # Case 4: Expression matches multiple predicates, at least one predicate referenced by multi
-                    # expressions
-                    evaluated_predicates = []
 
-                    for p in predicates:
-                        if p not in evaluated_predicates:
-                            predicates, expressions = self._predicate_closure(p)
-                            target = RDFGraph()
-                            for predicate in predicates:
-                                target.update(self.predicate_graph[predicate])
-                            successful_combination = True
-                            for partition in partition_t(target, len(expressions)):
-                                if all(matches(cntxt, t, self.expressions[e_num])
-                                       for t, e_num in zip(partition, expressions)):
-                                    successful_combination = True
-                                    break
-                            if not successful_combination:
-                                return False
+                # Case 3: Expression matches multiple predicates but each predicate referenced only once
+                # Build a composite graph of all triples and evaluate it
+                target = RDFGraph()
+                for p in predicates:
+                    if len(self.predicate_to_expression_nums[p]) == 1:
+                        target.update(self.predicate_graph[p])
+                if target and not matches(cntxt, target, self.expressions[expr_num]):
+                    return False
+
+                for p in predicates:
+                    if len(self.predicate_to_expression_nums[p]) > 1:
+                        predicates, expressions = self._predicate_closure(p)
+                        target = RDFGraph()
+                        for predicate in predicates:
+                            target.update(self.predicate_graph[predicate])
+                        successful_combination = True
+                        for partition in partition_t(target, len(expressions)):
+                            if all(matches(cntxt, t, self.expressions[e_num])
+                                   for t, e_num in zip(partition, expressions)):
+                                successful_combination = True
+                                break
+                        if not successful_combination:
+                            return False
         return True
 
     def _predicate_closure(self,

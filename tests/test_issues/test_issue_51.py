@@ -1,7 +1,6 @@
 import unittest
-from pprint import pprint
 
-from rdflib import Graph, Namespace, RDF
+from rdflib import Namespace, RDF
 
 from pyshex import ShExEvaluator
 
@@ -40,8 +39,6 @@ BASE <{BASE}>
 
 <X> {{&<missing>}}
 """
-
-BASE = Namespace("https://w3id.org/biolink/vocab/")
 
 
 class Issue51TestCase(unittest.TestCase):
