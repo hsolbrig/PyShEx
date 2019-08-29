@@ -11,12 +11,16 @@ class FHIRServerTestCase(unittest.TestCase):
     def test_observation_online(self):
         """ Test online FHIR example """
         source_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'data')
-        result = os.path.join(source_dir, 'example-haplotype2.results')
+        result = os.path.join(source_dir, 'example-haplotype2_online.results')
         outf = StringIO()
         with(redirect_stdout(outf)):
             evaluate_cli("http://build.fhir.org/observation-example-haplotype2.ttl "
                          "http://build.fhir.org/observation.shex "
                          "-fn http://hl7.org/fhir/Observation/example-haplotype2")
+        if not os.path.exists(result):
+            with open(result, 'w') as f:
+                f.write(outf.getvalue())
+            self.assertTrue(False, "Created test file -- rerun ")
         with open(result) as f:
             self.assertEqual(f.read(), outf.getvalue())
 
