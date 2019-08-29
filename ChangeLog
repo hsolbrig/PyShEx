@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+v0.7.12
+-------
+
+* Fix for issue #58
+* Switch license to CC0
+* Fix failing test on FHIR online example
+
 v0.7.11
 -------
 
