@@ -1,9 +1,10 @@
 """ Implementation of `5.5 Shapes and Triple Expressions <http://shex.io/shex-semantics/#shapes-and-TEs>`_"""
 
-from typing import List, Optional, Union
+from typing import List, Optional, Union, Set
 
 from ShExJSG import ShExJ
 from pyjsg.jsglib import isinstance_
+from rdflib import URIRef
 from sparql_slurper import SlurpyGraph
 
 from pyshex.shape_expressions_language.p3_terminology import arcsOut
@@ -75,13 +76,12 @@ def satisfiesShape(cntxt: Context, n: Node, S: ShExJ.Shape, c: DebugContext) -> 
                     print()
                 return False
 
-
         # Evaluate the actual expression.  Start assuming everything matches...
         if S.expression:
-            if matches(cntxt, matchables, S.expression):
+            extras = {iriref_to_uriref(e) for e in S.extra} if S.extra is not None else {}
+            if matches(cntxt, matchables, S.expression, extras):
                 rslt = True
             else:
-                extras = {iriref_to_uriref(e) for e in S.extra} if S.extra is not None else {}
                 if len(extras):
                     permutable_matchables = RDFGraph([t for t in matchables if t.p in extras])
                     non_permutable_matchables = RDFGraph([t for t in matchables if t not in permutable_matchables])
@@ -153,11 +153,14 @@ def valid_remainder(cntxt: Context, n: Node, matchables: RDFGraph, S: ShExJ.Shap
     return not S.closed.val or not bool(outs - matchables)
 
 
-def matches(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExpr) -> bool:
+def matches(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExpr, extras: Optional[Set[URIRef]] = None) -> bool:
     """
     **matches**: asserts that a triple expression is matched by a set of triples that come from the neighbourhood of a
     node in an RDF graph. The expression `matches(T, expr, m)` indicates that a set of triples `T` can satisfy these
     rules:
+
+    extras is a hint that, if present, can be used to bypass cardinality permutations.  Beware, however, that this
+    may make the semantic actions more complex.
 
     * expr has semActs and `matches(T, expr, m)` by the remaining rules in this list and the evaluation
       of semActs succeeds according to the section below on Semantic Actions.
@@ -178,7 +181,8 @@ def matches(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExpr) -> bool:
     if isinstance_(expr, ShExJ.tripleExprLabel):
         return matchesExpr(cntxt, T, expr)
     else:
-        return matchesCardinality(cntxt, T, expr) and (expr.semActs is None or semActsSatisfied(expr.semActs, cntxt))
+        return matchesCardinality(cntxt, T, expr, extras) \
+               and (expr.semActs is None or semActsSatisfied(expr.semActs, cntxt))
 
 
 @trace_matches(True)
@@ -194,7 +198,7 @@ def matchesTripleExprLabel(cntxt: Context, T: RDFGraph, expr: ShExJ.tripleExprLa
 
 @trace_matches(False)
 def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr, ShExJ.tripleExprLabel],
-                       c: DebugContext) -> bool:
+                       c: DebugContext, extras: Optional[Set[URIRef]] = None) -> bool:
     """ Evaluate cardinality expression
 
     expr has a cardinality of min and/or max not equal to 1, where a max of -1 is treated as unbounded, and
@@ -218,12 +222,21 @@ def matchesCardinality(cntxt: Context, T: RDFGraph, expr: Union[ShExJ.tripleExpr
             else:
                 cntxt.fail_reason = f"   No matching triples found for predicate {cntxt.n3_mapper.n3(expr.predicate)}"
             return False
-        elif 0 <= max_ < len(T):
+
+        # Don't include extras in the cardinality check
+        if extras:
+            must_match = RDFGraph([t for t in T if t.p not in extras])  # The set of things NOT consumed in extra
+        else:
+            must_match = T
+        if 0 <= max_ < len(must_match):
+            # Don't do a cardinality check
             _fail_triples(cntxt, T)
             cntxt.fail_reason = f"   {len(T)} triples exceeds max {cardinality_text}"
             return False
+        elif len(must_match):
+            return all(matchesTripleConstraint(cntxt, t, expr) for t in must_match)
         else:
-            return all(matchesTripleConstraint(cntxt, t, expr) for t in T)
+            return any(matchesTripleConstraint(cntxt, t, expr) for t in T)
     else:
         for partition in _partitions(T, min_, max_):
             if all(matchesExpr(cntxt, part, expr) for part in partition):

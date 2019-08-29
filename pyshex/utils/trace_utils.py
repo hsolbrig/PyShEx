@@ -1,6 +1,7 @@
-from typing import Callable
+from typing import Callable, Optional, Set
 
 from pyjsg.jsglib import JSGObject
+from rdflib import URIRef
 
 from pyshex.parse_tree.parse_node import ParseNode
 from pyshex.shape_expressions_language.p5_context import Context, DebugContext
@@ -31,8 +32,8 @@ def trace_satisfies(newline: bool=True, skip_trace: Callable[[JSGObject], bool]=
 
 
 def trace_matches(newline: bool=True):
-    def e(f: Callable[[Context, RDFGraph, JSGObject, DebugContext], bool]):
-        def wrapper(cntxt: Context, T: RDFGraph, expr: JSGObject) -> bool:
+    def e(f: Callable[[Context, RDFGraph, JSGObject, DebugContext, Optional[Set[URIRef]]], bool]):
+        def wrapper(cntxt: Context, T: RDFGraph, expr: JSGObject, extras: Optional[Set[URIRef]]=None) -> bool:
             parent_parse_node = cntxt.current_node
             cntxt.current_node = ParseNode(f, expr, T, cntxt)
             parent_parse_node.nodes.append(cntxt.current_node)
@@ -40,7 +41,7 @@ def trace_matches(newline: bool=True):
             c.splus()
             if c.debug:
                 c.print(c.i(0, f'--> {f.__name__} {c.d()}'), not newline)
-            rval = f(cntxt, T, expr, c)
+            rval = f(cntxt, T, expr, c, extras) if extras is not None else f(cntxt, T, expr, c)
             if c.debug:
                 c.print(c.i(0, f'<-- {f.__name__} {c.d()} {rval}'))
             c.sminus()
