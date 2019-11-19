@@ -8,14 +8,12 @@ verify_ssl = true
 [packages]
 rdflib = ">=4.2.2"
 rdflib-jsonld = ">=0.4.0"
-requests = "*"
+requests = ">=2.22.0"
 urllib3 = "*"
-ShExJSG = ">=0.6.5"
+ShExJSG = ">=0.6.8"
 CFGraph = ">=0.2.1"
-PyShExC = ">=0.5.4"
-sparql-slurper = ">=0.2.1"
-sparqlwrapper = "*"
-pbr = "*"
+PyShExC = ">=0.7.0"
+sparql-slurper = ">=0.2.2"
+sparqlwrapper = ">=1.8.4"
+pbr = ">=5.4.3"
 
-[requires]
-python_version = "3.7"
