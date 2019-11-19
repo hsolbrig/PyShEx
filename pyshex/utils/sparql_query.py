@@ -2,13 +2,15 @@ from typing import List
 
 import jsonasobj
 import requests
-from SPARQLWrapper import SPARQLWrapper, JSON
+from SPARQLWrapper import JSON
 from rdflib import URIRef
+
+from pyshex.user_agent import UserAgent, SPARQLWrapperWithAgent
 
 
 class SPARQLQuery:
     def __init__(self, sparql_endpoint: str, sparql_file_uri_or_text: str,
-                 print_query: bool=False, print_results: bool=False) -> None:
+                 print_query: bool=False, print_results: bool=False, user_agent: str = UserAgent) -> None:
         """ Set up the query to run
 
         :param sparql_endpoint: URL of sparql endpoint
@@ -20,7 +22,7 @@ class SPARQLQuery:
         if '\n' in sparql_file_uri_or_text or '\r' in sparql_file_uri_or_text or ' ' in sparql_file_uri_or_text:
             self.query = sparql_file_uri_or_text
         elif ':/' in sparql_file_uri_or_text:
-            req = requests.get(sparql_file_uri_or_text)
+            req = requests.get(sparql_file_uri_or_text, headers={'User-Agent': user_agent})
             if not req.ok:
                 raise ValueError(f"Unable to read {sparql_file_uri_or_text}")
             self.query = req.text
@@ -30,7 +32,7 @@ class SPARQLQuery:
         if print_query:
             print("SPARQL:")
             print(self.query)
-        self.endpoint = SPARQLWrapper(sparql_endpoint)
+        self.endpoint = SPARQLWrapperWithAgent(sparql_endpoint)
         self.endpoint.setQuery(self.query)
         self.endpoint.setReturnFormat(JSON)
 

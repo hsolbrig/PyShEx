@@ -1,8 +1,8 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
-@prefix ns1: <http://wikiba.se/ontology#> .
-@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix pr: <http://www.wikidata.org/prop/reference/> .
@@ -54,6 +54,7 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "chrípka ošípaných",
         "chřipka prasat",
         "grip porcina",
+        "gripa porcină",
         "gripe porcina",
         "gripe suína",
         "grippe porcine",
@@ -92,7 +93,7 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "ਸਵਾਈਨ ਇਨਫ਼ਲੂਐਨਜ਼ਾ",
         "સ્વાઇન ફ્લ્યુ",
         "எச்1.என்1 சளிக்காய்ச்சல்",
-        "స్వైన్‌ఫ్లూ",
+        "స్వైన్ఫ్లూ",
         "ಹಂದಿಜ್ವರ",
         "പന്നിപ്പനി",
         "සූකර උණ",
@@ -104,22 +105,25 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "豚インフルエンザ",
         "豬流感",
         "돼지 인플루엔자" ;
-    schema:dateModified "2019-02-08T13:09:29+00:00"^^xsd:dateTime ;
-    schema:description "akut verlaufende Infektionskrankheit der Atemwege bei Hausschweinen",
+    schema:dateModified "2019-11-07T23:11:06+00:00"^^xsd:dateTime ;
+    schema:description "Griepgevalle wat veroorsaak word deur Ortomixovirusse wat endemies is tot varke",
+        "akut verlaufende Infektionskrankheit der Atemwege bei Hausschweinen",
         "enfermedad respiratoria provocada por un virus gripal que infecta a los cerdos",
         "infection caused by any one of several types of swine influenza viruses",
+        "infecție cauzată de unul dintre virusurile influenzei porcine",
         "infektionssjukdom",
         "influenssaviruksen aiheuttama hengitystiesairaus",
         "influenza provocati da contagio endemica di Orthomyxovirus nei suini",
         "maladie respiratoire provoquée par un virus grippal infectant les cochons",
+        "инфекција коју изазива неколико типова вируса свињске инфлуенце",
         "условное название заболевания людей и животных, вызываемого штаммами вируса гриппа",
         "مرض جهاز تنفسي",
         "സൂക്ഷ്മാണുവിനാൽ ആതിഥേയജീവിയിൽ ഉണ്ടാവുന്ന രോഗബാധ" ;
-    schema:version 853810717 ;
-    ns1:identifiers 10 ;
-    ns1:sitelinks 98 ;
-    ns1:statements 23 ;
-    ns1:timestamp "2019-02-08T13:09:31+00:00"^^xsd:dateTime ;
+    schema:version 1047810908 ;
+    ns2:identifiers 11 ;
+    ns2:sitelinks 98 ;
+    ns2:statements 24 ;
+    ns2:timestamp "2019-11-07T23:11:09+00:00"^^xsd:dateTime ;
     skos:altLabel "2009 H1N1 grip salgını",
         "A",
         "A(H1N1)",
@@ -207,7 +211,7 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "Вирус H1N1",
         "Грип свинячий",
         "Каліфорнійський грип",
-        "Свињска грипа",
+        "свињска грипа",
         "שוויין פלו",
         "שפעת חזירים",
         "آنفلوآنزای خوک",
@@ -231,8 +235,8 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "نزلة خنزيرية",
         "एच१एन१",
         "एन १ एच १",
-        "डुकर्‍या ताप",
-        "डुकर्‍याज्वर",
+        "डुकर्या ताप",
+        "डुकर्याज्वर",
         "शूकर इंफ्लुएंजा",
         "शूकर इन्फ्लुएंजा",
         "सूकर इंफ्लुएंजा",
@@ -267,6 +271,7 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "돼지 독감",
         "돼지독감" ;
     p:P1225 <http://www.wikidata.org/entity/statement/Q36855-36EFEEC2-5911-4CC5-A0DA-FACD7D4A8268> ;
+    p:P1245 <http://www.wikidata.org/entity/statement/Q36855-1B288FDE-41F5-48C9-A898-F41F2F2BC492> ;
     p:P1296 <http://www.wikidata.org/entity/statement/Q36855-B347E14B-4108-41B4-BC0D-8B5266BF4DC0> ;
     p:P1417 <http://www.wikidata.org/entity/statement/Q36855-A73E744D-8AE3-4DEB-8C8D-6EC48629977B> ;
     p:P1748 <http://www.wikidata.org/entity/statement/Q36855-312EC196-25F3-49CC-95F1-D21A952C34F2> ;
@@ -289,9 +294,10 @@ wd:Q36855 rdfs:label "Cúm lợn",
     p:P699 <http://www.wikidata.org/entity/statement/Q36855-251AFEFE-9357-4819-9345-8658A5817D72>,
         <http://www.wikidata.org/entity/statement/Q36855-C725609A-6F51-4A2F-B451-897C76F77DCD> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q36855-FF9EC242-3136-4C46-8597-0772CDD86794> ;
-    ns2:P227 <http://d-nb.info/gnd/7679861-6> ;
-    ns2:P646 <http://g.co/kg/m/057c6k> ;
+    ns1:P227 <http://d-nb.info/gnd/7679861-6> ;
+    ns1:P646 <http://g.co/kg/m/057c6k> ;
     wdt:P1225 "10644087" ;
+    wdt:P1245 "1073872" ;
     wdt:P1296 "0517808" ;
     wdt:P1417 "science/swine-flu" ;
     wdt:P1748 "C80444" ;
@@ -317,7 +323,7 @@ wd:Q36855 rdfs:label "Cúm lợn",
 <http://www.wikidata.org/entity/statement/Q36855-1BF9DB2E-9759-40E3-B5F2-DEE5BF8B2598> prov:wasDerivedFrom <http://www.wikidata.org/reference/230e690b622c73b403f64da8531818cd0b5993d6> ;
     ps:P31 wd:Q18123741 .
 
-<http://www.wikidata.org/entity/statement/Q36855-251AFEFE-9357-4819-9345-8658A5817D72> prov:wasDerivedFrom <http://www.wikidata.org/reference/2bb19f066369494a53b8ed6de80e0acaf4cbfe49> ;
+<http://www.wikidata.org/entity/statement/Q36855-251AFEFE-9357-4819-9345-8658A5817D72> prov:wasDerivedFrom <http://www.wikidata.org/reference/6bb7f7116f0449e8f832455c32b53b754b52b25b> ;
     ps:P699 "DOID:0050211" .
 
 <http://www.wikidata.org/entity/statement/Q36855-294B0FE0-FBF7-4B51-A34A-FEF4D049771B> prov:wasDerivedFrom <http://www.wikidata.org/reference/230e690b622c73b403f64da8531818cd0b5993d6> ;
@@ -327,10 +333,10 @@ wd:Q36855 rdfs:label "Cúm lợn",
     ps:P1748 "C80444" .
 
 <http://www.wikidata.org/entity/statement/Q36855-3d09ccde-42c0-d25c-68a5-a04fce9c5a93> prov:wasDerivedFrom <http://www.wikidata.org/reference/230e690b622c73b403f64da8531818cd0b5993d6>,
-        <http://www.wikidata.org/reference/2bb19f066369494a53b8ed6de80e0acaf4cbfe49> ;
+        <http://www.wikidata.org/reference/340d3a34c459ce4b1e42e22640aa820cb97da043> ;
     ps:P279 wd:Q2840 .
 
-<http://www.wikidata.org/entity/statement/Q36855-4407CDA5-D9BF-4C74-AE3B-3648B1F3AFFA> prov:wasDerivedFrom <http://www.wikidata.org/reference/2bb19f066369494a53b8ed6de80e0acaf4cbfe49> ;
+<http://www.wikidata.org/entity/statement/Q36855-4407CDA5-D9BF-4C74-AE3B-3648B1F3AFFA> prov:wasDerivedFrom <http://www.wikidata.org/reference/340d3a34c459ce4b1e42e22640aa820cb97da043> ;
     ps:P31 wd:Q12136 .
 
 <http://www.wikidata.org/entity/statement/Q36855-C725609A-6F51-4A2F-B451-897C76F77DCD> prov:wasDerivedFrom <http://www.wikidata.org/reference/230e690b622c73b403f64da8531818cd0b5993d6>,

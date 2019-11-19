@@ -1,13 +1,16 @@
-from pyshex.shex_evaluator import evaluate_cli as shexeval
-from pyshex import shex_evaluator
 from sparql_slurper import SlurpyGraph
+
+from pyshex import shex_evaluator
+from pyshex.shex_evaluator import evaluate_cli as shexeval
+from pyshex.user_agent import SlurpyGraphWithAgent
+
 
 permagraph = None
 
 
 def persistent_slurper(rdf: str) -> SlurpyGraph:
     global permagraph
-    permagraph = SlurpyGraph(rdf)
+    permagraph = SlurpyGraphWithAgent(rdf)
     return permagraph
 
 

@@ -12,7 +12,7 @@ data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data'))
 # not too distant future
 class InlineSPARQLIssue(unittest.TestCase):
 
-    @unittest.skipIf(True, "Fragile endpoint - has BNODES at the moment")
+    @unittest.skipIf(True, "Fragile endpoint - has BNODES at the moment.  This also takes a looong time")
     def test_inline_rdf(self):
         """ Issue #28. Make sure inline SPARQL with no carriage return works """
         shex = os.path.join(data_dir, 'biolink-model.shex')
