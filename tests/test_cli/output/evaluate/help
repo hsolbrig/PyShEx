@@ -1,6 +1,7 @@
 usage: shexeval [-h] [-f FORMAT] [-s START] [-ut] [-sp STARTPREDICATE]
                 [-fn FOCUS] [-A] [-d] [-ss] [-cf] [-sq SPARQL] [-se]
                 [--stopafter STOPAFTER] [-ps] [-pr] [-gn GRAPHNAME] [-pb]
+                [--useragent USERAGENT]
                 rdf shex
 
 positional arguments:
@@ -35,3 +36,7 @@ optional arguments:
                         Specific SPARQL graph to query - use '' for any named
                         graph
   -pb, --persistbnodes  Treat BNodes as persistent in SPARQL endpoint
+  --useragent USERAGENT
+                        Use this user agent in the SPARQL Queries (Default:
+                        "PyShEx/0.7.12 (https://github.com/hsolbrig/PyShEx;
+                        solbrig@jhu.edu)")

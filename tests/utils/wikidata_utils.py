@@ -4,7 +4,7 @@ from typing import Optional, List, NamedTuple, Union
 
 import jsonasobj
 import requests
-from SPARQLWrapper import SPARQLWrapper, JSON
+from SPARQLWrapper import JSON
 from jsonasobj import loads
 from rdflib import URIRef, Literal
 from rdflib.namespace import SKOS
@@ -12,6 +12,7 @@ from sparql_slurper import SlurpyGraph
 
 from pyshex import PrefixLibrary, ShExEvaluator
 from pyshex.shex_evaluator import EvaluationResult
+from pyshex.user_agent import SlurpyGraphWithAgent, SPARQLWrapperWithAgent
 
 
 class DataFrame(NamedTuple):
@@ -32,7 +33,7 @@ class WikiDataTestCase(unittest.TestCase):
         """
         Helper function to convert SPARQL results into a Pandas data frame.
         """
-        sparql = SPARQLWrapper(service)
+        sparql = SPARQLWrapperWithAgent(service)
         sparql.setQuery(query)
         sparql.setReturnFormat(JSON)
         result = sparql.query()
@@ -72,7 +73,7 @@ class WikiDataTestCase(unittest.TestCase):
             dfs: List[str] = self.get_sparql_dataframe(sparql_endpoint, sparql_query)
             dfs_slice = dfs[:num_entries] if num_entries is not None else dfs
             for df in dfs_slice:
-                slurper = SlurpyGraph(sparql_endpoint)
+                slurper = SlurpyGraphWithAgent(sparql_endpoint)
                 # slurper.debug_slurps = debug_slurps
                 prefixes.add_bindings(slurper)
                 print(f"Evaluating: {df}")

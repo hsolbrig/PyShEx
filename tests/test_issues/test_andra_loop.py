@@ -1,20 +1,17 @@
-import os
-import os
-
 import jsonasobj
 import requests
-from SPARQLWrapper import SPARQLWrapper, JSON
+from SPARQLWrapper import JSON
 from ShExJSG import ShExC
-from sparql_slurper import SlurpyGraph
 
 from pyshex import ShExEvaluator
+from pyshex.user_agent import SlurpyGraphWithAgent, SPARQLWrapperWithAgent
 
 
 def get_sparql_dataframe(service, query):
     """
     Helper function to convert SPARQL results into a Pandas data frame.
     """
-    sparql = SPARQLWrapper(service)
+    sparql = SPARQLWrapperWithAgent(service)
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
     result = sparql.query()
@@ -52,7 +49,7 @@ def run_shex_manifest():
 
             df = get_sparql_dataframe(sparql_endpoint, sparql_query)
             for wdid in df.item:
-                slurpeddata = SlurpyGraph(sparql_endpoint)
+                slurpeddata = SlurpyGraphWithAgent(sparql_endpoint)
                 # slurpeddata = requests.get(wdid + ".ttl")
 
                 results = evaluator.evaluate(rdf=slurpeddata, focus=wdid, debug=False, debug_slurps=True)
