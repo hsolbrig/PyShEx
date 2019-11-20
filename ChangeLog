@@ -4,7 +4,12 @@ CHANGES
 v0.7.14
 -------
 
-* Release version 0.7.12
+* Update version identifier and refresh Pipfile
+
+v0.7.13
+-------
+
+* Add user-agent to SPARQL queries
 
 v0.7.12
 -------

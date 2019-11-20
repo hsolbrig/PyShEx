@@ -6,13 +6,14 @@ from CFGraph import CFGraph
 from ShExJSG import ShExJ, ShExC
 from rdflib import Graph, URIRef, RDF
 from rdflib.util import guess_format
-from sparql_slurper import SlurpyGraph, QueryResultPrinter
+from sparql_slurper import QueryResultPrinter
 
 from pyshex import PrefixLibrary
 from pyshex.shape_expressions_language.p5_2_validation_definition import isValid
 from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.shapemap_structure_and_language.p3_shapemap_structure import FixedShapeMap, ShapeAssociation, START, \
     START_TYPE
+from pyshex.user_agent import UserAgent, SlurpyGraphWithAgent
 from pyshex.utils.schema_loader import SchemaLoader
 from pyshex.utils.sparql_query import SPARQLQuery
 
@@ -285,7 +286,8 @@ def genargs(prog: Optional[str] = None) -> ArgumentParser:
     parser.add_argument("-pr", "--printsparqlresults", help="Print SPARQL query and results", action="store_true")
     parser.add_argument("-gn", "--graphname", help="Specific SPARQL graph to query - use '' for any named graph")
     parser.add_argument("-pb", "--persistbnodes", help="Treat BNodes as persistent in SPARQL endpoint",
-                        action="store_true")
+                        action="store_true"),
+    parser.add_argument("--useragent", help='Use this user agent in the SPARQL Queries (Default: "' + UserAgent + '")')
     return parser
 
 
@@ -308,7 +310,7 @@ def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[st
         print('Error: Cannot determine RDF format from file name - use "--format" option', file=sys.stderr)
         return 3
     if opts.slurper:
-        g = SlurpyGraph(opts.rdf)
+        g = SlurpyGraphWithAgent(opts.rdf, agent=opts.useragent)
         if opts.printsparql:
             g.debug_slurps = True
         if opts.printsparqlresults:
@@ -346,7 +348,7 @@ def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[st
         elif not isinstance(opts.focus, list):
             opts.focus = [opts.focus]
         opts.focus += list(SPARQLQuery(opts.rdf, opts.sparql, print_query=opts.printsparql,
-                                       print_results=opts.printsparqlresults).focus_nodes())
+                                       print_results=opts.printsparqlresults, user_agent=opts.useragent).focus_nodes())
 
     def result_sink(rslt: EvaluationResult) -> bool:
         if not rslt.result:

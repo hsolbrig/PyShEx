@@ -1,6 +1,5 @@
-from sparql_slurper import SlurpyGraph
-
 from pyshex.shex_evaluator import ShExEvaluator
+from pyshex.user_agent import SlurpyGraphWithAgent
 from pyshex.utils.sparql_query import SPARQLQuery
 
 # SPARQL Endpoint
@@ -32,7 +31,7 @@ START=@:S1
 
 
 # Do the evaluation
-result = ShExEvaluator(SlurpyGraph(endpoint),                                   # RDF source
+result = ShExEvaluator(SlurpyGraphWithAgent(endpoint),                                   # RDF source
                        shex,                                                    # ShEx definition
                        SPARQLQuery(endpoint, sparql).focus_nodes()).evaluate()  # Source off focus nodes
 
