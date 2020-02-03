@@ -1,8 +1,8 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
-@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
-@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix pr: <http://www.wikidata.org/prop/reference/> .
@@ -84,7 +84,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "多発性硬化症",
         "多發性硬化症",
         "다발성 경화증" ;
-    schema:dateModified "2019-11-11T12:18:06+00:00"^^xsd:dateTime ;
+    schema:dateModified "2019-11-27T07:56:50+00:00"^^xsd:dateTime ;
     schema:description "Doença desmielinizante em que são danificadas as bainhas de mielina à volta dos axónios do cérebro e a medula espinal, provocando desmielinização.",
         "Sygdom der rammer nervecellerne",
         "autoimmune Krankheit, Entmarkungserkrankung des zentralen Nervensystems",
@@ -108,11 +108,11 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "एक रोग जिसमें मस्तिष्क तथा सुषुम्ना रज्जु शोथ के चारों ओर वसायुक्त माइलिन के आवरण क्षतिग्रस्त हो जाते हैं, जिससे माइलिन के आवरण नष्ट होने और घाव के निशान होने के साथ-साथ रोग के संकेत और लक्षणों के स्थूल क्रम उत्पन्न होते हैं",
         "একধরনের ডি-মায়েলিনেটিং মানব ব্যাধি যাতে মানব মস্তিষ্কে ও স্নায়ুরজ্জুতে বিদ্যমান স্নায়ুকোষগুলোকে আচ্ছাদনকারী অন্তরক আবরণ ক্ষতিগ্রস্ত হয়ে যায়",
         "뇌와 척수의 축삭 주변의 지방성 말이집을 감싸는 부분이 손상을 입어서 탈수질환과 흉터형성으로 이어지는 염증 질환이다." ;
-    schema:version 1050459956 ;
-    ns2:identifiers 46 ;
-    ns2:sitelinks 66 ;
-    ns2:statements 167 ;
-    ns2:timestamp "2019-11-11T12:18:29+00:00"^^xsd:dateTime ;
+    schema:version 1063419077 ;
+    ns1:identifiers 46 ;
+    ns1:sitelinks 66 ;
+    ns1:statements 167 ;
+    ns1:timestamp "2019-11-27T07:56:59+00:00"^^xsd:dateTime ;
     skos:altLabel "ED",
         "EM",
         "Encephalomyelitis disseminata",
@@ -319,13 +319,13 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
     p:P923 <http://www.wikidata.org/entity/statement/Q8277-2453d25c-4f59-9e07-cb4c-ec89998fb89d>,
         <http://www.wikidata.org/entity/statement/Q8277-9a1a35ab-48e1-b5f2-f718-0da1056b5744>,
         <http://www.wikidata.org/entity/statement/Q8277-f8b594bd-473f-8539-1564-48387991eec4> ;
-    ns1:P227 <http://d-nb.info/gnd/4040693-3> ;
-    ns1:P268 <http://data.bnf.fr/ark:/12148/cb119384088> ;
-    ns1:P349 <http://id.ndl.go.jp/auth/ndlna/00572494> ;
-    ns1:P486 <http://id.nlm.nih.gov/mesh/D009103> ;
-    ns1:P508 <http://purl.org/bncf/tid/25174> ;
-    ns1:P646 <http://g.co/kg/m/0dcqh> ;
-    ns1:P672 <http://id.nlm.nih.gov/mesh/C10.114.375.500>,
+    ns2:P227 <http://d-nb.info/gnd/4040693-3> ;
+    ns2:P268 <http://data.bnf.fr/ark:/12148/cb119384088> ;
+    ns2:P349 <http://id.ndl.go.jp/auth/ndlna/00572494> ;
+    ns2:P486 <http://id.nlm.nih.gov/mesh/D009103> ;
+    ns2:P508 <http://purl.org/bncf/tid/25174> ;
+    ns2:P646 <http://g.co/kg/m/0dcqh> ;
+    ns2:P672 <http://id.nlm.nih.gov/mesh/C10.114.375.500>,
         <http://id.nlm.nih.gov/mesh/C10.314.350.500>,
         <http://id.nlm.nih.gov/mesh/C20.111.258.250.500> ;
     wdt:P1051 "13793" ;

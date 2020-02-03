@@ -278,6 +278,8 @@ def genargs(prog: Optional[str] = None) -> ArgumentParser:
     parser.add_argument("-A", "--allsubjects", help="Evaluate all non-bnode subjects in the graph", action="store_true")
     parser.add_argument("-d", "--debug", action="store_true", help="Add debug output")
     parser.add_argument("-ss", "--slurper", action="store_true", help="Use SPARQL slurper graph")
+    parser.add_argument("-ssg", "--gdbslurper", action="store_true", help="Use GraphDB specific slurper to "
+                                                                          "persistent BNodes")
     parser.add_argument("-cf", "--flattener", action="store_true", help="Use RDF Collections flattener graph")
     parser.add_argument("-sq", "--sparql", help="SPARQL query to generate focus nodes")
     parser.add_argument("-se", "--stoponerror", help="Stop on an error", action="store_true")
@@ -295,22 +297,22 @@ def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[st
     if isinstance(argv, str):
         argv = argv.split()
     opts = genargs(prog).parse_args(argv if argv is not None else sys.argv[1:])
-    if opts.sparql:
+    if opts.sparql or opts.gdbslurper:
         opts.slurper = True
     if opts.slurper and opts.flattener:
         print("Error: Cannot combine slurper and flattener graphs", file=sys.stderr)
         return 2
     if not opts.sparql and not opts.slurper and \
             (opts.printsparql or opts.printsparqlresults or opts.graphname is not None or opts.persistbnodes):
-        print("Error: printsparql, pringsparqlresults, graphname and persistbnodes are SPQARQL only",
+        print("Error: printsparql, pringsparqlresults, graphname and persistbnodes are SPARQL only",
               file=sys.stderr)
     if not opts.format:
         opts.format = guess_format(opts.rdf)
     if not opts.format:
         print('Error: Cannot determine RDF format from file name - use "--format" option', file=sys.stderr)
         return 3
-    if opts.slurper:
-        g = SlurpyGraphWithAgent(opts.rdf, agent=opts.useragent)
+    if opts.slurper or opts.gdbslurper:
+        g = SlurpyGraphWithAgent(opts.rdf, agent=opts.useragent, gdb_slurper=opts.gdbslurper)
         if opts.printsparql:
             g.debug_slurps = True
         if opts.printsparqlresults:

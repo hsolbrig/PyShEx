@@ -13,7 +13,8 @@ urllib3 = "*"
 ShExJSG = ">=0.6.8"
 CFGraph = ">=0.2.1"
 PyShExC = ">=0.7.0"
-sparql-slurper = ">=0.2.2"
+sparql-slurper = ">=0.3.2"
 sparqlwrapper = ">=1.8.4"
 pbr = ">=5.4.3"
-
+# This is because of an annoying ANTLR warning
+antlr4-python3-runtime = "==4.7.1"

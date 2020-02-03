@@ -115,13 +115,14 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "精神疾患",
         "精神障礙",
         "정신 질환" ;
-    schema:dateModified "2019-10-25T16:14:58+00:00"^^xsd:dateTime ;
+    schema:dateModified "2020-01-16T22:17:10+00:00"^^xsd:dateTime ;
     schema:description "Anormalidade, sofrimento ou comprometimento da ordem psicológica e/ou mental",
         "affezione che colpisce il pensiero, i sentimenti o il comportamento di una persona",
         "alteración de los procesos cognitivos y afectivos del desarrollo",
         "distressing thought or behavior pattern",
         "erhebliche krankhafte Abweichung von der Norm im Erleben oder Verhalten",
         "lidské onemocnění",
+        "mielen toiminnan poikkeama, joka aiheuttaa merkittävää kärsimystä ja toimintakyvyn laskua",
         "ohälsa i psyket, det vill säga i personligheten, emotionerna eller kognitionen, vilka primärt har psykiska orsaker",
         "označenie pre výrazný odklon od spôsobu vnímania a správania psychicky zdravého jedinca",
         "psigiese aandoening",
@@ -138,11 +139,11 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "അസ്വാഭാവികമായ ചിന്തകളോ പെരുമാറ്റമോ",
         "同心理、神經有關嘅疾病",
         "疾病" ;
-    schema:version 1038760668 ;
+    schema:version 1099635306 ;
     ns2:identifiers 34 ;
     ns2:sitelinks 104 ;
     ns2:statements 76 ;
-    ns2:timestamp "2019-10-25T16:15:19+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2020-01-16T22:19:45+00:00"^^xsd:dateTime ;
     skos:altLabel "Gemütskrankheit",
         "Psychische Erkrankung",
         "Psychische Erkrankungen",
