@@ -112,13 +112,14 @@ wd:Q36956 rdfs:label "Abïl",
         "ハンセン病",
         "漢生病",
         "麻瘋",
+        "麻风",
         "한센병" ;
-    schema:dateModified "2019-11-18T08:10:44+00:00"^^xsd:dateTime ;
+    schema:dateModified "2020-02-20T10:24:53+00:00"^^xsd:dateTime ;
     schema:description "Chronic infection caused by bacteria Mycobacteria lepræ and lepromatosis",
         "Enfermidade causadora de feridas e erosões na pele.",
         "Một loại bệnh do vi khuẩn Mycobacterium leprae gây ra.",
         "bakterielle, schwach infektiöse Hautkrankheit mit Nerven- und Knochendegeneration",
-        "enfermedad infecciosa microbio llamado Mycobacterium lepromatosis",
+        "enfermedad infecciosa del bacilo llamado Mycobacterium leprae",
         "fertőző betegség",
         "infeksjonssykdom forårsaket av lepra-basillen",
         "infekční onemocnění",
@@ -126,6 +127,7 @@ wd:Q36956 rdfs:label "Abïl",
         "malattia infettiva cronica",
         "przewlekła choroba zakaźna",
         "sairaus",
+        "smitsom sygdom forårsaget af spedalskhed baciller",
         "χρόνια λοιμώδης ασθένεια του ανθρώπου, που προκαλείται από τα μυκοβακτήρια Mycobacterium leprae και Mycobacterium lepromatosis",
         "хронічна інфекційна хвороба, яку спричинює Mycobacterium leprae та Mycobacterium lepromatosis",
         "מחלה זיהומית הנגרמת על ידי החיידק ממין Mycobacterium leprae ויכולה להוביל לעיוותים בגוף ועל העור",
@@ -135,11 +137,11 @@ wd:Q36956 rdfs:label "Abïl",
         "బ్యాక్టీరియా వల్లే పుండ్లను కలిగించే వ్యాధి",
         "ᅟinfekta malsano kaŭzata de bakterio",
         "らい菌の感染によって起こる病気" ;
-    schema:version 1055198761 ;
-    ns2:identifiers 39 ;
-    ns2:sitelinks 122 ;
-    ns2:statements 106 ;
-    ns2:timestamp "2019-11-18T08:10:48+00:00"^^xsd:dateTime ;
+    schema:version 1119101872 ;
+    ns2:identifiers 40 ;
+    ns2:sitelinks 124 ;
+    ns2:statements 108 ;
+    ns2:timestamp "2020-02-20T10:25:23+00:00"^^xsd:dateTime ;
     skos:altLabel "Aussatz",
         "Aussätzige",
         "Bélpoklosság",
@@ -238,7 +240,7 @@ wd:Q36956 rdfs:label "Abïl",
         "spedalsksykje",
         "tzaraath",
         "ziekte van Hansen",
-        "Λέπρα",
+        "νόσος του χάνσεν",
         "Болест на Хансен",
         "Губа",
         "Губав",
@@ -335,7 +337,8 @@ wd:Q36956 rdfs:label "Abïl",
         <http://www.wikidata.org/entity/statement/Q36956-D1581824-E269-4916-BB7D-BEB885C44A11> ;
     p:P1748 <http://www.wikidata.org/entity/statement/Q36956-7AD8E76F-2EC8-43B5-B877-7A256EB89203> ;
     p:P18 <http://www.wikidata.org/entity/statement/Q36956-6A49C1FE-5C86-4847-BC5A-4462BB4A2D1B>,
-        <http://www.wikidata.org/entity/statement/Q36956-b1dd7e03-4c2a-6932-e5a6-9d6a19d0aae0> ;
+        <http://www.wikidata.org/entity/statement/Q36956-b1dd7e03-4c2a-6932-e5a6-9d6a19d0aae0>,
+        <http://www.wikidata.org/entity/statement/Q36956-b6bd58b8-4205-90ed-29da-5a47621b1ce2> ;
     p:P1995 <http://www.wikidata.org/entity/statement/Q36956-E03CF14B-F89A-4A7C-988B-B92DE9D3B5B1> ;
     p:P2176 <http://www.wikidata.org/entity/statement/Q36956-1E8888B8-87CE-41C9-A3C3-B0B9824AB639>,
         <http://www.wikidata.org/entity/statement/Q36956-CC3F677E-9C30-4B22-A974-B2F90609D075>,
@@ -388,13 +391,14 @@ wd:Q36956 rdfs:label "Abïl",
         <http://www.wikidata.org/entity/statement/q36956-754E2DD0-F147-48CD-BCB1-F55E4DEA6E3D>,
         <http://www.wikidata.org/entity/statement/q36956-B325EAF8-FB46-4583-B1ED-59C8ABD8E76D> ;
     p:P699 <http://www.wikidata.org/entity/statement/Q36956-C073D103-A691-49D4-AEAA-37CE292B9212> ;
+    p:P7033 <http://www.wikidata.org/entity/statement/Q36956-37E36111-CEBB-49C7-909F-8513790E7140> ;
     p:P7329 <http://www.wikidata.org/entity/statement/Q36956-342B088F-6602-439E-9498-C39392251E16> ;
     p:P780 <http://www.wikidata.org/entity/statement/Q36956-0b2140a9-4ca1-7d89-f360-122989564369>,
         <http://www.wikidata.org/entity/statement/Q36956-579b0a62-45b3-4f2e-fd87-32ea582a8c1c>,
         <http://www.wikidata.org/entity/statement/Q36956-aa354c95-4f15-27c7-f05e-039498476042> ;
     p:P828 <http://www.wikidata.org/entity/statement/Q36956-c39c29c6-4e60-fbe5-7034-aebf7f53de0d>,
         <http://www.wikidata.org/entity/statement/Q36956-f6d0adcc-4bf5-82ae-45c7-1381069796b8> ;
-    p:P902 <http://www.wikidata.org/entity/statement/Q36956-227BA989-0DB8-4851-9FA9-8D0B9A5C2CCC> ;
+    p:P902 <http://www.wikidata.org/entity/statement/Q36956-D6C93CDA-983A-46B4-AC54-1E69CC8DE99D> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q36956-3CA8A7C7-D284-43C0-BF0F-FE7F4C5D4D1D> ;
     p:P924 <http://www.wikidata.org/entity/statement/Q36956-4836c673-45c7-33aa-0122-7f9e188d45ff>,
         <http://www.wikidata.org/entity/statement/Q36956-52615a16-464e-8b59-d9a3-197cda91fb08> ;
@@ -407,6 +411,7 @@ wd:Q36956 rdfs:label "Abïl",
     ns1:P508 <http://purl.org/bncf/tid/14932> ;
     ns1:P646 <http://g.co/kg/m/0c5f7> ;
     ns1:P672 <http://id.nlm.nih.gov/mesh/C01.252.410.040.552.386> ;
+    ns1:P7033 <http://vocabulary.curriculum.edu.au/scot/15315.rdf> ;
     wdt:P1051 "12585" ;
     wdt:P1060 wd:Q15304512 ;
     wdt:P1193 1.0,
@@ -447,8 +452,7 @@ wd:Q36956 rdfs:label "Abïl",
     wdt:P1692 "030",
         "030.9" ;
     wdt:P1748 "C84824" ;
-    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Lepre713.jpg>,
-        <http://commons.wikimedia.org/wiki/Special:FilePath/Leprosy%20-%20Borderline%20Tuberculoid%20%28BT%29%20-%203.jpg> ;
+    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Leprosy.jpg> ;
     wdt:P1995 wd:Q788926 ;
     wdt:P2176 wd:Q203174,
         wd:Q418611,
@@ -500,13 +504,14 @@ wd:Q36956 rdfs:label "Abïl",
         "1165419",
         "220455" ;
     wdt:P699 "DOID:1024" ;
+    wdt:P7033 "scot/15315" ;
     wdt:P7329 "1B20" ;
     wdt:P780 wd:Q1641556,
         wd:Q2945973,
         wd:Q3705665 ;
     wdt:P828 wd:Q10748967,
         wd:Q155891 ;
-    wdt:P902 "7983" ;
+    wdt:P902 "007983" ;
     wdt:P910 wd:Q7214744 ;
     wdt:P924 wd:Q178859,
         wd:Q701216 ;

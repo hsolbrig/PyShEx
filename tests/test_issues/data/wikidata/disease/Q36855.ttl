@@ -1,8 +1,8 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
 @prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
-@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
-@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix pr: <http://www.wikidata.org/prop/reference/> .
@@ -105,8 +105,9 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "豚インフルエンザ",
         "豬流感",
         "돼지 인플루엔자" ;
-    schema:dateModified "2019-11-07T23:11:06+00:00"^^xsd:dateTime ;
+    schema:dateModified "2020-02-14T09:44:41+00:00"^^xsd:dateTime ;
     schema:description "Griepgevalle wat veroorsaak word deur Ortomixovirusse wat endemies is tot varke",
+        "Hastalık",
         "akut verlaufende Infektionskrankheit der Atemwege bei Hausschweinen",
         "enfermedad respiratoria provocada por un virus gripal que infecta a los cerdos",
         "infection caused by any one of several types of swine influenza viruses",
@@ -117,13 +118,14 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "maladie respiratoire provoquée par un virus grippal infectant les cochons",
         "инфекција коју изазива неколико типова вируса свињске инфлуенце",
         "условное название заболевания людей и животных, вызываемого штаммами вируса гриппа",
+        "מחלה זיהומית בקרב חזירים",
         "مرض جهاز تنفسي",
         "സൂക്ഷ്മാണുവിനാൽ ആതിഥേയജീവിയിൽ ഉണ്ടാവുന്ന രോഗബാധ" ;
-    schema:version 1047810908 ;
-    ns2:identifiers 11 ;
-    ns2:sitelinks 98 ;
-    ns2:statements 24 ;
-    ns2:timestamp "2019-11-07T23:11:09+00:00"^^xsd:dateTime ;
+    schema:version 1115075116 ;
+    ns1:identifiers 12 ;
+    ns1:sitelinks 99 ;
+    ns1:statements 27 ;
+    ns1:timestamp "2020-02-14T09:44:44+00:00"^^xsd:dateTime ;
     skos:altLabel "2009 H1N1 grip salgını",
         "A",
         "A(H1N1)",
@@ -275,6 +277,8 @@ wd:Q36855 rdfs:label "Cúm lợn",
     p:P1296 <http://www.wikidata.org/entity/statement/Q36855-B347E14B-4108-41B4-BC0D-8B5266BF4DC0> ;
     p:P1417 <http://www.wikidata.org/entity/statement/Q36855-A73E744D-8AE3-4DEB-8C8D-6EC48629977B> ;
     p:P1748 <http://www.wikidata.org/entity/statement/Q36855-312EC196-25F3-49CC-95F1-D21A952C34F2> ;
+    p:P18 <http://www.wikidata.org/entity/statement/Q36855-45d7f86c-4b48-f70d-f67a-9dc437d6e093>,
+        <http://www.wikidata.org/entity/statement/Q36855-f87ff2dc-4e3d-f1d2-affa-865a09e44263> ;
     p:P1995 <http://www.wikidata.org/entity/statement/Q36855-A8ADA526-7ADD-43D6-AA1F-F5051DC59DD1>,
         <http://www.wikidata.org/entity/statement/Q36855-d9e1b159-4ff4-d2b8-b384-e13f30c3c1a1> ;
     p:P2176 <http://www.wikidata.org/entity/statement/Q36855-18225D22-F23C-4423-A78C-92AF004BBB6C>,
@@ -291,16 +295,19 @@ wd:Q36855 rdfs:label "Cúm lợn",
     p:P494 <http://www.wikidata.org/entity/statement/Q36855-1fd8dec8-4aa7-6064-acea-ca4f3e50365b> ;
     p:P5270 <http://www.wikidata.org/entity/statement/Q36855-498E4672-98BC-4298-8EDF-E9332A255C76> ;
     p:P646 <http://www.wikidata.org/entity/statement/Q36855-7F648886-DE7E-48EF-869D-2EB4A5C67340> ;
+    p:P673 <http://www.wikidata.org/entity/statement/Q36855-48123008-B0ED-4D72-B1EC-3666B25544B1> ;
     p:P699 <http://www.wikidata.org/entity/statement/Q36855-251AFEFE-9357-4819-9345-8658A5817D72>,
         <http://www.wikidata.org/entity/statement/Q36855-C725609A-6F51-4A2F-B451-897C76F77DCD> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q36855-FF9EC242-3136-4C46-8597-0772CDD86794> ;
-    ns1:P227 <http://d-nb.info/gnd/7679861-6> ;
-    ns1:P646 <http://g.co/kg/m/057c6k> ;
+    ns2:P227 <http://d-nb.info/gnd/7679861-6> ;
+    ns2:P646 <http://g.co/kg/m/057c6k> ;
     wdt:P1225 "10644087" ;
     wdt:P1245 "1073872" ;
     wdt:P1296 "0517808" ;
     wdt:P1417 "science/swine-flu" ;
     wdt:P1748 "C80444" ;
+    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/EM%20of%20influenza%20virus.jpg>,
+        <http://commons.wikimedia.org/wiki/Special:FilePath/H1N1%20Influenza%20Virus%20Particles%20%288411599236%29.jpg> ;
     wdt:P1995 wd:Q203337,
         wd:Q788926 ;
     wdt:P2176 wd:Q146075,
@@ -317,6 +324,7 @@ wd:Q36855 rdfs:label "Cúm lợn",
     wdt:P494 "J09.X2" ;
     wdt:P5270 "MONDO:0005460" ;
     wdt:P646 "/m/057c6k" ;
+    wdt:P673 "1807048" ;
     wdt:P699 "DOID:0050211" ;
     wdt:P910 wd:Q10027720 .
 

@@ -18,8 +18,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-wd:Q8277 rdfs:label "Dağınıq skleroz",
-        "Encephalomyelitis disseminata",
+wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         "Esclerose múltipla",
         "Esclerose múltiple",
         "Esclerosis múltiple",
@@ -43,6 +42,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "Skleroza enîfireh",
         "Skleróza multiplex",
         "Xơ cứng rải rác",
+        "dağınıq skleroz",
         "esclerose múltipla",
         "esclerosi múltiple",
         "esclerosis múltiple",
@@ -84,7 +84,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "多発性硬化症",
         "多發性硬化症",
         "다발성 경화증" ;
-    schema:dateModified "2019-11-11T12:18:06+00:00"^^xsd:dateTime ;
+    schema:dateModified "2020-02-19T19:45:34+00:00"^^xsd:dateTime ;
     schema:description "Doença desmielinizante em que são danificadas as bainhas de mielina à volta dos axónios do cérebro e a medula espinal, provocando desmielinização.",
         "Sygdom der rammer nervecellerne",
         "autoimmune Krankheit, Entmarkungserkrankung des zentralen Nervensystems",
@@ -108,11 +108,11 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         "एक रोग जिसमें मस्तिष्क तथा सुषुम्ना रज्जु शोथ के चारों ओर वसायुक्त माइलिन के आवरण क्षतिग्रस्त हो जाते हैं, जिससे माइलिन के आवरण नष्ट होने और घाव के निशान होने के साथ-साथ रोग के संकेत और लक्षणों के स्थूल क्रम उत्पन्न होते हैं",
         "একধরনের ডি-মায়েলিনেটিং মানব ব্যাধি যাতে মানব মস্তিষ্কে ও স্নায়ুরজ্জুতে বিদ্যমান স্নায়ুকোষগুলোকে আচ্ছাদনকারী অন্তরক আবরণ ক্ষতিগ্রস্ত হয়ে যায়",
         "뇌와 척수의 축삭 주변의 지방성 말이집을 감싸는 부분이 손상을 입어서 탈수질환과 흉터형성으로 이어지는 염증 질환이다." ;
-    schema:version 1050459956 ;
+    schema:version 1118694998 ;
     ns2:identifiers 46 ;
     ns2:sitelinks 66 ;
-    ns2:statements 167 ;
-    ns2:timestamp "2019-11-11T12:18:29+00:00"^^xsd:dateTime ;
+    ns2:statements 168 ;
+    ns2:timestamp "2020-02-19T19:45:42+00:00"^^xsd:dateTime ;
     skos:altLabel "ED",
         "EM",
         "Encephalomyelitis disseminata",
@@ -267,7 +267,8 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
         <http://www.wikidata.org/entity/statement/Q8277-345a1dd1-4665-1986-7bac-409f9d9991a9>,
         <http://www.wikidata.org/entity/statement/Q8277-B90FD873-2590-4F53-ABE5-C16761151125> ;
     p:P2888 <http://www.wikidata.org/entity/statement/Q8277-5DF65E3F-A99A-42A9-B6C4-94E2794CF480>,
-        <http://www.wikidata.org/entity/statement/Q8277-F72B1D4B-192E-4A6A-BD98-3D7DCDA3852C> ;
+        <http://www.wikidata.org/entity/statement/Q8277-F72B1D4B-192E-4A6A-BD98-3D7DCDA3852C>,
+        <http://www.wikidata.org/entity/statement/Q8277-cc381fc4-4990-972e-45d9-b765aa38526e> ;
     p:P2892 <http://www.wikidata.org/entity/statement/Q8277-62068A35-7507-4D97-BBF0-67A81DB6F67B>,
         <http://www.wikidata.org/entity/statement/Q8277-62643617-F18F-4838-96B6-2051FA41FB44> ;
     p:P31 <http://www.wikidata.org/entity/statement/Q8277-04A1D4C5-B311-4E55-854A-AEB765CD0B60>,
@@ -328,6 +329,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
     ns1:P672 <http://id.nlm.nih.gov/mesh/C10.114.375.500>,
         <http://id.nlm.nih.gov/mesh/C10.314.350.500>,
         <http://id.nlm.nih.gov/mesh/C20.111.258.250.500> ;
+    ns1:P7033 <http://vocabulary.curriculum.edu.au/scot/11303.rdf> ;
     wdt:P1051 "13793" ;
     wdt:P1245 "1036110" ;
     wdt:P1325 <http://www.nanbyou.or.jp/entry/3806> ;
@@ -438,7 +440,8 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
     wdt:P279 wd:Q1186703,
         wd:Q18553585,
         wd:Q19000726 ;
-    wdt:P2888 <http://identifiers.org/doid/DOID:2377>,
+    wdt:P2888 <http://id.nlm.nih.gov/mesh/D009103>,
+        <http://identifiers.org/doid/DOID:2377>,
         <http://purl.obolibrary.org/obo/DOID_2377> ;
     wdt:P2892 "C0026769" ;
     wdt:P31 wd:Q12136,
@@ -553,7 +556,7 @@ wd:Q8277 rdfs:label "Dağınıq skleroz",
 <http://www.wikidata.org/entity/statement/Q8277-8FFD0FA3-98F9-4D46-B3F2-E0CAE3C9C0BB> prov:wasDerivedFrom <http://www.wikidata.org/reference/10cecd204a4201da34be5f69e6ae79b8e38d2059> ;
     ps:P699 "DOID:2377" .
 
-<http://www.wikidata.org/entity/statement/Q8277-D25E63CC-87F3-4B69-BA5C-8210DB0AF516> prov:wasDerivedFrom <http://www.wikidata.org/reference/10cecd204a4201da34be5f69e6ae79b8e38d2059> ;
+<http://www.wikidata.org/entity/statement/Q8277-D25E63CC-87F3-4B69-BA5C-8210DB0AF516> prov:wasDerivedFrom <http://www.wikidata.org/reference/b4b6870ad08f6da4d2fd525d4dbcfcb9d1740a32> ;
     ps:P486 "D009103" .
 
 <http://www.wikidata.org/entity/statement/Q8277-FDE0912A-3785-4638-9B3E-E0677E4FB765> prov:wasDerivedFrom <http://www.wikidata.org/reference/10cecd204a4201da34be5f69e6ae79b8e38d2059> ;

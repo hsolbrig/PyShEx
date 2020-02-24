@@ -49,11 +49,12 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "Ziekte van Creutzfeldt-Jakob",
         "malaltia de Creutzfeldt-Jakob",
         "malattia di Creutzfeldt-Jakob",
-        "Νόσος Creutzfeldt-Jakob",
+        "νόσος Creutzfeldt-Jakob",
         "Болезнь Крейтцфельдта — Якоба",
         "Крейтцфельд - Якоб ауруы",
         "Кројцфелд-Јакобова болест",
-        "Хвороба Кройцфельда—Якоба",
+        "Хвароба Кройцфэльта — Якаба",
+        "хвороба Кройцфельда—Якоба",
         "Կրեյտցֆելդտ-Յակոբի հիվանդություն",
         "מחלת קרויצפלד-יעקב",
         "بیماری کروتزفلد جاکوب",
@@ -63,23 +64,24 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "クロイツフェルト・ヤコブ病",
         "克雅二氏病",
         "크로이츠펠트-야코프병" ;
-    schema:dateModified "2019-11-07T23:46:46+00:00"^^xsd:dateTime ;
+    schema:dateModified "2020-02-20T10:10:08+00:00"^^xsd:dateTime ;
     schema:description "Enfermedad neurológica priónica",
         "Gizakietan agertzen den entzefalopatia espongiformearen aldaeretako bat. Eragin txikia du, kasu bat milioi biztanleko eta urteko; oro har, 60 urtetik gorako pertsonei eragiten die",
         "aivorappeumasairaus",
         "beim Menschen tödlich verlaufende, durch Prionen übertragbare spongiforme Enzephalopathie",
         "degenerative neurological disorder",
         "degenerativna bolezen",
+        "door prionen veroorzaakte hersenziekte",
         "infekční onemocnění",
         "malattia neurodegenerativa rara",
         "εκφυλιστική νευρολογική διαταραχή",
         "Наиболее распространенная прионная болезнь",
         "退行性神經系統疾病" ;
-    schema:version 1047832288 ;
+    schema:version 1119093840 ;
     ns2:identifiers 27 ;
     ns2:sitelinks 48 ;
     ns2:statements 46 ;
-    ns2:timestamp "2019-11-07T23:46:49+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2020-02-20T10:11:18+00:00"^^xsd:dateTime ;
     skos:altLabel "CJD",
         "CJD (Creutzfeldt Jakob disease)",
         "CJK",

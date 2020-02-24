@@ -71,6 +71,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "psykisk störning",
         "psykisk sygdom",
         "psyykkinen häiriö",
+        "ruhi xəstəlik",
         "rối loạn tâm thần",
         "trastorn mental",
         "trastorno mental",
@@ -115,13 +116,14 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "精神疾患",
         "精神障礙",
         "정신 질환" ;
-    schema:dateModified "2019-10-25T16:14:58+00:00"^^xsd:dateTime ;
+    schema:dateModified "2020-02-11T22:50:04+00:00"^^xsd:dateTime ;
     schema:description "Anormalidade, sofrimento ou comprometimento da ordem psicológica e/ou mental",
         "affezione che colpisce il pensiero, i sentimenti o il comportamento di una persona",
         "alteración de los procesos cognitivos y afectivos del desarrollo",
         "distressing thought or behavior pattern",
         "erhebliche krankhafte Abweichung von der Norm im Erleben oder Verhalten",
         "lidské onemocnění",
+        "mielen toiminnan poikkeama, joka aiheuttaa merkittävää kärsimystä ja toimintakyvyn laskua",
         "ohälsa i psyket, det vill säga i personligheten, emotionerna eller kognitionen, vilka primärt har psykiska orsaker",
         "označenie pre výrazný odklon od spôsobu vnímania a správania psychicky zdravého jedinca",
         "psigiese aandoening",
@@ -138,11 +140,11 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "അസ്വാഭാവികമായ ചിന്തകളോ പെരുമാറ്റമോ",
         "同心理、神經有關嘅疾病",
         "疾病" ;
-    schema:version 1038760668 ;
-    ns2:identifiers 34 ;
+    schema:version 1113583138 ;
+    ns2:identifiers 35 ;
     ns2:sitelinks 104 ;
-    ns2:statements 76 ;
-    ns2:timestamp "2019-10-25T16:15:19+00:00"^^xsd:dateTime ;
+    ns2:statements 77 ;
+    ns2:timestamp "2020-02-11T22:55:17+00:00"^^xsd:dateTime ;
     skos:altLabel "Gemütskrankheit",
         "Psychische Erkrankung",
         "Psychische Erkrankungen",
@@ -311,6 +313,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         <http://www.wikidata.org/entity/statement/Q12135-5251CD64-15DA-4CF5-8B26-D59859D32C5F>,
         <http://www.wikidata.org/entity/statement/Q12135-DDD25A09-18BB-4D72-B8D7-092F80C079A8>,
         <http://www.wikidata.org/entity/statement/Q12135-E689FAB7-C03E-4081-A2D4-B4EC25AC577B> ;
+    p:P7033 <http://www.wikidata.org/entity/statement/Q12135-83634034-61FF-4FDC-A3F1-B41BA424A18F> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q12135-C4E93B0F-B380-4A43-A5DE-AAAA0EE01C23> ;
     p:P924 <http://www.wikidata.org/entity/statement/Q12135-cc69b41f-4a5e-0076-b730-c3195fb6379b> ;
     p:P948 <http://www.wikidata.org/entity/statement/Q12135-814DFA56-621E-4461-97F7-ECF483D3249D> ;
@@ -324,6 +327,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     ns1:P508 <http://purl.org/bncf/tid/6114> ;
     ns1:P646 <http://g.co/kg/m/04x4r> ;
     ns1:P672 <http://id.nlm.nih.gov/mesh/F03> ;
+    ns1:P7033 <http://vocabulary.curriculum.edu.au/scot/4979.rdf> ;
     wdt:P1014 "300055131" ;
     wdt:P1051 "12879" ;
     wdt:P1296 "0193785" ;
@@ -388,6 +392,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     wdt:P6849 "psykiske-lidelser" ;
     wdt:P699 "DOID:0050329",
         "DOID:150" ;
+    wdt:P7033 "scot/4979" ;
     wdt:P910 wd:Q6902639 ;
     wdt:P924 wd:Q183257 ;
     wdt:P948 <http://commons.wikimedia.org/wiki/Special:FilePath/Starry%20night%20banner.jpg> ;

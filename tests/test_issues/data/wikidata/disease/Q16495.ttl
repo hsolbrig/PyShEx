@@ -28,22 +28,24 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
         "Ридел тириядиты",
         "Тиреоидит Риделя",
         "التهاب الدرقية المنسوب لريدل" ;
-    schema:dateModified "2019-05-15T16:13:27+00:00"^^xsd:dateTime ;
+    schema:dateModified "2020-02-15T10:42:24+00:00"^^xsd:dateTime ;
     schema:description "Schilddrüsenentzündung",
         "enfermedad de las tiroides",
         "maladie rare",
         "malattia infiammatoria cronica della tiroide, presumibilmente di origine autoimmune",
         "thyroid disease",
         "болезнь" ;
-    schema:version 942559989 ;
-    ns2:identifiers 11 ;
+    schema:version 1115704638 ;
+    ns2:identifiers 13 ;
     ns2:sitelinks 7 ;
-    ns2:statements 18 ;
+    ns2:statements 20 ;
+    ns2:timestamp "2020-02-15T10:42:27+00:00"^^xsd:dateTime ;
     skos:altLabel "Eisenharte Struma",
         "Riedel disease",
         "Riedel fibrosing thyroiditis",
         "Riedel thyroiditis",
         "Riedel's struma" ;
+    p:P1417 <http://www.wikidata.org/entity/statement/Q16495-D87DAEC5-EF79-4253-B23D-B8827AF9BC13> ;
     p:P1550 <http://www.wikidata.org/entity/statement/Q16495-18BC875D-6F6A-4717-AFCD-63BC19789657> ;
     p:P1748 <http://www.wikidata.org/entity/statement/Q16495-6A205BEC-7D57-4693-95DC-024C51EFE84B> ;
     p:P1995 <http://www.wikidata.org/entity/statement/Q16495-82F5AB4F-9BF7-4418-82F4-7160F5DE7A74> ;
@@ -59,10 +61,13 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
     p:P494 <http://www.wikidata.org/entity/statement/q16495-D1FC0544-4C35-484A-83EB-1B4B7B9DBF24> ;
     p:P5270 <http://www.wikidata.org/entity/statement/Q16495-5F48DE27-2059-4C7F-95A9-59D4AE731935> ;
     p:P557 <http://www.wikidata.org/entity/statement/q16495-3055022A-AA60-4897-8447-8A9832B41D05> ;
+    p:P6366 <http://www.wikidata.org/entity/statement/Q16495-6EDBB411-B8C2-4028-9491-ECA5F589C865> ;
     p:P646 <http://www.wikidata.org/entity/statement/Q16495-DF1766EE-C319-4DC2-B397-4701C1099733> ;
     p:P673 <http://www.wikidata.org/entity/statement/q16495-9C4DC051-BB7C-4F9D-AB73-A00C32F62AF9> ;
     p:P699 <http://www.wikidata.org/entity/statement/Q16495-A40D0BF5-8EE0-48EF-A699-70DFB5A7ECC3> ;
+    ns1:P6366 <http://ma-graph.org/entity/2776547070> ;
     ns1:P646 <http://g.co/kg/m/02rjq7r> ;
+    wdt:P1417 "science/Riedel-thyroiditis" ;
     wdt:P1550 "64744" ;
     wdt:P1748 "C35827" ;
     wdt:P1995 wd:Q162606 ;
@@ -77,6 +82,7 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
     wdt:P494 "E06.5" ;
     wdt:P5270 "MONDO:0018992" ;
     wdt:P557 "11590" ;
+    wdt:P6366 "2776547070" ;
     wdt:P646 "/m/02rjq7r" ;
     wdt:P673 "125243" ;
     wdt:P699 "DOID:14351" .
