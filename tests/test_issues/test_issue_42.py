@@ -1,7 +1,4 @@
 import unittest
-from pprint import pprint
-
-from rdflib import Graph, Namespace
 
 from pyshex import ShExEvaluator, PrefixLibrary
 

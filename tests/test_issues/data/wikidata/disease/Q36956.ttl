@@ -141,7 +141,7 @@ wd:Q36956 rdfs:label "Abïl",
     ns2:identifiers 40 ;
     ns2:sitelinks 124 ;
     ns2:statements 108 ;
-    ns2:timestamp "2020-02-20T10:25:23+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2020-02-20T10:25:00+00:00"^^xsd:dateTime ;
     skos:altLabel "Aussatz",
         "Aussätzige",
         "Bélpoklosság",

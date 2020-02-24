@@ -112,7 +112,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
     ns2:identifiers 46 ;
     ns2:sitelinks 66 ;
     ns2:statements 168 ;
-    ns2:timestamp "2020-02-19T19:45:42+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2020-02-19T19:45:48+00:00"^^xsd:dateTime ;
     skos:altLabel "ED",
         "EM",
         "Encephalomyelitis disseminata",
