@@ -1,0 +1,76 @@
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q45316529 rdfs:label "Defective ALG3 causes ALG3-CDG (CDG-1d)" ;
+    schema:dateModified "2018-06-27T16:44:24+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway Defective ALG3 causes ALG3-CDG (CDG-1d) in Homo sapiens" ;
+    schema:version 703444781 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 8 ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q45316529-5FC31CE4-24B3-44C9-9906-566AE4C3A68E>,
+        <http://www.wikidata.org/entity/statement/Q45316529-EDC5D0AA-1840-4E70-878A-74C84B5D97E4> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q45316529-846F486D-5756-453C-9334-51373D1A7A86> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q45316529-269404A9-4511-4D1A-B2BB-84847D1062F0> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q45316529-AE310E60-7169-4A24-9CC1-89C4BAAC4480> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q45316529-8BC32486-99BD-4626-9D58-175225EA6E0E> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q45316529-B8A1240E-A4CE-4A49-96EB-7A803B725298> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q45316529-E4CE20C6-E646-4F2C-8540-20BE9B42F708> ;
+    wdt:P2860 wd:Q22010872,
+        wd:Q34412550 ;
+    wdt:P2888 <https://identifiers.org/reactome:R-HSA-4720475> ;
+    wdt:P31 wd:Q4915012 ;
+    wdt:P361 wd:Q45316527 ;
+    wdt:P3937 "R-HSA-4720475" ;
+    wdt:P527 wd:Q50289210 ;
+    wdt:P703 wd:Q15978631 .
+
+<http://www.wikidata.org/entity/statement/Q22010872-645AD87D-AAA2-4484-892B-A6EA3633B794> ps:P698 "10581255" .
+
+<http://www.wikidata.org/entity/statement/Q34412550-51D210C0-6F24-48A6-8BFE-8F96C86DF9D2> ps:P698 "15840742" .
+
+<http://www.wikidata.org/entity/statement/Q45316527-21AE5EAE-2336-4623-8D85-D396926B2785> ps:P3937 "R-HSA-3781860" .
+
+<http://www.wikidata.org/entity/statement/Q45316529-269404A9-4511-4D1A-B2BB-84847D1062F0> prov:wasDerivedFrom wdref:78210bda54ca79e6ad9fd434f870939b090ccdf9 ;
+    ps:P31 wd:Q4915012 .
+
+<http://www.wikidata.org/entity/statement/Q45316529-5FC31CE4-24B3-44C9-9906-566AE4C3A68E> prov:wasDerivedFrom wdref:78210bda54ca79e6ad9fd434f870939b090ccdf9 ;
+    ps:P2860 wd:Q34412550 .
+
+<http://www.wikidata.org/entity/statement/Q45316529-8BC32486-99BD-4626-9D58-175225EA6E0E> ps:P3937 "R-HSA-4720475" .
+
+<http://www.wikidata.org/entity/statement/Q45316529-AE310E60-7169-4A24-9CC1-89C4BAAC4480> prov:wasDerivedFrom wdref:78210bda54ca79e6ad9fd434f870939b090ccdf9 ;
+    ps:P361 wd:Q45316527 .
+
+<http://www.wikidata.org/entity/statement/Q45316529-B8A1240E-A4CE-4A49-96EB-7A803B725298> prov:wasDerivedFrom wdref:78210bda54ca79e6ad9fd434f870939b090ccdf9 ;
+    ps:P527 wd:Q50289210 .
+
+<http://www.wikidata.org/entity/statement/Q45316529-E4CE20C6-E646-4F2C-8540-20BE9B42F708> prov:wasDerivedFrom wdref:78210bda54ca79e6ad9fd434f870939b090ccdf9 ;
+    ps:P703 wd:Q15978631 .
+
+<http://www.wikidata.org/entity/statement/Q45316529-EDC5D0AA-1840-4E70-878A-74C84B5D97E4> prov:wasDerivedFrom wdref:78210bda54ca79e6ad9fd434f870939b090ccdf9 ;
+    ps:P2860 wd:Q22010872 .
+
+<http://www.wikidata.org/entity/statement/Q50289210-67A84691-C965-485B-9A8D-0C1E77F3276F> ps:P3937 "R-HSA-4720473" .
+
+wd:Q22010872 p:P698 <http://www.wikidata.org/entity/statement/Q22010872-645AD87D-AAA2-4484-892B-A6EA3633B794> .
+
+wd:Q34412550 p:P698 <http://www.wikidata.org/entity/statement/Q34412550-51D210C0-6F24-48A6-8BFE-8F96C86DF9D2> .
+
+wd:Q45316527 p:P3937 <http://www.wikidata.org/entity/statement/Q45316527-21AE5EAE-2336-4623-8D85-D396926B2785> .
+
+wd:Q50289210 p:P3937 <http://www.wikidata.org/entity/statement/Q50289210-67A84691-C965-485B-9A8D-0C1E77F3276F> .
+
+wdref:78210bda54ca79e6ad9fd434f870939b090ccdf9 pr:P248 wd:Q2134522 ;
+    pr:P3937 "R-HSA-4720475" ;
+    pr:P813 "2018-06-27T00:00:00+00:00"^^xsd:dateTime .
+

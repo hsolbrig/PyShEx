@@ -6,7 +6,7 @@ from CFGraph import CFGraph
 from ShExJSG import ShExJ, ShExC
 from rdflib import Graph, URIRef, RDF
 from rdflib.util import guess_format
-from sparql_slurper import QueryResultPrinter
+from sparqlslurper import QueryResultPrinter
 
 from pyshex import PrefixLibrary
 from pyshex.shape_expressions_language.p5_2_validation_definition import isValid

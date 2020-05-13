@@ -1,15 +1,27 @@
 CHANGES
 =======
 
-v0.7.14
--------
-
+* Checkpoint
+* Checkpoint
+* Checkpoint
+* Passes
+* First cut on SDO example
+* First cut at schemaorg example
+* Added GraphDB specific tag to use the GraphDB BNode solution
+* ChangeLog
+* Update change log
+* Update all the notebooks
 * Update version identifier and refresh Pipfile
 
 v0.7.13
 -------
 
 * Add user-agent to SPARQL queries
+
+v0.7.14
+-------
+
+* Release version 0.7.12
 
 v0.7.12
 -------

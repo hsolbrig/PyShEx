@@ -1,5 +1,5 @@
 usage: shexeval [-h] [-f FORMAT] [-s START] [-ut] [-sp STARTPREDICATE]
-                [-fn FOCUS] [-A] [-d] [-ss] [-cf] [-sq SPARQL] [-se]
+                [-fn FOCUS] [-A] [-d] [-ss] [-ssg] [-cf] [-sq SPARQL] [-se]
                 [--stopafter STOPAFTER] [-ps] [-pr] [-gn GRAPHNAME] [-pb]
                 [--useragent USERAGENT]
                 rdf shex
@@ -23,6 +23,7 @@ optional arguments:
   -A, --allsubjects     Evaluate all non-bnode subjects in the graph
   -d, --debug           Add debug output
   -ss, --slurper        Use SPARQL slurper graph
+  -ssg, --gdbslurper    Use GraphDB specific slurper to persistent BNodes
   -cf, --flattener      Use RDF Collections flattener graph
   -sq SPARQL, --sparql SPARQL
                         SPARQL query to generate focus nodes
@@ -38,5 +39,5 @@ optional arguments:
   -pb, --persistbnodes  Treat BNodes as persistent in SPARQL endpoint
   --useragent USERAGENT
                         Use this user agent in the SPARQL Queries (Default:
-                        "PyShEx/0.7.12 (https://github.com/hsolbrig/PyShEx;
+                        "PyShEx/0.7.14 (https://github.com/hsolbrig/PyShEx;
                         solbrig@jhu.edu)")
