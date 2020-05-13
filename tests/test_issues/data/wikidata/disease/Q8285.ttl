@@ -1,7 +1,7 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
-@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -70,10 +70,10 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         "ଦୀର୍ଘକାଳୀନ ସ୍ନାୟୁ-ମାଂସପେଶୀ ରୋଗ",
         "アセチルコリンなどの抗体により神経・筋伝達が阻害されるために筋肉の易疲労性や脱力が起こる自己免疫疾患" ;
     schema:version 1179543656 ;
-    ns2:identifiers 38 ;
-    ns2:sitelinks 57 ;
-    ns2:statements 75 ;
-    ns2:timestamp "2020-05-12T07:45:00+00:00"^^xsd:dateTime ;
+    ns1:identifiers 38 ;
+    ns1:sitelinks 57 ;
+    ns1:statements 75 ;
+    ns1:timestamp "2020-05-12T07:45:00+00:00"^^xsd:dateTime ;
     skos:altLabel "Acquired myasthenia",
         "Astenik Bulbar Falaj",
         "Astenik bulbar falaj",
@@ -166,12 +166,12 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
     p:P7464 <http://www.wikidata.org/entity/statement/Q8285-D1F8F6B0-396C-4B3A-8167-AA169036DAD5> ;
     p:P7995 <http://www.wikidata.org/entity/statement/Q8285-4D61DD10-96C4-4700-823F-A824FE31FF93> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q8285-42587E5C-70AD-4FDF-9849-2C179C338A68> ;
-    ns1:P227 <http://d-nb.info/gnd/4075144-2> ;
-    ns1:P486 <http://id.nlm.nih.gov/mesh/D009157> ;
-    ns1:P508 <http://purl.org/bncf/tid/46655> ;
-    ns1:P6366 <http://ma-graph.org/entity/2909017070> ;
-    ns1:P646 <http://g.co/kg/m/04st8> ;
-    ns1:P672 <http://id.nlm.nih.gov/mesh/C10.114.656>,
+    ns2:P227 <http://d-nb.info/gnd/4075144-2> ;
+    ns2:P486 <http://id.nlm.nih.gov/mesh/D009157> ;
+    ns2:P508 <http://purl.org/bncf/tid/46655> ;
+    ns2:P6366 <http://ma-graph.org/entity/2909017070> ;
+    ns2:P646 <http://g.co/kg/m/04st8> ;
+    ns2:P672 <http://id.nlm.nih.gov/mesh/C10.114.656>,
         <http://id.nlm.nih.gov/mesh/C10.668.758.725>,
         <http://id.nlm.nih.gov/mesh/C20.111.258.500> ;
     wdt:P1193 0.00015 ;

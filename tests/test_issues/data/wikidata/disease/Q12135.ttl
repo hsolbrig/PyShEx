@@ -139,7 +139,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     ns2:identifiers 37 ;
     ns2:sitelinks 104 ;
     ns2:statements 79 ;
-    ns2:timestamp "2020-05-07T11:55:59+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2020-05-07T12:02:56+00:00"^^xsd:dateTime ;
     skos:altLabel "Gemütskrankheit",
         "Psychische Erkrankung",
         "Psychische Erkrankungen",
