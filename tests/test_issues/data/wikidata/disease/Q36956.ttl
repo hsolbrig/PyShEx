@@ -1,7 +1,7 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
-@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix ps: <http://www.wikidata.org/prop/statement/> .
@@ -134,10 +134,10 @@ wd:Q36956 rdfs:label "Abïl",
         "ᅟinfekta malsano kaŭzata de bakterio",
         "らい菌の感染によって起こる病気" ;
     schema:version 1178731620 ;
-    ns2:identifiers 43 ;
-    ns2:sitelinks 126 ;
-    ns2:statements 113 ;
-    ns2:timestamp "2020-05-11T06:19:26+00:00"^^xsd:dateTime ;
+    ns1:identifiers 43 ;
+    ns1:sitelinks 126 ;
+    ns1:statements 113 ;
+    ns1:timestamp "2020-05-11T06:19:33+00:00"^^xsd:dateTime ;
     skos:altLabel "Aussatz",
         "Aussätzige",
         "Bélpoklosság",
@@ -404,18 +404,18 @@ wd:Q36956 rdfs:label "Abïl",
     p:P924 <http://www.wikidata.org/entity/statement/Q36956-4836c673-45c7-33aa-0122-7f9e188d45ff>,
         <http://www.wikidata.org/entity/statement/Q36956-52615a16-464e-8b59-d9a3-197cda91fb08> ;
     p:P935 <http://www.wikidata.org/entity/statement/Q36956-FC3919F8-A2D9-4660-AD53-A3E555AAEF18> ;
-    ns1:P1256 <http://iconclass.org/31A4622> ;
-    ns1:P227 <http://d-nb.info/gnd/4035392-8> ;
-    ns1:P2347 <http://www.yso.fi/onto/yso/p16165> ;
-    ns1:P2581 <http://babelnet.org/rdf/s00042889n> ;
-    ns1:P349 <http://id.ndl.go.jp/auth/ndlna/00569249> ;
-    ns1:P3916 <http://vocabularies.unesco.org/thesaurus/concept3506> ;
-    ns1:P486 <http://id.nlm.nih.gov/mesh/D007918> ;
-    ns1:P508 <http://purl.org/bncf/tid/14932> ;
-    ns1:P6366 <http://ma-graph.org/entity/2780695269> ;
-    ns1:P646 <http://g.co/kg/m/0c5f7> ;
-    ns1:P672 <http://id.nlm.nih.gov/mesh/C01.252.410.040.552.386> ;
-    ns1:P7033 <http://vocabulary.curriculum.edu.au/scot/15315.rdf> ;
+    ns2:P1256 <http://iconclass.org/31A4622> ;
+    ns2:P227 <http://d-nb.info/gnd/4035392-8> ;
+    ns2:P2347 <http://www.yso.fi/onto/yso/p16165> ;
+    ns2:P2581 <http://babelnet.org/rdf/s00042889n> ;
+    ns2:P349 <http://id.ndl.go.jp/auth/ndlna/00569249> ;
+    ns2:P3916 <http://vocabularies.unesco.org/thesaurus/concept3506> ;
+    ns2:P486 <http://id.nlm.nih.gov/mesh/D007918> ;
+    ns2:P508 <http://purl.org/bncf/tid/14932> ;
+    ns2:P6366 <http://ma-graph.org/entity/2780695269> ;
+    ns2:P646 <http://g.co/kg/m/0c5f7> ;
+    ns2:P672 <http://id.nlm.nih.gov/mesh/C01.252.410.040.552.386> ;
+    ns2:P7033 <http://vocabulary.curriculum.edu.au/scot/15315.rdf> ;
     wdt:P1051 "12585" ;
     wdt:P1060 wd:Q15304512 ;
     wdt:P1193 0.00002413966 ;

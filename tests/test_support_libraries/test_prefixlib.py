@@ -7,6 +7,11 @@ from rdflib import Graph, Namespace, URIRef
 
 from pyshex import PrefixLibrary, standard_prefixes, known_prefixes
 
+# Install the turtle w/ prefixes library
+from pyshex.utils import tortoise
+
+tortoise.register()
+
 
 class PrefixLibTestCase(unittest.TestCase):
     def test_basics(self):
@@ -14,12 +19,13 @@ class PrefixLibTestCase(unittest.TestCase):
         pl = PrefixLibrary()
         print(str(pl))
         g = Graph()
-        pl.add_bindings(g)
+        pl.add_bindings_to(g)
 
+        # Version 5.0.0 of rdflib no longer emits unused prefixes, so we use the "tortoise" extension
         self.assertEqual("""@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .""", g.serialize(format="turtle").decode().strip())
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .""", g.serialize(format="tortoise").decode().strip())
         pl = PrefixLibrary("""@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix wikibase: <http://wikiba.se/ontology-beta#> .
 @prefix wds: <http://www.wikidata.org/entity/statement/> .
@@ -115,7 +121,7 @@ gw:cancer {
         pl = PrefixLibrary(None, ex="http://example.org/")
         self.assertEqual("http://example.org/", str(pl.EX))
 
-        known_prefixes.add_bindings(g)
+        known_prefixes.add_bindings_to(g)
         self.assertEqual("""@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
@@ -126,7 +132,7 @@ gw:cancer {
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xmlns: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .""", g.serialize(format="turtle").decode().strip())
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .""", g.serialize(format="tortoise").decode().strip())
 
     def test_nsname(self):
         """ Test the nsname method """
@@ -252,6 +258,7 @@ PREFIX ex: <http://example.org/test/>""", str(pl).strip())
 
     def test_add_rdf_file(self):
         """ Test adding RDF directly from a file """
+        # Note: earlier versions of this included an 'PREFIX ex: <http://example.org/>' -- the latest doesn't
         filename = os.path.join(os.path.dirname(__file__), '..', 'data', 'earl_report.ttl')
         pl = PrefixLibrary()
         self.assertEqual("""PREFIX xml: <http://www.w3.org/XML/1998/namespace>
@@ -261,7 +268,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX doap: <http://usefulinc.com/ns/doap#>
 PREFIX earl: <http://www.w3.org/ns/earl#>
-PREFIX ex: <http://example.org/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX ns1: <http://purl.org/dc/elements/1.1/>""", str(pl.add_rdf(filename)).strip())
         g = Graph()
@@ -274,7 +280,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX doap: <http://usefulinc.com/ns/doap#>
 PREFIX earl: <http://www.w3.org/ns/earl#>
-PREFIX ex: <http://example.org/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX ns1: <http://purl.org/dc/elements/1.1/>""", str(pl.add_rdf(g)).strip())
 

@@ -1,7 +1,7 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
-@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix ps: <http://www.wikidata.org/prop/statement/> .
@@ -30,10 +30,10 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
         "thyroid disease",
         "болезнь" ;
     schema:version 1115704638 ;
-    ns2:identifiers 13 ;
-    ns2:sitelinks 7 ;
-    ns2:statements 20 ;
-    ns2:timestamp "2020-02-15T10:42:30+00:00"^^xsd:dateTime ;
+    ns1:identifiers 13 ;
+    ns1:sitelinks 7 ;
+    ns1:statements 20 ;
+    ns1:timestamp "2020-02-15T10:42:30+00:00"^^xsd:dateTime ;
     skos:altLabel "Eisenharte Struma",
         "Riedel disease",
         "Riedel fibrosing thyroiditis",
@@ -59,8 +59,8 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
     p:P646 <http://www.wikidata.org/entity/statement/Q16495-DF1766EE-C319-4DC2-B397-4701C1099733> ;
     p:P673 <http://www.wikidata.org/entity/statement/q16495-9C4DC051-BB7C-4F9D-AB73-A00C32F62AF9> ;
     p:P699 <http://www.wikidata.org/entity/statement/Q16495-A40D0BF5-8EE0-48EF-A699-70DFB5A7ECC3> ;
-    ns1:P6366 <http://ma-graph.org/entity/2776547070> ;
-    ns1:P646 <http://g.co/kg/m/02rjq7r> ;
+    ns2:P6366 <http://ma-graph.org/entity/2776547070> ;
+    ns2:P646 <http://g.co/kg/m/02rjq7r> ;
     wdt:P1417 "science/Riedel-thyroiditis" ;
     wdt:P1550 "64744" ;
     wdt:P1748 "C35827" ;

@@ -1,7 +1,7 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix ns1: <http://wikiba.se/ontology#> .
-@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -74,10 +74,10 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "Наиболее распространенная прионная болезнь",
         "退行性神經系統疾病" ;
     schema:version 1158810856 ;
-    ns1:identifiers 30 ;
-    ns1:sitelinks 48 ;
-    ns1:statements 50 ;
-    ns1:timestamp "2020-04-16T13:28:04+00:00"^^xsd:dateTime ;
+    ns2:identifiers 30 ;
+    ns2:sitelinks 48 ;
+    ns2:statements 50 ;
+    ns2:timestamp "2020-04-16T13:08:30+00:00"^^xsd:dateTime ;
     skos:altLabel "CJD",
         "CJD (Creutzfeldt Jakob disease)",
         "CJK",
@@ -145,12 +145,12 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
     p:P699 <http://www.wikidata.org/entity/statement/Q49989-161C34D8-88A3-4C6C-A153-02ED13E38DCF>,
         <http://www.wikidata.org/entity/statement/Q49989-DD691227-8D8E-4836-8D6A-3FCDECAB8F62> ;
     p:P7995 <http://www.wikidata.org/entity/statement/Q49989-B290008C-8488-4A03-A866-C27F457F3FA7> ;
-    ns2:P2347 <http://www.yso.fi/onto/yso/p12152> ;
-    ns2:P349 <http://id.ndl.go.jp/auth/ndlna/00575235> ;
-    ns2:P486 <http://id.nlm.nih.gov/mesh/D007562> ;
-    ns2:P508 <http://purl.org/bncf/tid/54342> ;
-    ns2:P646 <http://g.co/kg/m/01ptn> ;
-    ns2:P672 <http://id.nlm.nih.gov/mesh/C10.228.140.380.165>,
+    ns1:P2347 <http://www.yso.fi/onto/yso/p12152> ;
+    ns1:P349 <http://id.ndl.go.jp/auth/ndlna/00575235> ;
+    ns1:P486 <http://id.nlm.nih.gov/mesh/D007562> ;
+    ns1:P508 <http://purl.org/bncf/tid/54342> ;
+    ns1:P646 <http://g.co/kg/m/01ptn> ;
+    ns1:P672 <http://id.nlm.nih.gov/mesh/C10.228.140.380.165>,
         <http://id.nlm.nih.gov/mesh/C10.228.228.800.230>,
         <http://id.nlm.nih.gov/mesh/F03.615.400.300> ;
     wdt:P1193 0.0000015 ;

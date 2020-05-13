@@ -1,7 +1,7 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix ns1: <http://wikiba.se/ontology#> .
-@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix ns2: <http://wikiba.se/ontology#> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix ps: <http://www.wikidata.org/prop/statement/> .
@@ -117,10 +117,10 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "مرض جهاز تنفسي",
         "സൂക്ഷ്മാണുവിനാൽ ആതിഥേയജീവിയിൽ ഉണ്ടാവുന്ന രോഗബാധ" ;
     schema:version 1151269305 ;
-    ns1:identifiers 13 ;
-    ns1:sitelinks 100 ;
-    ns1:statements 28 ;
-    ns1:timestamp "2020-04-06T06:38:26+00:00"^^xsd:dateTime ;
+    ns2:identifiers 13 ;
+    ns2:sitelinks 100 ;
+    ns2:statements 28 ;
+    ns2:timestamp "2020-04-06T07:34:54+00:00"^^xsd:dateTime ;
     skos:altLabel "2009 H1N1 grip salgını",
         "A",
         "A(H1N1)",
@@ -295,9 +295,9 @@ wd:Q36855 rdfs:label "Cúm lợn",
     p:P699 <http://www.wikidata.org/entity/statement/Q36855-251AFEFE-9357-4819-9345-8658A5817D72>,
         <http://www.wikidata.org/entity/statement/Q36855-C725609A-6F51-4A2F-B451-897C76F77DCD> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q36855-FF9EC242-3136-4C46-8597-0772CDD86794> ;
-    ns2:P227 <http://d-nb.info/gnd/7679861-6> ;
-    ns2:P2347 <http://www.yso.fi/onto/yso/p23407> ;
-    ns2:P646 <http://g.co/kg/m/057c6k> ;
+    ns1:P227 <http://d-nb.info/gnd/7679861-6> ;
+    ns1:P2347 <http://www.yso.fi/onto/yso/p23407> ;
+    ns1:P646 <http://g.co/kg/m/057c6k> ;
     wdt:P1225 "10644087" ;
     wdt:P1245 "1073872" ;
     wdt:P1296 "0517808" ;

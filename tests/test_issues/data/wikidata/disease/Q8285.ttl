@@ -271,6 +271,10 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
 <http://www.wikidata.org/entity/statement/Q8285-B8ECADA4-DF3E-4526-B510-8FA9D2D99169> prov:wasDerivedFrom <http://www.wikidata.org/reference/e145ccb65663be7c2a50a360a47bbc272e707521> ;
     ps:P2892 "C1260409" .
 
+<http://www.wikidata.org/entity/statement/Q8285-C171765D-B54C-44BA-9F1A-92401A255140> prov:wasDerivedFrom <http://www.wikidata.org/reference/16ed5d93833f10dd153347f992d98a32ac6b443a>,
+        <http://www.wikidata.org/reference/c1898be4ea67095fa65352a57b656520726de306> ;
+    ps:P31 wd:Q42303753 .
+
 <http://www.wikidata.org/entity/statement/Q8285-D080E30F-AFEF-4874-A3EB-76499D195266> prov:wasDerivedFrom <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
     ps:P279 wd:Q3843811 .
 
