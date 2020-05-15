@@ -4,17 +4,15 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pbr = "*"
 
 [packages]
-rdflib = ">=4.2.2"
-rdflib-jsonld = ">=0.4.0"
+rdflib = "~=5.0"
+rdflib-jsonld = "~=0.5"
 requests = ">=2.22.0"
 urllib3 = "*"
-ShExJSG = ">=0.6.8"
+ShExJSG = "~=0.7"
 CFGraph = ">=0.2.1"
-PyShExC = ">=0.7.0"
-sparql-slurper = ">=0.3.2"
-sparqlwrapper = ">=1.8.4"
-pbr = ">=5.4.3"
-# This is because of an annoying ANTLR warning
-antlr4-python3-runtime = "==4.7.1"
+PyShExC = "==0.8.2"
+sparqlslurper = "~=0.4"
+sparqlwrapper = ">=1.8.5"

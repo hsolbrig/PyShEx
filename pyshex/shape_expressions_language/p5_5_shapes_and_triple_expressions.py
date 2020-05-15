@@ -5,7 +5,7 @@ from typing import List, Optional, Union, Set
 from ShExJSG import ShExJ
 from pyjsg.jsglib import isinstance_
 from rdflib import URIRef
-from sparql_slurper import SlurpyGraph
+from sparqlslurper import SlurpyGraph
 
 from pyshex.shape_expressions_language.p3_terminology import arcsOut
 from pyshex.shape_expressions_language.p5_7_semantic_actions import semActsSatisfied

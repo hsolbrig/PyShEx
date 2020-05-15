@@ -8,7 +8,7 @@ from SPARQLWrapper import JSON
 from jsonasobj import loads
 from rdflib import URIRef, Literal
 from rdflib.namespace import SKOS
-from sparql_slurper import SlurpyGraph
+from sparqlslurper import SlurpyGraph
 
 from pyshex import PrefixLibrary, ShExEvaluator
 from pyshex.shex_evaluator import EvaluationResult
@@ -56,7 +56,7 @@ class WikiDataTestCase(unittest.TestCase):
         :param verbose: True means talk about it
         :param debug: debug setting for shex evaluator
         :param stop_on_fail: True means run until failure
-        :param debug_slurps: True means emit SPARQL_slurper statistics
+        :param debug_slurps: True means emit sparqlslurper statistics
         :param save_graph_dir: If present, save the final graph in this directory
         :return:
         """

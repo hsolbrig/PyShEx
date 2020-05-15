@@ -3,7 +3,7 @@ from contextlib import AbstractContextManager
 
 from ShExJSG import ShExJ
 from rdflib import Graph
-from sparql_slurper import SlurpyGraph
+from sparqlslurper import SlurpyGraph
 
 from pyshex.shape_expressions_language.p5_context import Context
 from pyshex.shapemap_structure_and_language.p1_notation_and_terminology import Node

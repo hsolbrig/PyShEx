@@ -2,7 +2,7 @@ from typing import Optional
 
 from SPARQLWrapper import SPARQLWrapper
 from pbr.version import VersionInfo
-from sparql_slurper import SlurpyGraph, GraphDBSlurpyGraph
+from sparqlslurper import SlurpyGraph, GraphDBSlurpyGraph
 
 __version__ = VersionInfo('PyShEx')
 
