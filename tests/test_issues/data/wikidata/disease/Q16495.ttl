@@ -1,21 +1,15 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
 @prefix ns1: <http://wikiba.se/ontology#> .
 @prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
-@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
-@prefix pr: <http://www.wikidata.org/prop/reference/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
 @prefix ps: <http://www.wikidata.org/prop/statement/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
@@ -39,7 +33,8 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
     ns1:identifiers 13 ;
     ns1:sitelinks 7 ;
     ns1:statements 20 ;
-    ns1:timestamp "2020-02-15T10:42:37+00:00"^^xsd:dateTime ;
+
+    ns1:timestamp "2020-02-15T10:42:30+00:00"^^xsd:dateTime ;
     skos:altLabel "Eisenharte Struma",
         "Riedel disease",
         "Riedel fibrosing thyroiditis",
@@ -72,8 +67,8 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
     wdt:P1748 "C35827" ;
     wdt:P1995 wd:Q162606 ;
     wdt:P279 wd:Q11835644 ;
-    wdt:P2888 <http://identifiers.org/doid/DOID:14351>,
-        <http://purl.obolibrary.org/obo/DOID_14351>,
+    wdt:P2888 doio:DOID:14351,
+        do:14351,
         <http://www.orpha.net/ORDO/Orphanet_64744> ;
     wdt:P2892 "C0154162" ;
     wdt:P31 wd:Q12136 ;

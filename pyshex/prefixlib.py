@@ -2,8 +2,12 @@ import re
 from typing import Union, Optional
 
 from pyshexc.parser_impl.generate_shexj import load_shex_file
-from rdflib import Namespace, Graph, RDF, RDFS, XSD, URIRef
+from rdflib import Namespace, Graph, RDF, RDFS, XSD, URIRef, plugins
 from rdflib.namespace import DOAP, FOAF, DC, DCTERMS, SKOS, OWL, XMLNS, _RDFNamespace
+from rdflib.plugins.serializers.turtle import TurtleSerializer
+from rdflib.serializer import Serializer
+
+from pyshex.utils.deprecated import deprecated
 
 
 class PrefixLibrary:
@@ -69,7 +73,7 @@ class PrefixLibrary:
             setattr(self, k.upper(), Namespace(v))
         return self
 
-    def add_bindings(self, g: Graph) -> "PrefixLibrary":
+    def add_bindings_to(self, g: Graph) -> "PrefixLibrary":
         """ Add bindings in the library to the graph
 
         :param g: graph to add prefixes to
@@ -78,6 +82,11 @@ class PrefixLibrary:
         for prefix, namespace in self:
             g.bind(prefix.lower(), namespace)
         return self
+
+    @deprecated
+    def add_bindings(self, g: Graph) -> "PrefixLibrary":
+        """ deprecated. Use: add_bindings_to """
+        return self.add_bindings_to(g)
 
     def add_to_object(self, target: object, override: bool = False) -> int:
         """

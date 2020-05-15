@@ -65,6 +65,16 @@ class SparqlQueryTestCase(CLITestCase):
                       'select ?item where{?item a <http://w3id.org/biolink/vocab/Protein>} LIMIT 20'],
                      'dbsparql6', failexpected=True, text_filter=elapsed_filter)
 
+    @unittest.skipIf(True, "pat4 can (and is) in the DB multiple times -- this is a FHIR problem")
+    def test_infer_setting(self):
+        """ Test setting infer to False """
+
+        shex = os.path.join(datadir, 'patient.shex')
+        rdf = 'https://graph.fhircat.org/repositories/fhirontology?infer=false'
+        self.maxDiff = None
+        self.do_test([rdf, shex, '-fn', "http://hl7.org/fhir/Patient/pat4", '-ssg', '-pb', '-ps', '-pr'], 'dbsparql7',
+                     text_filter=elapsed_filter)
+
 
 if __name__ == '__main__':
     unittest.main()

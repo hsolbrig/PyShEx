@@ -13,6 +13,7 @@ class N3MapperUnitTest(unittest.TestCase):
         new_files = False
 
         os.makedirs(target_dir, exist_ok=True)
+        self.maxDiff = None
         for f in os.listdir(source_dir):
             fpath = os.path.join(source_dir, f)
             if os.path.isfile(fpath):

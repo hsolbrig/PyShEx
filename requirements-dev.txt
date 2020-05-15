@@ -10,12 +10,4 @@
 # `Pipfile.lock` and then regenerate `requirements*.txt`.
 ################################################################################
 
-cfgraph>=0.2.1
-pyshexc==0.8.2
-rdflib-jsonld~=0.5
-rdflib~=5.0
-requests>=2.22.0
-shexjsg~=0.7
-sparql-slurper>=0.3.4
-sparqlwrapper>=1.8.5
-urllib3
+pbr

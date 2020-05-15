@@ -4,24 +4,15 @@ import unittest
 from rdflib import URIRef
 
 from ancilliary.earlreport import EARLPage
-from tests import RDFLIB_PARSING_ISSUE_FIXED
 from tests.utils.manifest_tester import ManifestEntryTestCase
 
 
 class ManifestShexShexCTestCase(ManifestEntryTestCase):
     def __init__(self, methodname):
-        if not RDFLIB_PARSING_ISSUE_FIXED:
-            issue_text = 'RDFLIB quote parsing issue not fixed'
-            skips = {'1val1STRING_LITERAL1_with_all_punctuation_pass': issue_text,
-                     '1val1STRING_LITERAL1_with_all_punctuation_fail': issue_text,
-                     '1val1STRING_LITERAL1_with_ECHAR_escapes_pass': issue_text,
-                     '1val1STRING_LITERAL1_with_ECHAR_escapes_fail': issue_text,
-                     '1literalPattern_with_all_punctuation_pass': issue_text,
-                     '1literalPattern_with_all_punctuation_fail': issue_text
-                     }
-        else:
-            skips = None
-        super().__init__(methodname, skips)
+        # This is a spot that you can insert conditional skips -- the second parameter below is a dictionary of test
+        # names and skip reasons.
+        # Example: skips = {'1val1STRING_LITERAL1_with_all_punctuation_pass': issue_text}
+        super().__init__(methodname, None)
 
     def test_shex_shexc(self):
         self.mfst.shex_format = "shex"

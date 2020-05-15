@@ -1,21 +1,17 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
-@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
-@prefix ns2: <http://wikiba.se/ontology#> .
+
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
-@prefix pr: <http://www.wikidata.org/prop/reference/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
 @prefix ps: <http://www.wikidata.org/prop/statement/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 wd:Q8285 rdfs:label "Bệnh nhược cơ",
@@ -30,6 +26,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         "Myasthenia Gravis",
         "Myasthenia gravis",
         "Sunkioji miastenija",
+        "Vöðvaslenfár",
         "miastenia grave",
         "miastenia gravis",
         "miastenio grava",
@@ -59,13 +56,13 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         "重症筋無力症",
         "重症肌無力",
         "중증 근무력증" ;
-    schema:dateModified "2019-12-10T08:16:12+00:00"^^xsd:dateTime ;
-    schema:description "enfermedad neuromuscular",
+    schema:dateModified "2020-05-12T07:40:34+00:00"^^xsd:dateTime ;
+    schema:description "autoimmuunisairaus",
+        "enfermedad neuromuscular",
         "human disease",
         "maladie neuromusculaire auto-immune",
         "malattia autoimmune neuromuscolare",
         "muskelsjukdom som kännetecknas av svaghet i skelettmuskulatur",
-        "myastenia gravis",
         "neurologische Autoimmunerkrankung",
         "ανθρώπινη αρρώστια μυών",
         "аутоимунное нервно-мышечное заболевание",
@@ -73,11 +70,11 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         "مَرَضٌ بَشَرِيٌّ",
         "ଦୀର୍ଘକାଳୀନ ସ୍ନାୟୁ-ମାଂସପେଶୀ ରୋଗ",
         "アセチルコリンなどの抗体により神経・筋伝達が阻害されるために筋肉の易疲労性や脱力が起こる自己免疫疾患" ;
-    schema:version 1073410698 ;
-    ns2:identifiers 36 ;
-    ns2:sitelinks 55 ;
-    ns2:statements 72 ;
-    ns2:timestamp "2019-12-10T08:16:15+00:00"^^xsd:dateTime ;
+    schema:version 1179543656 ;
+    ns1:identifiers 38 ;
+    ns1:sitelinks 57 ;
+    ns1:statements 75 ;
+    ns1:timestamp "2020-05-12T07:45:00+00:00"^^xsd:dateTime ;
     skos:altLabel "Acquired myasthenia",
         "Astenik Bulbar Falaj",
         "Astenik bulbar falaj",
@@ -95,6 +92,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         "miastènia gravis",
         "myasteni",
         "myastenia gravis" ;
+    p:P1193 <http://www.wikidata.org/entity/statement/Q8285-9cb626a8-43b5-e15e-46fd-c6995700caaa> ;
     p:P1325 <http://www.wikidata.org/entity/statement/Q8285-4E0D0F1D-3B87-44AF-AC22-BB6B4DD0CA11> ;
     p:P1417 <http://www.wikidata.org/entity/statement/Q8285-B1D877F8-94D4-48D5-A193-85032A453EF2> ;
     p:P1461 <http://www.wikidata.org/entity/statement/Q8285-9780E747-7079-4648-9599-D2D0BC3C6160> ;
@@ -155,6 +153,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
     p:P5270 <http://www.wikidata.org/entity/statement/Q8285-D30137C2-4254-414C-B1D6-C1B5E62267DB> ;
     p:P557 <http://www.wikidata.org/entity/statement/q8285-E9AA4873-DB4A-4AE2-B4BF-6EF498091506> ;
     p:P604 <http://www.wikidata.org/entity/statement/q8285-9d9303d0-44db-5320-111d-8c536dda2699> ;
+    p:P6366 <http://www.wikidata.org/entity/statement/Q8285-3CB84954-1E15-4FA3-924B-34F0F4630BF9> ;
     p:P646 <http://www.wikidata.org/entity/statement/Q8285-87B38E55-5095-42B0-BEF8-EDEE9CED0A26> ;
     p:P672 <http://www.wikidata.org/entity/statement/Q8285-40BF9B86-D68F-45DE-9CA3-071EFD5A6104>,
         <http://www.wikidata.org/entity/statement/Q8285-E01F0F33-3278-4AAB-A43E-8E1C9EC10397>,
@@ -166,14 +165,17 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
     p:P699 <http://www.wikidata.org/entity/statement/Q8285-7735179B-C005-47F4-A19B-4CA0C081968A>,
         <http://www.wikidata.org/entity/statement/Q8285-ECFD96DB-F159-496A-AF2B-D52B1EABF2A0> ;
     p:P7464 <http://www.wikidata.org/entity/statement/Q8285-D1F8F6B0-396C-4B3A-8167-AA169036DAD5> ;
+    p:P7995 <http://www.wikidata.org/entity/statement/Q8285-4D61DD10-96C4-4700-823F-A824FE31FF93> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q8285-42587E5C-70AD-4FDF-9849-2C179C338A68> ;
-    ns1:P227 <http://d-nb.info/gnd/4075144-2> ;
-    ns1:P486 <http://id.nlm.nih.gov/mesh/D009157> ;
-    ns1:P508 <http://purl.org/bncf/tid/46655> ;
-    ns1:P646 <http://g.co/kg/m/04st8> ;
-    ns1:P672 <http://id.nlm.nih.gov/mesh/C10.114.656>,
+    ns2:P227 <http://d-nb.info/gnd/4075144-2> ;
+    ns2:P486 <http://id.nlm.nih.gov/mesh/D009157> ;
+    ns2:P508 <http://purl.org/bncf/tid/46655> ;
+    ns2:P6366 <http://ma-graph.org/entity/2909017070> ;
+    ns2:P646 <http://g.co/kg/m/04st8> ;
+    ns2:P672 <http://id.nlm.nih.gov/mesh/C10.114.656>,
         <http://id.nlm.nih.gov/mesh/C10.668.758.725>,
         <http://id.nlm.nih.gov/mesh/C20.111.258.500> ;
+    wdt:P1193 0.00015 ;
     wdt:P1325 <http://www.nanbyou.or.jp/entry/120> ;
     wdt:P1417 "science/myasthenia-gravis" ;
     wdt:P1461 "myasthenia-gravis-pro" ;
@@ -203,8 +205,8 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         wd:Q3843811,
         wd:Q55788305,
         wd:Q7002430 ;
-    wdt:P2888 <http://identifiers.org/doid/DOID:437>,
-        <http://purl.obolibrary.org/obo/DOID_437>,
+    wdt:P2888 doio:DOID:437,
+        do:437,
         <http://www.orpha.net/ORDO/Orphanet_589> ;
     wdt:P2892 "C0026896",
         "C1260409" ;
@@ -228,6 +230,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
     wdt:P5270 "MONDO:0009688" ;
     wdt:P557 "8460588" ;
     wdt:P604 "000712" ;
+    wdt:P6366 "2909017070" ;
     wdt:P646 "/m/04st8" ;
     wdt:P672 "C10.114.656",
         "C10.668.758.725",
@@ -238,6 +241,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         "793136" ;
     wdt:P699 "DOID:437" ;
     wdt:P7464 "myasthenia-gravis" ;
+    wdt:P7995 "myasthenia-gravis" ;
     wdt:P910 wd:Q13334582 .
 
 <http://www.wikidata.org/entity/statement/Q8285-02BEA97E-F8BC-415A-95E1-934E608D9A08> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081>,

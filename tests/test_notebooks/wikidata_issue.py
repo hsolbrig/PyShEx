@@ -1,4 +1,4 @@
-from sparql_slurper import SlurpyGraph
+from sparqlslurper import SlurpyGraph
 
 from pyshex import shex_evaluator
 from pyshex.shex_evaluator import evaluate_cli as shexeval

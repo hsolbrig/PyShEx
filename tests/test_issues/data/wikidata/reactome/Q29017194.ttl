@@ -1,20 +1,13 @@
-@prefix go: <http://purl.obolibrary.org/obo/GO> .
 @prefix p: <http://www.wikidata.org/prop/> .
-@prefix po: <http://purl.obolibrary.org/obo/PW> .
-@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix pr: <http://www.wikidata.org/prop/reference/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix ps: <http://www.wikidata.org/prop/statement/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix react: <http://micel.io/reactome/> .
 @prefix schema: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdref: <http://www.wikidata.org/reference/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix wikibase: <http://wikiba.se/ontology#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 wd:Q29017194 rdfs:label "N-glycan trimming in the ER and Calnexin/Calreticulin cycle" ;

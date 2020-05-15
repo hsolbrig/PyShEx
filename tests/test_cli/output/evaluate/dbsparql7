@@ -1,0 +1,429 @@
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {<http://hl7.org/fhir/Patient/pat4> ?p ?o .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 11 triples
+RESULTS:
+	<http://hl7.org/fhir/Patient/pat4> a fhir:Patient ;
+	    fhir:DomainResource.text <http://www.ontotext.com/tm#36423> ;
+	    fhir:Patient.active <http://www.ontotext.com/tm#36435> ;
+	    fhir:Patient.birthDate <http://www.ontotext.com/tm#36442> ;
+	    fhir:Patient.deceasedBoolean <http://www.ontotext.com/tm#36444> ;
+	    fhir:Patient.gender <http://www.ontotext.com/tm#36441> ;
+	    fhir:Patient.identifier <http://www.ontotext.com/tm#36426> ;
+	    fhir:Patient.managingOrganization <http://www.ontotext.com/tm#36445> ;
+	    fhir:Patient.name <http://www.ontotext.com/tm#36436> ;
+	    fhir:Resource.id <http://www.ontotext.com/tm#36421> ;
+	    fhir:nodeRole fhir:treeRoot .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36421 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.24 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36421 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.33 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36421 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.2 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36421> fhir:value "pat4" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36421 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36421 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.27 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36421> fhir:value "pat4" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36423 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36423 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.32 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Narrative.status> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36423 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.2 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36423> fhir:Narrative.status <http://www.ontotext.com/tm#36424> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Narrative.div> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36423 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.27 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36423> fhir:Narrative.div """<div xmlns="http://www.w3.org/1999/xhtml">
+				<p>Patient Sandy Notsowell @ Acme Healthcare, Inc. MR = 123458, DECEASED</p>
+			</div>""" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36423 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.53 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36423 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 2 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36423> fhir:Narrative.div """<div xmlns="http://www.w3.org/1999/xhtml">
+				<p>Patient Sandy Notsowell @ Acme Healthcare, Inc. MR = 123458, DECEASED</p>
+			</div>""" ;
+	    fhir:Narrative.status <http://www.ontotext.com/tm#36424> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36424 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.2 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36424 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.26 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36424 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.33 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36424> fhir:value "generated" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36424 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36424 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36424> fhir:value "generated" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36426 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.19 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36426 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Identifier.use> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36426 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.25 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36426> fhir:Identifier.use <http://www.ontotext.com/tm#36427> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Identifier.type> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36426 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36426> fhir:Identifier.type <http://www.ontotext.com/tm#36428> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Identifier.system> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36426 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36426> fhir:Identifier.system <http://www.ontotext.com/tm#36432> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Identifier.value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36426 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.19 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36426> fhir:Identifier.value <http://www.ontotext.com/tm#36433> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Identifier.period> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36426 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.28 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Identifier.assigner> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36426 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.32 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36426 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.24 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36426> fhir:index 0 .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36426 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.32 secs) - 5 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36426> fhir:Identifier.system <http://www.ontotext.com/tm#36432> ;
+	    fhir:Identifier.type <http://www.ontotext.com/tm#36428> ;
+	    fhir:Identifier.use <http://www.ontotext.com/tm#36427> ;
+	    fhir:Identifier.value <http://www.ontotext.com/tm#36433> ;
+	    fhir:index 0 .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36427 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36427 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.34 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36427 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36427> fhir:value "usual" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36427 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.21 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36427 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.24 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36427> fhir:value "usual" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36428 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36428 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.2 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36428 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.27 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/CodeableConcept.coding> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36428 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36428> fhir:CodeableConcept.coding <http://www.ontotext.com/tm#36429> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/CodeableConcept.text> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36428 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.33 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36428 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.49 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36428 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (2.7 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36428> fhir:CodeableConcept.coding <http://www.ontotext.com/tm#36429> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36429 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.24 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36429 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36429 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.43 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Coding.system> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36429 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36429> fhir:Coding.system <http://www.ontotext.com/tm#36430> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Coding.version> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36429 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Coding.code> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36429 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.25 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36429> fhir:Coding.code <http://www.ontotext.com/tm#36431> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Coding.display> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36429 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Coding.userSelected> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36429 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36429 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.24 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36429> fhir:index 0 .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36429 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.32 secs) - 3 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36429> fhir:Coding.code <http://www.ontotext.com/tm#36431> ;
+	    fhir:Coding.system <http://www.ontotext.com/tm#36430> ;
+	    fhir:index 0 .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36430 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36430 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.33 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36430 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36430> fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36430 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36430 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.25 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36430> fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36431 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.24 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36431 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.32 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36431 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.32 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36431> fhir:value "MR" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36431 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36431 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.33 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36431> fhir:value "MR" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36432 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36432 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.21 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36432 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.24 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36432> fhir:value "urn:oid:0.1.2.3.4.5.6.7" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36432 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36432 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.76 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36432> fhir:value "urn:oid:0.1.2.3.4.5.6.7" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36433 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.2 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36433 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.21 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36433 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.27 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36433> fhir:value "123458" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36433 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.3 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36433 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.26 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36433> fhir:value "123458" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36435 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.33 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36435 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.41 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36435 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.25 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36435> fhir:value true .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36435 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.33 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36435 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36435> fhir:value true .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36436 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36436 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.24 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/HumanName.use> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36436 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.43 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36436> fhir:HumanName.use <http://www.ontotext.com/tm#36437> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/HumanName.text> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36436 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/HumanName.family> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36436 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.21 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36436> fhir:HumanName.family <http://www.ontotext.com/tm#36438> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/HumanName.given> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36436 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.34 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36436> fhir:HumanName.given <http://www.ontotext.com/tm#36439> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/HumanName.prefix> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36436 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.2 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/HumanName.suffix> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36436 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/HumanName.period> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36436 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36436 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.26 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36436> fhir:index 0 .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36436 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.33 secs) - 4 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36436> fhir:HumanName.family <http://www.ontotext.com/tm#36438> ;
+	    fhir:HumanName.given <http://www.ontotext.com/tm#36439> ;
+	    fhir:HumanName.use <http://www.ontotext.com/tm#36437> ;
+	    fhir:index 0 .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36437 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.33 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36437 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.3 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36437 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.26 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36437> fhir:value "official" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36437 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36437 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36437> fhir:value "official" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36438 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36438 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.29 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36438 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.27 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36438> fhir:value "Notsowell" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36438 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.35 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36438 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36438> fhir:value "Notsowell" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36439 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36439 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.2 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36439 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.2 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36439> fhir:value "Sandy" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36439 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.25 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36439> fhir:index 0 .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36439 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.26 secs) - 2 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36439> fhir:index 0 ;
+	    fhir:value "Sandy" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36441 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.21 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36441 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.2 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36441 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.21 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36441> fhir:value "female" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36441 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.29 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36441 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36441> fhir:value "female" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36442 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36442 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.34 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36442 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (2.25 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36442> fhir:value "1982-08-02"^^xsd:date .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36442 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.32 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36442 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.33 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36442> fhir:value "1982-08-02"^^xsd:date .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/link> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36445 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.33 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36445> fhir:link <http://hl7.org/fhir/Organization/1> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36445 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.33 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36445 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Reference.reference> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36445 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.25 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36445> fhir:Reference.reference <http://www.ontotext.com/tm#36446> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Reference.type> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36445 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.22 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Reference.identifier> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36445 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Reference.display> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36445 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.31 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36445> fhir:Reference.display <http://www.ontotext.com/tm#36447> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36445 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.45 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36445 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 3 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36445> fhir:Reference.display <http://www.ontotext.com/tm#36447> ;
+	    fhir:Reference.reference <http://www.ontotext.com/tm#36446> ;
+	    fhir:link <http://hl7.org/fhir/Organization/1> .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36446 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.33 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36446 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.32 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36446 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.24 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36446> fhir:value "Organization/1" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36446 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.43 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36446 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.43 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36446> fhir:value "Organization/1" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36447 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36447 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.2 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36447 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.19 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36447> fhir:value "ACME Healthcare, Inc" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36447 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.28 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36447 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.24 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36447> fhir:value "ACME Healthcare, Inc" .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.id> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36444 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.43 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/Element.extension> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36444 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.33 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/value> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36444 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.23 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36444> fhir:value true .
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s <http://hl7.org/fhir/index> ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36444 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.53 secs) - 0 triples
+RESULTS:
+	
+SPARQL: (SELECT ?s ?p ?o ?sid ?oid {?s ?p ?o .  ?s <http://www.ontotext.com/owlim/entity#id> 36444 .  ?o <http://www.ontotext.com/owlim/entity#id> ?oid .  }) (1.32 secs) - 1 triples
+RESULTS:
+	<http://www.ontotext.com/tm#36444> fhir:value true .

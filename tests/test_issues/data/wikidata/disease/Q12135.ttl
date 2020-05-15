@@ -1,21 +1,16 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix mir: <http://www.ebi.ac.uk/miriam/main/collections/> .
 @prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix ns2: <http://wikiba.se/ontology#> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
-@prefix pr: <http://www.wikidata.org/prop/reference/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
 @prefix ps: <http://www.wikidata.org/prop/statement/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 wd:Q12135 rdfs:label "Afiechyd meddwl",
@@ -116,7 +111,8 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "精神疾患",
         "精神障礙",
         "정신 질환" ;
-    schema:dateModified "2020-02-11T22:50:04+00:00"^^xsd:dateTime ;
+
+    schema:dateModified "2020-05-07T11:48:05+00:00"^^xsd:dateTime ;
     schema:description "Anormalidade, sofrimento ou comprometimento da ordem psicológica e/ou mental",
         "affezione che colpisce il pensiero, i sentimenti o il comportamento di una persona",
         "alteración de los procesos cognitivos y afectivos del desarrollo",
@@ -140,11 +136,12 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "അസ്വാഭാവികമായ ചിന്തകളോ പെരുമാറ്റമോ",
         "同心理、神經有關嘅疾病",
         "疾病" ;
-    schema:version 1113583138 ;
-    ns2:identifiers 35 ;
+
+    schema:version 1175827212 ;
+    ns2:identifiers 37 ;
     ns2:sitelinks 104 ;
-    ns2:statements 77 ;
-    ns2:timestamp "2020-02-11T22:54:20+00:00"^^xsd:dateTime ;
+    ns2:statements 79 ;
+    ns2:timestamp "2020-05-07T11:58:15+00:00"^^xsd:dateTime ;
     skos:altLabel "Gemütskrankheit",
         "Psychische Erkrankung",
         "Psychische Erkrankungen",
@@ -305,6 +302,8 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     p:P5198 <http://www.wikidata.org/entity/statement/Q12135-8A80FAFB-9875-4E5A-963A-DC221B76913C> ;
     p:P5270 <http://www.wikidata.org/entity/statement/Q12135-36F84016-3807-41C9-A0DF-9EC8BB75DF76>,
         <http://www.wikidata.org/entity/statement/Q12135-EE431A6A-05B8-45A6-8C36-14D573CC7876> ;
+    p:P557 <http://www.wikidata.org/entity/statement/Q12135-25884B93-F608-419F-8F73-76CCAE9FB4DB> ;
+    p:P6366 <http://www.wikidata.org/entity/statement/Q12135-FDE3E29F-BB85-41E4-87CD-26742FA93235> ;
     p:P646 <http://www.wikidata.org/entity/statement/Q12135-EF11483E-93BF-4C90-86DB-E6B190B1D5DF> ;
     p:P667 <http://www.wikidata.org/entity/statement/Q12135-2D4D385E-2E60-4785-B6F8-5F45788421CD> ;
     p:P672 <http://www.wikidata.org/entity/statement/Q12135-707676cd-4ddb-9bf0-ca11-5b6aae3c3fec> ;
@@ -325,6 +324,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     ns1:P3916 <http://vocabularies.unesco.org/thesaurus/concept5463> ;
     ns1:P486 <http://id.nlm.nih.gov/mesh/D001523> ;
     ns1:P508 <http://purl.org/bncf/tid/6114> ;
+    ns1:P6366 <http://ma-graph.org/entity/2780875785> ;
     ns1:P646 <http://g.co/kg/m/04x4r> ;
     ns1:P672 <http://id.nlm.nih.gov/mesh/F03> ;
     ns1:P7033 <http://vocabulary.curriculum.edu.au/scot/4979.rdf> ;
@@ -360,9 +360,9 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     wdt:P244 "sh85083643" ;
     wdt:P2581 "00027818n" ;
     wdt:P279 wd:Q12136 ;
-    wdt:P2888 <http://identifiers.org/doid/DOID:150>,
-        <http://purl.obolibrary.org/obo/DOID_0050329>,
-        <http://purl.obolibrary.org/obo/DOID_150> ;
+    wdt:P2888 doio:DOID:150,
+        do:0050329,
+        do:150 ;
     wdt:P2892 "C0004936",
         "C0029516" ;
     wdt:P31 wd:Q12136 ;
@@ -386,6 +386,8 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     wdt:P5198 "294925260" ;
     wdt:P5270 "MONDO:0002025",
         "MONDO:0005084" ;
+    wdt:P557 "28852" ;
+    wdt:P6366 "2780875785" ;
     wdt:P646 "/m/04x4r" ;
     wdt:P667 "P99" ;
     wdt:P672 "F03" ;

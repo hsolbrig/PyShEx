@@ -39,10 +39,8 @@ loc_prefixes = PrefixLibrary(None,
 class ShExEvaluatorTestCase(unittest.TestCase):
     def test_empty_constructor(self):
         evaluator = ShExEvaluator()
-        self.assertEqual("""@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .""", evaluator.rdf.strip())
+        # rdflib no longer emits unused prefixes -- an empty evaluator is now empty
+        self.assertEqual("", evaluator.rdf.strip())
         self.assertIsNone(evaluator.schema)
         self.assertIsNone(evaluator.focus)
         self.assertEqual([], evaluator.foci)
