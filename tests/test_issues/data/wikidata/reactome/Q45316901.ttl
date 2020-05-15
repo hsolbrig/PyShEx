@@ -58,6 +58,7 @@ wd:Q45316901 rdfs:label "Platelet sensitization by LDL" ;
 
 <http://www.wikidata.org/entity/statement/Q45316892-B0CEAA79-72E4-491B-B14E-4500D827D9FC> ps:P3937 "R-HSA-418346" .
 
+
 <http://www.wikidata.org/entity/statement/Q45316901-09B6F20B-B2FA-442A-A886-88B737B02E75> prov:wasDerivedFrom wdref:9ef005ef9f3386bd2f8c99f710e68fc498dbfb72 ;
     ps:P2860 wd:Q44459226 .
 

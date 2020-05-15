@@ -42,8 +42,8 @@ class Issue41TestCase(unittest.TestCase):
         """ Test closed definition """
 
         e = ShExEvaluator(rdf=rdf, schema=shex, focus=EXC['42'], start=EXE.Person)
-        # This causes issue 42
-        # pprint(e.evaluate())
+        
+        pprint(e.evaluate())
         self.assertFalse(e.evaluate()[0].result)
 
         from pyshex.evaluate import evaluate

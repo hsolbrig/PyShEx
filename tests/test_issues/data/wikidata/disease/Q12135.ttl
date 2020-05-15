@@ -111,6 +111,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "精神疾患",
         "精神障礙",
         "정신 질환" ;
+
     schema:dateModified "2020-05-07T11:48:05+00:00"^^xsd:dateTime ;
     schema:description "Anormalidade, sofrimento ou comprometimento da ordem psicológica e/ou mental",
         "affezione che colpisce il pensiero, i sentimenti o il comportamento di una persona",
@@ -135,6 +136,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "അസ്വാഭാവികമായ ചിന്തകളോ പെരുമാറ്റമോ",
         "同心理、神經有關嘅疾病",
         "疾病" ;
+
     schema:version 1175827212 ;
     ns2:identifiers 37 ;
     ns2:sitelinks 104 ;

@@ -95,6 +95,7 @@ class ShExEvaluator:
         self.output_sink = output_sink
         self.nerrors = 0
         self.nnodes = 0
+        self.eval_result = []
 
     @property
     def rdf(self) -> str:
@@ -208,10 +209,10 @@ class ShExEvaluator:
         else:
             evaluator = self
 
-        rval = []
+        self.eval_result = []
         if evaluator.output_sink is None:
             def sink(e: EvaluationResult) -> bool:
-                rval.append(e)
+                self.eval_result.append(e)
                 return True
             evaluator.output_sink = sink
 
@@ -221,7 +222,7 @@ class ShExEvaluator:
         if START in evaluator.start and evaluator._schema.start is None:
             self.nerrors += 1
             evaluator.output_sink(EvaluationResult(False, None, None, 'START node is not specified'))
-            return rval
+            return self.eval_result
 
         # Experimental -- xfer all ShEx namespaces to g
         if self.pfx and evaluator.g is not None:
@@ -259,7 +260,7 @@ class ShExEvaluator:
                 evaluator.output_sink(EvaluationResult(False, focus, None, "No start node located"))
             if not processing:
                 break
-        return rval
+        return self.eval_result
 
 
 def genargs(prog: Optional[str] = None) -> ArgumentParser:

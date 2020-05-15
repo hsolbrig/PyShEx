@@ -100,6 +100,7 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "豚インフルエンザ",
         "豬流感",
         "돼지 인플루엔자" ;
+
     schema:dateModified "2020-04-06T06:37:07+00:00"^^xsd:dateTime ;
     schema:description "Bulaşıcı hastalık",
         "Griepgevalle wat veroorsaak word deur Ortomixovirusse wat endemies is tot varke",
@@ -303,6 +304,7 @@ wd:Q36855 rdfs:label "Cúm lợn",
     wdt:P1296 "0517808" ;
     wdt:P1417 "science/swine-flu" ;
     wdt:P1748 "C80444" ;
+
     wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/H1N1%20Influenza%20Virus%20Particles%20%288411599236%29.jpg> ;
     wdt:P1995 wd:Q203337,
         wd:Q788926 ;
