@@ -1,12 +1,28 @@
 CHANGES
 =======
 
+* Fix some tests
+* Add github actions to run test and update to pypi
+* Update slurper notebook to use agent
+
+v0.7.15
+-------
+
+* Pull the help call out of it
+* First cut at Biohackathon2020 slurper
+* Update requirements.txt
+* Update prefixlib to support rdflib 5.x behavior
+* Added the "tortoise" serializer that replicates rdflib 4.x prefix behavior
+* Checkpoint on outstanding unit tests
+* Fix for issue #67 and issue #65
 * Checkpoint
 * Checkpoint
 * Checkpoint
 * Passes
 * First cut on SDO example
 * First cut at schemaorg example
+* Remove unused imports and uncomment code in test\_issue\_41
+* Fix for issue #42
 * Added GraphDB specific tag to use the GraphDB BNode solution
 * ChangeLog
 * Update change log
