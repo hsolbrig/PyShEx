@@ -14,7 +14,7 @@ class FHIRServerTestCase(unittest.TestCase):
         result = os.path.join(source_dir, 'example-haplotype2_online.results')
         outf = StringIO()
         with(redirect_stdout(outf)):
-            evaluate_cli("http://build.fhir.org/observation-example-haplotype2.ttl "
+            evaluate_cli("http://hl7.org/fhir/observation-example-haplotype2.ttl "
                          "http://build.fhir.org/observation.shex "
                          "-fn http://hl7.org/fhir/Observation/example-haplotype2")
         if not os.path.exists(result):
@@ -24,7 +24,7 @@ class FHIRServerTestCase(unittest.TestCase):
         with open(result) as f:
             self.assertEqual(f.read(), outf.getvalue())
 
-    def test_obseration(self):
+    def test_observation(self):
         """ Test of local FHIR example """
         source_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'data')
         rdf = os.path.join(source_dir, 'example-haplotype2.ttl')

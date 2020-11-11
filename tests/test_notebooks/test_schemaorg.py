@@ -42,9 +42,12 @@ BASE <http://schema.org/shex>
 
 evaluator = ShExEvaluator(schema=ds_shex, start="http://schema.org/shex#BasicDatasetShape")
 good_eg_1 = """    {
-      "@context":"https://schema.org/",
-      "@type":"Dataset",
       "@id": "http://example.org/good_",
+      "@type":"Dataset",
+      "@context": {
+          "@language": "en",
+          "@vocab": "http://schema.org/"
+      },
       "name":"NCDC Storm Events Database",
       "description":"Storm Data is provided by the National Weather Service (NWS) and contain statistics on...",
       "url":"https://catalog.data.gov/dataset/ncdc-storm-events-database",
@@ -108,7 +111,8 @@ good_eg_1 = """    {
          }
       }
     }
-    """
+"""
+
 rval = evaluator.evaluate(good_eg_1, focus="http://example.org/good_", rdf_format="json-ld")
 for r in rval:
     if not r.result:

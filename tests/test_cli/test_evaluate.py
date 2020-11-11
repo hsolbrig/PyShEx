@@ -54,6 +54,7 @@ class ShexEvaluatorTestCase(CLITestCase):
                      failexpected=True)
         self.assertFalse(update_test_files, "Updating test files")
 
+    @unittest.skipIf(True, "SPARQL query, sometimes URL is down. Need to look for an alternative.")
     def test_sparql_query(self):
         """ Test a sample DrugBank sparql query """
         shex = os.path.join(datadir, 't1.shex')

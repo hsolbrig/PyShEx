@@ -14,6 +14,7 @@
 
 wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
         "Riedel-Struma",
+        "Tireoidite de Riedel",
         "Tiroiditis de Riedel",
         "Zapalenie gruczołu tarczowego Riedla",
         "thyroïdite de Riedel",
@@ -22,24 +23,25 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
         "Ридел тириядиты",
         "Тиреоидит Риделя",
         "التهاب الدرقية المنسوب لريدل" ;
-    schema:dateModified "2020-02-15T10:42:24+00:00"^^xsd:dateTime ;
+    schema:dateModified "2020-10-29T17:41:25+00:00"^^xsd:dateTime ;
     schema:description "Schilddrüsenentzündung",
         "enfermedad de las tiroides",
         "maladie rare",
         "malattia infiammatoria cronica della tiroide, presumibilmente di origine autoimmune",
         "thyroid disease",
         "болезнь" ;
-    schema:version 1115704638 ;
+    schema:version 1299479660 ;
     ns1:identifiers 13 ;
-    ns1:sitelinks 7 ;
-    ns1:statements 20 ;
-
-    ns1:timestamp "2020-02-15T10:42:30+00:00"^^xsd:dateTime ;
+    ns1:sitelinks 8 ;
+    ns1:statements 22 ;
+    ns1:timestamp "2020-10-29T17:41:36+00:00"^^xsd:dateTime ;
     skos:altLabel "Eisenharte Struma",
         "Riedel disease",
         "Riedel fibrosing thyroiditis",
         "Riedel thyroiditis",
-        "Riedel's struma" ;
+        "Riedel's struma",
+        "Riedel's thyroiditis" ;
+    p:P138 <http://www.wikidata.org/entity/statement/Q16495-09c0743a-4c79-b54e-9aba-ac5cef530806> ;
     p:P1417 <http://www.wikidata.org/entity/statement/Q16495-D87DAEC5-EF79-4253-B23D-B8827AF9BC13> ;
     p:P1550 <http://www.wikidata.org/entity/statement/Q16495-18BC875D-6F6A-4717-AFCD-63BC19789657> ;
     p:P1748 <http://www.wikidata.org/entity/statement/Q16495-6A205BEC-7D57-4693-95DC-024C51EFE84B> ;
@@ -54,6 +56,7 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
     p:P4229 <http://www.wikidata.org/entity/statement/Q16495-357A07B7-0DEB-4193-9E16-BC2EBB0E8534> ;
     p:P493 <http://www.wikidata.org/entity/statement/q16495-4E477F82-7542-491C-896C-DCD876DF3FC2> ;
     p:P494 <http://www.wikidata.org/entity/statement/q16495-D1FC0544-4C35-484A-83EB-1B4B7B9DBF24> ;
+    p:P5008 <http://www.wikidata.org/entity/statement/Q16495-1648B68B-3655-41AA-BE12-4CC5C12039C4> ;
     p:P5270 <http://www.wikidata.org/entity/statement/Q16495-5F48DE27-2059-4C7F-95A9-59D4AE731935> ;
     p:P557 <http://www.wikidata.org/entity/statement/q16495-3055022A-AA60-4897-8447-8A9832B41D05> ;
     p:P6366 <http://www.wikidata.org/entity/statement/Q16495-6EDBB411-B8C2-4028-9491-ECA5F589C865> ;
@@ -62,6 +65,7 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
     p:P699 <http://www.wikidata.org/entity/statement/Q16495-A40D0BF5-8EE0-48EF-A699-70DFB5A7ECC3> ;
     ns2:P6366 <http://ma-graph.org/entity/2776547070> ;
     ns2:P646 <http://g.co/kg/m/02rjq7r> ;
+    wdt:P138 wd:Q70915 ;
     wdt:P1417 "science/Riedel-thyroiditis" ;
     wdt:P1550 "64744" ;
     wdt:P1748 "C35827" ;
@@ -75,6 +79,7 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
     wdt:P4229 "E06.5" ;
     wdt:P493 "245.3" ;
     wdt:P494 "E06.5" ;
+    wdt:P5008 wd:Q4099686 ;
     wdt:P5270 "MONDO:0018992" ;
     wdt:P557 "11590" ;
     wdt:P6366 "2776547070" ;
@@ -85,26 +90,26 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
 <http://www.wikidata.org/entity/statement/Q16495-18BC875D-6F6A-4717-AFCD-63BC19789657> prov:wasDerivedFrom <http://www.wikidata.org/reference/689e8b7f01a56e608ce2c7d695d694815726a33f> ;
     ps:P1550 "64744" .
 
-<http://www.wikidata.org/entity/statement/Q16495-1B32DEC1-CCB5-4CDC-8F34-DBAFE407E96F> prov:wasDerivedFrom <http://www.wikidata.org/reference/9b0aaaff6e2fe3370c730e1a2589ac364cbefbd3> ;
+<http://www.wikidata.org/entity/statement/Q16495-1B32DEC1-CCB5-4CDC-8F34-DBAFE407E96F> prov:wasDerivedFrom <http://www.wikidata.org/reference/8b2ae53c80ff08355ef8f311625877b5db4e5bf1> ;
     ps:P31 wd:Q12136 .
 
 <http://www.wikidata.org/entity/statement/Q16495-357A07B7-0DEB-4193-9E16-BC2EBB0E8534> prov:wasDerivedFrom <http://www.wikidata.org/reference/689e8b7f01a56e608ce2c7d695d694815726a33f>,
-        <http://www.wikidata.org/reference/9b0aaaff6e2fe3370c730e1a2589ac364cbefbd3> ;
+        <http://www.wikidata.org/reference/8b2ae53c80ff08355ef8f311625877b5db4e5bf1> ;
     ps:P4229 "E06.5" .
 
 <http://www.wikidata.org/entity/statement/Q16495-45F8B743-6C6E-41AF-A964-FBE7827E28A3> prov:wasDerivedFrom <http://www.wikidata.org/reference/689e8b7f01a56e608ce2c7d695d694815726a33f> ;
     ps:P2892 "C0154162" .
 
-<http://www.wikidata.org/entity/statement/Q16495-6A205BEC-7D57-4693-95DC-024C51EFE84B> prov:wasDerivedFrom <http://www.wikidata.org/reference/9b0aaaff6e2fe3370c730e1a2589ac364cbefbd3> ;
+<http://www.wikidata.org/entity/statement/Q16495-6A205BEC-7D57-4693-95DC-024C51EFE84B> prov:wasDerivedFrom <http://www.wikidata.org/reference/8b2ae53c80ff08355ef8f311625877b5db4e5bf1> ;
     ps:P1748 "C35827" .
 
-<http://www.wikidata.org/entity/statement/Q16495-A40D0BF5-8EE0-48EF-A699-70DFB5A7ECC3> prov:wasDerivedFrom <http://www.wikidata.org/reference/9b0aaaff6e2fe3370c730e1a2589ac364cbefbd3> ;
+<http://www.wikidata.org/entity/statement/Q16495-A40D0BF5-8EE0-48EF-A699-70DFB5A7ECC3> prov:wasDerivedFrom <http://www.wikidata.org/reference/8b2ae53c80ff08355ef8f311625877b5db4e5bf1> ;
     ps:P699 "DOID:14351" .
 
-<http://www.wikidata.org/entity/statement/Q16495-A56E4FB2-1D84-4FF7-BB7F-61509083F087> prov:wasDerivedFrom <http://www.wikidata.org/reference/9b0aaaff6e2fe3370c730e1a2589ac364cbefbd3> ;
+<http://www.wikidata.org/entity/statement/Q16495-A56E4FB2-1D84-4FF7-BB7F-61509083F087> prov:wasDerivedFrom <http://www.wikidata.org/reference/8b2ae53c80ff08355ef8f311625877b5db4e5bf1> ;
     ps:P2892 "C0154162" .
 
-<http://www.wikidata.org/entity/statement/Q16495-FFC24865-86D9-47D2-A9F2-9A421139952F> prov:wasDerivedFrom <http://www.wikidata.org/reference/9b0aaaff6e2fe3370c730e1a2589ac364cbefbd3> ;
+<http://www.wikidata.org/entity/statement/Q16495-FFC24865-86D9-47D2-A9F2-9A421139952F> prov:wasDerivedFrom <http://www.wikidata.org/reference/8b2ae53c80ff08355ef8f311625877b5db4e5bf1> ;
     ps:P279 wd:Q11835644 .
 
 <http://www.wikidata.org/entity/statement/q16495-4E477F82-7542-491C-896C-DCD876DF3FC2> prov:wasDerivedFrom <http://www.wikidata.org/reference/fa278ebfc458360e5aed63d5058cca83c46134f1> ;

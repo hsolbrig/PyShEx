@@ -1,6 +1,5 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-
 @prefix ns1: <http://wikiba.se/ontology#> .
 @prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
@@ -54,9 +53,10 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         "โรคกล้ามเนื้ออ่อนแรงชนิดร้าย",
         "მიასთენია",
         "重症筋無力症",
+        "重症肌无力",
         "重症肌無力",
         "중증 근무력증" ;
-    schema:dateModified "2020-05-12T07:40:34+00:00"^^xsd:dateTime ;
+    schema:dateModified "2020-10-12T14:16:22+00:00"^^xsd:dateTime ;
     schema:description "autoimmuunisairaus",
         "enfermedad neuromuscular",
         "human disease",
@@ -70,11 +70,11 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         "مَرَضٌ بَشَرِيٌّ",
         "ଦୀର୍ଘକାଳୀନ ସ୍ନାୟୁ-ମାଂସପେଶୀ ରୋଗ",
         "アセチルコリンなどの抗体により神経・筋伝達が阻害されるために筋肉の易疲労性や脱力が起こる自己免疫疾患" ;
-    schema:version 1179543656 ;
-    ns1:identifiers 38 ;
-    ns1:sitelinks 57 ;
-    ns1:statements 75 ;
-    ns1:timestamp "2020-05-12T07:45:00+00:00"^^xsd:dateTime ;
+    schema:version 1290222072 ;
+    ns1:identifiers 34 ;
+    ns1:sitelinks 58 ;
+    ns1:statements 71 ;
+    ns1:timestamp "2020-10-12T14:16:26+00:00"^^xsd:dateTime ;
     skos:altLabel "Acquired myasthenia",
         "Astenik Bulbar Falaj",
         "Astenik bulbar falaj",
@@ -99,8 +99,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
     p:P1550 <http://www.wikidata.org/entity/statement/Q8285-cab2e7ce-44b0-2e12-971f-65a1c414180f> ;
     p:P1692 <http://www.wikidata.org/entity/statement/Q8285-2F480C82-5254-4AE0-BD4A-8DEC21BD4AF5>,
         <http://www.wikidata.org/entity/statement/Q8285-483C6197-23B3-4147-9B54-3434878B4EFD> ;
-    p:P1748 <http://www.wikidata.org/entity/statement/Q8285-6701A92B-C7D0-4525-9DED-BDA37CD25115>,
-        <http://www.wikidata.org/entity/statement/Q8285-FA12E144-F939-483F-AA6C-0BF3DDB0DD49> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q8285-6701A92B-C7D0-4525-9DED-BDA37CD25115> ;
     p:P18 <http://www.wikidata.org/entity/statement/Q8285-5ABBD391-D22F-462C-97AF-8CB3278D6684> ;
     p:P1995 <http://www.wikidata.org/entity/statement/Q8285-A4287558-EDEA-4A6C-A6D4-FEBECD289718> ;
     p:P2176 <http://www.wikidata.org/entity/statement/Q8285-203F4473-4216-4BDF-AF2F-40FC3F94FE1C>,
@@ -127,9 +126,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
     p:P2888 <http://www.wikidata.org/entity/statement/Q8285-2315A94E-59E4-4F83-9092-9894D09E25EE>,
         <http://www.wikidata.org/entity/statement/Q8285-403F2EBC-943C-492B-9204-020F29470EEC>,
         <http://www.wikidata.org/entity/statement/Q8285-F2090158-5F6C-492C-BCC7-AB06BBD8B23E> ;
-    p:P2892 <http://www.wikidata.org/entity/statement/Q8285-02BEA97E-F8BC-415A-95E1-934E608D9A08>,
-        <http://www.wikidata.org/entity/statement/Q8285-47C4A79C-9C58-4D1F-A1F7-E4D839D3F714>,
-        <http://www.wikidata.org/entity/statement/Q8285-B8ECADA4-DF3E-4526-B510-8FA9D2D99169>,
+    p:P2892 <http://www.wikidata.org/entity/statement/Q8285-B8ECADA4-DF3E-4526-B510-8FA9D2D99169>,
         <http://www.wikidata.org/entity/statement/Q8285-FE1C1E2C-E1AF-453E-A4F1-611FB3009758> ;
     p:P2924 <http://www.wikidata.org/entity/statement/Q8285-98CF4B6B-8AF2-41E0-8751-FBCEE9CE72F2> ;
     p:P31 <http://www.wikidata.org/entity/statement/Q8285-B661E065-8470-4730-813E-FB35FF6FA2B6>,
@@ -146,8 +143,8 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
     p:P486 <http://www.wikidata.org/entity/statement/Q8285-D84741F3-7D47-49A5-9C69-D59CDEB2B685> ;
     p:P492 <http://www.wikidata.org/entity/statement/Q8285-390AE83E-DD8F-4A9A-B28D-9DC4D54C4E27>,
         <http://www.wikidata.org/entity/statement/Q8285-82617AB2-795D-43FF-8EE4-1C6C5EFC7532>,
-        <http://www.wikidata.org/entity/statement/Q8285-F367F9A2-B017-40DB-BB07-71A12094C144>,
-        <http://www.wikidata.org/entity/statement/q8285-3C8807D8-089C-4F2A-BADB-C8C6EF5C1F17> ;
+        <http://www.wikidata.org/entity/statement/Q8285-F367F9A2-B017-40DB-BB07-71A12094C144> ;
+    p:P5008 <http://www.wikidata.org/entity/statement/Q8285-9DFD9364-0581-4734-91B2-5B4CA5372544> ;
     p:P508 <http://www.wikidata.org/entity/statement/q8285-4C3241B6-E537-4E7B-BE26-A528FF3A3DB7> ;
     p:P5082 <http://www.wikidata.org/entity/statement/Q8285-5AB2E73B-812B-44F3-B091-B4B95C88FE7D> ;
     p:P5270 <http://www.wikidata.org/entity/statement/Q8285-D30137C2-4254-414C-B1D6-C1B5E62267DB> ;
@@ -162,8 +159,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         <http://www.wikidata.org/entity/statement/q8285-7B7C10CE-4F90-457F-B187-2F690B373E1A>,
         <http://www.wikidata.org/entity/statement/q8285-A698E454-8B24-425F-97D1-78AE10871B3B>,
         <http://www.wikidata.org/entity/statement/q8285-B88148F4-EF64-42BA-944A-C5A5B2A312E7> ;
-    p:P699 <http://www.wikidata.org/entity/statement/Q8285-7735179B-C005-47F4-A19B-4CA0C081968A>,
-        <http://www.wikidata.org/entity/statement/Q8285-ECFD96DB-F159-496A-AF2B-D52B1EABF2A0> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q8285-7735179B-C005-47F4-A19B-4CA0C081968A> ;
     p:P7464 <http://www.wikidata.org/entity/statement/Q8285-D1F8F6B0-396C-4B3A-8167-AA169036DAD5> ;
     p:P7995 <http://www.wikidata.org/entity/statement/Q8285-4D61DD10-96C4-4700-823F-A824FE31FF93> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q8285-42587E5C-70AD-4FDF-9849-2C179C338A68> ;
@@ -225,6 +221,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
     wdt:P492 "159400",
         "254200",
         "607085" ;
+    wdt:P5008 wd:Q4099686 ;
     wdt:P508 "46655" ;
     wdt:P5082 "myasthenia_gravis" ;
     wdt:P5270 "MONDO:0009688" ;
@@ -244,32 +241,24 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
     wdt:P7995 "myasthenia-gravis" ;
     wdt:P910 wd:Q13334582 .
 
-<http://www.wikidata.org/entity/statement/Q8285-02BEA97E-F8BC-415A-95E1-934E608D9A08> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081>,
-        <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
-    ps:P2892 "C1260409" .
-
-<http://www.wikidata.org/entity/statement/Q8285-47C4A79C-9C58-4D1F-A1F7-E4D839D3F714> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081>,
-        <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
-    ps:P2892 "C0026896" .
-
-<http://www.wikidata.org/entity/statement/Q8285-6701A92B-C7D0-4525-9DED-BDA37CD25115> prov:wasDerivedFrom <http://www.wikidata.org/reference/e145ccb65663be7c2a50a360a47bbc272e707521> ;
+<http://www.wikidata.org/entity/statement/Q8285-6701A92B-C7D0-4525-9DED-BDA37CD25115> prov:wasDerivedFrom <http://www.wikidata.org/reference/05e8fe8fdd9ab35b3893608c58622d909dfb5320> ;
     ps:P1748 "C60989" .
 
-<http://www.wikidata.org/entity/statement/Q8285-70DF763A-6F62-4118-B6AE-FEA12363FE95> prov:wasDerivedFrom <http://www.wikidata.org/reference/e145ccb65663be7c2a50a360a47bbc272e707521>,
+<http://www.wikidata.org/entity/statement/Q8285-70DF763A-6F62-4118-B6AE-FEA12363FE95> prov:wasDerivedFrom <http://www.wikidata.org/reference/05e8fe8fdd9ab35b3893608c58622d909dfb5320>,
         <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
     ps:P4229 "G70.0" .
 
-<http://www.wikidata.org/entity/statement/Q8285-7735179B-C005-47F4-A19B-4CA0C081968A> prov:wasDerivedFrom <http://www.wikidata.org/reference/e145ccb65663be7c2a50a360a47bbc272e707521> ;
+<http://www.wikidata.org/entity/statement/Q8285-7735179B-C005-47F4-A19B-4CA0C081968A> prov:wasDerivedFrom <http://www.wikidata.org/reference/05e8fe8fdd9ab35b3893608c58622d909dfb5320> ;
     ps:P699 "DOID:437" .
 
-<http://www.wikidata.org/entity/statement/Q8285-83A0B16E-8002-4CAB-ABB2-AEEB5077360F> prov:wasDerivedFrom <http://www.wikidata.org/reference/e145ccb65663be7c2a50a360a47bbc272e707521>,
+<http://www.wikidata.org/entity/statement/Q8285-83A0B16E-8002-4CAB-ABB2-AEEB5077360F> prov:wasDerivedFrom <http://www.wikidata.org/reference/05e8fe8fdd9ab35b3893608c58622d909dfb5320>,
         <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
     ps:P4229 "G70.00" .
 
-<http://www.wikidata.org/entity/statement/Q8285-B661E065-8470-4730-813E-FB35FF6FA2B6> prov:wasDerivedFrom <http://www.wikidata.org/reference/e145ccb65663be7c2a50a360a47bbc272e707521> ;
+<http://www.wikidata.org/entity/statement/Q8285-B661E065-8470-4730-813E-FB35FF6FA2B6> prov:wasDerivedFrom <http://www.wikidata.org/reference/05e8fe8fdd9ab35b3893608c58622d909dfb5320> ;
     ps:P31 wd:Q12136 .
 
-<http://www.wikidata.org/entity/statement/Q8285-B8ECADA4-DF3E-4526-B510-8FA9D2D99169> prov:wasDerivedFrom <http://www.wikidata.org/reference/e145ccb65663be7c2a50a360a47bbc272e707521> ;
+<http://www.wikidata.org/entity/statement/Q8285-B8ECADA4-DF3E-4526-B510-8FA9D2D99169> prov:wasDerivedFrom <http://www.wikidata.org/reference/05e8fe8fdd9ab35b3893608c58622d909dfb5320> ;
     ps:P2892 "C1260409" .
 
 <http://www.wikidata.org/entity/statement/Q8285-D080E30F-AFEF-4874-A3EB-76499D195266> prov:wasDerivedFrom <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
@@ -278,27 +267,17 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
 <http://www.wikidata.org/entity/statement/Q8285-D7BE8971-1316-4C79-A59D-9551EF3DF1A3> prov:wasDerivedFrom <http://www.wikidata.org/reference/fe2ee53b8d9aae9c2aa926782e6084a979780487> ;
     ps:P31 wd:Q42303753 .
 
-<http://www.wikidata.org/entity/statement/Q8285-D84741F3-7D47-49A5-9C69-D59CDEB2B685> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081>,
-        <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
+<http://www.wikidata.org/entity/statement/Q8285-D84741F3-7D47-49A5-9C69-D59CDEB2B685> prov:wasDerivedFrom <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
     pq:P4390 wd:Q39893449 ;
     ps:P486 "D009157" .
 
-<http://www.wikidata.org/entity/statement/Q8285-ECFD96DB-F159-496A-AF2B-D52B1EABF2A0> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081>,
-        <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
-    ps:P699 "DOID:437" .
+<http://www.wikidata.org/entity/statement/Q8285-F367F9A2-B017-40DB-BB07-71A12094C144> prov:wasDerivedFrom <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
+    pq:P4390 wd:Q39893967 ;
+    ps:P492 "607085" .
 
-<http://www.wikidata.org/entity/statement/Q8285-FA12E144-F939-483F-AA6C-0BF3DDB0DD49> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081>,
-        <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
-    ps:P1748 "C60989" .
-
-<http://www.wikidata.org/entity/statement/Q8285-FE1C1E2C-E1AF-453E-A4F1-611FB3009758> prov:wasDerivedFrom <http://www.wikidata.org/reference/e145ccb65663be7c2a50a360a47bbc272e707521> ;
+<http://www.wikidata.org/entity/statement/Q8285-FE1C1E2C-E1AF-453E-A4F1-611FB3009758> prov:wasDerivedFrom <http://www.wikidata.org/reference/05e8fe8fdd9ab35b3893608c58622d909dfb5320> ;
     ps:P2892 "C0026896" .
 
 <http://www.wikidata.org/entity/statement/Q8285-cab2e7ce-44b0-2e12-971f-65a1c414180f> prov:wasDerivedFrom <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
     ps:P1550 "589" .
-
-<http://www.wikidata.org/entity/statement/q8285-3C8807D8-089C-4F2A-BADB-C8C6EF5C1F17> prov:wasDerivedFrom <http://www.wikidata.org/reference/3d0e31a120a8e46064e1deb8a425086aa1c78081>,
-        <http://www.wikidata.org/reference/e42e6560b7f9c90ab33a2fc3b934addef8f89009> ;
-    pq:P4390 wd:Q39893449 ;
-    ps:P492 "254200" .
 
