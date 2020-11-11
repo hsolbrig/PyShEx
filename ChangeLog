@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+* Fix error on setup.cfg file
 * Fix some tests
 * Add github actions to run test and update to pypi
 * Update slurper notebook to use agent
