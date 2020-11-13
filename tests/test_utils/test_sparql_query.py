@@ -7,6 +7,7 @@ from tests import datadir
 
 
 class SparqlQueryTestCase(unittest.TestCase):
+    @unittest.skipIf(True, "SPARQL query, sometimes URL is down. Need to look for an alternative.")
     def test_basics(self):
         q = SPARQLQuery('http://wifo5-04.informatik.uni-mannheim.de/drugbank/sparql',
                         os.path.join(datadir, 't1.sparql'))

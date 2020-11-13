@@ -27,7 +27,6 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         "Multiple Sklerose",
         "Multiple sclerosis",
         "Multiple skleroza",
-        "Multippel sklerose",
         "Sclerose multiple",
         "Sclerosis multiplex",
         "Scleroză multiplă",
@@ -75,13 +74,14 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         "মাল্টিপল স্ক্লেরোসিস",
         "ମଲ୍ଟିପ୍ଲସ୍କ୍ଲେରୋସିସ",
         "தண்டுவட மரப்பு நோய்",
+        "మల్టిపుల్ స్ల్కిరోసిస్ (ఎం.ఎస్)",
         "മൾട്ടിപ്പിൾ സ്ക്ലീറോസിസ്",
         "โรคมัลติเพิล สเกลอโรซิส",
         "多发性硬化症",
         "多発性硬化症",
         "多發性硬化症",
         "다발성 경화증" ;
-    schema:dateModified "2020-05-12T07:37:51+00:00"^^xsd:dateTime ;
+    schema:dateModified "2020-11-12T06:29:36+00:00"^^xsd:dateTime ;
     schema:description "Doença desmielinizante em que são danificadas as bainhas de mielina à volta dos axónios do cérebro e a medula espinal, provocando desmielinização.",
         "Sygdom der rammer nervecellerne",
         "autoimmune Krankheit, Entmarkungserkrankung des zentralen Nervensystems",
@@ -104,12 +104,13 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         "یک بیماری خودایمنی",
         "एक रोग जिसमें मस्तिष्क तथा सुषुम्ना रज्जु शोथ के चारों ओर वसायुक्त माइलिन के आवरण क्षतिग्रस्त हो जाते हैं, जिससे माइलिन के आवरण नष्ट होने और घाव के निशान होने के साथ-साथ रोग के संकेत और लक्षणों के स्थूल क्रम उत्पन्न होते हैं",
         "একধরনের ডি-মায়েলিনেটিং মানব ব্যাধি যাতে মানব মস্তিষ্কে ও স্নায়ুরজ্জুতে বিদ্যমান স্নায়ুকোষগুলোকে আচ্ছাদনকারী অন্তরক আবরণ ক্ষতিগ্রস্ত হয়ে যায়",
+        "疾病",
         "뇌와 척수의 축삭 주변의 지방성 말이집을 감싸는 부분이 손상을 입어서 탈수질환과 흉터형성으로 이어지는 염증 질환이다." ;
-    schema:version 1179541337 ;
-    ns2:identifiers 51 ;
-    ns2:sitelinks 67 ;
-    ns2:statements 176 ;
-    ns2:timestamp "2020-05-12T07:41:02+00:00"^^xsd:dateTime ;
+    schema:version 1305346144 ;
+    ns2:identifiers 47 ;
+    ns2:sitelinks 70 ;
+    ns2:statements 172 ;
+    ns2:timestamp "2020-11-12T06:29:46+00:00"^^xsd:dateTime ;
     skos:altLabel "ED",
         "EM",
         "Encephalomyelitis disseminata",
@@ -120,6 +121,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         "MS",
         "Multiple sclerosis",
         "Multiple sclerosis; MS",
+        "Multippel sklerose",
         "SEP",
         "SM",
         "disseminated sclerosis",
@@ -158,8 +160,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
     p:P1417 <http://www.wikidata.org/entity/statement/Q8277-5C49973D-4487-405D-B408-A11DF6DE603E> ;
     p:P1461 <http://www.wikidata.org/entity/statement/Q8277-5E615F21-0837-486A-860A-DB94C2D93A85> ;
     p:P1692 <http://www.wikidata.org/entity/statement/Q8277-8302D6E8-62FD-4F22-8C36-C96B63D99A33> ;
-    p:P1748 <http://www.wikidata.org/entity/statement/Q8277-2C25089F-76DC-4A84-81E5-2F827A45AEA6>,
-        <http://www.wikidata.org/entity/statement/Q8277-FDE0912A-3785-4638-9B3E-E0677E4FB765> ;
+    p:P1748 <http://www.wikidata.org/entity/statement/Q8277-FDE0912A-3785-4638-9B3E-E0677E4FB765> ;
     p:P18 <http://www.wikidata.org/entity/statement/Q8277-4D7AABA4-F61E-4DB7-AFAA-ECF8F1158AD0> ;
     p:P1889 <http://www.wikidata.org/entity/statement/Q8277-031998A6-4305-4CC7-B451-62264EAAB19D> ;
     p:P1995 <http://www.wikidata.org/entity/statement/Q8277-41B6192F-567E-4617-8A17-AADE0A4ECE6A> ;
@@ -270,8 +271,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
     p:P2888 <http://www.wikidata.org/entity/statement/Q8277-5DF65E3F-A99A-42A9-B6C4-94E2794CF480>,
         <http://www.wikidata.org/entity/statement/Q8277-F72B1D4B-192E-4A6A-BD98-3D7DCDA3852C>,
         <http://www.wikidata.org/entity/statement/Q8277-cc381fc4-4990-972e-45d9-b765aa38526e> ;
-    p:P2892 <http://www.wikidata.org/entity/statement/Q8277-62068A35-7507-4D97-BBF0-67A81DB6F67B>,
-        <http://www.wikidata.org/entity/statement/Q8277-62643617-F18F-4838-96B6-2051FA41FB44> ;
+    p:P2892 <http://www.wikidata.org/entity/statement/Q8277-62068A35-7507-4D97-BBF0-67A81DB6F67B> ;
     p:P31 <http://www.wikidata.org/entity/statement/Q8277-04A1D4C5-B311-4E55-854A-AEB765CD0B60>,
         <http://www.wikidata.org/entity/statement/Q8277-433E2373-6439-48C2-A370-0A26DCDBD288> ;
     p:P3219 <http://www.wikidata.org/entity/statement/Q8277-20553ce2-4799-7cac-cc97-eeaf70d1a395> ;
@@ -283,20 +283,18 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
     p:P373 <http://www.wikidata.org/entity/statement/q8277-8A114F12-B0F2-417C-9BD3-95B3421D85CC> ;
     p:P3827 <http://www.wikidata.org/entity/statement/Q8277-3DE9A76A-2C67-4DF5-88EF-0F9AE2D08353>,
         <http://www.wikidata.org/entity/statement/Q8277-5945CCE3-0BF3-469C-844C-130D0A04824D> ;
+    p:P3984 <http://www.wikidata.org/entity/statement/Q8277-1489ab5b-4259-64ed-fba0-e5b684a9844c> ;
     p:P4223 <http://www.wikidata.org/entity/statement/Q8277-709fa95f-4e4c-4eb0-1203-166a23868b0c> ;
     p:P4229 <http://www.wikidata.org/entity/statement/Q8277-745BA194-2E62-4125-A301-658ADB852872> ;
     p:P4317 <http://www.wikidata.org/entity/statement/Q8277-A63E8ED4-5FAD-42CB-ABEA-69D42DE8F191> ;
     p:P4527 <http://www.wikidata.org/entity/statement/Q8277-9CD52D37-E37D-4566-AADA-B744F2D1DBA7> ;
-    p:P486 <http://www.wikidata.org/entity/statement/Q8277-4827042B-62C8-4CF0-B700-14BFA0B2499B>,
-        <http://www.wikidata.org/entity/statement/Q8277-D25E63CC-87F3-4B69-BA5C-8210DB0AF516> ;
-    p:P492 <http://www.wikidata.org/entity/statement/Q8277-322D2AD3-14D6-4C86-868B-1A69379934BB>,
-        <http://www.wikidata.org/entity/statement/Q8277-34D1D8A0-AAC0-4309-BD0B-BC356D20A8C2>,
-        <http://www.wikidata.org/entity/statement/Q8277-351A9828-AED9-4EC1-A079-2655EEB53676>,
+    p:P486 <http://www.wikidata.org/entity/statement/Q8277-4827042B-62C8-4CF0-B700-14BFA0B2499B> ;
+    p:P492 <http://www.wikidata.org/entity/statement/Q8277-351A9828-AED9-4EC1-A079-2655EEB53676>,
         <http://www.wikidata.org/entity/statement/Q8277-3BCB8D55-94EE-43E6-B68C-2CDF5C2EB978>,
         <http://www.wikidata.org/entity/statement/Q8277-3E60EF48-E0FA-4EAD-9B4F-8ED39E9FDA0A>,
         <http://www.wikidata.org/entity/statement/Q8277-62CF6D20-E7C0-4894-ADAC-899B829D1351>,
-        <http://www.wikidata.org/entity/statement/Q8277-67494F45-5FCF-4BFC-9E26-D223DCDB6868>,
-        <http://www.wikidata.org/entity/statement/Q8277-68570C51-087E-4420-98F2-2A7EDE0597E3> ;
+        <http://www.wikidata.org/entity/statement/Q8277-67494F45-5FCF-4BFC-9E26-D223DCDB6868> ;
+    p:P5008 <http://www.wikidata.org/entity/statement/Q8277-C3F814A3-46DB-45D5-A6C1-54DB1E2F7C51> ;
     p:P508 <http://www.wikidata.org/entity/statement/q8277-51CA5FB1-6B37-45D7-91CB-9F36957E08B9> ;
     p:P5082 <http://www.wikidata.org/entity/statement/Q8277-C632CC78-D67D-4926-A429-12EDEB92E727> ;
     p:P5160 <http://www.wikidata.org/entity/statement/Q8277-3AD56BE1-D764-4864-BACD-8BFE64313612> ;
@@ -315,12 +313,12 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
     p:P673 <http://www.wikidata.org/entity/statement/q8277-842494BE-9161-45B3-B3A4-4DA59113B170>,
         <http://www.wikidata.org/entity/statement/q8277-939D6476-E055-4EF3-AC72-F11FC85D2131>,
         <http://www.wikidata.org/entity/statement/q8277-EEF3C0DE-E8CE-4840-B27A-117052249A1F> ;
-    p:P699 <http://www.wikidata.org/entity/statement/Q8277-289E9629-1496-4706-A808-3F25FA02DC8A>,
-        <http://www.wikidata.org/entity/statement/Q8277-8FFD0FA3-98F9-4D46-B3F2-E0CAE3C9C0BB> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q8277-8FFD0FA3-98F9-4D46-B3F2-E0CAE3C9C0BB> ;
     p:P7033 <http://www.wikidata.org/entity/statement/Q8277-AC6E3C60-FE11-462E-90FC-6858972A40F1> ;
     p:P7464 <http://www.wikidata.org/entity/statement/Q8277-B1BB39E9-94B8-4FE8-BBAA-85EE0DAE4A6F> ;
     p:P780 <http://www.wikidata.org/entity/statement/Q8277-a1877263-49db-3fde-4340-10c6315e2dd8> ;
     p:P7995 <http://www.wikidata.org/entity/statement/Q8277-850B7F0A-60DC-4658-910C-E7C39642DEE0> ;
+    p:P8408 <http://www.wikidata.org/entity/statement/Q8277-71388126-64C1-4E67-B7C7-65C721E66A75> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q8277-8C11CC7E-192B-4C8A-8C79-F72C124BA1FE> ;
     p:P923 <http://www.wikidata.org/entity/statement/Q8277-2453d25c-4f59-9e07-cb4c-ec89998fb89d>,
         <http://www.wikidata.org/entity/statement/Q8277-9a1a35ab-48e1-b5f2-f718-0da1056b5744>,
@@ -338,8 +336,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         <http://id.nlm.nih.gov/mesh/C20.111.258.250.500> ;
     ns1:P7033 <http://vocabulary.curriculum.edu.au/scot/11303.rdf> ;
     wdt:P1051 "13793" ;
-    wdt:P1193 0.00032,
-        0.001671 ;
+    wdt:P1193 0.00032 ;
     wdt:P1245 "1036110" ;
     wdt:P1325 <http://www.nanbyou.or.jp/entry/3806> ;
     wdt:P1343 wd:Q2657718 ;
@@ -466,6 +463,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
     wdt:P373 "Multiple sclerosis" ;
     wdt:P3827 "multiple-sclerosis",
         "relapsing-remitting-multiple-sclerosis" ;
+    wdt:P3984 "MultipleSclerosis" ;
     wdt:P4223 "sclerosi" ;
     wdt:P4229 "G35" ;
     wdt:P4317 "10255" ;
@@ -476,6 +474,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         "612595",
         "612596",
         "614810" ;
+    wdt:P5008 wd:Q4099686 ;
     wdt:P508 "25174" ;
     wdt:P5082 "multippel_sklerose" ;
     wdt:P5160 "tgm006888" ;
@@ -499,6 +498,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
     wdt:P7464 "multiple-sclerosis" ;
     wdt:P780 wd:Q58490835 ;
     wdt:P7995 "multiple-sclerosis" ;
+    wdt:P8408 "MultipleSclerosis" ;
     wdt:P910 wd:Q9518131 ;
     wdt:P923 wd:Q161238,
         wd:Q208376,
@@ -508,72 +508,43 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         <http://www.wikidata.org/reference/fe2ee53b8d9aae9c2aa926782e6084a979780487> ;
     ps:P31 wd:Q42303753 .
 
-<http://www.wikidata.org/entity/statement/Q8277-289E9629-1496-4706-A808-3F25FA02DC8A> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a>,
-        <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> ;
-    ps:P699 "DOID:2377" .
-
-<http://www.wikidata.org/entity/statement/Q8277-2C25089F-76DC-4A84-81E5-2F827A45AEA6> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a>,
-        <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> ;
-    ps:P1748 "C3243" .
-
-<http://www.wikidata.org/entity/statement/Q8277-2F929C3B-F64D-4A58-85FF-BDCA7ADABCB1> prov:wasDerivedFrom <http://www.wikidata.org/reference/10cecd204a4201da34be5f69e6ae79b8e38d2059>,
+<http://www.wikidata.org/entity/statement/Q8277-2F929C3B-F64D-4A58-85FF-BDCA7ADABCB1> prov:wasDerivedFrom <http://www.wikidata.org/reference/721d5fbdb23bfa0815c802dd90e7a7417eac5268>,
         <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a> ;
     ps:P279 wd:Q1186703 .
 
-<http://www.wikidata.org/entity/statement/Q8277-322D2AD3-14D6-4C86-868B-1A69379934BB> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a>,
-        <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> ;
-    pq:P4390 wd:Q39893967 ;
-    ps:P492 "612595" .
-
 <http://www.wikidata.org/entity/statement/Q8277-345a1dd1-4665-1986-7bac-409f9d9991a9> ps:P279 wd:Q19000726 .
 
-<http://www.wikidata.org/entity/statement/Q8277-34D1D8A0-AAC0-4309-BD0B-BC356D20A8C2> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a>,
-        <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> ;
-    pq:P4390 wd:Q39893967 ;
-    ps:P492 "612594" .
-
-<http://www.wikidata.org/entity/statement/Q8277-351A9828-AED9-4EC1-A079-2655EEB53676> prov:wasDerivedFrom <http://www.wikidata.org/reference/10cecd204a4201da34be5f69e6ae79b8e38d2059> ;
+<http://www.wikidata.org/entity/statement/Q8277-351A9828-AED9-4EC1-A079-2655EEB53676> prov:wasDerivedFrom <http://www.wikidata.org/reference/721d5fbdb23bfa0815c802dd90e7a7417eac5268> ;
     ps:P492 "612596" .
 
 <http://www.wikidata.org/entity/statement/Q8277-3BCB8D55-94EE-43E6-B68C-2CDF5C2EB978> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a> ;
     pq:P4390 wd:Q39893967 ;
     ps:P492 "614810" .
 
-<http://www.wikidata.org/entity/statement/Q8277-3E60EF48-E0FA-4EAD-9B4F-8ED39E9FDA0A> prov:wasDerivedFrom <http://www.wikidata.org/reference/10cecd204a4201da34be5f69e6ae79b8e38d2059> ;
+<http://www.wikidata.org/entity/statement/Q8277-3E60EF48-E0FA-4EAD-9B4F-8ED39E9FDA0A> prov:wasDerivedFrom <http://www.wikidata.org/reference/721d5fbdb23bfa0815c802dd90e7a7417eac5268> ;
     ps:P492 "612595" .
 
-<http://www.wikidata.org/entity/statement/Q8277-433E2373-6439-48C2-A370-0A26DCDBD288> prov:wasDerivedFrom <http://www.wikidata.org/reference/10cecd204a4201da34be5f69e6ae79b8e38d2059> ;
+<http://www.wikidata.org/entity/statement/Q8277-433E2373-6439-48C2-A370-0A26DCDBD288> prov:wasDerivedFrom <http://www.wikidata.org/reference/721d5fbdb23bfa0815c802dd90e7a7417eac5268> ;
     ps:P31 wd:Q12136 .
 
-<http://www.wikidata.org/entity/statement/Q8277-4827042B-62C8-4CF0-B700-14BFA0B2499B> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a>,
-        <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> ;
+<http://www.wikidata.org/entity/statement/Q8277-4827042B-62C8-4CF0-B700-14BFA0B2499B> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a> ;
     pq:P4390 wd:Q39893449 ;
     ps:P486 "D009103" .
 
-<http://www.wikidata.org/entity/statement/Q8277-62068A35-7507-4D97-BBF0-67A81DB6F67B> prov:wasDerivedFrom <http://www.wikidata.org/reference/10cecd204a4201da34be5f69e6ae79b8e38d2059> ;
-    ps:P2892 "C0026769" .
-
-<http://www.wikidata.org/entity/statement/Q8277-62643617-F18F-4838-96B6-2051FA41FB44> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a>,
-        <http://www.wikidata.org/reference/ba5b02ef63b1e5d2b5b886f368f5cbeb9f66f07b> ;
+<http://www.wikidata.org/entity/statement/Q8277-62068A35-7507-4D97-BBF0-67A81DB6F67B> prov:wasDerivedFrom <http://www.wikidata.org/reference/721d5fbdb23bfa0815c802dd90e7a7417eac5268> ;
     ps:P2892 "C0026769" .
 
 <http://www.wikidata.org/entity/statement/Q8277-62CF6D20-E7C0-4894-ADAC-899B829D1351> prov:wasDerivedFrom <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a> ;
     pq:P4390 wd:Q39893967 ;
     ps:P492 "126200" .
 
-<http://www.wikidata.org/entity/statement/Q8277-67494F45-5FCF-4BFC-9E26-D223DCDB6868> prov:wasDerivedFrom <http://www.wikidata.org/reference/10cecd204a4201da34be5f69e6ae79b8e38d2059> ;
-    ps:P492 "612594" .
-
-<http://www.wikidata.org/entity/statement/Q8277-745BA194-2E62-4125-A301-658ADB852872> prov:wasDerivedFrom <http://www.wikidata.org/reference/10cecd204a4201da34be5f69e6ae79b8e38d2059>,
+<http://www.wikidata.org/entity/statement/Q8277-745BA194-2E62-4125-A301-658ADB852872> prov:wasDerivedFrom <http://www.wikidata.org/reference/721d5fbdb23bfa0815c802dd90e7a7417eac5268>,
         <http://www.wikidata.org/reference/7eb6b48c90050f12f5d5c6f579758e3f1951308a> ;
     ps:P4229 "G35" .
 
-<http://www.wikidata.org/entity/statement/Q8277-8FFD0FA3-98F9-4D46-B3F2-E0CAE3C9C0BB> prov:wasDerivedFrom <http://www.wikidata.org/reference/10cecd204a4201da34be5f69e6ae79b8e38d2059> ;
+<http://www.wikidata.org/entity/statement/Q8277-8FFD0FA3-98F9-4D46-B3F2-E0CAE3C9C0BB> prov:wasDerivedFrom <http://www.wikidata.org/reference/721d5fbdb23bfa0815c802dd90e7a7417eac5268> ;
     ps:P699 "DOID:2377" .
 
-<http://www.wikidata.org/entity/statement/Q8277-D25E63CC-87F3-4B69-BA5C-8210DB0AF516> prov:wasDerivedFrom <http://www.wikidata.org/reference/b4b6870ad08f6da4d2fd525d4dbcfcb9d1740a32> ;
-    ps:P486 "D009103" .
-
-<http://www.wikidata.org/entity/statement/Q8277-FDE0912A-3785-4638-9B3E-E0677E4FB765> prov:wasDerivedFrom <http://www.wikidata.org/reference/10cecd204a4201da34be5f69e6ae79b8e38d2059> ;
+<http://www.wikidata.org/entity/statement/Q8277-FDE0912A-3785-4638-9B3E-E0677E4FB765> prov:wasDerivedFrom <http://www.wikidata.org/reference/721d5fbdb23bfa0815c802dd90e7a7417eac5268> ;
     ps:P1748 "C3243" .
 

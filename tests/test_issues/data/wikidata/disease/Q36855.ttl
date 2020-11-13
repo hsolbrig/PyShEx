@@ -39,6 +39,7 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "Sertésinfluenza",
         "Svineinfluenza",
         "Svinjska gripa",
+        "Svinjska influenca",
         "Svínaflensa",
         "Svínakrím",
         "Swine influenza",
@@ -100,15 +101,14 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "豚インフルエンザ",
         "豬流感",
         "돼지 인플루엔자" ;
-
-    schema:dateModified "2020-04-06T06:37:07+00:00"^^xsd:dateTime ;
-    schema:description "Bulaşıcı hastalık",
+    schema:dateModified "2020-10-25T12:00:23+00:00"^^xsd:dateTime ;
+    schema:description "A-tyyppin influenssaviruksen aiheuttama tauti",
+        "Bulaşıcı hastalık",
         "Griepgevalle wat veroorsaak word deur Ortomixovirusse wat endemies is tot varke",
         "akut verlaufende Infektionskrankheit der Atemwege bei Hausschweinen",
         "enfermedad respiratoria provocada por un virus gripal que infecta a los cerdos",
         "infection caused by any one of several types of swine influenza viruses",
         "infecție cauzată de unul dintre virusurile influenzei porcine",
-        "influenssaviruksen aiheuttama hengitystiesairaus",
         "influenza provocati da contagio endemica di Orthomyxovirus nei suini",
         "maladie respiratoire provoquée par un virus grippal infectant les cochons",
         "virussjukdom",
@@ -117,11 +117,11 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "מחלה זיהומית בקרב חזירים",
         "مرض جهاز تنفسي",
         "സൂക്ഷ്മാണുവിനാൽ ആതിഥേയജീവിയിൽ ഉണ്ടാവുന്ന രോഗബാധ" ;
-    schema:version 1151269305 ;
+    schema:version 1297165036 ;
     ns2:identifiers 13 ;
-    ns2:sitelinks 100 ;
-    ns2:statements 28 ;
-    ns2:timestamp "2020-04-06T07:34:54+00:00"^^xsd:dateTime ;
+    ns2:sitelinks 99 ;
+    ns2:statements 29 ;
+    ns2:timestamp "2020-10-25T12:00:31+00:00"^^xsd:dateTime ;
     skos:altLabel "2009 H1N1 grip salgını",
         "A",
         "A(H1N1)",
@@ -138,6 +138,7 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "Ffliw'r moch",
         "Fievre porcine",
         "Fièvre porcine",
+        "G4 EA H1N1",
         "Gripe A",
         "Gripe Suina",
         "Gripe de 1976 e 2009",
@@ -205,10 +206,10 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "Ātōnahuiztli Influenza H1N1",
         "Γρίπη Η1Ν1",
         "Γρίπη των Χοίρων",
-        "Вирус A/H1N1",
-        "Вирус H1N1",
         "Грип свинячий",
         "Каліфорнійський грип",
+        "вирус A/H1N1",
+        "вирус H1N1",
         "свињска грипа",
         "שוויין פלו",
         "שפעת חזירים",
@@ -290,11 +291,12 @@ wd:Q36855 rdfs:label "Cúm lợn",
         <http://www.wikidata.org/entity/statement/Q36855-dc0398bc-45ed-a2eb-eca8-ae10003b58cd> ;
     p:P373 <http://www.wikidata.org/entity/statement/q36855-F517BF96-FEAE-4331-AB71-64789DE77FE3> ;
     p:P494 <http://www.wikidata.org/entity/statement/Q36855-1fd8dec8-4aa7-6064-acea-ca4f3e50365b> ;
+    p:P5008 <http://www.wikidata.org/entity/statement/Q36855-31D55AED-C63A-4335-BFE0-E86F9E963C1F> ;
     p:P5270 <http://www.wikidata.org/entity/statement/Q36855-498E4672-98BC-4298-8EDF-E9332A255C76> ;
     p:P646 <http://www.wikidata.org/entity/statement/Q36855-7F648886-DE7E-48EF-869D-2EB4A5C67340> ;
     p:P673 <http://www.wikidata.org/entity/statement/Q36855-48123008-B0ED-4D72-B1EC-3666B25544B1> ;
-    p:P699 <http://www.wikidata.org/entity/statement/Q36855-251AFEFE-9357-4819-9345-8658A5817D72>,
-        <http://www.wikidata.org/entity/statement/Q36855-C725609A-6F51-4A2F-B451-897C76F77DCD> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q36855-251AFEFE-9357-4819-9345-8658A5817D72> ;
+    p:P7982 <http://www.wikidata.org/entity/statement/Q36855-8F731C34-7423-4D21-9941-3C95288582E2> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q36855-FF9EC242-3136-4C46-8597-0772CDD86794> ;
     ns1:P227 <http://d-nb.info/gnd/7679861-6> ;
     ns1:P2347 <http://www.yso.fi/onto/yso/p23407> ;
@@ -304,7 +306,6 @@ wd:Q36855 rdfs:label "Cúm lợn",
     wdt:P1296 "0517808" ;
     wdt:P1417 "science/swine-flu" ;
     wdt:P1748 "C80444" ;
-
     wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/H1N1%20Influenza%20Virus%20Particles%20%288411599236%29.jpg> ;
     wdt:P1995 wd:Q203337,
         wd:Q788926 ;
@@ -321,16 +322,18 @@ wd:Q36855 rdfs:label "Cúm lợn",
         wd:Q54947664 ;
     wdt:P373 "Swine flu" ;
     wdt:P494 "J09.X2" ;
+    wdt:P5008 wd:Q4099686 ;
     wdt:P5270 "MONDO:0005460" ;
     wdt:P646 "/m/057c6k" ;
     wdt:P673 "1807048" ;
     wdt:P699 "DOID:0050211" ;
+    wdt:P7982 "68206" ;
     wdt:P910 wd:Q10027720 .
 
 <http://www.wikidata.org/entity/statement/Q36855-1BF9DB2E-9759-40E3-B5F2-DEE5BF8B2598> prov:wasDerivedFrom <http://www.wikidata.org/reference/230e690b622c73b403f64da8531818cd0b5993d6> ;
     ps:P31 wd:Q18123741 .
 
-<http://www.wikidata.org/entity/statement/Q36855-251AFEFE-9357-4819-9345-8658A5817D72> prov:wasDerivedFrom <http://www.wikidata.org/reference/6bb7f7116f0449e8f832455c32b53b754b52b25b> ;
+<http://www.wikidata.org/entity/statement/Q36855-251AFEFE-9357-4819-9345-8658A5817D72> prov:wasDerivedFrom <http://www.wikidata.org/reference/77e8ec1ff73729d73296ef4afc7e7aa17bfe1196> ;
     ps:P699 "DOID:0050211" .
 
 <http://www.wikidata.org/entity/statement/Q36855-294B0FE0-FBF7-4B51-A34A-FEF4D049771B> prov:wasDerivedFrom <http://www.wikidata.org/reference/230e690b622c73b403f64da8531818cd0b5993d6> ;
@@ -340,15 +343,11 @@ wd:Q36855 rdfs:label "Cúm lợn",
     ps:P1748 "C80444" .
 
 <http://www.wikidata.org/entity/statement/Q36855-3d09ccde-42c0-d25c-68a5-a04fce9c5a93> prov:wasDerivedFrom <http://www.wikidata.org/reference/230e690b622c73b403f64da8531818cd0b5993d6>,
-        <http://www.wikidata.org/reference/340d3a34c459ce4b1e42e22640aa820cb97da043> ;
+        <http://www.wikidata.org/reference/330ac8ad27be20b870610e4c90a2a6dfe736e7a6> ;
     ps:P279 wd:Q2840 .
 
-<http://www.wikidata.org/entity/statement/Q36855-4407CDA5-D9BF-4C74-AE3B-3648B1F3AFFA> prov:wasDerivedFrom <http://www.wikidata.org/reference/340d3a34c459ce4b1e42e22640aa820cb97da043> ;
+<http://www.wikidata.org/entity/statement/Q36855-4407CDA5-D9BF-4C74-AE3B-3648B1F3AFFA> prov:wasDerivedFrom <http://www.wikidata.org/reference/330ac8ad27be20b870610e4c90a2a6dfe736e7a6> ;
     ps:P31 wd:Q12136 .
-
-<http://www.wikidata.org/entity/statement/Q36855-C725609A-6F51-4A2F-B451-897C76F77DCD> prov:wasDerivedFrom <http://www.wikidata.org/reference/230e690b622c73b403f64da8531818cd0b5993d6>,
-        <http://www.wikidata.org/reference/4013d56051c2d2fdd0e70efb912f53d34e3d1320> ;
-    ps:P699 "DOID:0050211" .
 
 <http://www.wikidata.org/entity/statement/Q36855-dc0398bc-45ed-a2eb-eca8-ae10003b58cd> ps:P31 wd:Q54947664 .
 

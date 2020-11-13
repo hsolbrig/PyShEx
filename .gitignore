@@ -109,3 +109,6 @@ venv.bak/
 
 # Do not submit Pipfile.lock (https://pypi.org/project/pipenv-to-requirements/)
 Pipfile.lock
+
+# mac os specific files
+.DS_Store

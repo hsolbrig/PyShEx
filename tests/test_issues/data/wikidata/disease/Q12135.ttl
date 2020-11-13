@@ -14,7 +14,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 wd:Q12135 rdfs:label "Afiechyd meddwl",
-        "Akıl hastalığı",
         "Cheng-sîn-pēⁿ",
         "Diperensya ha panhunahuna",
         "Duševna bolest",
@@ -37,8 +36,6 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "Penyakit kejiwaan",
         "Psichikos sutrikimas",
         "Psikėkas sotrėkėms",
-        "Psychiatric Disorders",
-        "Psychische Störung",
         "Psîkopatî",
         "Psüühika- ja käitumishäired",
         "Ruhiy kasallik",
@@ -54,6 +51,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "duševná porucha",
         "duševní porucha",
         "garīga slimība",
+        "mental bozukluk",
         "mental disorder",
         "mentális zavar",
         "penyakit mental",
@@ -96,7 +94,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "मानसिक ल्वय्",
         "मानसिकरोगः",
         "মানসিক বিসংগতি",
-        "মানসিক রোগ",
+        "মানসিক ব্যাধি",
         "ਮਨੋਵਿਕਾਰ",
         "ମାନସିକ ରୋଗ",
         "உளப் பிறழ்ச்சி",
@@ -111,12 +109,11 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "精神疾患",
         "精神障礙",
         "정신 질환" ;
-
-    schema:dateModified "2020-05-07T11:48:05+00:00"^^xsd:dateTime ;
+    schema:dateModified "2020-11-03T16:36:28+00:00"^^xsd:dateTime ;
     schema:description "Anormalidade, sofrimento ou comprometimento da ordem psicológica e/ou mental",
         "affezione che colpisce il pensiero, i sentimenti o il comportamento di una persona",
         "alteración de los procesos cognitivos y afectivos del desarrollo",
-        "distressing thought or behavior pattern",
+        "behavioral or mental pattern that causes significant distress or impairment of personal functioning",
         "erhebliche krankhafte Abweichung von der Norm im Erleben oder Verhalten",
         "lidské onemocnění",
         "mielen toiminnan poikkeama, joka aiheuttaa merkittävää kärsimystä ja toimintakyvyn laskua",
@@ -125,6 +122,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "psigiese aandoening",
         "psihološki poremećaj ili anomalija",
         "psychological pattern or anomaly",
+        "rahatsız edici düşünce ya da davranış modeli",
         "trouble psychologique ou comportemental",
         "wzorzec zachowania lub sposób myślenia, który powoduje znaczny dyskomfort lub pogorszenie funkcjonowania jednostki",
         "μοτίβο σκέψης ή συμπεριφοράς, ή μια ανωμαλία η οποία προκαλεί πόνο ή και ανικανότητα, και η οποία δεν είναι αναπτυξιακά ή κοινωνικά καθορισμένη",
@@ -135,20 +133,16 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "مرض نفسي يعتقد المصاب به ان هنالك احد يراقبه",
         "അസ്വാഭാവികമായ ചിന്തകളോ പെരുമാറ്റമോ",
         "同心理、神經有關嘅疾病",
-        "疾病" ;
-
-    schema:version 1175827212 ;
-    ns2:identifiers 37 ;
-    ns2:sitelinks 104 ;
+        "疾病",
+        "精神や行動における症状を呈することによって、機能的障害を伴っている状態" ;
+    schema:version 1302195667 ;
+    ns2:identifiers 36 ;
+    ns2:sitelinks 105 ;
     ns2:statements 79 ;
-    ns2:timestamp "2020-05-07T11:58:15+00:00"^^xsd:dateTime ;
+    ns2:timestamp "2020-11-03T16:36:34+00:00"^^xsd:dateTime ;
     skos:altLabel "Gemütskrankheit",
-        "Psychische Erkrankung",
-        "Psychische Erkrankungen",
-        "Psychische Krankheit",
-        "Seelische Behinderung",
-        "Seelische Krankheit",
-        "Seelische Störung",
+        "akıl bozukluğu",
+        "akıl hastalığı",
         "choroby psychiatryczne",
         "choroby psychiczne",
         "choroby umysłowe",
@@ -178,22 +172,34 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "mensa malordo",
         "mensa malsano",
         "mensa perturbo",
+        "mental disorders",
         "mental dysfunction",
+        "mental hastalık",
         "mental illness",
         "mental liding",
         "mental or behavioural disorder",
+        "mental ya da davranış bozukluğu",
         "penyakit minda",
         "psihička bolest",
         "psika perturbo",
+        "psikiyatrik bozukluk",
+        "psikiyatrik hastalık",
         "psychiatric condition",
         "psychiatric disease",
         "psychiatric disorder",
         "psychická choroba",
         "psychická nemoc",
         "psychická porucha",
+        "psychische Erkrankung",
+        "psychische Erkrankungen",
+        "psychische Krankheit",
         "psykiatrisk liding",
+        "ruhsal bozukluk",
         "sakit jiwa",
         "sakit minda",
+        "seelische Behinderung",
+        "seelische Krankheit",
+        "seelische Störung",
         "sinnsliding",
         "transtorno mental",
         "trastorno psiquiatrico",
@@ -208,14 +214,19 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "душевное заболевание",
         "душевное расстройство",
         "ментална болест",
+        "ментални поремећај",
         "ментално пореметување",
         "ментално растројство",
         "ментальное расстройство",
+        "нервни поремећај",
+        "нервно растројство",
         "психиатрическое расстройство",
         "психическая болезнь",
         "психическая дисфункция",
         "психическое заболевание",
         "психическое или поведенческое расстройство",
+        "психички поремећај",
+        "психичко растројство",
         "психолошка болест",
         "расстройство психики",
         "اضطراب عقلي",
@@ -252,8 +263,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     p:P1709 <http://www.wikidata.org/entity/statement/Q12135-239A7FF8-318C-4148-A931-9AFAFD407A5E>,
         <http://www.wikidata.org/entity/statement/Q12135-6BDD0C37-93B7-4A24-B941-6B91BA9218BD> ;
     p:P1748 <http://www.wikidata.org/entity/statement/Q12135-3A4F4540-6A61-49C3-9E45-0344F16813F9>,
-        <http://www.wikidata.org/entity/statement/Q12135-47AEDAF6-B4A3-4D39-A26C-A832BCD7512A>,
-        <http://www.wikidata.org/entity/statement/Q12135-6FDD474B-C9B8-4643-AE9C-D8F5CFDC289D> ;
+        <http://www.wikidata.org/entity/statement/Q12135-47AEDAF6-B4A3-4D39-A26C-A832BCD7512A> ;
     p:P18 <http://www.wikidata.org/entity/statement/Q12135-118b1db3-442a-dc6f-0058-818d6ba24eea> ;
     p:P1889 <http://www.wikidata.org/entity/statement/Q12135-0890a66d-4989-a41d-6c3d-b70bf0528694> ;
     p:P1963 <http://www.wikidata.org/entity/statement/Q12135-058DCBC4-053F-43C9-B9ED-E2600E1A607D> ;
@@ -278,8 +288,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     p:P2888 <http://www.wikidata.org/entity/statement/Q12135-2676FDBB-DD4F-420F-9975-0F4B0B7495B8>,
         <http://www.wikidata.org/entity/statement/Q12135-350F011E-3EDE-47A6-855C-4ACAB9DF90E3>,
         <http://www.wikidata.org/entity/statement/Q12135-503B67AD-7EEA-4F4B-8C5C-381BE4B76277> ;
-    p:P2892 <http://www.wikidata.org/entity/statement/Q12135-23C58F61-3722-4011-A59C-C298108F6AA8>,
-        <http://www.wikidata.org/entity/statement/Q12135-7A34FA7C-BD3E-44C3-8413-6A29F4FDD723>,
+    p:P2892 <http://www.wikidata.org/entity/statement/Q12135-7A34FA7C-BD3E-44C3-8413-6A29F4FDD723>,
         <http://www.wikidata.org/entity/statement/Q12135-8C115F97-7D62-47AD-9480-5CE942D5A098> ;
     p:P31 <http://www.wikidata.org/entity/statement/Q12135-3F9AE78D-F2F1-4DD8-A6B2-B765EDF5D73E> ;
     p:P3123 <http://www.wikidata.org/entity/statement/Q12135-38735FE0-FB94-44B9-B1CB-B51D0513EDBA>,
@@ -297,7 +306,8 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     p:P461 <http://www.wikidata.org/entity/statement/Q12135-70d9fa97-4803-e388-3ebd-8944380fd7f3> ;
     p:P486 <http://www.wikidata.org/entity/statement/Q12135-40BF8559-7F6C-45FC-B291-8895AC9738D7> ;
     p:P494 <http://www.wikidata.org/entity/statement/Q12135-f6e17c40-4150-bb03-75f5-b0ed68e2ed23> ;
-    p:P5008 <http://www.wikidata.org/entity/statement/Q12135-131A65B8-4378-4A10-9B6D-6B8C13EC4327> ;
+    p:P5008 <http://www.wikidata.org/entity/statement/Q12135-131A65B8-4378-4A10-9B6D-6B8C13EC4327>,
+        <http://www.wikidata.org/entity/statement/Q12135-F3FB3858-B9E8-4DB6-903F-0971DA99C587> ;
     p:P508 <http://www.wikidata.org/entity/statement/q12135-8A003DB7-599F-40AD-B2AB-24193B8D1FA8> ;
     p:P5198 <http://www.wikidata.org/entity/statement/Q12135-8A80FAFB-9875-4E5A-963A-DC221B76913C> ;
     p:P5270 <http://www.wikidata.org/entity/statement/Q12135-36F84016-3807-41C9-A0DF-9EC8BB75DF76>,
@@ -308,18 +318,19 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     p:P667 <http://www.wikidata.org/entity/statement/Q12135-2D4D385E-2E60-4785-B6F8-5F45788421CD> ;
     p:P672 <http://www.wikidata.org/entity/statement/Q12135-707676cd-4ddb-9bf0-ca11-5b6aae3c3fec> ;
     p:P6849 <http://www.wikidata.org/entity/statement/Q12135-02E1D095-E8DC-4190-906B-E68AE1E75796> ;
-    p:P699 <http://www.wikidata.org/entity/statement/Q12135-5008E4C6-B970-4B62-97BB-8859DE94BBB2>,
-        <http://www.wikidata.org/entity/statement/Q12135-5251CD64-15DA-4CF5-8B26-D59859D32C5F>,
+    p:P699 <http://www.wikidata.org/entity/statement/Q12135-5251CD64-15DA-4CF5-8B26-D59859D32C5F>,
         <http://www.wikidata.org/entity/statement/Q12135-DDD25A09-18BB-4D72-B8D7-092F80C079A8>,
         <http://www.wikidata.org/entity/statement/Q12135-E689FAB7-C03E-4081-A2D4-B4EC25AC577B> ;
     p:P7033 <http://www.wikidata.org/entity/statement/Q12135-83634034-61FF-4FDC-A3F1-B41BA424A18F> ;
+    p:P828 <http://www.wikidata.org/entity/statement/Q12135-68aef4a7-4544-a7f7-4106-aeeb9e36766a> ;
+    p:P8408 <http://www.wikidata.org/entity/statement/Q12135-858C47FA-47D2-4C42-9EF3-F5F7D6B471B6> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q12135-C4E93B0F-B380-4A43-A5DE-AAAA0EE01C23> ;
     p:P924 <http://www.wikidata.org/entity/statement/Q12135-cc69b41f-4a5e-0076-b730-c3195fb6379b> ;
     p:P948 <http://www.wikidata.org/entity/statement/Q12135-814DFA56-621E-4461-97F7-ECF483D3249D> ;
     p:P989 <http://www.wikidata.org/entity/statement/Q12135-71990294-F9D9-4BE8-B123-65C1372DA9CD> ;
     ns1:P1014 <http://vocab.getty.edu/aat/300055131> ;
     ns1:P227 <http://d-nb.info/gnd/4047686-8> ;
-    ns1:P244 <http://id.loc.gov/authorities/names/sh85083643> ;
+    ns1:P244 <https://id.loc.gov/authorities/names/sh85083643> ;
     ns1:P2581 <http://babelnet.org/rdf/s00027818n> ;
     ns1:P3916 <http://vocabularies.unesco.org/thesaurus/concept5463> ;
     ns1:P486 <http://id.nlm.nih.gov/mesh/D001523> ;
@@ -381,7 +392,8 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     wdt:P461 wd:Q317309 ;
     wdt:P486 "D001523" ;
     wdt:P494 "F00-F99" ;
-    wdt:P5008 wd:Q5460604 ;
+    wdt:P5008 wd:Q4099686,
+        wd:Q5460604 ;
     wdt:P508 "6114" ;
     wdt:P5198 "294925260" ;
     wdt:P5270 "MONDO:0002025",
@@ -395,61 +407,50 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     wdt:P699 "DOID:0050329",
         "DOID:150" ;
     wdt:P7033 "scot/4979" ;
+    wdt:P828 wd:Q5054620 ;
+    wdt:P8408 "PsychologicalAilment" ;
     wdt:P910 wd:Q6902639 ;
     wdt:P924 wd:Q183257 ;
     wdt:P948 <http://commons.wikimedia.org/wiki/Special:FilePath/Starry%20night%20banner.jpg> ;
     wdt:P989 <http://commons.wikimedia.org/wiki/Special:FilePath/Mental%20illness.ogg> .
 
-<http://www.wikidata.org/entity/statement/Q12135-09ad8697-4e33-3086-adc0-d05ca1725b18> prov:wasDerivedFrom <http://www.wikidata.org/reference/02f5a8357a2eb1d72fd0e462623ca9d398d9b206> ;
+<http://www.wikidata.org/entity/statement/Q12135-09ad8697-4e33-3086-adc0-d05ca1725b18> prov:wasDerivedFrom <http://www.wikidata.org/reference/172e7d6894743b7c5315241a48909772d35adeaf> ;
     ps:P279 wd:Q12136 .
-
-<http://www.wikidata.org/entity/statement/Q12135-23C58F61-3722-4011-A59C-C298108F6AA8> prov:wasDerivedFrom <http://www.wikidata.org/reference/2ca2f08bf943e2003a85a1aa7211b21a56faa345>,
-        <http://www.wikidata.org/reference/d2fb62272bb3ab747b816e7d005fa9fc30e65640> ;
-    ps:P2892 "C0004936" .
 
 <http://www.wikidata.org/entity/statement/Q12135-3A4F4540-6A61-49C3-9E45-0344F16813F9> prov:wasDerivedFrom <http://www.wikidata.org/reference/fbe2d59b22f826370439637ef29c4e9b454cf42b> ;
     ps:P1748 "C2893" .
 
-<http://www.wikidata.org/entity/statement/Q12135-3F9AE78D-F2F1-4DD8-A6B2-B765EDF5D73E> prov:wasDerivedFrom <http://www.wikidata.org/reference/02f5a8357a2eb1d72fd0e462623ca9d398d9b206> ;
+<http://www.wikidata.org/entity/statement/Q12135-3F9AE78D-F2F1-4DD8-A6B2-B765EDF5D73E> prov:wasDerivedFrom <http://www.wikidata.org/reference/172e7d6894743b7c5315241a48909772d35adeaf> ;
     ps:P31 wd:Q12136 .
 
-<http://www.wikidata.org/entity/statement/Q12135-40BF8559-7F6C-45FC-B291-8895AC9738D7> prov:wasDerivedFrom <http://www.wikidata.org/reference/2ca2f08bf943e2003a85a1aa7211b21a56faa345>,
-        <http://www.wikidata.org/reference/d2fb62272bb3ab747b816e7d005fa9fc30e65640> ;
+<http://www.wikidata.org/entity/statement/Q12135-40BF8559-7F6C-45FC-B291-8895AC9738D7> prov:wasDerivedFrom <http://www.wikidata.org/reference/d2fb62272bb3ab747b816e7d005fa9fc30e65640> ;
     pq:P4390 wd:Q39893449 ;
     ps:P486 "D001523" .
 
-<http://www.wikidata.org/entity/statement/Q12135-47AEDAF6-B4A3-4D39-A26C-A832BCD7512A> prov:wasDerivedFrom <http://www.wikidata.org/reference/02f5a8357a2eb1d72fd0e462623ca9d398d9b206> ;
+<http://www.wikidata.org/entity/statement/Q12135-47AEDAF6-B4A3-4D39-A26C-A832BCD7512A> prov:wasDerivedFrom <http://www.wikidata.org/reference/172e7d6894743b7c5315241a48909772d35adeaf> ;
     ps:P1748 "C2893" .
 
-<http://www.wikidata.org/entity/statement/Q12135-5008E4C6-B970-4B62-97BB-8859DE94BBB2> prov:wasDerivedFrom <http://www.wikidata.org/reference/2ca2f08bf943e2003a85a1aa7211b21a56faa345>,
-        <http://www.wikidata.org/reference/d2fb62272bb3ab747b816e7d005fa9fc30e65640> ;
+<http://www.wikidata.org/entity/statement/Q12135-5251CD64-15DA-4CF5-8B26-D59859D32C5F> prov:wasDerivedFrom <http://www.wikidata.org/reference/172e7d6894743b7c5315241a48909772d35adeaf> ;
     ps:P699 "DOID:150" .
 
-<http://www.wikidata.org/entity/statement/Q12135-5251CD64-15DA-4CF5-8B26-D59859D32C5F> prov:wasDerivedFrom <http://www.wikidata.org/reference/02f5a8357a2eb1d72fd0e462623ca9d398d9b206> ;
-    ps:P699 "DOID:150" .
-
-<http://www.wikidata.org/entity/statement/Q12135-651BD972-84A7-4268-8E6F-E4FC39FC5C1C> prov:wasDerivedFrom <http://www.wikidata.org/reference/02f5a8357a2eb1d72fd0e462623ca9d398d9b206>,
+<http://www.wikidata.org/entity/statement/Q12135-651BD972-84A7-4268-8E6F-E4FC39FC5C1C> prov:wasDerivedFrom <http://www.wikidata.org/reference/172e7d6894743b7c5315241a48909772d35adeaf>,
         <http://www.wikidata.org/reference/d2fb62272bb3ab747b816e7d005fa9fc30e65640> ;
     ps:P4229 "F99" .
-
-<http://www.wikidata.org/entity/statement/Q12135-6FDD474B-C9B8-4643-AE9C-D8F5CFDC289D> prov:wasDerivedFrom <http://www.wikidata.org/reference/2ca2f08bf943e2003a85a1aa7211b21a56faa345>,
-        <http://www.wikidata.org/reference/d2fb62272bb3ab747b816e7d005fa9fc30e65640> ;
-    ps:P1748 "C2893" .
 
 <http://www.wikidata.org/entity/statement/Q12135-7A34FA7C-BD3E-44C3-8413-6A29F4FDD723> prov:wasDerivedFrom <http://www.wikidata.org/reference/fbe2d59b22f826370439637ef29c4e9b454cf42b> ;
     ps:P2892 "C0029516" .
 
-<http://www.wikidata.org/entity/statement/Q12135-8C115F97-7D62-47AD-9480-5CE942D5A098> prov:wasDerivedFrom <http://www.wikidata.org/reference/02f5a8357a2eb1d72fd0e462623ca9d398d9b206> ;
+<http://www.wikidata.org/entity/statement/Q12135-8C115F97-7D62-47AD-9480-5CE942D5A098> prov:wasDerivedFrom <http://www.wikidata.org/reference/172e7d6894743b7c5315241a48909772d35adeaf> ;
     ps:P2892 "C0004936" .
 
 <http://www.wikidata.org/entity/statement/Q12135-9995E3A4-BD94-4341-B248-F8562C7C5993> prov:wasDerivedFrom <http://www.wikidata.org/reference/fbe2d59b22f826370439637ef29c4e9b454cf42b> ;
     ps:P4229 "F00.F99" .
 
-<http://www.wikidata.org/entity/statement/Q12135-B369266D-FCED-45C8-B6F6-E4A8A662AE8A> prov:wasDerivedFrom <http://www.wikidata.org/reference/02f5a8357a2eb1d72fd0e462623ca9d398d9b206>,
+<http://www.wikidata.org/entity/statement/Q12135-B369266D-FCED-45C8-B6F6-E4A8A662AE8A> prov:wasDerivedFrom <http://www.wikidata.org/reference/172e7d6894743b7c5315241a48909772d35adeaf>,
         <http://www.wikidata.org/reference/d2fb62272bb3ab747b816e7d005fa9fc30e65640> ;
     ps:P4229 "F99-F99" .
 
-<http://www.wikidata.org/entity/statement/Q12135-DDD25A09-18BB-4D72-B8D7-092F80C079A8> prov:wasDerivedFrom <http://www.wikidata.org/reference/ae6d1880ab4ff1406c85cf58934298b3572f7991> ;
+<http://www.wikidata.org/entity/statement/Q12135-DDD25A09-18BB-4D72-B8D7-092F80C079A8> prov:wasDerivedFrom <http://www.wikidata.org/reference/b6adbc88e7e83fa01cdda486745a9db7d60425bb> ;
     ps:P699 "DOID:0050329" .
 
 <http://www.wikidata.org/entity/statement/Q12135-E689FAB7-C03E-4081-A2D4-B4EC25AC577B> prov:wasDerivedFrom <http://www.wikidata.org/reference/fbe2d59b22f826370439637ef29c4e9b454cf42b> ;
