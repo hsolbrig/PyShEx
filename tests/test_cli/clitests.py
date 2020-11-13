@@ -63,7 +63,7 @@ class CLITestCase(unittest.TestCase):
         """
         testfile_path = os.path.join(self.testdir_path, testfile)
         if text_filter is None:
-            text_filter = lambda txt: txt.replace('\r\n', '\n').strip()
+            text_filter = lambda txt: "".join(txt.replace('\r\n', '\n').strip().split())
 
         outf = StringIO()
         arg_list = args.split() if isinstance(args, str) else args

@@ -23,14 +23,17 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install pipenv-to-requirements
-        pipenv_to_requirements
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Test with unittest
+        python setup.py install
+        pip install -r requirements.txt
+        pip install pbr
+
+    - name: Build test files
       run: |
-        pipenv run python tests/test_utils/test_n3_mapper.py
-        python -m unittest discover -p 'test_*.py'
+        echo `python tests/test_utils/test_n3_mapper.py`
+
+    - name: Test with unittest
+      run: python -m unittest discover -p 'test_*.py'
+
     - name: Check in requirements.txt and requirements-dev.txt
       run: |
         git add requirements*.txt

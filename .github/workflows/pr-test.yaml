@@ -26,10 +26,13 @@ jobs:
       uses: dschep/install-pipenv-action@v1
     - name: Install dependencies
       run: |
-        pipenv install
-        pipenv install pbr
+        python setup.py install
+        pip install -r requirements.txt
+        pip install pbr
+
+    - name: Build test files
+      run: |
+        echo `python tests/test_utils/test_n3_mapper.py`
 
     - name: Test with unittest
-      run: |
-        pipenv run python tests/test_utils/test_n3_mapper.py
-        pipenv run python -m unittest discover -p 'test_*.py'
+      run: python -m unittest discover -p 'test_*.py'
