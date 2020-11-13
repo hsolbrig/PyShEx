@@ -29,7 +29,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with unittest
       run: |
-        python tests/test_utils/test_n3_mapper.py
+        pipenv run python tests/test_utils/test_n3_mapper.py
         python -m unittest discover -p 'test_*.py'
     - name: Check in requirements.txt and requirements-dev.txt
       run: |

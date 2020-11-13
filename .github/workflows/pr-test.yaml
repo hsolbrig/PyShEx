@@ -31,5 +31,5 @@ jobs:
 
     - name: Test with unittest
       run: |
-        python tests/test_utils/test_n3_mapper.py
+        pipenv run python tests/test_utils/test_n3_mapper.py
         pipenv run python -m unittest discover -p 'test_*.py'
