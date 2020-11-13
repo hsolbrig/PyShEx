@@ -34,7 +34,7 @@ wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
     ns1:identifiers 13 ;
     ns1:sitelinks 8 ;
     ns1:statements 22 ;
-    ns1:timestamp "2020-10-29T17:41:36+00:00"^^xsd:dateTime ;
+    ns1:timestamp "2020-10-29T17:41:35+00:00"^^xsd:dateTime ;
     skos:altLabel "Eisenharte Struma",
         "Riedel disease",
         "Riedel fibrosing thyroiditis",

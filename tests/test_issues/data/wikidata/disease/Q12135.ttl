@@ -1,7 +1,7 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
-@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix pq: <http://www.wikidata.org/prop/qualifier/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -136,10 +136,10 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "疾病",
         "精神や行動における症状を呈することによって、機能的障害を伴っている状態" ;
     schema:version 1302195667 ;
-    ns2:identifiers 36 ;
-    ns2:sitelinks 105 ;
-    ns2:statements 79 ;
-    ns2:timestamp "2020-11-03T16:36:42+00:00"^^xsd:dateTime ;
+    ns1:identifiers 36 ;
+    ns1:sitelinks 105 ;
+    ns1:statements 79 ;
+    ns1:timestamp "2020-11-03T16:36:42+00:00"^^xsd:dateTime ;
     skos:altLabel "Gemütskrankheit",
         "akıl bozukluğu",
         "akıl hastalığı",
@@ -328,17 +328,17 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     p:P924 <http://www.wikidata.org/entity/statement/Q12135-cc69b41f-4a5e-0076-b730-c3195fb6379b> ;
     p:P948 <http://www.wikidata.org/entity/statement/Q12135-814DFA56-621E-4461-97F7-ECF483D3249D> ;
     p:P989 <http://www.wikidata.org/entity/statement/Q12135-71990294-F9D9-4BE8-B123-65C1372DA9CD> ;
-    ns1:P1014 <http://vocab.getty.edu/aat/300055131> ;
-    ns1:P227 <http://d-nb.info/gnd/4047686-8> ;
-    ns1:P244 <https://id.loc.gov/authorities/names/sh85083643> ;
-    ns1:P2581 <http://babelnet.org/rdf/s00027818n> ;
-    ns1:P3916 <http://vocabularies.unesco.org/thesaurus/concept5463> ;
-    ns1:P486 <http://id.nlm.nih.gov/mesh/D001523> ;
-    ns1:P508 <http://purl.org/bncf/tid/6114> ;
-    ns1:P6366 <http://ma-graph.org/entity/2780875785> ;
-    ns1:P646 <http://g.co/kg/m/04x4r> ;
-    ns1:P672 <http://id.nlm.nih.gov/mesh/F03> ;
-    ns1:P7033 <http://vocabulary.curriculum.edu.au/scot/4979.rdf> ;
+    ns2:P1014 <http://vocab.getty.edu/aat/300055131> ;
+    ns2:P227 <http://d-nb.info/gnd/4047686-8> ;
+    ns2:P244 <https://id.loc.gov/authorities/names/sh85083643> ;
+    ns2:P2581 <http://babelnet.org/rdf/s00027818n> ;
+    ns2:P3916 <http://vocabularies.unesco.org/thesaurus/concept5463> ;
+    ns2:P486 <http://id.nlm.nih.gov/mesh/D001523> ;
+    ns2:P508 <http://purl.org/bncf/tid/6114> ;
+    ns2:P6366 <http://ma-graph.org/entity/2780875785> ;
+    ns2:P646 <http://g.co/kg/m/04x4r> ;
+    ns2:P672 <http://id.nlm.nih.gov/mesh/F03> ;
+    ns2:P7033 <http://vocabulary.curriculum.edu.au/scot/4979.rdf> ;
     wdt:P1014 "300055131" ;
     wdt:P1051 "12879" ;
     wdt:P1296 "0193785" ;

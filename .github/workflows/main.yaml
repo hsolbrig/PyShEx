@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
 
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
@@ -27,6 +29,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with unittest
       run: |
+        pipenv run python -m tests/test_utils/test_n3_mapper.py
         python -m unittest discover -p 'test_*.py'
     - name: Check in requirements.txt and requirements-dev.txt
       run: |

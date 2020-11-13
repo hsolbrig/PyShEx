@@ -15,6 +15,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
 
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
@@ -28,4 +30,6 @@ jobs:
         pipenv install pbr
 
     - name: Test with unittest
-      run: pipenv run python -m unittest discover -p 'test_*.py'
+      run: |
+        pipenv run python -m tests/test_utils/test_n3_mapper.py
+        pipenv run python -m unittest discover -p 'test_*.py'
