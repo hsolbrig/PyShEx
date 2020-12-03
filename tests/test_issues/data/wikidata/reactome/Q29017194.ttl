@@ -17,7 +17,7 @@ wd:Q29017194 rdfs:label "N-glycan trimming in the ER and Calnexin/Calreticulin c
     wikibase:identifiers 1 ;
     wikibase:sitelinks 0 ;
     wikibase:statements 13 ;
-    wikibase:timestamp "2020-11-12T13:00:51+00:00"^^xsd:dateTime ;
+    wikibase:timestamp "2020-11-12T13:00:49+00:00"^^xsd:dateTime ;
     p:P2860 <http://www.wikidata.org/entity/statement/Q29017194-5302F6D9-9E3A-4738-BFEF-432F38DA2BA3> ;
     p:P2888 <http://www.wikidata.org/entity/statement/Q29017194-5DBCCA3A-8CC0-456E-9DD8-3B5A52C3A581> ;
     p:P31 <http://www.wikidata.org/entity/statement/Q29017194-AB50625F-7FBE-4F00-8447-04DF17F2340A>,

@@ -1,7 +1,7 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
-@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix ps: <http://www.wikidata.org/prop/statement/> .
@@ -101,7 +101,7 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "豚インフルエンザ",
         "豬流感",
         "돼지 인플루엔자" ;
-    schema:dateModified "2020-10-25T12:00:23+00:00"^^xsd:dateTime ;
+    schema:dateModified "2020-11-29T23:20:04+00:00"^^xsd:dateTime ;
     schema:description "A-tyyppin influenssaviruksen aiheuttama tauti",
         "Bulaşıcı hastalık",
         "Griepgevalle wat veroorsaak word deur Ortomixovirusse wat endemies is tot varke",
@@ -117,11 +117,11 @@ wd:Q36855 rdfs:label "Cúm lợn",
         "מחלה זיהומית בקרב חזירים",
         "مرض جهاز تنفسي",
         "സൂക്ഷ്മാണുവിനാൽ ആതിഥേയജീവിയിൽ ഉണ്ടാവുന്ന രോഗബാധ" ;
-    schema:version 1297165036 ;
-    ns2:identifiers 13 ;
-    ns2:sitelinks 99 ;
-    ns2:statements 29 ;
-    ns2:timestamp "2020-10-25T12:00:31+00:00"^^xsd:dateTime ;
+    schema:version 1315441260 ;
+    ns1:identifiers 13 ;
+    ns1:sitelinks 99 ;
+    ns1:statements 32 ;
+    ns1:timestamp "2020-11-29T23:20:10+00:00"^^xsd:dateTime ;
     skos:altLabel "2009 H1N1 grip salgını",
         "A",
         "A(H1N1)",
@@ -287,7 +287,6 @@ wd:Q36855 rdfs:label "Cúm lợn",
         <http://www.wikidata.org/entity/statement/Q36855-CB53DB35-4FBF-43B6-8A44-49F51F50DC65> ;
     p:P2892 <http://www.wikidata.org/entity/statement/Q36855-294B0FE0-FBF7-4B51-A34A-FEF4D049771B> ;
     p:P31 <http://www.wikidata.org/entity/statement/Q36855-1BF9DB2E-9759-40E3-B5F2-DEE5BF8B2598>,
-        <http://www.wikidata.org/entity/statement/Q36855-4407CDA5-D9BF-4C74-AE3B-3648B1F3AFFA>,
         <http://www.wikidata.org/entity/statement/Q36855-dc0398bc-45ed-a2eb-eca8-ae10003b58cd> ;
     p:P373 <http://www.wikidata.org/entity/statement/q36855-F517BF96-FEAE-4331-AB71-64789DE77FE3> ;
     p:P494 <http://www.wikidata.org/entity/statement/Q36855-1fd8dec8-4aa7-6064-acea-ca4f3e50365b> ;
@@ -296,11 +295,15 @@ wd:Q36855 rdfs:label "Cúm lợn",
     p:P646 <http://www.wikidata.org/entity/statement/Q36855-7F648886-DE7E-48EF-869D-2EB4A5C67340> ;
     p:P673 <http://www.wikidata.org/entity/statement/Q36855-48123008-B0ED-4D72-B1EC-3666B25544B1> ;
     p:P699 <http://www.wikidata.org/entity/statement/Q36855-251AFEFE-9357-4819-9345-8658A5817D72> ;
+    p:P780 <http://www.wikidata.org/entity/statement/Q36855-0A039FE3-AFF6-44FD-B456-97B38B371D54>,
+        <http://www.wikidata.org/entity/statement/Q36855-0EEB56AB-C9E5-4312-B32E-D472E75B63CA>,
+        <http://www.wikidata.org/entity/statement/Q36855-6A857D94-38A5-48F2-97EE-42DCC24BCACE>,
+        <http://www.wikidata.org/entity/statement/Q36855-EDE1C69A-F3C4-4F08-A6D5-6B84E800A1F8> ;
     p:P7982 <http://www.wikidata.org/entity/statement/Q36855-8F731C34-7423-4D21-9941-3C95288582E2> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q36855-FF9EC242-3136-4C46-8597-0772CDD86794> ;
-    ns1:P227 <http://d-nb.info/gnd/7679861-6> ;
-    ns1:P2347 <http://www.yso.fi/onto/yso/p23407> ;
-    ns1:P646 <http://g.co/kg/m/057c6k> ;
+    ns2:P227 <http://d-nb.info/gnd/7679861-6> ;
+    ns2:P2347 <http://www.yso.fi/onto/yso/p23407> ;
+    ns2:P646 <http://g.co/kg/m/057c6k> ;
     wdt:P1225 "10644087" ;
     wdt:P1245 "1073872" ;
     wdt:P1296 "0517808" ;
@@ -317,8 +320,7 @@ wd:Q36855 rdfs:label "Cúm lợn",
     wdt:P2888 doio:DOID:0050211,
         do:0050211 ;
     wdt:P2892 "C2076600" ;
-    wdt:P31 wd:Q12136,
-        wd:Q18123741,
+    wdt:P31 wd:Q18123741,
         wd:Q54947664 ;
     wdt:P373 "Swine flu" ;
     wdt:P494 "J09.X2" ;
@@ -327,27 +329,15 @@ wd:Q36855 rdfs:label "Cúm lợn",
     wdt:P646 "/m/057c6k" ;
     wdt:P673 "1807048" ;
     wdt:P699 "DOID:0050211" ;
+    wdt:P780 wd:Q127076,
+        wd:Q15637420,
+        wd:Q186889,
+        wd:Q40878 ;
     wdt:P7982 "68206" ;
     wdt:P910 wd:Q10027720 .
 
 <http://www.wikidata.org/entity/statement/Q36855-1BF9DB2E-9759-40E3-B5F2-DEE5BF8B2598> prov:wasDerivedFrom <http://www.wikidata.org/reference/230e690b622c73b403f64da8531818cd0b5993d6> ;
     ps:P31 wd:Q18123741 .
-
-<http://www.wikidata.org/entity/statement/Q36855-251AFEFE-9357-4819-9345-8658A5817D72> prov:wasDerivedFrom <http://www.wikidata.org/reference/77e8ec1ff73729d73296ef4afc7e7aa17bfe1196> ;
-    ps:P699 "DOID:0050211" .
-
-<http://www.wikidata.org/entity/statement/Q36855-294B0FE0-FBF7-4B51-A34A-FEF4D049771B> prov:wasDerivedFrom <http://www.wikidata.org/reference/230e690b622c73b403f64da8531818cd0b5993d6> ;
-    ps:P2892 "C2076600" .
-
-<http://www.wikidata.org/entity/statement/Q36855-312EC196-25F3-49CC-95F1-D21A952C34F2> prov:wasDerivedFrom <http://www.wikidata.org/reference/230e690b622c73b403f64da8531818cd0b5993d6> ;
-    ps:P1748 "C80444" .
-
-<http://www.wikidata.org/entity/statement/Q36855-3d09ccde-42c0-d25c-68a5-a04fce9c5a93> prov:wasDerivedFrom <http://www.wikidata.org/reference/230e690b622c73b403f64da8531818cd0b5993d6>,
-        <http://www.wikidata.org/reference/330ac8ad27be20b870610e4c90a2a6dfe736e7a6> ;
-    ps:P279 wd:Q2840 .
-
-<http://www.wikidata.org/entity/statement/Q36855-4407CDA5-D9BF-4C74-AE3B-3648B1F3AFFA> prov:wasDerivedFrom <http://www.wikidata.org/reference/330ac8ad27be20b870610e4c90a2a6dfe736e7a6> ;
-    ps:P31 wd:Q12136 .
 
 <http://www.wikidata.org/entity/statement/Q36855-dc0398bc-45ed-a2eb-eca8-ae10003b58cd> ps:P31 wd:Q54947664 .
 

@@ -1,9 +1,16 @@
 CHANGES
 =======
 
-* Fix error on setup.cfg file
-* Fix some tests
-* Add github actions to run test and update to pypi
+v0.7.18
+-------
+
+* Update pypi-publish.yaml
+
+v0.7.17
+-------
+
+* [WIP] Add github actions to run test and publish to pypi (#72)
+* Update setup.cfg
 * Update slurper notebook to use agent
 
 v0.7.15

@@ -39,5 +39,5 @@ optional arguments:
   -pb, --persistbnodes  Treat BNodes as persistent in SPARQL endpoint
   --useragent USERAGENT
                         Use this user agent in the SPARQL Queries (Default:
-                        "PyShEx/0.7.16 (https://github.com/hsolbrig/PyShEx;
+                        "PyShEx/0.7.18 (https://github.com/hsolbrig/PyShEx;
                         solbrig@jhu.edu)")

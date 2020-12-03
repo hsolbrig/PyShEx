@@ -5,7 +5,7 @@ import os
 refresh_files = False
 
 # True means skip the disease test
-skip_diseases = False
+skip_diseases = True
 
 datadir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data'))
 

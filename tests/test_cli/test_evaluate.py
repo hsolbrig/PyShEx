@@ -17,6 +17,7 @@ class ShexEvaluatorTestCase(CLITestCase):
         return evaluate_cli(argv, prog=self.testprog)
 
     def test_help(self):
+        self.maxDiff = None
         self.do_test("--help", 'help', update_test_file=update_test_files, failexpected=True)
         self.assertFalse(update_test_files, "Updating test files")
 

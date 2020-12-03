@@ -1,0 +1,122 @@
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q45316902 rdfs:label "Platelet Adhesion to exposed collagen" ;
+    schema:dateModified "2020-11-12T21:04:38+00:00"^^xsd:dateTime ;
+    schema:description "An instance of the biological pathway in Homo sapiens with Reactome ID (R-HSA-75892)" ;
+    schema:version 1305650558 ;
+    wikibase:identifiers 1 ;
+    wikibase:sitelinks 0 ;
+    wikibase:statements 13 ;
+    wikibase:timestamp "2020-11-12T21:04:41+00:00"^^xsd:dateTime ;
+    p:P2860 <http://www.wikidata.org/entity/statement/Q45316902-4CD569E4-7E79-4B8B-A3C6-F486A8A24F56>,
+        <http://www.wikidata.org/entity/statement/Q45316902-DB298300-454E-430B-8961-F94AEAB724C6> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q45316902-DF15D33C-B303-42C0-AB78-6BC0D4773A64> ;
+    p:P31 <http://www.wikidata.org/entity/statement/Q45316902-FD3229F0-A795-41B3-AEA2-237F06722C5A> ;
+    p:P361 <http://www.wikidata.org/entity/statement/Q45316902-0ECA72DF-4C98-4BD0-8224-F331C5F45098> ;
+    p:P3937 <http://www.wikidata.org/entity/statement/Q45316902-3227D4DB-7767-4D75-9F73-C1C8E4C83CED> ;
+    p:P527 <http://www.wikidata.org/entity/statement/Q45316902-081BF0CA-7D3F-4C22-8C4F-3EBE4A2DEFE9>,
+        <http://www.wikidata.org/entity/statement/Q45316902-3841DBB9-585B-4D40-A0D6-930C3B921488>,
+        <http://www.wikidata.org/entity/statement/Q45316902-71FC7D20-3FB8-494A-9544-4BC00851647B>,
+        <http://www.wikidata.org/entity/statement/Q45316902-7DF8CDA0-6F36-4BEA-B6E0-8E3BD1F58955>,
+        <http://www.wikidata.org/entity/statement/Q45316902-9B61ACF5-E21B-4D00-A0F0-032E5BBC8531>,
+        <http://www.wikidata.org/entity/statement/Q45316902-AED3E1D8-C079-4735-B4D7-16BA815F263F> ;
+    p:P703 <http://www.wikidata.org/entity/statement/Q45316902-AB99CF34-B8C8-450F-8E23-4F6350516DAD> ;
+    wdt:P2860 wd:Q28204718,
+        wd:Q28248776 ;
+    wdt:P2888 <https://identifiers.org/reactome:R-HSA-75892> ;
+    wdt:P31 wd:Q4915012 ;
+    wdt:P361 wd:Q45316891 ;
+    wdt:P3937 "R-HSA-75892" ;
+    wdt:P527 wd:Q50290016,
+        wd:Q50291029,
+        wd:Q50291031,
+        wd:Q50291033,
+        wd:Q50291035,
+        wd:Q50291036 ;
+    wdt:P703 wd:Q15978631 .
+
+<http://www.wikidata.org/entity/statement/Q28204718-AC73B529-4EF4-4575-9A7C-2E7B1E505A87> ps:P698 "12356768" .
+
+<http://www.wikidata.org/entity/statement/Q28248776-4F5AAC80-6200-4690-946F-F6E76FA5408D> ps:P698 "9295288" .
+
+<http://www.wikidata.org/entity/statement/Q45316891-CE45A57E-9AB1-4FAA-A193-C0CD264697BB> ps:P3937 "R-HSA-109582" .
+
+<http://www.wikidata.org/entity/statement/Q45316902-081BF0CA-7D3F-4C22-8C4F-3EBE4A2DEFE9> prov:wasDerivedFrom wdref:86ea197ece29f181af02095a02728fb99f1c5a07 ;
+    ps:P527 wd:Q50291029 .
+
+<http://www.wikidata.org/entity/statement/Q45316902-0ECA72DF-4C98-4BD0-8224-F331C5F45098> prov:wasDerivedFrom wdref:86ea197ece29f181af02095a02728fb99f1c5a07 ;
+    ps:P361 wd:Q45316891 .
+
+<http://www.wikidata.org/entity/statement/Q45316902-3227D4DB-7767-4D75-9F73-C1C8E4C83CED> ps:P3937 "R-HSA-75892" .
+
+<http://www.wikidata.org/entity/statement/Q45316902-3841DBB9-585B-4D40-A0D6-930C3B921488> prov:wasDerivedFrom wdref:86ea197ece29f181af02095a02728fb99f1c5a07 ;
+    ps:P527 wd:Q50291033 .
+
+<http://www.wikidata.org/entity/statement/Q45316902-4CD569E4-7E79-4B8B-A3C6-F486A8A24F56> prov:wasDerivedFrom wdref:86ea197ece29f181af02095a02728fb99f1c5a07 ;
+    ps:P2860 wd:Q28248776 .
+
+<http://www.wikidata.org/entity/statement/Q45316902-71FC7D20-3FB8-494A-9544-4BC00851647B> prov:wasDerivedFrom wdref:86ea197ece29f181af02095a02728fb99f1c5a07 ;
+    ps:P527 wd:Q50291031 .
+
+<http://www.wikidata.org/entity/statement/Q45316902-7DF8CDA0-6F36-4BEA-B6E0-8E3BD1F58955> prov:wasDerivedFrom wdref:86ea197ece29f181af02095a02728fb99f1c5a07 ;
+    ps:P527 wd:Q50291035 .
+
+<http://www.wikidata.org/entity/statement/Q45316902-9B61ACF5-E21B-4D00-A0F0-032E5BBC8531> prov:wasDerivedFrom wdref:86ea197ece29f181af02095a02728fb99f1c5a07 ;
+    ps:P527 wd:Q50291036 .
+
+<http://www.wikidata.org/entity/statement/Q45316902-AB99CF34-B8C8-450F-8E23-4F6350516DAD> prov:wasDerivedFrom wdref:86ea197ece29f181af02095a02728fb99f1c5a07 ;
+    ps:P703 wd:Q15978631 .
+
+<http://www.wikidata.org/entity/statement/Q45316902-AED3E1D8-C079-4735-B4D7-16BA815F263F> prov:wasDerivedFrom wdref:86ea197ece29f181af02095a02728fb99f1c5a07 ;
+    ps:P527 wd:Q50290016 .
+
+<http://www.wikidata.org/entity/statement/Q45316902-DB298300-454E-430B-8961-F94AEAB724C6> prov:wasDerivedFrom wdref:86ea197ece29f181af02095a02728fb99f1c5a07 ;
+    ps:P2860 wd:Q28204718 .
+
+<http://www.wikidata.org/entity/statement/Q45316902-FD3229F0-A795-41B3-AEA2-237F06722C5A> prov:wasDerivedFrom wdref:86ea197ece29f181af02095a02728fb99f1c5a07 ;
+    ps:P31 wd:Q4915012 .
+
+<http://www.wikidata.org/entity/statement/Q50290016-2559C4E4-70ED-4C43-8F6F-4EA74661BE1A> ps:P3937 "R-HSA-114563" .
+
+<http://www.wikidata.org/entity/statement/Q50291029-A57CC8C6-785B-4015-9115-AE79927D0CA1> ps:P3937 "R-HSA-210282" .
+
+<http://www.wikidata.org/entity/statement/Q50291031-4F1AA978-A5F2-4932-B19B-93A683206622> ps:P3937 "R-HSA-432295" .
+
+<http://www.wikidata.org/entity/statement/Q50291033-C7AEE324-53F0-4584-A4EF-8FBF08803947> ps:P3937 "R-HSA-114577" .
+
+<http://www.wikidata.org/entity/statement/Q50291035-616CB2E1-D45C-435B-9458-D15EB8521F5E> ps:P3937 "R-HSA-114671" .
+
+<http://www.wikidata.org/entity/statement/Q50291036-F7F39993-9586-42DF-8351-E55DA63061C7> ps:P3937 "R-HSA-114670" .
+
+wd:Q28204718 p:P698 <http://www.wikidata.org/entity/statement/Q28204718-AC73B529-4EF4-4575-9A7C-2E7B1E505A87> .
+
+wd:Q28248776 p:P698 <http://www.wikidata.org/entity/statement/Q28248776-4F5AAC80-6200-4690-946F-F6E76FA5408D> .
+
+wd:Q45316891 p:P3937 <http://www.wikidata.org/entity/statement/Q45316891-CE45A57E-9AB1-4FAA-A193-C0CD264697BB> .
+
+wd:Q50290016 p:P3937 <http://www.wikidata.org/entity/statement/Q50290016-2559C4E4-70ED-4C43-8F6F-4EA74661BE1A> .
+
+wd:Q50291029 p:P3937 <http://www.wikidata.org/entity/statement/Q50291029-A57CC8C6-785B-4015-9115-AE79927D0CA1> .
+
+wd:Q50291031 p:P3937 <http://www.wikidata.org/entity/statement/Q50291031-4F1AA978-A5F2-4932-B19B-93A683206622> .
+
+wd:Q50291033 p:P3937 <http://www.wikidata.org/entity/statement/Q50291033-C7AEE324-53F0-4584-A4EF-8FBF08803947> .
+
+wd:Q50291035 p:P3937 <http://www.wikidata.org/entity/statement/Q50291035-616CB2E1-D45C-435B-9458-D15EB8521F5E> .
+
+wd:Q50291036 p:P3937 <http://www.wikidata.org/entity/statement/Q50291036-F7F39993-9586-42DF-8351-E55DA63061C7> .
+
+wdref:86ea197ece29f181af02095a02728fb99f1c5a07 pr:P248 wd:Q2134522 ;
+    pr:P3937 "R-HSA-75892" ;
+    pr:P813 "2020-11-10T00:00:00+00:00"^^xsd:dateTime .
+
