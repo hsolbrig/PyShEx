@@ -9,7 +9,7 @@ from pyshex.utils.n3_mapper import N3Mapper
 class N3MapperUnitTest(unittest.TestCase):
     def test_basics(self):
         source_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'source')
-        target_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'target')
+        target_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'object')
         new_files = False
 
         os.makedirs(target_dir, exist_ok=True)
