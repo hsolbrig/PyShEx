@@ -24,7 +24,7 @@ jobs:
           then
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
-            git commit -m 'Automatically generated requirements and updated Pipfile.lock' requirements*.txt
+            git commit -m 'Automatically generated requirements' requirements*.txt
             git push
           fi
 
