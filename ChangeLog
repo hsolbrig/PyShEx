@@ -1,6 +1,21 @@
 CHANGES
 =======
 
+* Update pypi-publish.yaml
+
+v0.7.19
+-------
+
+* Fix an issue where "target" was on the excluded list
+* Set tag to current version for the moment
+* Removed dependency on pbr
+* Update the testing mechanism to use local files
+* Add the shex test package as a submodule
+* Add a mechanism to prevent tests that go to external URLs
+* Update main.yaml
+* Remove Pipfile.lock push
+* Update for python 3.9 jsg issue
+
 v0.7.18
 -------
 
