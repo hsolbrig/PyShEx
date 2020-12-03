@@ -112,3 +112,6 @@ Pipfile.lock
 
 # mac os specific files
 .DS_Store
+
+# SKIP_EXTERNAL_URLS is added by test harnesses where appropriate
+tests/data/SKIP_EXTERNAL_URLS

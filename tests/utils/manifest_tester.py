@@ -34,7 +34,8 @@ REMOTE_FILE_LOC = "https://raw.githubusercontent.com/shexSpec/shexTest/master/"
 # Note:
 shextest_path = os.path.abspath(os.path.join(os.path.dirname(__file__),     # utils
                                              '..',                          # tests
-                                             'shexTest'))       # shexSpec/shexTest
+                                             'data',                        # tests/data
+                                             'shexTest'))                   # tests/data/shexTest
 
 BASE_FILE_LOC = shextest_path if USE_LOCAL_FILES and os.path.exists(shextest_path) else REMOTE_FILE_LOC
 BASE_FILE_LOC = BASE_FILE_LOC + ('/' if not BASE_FILE_LOC.endswith('/') else '')
@@ -44,7 +45,7 @@ print(f"*****> Running test from {BASE_FILE_LOC}\n")
 # Reasons for skipping things
 FOCUS_DATATYPE = "FocusDatatype"
 
-skip_traits = [SHT.BNodeShapeLabel, SHT.ToldBNode, SHT.LexicalBNode, SHT.ShapeMap, SHT.Import]
+skip_traits = [SHT.BNodeShapeLabel, SHT.ToldBNode, SHT.LexicalBNode, SHT.ShapeMap, SHT.Import, SHT.relativeIRI]
 
 # We can't do an effective test on relative files when we're rewriting URI's
 if BASE_FILE_LOC != REMOTE_FILE_LOC:
