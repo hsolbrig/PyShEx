@@ -4,7 +4,7 @@ import unittest
 from typing import List
 
 from pyshex.shex_evaluator import evaluate_cli
-from tests import datadir
+from tests import datadir, SKIP_EXTERNAL_URLS, SKIP_EXTERNAL_URLS_MSG
 from tests.test_cli.clitests import CLITestCase
 
 
@@ -12,6 +12,7 @@ def elapsed_filter(txt: str) -> str:
     return re.sub(r'\(\d+(\.\d+)? ([a-zA-Z]*)\)', '(n.nn \\2)', txt)
 
 
+@unittest.skipIf(SKIP_EXTERNAL_URLS, SKIP_EXTERNAL_URLS_MSG)
 class SparqlQueryTestCase(CLITestCase):
     testdir = "evaluate"
     testprog = 'shexeval'
@@ -20,7 +21,6 @@ class SparqlQueryTestCase(CLITestCase):
     def prog_ep(self, argv: List[str]) -> bool:
         return bool(evaluate_cli(argv, prog=self.testprog))
 
-    @unittest.skipIf(True, "SPARQL query, sometimes URL is down. Need to look for an alternative.")
     def test_sparql_query(self):
         """ Test a sample DrugBank sparql query """
         shex = os.path.join(datadir, 't1.shex')
@@ -28,7 +28,6 @@ class SparqlQueryTestCase(CLITestCase):
         rdf = 'http://wifo5-04.informatik.uni-mannheim.de/drugbank/sparql'
         self.do_test([rdf, shex, '-sq', sparql], 'dbsparql1')
 
-    @unittest.skipIf(True, "SPARQL query, sometimes URL is down. Need to look for an alternative.")
     def test_print_queries(self):
         """ Test a sample DrugBank sparql query printing queries"""
         shex = os.path.join(datadir, 't1.shex')
@@ -36,7 +35,6 @@ class SparqlQueryTestCase(CLITestCase):
         rdf = 'http://wifo5-04.informatik.uni-mannheim.de/drugbank/sparql'
         self.do_test([rdf, shex, '-sq', sparql, '-ps'], 'dbsparql2', text_filter=elapsed_filter)
 
-    @unittest.skipIf(True, "SPARQL query, sometimes URL is down. Need to look for an alternative.")
     def test_print_results(self):
         """ Test a sample DrugBank sparql query printing results"""
         shex = os.path.join(datadir, 't1.shex')
@@ -44,7 +42,6 @@ class SparqlQueryTestCase(CLITestCase):
         rdf = 'http://wifo5-04.informatik.uni-mannheim.de/drugbank/sparql'
         self.do_test([rdf, shex, '-sq', sparql, '-pr', "--stopafter", "1"], 'dbsparql3', text_filter=elapsed_filter)
 
-    @unittest.skipIf(True, "SPARQL query, sometimes URL is down. Need to look for an alternative.")
     def test_named_graph(self):
         """ Test a sample DrugBank using any named graph """
 
@@ -59,7 +56,6 @@ class SparqlQueryTestCase(CLITestCase):
         self.do_test([rdf, shex, '-sq', sparql, '-ps', '-gn', graphid, "-pr"], 'dbsparql5', failexpected=True,
                      text_filter=elapsed_filter)
 
-    @unittest.skipIf(True, "Volatile query - run this to make sure it works, but don't compare output")
     def test_named_graph_types(self):
         """ Test a Drugbank query with named graph in the query """
         shex = os.path.join(datadir, 'schemas', 'biolink-modelnc.shex')
@@ -69,7 +65,6 @@ class SparqlQueryTestCase(CLITestCase):
                       'select ?item where{?item a <http://w3id.org/biolink/vocab/Protein>} LIMIT 20'],
                      'dbsparql6', failexpected=True, text_filter=elapsed_filter)
 
-    @unittest.skipIf(True, "pat4 can (and is) in the DB multiple times -- this is a FHIR problem")
     def test_infer_setting(self):
         """ Test setting infer to False """
 

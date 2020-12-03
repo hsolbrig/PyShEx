@@ -2,15 +2,16 @@ import unittest
 
 import os
 
+from tests import SKIP_EXTERNAL_URLS, SKIP_EXTERNAL_URLS_MSG
 from tests.utils.wikidata_utils import WikiDataTestCase
 
 
+@unittest.skipIf(SKIP_EXTERNAL_URLS, SKIP_EXTERNAL_URLS_MSG)
 class ReactomeTestCase(WikiDataTestCase):
     # This will change over time - expected values for the first 8 results
     # Note: This test has never been run past 1
     expected_results = [True, False, False, False, False, True, False, False]
 
-    @unittest.skipIf(False, "Awaiting User-Agent fix (issue 52)")
     def test_wikidata_reactome(self):
         test_data_base = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data', 'wikidata', 'reactome'))
 

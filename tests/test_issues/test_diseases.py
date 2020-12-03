@@ -3,7 +3,7 @@ import unittest
 import os
 
 from tests.utils.wikidata_utils import WikiDataTestCase
-from tests import skip_diseases
+from tests import SKIP_EXTERNAL_URLS, SKIP_EXTERNAL_URLS_MSG
 
 
 class WikiDiseasesTestCase(WikiDataTestCase):
@@ -13,7 +13,7 @@ class WikiDiseasesTestCase(WikiDataTestCase):
     # This will change over time - expected values for the first 8 results
     expected_results = [True, True, True, True, True, True, True, True]
 
-    @unittest.skipIf(skip_diseases, "Wikidata disease test disabled")
+    @unittest.skipIf(SKIP_EXTERNAL_URLS, SKIP_EXTERNAL_URLS_MSG)
     def test_diseases(self):
         test_data_base = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data', 'wikidata', 'disease'))
 

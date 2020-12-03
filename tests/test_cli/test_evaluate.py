@@ -3,7 +3,7 @@ import unittest
 from typing import List
 
 from pyshex.shex_evaluator import evaluate_cli
-from tests import datadir
+from tests import datadir, SKIP_EXTERNAL_URLS, SKIP_EXTERNAL_URLS_MSG
 from tests.test_cli.clitests import CLITestCase
 
 update_test_files: bool = False
@@ -55,7 +55,7 @@ class ShexEvaluatorTestCase(CLITestCase):
                      failexpected=True)
         self.assertFalse(update_test_files, "Updating test files")
 
-    @unittest.skipIf(True, "SPARQL query, sometimes URL is down. Need to look for an alternative.")
+    @unittest.skipIf(SKIP_EXTERNAL_URLS, SKIP_EXTERNAL_URLS_MSG)
     def test_sparql_query(self):
         """ Test a sample DrugBank sparql query """
         shex = os.path.join(datadir, 't1.shex')
