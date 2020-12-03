@@ -31,12 +31,10 @@ REMOTE_FILE_LOC = "https://raw.githubusercontent.com/shexSpec/shexTest/master/"
 
 
 # Local equivalent of online data files
+# Note:
 shextest_path = os.path.abspath(os.path.join(os.path.dirname(__file__),     # utils
                                              '..',                          # tests
-                                             '..',                          # PyShEx
-                                             '..',                          # hsolbrig
-                                             '..',                          # (root)
-                                             'shexSpec', 'shexTest'))       # shexSpec/shexTest
+                                             'shexTest'))       # shexSpec/shexTest
 
 BASE_FILE_LOC = shextest_path if USE_LOCAL_FILES and os.path.exists(shextest_path) else REMOTE_FILE_LOC
 BASE_FILE_LOC = BASE_FILE_LOC + ('/' if not BASE_FILE_LOC.endswith('/') else '')

@@ -1,0 +1,3 @@
+[submodule "tests/data/shexTest"]
+	path = tests/data/shexTest
+	url = git@github.com:shexSpec/shexTest.git
