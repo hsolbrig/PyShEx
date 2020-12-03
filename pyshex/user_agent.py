@@ -1,16 +1,17 @@
+import os
 from typing import Optional
 
 from SPARQLWrapper import SPARQLWrapper
-from pbr.version import VersionInfo
 from sparqlslurper import SlurpyGraph, GraphDBSlurpyGraph
 
-__version__ = VersionInfo('PyShEx')
+with open(os.path.join(os.path.dirname(__file__), 'git_describe.txt')) as desc_f:
+    description = desc_f.read().strip()
 
 # https://meta.wikimedia.org/wiki/User-Agent_policy:
 #   The generic format is <client name>/<version> (<contact information>) <library/framework name>/<version>
 #   [<library name>/<version> ...]. Parts that are not applicable can be omitted.
 
-UserAgent = f"{__version__.package}/{__version__.version_string()} " \
+UserAgent = f"PyShEx/{description[1:description.find('-')]} " \
             f"(https://github.com/hsolbrig/PyShEx; solbrig@jhu.edu)"
 
 

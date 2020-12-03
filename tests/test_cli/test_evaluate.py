@@ -1,10 +1,14 @@
 import os
+import re
 import unittest
+from contextlib import redirect_stdout
+from io import StringIO
 from typing import List
 
 from pyshex.shex_evaluator import evaluate_cli
+from pyshex.user_agent import UserAgent
 from tests import datadir, SKIP_EXTERNAL_URLS, SKIP_EXTERNAL_URLS_MSG
-from tests.test_cli.clitests import CLITestCase
+from tests.test_cli.clitests import CLITestCase, ArgParseExitException
 
 update_test_files: bool = False
 
@@ -14,12 +18,19 @@ class ShexEvaluatorTestCase(CLITestCase):
     testprog = 'shexeval'
 
     def prog_ep(self, argv: List[str]) -> bool:
-        return evaluate_cli(argv, prog=self.testprog)
+        return bool(evaluate_cli(argv, prog=self.testprog))
 
     def test_help(self):
-        self.maxDiff = None
-        self.do_test("--help", 'help', update_test_file=update_test_files, failexpected=True)
-        self.assertFalse(update_test_files, "Updating test files")
+        testfile_path = os.path.join(self.testdir_path, 'help')
+        with open(testfile_path) as tf:
+            help_text = tf.read().format(UserAgent=UserAgent)
+        outf = StringIO()
+        with redirect_stdout(outf):
+            try:
+                self.prog_ep(['--help'])
+            except ArgParseExitException:
+                pass
+        self.assertEqual(help_text.strip(), re.sub(';\\n\s*', '; ', outf.getvalue().strip()))
 
     def test_obs(self):
         shex = os.path.join(self.test_input_dir, 'obs.shex')
