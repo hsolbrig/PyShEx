@@ -11,9 +11,10 @@
 ################################################################################
 
 cfgraph>=0.2.1
+chardet
 pyshexc==0.8.3
-rdflib-jsonld~=0.5
-rdflib~=5.0
+rdflib-shim
+rdflib>=5.0.0
 requests>=2.22.0
 shexjsg>=0.7.1
 sparqlslurper~=0.4
