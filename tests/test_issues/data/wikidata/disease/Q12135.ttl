@@ -17,6 +17,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "Duševna motnja",
         "Enfermedá mental",
         "Enfermidade mental",
+        "Gangguan jiwa",
         "Geestesteuring",
         "Geðsjúkdómur",
         "Itaala'aanta maskaxda",
@@ -34,25 +35,24 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "Psichikos sutrikimas",
         "Psikėkas sotrėkėms",
         "Psîkopatî",
-        "Psüühika- ja käitumishäired",
         "Ruhiy kasallik",
         "Sakit sa pag-iisip",
         "Sìng-gĭng-bâng",
         "Ugonjwa wa akili",
         "Waq'ayay",
-        "boală mentală",
+        "boală mintală",
         "brægenseocnes",
         "buruko gaitz",
         "disturbo mentale",
         "duševna bolest",
         "duševná porucha",
         "duševní porucha",
-        "garīga slimība",
         "mental bozukluk",
         "mental disorder",
         "mentális zavar",
         "penyakit mental",
         "perturbação mental",
+        "psihiski traucējumi",
         "psika malsano",
         "psychische Störung",
         "psychische aandoening",
@@ -61,8 +61,11 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "psykisk störning",
         "psykisk sygdom",
         "psyykkinen häiriö",
+        "psüühika- ja käitumishäired",
+        "ruh bozğunlığı",
         "ruhi xəstəlik",
         "rối loạn tâm thần",
+        "stiard weesen",
         "trastorn mental",
         "trastorno mental",
         "trouble mental",
@@ -73,11 +76,11 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "Психикалык оорулар",
         "Психикалық ширығу",
         "Психично разстройство",
-        "Психічні захворювання",
         "Псіхічны разлад",
         "душевна болест",
         "песихик бозылыш",
         "психическое расстройство",
+        "психічне захворювання",
         "псыхічны разлад",
         "հոգեկան հիվանդություն",
         "הפרעה נפשית",
@@ -103,41 +106,48 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "ფსიქიკური დაავადება",
         "រោគ សរសៃ ប្រសាទ",
         "心理疾患",
-        "精神疾患",
+        "精神障害",
         "精神障礙",
         "정신 질환" ;
-    schema:dateModified "2020-12-03T04:31:19+00:00"^^xsd:dateTime ;
-    schema:description "Anormalidade, sofrimento ou comprometimento da ordem psicológica e/ou mental",
+    schema:dateModified "2021-12-15T09:38:30+00:00"^^xsd:dateTime ;
+    schema:description "Loại bệnh về tinh thần con người",
         "affezione che colpisce il pensiero, i sentimenti o il comportamento di una persona",
         "alteración de los procesos cognitivos y afectivos del desarrollo",
+        "anormalidade, sofrimento ou comprometimento da ordem psicológica e/ou mental",
         "behavioral or mental pattern that causes significant distress or impairment of personal functioning",
+        "dažāda veida uzvedības un psiholoģisko normu kopums, kas indivīdam spēj izraisīt sistemātiskas ciešanas vai invaliditāti",
         "erhebliche krankhafte Abweichung von der Norm im Erleben oder Verhalten",
         "lidské onemocnění",
         "mielen toiminnan poikkeama, joka aiheuttaa merkittävää kärsimystä ja toimintakyvyn laskua",
         "ohälsa i psyket, det vill säga i personligheten, emotionerna eller kognitionen, vilka primärt har psykiska orsaker",
         "označenie pre výrazný odklon od spôsobu vnímania a správania psychicky zdravého jedinca",
+        "patró conductual o mental que provoca angoixa significativa o deteriorament del funcionament personal",
         "psigiese aandoening",
         "psihološki poremećaj ili anomalija",
         "psychological pattern or anomaly",
         "rahatsız edici düşünce ya da davranış modeli",
+        "sinnsykdom",
+        "trastorno grave do razoamento ou do comportamento",
         "trouble psychologique ou comportemental",
         "wzorzec zachowania lub sposób myślenia, który powoduje znaczny dyskomfort lub pogorszenie funkcjonowania jednostki",
         "μοτίβο σκέψης ή συμπεριφοράς, ή μια ανωμαλία η οποία προκαλεί πόνο ή και ανικανότητα, και η οποία δεν είναι αναπτυξιακά ή κοινωνικά καθορισμένη",
         "Психик сирҙәр (менталь сирҙәр, психик ауырыу, йән ауырыуы;",
+        "нездоровое состояние психики",
         "психолошко пореметување",
-        "состояние психики, отличное от преобладающей нормы, включающее симптомы и признаки, которые обычно причиняют страдание",
-        "הפרעה נפשית",
-        "مرض نفسي يعتقد المصاب به ان هنالك احد يراقبه",
+        "стан психіки, відмінний від переважної норми, що включає симптоми й ознаки, які зазвичай завдають страждання",
+        "מחלת נפש",
+        "بعض المصابين يعتقدون أن هناك أحد يراقبهم",
         "അസ്വാഭാവികമായ ചിന്തകളോ പെരുമാറ്റമോ",
         "同心理、神經有關嘅疾病",
         "疾病",
-        "精神や行動における症状を呈することによって、機能的障害を伴っている状態" ;
-    schema:version 1317079802 ;
-    ns2:identifiers 37 ;
-    ns2:sitelinks 106 ;
-    ns2:statements 80 ;
-    ns2:timestamp "2020-12-03T04:31:30+00:00"^^xsd:dateTime ;
+        "精神疾患の総称" ;
+    schema:version 1544198221 ;
+    ns2:identifiers 45 ;
+    ns2:sitelinks 108 ;
+    ns2:statements 89 ;
     skos:altLabel "Gemütskrankheit",
+        "Rối loạn tinh thần",
+        "Rối loạn tâm thần",
         "akıl bozukluğu",
         "akıl hastalığı",
         "choroby psychiatryczne",
@@ -159,9 +169,11 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "gangguan jiwa",
         "gangguan mental",
         "gangguan minda",
+        "garīga slimība",
         "maladie mentale",
         "maladie psychiatrique",
         "malaltia mental",
+        "malaltia psiquiàtrica",
         "malattia mentale",
         "malattia psichiatrica",
         "malattie mentali",
@@ -172,12 +184,18 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "mental disorders",
         "mental dysfunction",
         "mental hastalık",
+        "mental health morbidity",
         "mental illness",
         "mental liding",
+        "mental morbidity",
         "mental or behavioural disorder",
         "mental ya da davranış bozukluğu",
+        "mentāla slimība",
+        "mielenterveyden häiriö",
+        "mielenterveyden häiriöt",
         "obsolete mental disorder",
         "penyakit minda",
+        "psihiskie traucējumi",
         "psihička bolest",
         "psika perturbo",
         "psikiyatrik bozukluk",
@@ -185,13 +203,16 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "psychiatric condition",
         "psychiatric disease",
         "psychiatric disorder",
+        "psychiatric morbidity",
         "psychická choroba",
         "psychická nemoc",
         "psychická porucha",
         "psychische Erkrankung",
         "psychische Erkrankungen",
         "psychische Krankheit",
+        "psychological disorder",
         "psykiatrisk liding",
+        "psyykkiset häiriöt",
         "ruhsal bozukluk",
         "sakit jiwa",
         "sakit minda",
@@ -200,13 +221,11 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "seelische Störung",
         "sinnsliding",
         "transtorno mental",
+        "trastorn psiquiàtric",
         "trastorno psiquiatrico",
         "trastorno psiquiátrico",
         "zaburzenia psychiatryczne",
-        "Божевілля",
         "Күңел сире",
-        "Психічний розлад",
-        "Психічні розлади",
         "душевно пореметување",
         "душевно растројство",
         "душевное заболевание",
@@ -218,6 +237,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "ментальное расстройство",
         "нервни поремећај",
         "нервно растројство",
+        "пожевілля",
         "психиатрическое расстройство",
         "психическая болезнь",
         "психическая дисфункция",
@@ -226,6 +246,9 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "психички поремећај",
         "психичко растројство",
         "психолошка болест",
+        "психічний розлад",
+        "психічні захворювання",
+        "психічні розлади",
         "расстройство психики",
         "اضطراب عقلي",
         "الأمراض العقلية",
@@ -248,6 +271,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "精神錯亂",
         "精神障礙症" ;
     p:P1014 <http://www.wikidata.org/entity/statement/Q12135-820B9A9C-13D9-44A5-A802-1A6A372F4F42> ;
+    p:P1036 <http://www.wikidata.org/entity/statement/Q12135-12129e3d-43ea-4bf9-6345-0577e61808f6> ;
     p:P1051 <http://www.wikidata.org/entity/statement/Q12135-90EF8470-2B5A-47D4-B9C5-C14D32F005A8> ;
     p:P1296 <http://www.wikidata.org/entity/statement/Q12135-193D4239-E18C-481C-A1C1-9D12FDC61055> ;
     p:P1343 <http://www.wikidata.org/entity/statement/Q12135-83f28510-3b3e-4f47-925b-60be5f7b522c>,
@@ -263,10 +287,13 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     p:P1748 <http://www.wikidata.org/entity/statement/Q12135-3A4F4540-6A61-49C3-9E45-0344F16813F9>,
         <http://www.wikidata.org/entity/statement/Q12135-47AEDAF6-B4A3-4D39-A26C-A832BCD7512A> ;
     p:P18 <http://www.wikidata.org/entity/statement/Q12135-118b1db3-442a-dc6f-0058-818d6ba24eea> ;
-    p:P1889 <http://www.wikidata.org/entity/statement/Q12135-0890a66d-4989-a41d-6c3d-b70bf0528694> ;
+    p:P1889 <http://www.wikidata.org/entity/statement/Q12135-0890a66d-4989-a41d-6c3d-b70bf0528694>,
+        <http://www.wikidata.org/entity/statement/Q12135-e1bcc6e4-47f7-1b8d-bdb8-9fc0b73dfae4>,
+        <http://www.wikidata.org/entity/statement/Q12135-eb73c41b-4ca0-8fd7-e815-86cd974cdaa1> ;
     p:P1963 <http://www.wikidata.org/entity/statement/Q12135-058DCBC4-053F-43C9-B9ED-E2600E1A607D> ;
     p:P1995 <http://www.wikidata.org/entity/statement/Q12135-4caeb0b8-45fb-1ff3-ff86-4bbb1dcf9c04>,
         <http://www.wikidata.org/entity/statement/Q12135-b6059356-417d-536b-217b-19a28273cb88> ;
+    p:P2004 <http://www.wikidata.org/entity/statement/Q12135-61459870-41F2-4868-9386-C9D9D93D009A> ;
     p:P2176 <http://www.wikidata.org/entity/statement/Q12135-0F23240A-AAC3-419D-A66F-6CDD1C413995>,
         <http://www.wikidata.org/entity/statement/Q12135-1CB842BF-D748-4C5A-81DB-318E9C0CAE25>,
         <http://www.wikidata.org/entity/statement/Q12135-5669F4F7-1DF7-461A-8824-05CBAC1549E6>,
@@ -280,13 +307,13 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         <http://www.wikidata.org/entity/statement/Q12135-ECE40A7C-0E82-4D76-B2A4-EBDFC6905AE4>,
         <http://www.wikidata.org/entity/statement/Q12135-FEB19ADE-12E5-4BC0-A8C1-E4789C80AD99> ;
     p:P227 <http://www.wikidata.org/entity/statement/q12135-4ff989dd-47fa-14e9-1116-018c4bb49202> ;
+    p:P2347 <http://www.wikidata.org/entity/statement/Q12135-39AE22C3-4B17-4873-83BB-F042AB2D4860> ;
     p:P244 <http://www.wikidata.org/entity/statement/Q12135-D8B6EBED-AF4D-4008-B47E-54DBCF5A8ECD> ;
     p:P2581 <http://www.wikidata.org/entity/statement/Q12135-FC5BEBE9-8899-4A23-8908-3751BA52A569> ;
+    p:P268 <http://www.wikidata.org/entity/statement/Q12135-8f6c3471-886f-4370-8e12-6757589ae244> ;
     p:P279 <http://www.wikidata.org/entity/statement/Q12135-09ad8697-4e33-3086-adc0-d05ca1725b18> ;
-    p:P2888 <http://www.wikidata.org/entity/statement/Q12135-2676FDBB-DD4F-420F-9975-0F4B0B7495B8>,
-        <http://www.wikidata.org/entity/statement/Q12135-350F011E-3EDE-47A6-855C-4ACAB9DF90E3>,
-        <http://www.wikidata.org/entity/statement/Q12135-503B67AD-7EEA-4F4B-8C5C-381BE4B76277>,
-        <http://www.wikidata.org/entity/statement/Q12135-8CAD4BF9-303E-4594-8C74-D04C42E5737A> ;
+    p:P2888 <http://www.wikidata.org/entity/statement/Q12135-350F011E-3EDE-47A6-855C-4ACAB9DF90E3>,
+        <http://www.wikidata.org/entity/statement/Q12135-503B67AD-7EEA-4F4B-8C5C-381BE4B76277> ;
     p:P2892 <http://www.wikidata.org/entity/statement/Q12135-7A34FA7C-BD3E-44C3-8413-6A29F4FDD723>,
         <http://www.wikidata.org/entity/statement/Q12135-8C115F97-7D62-47AD-9480-5CE942D5A098> ;
     p:P3123 <http://www.wikidata.org/entity/statement/Q12135-38735FE0-FB94-44B9-B1CB-B51D0513EDBA>,
@@ -297,6 +324,8 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     p:P3417 <http://www.wikidata.org/entity/statement/Q12135-80FDCE11-8B34-4519-96D7-E5837063CD8B> ;
     p:P373 <http://www.wikidata.org/entity/statement/q12135-76209D5F-6A6F-4258-B16C-7B494893D455> ;
     p:P3827 <http://www.wikidata.org/entity/statement/Q12135-C2C18C1F-298C-49C9-9818-6E42DCBA1224> ;
+    p:P3847 <http://www.wikidata.org/entity/statement/Q12135-8fcaf4a7-4ef1-3785-6db2-20458c7dfe93>,
+        <http://www.wikidata.org/entity/statement/Q12135-c7226b72-4574-429e-61f9-bf2b52d4a9d9> ;
     p:P3916 <http://www.wikidata.org/entity/statement/Q12135-E86DEAE3-EB99-45EB-9807-028F2BA6857E> ;
     p:P4229 <http://www.wikidata.org/entity/statement/Q12135-651BD972-84A7-4268-8E6F-E4FC39FC5C1C>,
         <http://www.wikidata.org/entity/statement/Q12135-B369266D-FCED-45C8-B6F6-E4A8A662AE8A> ;
@@ -312,12 +341,12 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         <http://www.wikidata.org/entity/statement/Q12135-EE431A6A-05B8-45A6-8C36-14D573CC7876> ;
     p:P557 <http://www.wikidata.org/entity/statement/Q12135-25884B93-F608-419F-8F73-76CCAE9FB4DB> ;
     p:P6366 <http://www.wikidata.org/entity/statement/Q12135-FDE3E29F-BB85-41E4-87CD-26742FA93235> ;
+    p:P6417 <http://www.wikidata.org/entity/statement/Q12135-2259C138-6D7F-4DD2-A3FE-D5378EBF2BC5> ;
     p:P646 <http://www.wikidata.org/entity/statement/Q12135-EF11483E-93BF-4C90-86DB-E6B190B1D5DF> ;
     p:P667 <http://www.wikidata.org/entity/statement/Q12135-2D4D385E-2E60-4785-B6F8-5F45788421CD> ;
     p:P672 <http://www.wikidata.org/entity/statement/Q12135-707676cd-4ddb-9bf0-ca11-5b6aae3c3fec> ;
     p:P6849 <http://www.wikidata.org/entity/statement/Q12135-02E1D095-E8DC-4190-906B-E68AE1E75796> ;
-    p:P699 <http://www.wikidata.org/entity/statement/Q12135-5251CD64-15DA-4CF5-8B26-D59859D32C5F>,
-        <http://www.wikidata.org/entity/statement/Q12135-DDD25A09-18BB-4D72-B8D7-092F80C079A8> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q12135-5251CD64-15DA-4CF5-8B26-D59859D32C5F> ;
     p:P7033 <http://www.wikidata.org/entity/statement/Q12135-83634034-61FF-4FDC-A3F1-B41BA424A18F> ;
     p:P7329 <http://www.wikidata.org/entity/statement/Q12135-575e9b6a-2484-4fea-8274-9fe2c5f38a41> ;
     p:P7807 <http://www.wikidata.org/entity/statement/Q12135-e72c9467-48df-d819-b254-217a15c386c7> ;
@@ -325,12 +354,17 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     p:P8408 <http://www.wikidata.org/entity/statement/Q12135-858C47FA-47D2-4C42-9EF3-F5F7D6B471B6> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q12135-C4E93B0F-B380-4A43-A5DE-AAAA0EE01C23> ;
     p:P924 <http://www.wikidata.org/entity/statement/Q12135-cc69b41f-4a5e-0076-b730-c3195fb6379b> ;
+    p:P9287 <http://www.wikidata.org/entity/statement/Q12135-803FD05E-5EE4-4E59-B3C6-F61CFAB44886> ;
     p:P948 <http://www.wikidata.org/entity/statement/Q12135-814DFA56-621E-4461-97F7-ECF483D3249D> ;
+    p:P950 <http://www.wikidata.org/entity/statement/Q12135-dfe86976-9fab-4163-90cc-390e0ffdcfd9> ;
+    p:P973 <http://www.wikidata.org/entity/statement/Q12135-0f1d7aab-41b4-fc6a-7b08-f4dd35fcb946> ;
     p:P989 <http://www.wikidata.org/entity/statement/Q12135-71990294-F9D9-4BE8-B123-65C1372DA9CD> ;
     ns1:P1014 <http://vocab.getty.edu/aat/300055131> ;
-    ns1:P227 <http://d-nb.info/gnd/4047686-8> ;
+    ns1:P227 <https://d-nb.info/gnd/4047686-8> ;
+    ns1:P2347 <http://www.yso.fi/onto/yso/p990> ;
     ns1:P244 <https://id.loc.gov/authorities/names/sh85083643> ;
     ns1:P2581 <http://babelnet.org/rdf/s00027818n> ;
+    ns1:P268 <http://data.bnf.fr/ark:/12148/cb11942041r#about> ;
     ns1:P3916 <http://vocabularies.unesco.org/thesaurus/concept5463> ;
     ns1:P486 <http://id.nlm.nih.gov/mesh/D001523> ;
     ns1:P508 <http://purl.org/bncf/tid/6114> ;
@@ -338,7 +372,10 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     ns1:P646 <http://g.co/kg/m/04x4r> ;
     ns1:P672 <http://id.nlm.nih.gov/mesh/F03> ;
     ns1:P7033 <http://vocabulary.curriculum.edu.au/scot/4979.rdf> ;
+    ns1:P8408 <http://kbpedia.org/kko/rc/PsychologicalAilment> ;
+    ns1:P950 <http://datos.bne.es/resource/XX525721> ;
     wdt:P1014 "300055131" ;
+    wdt:P1036 "616.89" ;
     wdt:P1051 "12879" ;
     wdt:P1296 "0193785" ;
     wdt:P1343 wd:Q2657718,
@@ -350,10 +387,13 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "V11.9" ;
     wdt:P1748 "C2893" ;
     wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Gautier%20-%20Salpetriere.JPG> ;
-    wdt:P1889 wd:Q7101840 ;
+    wdt:P1889 wd:Q1499013,
+        wd:Q317309,
+        wd:Q7101840 ;
     wdt:P1963 wd:P663 ;
     wdt:P1995 wd:Q199906,
         wd:Q7867 ;
+    wdt:P2004 "1757" ;
     wdt:P2176 wd:Q201872,
         wd:Q221361,
         wd:Q251347,
@@ -367,12 +407,12 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         wd:Q422244,
         wd:Q423292 ;
     wdt:P227 "4047686-8" ;
+    wdt:P2347 "990" ;
     wdt:P244 "sh85083643" ;
     wdt:P2581 "00027818n" ;
+    wdt:P268 "11942041r" ;
     wdt:P279 wd:Q12136 ;
-    wdt:P2888 doio:DOID:0050329,
-        doio:DOID:150,
-        do:0050329,
+    wdt:P2888 doio:DOID:150,
         do:150 ;
     wdt:P2892 "C0004936",
         "C0029516" ;
@@ -384,6 +424,8 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     wdt:P3417 "Mental-Illness" ;
     wdt:P373 "Mental and behavioural diseases and disorders" ;
     wdt:P3827 "psychiatric-diagnosis" ;
+    wdt:P3847 "mental_disorders",
+        "mental_illness" ;
     wdt:P3916 "concept5463" ;
     wdt:P4229 "F99",
         "F99-F99" ;
@@ -399,19 +441,22 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "MONDO:0005084" ;
     wdt:P557 "28852" ;
     wdt:P6366 "2780875785" ;
+    wdt:P6417 "mentalDisorders" ;
     wdt:P646 "/m/04x4r" ;
     wdt:P667 "P99" ;
     wdt:P672 "F03" ;
     wdt:P6849 "psykiske-lidelser" ;
-    wdt:P699 "DOID:0050329",
-        "DOID:150" ;
+    wdt:P699 "DOID:150" ;
     wdt:P7033 "scot/4979" ;
     wdt:P7329 "6E8Z" ;
     wdt:P7807 "334423054" ;
     wdt:P828 wd:Q5054620 ;
     wdt:P8408 "PsychologicalAilment" ;
-    wdt:P910 wd:Q6902639 ;
+    wdt:P910 wd:Q7722039 ;
     wdt:P924 wd:Q183257 ;
+    wdt:P9287 "18801" ;
     wdt:P948 <http://commons.wikimedia.org/wiki/Special:FilePath/Starry%20night%20banner.jpg> ;
+    wdt:P950 "XX525721" ;
+    wdt:P973 <https://www.hilarispublisher.com/scholarly/mental-health-morbidity-journals-articles-ppts-list-2525.html> ;
     wdt:P989 <http://commons.wikimedia.org/wiki/Special:FilePath/Mental%20illness.ogg> .
 
