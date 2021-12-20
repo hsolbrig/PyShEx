@@ -9,7 +9,7 @@ positional arguments:
                         options
   shex                  ShEx specification
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
   -f FORMAT, --format FORMAT
                         Input RDF Format

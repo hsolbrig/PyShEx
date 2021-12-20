@@ -30,7 +30,9 @@ class ShexEvaluatorTestCase(CLITestCase):
                 self.prog_ep(['--help'])
             except ArgParseExitException:
                 pass
-        self.assertEqual(help_text.strip(), re.sub(';\\n\s*', '; ', outf.getvalue().strip()))
+        self.maxDiff = None
+        self.assertEqual(help_text.strip(), re.sub('optional arguments', 'options',
+                                           (re.sub(';\\n\s*', '; ', outf.getvalue().strip()))))
 
     def test_obs(self):
         shex = os.path.join(self.test_input_dir, 'obs.shex')
