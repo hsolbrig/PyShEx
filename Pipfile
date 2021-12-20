@@ -7,8 +7,9 @@ verify_ssl = true
 pbr = "*"
 
 [packages]
-rdflib = "~=5.0"
-rdflib-jsonld = "~=0.5"
+chardet = "*"
+rdflib = ">=5.0.0"
+rdflib-shim = "*"
 requests = ">=2.22.0"
 urllib3 = "*"
 ShExJSG = ">=0.7.1"
