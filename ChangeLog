@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+* Fix #75
+* Fix for issue #74
+* Update log
+
+v0.7.20
+-------
+
+* Remove test publish to testpypi
 * Update pypi-publish.yaml
 
 v0.7.19
