@@ -7,12 +7,13 @@ verify_ssl = true
 pbr = "*"
 
 [packages]
-rdflib = "~=5.0"
-rdflib-jsonld = "~=0.5"
+chardet = "*"
+rdflib = ">=5.0.0"
+rdflib-shim = "*"
 requests = ">=2.22.0"
 urllib3 = "*"
-ShExJSG = ">=0.7.1"
+ShExJSG = ">=0.8.1"
 CFGraph = ">=0.2.1"
-PyShExC = "==0.8.3"
-sparqlslurper = "~=0.4"
+PyShExC = "==0.9.0"
+sparqlslurper = ">=0.5.1"
 sparqlwrapper = ">=1.8.5"

@@ -62,7 +62,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         "Рассеянный склероз",
         "Розсіяний склероз",
         "мултипла склероза",
-        "таркау эсклируз",
+        "таркау склероз",
         "Ցրված սկլերոզ",
         "טרשת נפוצה",
         "ئێم ئێس",
@@ -80,8 +80,9 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         "多発性硬化症",
         "多發性硬化症",
         "다발성 경화증" ;
-    schema:dateModified "2020-11-30T02:11:01+00:00"^^xsd:dateTime ;
+    schema:dateModified "2021-12-15T23:06:24+00:00"^^xsd:dateTime ;
     schema:description "Doença desmielinizante em que são danificadas as bainhas de mielina à volta dos axónios do cérebro e a medula espinal, provocando desmielinização.",
+        "MS hastalığı",
         "Sygdom der rammer nervecellerne",
         "autoimmune Krankheit, Entmarkungserkrankung des zentralen Nervensystems",
         "autoimunitní onemocnění centrální nervové soustavy",
@@ -92,24 +93,25 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         "enfermedad",
         "keskushermoston tulehdussairaus",
         "maladie auto-immune dégénérative (dérégulation de l'immunité, inflammation et dégénérescence des nerfs)",
+        "malaltia desmielinitzant en què el sistema immunitari propi actua contra la mielina",
         "malattia cronica autoimmune demielinizzante",
         "przewlekła choroba ośrodkowego układu nerwowego",
         "sjukdom som skadar myelinskidorna som omger nervaxoner",
         "ziekte van het zenuwstelsel",
         "φλεγμονώδης ασθένεια",
         "Поражение миелиновых оболочек нервных волокон с образованием бляшек",
-        "מחלה",
-        "التهاب ينتج عن تلف الغشاء العازل للعصبونات في الدماغ والحبل الشوكي. يُعطّل هذا التلف قدرةَ أجزاءٍ من الجهاز العصبي على التواصل.",
+        "מחלה כרונית עצבית",
+        "التهاب ينتج عن تلف الغشاء العازل للعصبونات في الدماغ والحبل الشوكي",
         "یک بیماری خودایمنی",
         "एक रोग जिसमें मस्तिष्क तथा सुषुम्ना रज्जु शोथ के चारों ओर वसायुक्त माइलिन के आवरण क्षतिग्रस्त हो जाते हैं, जिससे माइलिन के आवरण नष्ट होने और घाव के निशान होने के साथ-साथ रोग के संकेत और लक्षणों के स्थूल क्रम उत्पन्न होते हैं",
         "একধরনের ডি-মায়েলিনেটিং মানব ব্যাধি যাতে মানব মস্তিষ্কে ও স্নায়ুরজ্জুতে বিদ্যমান স্নায়ুকোষগুলোকে আচ্ছাদনকারী অন্তরক আবরণ ক্ষতিগ্রস্ত হয়ে যায়",
+        "中枢性脱髄疾患の一つ",
         "疾病",
         "뇌와 척수의 축삭 주변의 지방성 말이집을 감싸는 부분이 손상을 입어서 탈수질환과 흉터형성으로 이어지는 염증 질환이다." ;
-    schema:version 1315508961 ;
-    ns2:identifiers 51 ;
+    schema:version 1544585856 ;
+    ns2:identifiers 49 ;
     ns2:sitelinks 70 ;
-    ns2:statements 175 ;
-    ns2:timestamp "2020-11-30T02:11:10+00:00"^^xsd:dateTime ;
+    ns2:statements 173 ;
     skos:altLabel "ED",
         "EM",
         "Encephalomyelitis disseminata",
@@ -263,6 +265,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         <http://www.wikidata.org/entity/statement/Q8277-FA0F0A38-0A16-4A1F-A16C-E9759F1C4CB1>,
         <http://www.wikidata.org/entity/statement/Q8277-FADD343E-4F00-4D87-A134-1A69D9D2C03C> ;
     p:P2347 <http://www.wikidata.org/entity/statement/Q8277-33000F1A-B33D-4ECB-8708-83FEBC82122A> ;
+    p:P244 <http://www.wikidata.org/entity/statement/Q8277-880aa702-e64f-498e-9038-12b04e1ff593> ;
     p:P268 <http://www.wikidata.org/entity/statement/Q8277-bcbaba94-4a2b-3c62-112e-f3c98e33790c> ;
     p:P279 <http://www.wikidata.org/entity/statement/Q8277-2F929C3B-F64D-4A58-85FF-BDCA7ADABCB1>,
         <http://www.wikidata.org/entity/statement/Q8277-345a1dd1-4665-1986-7bac-409f9d9991a9>,
@@ -282,16 +285,12 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
     p:P3827 <http://www.wikidata.org/entity/statement/Q8277-3DE9A76A-2C67-4DF5-88EF-0F9AE2D08353>,
         <http://www.wikidata.org/entity/statement/Q8277-5945CCE3-0BF3-469C-844C-130D0A04824D> ;
     p:P3984 <http://www.wikidata.org/entity/statement/Q8277-1489ab5b-4259-64ed-fba0-e5b684a9844c> ;
-    p:P4223 <http://www.wikidata.org/entity/statement/Q8277-709fa95f-4e4c-4eb0-1203-166a23868b0c> ;
     p:P4229 <http://www.wikidata.org/entity/statement/Q8277-745BA194-2E62-4125-A301-658ADB852872> ;
     p:P4317 <http://www.wikidata.org/entity/statement/Q8277-A63E8ED4-5FAD-42CB-ABEA-69D42DE8F191> ;
     p:P4527 <http://www.wikidata.org/entity/statement/Q8277-9CD52D37-E37D-4566-AADA-B744F2D1DBA7> ;
-    p:P486 <http://www.wikidata.org/entity/statement/Q8277-4827042B-62C8-4CF0-B700-14BFA0B2499B>,
-        <http://www.wikidata.org/entity/statement/Q8277-70336A69-1301-49E7-A437-AB21D3C9CB6A> ;
+    p:P486 <http://www.wikidata.org/entity/statement/Q8277-4827042B-62C8-4CF0-B700-14BFA0B2499B> ;
     p:P492 <http://www.wikidata.org/entity/statement/Q8277-351A9828-AED9-4EC1-A079-2655EEB53676>,
-        <http://www.wikidata.org/entity/statement/Q8277-3BCB8D55-94EE-43E6-B68C-2CDF5C2EB978>,
         <http://www.wikidata.org/entity/statement/Q8277-3E60EF48-E0FA-4EAD-9B4F-8ED39E9FDA0A>,
-        <http://www.wikidata.org/entity/statement/Q8277-62CF6D20-E7C0-4894-ADAC-899B829D1351>,
         <http://www.wikidata.org/entity/statement/Q8277-67494F45-5FCF-4BFC-9E26-D223DCDB6868> ;
     p:P5008 <http://www.wikidata.org/entity/statement/Q8277-C3F814A3-46DB-45D5-A6C1-54DB1E2F7C51> ;
     p:P508 <http://www.wikidata.org/entity/statement/q8277-51CA5FB1-6B37-45D7-91CB-9F36957E08B9> ;
@@ -320,17 +319,18 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
     p:P780 <http://www.wikidata.org/entity/statement/Q8277-a1877263-49db-3fde-4340-10c6315e2dd8> ;
     p:P7807 <http://www.wikidata.org/entity/statement/Q8277-8B70B936-4C99-443E-A0AC-819E7C6FD79D> ;
     p:P7995 <http://www.wikidata.org/entity/statement/Q8277-850B7F0A-60DC-4658-910C-E7C39642DEE0> ;
+    p:P8189 <http://www.wikidata.org/entity/statement/Q8277-C77AEBC2-5D32-465D-B978-E9A357392B72> ;
     p:P8408 <http://www.wikidata.org/entity/statement/Q8277-71388126-64C1-4E67-B7C7-65C721E66A75> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q8277-8C11CC7E-192B-4C8A-8C79-F72C124BA1FE> ;
     p:P923 <http://www.wikidata.org/entity/statement/Q8277-2453d25c-4f59-9e07-cb4c-ec89998fb89d>,
         <http://www.wikidata.org/entity/statement/Q8277-9a1a35ab-48e1-b5f2-f718-0da1056b5744>,
         <http://www.wikidata.org/entity/statement/Q8277-f8b594bd-473f-8539-1564-48387991eec4> ;
-    ns1:P227 <http://d-nb.info/gnd/4040693-3> ;
+    ns1:P227 <https://d-nb.info/gnd/4040693-3> ;
     ns1:P2347 <http://www.yso.fi/onto/yso/p4226> ;
+    ns1:P244 <https://id.loc.gov/authorities/names/sh85088374> ;
     ns1:P268 <http://data.bnf.fr/ark:/12148/cb119384088#about> ;
     ns1:P349 <http://id.ndl.go.jp/auth/ndlna/00572494> ;
-    ns1:P486 <http://id.nlm.nih.gov/mesh/:D009103>,
-        <http://id.nlm.nih.gov/mesh/D009103> ;
+    ns1:P486 <http://id.nlm.nih.gov/mesh/D009103> ;
     ns1:P508 <http://purl.org/bncf/tid/25174> ;
     ns1:P6366 <http://ma-graph.org/entity/2909989903> ;
     ns1:P646 <http://g.co/kg/m/0dcqh> ;
@@ -339,6 +339,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         <http://id.nlm.nih.gov/mesh/C10.314.350.500>,
         <http://id.nlm.nih.gov/mesh/C20.111.258.250.500> ;
     ns1:P7033 <http://vocabulary.curriculum.edu.au/scot/11303.rdf> ;
+    ns1:P8408 <http://kbpedia.org/kko/rc/MultipleSclerosis> ;
     wdt:P1051 "13793" ;
     wdt:P1193 0.00032 ;
     wdt:P1245 "1036110" ;
@@ -448,6 +449,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         wd:Q5007698,
         wd:Q5573603 ;
     wdt:P2347 "4226" ;
+    wdt:P244 "sh85088374" ;
     wdt:P268 "119384088" ;
     wdt:P279 wd:Q1186703,
         wd:Q18553585,
@@ -467,17 +469,13 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
     wdt:P3827 "multiple-sclerosis",
         "relapsing-remitting-multiple-sclerosis" ;
     wdt:P3984 "MultipleSclerosis" ;
-    wdt:P4223 "sclerosi" ;
     wdt:P4229 "G35" ;
     wdt:P4317 "10255" ;
     wdt:P4527 "11769" ;
-    wdt:P486 ":D009103",
-        "D009103" ;
-    wdt:P492 "126200",
-        "612594",
+    wdt:P486 "D009103" ;
+    wdt:P492 "612594",
         "612595",
-        "612596",
-        "614810" ;
+        "612596" ;
     wdt:P5008 wd:Q4099686 ;
     wdt:P508 "25174" ;
     wdt:P5082 "multippel_sklerose" ;
@@ -505,6 +503,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
     wdt:P780 wd:Q58490835 ;
     wdt:P7807 "1298865187" ;
     wdt:P7995 "multiple-sclerosis" ;
+    wdt:P8189 "987007550961205171" ;
     wdt:P8408 "MultipleSclerosis" ;
     wdt:P910 wd:Q9518131 ;
     wdt:P923 wd:Q161238,

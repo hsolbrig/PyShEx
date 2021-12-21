@@ -12,33 +12,36 @@
 
 wd:Q16495 rdfs:label "Riedel's fibrosing thyroiditis",
         "Riedel-Struma",
+        "Riedelen tiroiditis",
         "Tireoidite de Riedel",
         "Tiroiditis de Riedel",
         "Zapalenie gruczołu tarczowego Riedla",
         "thyroïdite de Riedel",
+        "tiroidite de Riedel",
         "tiroidite di Riedel",
         "Θυρεοειδίτιδα Ρίντελ",
         "Ридел тириядиты",
         "Тиреоидит Риделя",
         "التهاب الدرقية المنسوب لريدل" ;
-    schema:dateModified "2020-11-22T10:37:13+00:00"^^xsd:dateTime ;
+    schema:dateModified "2021-11-29T19:09:50+00:00"^^xsd:dateTime ;
     schema:description "Schilddrüsenentzündung",
         "enfermedad de las tiroides",
         "maladie rare",
         "malattia infiammatoria cronica della tiroide, presumibilmente di origine autoimmune",
         "thyroid disease",
+        "tiroiditis mota",
         "болезнь" ;
-    schema:version 1310840843 ;
+    schema:version 1536214251 ;
     ns1:identifiers 13 ;
     ns1:sitelinks 8 ;
     ns1:statements 21 ;
-    ns1:timestamp "2020-11-22T10:37:20+00:00"^^xsd:dateTime ;
     skos:altLabel "Eisenharte Struma",
         "Riedel disease",
         "Riedel fibrosing thyroiditis",
         "Riedel thyroiditis",
         "Riedel's struma",
-        "Riedel's thyroiditis" ;
+        "Riedel's thyroiditis",
+        "tiroiditis zurkara" ;
     p:P138 <http://www.wikidata.org/entity/statement/Q16495-09c0743a-4c79-b54e-9aba-ac5cef530806> ;
     p:P1417 <http://www.wikidata.org/entity/statement/Q16495-D87DAEC5-EF79-4253-B23D-B8827AF9BC13> ;
     p:P1550 <http://www.wikidata.org/entity/statement/Q16495-18BC875D-6F6A-4717-AFCD-63BC19789657> ;

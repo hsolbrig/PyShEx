@@ -2,10 +2,15 @@ import re
 from typing import Union, Optional
 
 from pyshexc.parser_impl.generate_shexj import load_shex_file
-from rdflib import Namespace, Graph, RDF, RDFS, XSD, URIRef, plugins
-from rdflib.namespace import DOAP, FOAF, DC, DCTERMS, SKOS, OWL, XMLNS, _RDFNamespace
-from rdflib.plugins.serializers.turtle import TurtleSerializer
-from rdflib.serializer import Serializer
+from rdflib import Namespace, Graph, RDF, RDFS, XSD, URIRef, __version__
+from rdflib.namespace import DOAP, FOAF, DC, DCTERMS, SKOS, OWL, XMLNS
+if __version__.startswith("5."):
+    from rdflib.namespace import _RDFNamespace
+    BuiltinNamespace = _RDFNamespace
+else:
+    from rdflib.namespace import DefinedNamespaceMeta
+    BuiltinNamespace = DefinedNamespaceMeta
+
 
 from pyshex.utils.deprecated import deprecated
 
@@ -66,7 +71,7 @@ class PrefixLibrary:
             if '\n' in rdf or '\r' in rdf or ' ' in rdf:
                 g.parse(data=rdf, format=format)
             else:
-                g.load(rdf, format=format)
+                g.parse(rdf, format=format)
         else:
             g = rdf
         for k, v in g.namespace_manager.namespaces():
@@ -99,7 +104,7 @@ class PrefixLibrary:
         for k, v in self:
             key = k.upper()
             exists = hasattr(target, key)
-            if not exists or (override and isinstance(getattr(target, k), (Namespace, _RDFNamespace))):
+            if not exists or (override and isinstance(getattr(target, k), (Namespace, BuiltinNamespace))):
                 setattr(target, k, v)
                 nret += 1
             else:

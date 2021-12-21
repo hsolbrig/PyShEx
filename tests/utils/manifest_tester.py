@@ -6,6 +6,8 @@ from typing import Dict, Optional
 import sys
 from ShExJSG import ShExJ
 from rdflib import URIRef
+import rdflib_shim
+shimin = rdflib_shim.RDFLIB_SHIM
 
 from ancilliary.earlreport import EARLPage
 from pyshex.shape_expressions_language.p5_2_validation_definition import isValid

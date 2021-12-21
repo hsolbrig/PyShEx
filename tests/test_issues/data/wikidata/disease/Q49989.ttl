@@ -35,17 +35,18 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "Enfermidade de Creutzfeldt-Jakob",
         "Galar Creutzfeld-Jakob",
         "Kroicfeldo-Jakobo liga",
-        "Maladie de Creutzfeldt-Jakob",
         "Malautiá de Creutzfeldt-Jakob",
         "Malsano de Creutzfeldt-Jakob",
         "Morbus Creutzfeldt-Jakob",
         "Penyakit Creutzfeldt-Jakob",
         "Penyakit Creutzfeldt–Jakob",
+        "maladie de Creutzfeldt-Jakob",
         "malaltia de Creutzfeldt-Jakob",
         "malattia di Creutzfeldt-Jakob",
         "ziekte van Creutzfeldt-Jakob",
         "νόσος Creutzfeldt-Jakob",
         "Болезнь Крейтцфельдта — Якоба",
+        "Болест на Кройцфелд-Якоб",
         "Крейтцфельд - Якоб ауруы",
         "Кројцфелд-Јакобова болест",
         "Хвароба Кройцфэльта — Якаба",
@@ -59,9 +60,10 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "クロイツフェルト・ヤコブ病",
         "克雅二氏病",
         "크로이츠펠트-야코프병" ;
-    schema:dateModified "2020-11-29T23:47:12+00:00"^^xsd:dateTime ;
+    schema:dateModified "2021-12-07T15:57:43+00:00"^^xsd:dateTime ;
     schema:description "Enfermedad neurológica priónica",
         "Gizakietan agertzen den entzefalopatia espongiformearen aldaeretako bat. Eragin txikia du, kasu bat milioi biztanleko eta urteko; oro har, 60 urtetik gorako pertsonei eragiten die",
+        "Hastalık",
         "aivorappeumasairaus",
         "beim Menschen tödlich verlaufende, durch Prionen übertragbare spongiforme Enzephalopathie",
         "bệnh khiến não con người bị thoái hóa",
@@ -73,12 +75,13 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "malattia neurodegenerativa rara",
         "εκφυλιστική νευρολογική διαταραχή",
         "Наиболее распространенная прионная болезнь",
+        "дегенеративно мозъчно разстройство",
+        "中枢神経の変性疾患",
         "退行性神經系統疾病" ;
-    schema:version 1315454609 ;
-    ns2:identifiers 32 ;
-    ns2:sitelinks 48 ;
-    ns2:statements 63 ;
-    ns2:timestamp "2020-11-29T23:47:17+00:00"^^xsd:dateTime ;
+    schema:version 1539966204 ;
+    ns2:identifiers 35 ;
+    ns2:sitelinks 50 ;
+    ns2:statements 66 ;
     skos:altLabel "CJD",
         "CJD (Creutzfeldt Jakob disease)",
         "CJK",
@@ -95,7 +98,8 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "MCJ",
         "Subacute spongiform encephalopathy",
         "Transmissible virus dementia",
-        "Transmissible virus dementia (disorder)" ;
+        "Transmissible virus dementia (disorder)",
+        "Νόσος Κρόιτσφελντ-Γιάκομπ" ;
     p:P1193 <http://www.wikidata.org/entity/statement/Q49989-df5e42be-462f-4f07-ea7d-49f72c6d2e4a>,
         <http://www.wikidata.org/entity/statement/Q49989-f895e233-44ea-c2f0-3602-b73f52dc1938> ;
     p:P1245 <http://www.wikidata.org/entity/statement/Q49989-8E73FCB1-61D5-4252-A42C-2FFD334CA191> ;
@@ -112,10 +116,13 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         <http://www.wikidata.org/entity/statement/Q49989-FD15AC23-9FC7-41F3-B5C0-FA1EA492AB7B> ;
     p:P18 <http://www.wikidata.org/entity/statement/Q49989-60E5516E-7A11-4B72-BD48-4CEA1ECC4229> ;
     p:P1995 <http://www.wikidata.org/entity/statement/Q49989-75F74036-BACD-4D0C-A505-51CE700034D9> ;
+    p:P2004 <http://www.wikidata.org/entity/statement/Q49989-A8EEA532-C306-4C24-AE15-4E1373E564AD> ;
     p:P227 <http://www.wikidata.org/entity/statement/Q49989-4D144BB9-8D7D-43FB-8027-0B909EB5D367> ;
     p:P2293 <http://www.wikidata.org/entity/statement/Q49989-06A3A897-DE57-4C7F-BCF2-A4ACC4985549>,
         <http://www.wikidata.org/entity/statement/Q49989-433D9D55-3AA0-406E-A664-F44A4693C48B> ;
     p:P2347 <http://www.wikidata.org/entity/statement/Q49989-63380EDC-FEAF-4D75-8D79-B9DAF255B927> ;
+    p:P244 <http://www.wikidata.org/entity/statement/Q49989-33BC7701-0B96-4B3C-BE83-D444CB5D89AA> ;
+    p:P268 <http://www.wikidata.org/entity/statement/Q49989-a6ca81f6-4e10-4d5b-a632-4076bb255561> ;
     p:P279 <http://www.wikidata.org/entity/statement/Q49989-14687acd-4b55-e079-896f-8a41907883d8> ;
     p:P2888 <http://www.wikidata.org/entity/statement/Q49989-1E031876-26DF-4C59-911C-A659C330E9D6>,
         <http://www.wikidata.org/entity/statement/Q49989-96530A31-7E73-44BF-A941-27D006989943> ;
@@ -132,8 +139,7 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
     p:P4527 <http://www.wikidata.org/entity/statement/Q49989-3E74D531-2308-4A2D-AD7C-3D556CC64D4B> ;
     p:P4746 <http://www.wikidata.org/entity/statement/Q49989-426C1EC9-B30C-472F-A040-659DE14AEB8C> ;
     p:P486 <http://www.wikidata.org/entity/statement/Q49989-4F8FF5BB-7AA7-4F09-A2E0-AAA3881BAF6B> ;
-    p:P492 <http://www.wikidata.org/entity/statement/Q49989-97809079-DD8E-4510-B93A-E706C1CFEC88>,
-        <http://www.wikidata.org/entity/statement/q49989-59A0CD73-C93E-4AA7-90BF-84634675383C> ;
+    p:P492 <http://www.wikidata.org/entity/statement/q49989-59A0CD73-C93E-4AA7-90BF-84634675383C> ;
     p:P5008 <http://www.wikidata.org/entity/statement/Q49989-37E84497-2463-48E0-B67C-71E33989D139> ;
     p:P508 <http://www.wikidata.org/entity/statement/Q49989-9c01c569-480f-5d38-835d-622bb55dcd55> ;
     p:P5082 <http://www.wikidata.org/entity/statement/Q49989-4ad5fbc8-e1cd-4986-854a-3f7cfda91849> ;
@@ -145,11 +151,12 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         <http://www.wikidata.org/entity/statement/Q49989-1475E7F6-765C-4CFA-A044-73028D0D21FA>,
         <http://www.wikidata.org/entity/statement/Q49989-49536e05-4074-5dec-27a6-93da51850789> ;
     p:P673 <http://www.wikidata.org/entity/statement/q49989-E83E1327-5C13-4B3F-BB49-1DF65926A1EA> ;
-    p:P699 <http://www.wikidata.org/entity/statement/Q49989-161C34D8-88A3-4C6C-A153-02ED13E38DCF>,
-        <http://www.wikidata.org/entity/statement/Q49989-DD691227-8D8E-4836-8D6A-3FCDECAB8F62> ;
+    p:P699 <http://www.wikidata.org/entity/statement/Q49989-161C34D8-88A3-4C6C-A153-02ED13E38DCF> ;
     p:P780 <http://www.wikidata.org/entity/statement/Q49989-2880fc2d-4016-beef-bf28-e512a94a56bb>,
         <http://www.wikidata.org/entity/statement/Q49989-81176fa1-4552-12ea-a075-e121d01bdf8e> ;
+    p:P7807 <http://www.wikidata.org/entity/statement/Q49989-192B9E63-E072-4862-99EA-5BB5350EAF90> ;
     p:P7995 <http://www.wikidata.org/entity/statement/Q49989-B290008C-8488-4A03-A866-C27F457F3FA7> ;
+    p:P8189 <http://www.wikidata.org/entity/statement/Q49989-F51D4353-B3AC-4E0E-A008-08FFDB497B6F> ;
     p:P828 <http://www.wikidata.org/entity/statement/Q49989-2f20877a-4673-04df-9742-260eb8566d35> ;
     p:P8408 <http://www.wikidata.org/entity/statement/Q49989-D9476C1D-DD05-42FD-BF80-0205479AFC99> ;
     p:P923 <http://www.wikidata.org/entity/statement/Q49989-02087e53-4ece-6453-bee7-5438bba3f808>,
@@ -159,8 +166,10 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         <http://www.wikidata.org/entity/statement/Q49989-ff6e9710-411f-7085-c885-48e0c0c45e53> ;
     p:P924 <http://www.wikidata.org/entity/statement/Q49989-5ff6f53e-4406-bc80-cb0f-9118796b3701>,
         <http://www.wikidata.org/entity/statement/Q49989-e942a0bf-4f8a-cf6c-aa31-d0397387157c> ;
-    ns1:P227 <http://d-nb.info/gnd/4220958-4> ;
+    ns1:P227 <https://d-nb.info/gnd/4220958-4> ;
     ns1:P2347 <http://www.yso.fi/onto/yso/p12152> ;
+    ns1:P244 <https://id.loc.gov/authorities/names/sh85069294> ;
+    ns1:P268 <http://data.bnf.fr/ark:/12148/cb12064993z#about> ;
     ns1:P349 <http://id.ndl.go.jp/auth/ndlna/00575235> ;
     ns1:P486 <http://id.nlm.nih.gov/mesh/D007562> ;
     ns1:P508 <http://purl.org/bncf/tid/54342> ;
@@ -168,6 +177,7 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
     ns1:P672 <http://id.nlm.nih.gov/mesh/C10.228.140.380.165>,
         <http://id.nlm.nih.gov/mesh/C10.228.228.800.230>,
         <http://id.nlm.nih.gov/mesh/F03.615.400.300> ;
+    ns1:P8408 <http://kbpedia.org/kko/rc/CreutzfeldtJakobDisease> ;
     wdt:P1193 0.0000015,
         0.00024 ;
     wdt:P1245 "1260149" ;
@@ -183,10 +193,13 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
     wdt:P1748 "C26802" ;
     wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/VCJD%20Tonsil.jpg> ;
     wdt:P1995 wd:Q83042 ;
+    wdt:P2004 "18995" ;
     wdt:P227 "4220958-4" ;
     wdt:P2293 wd:Q14881255,
         wd:Q18033832 ;
     wdt:P2347 "12152" ;
+    wdt:P244 "sh85069294" ;
+    wdt:P268 "12064993z" ;
     wdt:P279 wd:Q703961 ;
     wdt:P2888 doio:DOID:11949,
         do:11949 ;
@@ -217,7 +230,9 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
     wdt:P699 "DOID:11949" ;
     wdt:P780 wd:Q116275,
         wd:Q83030 ;
+    wdt:P7807 "1014699185" ;
     wdt:P7995 "creutzfeldt-jakob-disease-cjd" ;
+    wdt:P8189 "987007529248005171" ;
     wdt:P828 wd:Q47051 ;
     wdt:P8408 "CreutzfeldtJakobDisease" ;
     wdt:P923 wd:Q161238,

@@ -1,6 +1,20 @@
 CHANGES
 =======
 
+* Import the shim into the manifest tester
+* Add miscellaneous testing updates
+* Requirements match Pipenv
+* Address issue where the format of argparse help files changed in py3.10
+* Add explicit import of chardet.  Allow rdflib 5 OR 6
+* Add python 3.10 to the test suite
+* Fix #75
+* Fix for issue #74
+* Update log
+
+v0.7.20
+-------
+
+* Remove test publish to testpypi
 * Update pypi-publish.yaml
 
 v0.7.19

@@ -18,7 +18,7 @@ class N3MapperUnitTest(unittest.TestCase):
             fpath = os.path.join(source_dir, f)
             if os.path.isfile(fpath):
                 g = Graph()
-                g.load(fpath, format='turtle')
+                g.parse(fpath, format='turtle')
                 mapper = N3Mapper(g.namespace_manager)
                 result = '\n'.join([mapper.n3(t)
                                     for t in sorted(list(g),

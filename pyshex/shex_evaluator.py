@@ -226,7 +226,7 @@ class ShExEvaluator:
 
         # Experimental -- xfer all ShEx namespaces to g
         if self.pfx and evaluator.g is not None:
-            self.pfx.add_bindings(evaluator.g)
+            self.pfx.add_bindings_to(evaluator.g)
 
         cntxt = Context(evaluator.g, evaluator._schema)
         cntxt.debug_context.debug = debug if debug is not None else self.debug
@@ -328,7 +328,7 @@ def evaluate_cli(argv: Optional[Union[str, List[str]]] = None, prog: Optional[st
         if '\n' in opts.rdf or '\r' in opts.rdf:
             g.parse(data=opts.rdf, format=opts.format)
         else:
-            g.load(opts.rdf, format=opts.format)
+            g.parse(opts.rdf, format=opts.format)
 
     if not (opts.focus or opts.allsubjects or opts.sparql):
         print('Error: You must specify one or more graph focus nodes, supply a SPARQL query, or use the "-A" option',
