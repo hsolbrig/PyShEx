@@ -17,6 +17,6 @@ rdflib-shim
 rdflib>=5.0.0
 requests>=2.22.0
 shexjsg>=0.8.1
-sparqlslurper>=0.5.0
+sparqlslurper>=0.5.1
 sparqlwrapper>=1.8.5
 urllib3
