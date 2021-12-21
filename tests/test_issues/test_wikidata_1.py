@@ -41,7 +41,7 @@ class WikiDataTestCase(unittest.TestCase):
 
     def test_wikidata_1(self):
         g = Graph()
-        g.load(self.test_path, format="turtle")
+        g.parse(self.test_path, format="turtle")
         rslt, _ = evaluate(g, shex_schema, WIKIDATA.Q18557112)
         self.assertTrue(rslt)
 

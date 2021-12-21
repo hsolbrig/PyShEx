@@ -10,7 +10,7 @@ class CRLFTestCase(unittest.TestCase):
     def test_crlf(self):
         """ Make sure that the data is being read in raw form -- that linefeeds aren't being stripped """
         g = Graph()
-        g.load(ttl_file, format='turtle')
+        g.parse(ttl_file, format='turtle')
         self.assertEqual('/\t\n\r-\\a𝒸', list(g.objects())[0].value)
 
 if __name__ == '__main__':

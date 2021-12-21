@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 import unittest
 from contextlib import redirect_stdout
 from io import StringIO
@@ -16,10 +17,12 @@ update_test_files: bool = False
 class ShexEvaluatorTestCase(CLITestCase):
     testdir = "evaluate"
     testprog = 'shexeval'
+    IN_TOX = False
 
     def prog_ep(self, argv: List[str]) -> bool:
         return bool(evaluate_cli(argv, prog=self.testprog))
 
+    @unittest.skipIf(os.environ.get('IN_TOX', False), "Skipping test_help because of TOX formatting parameters")
     def test_help(self):
         testfile_path = os.path.join(self.testdir_path, 'help')
         with open(testfile_path) as tf:
@@ -31,7 +34,7 @@ class ShexEvaluatorTestCase(CLITestCase):
             except ArgParseExitException:
                 pass
         self.maxDiff = None
-        self.assertEqual(help_text.strip(), re.sub('optional arguments', 'options',
+        self.assertEqual(help_text.strip(), re.sub('optional arguments:', 'options:',
                                            (re.sub(';\\n\s*', '; ', outf.getvalue().strip()))))
 
     def test_obs(self):

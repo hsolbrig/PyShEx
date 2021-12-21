@@ -6,7 +6,7 @@ refresh_files = False
 
 # True means that we skip all tests that go outside our own environment (e.g. wikidata, etc)
 # You can set this to True, False or base it on the present of a file in the root directory called "tests/data/SKIP_EXTERNAL_URLS"
-SKIP_EXTERNAL_URLS = None
+SKIP_EXTERNAL_URLS = os.environ.get('SKIP_EXTERNAL_URLS', None)
 SKIP_EXTERNAL_URLS_MSG = "External url's are not tested - set tests.__init__.py.SKIP_EXTERNAL_URLS to False to run"
 
 datadir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data'))
