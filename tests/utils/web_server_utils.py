@@ -16,7 +16,7 @@ PRE_CACHE = [
     BIOLINK_MODEL_URL
 ]
 
-@lru_cache
+@lru_cache()
 def is_up(url: str) -> Optional[bool]:
     """ Determine whether url is up and running """
     if SKIP_EXTERNAL_URLS:
