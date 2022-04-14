@@ -9,4 +9,5 @@ class URIRedirector:
         self.target = target
 
     def uri_for(self, uri: URIRef) -> Union[URIRef, str]:
-        return str(uri).replace(self.base, self.target) if str(uri).startswith(self.base) else uri
+        unix_uri = str(uri).replace('\\', '/')
+        return unix_uri.replace(self.base, self.target) if unix_uri.startswith(self.base) else uri

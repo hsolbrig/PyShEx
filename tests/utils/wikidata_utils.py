@@ -75,7 +75,7 @@ class WikiDataTestCase(unittest.TestCase):
             for df in dfs_slice:
                 slurper = SlurpyGraphWithAgent(sparql_endpoint)
                 # slurper.debug_slurps = debug_slurps
-                prefixes.add_bindings(slurper)
+                prefixes.add_bindings_to(slurper)
                 print(f"Evaluating: {df}")
                 results = evaluator.evaluate(rdf=slurper, focus=df, debug=debug, debug_slurps=debug_slurps, over_slurp=False)
                 rval += results

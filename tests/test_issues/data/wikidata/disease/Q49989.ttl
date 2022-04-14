@@ -60,7 +60,7 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "クロイツフェルト・ヤコブ病",
         "克雅二氏病",
         "크로이츠펠트-야코프병" ;
-    schema:dateModified "2021-12-07T15:57:43+00:00"^^xsd:dateTime ;
+    schema:dateModified "2022-01-09T17:50:05+00:00"^^xsd:dateTime ;
     schema:description "Enfermedad neurológica priónica",
         "Gizakietan agertzen den entzefalopatia espongiformearen aldaeretako bat. Eragin txikia du, kasu bat milioi biztanleko eta urteko; oro har, 60 urtetik gorako pertsonei eragiten die",
         "Hastalık",
@@ -78,10 +78,10 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "дегенеративно мозъчно разстройство",
         "中枢神経の変性疾患",
         "退行性神經系統疾病" ;
-    schema:version 1539966204 ;
-    ns2:identifiers 35 ;
+    schema:version 1559336612 ;
+    ns2:identifiers 36 ;
     ns2:sitelinks 50 ;
-    ns2:statements 66 ;
+    ns2:statements 69 ;
     skos:altLabel "CJD",
         "CJD (Creutzfeldt Jakob disease)",
         "CJK",
@@ -115,7 +115,8 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
     p:P1748 <http://www.wikidata.org/entity/statement/Q49989-153AE8EB-C885-4CE9-A5A0-A7ADD6F10E11>,
         <http://www.wikidata.org/entity/statement/Q49989-FD15AC23-9FC7-41F3-B5C0-FA1EA492AB7B> ;
     p:P18 <http://www.wikidata.org/entity/statement/Q49989-60E5516E-7A11-4B72-BD48-4CEA1ECC4229> ;
-    p:P1995 <http://www.wikidata.org/entity/statement/Q49989-75F74036-BACD-4D0C-A505-51CE700034D9> ;
+    p:P1995 <http://www.wikidata.org/entity/statement/Q49989-75F74036-BACD-4D0C-A505-51CE700034D9>,
+        <http://www.wikidata.org/entity/statement/Q49989-8717bc33-4e62-19c9-3f6a-80d776e4d05b> ;
     p:P2004 <http://www.wikidata.org/entity/statement/Q49989-A8EEA532-C306-4C24-AE15-4E1373E564AD> ;
     p:P227 <http://www.wikidata.org/entity/statement/Q49989-4D144BB9-8D7D-43FB-8027-0B909EB5D367> ;
     p:P2293 <http://www.wikidata.org/entity/statement/Q49989-06A3A897-DE57-4C7F-BCF2-A4ACC4985549>,
@@ -152,6 +153,7 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         <http://www.wikidata.org/entity/statement/Q49989-49536e05-4074-5dec-27a6-93da51850789> ;
     p:P673 <http://www.wikidata.org/entity/statement/q49989-E83E1327-5C13-4B3F-BB49-1DF65926A1EA> ;
     p:P699 <http://www.wikidata.org/entity/statement/Q49989-161C34D8-88A3-4C6C-A153-02ED13E38DCF> ;
+    p:P7329 <http://www.wikidata.org/entity/statement/Q49989-200e97aa-48a9-402a-fde5-fa6bbc8db3f7> ;
     p:P780 <http://www.wikidata.org/entity/statement/Q49989-2880fc2d-4016-beef-bf28-e512a94a56bb>,
         <http://www.wikidata.org/entity/statement/Q49989-81176fa1-4552-12ea-a075-e121d01bdf8e> ;
     p:P7807 <http://www.wikidata.org/entity/statement/Q49989-192B9E63-E072-4862-99EA-5BB5350EAF90> ;
@@ -160,6 +162,7 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
     p:P828 <http://www.wikidata.org/entity/statement/Q49989-2f20877a-4673-04df-9742-260eb8566d35> ;
     p:P8408 <http://www.wikidata.org/entity/statement/Q49989-D9476C1D-DD05-42FD-BF80-0205479AFC99> ;
     p:P923 <http://www.wikidata.org/entity/statement/Q49989-02087e53-4ece-6453-bee7-5438bba3f808>,
+        <http://www.wikidata.org/entity/statement/Q49989-0a125d1d-4fdd-bced-ed25-1ae299af2b11>,
         <http://www.wikidata.org/entity/statement/Q49989-10223d3a-4446-2afa-1179-d2756d484ac7>,
         <http://www.wikidata.org/entity/statement/Q49989-11c6f2f7-4762-3db5-7091-7083be267ea0>,
         <http://www.wikidata.org/entity/statement/Q49989-fc4527f3-4efb-6135-37ef-b6b6fd661e24>,
@@ -192,7 +195,8 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "046.19" ;
     wdt:P1748 "C26802" ;
     wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/VCJD%20Tonsil.jpg> ;
-    wdt:P1995 wd:Q83042 ;
+    wdt:P1995 wd:Q788926,
+        wd:Q83042 ;
     wdt:P2004 "18995" ;
     wdt:P227 "4220958-4" ;
     wdt:P2293 wd:Q14881255,
@@ -228,6 +232,7 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
         "F03.615.400.300" ;
     wdt:P673 "1169688" ;
     wdt:P699 "DOID:11949" ;
+    wdt:P7329 "8E02.0" ;
     wdt:P780 wd:Q116275,
         wd:Q83030 ;
     wdt:P7807 "1014699185" ;
@@ -238,6 +243,7 @@ wd:Q49989 rdfs:label "Boala Creutzfeldt-Jacob",
     wdt:P923 wd:Q161238,
         wd:Q179965,
         wd:Q188952,
+        wd:Q2916167,
         wd:Q41482,
         wd:Q64830627 ;
     wdt:P924 wd:Q24238356,

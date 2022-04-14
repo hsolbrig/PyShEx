@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+* Replace '/' with '\'
+
+v0.8.0
+------
+
+* Point at the correct slurper version
+* Add extra test files (may not be necessary)
+* Fix call to deprecated \`add\_bindings\` method
+* Update to remove dependency on protected method in v 6.0
 * Import the shim into the manifest tester
 * Add miscellaneous testing updates
 * Requirements match Pipenv

@@ -15,4 +15,4 @@ def generate_base(path: str) -> str:
         parts_dict['path'] = os.path.split(parts.path)[0] if '/' in parts.path else ''
         return urlunparse(ParseResult(**parts_dict)) + '/'
     else:
-        return (os.path.split(path)[0] if '/' in path else '').replace('\\', '/') + '/'
+        return os.path.split(path)[0].replace('\\', '/') + '/'

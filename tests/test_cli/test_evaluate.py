@@ -10,6 +10,7 @@ from pyshex.shex_evaluator import evaluate_cli
 from pyshex.user_agent import UserAgent
 from tests import datadir, SKIP_EXTERNAL_URLS, SKIP_EXTERNAL_URLS_MSG
 from tests.test_cli.clitests import CLITestCase, ArgParseExitException
+from tests.utils.web_server_utils import DRUGBANK_SPARQL_URL, is_up, is_down_reason
 
 update_test_files: bool = False
 
@@ -71,13 +72,12 @@ class ShexEvaluatorTestCase(CLITestCase):
                      failexpected=True)
         self.assertFalse(update_test_files, "Updating test files")
 
-    @unittest.skipIf(SKIP_EXTERNAL_URLS, SKIP_EXTERNAL_URLS_MSG)
+    @unittest.skipIf(not is_up(DRUGBANK_SPARQL_URL), is_down_reason(DRUGBANK_SPARQL_URL))
     def test_sparql_query(self):
         """ Test a sample DrugBank sparql query """
         shex = os.path.join(datadir, 't1.shex')
         sparql = os.path.join(datadir, 't1.sparql')
-        rdf = 'http://wifo5-04.informatik.uni-mannheim.de/drugbank/sparql'
-        self.do_test([rdf, shex, '-sq', sparql], 't1', update_test_file=update_test_files)
+        self.do_test([DRUGBANK_SPARQL_URL, shex, '-sq', sparql], 't1', update_test_file=update_test_files)
 
 
 if __name__ == '__main__':

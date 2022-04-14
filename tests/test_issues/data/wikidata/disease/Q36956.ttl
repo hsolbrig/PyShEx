@@ -113,13 +113,13 @@ wd:Q36956 rdfs:label "Abïl",
         "麻瘋",
         "麻风",
         "한센병" ;
-    schema:dateModified "2021-12-15T09:19:56+00:00"^^xsd:dateTime ;
+    schema:dateModified "2022-01-13T12:44:54+00:00"^^xsd:dateTime ;
     schema:description "Aansteeklike siekte",
-        "Chronic infection caused by bacteria Mycobacteria lepræ and lepromatosis",
         "Enfermidade causadora de feridas e erosões na pele.",
         "Một loại bệnh do vi khuẩn Mycobacterium leprae gây ra.",
         "Zarazna bolest",
         "bakterielle, schwach infektiöse Hautkrankheit mit Nerven- und Knochendegeneration",
+        "chronic infection caused by bacteria Mycobacteria lepræ and lepromatosis",
         "enfermedad bacteriana crónica de la piel y de los nervios de las manos y pies y a veces, del revestimiento de la nariz.",
         "fertőző betegség",
         "infeksjonssykdom forårsaket av lepra-basillen",
@@ -145,10 +145,10 @@ wd:Q36956 rdfs:label "Abïl",
         "ᅟinfekta malsano kaŭzata de bakterio",
         "らい菌の感染によって生じる慢性の疾患",
         "一种慢性传染病" ;
-    schema:version 1544188941 ;
-    ns2:identifiers 54 ;
-    ns2:sitelinks 133 ;
-    ns2:statements 141 ;
+    schema:version 1561621579 ;
+    ns2:identifiers 55 ;
+    ns2:sitelinks 134 ;
+    ns2:statements 142 ;
     skos:altLabel "Aussatz",
         "Aussätzige",
         "Bélpoklosság",
@@ -163,7 +163,6 @@ wd:Q36956 rdfs:label "Abïl",
         "HANSEN DISEASE",
         "Hansen Pēⁿ",
         "Hansen's disease",
-        "Hansen's disease, Leprosy",
         "Hansen-Krankheit",
         "Hansen-kór",
         "Hansenin tauti",
@@ -437,6 +436,7 @@ wd:Q36956 rdfs:label "Abïl",
     p:P8189 <http://www.wikidata.org/entity/statement/Q36956-8AFBCCFF-5A14-4E75-995E-7A029E22E43A> ;
     p:P828 <http://www.wikidata.org/entity/statement/Q36956-c39c29c6-4e60-fbe5-7034-aebf7f53de0d>,
         <http://www.wikidata.org/entity/statement/Q36956-f6d0adcc-4bf5-82ae-45c7-1381069796b8> ;
+    p:P8401 <http://www.wikidata.org/entity/statement/Q36956-f054ca8d-4a8c-4463-deb9-3f0acc514383> ;
     p:P8408 <http://www.wikidata.org/entity/statement/Q36956-80DF6758-66D5-4039-8B01-6FF77A35BBB9> ;
     p:P902 <http://www.wikidata.org/entity/statement/Q36956-D6C93CDA-983A-46B4-AC54-1E69CC8DE99D> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q36956-3CA8A7C7-D284-43C0-BF0F-FE7F4C5D4D1D> ;
@@ -567,6 +567,7 @@ wd:Q36956 rdfs:label "Abïl",
     wdt:P8189 "987007563027805171" ;
     wdt:P828 wd:Q10748967,
         wd:Q155891 ;
+    wdt:P8401 "leprosy" ;
     wdt:P8408 "Leprosy" ;
     wdt:P902 "007983" ;
     wdt:P910 wd:Q7214744 ;

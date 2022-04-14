@@ -80,7 +80,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         "多発性硬化症",
         "多發性硬化症",
         "다발성 경화증" ;
-    schema:dateModified "2021-12-15T23:06:24+00:00"^^xsd:dateTime ;
+    schema:dateModified "2021-12-31T05:02:34+00:00"^^xsd:dateTime ;
     schema:description "Doença desmielinizante em que são danificadas as bainhas de mielina à volta dos axónios do cérebro e a medula espinal, provocando desmielinização.",
         "MS hastalığı",
         "Sygdom der rammer nervecellerne",
@@ -108,10 +108,10 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
         "中枢性脱髄疾患の一つ",
         "疾病",
         "뇌와 척수의 축삭 주변의 지방성 말이집을 감싸는 부분이 손상을 입어서 탈수질환과 흉터형성으로 이어지는 염증 질환이다." ;
-    schema:version 1544585856 ;
-    ns2:identifiers 49 ;
-    ns2:sitelinks 70 ;
-    ns2:statements 173 ;
+    schema:version 1553138807 ;
+    ns2:identifiers 50 ;
+    ns2:sitelinks 71 ;
+    ns2:statements 174 ;
     skos:altLabel "ED",
         "EM",
         "Encephalomyelitis disseminata",
@@ -321,6 +321,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
     p:P7995 <http://www.wikidata.org/entity/statement/Q8277-850B7F0A-60DC-4658-910C-E7C39642DEE0> ;
     p:P8189 <http://www.wikidata.org/entity/statement/Q8277-C77AEBC2-5D32-465D-B978-E9A357392B72> ;
     p:P8408 <http://www.wikidata.org/entity/statement/Q8277-71388126-64C1-4E67-B7C7-65C721E66A75> ;
+    p:P9084 <http://www.wikidata.org/entity/statement/Q8277-3F48F79F-9347-4493-8B02-61991AD9BE6A> ;
     p:P910 <http://www.wikidata.org/entity/statement/Q8277-8C11CC7E-192B-4C8A-8C79-F72C124BA1FE> ;
     p:P923 <http://www.wikidata.org/entity/statement/Q8277-2453d25c-4f59-9e07-cb4c-ec89998fb89d>,
         <http://www.wikidata.org/entity/statement/Q8277-9a1a35ab-48e1-b5f2-f718-0da1056b5744>,
@@ -505,6 +506,7 @@ wd:Q8277 rdfs:label "Encephalomyelitis disseminata",
     wdt:P7995 "multiple-sclerosis" ;
     wdt:P8189 "987007550961205171" ;
     wdt:P8408 "MultipleSclerosis" ;
+    wdt:P9084 "multiple-sclerosis" ;
     wdt:P910 wd:Q9518131 ;
     wdt:P923 wd:Q161238,
         wd:Q208376,
