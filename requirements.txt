@@ -12,11 +12,10 @@
 
 cfgraph>=0.2.1
 chardet
-pyshexc==0.9.0
+pyshexc==0.9.1
 rdflib-shim
-rdflib>=5.0.0
 requests>=2.22.0
-shexjsg>=0.8.1
+shexjsg>=0.8.2
 sparqlslurper>=0.5.1
 sparqlwrapper>=1.8.5
 urllib3
