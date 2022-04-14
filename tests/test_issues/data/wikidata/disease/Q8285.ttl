@@ -39,7 +39,6 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         "Мијастенија гравис",
         "Міастенія",
         "миастения",
-        "миястиния",
         "Միասթենիա գրավիս",
         "מיאסטניה גראביס",
         "میاستنی گراویس",
@@ -55,7 +54,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         "重症肌无力",
         "重症肌無力",
         "중증 근무력증" ;
-    schema:dateModified "2021-12-15T23:09:21+00:00"^^xsd:dateTime ;
+    schema:dateModified "2022-01-11T04:30:50+00:00"^^xsd:dateTime ;
     schema:description "autoimmuunisairaus",
         "az idegrendszert érintő autoimmun betegség",
         "enfermedad neuromuscular",
@@ -71,10 +70,10 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         "مَرَضٌ بَشَرِيٌّ",
         "ଦୀର୍ଘକାଳୀନ ସ୍ନାୟୁ-ମାଂସପେଶୀ ରୋଗ",
         "アセチルコリンなどの抗体により神経・筋伝達が阻害されるために筋肉の易疲労性や脱力が起こる自己免疫疾患" ;
-    schema:version 1544587049 ;
+    schema:version 1560308081 ;
     ns2:identifiers 38 ;
     ns2:sitelinks 60 ;
-    ns2:statements 74 ;
+    ns2:statements 75 ;
     skos:altLabel "Acquired myasthenia",
         "Astenik Bulbar Falaj",
         "Astenik bulbar falaj",
@@ -98,6 +97,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         "myastenia gravis" ;
     p:P1193 <http://www.wikidata.org/entity/statement/Q8285-9cb626a8-43b5-e15e-46fd-c6995700caaa> ;
     p:P1325 <http://www.wikidata.org/entity/statement/Q8285-4E0D0F1D-3B87-44AF-AC22-BB6B4DD0CA11> ;
+    p:P1343 <http://www.wikidata.org/entity/statement/Q8285-f5fbbbb3-05ee-4912-992f-e96e260d06df> ;
     p:P1417 <http://www.wikidata.org/entity/statement/Q8285-B1D877F8-94D4-48D5-A193-85032A453EF2> ;
     p:P1461 <http://www.wikidata.org/entity/statement/Q8285-9780E747-7079-4648-9599-D2D0BC3C6160> ;
     p:P1550 <http://www.wikidata.org/entity/statement/Q8285-cab2e7ce-44b0-2e12-971f-65a1c414180f> ;
@@ -182,6 +182,7 @@ wd:Q8285 rdfs:label "Bệnh nhược cơ",
         <http://id.nlm.nih.gov/mesh/C20.111.258.500> ;
     wdt:P1193 0.00015 ;
     wdt:P1325 <http://www.nanbyou.or.jp/entry/120> ;
+    wdt:P1343 wd:Q20078554 ;
     wdt:P1417 "science/myasthenia-gravis" ;
     wdt:P1461 "myasthenia-gravis-pro" ;
     wdt:P1550 "589" ;

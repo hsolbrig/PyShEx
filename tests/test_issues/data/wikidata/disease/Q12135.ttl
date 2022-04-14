@@ -1,7 +1,7 @@
 @prefix do: <http://purl.obolibrary.org/obo/DOID_> .
 @prefix doio: <http://identifiers.org/doid/> .
-@prefix ns1: <http://www.wikidata.org/prop/direct-normalized/> .
-@prefix ns2: <http://wikiba.se/ontology#> .
+@prefix ns1: <http://wikiba.se/ontology#> .
+@prefix ns2: <http://www.wikidata.org/prop/direct-normalized/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -52,7 +52,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "mentális zavar",
         "penyakit mental",
         "perturbação mental",
-        "psihiski traucējumi",
+        "psihiskie traucējumi",
         "psika malsano",
         "psychische Störung",
         "psychische aandoening",
@@ -109,7 +109,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "精神障害",
         "精神障礙",
         "정신 질환" ;
-    schema:dateModified "2021-12-15T09:38:30+00:00"^^xsd:dateTime ;
+    schema:dateModified "2022-01-12T13:37:45+00:00"^^xsd:dateTime ;
     schema:description "Loại bệnh về tinh thần con người",
         "affezione che colpisce il pensiero, i sentimenti o il comportamento di una persona",
         "alteración de los procesos cognitivos y afectivos del desarrollo",
@@ -141,10 +141,10 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "同心理、神經有關嘅疾病",
         "疾病",
         "精神疾患の総称" ;
-    schema:version 1544198221 ;
-    ns2:identifiers 45 ;
-    ns2:sitelinks 108 ;
-    ns2:statements 89 ;
+    schema:version 1561097645 ;
+    ns1:identifiers 47 ;
+    ns1:sitelinks 109 ;
+    ns1:statements 91 ;
     skos:altLabel "Gemütskrankheit",
         "Rối loạn tinh thần",
         "Rối loạn tâm thần",
@@ -169,7 +169,7 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "gangguan jiwa",
         "gangguan mental",
         "gangguan minda",
-        "garīga slimība",
+        "garīgā slimības",
         "maladie mentale",
         "maladie psychiatrique",
         "malaltia mental",
@@ -186,16 +186,17 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "mental hastalık",
         "mental health morbidity",
         "mental illness",
+        "mental illnesses",
         "mental liding",
         "mental morbidity",
         "mental or behavioural disorder",
         "mental ya da davranış bozukluğu",
-        "mentāla slimība",
+        "mentālā slimības",
         "mielenterveyden häiriö",
         "mielenterveyden häiriöt",
         "obsolete mental disorder",
         "penyakit minda",
-        "psihiskie traucējumi",
+        "psihiskā slimības",
         "psihička bolest",
         "psika perturbo",
         "psikiyatrik bozukluk",
@@ -203,6 +204,8 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "psychiatric condition",
         "psychiatric disease",
         "psychiatric disorder",
+        "psychiatric disorders",
+        "psychiatric illness",
         "psychiatric morbidity",
         "psychická choroba",
         "psychická nemoc",
@@ -271,12 +274,14 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
         "精神錯亂",
         "精神障礙症" ;
     p:P1014 <http://www.wikidata.org/entity/statement/Q12135-820B9A9C-13D9-44A5-A802-1A6A372F4F42> ;
+    p:P10192 <http://www.wikidata.org/entity/statement/Q12135-aa842932-49be-41c5-c977-7f4900d65751> ;
     p:P1036 <http://www.wikidata.org/entity/statement/Q12135-12129e3d-43ea-4bf9-6345-0577e61808f6> ;
     p:P1051 <http://www.wikidata.org/entity/statement/Q12135-90EF8470-2B5A-47D4-B9C5-C14D32F005A8> ;
     p:P1296 <http://www.wikidata.org/entity/statement/Q12135-193D4239-E18C-481C-A1C1-9D12FDC61055> ;
     p:P1343 <http://www.wikidata.org/entity/statement/Q12135-83f28510-3b3e-4f47-925b-60be5f7b522c>,
         <http://www.wikidata.org/entity/statement/Q12135-84EDF737-087C-49ED-93E9-A927A63F2FEF>,
         <http://www.wikidata.org/entity/statement/Q12135-e169a132-f9b8-400b-9e63-f013bd1502f6> ;
+    p:P1368 <http://www.wikidata.org/entity/statement/Q12135-270c4ab4-46fe-5e37-906a-89665ac85cd6> ;
     p:P1417 <http://www.wikidata.org/entity/statement/Q12135-B8F67DCC-83BD-4DFD-876B-31AA65EF06C6> ;
     p:P1542 <http://www.wikidata.org/entity/statement/Q12135-cbe8d6b4-487a-340f-b52e-620be0722b7e> ;
     p:P1692 <http://www.wikidata.org/entity/statement/Q12135-5EA6E026-77BB-4557-A311-D9E9282BE866>,
@@ -359,27 +364,29 @@ wd:Q12135 rdfs:label "Afiechyd meddwl",
     p:P950 <http://www.wikidata.org/entity/statement/Q12135-dfe86976-9fab-4163-90cc-390e0ffdcfd9> ;
     p:P973 <http://www.wikidata.org/entity/statement/Q12135-0f1d7aab-41b4-fc6a-7b08-f4dd35fcb946> ;
     p:P989 <http://www.wikidata.org/entity/statement/Q12135-71990294-F9D9-4BE8-B123-65C1372DA9CD> ;
-    ns1:P1014 <http://vocab.getty.edu/aat/300055131> ;
-    ns1:P227 <https://d-nb.info/gnd/4047686-8> ;
-    ns1:P2347 <http://www.yso.fi/onto/yso/p990> ;
-    ns1:P244 <https://id.loc.gov/authorities/names/sh85083643> ;
-    ns1:P2581 <http://babelnet.org/rdf/s00027818n> ;
-    ns1:P268 <http://data.bnf.fr/ark:/12148/cb11942041r#about> ;
-    ns1:P3916 <http://vocabularies.unesco.org/thesaurus/concept5463> ;
-    ns1:P486 <http://id.nlm.nih.gov/mesh/D001523> ;
-    ns1:P508 <http://purl.org/bncf/tid/6114> ;
-    ns1:P6366 <http://ma-graph.org/entity/2780875785> ;
-    ns1:P646 <http://g.co/kg/m/04x4r> ;
-    ns1:P672 <http://id.nlm.nih.gov/mesh/F03> ;
-    ns1:P7033 <http://vocabulary.curriculum.edu.au/scot/4979.rdf> ;
-    ns1:P8408 <http://kbpedia.org/kko/rc/PsychologicalAilment> ;
-    ns1:P950 <http://datos.bne.es/resource/XX525721> ;
+    ns2:P1014 <http://vocab.getty.edu/aat/300055131> ;
+    ns2:P227 <https://d-nb.info/gnd/4047686-8> ;
+    ns2:P2347 <http://www.yso.fi/onto/yso/p990> ;
+    ns2:P244 <https://id.loc.gov/authorities/names/sh85083643> ;
+    ns2:P2581 <http://babelnet.org/rdf/s00027818n> ;
+    ns2:P268 <http://data.bnf.fr/ark:/12148/cb11942041r#about> ;
+    ns2:P3916 <http://vocabularies.unesco.org/thesaurus/concept5463> ;
+    ns2:P486 <http://id.nlm.nih.gov/mesh/D001523> ;
+    ns2:P508 <http://purl.org/bncf/tid/6114> ;
+    ns2:P6366 <http://ma-graph.org/entity/2780875785> ;
+    ns2:P646 <http://g.co/kg/m/04x4r> ;
+    ns2:P672 <http://id.nlm.nih.gov/mesh/F03> ;
+    ns2:P7033 <http://vocabulary.curriculum.edu.au/scot/4979.rdf> ;
+    ns2:P8408 <http://kbpedia.org/kko/rc/PsychologicalAilment> ;
+    ns2:P950 <http://datos.bne.es/resource/XX525721> ;
     wdt:P1014 "300055131" ;
+    wdt:P10192 "homoit0001011" ;
     wdt:P1036 "616.89" ;
     wdt:P1051 "12879" ;
     wdt:P1296 "0193785" ;
     wdt:P1343 wd:Q2657718,
         wd:Q602358 ;
+    wdt:P1368 "000075073" ;
     wdt:P1417 "science/mental-disorder" ;
     wdt:P1542 wd:Q944142 ;
     wdt:P1692 "290-299.99",

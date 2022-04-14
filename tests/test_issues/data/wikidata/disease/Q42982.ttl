@@ -32,6 +32,7 @@ wd:Q42982 rdfs:label "Ailléirge",
         "Alèrgi",
         "Ałergia",
         "Ko-men",
+        "Mzio",
         "Ofnæmi",
         "Riman",
         "Urnan",
@@ -83,7 +84,7 @@ wd:Q42982 rdfs:label "Ailléirge",
         "敏感",
         "过敏",
         "알레르기" ;
-    schema:dateModified "2021-12-15T09:12:34+00:00"^^xsd:dateTime ;
+    schema:dateModified "2022-01-10T02:45:19+00:00"^^xsd:dateTime ;
     schema:description "Kondisi ketika sistem kekebalan tubuh bereaksi secara tidak normal terhadap zat asing.",
         "Krankheit; Immunreaktion auf Umweltstoffe",
         "az immunrendszer válasza egy anyagra, amit a legtöbb ember jól tolerál",
@@ -104,9 +105,9 @@ wd:Q42982 rdfs:label "Ailléirge",
         "বেশির ভাগ মানুষের জন্য সহনীয় পদার্থের বিরুদ্ধে অনাক্রম্যতন্ত্রের তীব্র ও বিরূপ প্রতিক্রিয়া",
         "தூசி, தூள் முதலிய ஒவ்வாப் பொருள்களுக்கு உடல் உண்டாக்கும் இயல்பு நீங்கிய தடுப்புத் துலங்கல்",
         "免疫反応が特定の抗原に対して過剰に起こる現象" ;
-    schema:version 1544185368 ;
+    schema:version 1559622278 ;
     ns2:identifiers 47 ;
-    ns2:sitelinks 111 ;
+    ns2:sitelinks 112 ;
     ns2:statements 85 ;
     skos:altLabel "Alergi",
         "Alergias",
